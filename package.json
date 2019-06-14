@@ -1,7 +1,7 @@
 {
-  "name": "rohyl.io",
+  "name": "lookahead",
   "version": "1.0.0",
-  "description": "My personal website",
+  "description": "UoM Timetable Optimiser",
   "main": "server.js",
   "dependencies": {
     "concurrently": "^4.1.0",
@@ -20,13 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trontor/rohyl.io.git"
+    "url": "git+https://github.com/Trontor/lookahead.git"
   },
   "author": "Rohyl Joshi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Trontor/rohyl.io/issues"
+    "url": "https://github.com/Trontor/lookahead/issues"
   },
-  "homepage": "https://github.com/Trontor/rohyl.io#readme",
+  "homepage": "https://github.com/Trontor/lookahead#readme",
   "proxy": "http://localhost:5000/"
 }
