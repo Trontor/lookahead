@@ -1,0 +1,32 @@
+{
+  "name": "rohyl.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trontor/rohyl.io.git"
+  },
+  "author": "Rohyl Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trontor/rohyl.io/issues"
+  },
+  "homepage": "https://github.com/Trontor/rohyl.io#readme",
+  "proxy": "http://localhost:5000/"
+}
