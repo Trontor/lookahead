@@ -5,6 +5,12 @@ import { SubjectClass } from "./SubjectClass";
 import { SubjectPeriod } from "./SubjectPeriods";
 import { getHTML } from "./WebUtils";
 
+/**
+ * Scrapes the SWS Timetabling System for Subject information.
+ * @param year The year
+ * @param period The subject period (i.e. Semester 1/2, Winter, Summer)
+ * @param code The subject code
+ */
 export const scrapeSubject = async (
   year: number,
   period: SubjectPeriod,
