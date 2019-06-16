@@ -5,10 +5,12 @@
   "main": "dist/server.js",
   "dependencies": {
     "@types/cheerio": "^0.22.11",
+    "@types/moment": "^2.13.0",
     "@types/request": "^2.48.1",
     "cheerio": "^1.0.0-rc.3",
     "concurrently": "^4.1.0",
     "express": "^4.17.1",
+    "moment": "^2.24.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
