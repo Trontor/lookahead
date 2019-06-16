@@ -12,6 +12,6 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["*.ts", "subject_utils/scripts/subject-scraper.ts"],
+  "include": ["*.ts", "subject-utils/*.ts"],
   "exclude": ["node_modules", ".vscode"]
 }

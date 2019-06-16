@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from "express";
 import path = require("path");
 
 import subjectListRouter from "./api/routes/subjectListRouter";
+import subjectRouter from "./api/routes/subjectRouter";
 
 const app: Application = express();
 const port = process.env.PORT || 5000;
@@ -15,7 +16,9 @@ app.get("/", (req: Request, res: Response) =>
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 );
 
-app.use("/subjectlist", subjectListRouter);
+app.use("/api/subjectlist", subjectListRouter);
+app.use("/api/subject", subjectRouter);
+
 app.listen(port, () => {
   // tslint:disable-next-line:no-console
   console.log(`Express server initialised on port ${port}`);

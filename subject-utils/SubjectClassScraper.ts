@@ -5,29 +5,30 @@ import { SubjectClass } from "./SubjectClass";
 import { SubjectPeriod } from "./SubjectPeriods";
 import { getHTML } from "./WebUtils";
 
-export const scrapeClass = async (
+export const scrapeSubject = async (
   year: number,
   period: SubjectPeriod,
   code: string
-) => {
+): Promise<Subject> => {
   // tslint:disable-next-line:max-line-length
   const swsURL = `https://sws.unimelb.edu.au/${year}/Reports/List.aspx?objects=${code}&weeks=1-52&days=1-7&periods=1-56&template=module_by_group_list`;
   try {
+    console.log(swsURL);
     const htmlSource = await getHTML(swsURL);
     const subject: Subject = parseSubject(htmlSource, code, period);
-    subject.classes.forEach(cls => {
-      console.log(cls.toString());
-    });
+    return subject;
   } catch (err) {
     console.error(
       `Error trying to parse timetable for ${year}-${period}-${code} -> ${swsURL} -> ${err}`
     );
+    throw err;
   }
 };
 
 /**
  * Parses the SWS HTML source to extract classes for a specific study period
  * @param html The source code to parse
+ * @param code The subject code we are parsing for
  * @param period The study period of interest
  */
 const parseSubject = (
@@ -37,19 +38,21 @@ const parseSubject = (
 ): Subject => {
   // Load HTML into cheerio, ready for parsing
   const $ = cheerio.load(html);
-  // Stores all parsed classes
-  const classes: SubjectClass[] = [];
   // Subject period short code, e.g. SubjectPeriod.Semester_1 -> "SM1"
   const subjectPeriodShortCode = subjectPeriodToShortCode(period);
-  const subject = new Subject(code, null);
+  const subject = new Subject(code, period);
+  const classList: SubjectClass[] = [];
   // Loop through each class (even outside specified study period) and parse
   $(".cyon_table > tbody > tr").each((_, element) => {
     const children = $(element).children();
-    const classCode = children
-      .eq(0)
-      .text()
-      .trim();
-    const isWellFormedCode = classCode.split("/").length === 6;
+    // Helper method to parse table cell text
+    const getChild = (index: number) =>
+      children
+        .eq(index)
+        .text()
+        .trim();
+    const classCode = getChild(0);
+    const isWellFormedCode = SubjectClass.isWellFormedCode(classCode);
     if (!isWellFormedCode) {
       console.warn(`Class Code: ${classCode} is not well formed!`);
       return;
@@ -57,16 +60,10 @@ const parseSubject = (
     if (!classCode.includes(subjectPeriodShortCode)) {
       return;
     }
-    // Helper method to parse table cell text
-    const getChild = (index: number) =>
-      children
-        .eq(index)
-        .text()
-        .trim();
     const description = getChild(1);
     const dayRaw = getChild(2);
     let day: number;
-    // Convert day to int
+    // Convert day to int representation based on weekdays array in SubjectClass
     if (!SubjectClass.daysOfWeek.includes(dayRaw)) {
       console.error(`Day unknown for ${classCode}: ${day}`);
       day = -1;
@@ -89,7 +86,6 @@ const parseSubject = (
     const timeFormat = SubjectClass.timeFormat;
     const startMoment = moment(start, timeFormat);
     const finishMoment = moment(finish, timeFormat);
-    const duration = moment.duration(finishMoment.diff(startMoment)).asHours();
     const parsedClass = new SubjectClass(
       subject,
       classCode,
@@ -97,13 +93,12 @@ const parseSubject = (
       day,
       startMoment,
       finishMoment,
-      duration,
       weeks,
       location
     );
-    subject.addClass(parsedClass);
+    classList.push(parsedClass);
   });
-
+  subject.addClassList(classList);
   // At this point, subject contains all parsed classes
   return subject;
 };
@@ -122,9 +117,9 @@ const parseWeeks = (rawWeeks: string): number[] => {
     // If the part ("10-16") contains a hyphen
     if (part.includes(nonBreakingHypen)) {
       const weekRanges = part.split(nonBreakingHypen);
-      const startWeek = Number.parseInt(weekRanges[0], 10);
-      const endWeek = Number.parseInt(weekRanges[1], 10);
-      if (Number.isNaN(startWeek) || Number.isNaN(endWeek)) {
+      const startWeek = parseInt(weekRanges[0], 10);
+      const endWeek = parseInt(weekRanges[1], 10);
+      if (isNaN(startWeek) || isNaN(endWeek)) {
         throw new Error(
           `Hypenated weeks are not numbers startWeek: ${startWeek}, endWeek: ${endWeek}`
         );
@@ -135,10 +130,10 @@ const parseWeeks = (rawWeeks: string): number[] => {
       parsedWeeks.push(endWeek);
     } else {
       // Else if the part is something like "15"
-      const weekNumber = Number.parseInt(part, 10);
+      const weekNumber = parseInt(part, 10);
       if (Number.isNaN(weekNumber)) {
         throw new Error(
-          `Single week is not a number weekNumber: ${weekNumber}`
+          `Single week is not a number, specified weekNumber: ${weekNumber}`
         );
       }
       parsedWeeks.push(weekNumber);
@@ -156,7 +151,7 @@ const subjectPeriodToShortCode = (period: SubjectPeriod) => {
     case SubjectPeriod.Semester_1:
       return "SM1";
     case SubjectPeriod.Semester_2:
-      return "SM1";
+      return "SM2";
     case SubjectPeriod.Summer_Term:
       return "SUM";
     case SubjectPeriod.Winter_Term:
@@ -164,4 +159,7 @@ const subjectPeriodToShortCode = (period: SubjectPeriod) => {
   }
 };
 
-scrapeClass(2019, SubjectPeriod.Semester_1, "COMP10001");
+// scrapeSubject(2019, SubjectPeriod.Semester_1, "SWEN20003");
+// scrapeSubject(2019, SubjectPeriod.Semester_1, "COMP20007").then(subject =>
+//   console.log(JSON.stringify(subject))
+// );

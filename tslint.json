@@ -5,7 +5,8 @@
   "rules": {
     "trailing-comma": [false],
     "arrow-parens": false,
-    "no-console": false
+    "no-console": false,
+    "prefer-for-of": false
   },
   "rulesDirectory": []
 }
