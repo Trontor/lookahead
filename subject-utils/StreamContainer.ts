@@ -1,7 +1,7 @@
-import { Stream } from "./Stream";
-import { SubjectClass } from "./SubjectClass";
+import Stream from "./Stream";
+import SubjectClass from "./SubjectClass";
 
-export class StreamContainer {
+export default class StreamContainer {
   // Stream name, e.g. Workshop, Lecture, Tutorial
   public name: string;
   public type: string;

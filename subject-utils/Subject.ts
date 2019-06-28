@@ -1,12 +1,12 @@
-import { Stream } from "./Stream";
-import { StreamContainer } from "./StreamContainer";
-import { SubjectClass } from "./SubjectClass";
+import Stream from "./Stream";
+import StreamContainer from "./StreamContainer";
+import SubjectClass from "./SubjectClass";
 import { SubjectPeriod } from "./SubjectPeriods";
 
 /**
  * Represents a subject at the University of Melbourne
  */
-export class Subject {
+export default class Subject {
   get classes(): SubjectClass[] {
     return this.classList;
   }

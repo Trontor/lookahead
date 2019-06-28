@@ -1,7 +1,7 @@
 import * as cheerio from "cheerio";
 import moment = require("moment");
-import { Subject } from "./Subject";
-import { SubjectClass } from "./SubjectClass";
+import Subject from "./Subject";
+import SubjectClass from "./SubjectClass";
 import { SubjectPeriod } from "./SubjectPeriods";
 import { getHTML } from "./WebUtils";
 

@@ -1,6 +1,6 @@
 import { Moment } from "moment";
 import moment = require("moment");
-import { Subject } from "./Subject";
+import Subject from "./Subject";
 
 interface IClassCode {
   type: string;
@@ -10,7 +10,7 @@ interface IClassCode {
 /**
  * Represents a class at the University of Melbourne as per the SWS system
  */
-export class SubjectClass {
+export default class SubjectClass {
   // Internal representation of day ordering, useful for mapping to and from int
   public static readonly daysOfWeek: string[] = [
     "Monday",
