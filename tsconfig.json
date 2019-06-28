@@ -12,6 +12,6 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["*.ts", "subject-utils/*.ts"],
+  "include": ["*.ts", "subject-utils/*.ts", "test/*.ts"],
   "exclude": ["node_modules", ".vscode"]
 }

@@ -25,7 +25,7 @@
     "build-ts": "tsc",
     "start": "node dist/server.js",
     "server": "nodemon server.ts",
-    "test": "jest",
+    "test": "npm run build-ts && mocha dist/test",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "postinstall": "npm run build-ts",
