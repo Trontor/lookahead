@@ -152,7 +152,7 @@ const parseWeeks = (rawWeeks: string): number[] => {
  * Converts a SubjectPeriod to a short code format used by the SWS system
  * @param period The SubjectPeriod to convert
  */
-const subjectPeriodToShortCode = (period: SubjectPeriod) => {
+export const subjectPeriodToShortCode = (period: SubjectPeriod) => {
   switch (period) {
     case SubjectPeriod.Semester_1:
       return "SM1";
