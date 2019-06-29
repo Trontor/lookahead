@@ -28,6 +28,9 @@
   "scripts": {
     "build-ts": "tsc",
     "start": "node dist/server.js",
+    "dev-debug": "concurrently \"npm run express-debug\" \"npm run client\"",
+    "express-debug": "node --inspect=5000 -r ts-node/register server.ts",
+    "express-debug:watch": "nodemon",
     "server": "nodemon server.ts",
     "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
