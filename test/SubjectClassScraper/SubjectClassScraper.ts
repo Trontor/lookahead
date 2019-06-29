@@ -1,5 +1,4 @@
 import { expect } from "chai";
-import { readFile } from "fs";
 import "mocha";
 import { parseSubject } from "../../subject-utils/SubjectClassScraper";
 import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
@@ -14,10 +13,10 @@ describe("Subject Scraper", () => {
     );
     expect(subject).to.have.property("code", simpleSubjectJson.code);
     expect(subject).to.have.property("period", SubjectPeriod.Semester_1);
-    expect(subject)
-      .to.have.property("irregularClasses")
-      .that.deep.equals([]);
-    expect(subject.classes.length).to.equal(10);
+
+    expect(subject.regularClasses.length).to.equal(10);
     expect(subject.mandatoryClasses.length).to.equal(2);
+    expect(subject.streams.length).to.equal(0);
+    expect(subject.irregularClasses.length).to.equal(0);
   });
 });
