@@ -5,6 +5,21 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/client/src"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Express Debug",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "dev-debug"],
+      "port": 5000
+    },
+    {
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
@@ -19,6 +34,12 @@
       "program": "${workspaceFolder}\\subject-utils\\SubjectClassScraper.ts",
       "preLaunchTask": "tsc: build - tsconfig.json",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Client/Server",
+      "configurations": ["Launch Express Debug", "Launch Chrome"]
     }
   ]
 }

@@ -6,7 +6,10 @@
     "trailing-comma": [false],
     "arrow-parens": false,
     "no-console": false,
-    "prefer-for-of": false
+    "prefer-for-of": false,
+    "variable-name": {
+      "options": ["allow-leading-underscore"]
+    }
   },
   "rulesDirectory": []
 }

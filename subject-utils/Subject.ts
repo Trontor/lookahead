@@ -7,16 +7,22 @@ import { SubjectPeriod } from "./SubjectPeriods";
  * Represents a subject at the University of Melbourne
  */
 export default class Subject {
-  get classes(): SubjectClass[] {
-    return this.classList;
+  get regularClasses(): SubjectClass[] {
+    return this._regularClasses;
   }
   get mandatoryClasses(): SubjectClass[] {
     return this._mandatoryClasses;
   }
-  private classList: SubjectClass[] = [];
-  private irregularClasses: SubjectClass[] = [];
+  get streams(): StreamContainer[] {
+    return this.streamContainers;
+  }
+  get irregularClasses(): SubjectClass[] {
+    return this._irregularClasses;
+  }
+  private _classList: SubjectClass[] = [];
+  private _irregularClasses: SubjectClass[] = [];
   private _mandatoryClasses: SubjectClass[] = [];
-  private regularClasses: SubjectClass[] = [];
+  private _regularClasses: SubjectClass[] = [];
   private streamContainers: StreamContainer[] = [];
 
   /**
@@ -33,7 +39,7 @@ export default class Subject {
    * @param classes The classes to add to the subjects
    */
   public addClassList(classes: SubjectClass[]) {
-    this.classList = classes;
+    this._classList = classes;
     this.mergeClasses();
     // From now-on, don't modify the original classList
     this.identifyIrregularClasses();
@@ -41,20 +47,20 @@ export default class Subject {
     this.removeUnnecessaryStreams();
     this.extractMandatoryClasses();
     // Now, regular classes are those that aren't mandatory and aren't in a stream
-    this.regularClasses = this.classList.filter(
+    this._regularClasses = this._classList.filter(
       cls =>
         !this._mandatoryClasses.includes(cls) &&
-        !this.irregularClasses.includes(cls)
+        !this._irregularClasses.includes(cls)
     );
     const sortClasses = (a: SubjectClass, b: SubjectClass) =>
       a.day - b.day || a.start.diff(b.start);
     this._mandatoryClasses.sort(sortClasses);
-    this.regularClasses.sort(sortClasses);
+    this._regularClasses.sort(sortClasses);
   }
 
   private extractMandatoryClasses() {
     const classTypeCounts = this.getClassTypeCounts();
-    for (const cls of this.classList) {
+    for (const cls of this._classList) {
       if (classTypeCounts[cls.classCode.type] === 1) {
         this._mandatoryClasses.push(cls);
       }
@@ -109,11 +115,11 @@ export default class Subject {
             const classB = candidate.classes[k];
             classA.mergeClass(classB);
           }
-          console.log(
-            `Merged stream ${candidate.streamNumbers} with ${
-              stream.streamNumbers
-            } in ${this.code}`
-          );
+          // console.log(
+          //   `Merged stream ${candidate.streamNumbers} with ${
+          //     stream.streamNumbers
+          //   } in ${this.code}`
+          // );
           // Merge stream numbers
           stream.streamNumbers = stream.streamNumbers.concat(
             candidate.streamNumbers
@@ -166,7 +172,7 @@ export default class Subject {
 
   private getClassTypeCounts() {
     const typeInfo: { [type: string]: number } = {};
-    this.classList.forEach(cls => {
+    this._classList.forEach(cls => {
       const classCode = cls.classCode;
       if (!(classCode.type in typeInfo)) {
         typeInfo[classCode.type] = 0;
@@ -189,7 +195,6 @@ export default class Subject {
       if (streamContainer.streams.length === 1) {
         const mandatoryClasses = streamContainer.streams[0].classes;
         mandatoryClasses.forEach(mandatoryClass => {
-          console.log(mandatoryClass.description + " is mandatory.");
           this._mandatoryClasses.push(mandatoryClass);
         });
         // Remove this entire StreamContainer from the list
@@ -200,7 +205,7 @@ export default class Subject {
         // There is only one class in the streams
         for (const stream of streamContainer.streams) {
           // Move all classes to the original classList
-          this.classList.push(stream.classes[0]);
+          this._classList.push(stream.classes[0]);
         } // Remove this entire StreamContainer from the list
         this.streamContainers.splice(
           this.streamContainers.indexOf(streamContainer)
@@ -219,7 +224,7 @@ export default class Subject {
     // Get classcodes that are a part of a stream
     const streamClassTypes: string[] = this.identifyStreamClassTypes();
     // Copy original classList so deletions don't occur
-    const streamedClasses = this.classList
+    const streamedClasses = this._classList
       .slice()
       .reverse()
       .filter(cls => streamClassTypes.includes(cls.classCode.type));
@@ -232,7 +237,7 @@ export default class Subject {
         this.streamContainers.push(container);
       }
       container.addStreamClass(cls);
-      this.classList.splice(this.classList.indexOf(cls), 1);
+      this._classList.splice(this._classList.indexOf(cls), 1);
     }
   }
 
@@ -246,8 +251,8 @@ export default class Subject {
     // Compare each class to eachother to find potential streams
     /* For example, classA may be T01/12, and if there exists another T0X/12,
      but not T01, then it might be T02/12, meaning T is probably streamed! */
-    this.classList.forEach(classA => {
-      this.classList.forEach(classB => {
+    this._classList.forEach(classA => {
+      this._classList.forEach(classB => {
         if (classA === classB) {
           return;
         }
@@ -269,7 +274,7 @@ export default class Subject {
    * Identifies classes that occur less/more than 12 weeks in Sem 1/2
    */
   private identifyIrregularClasses = () => {
-    this.irregularClasses = [];
+    this._irregularClasses = [];
     if (
       this.period !== SubjectPeriod.Semester_1 &&
       this.period !== SubjectPeriod.Semester_2
@@ -278,13 +283,13 @@ export default class Subject {
     }
     // At least 9 weeks of teaching for Semesters 1/2. Why 9? idk
     const regularWeekCount = 9;
-    this.classList.forEach(cls => {
+    this._classList.forEach(cls => {
       const weekCount = cls.weeks.length;
       // Check if class at least 9 weeks
       if (weekCount < regularWeekCount) {
         // If it doesn't, it's irregular
-        this.irregularClasses.push(cls);
-        this.classList.splice(this.classList.indexOf(cls), 1);
+        this._irregularClasses.push(cls);
+        this._classList.splice(this._classList.indexOf(cls), 1);
       }
     });
   }
@@ -308,7 +313,7 @@ export default class Subject {
     // Checks if the class number is the same, e.g. W01 === W01
     const sameNumber = classA.classCode.number === classB.classCode.number;
     // Gets all classes in the same stream as classA or classB
-    const sameStreamClasses = this.classList.filter(
+    const sameStreamClasses = this._classList.filter(
       cls =>
         // Don't check for classA or classB, but check classes with same type
         cls !== classA &&
@@ -328,7 +333,7 @@ export default class Subject {
    */
   private mergeClasses = () => {
     // Copy so deletion doesn't effect real array
-    const classListCopy = this.classList.slice().reverse();
+    const classListCopy = this._classList.slice().reverse();
     let totalMerged = 0;
     // Loop through array front to back
     for (const currentClass of classListCopy) {
@@ -337,13 +342,13 @@ export default class Subject {
         const compareCls = classListCopy[i];
         if (this.canMergeClasses(currentClass, compareCls)) {
           // The index of the class which will receive the merge
-          const mergeIndex = this.classList.indexOf(currentClass);
+          const mergeIndex = this._classList.indexOf(currentClass);
           // Merge the class
-          this.classList[mergeIndex].mergeClass(compareCls);
+          this._classList[mergeIndex].mergeClass(compareCls);
           // The index in the original classList to remove
-          const removeIndex = this.classList.indexOf(compareCls);
+          const removeIndex = this._classList.indexOf(compareCls);
           // Remove from the original classList
-          this.classList.splice(removeIndex, 1);
+          this._classList.splice(removeIndex, 1);
           // Remove from the array copy aswell
           classListCopy.splice(classListCopy.indexOf(compareCls), 1);
           // Increment total merged counter to reflect recent merge
@@ -351,6 +356,6 @@ export default class Subject {
         }
       }
     }
-    console.log(`Merged ${totalMerged} classes.`);
+    // console.log(`Merged ${totalMerged} classes.`);
   }
 }

@@ -63,11 +63,16 @@ export const parseSubject = (
       console.warn(`Class Code: ${classCode} is not well formed!`);
       return;
     }
+    // Don't parse if this class isn't for the relevant study period
     if (!classCode.includes(subjectPeriodShortCode)) {
       return;
     }
     const description = getChild(1);
     const dayRaw = getChild(2);
+    const start = getChild(3);
+    const finish = getChild(4);
+    const rawWeeks = getChild(6);
+    const location = getChild(7);
     let day: number;
     // Convert day to int representation based on weekdays array in SubjectClass
     if (!SubjectClass.daysOfWeek.includes(dayRaw)) {
@@ -76,10 +81,6 @@ export const parseSubject = (
     } else {
       day = SubjectClass.daysOfWeek.indexOf(dayRaw);
     }
-    const start = getChild(3);
-    const finish = getChild(4);
-    const rawWeeks = getChild(6);
-    const location = getChild(7);
     // Try parse week format
     let weeks: number[];
     try {
@@ -152,7 +153,7 @@ const parseWeeks = (rawWeeks: string): number[] => {
  * Converts a SubjectPeriod to a short code format used by the SWS system
  * @param period The SubjectPeriod to convert
  */
-const subjectPeriodToShortCode = (period: SubjectPeriod) => {
+export const subjectPeriodToShortCode = (period: SubjectPeriod) => {
   switch (period) {
     case SubjectPeriod.Semester_1:
       return "SM1";
