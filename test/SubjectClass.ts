@@ -23,7 +23,7 @@ describe("Subject Class", () => {
       location
     );
     expect(newClass.toString()).to.equal(
-      "MAST10006/U/1/SM2/P01/48: Monday 17:15 -> 18:15 at PAR-David Caro-Podium 20"
+      "MAST10006/U/1/SM2/P01/48: Monday 17:15 -> 18:15 at PAR-David Caro-Podium 202"
     );
   });
 });
