@@ -37,7 +37,7 @@ export const scrapeSubject = async (
  * @param code The subject code we are parsing for
  * @param period The study period of interest
  */
-const parseSubject = (
+export const parseSubject = (
   html: string,
   code: string,
   period: SubjectPeriod
