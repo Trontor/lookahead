@@ -8,10 +8,11 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "paths": {
       "*": ["node_modules/*"]
     }
   },
-  "include": ["*.ts", "subject-utils/*.ts", "test/*.ts"],
+  "include": ["*.ts", "subject-utils/*.ts", "test/**/*.*"],
   "exclude": ["node_modules", ".vscode"]
 }

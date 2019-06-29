@@ -10,9 +10,12 @@ export default class Subject {
   get classes(): SubjectClass[] {
     return this.classList;
   }
+  get mandatoryClasses(): SubjectClass[] {
+    return this._mandatoryClasses;
+  }
   private classList: SubjectClass[] = [];
   private irregularClasses: SubjectClass[] = [];
-  private mandatoryClasses: SubjectClass[] = [];
+  private _mandatoryClasses: SubjectClass[] = [];
   private regularClasses: SubjectClass[] = [];
   private streamContainers: StreamContainer[] = [];
 
@@ -40,12 +43,12 @@ export default class Subject {
     // Now, regular classes are those that aren't mandatory and aren't in a stream
     this.regularClasses = this.classList.filter(
       cls =>
-        !this.mandatoryClasses.includes(cls) &&
+        !this._mandatoryClasses.includes(cls) &&
         !this.irregularClasses.includes(cls)
     );
     const sortClasses = (a: SubjectClass, b: SubjectClass) =>
       a.day - b.day || a.start.diff(b.start);
-    this.mandatoryClasses.sort(sortClasses);
+    this._mandatoryClasses.sort(sortClasses);
     this.regularClasses.sort(sortClasses);
   }
 
@@ -53,8 +56,7 @@ export default class Subject {
     const classTypeCounts = this.getClassTypeCounts();
     for (const cls of this.classList) {
       if (classTypeCounts[cls.classCode.type] === 1) {
-        console.log(cls.codes[0] + " is mandatory.");
-        this.mandatoryClasses.push(cls);
+        this._mandatoryClasses.push(cls);
       }
     }
   }
@@ -188,7 +190,7 @@ export default class Subject {
         const mandatoryClasses = streamContainer.streams[0].classes;
         mandatoryClasses.forEach(mandatoryClass => {
           console.log(mandatoryClass.description + " is mandatory.");
-          this.mandatoryClasses.push(mandatoryClass);
+          this._mandatoryClasses.push(mandatoryClass);
         });
         // Remove this entire StreamContainer from the list
         this.streamContainers.splice(

@@ -72,16 +72,16 @@ export default class SubjectClass {
   public mergeClass = (subjectClass: SubjectClass) => {
     // Merge locations, removing duplicates
     this.locations = [
-      ...new Set([...subjectClass.locations, ...this.locations])
+      ...new Set([...this.locations, ...subjectClass.locations])
     ];
     this.codes = this.codes.concat(subjectClass.codes);
   }
 
   public toString = (): string => {
-    return `${this.codes.join(",")}: ${
+    return `${this.codes.join(", ")}: ${
       SubjectClass.daysOfWeek[this.day]
     } ${this.start.format(SubjectClass.timeFormat)} -> ${this.finish.format(
       SubjectClass.timeFormat
-    )} at ${this.locations.join(",")}`;
+    )} at ${this.locations.join(", ")}`;
   }
 }

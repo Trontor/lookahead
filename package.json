@@ -29,7 +29,7 @@
     "build-ts": "tsc",
     "start": "node dist/server.js",
     "server": "nodemon server.ts",
-    "test": "npm run build-ts && mocha dist/test",
+    "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "postinstall": "npm run build-ts",
