@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchSubjectList } from "../../redux/actions/subjectListActions";
+import { fetchSubjectList } from "../redux/actions/subjectListActions";
+import { getSubject } from "../redux/actions/subjectActions";
 import AsyncSelect from "react-select/async";
 import Select from "react-select";
 import styled from "styled-components";
@@ -19,25 +20,27 @@ const SubjectSelect = props => {
   const subjectLists = useSelector(state => state.subjectLists, true);
   const dispatch = useDispatch();
   // React hooks
-  const [selectedOption, setSelectedOption] = useState(
+  const [selectedStudyPeriod, setSelectedStudyPeriod] = useState(
     studyPeriods[CURRENT_STUDY_PERIOD_INDEX]
   );
-  // Tracks the currently selected subject
-  const [selectedSubject, setSelectedSubject] = useState(null);
   // Tracks the currently entered text in the subject filter
   const [inputValue, setInputValue] = useState("test");
+  // Uncomment below to load subjects at the starts
+  // useEffect(() => {
+  //   dispatch(getSubject(2019, "semester_1", "COMP10001", "FOC"));
+  //   dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
+  //   dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
+  // }, []);
 
   useEffect(() => {
-    const selectedStudyPeriod = selectedOption.value;
-    if (!subjectLists.lists[selectedStudyPeriod]) {
+    const studyPeriod = selectedStudyPeriod.value;
+    if (!subjectLists.lists[studyPeriod]) {
       setInputValue("");
-      dispatch(
-        fetchSubjectList(CURRENT_SUBJECT_LIST_YEAR, selectedOption.value)
-      );
+      dispatch(fetchSubjectList(CURRENT_SUBJECT_LIST_YEAR, studyPeriod));
     }
-  }, [dispatch, selectedOption, subjectLists.lists]);
+  }, [dispatch, selectedStudyPeriod, subjectLists.lists]);
 
-  const currentList = subjectLists.lists[selectedOption.value];
+  const currentList = subjectLists.lists[selectedStudyPeriod.value];
 
   // Filters input to provide relevant subjects
   const filterSubjects = inputValue => {
@@ -71,7 +74,7 @@ const SubjectSelect = props => {
         : "Enter some characters ⌨";
       return `${prefix}. ${suffix}.`;
     } else if (optionLength.length === 0) {
-      return `No matching subjects found for: ${selectedOption.label}`;
+      return `No matching subjects found for: ${selectedStudyPeriod.label}`;
     } else {
       return null;
     }
@@ -108,6 +111,7 @@ const SubjectSelect = props => {
     display: flex;
     & > div {
       display: inline-block;
+      padding: 3px;
     }
     .study-period-select {
       width: 135px;
@@ -116,13 +120,23 @@ const SubjectSelect = props => {
       width: 100%;
     }
   `;
+  const handleSubjectSelect = ({ code, value }) => {
+    dispatch(
+      getSubject(
+        CURRENT_SUBJECT_LIST_YEAR,
+        selectedStudyPeriod.value,
+        code,
+        value
+      )
+    );
+  };
   return (
     <SelectContainer>
       <Select
         styles={customStyles}
         className="study-period-select"
-        value={selectedOption}
-        onChange={option => setSelectedOption(option)}
+        value={selectedStudyPeriod}
+        onChange={option => setSelectedStudyPeriod(option)}
         options={studyPeriods}
         theme={applySelectTheme}
       />
@@ -136,6 +150,7 @@ const SubjectSelect = props => {
         value={inputValue}
         defaultOptions
         isDisabled={subjectLists.loading}
+        onChange={handleSubjectSelect}
         noOptionsMessage={obj => noOptionsMessage(obj.inputValue)}
       />
     </SelectContainer>

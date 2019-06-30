@@ -25,14 +25,7 @@ export const fetchSubjectList = (year, studyPeriod) => {
     const listURL = `/subjectlist?year=${year}&period=${studyPeriod}`;
     return axios
       .get(listURL)
-      .then(res => dispatch(fetchSubjectListSuccess(studyPeriod, res.data)));
-    // return fetch("/products")
-    //   .then(handleErrors)
-    //   .then(res => res.json())
-    //   .then(json => {
-    //     dispatch(fetchProductsSuccess(json.products));
-    //     return json.products;
-    //   })
-    //   .catch(error => dispatch(fetchProductsFailure(error)));
+      .then(res => dispatch(fetchSubjectListSuccess(studyPeriod, res.data)))
+      .catch(err => dispatch(fetchSubjectListFailure(err)));
   };
 };
