@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import subjectList from "./subjectListReducer";
+import subjectLists from "./subjectListReducer";
 
-export default combineReducers({ subjectList });
+export default combineReducers({ subjectLists });

@@ -7,7 +7,7 @@ import {
 const initialState = {
   loading: false,
   error: null,
-  subjectLists: {}
+  lists: {}
 };
 
 export default (state = initialState, action) => {
@@ -15,14 +15,23 @@ export default (state = initialState, action) => {
     case FETCH_SUBJECT_LIST_BEGIN:
       return { ...state, loading: true, error: null };
     case FETCH_SUBJECT_LIST_SUCCESS:
+      const list = action.payload.list;
+      const selectOptions = [];
+      list.forEach(subject => {
+        selectOptions.push({
+          label: subject.code + " - " + subject.name,
+          value: subject.name,
+          code: subject.code
+        });
+      });
       const updatedLists = {
-        ...state.subjectLists,
-        [action.payload.studyPeriod]: action.payload.list
+        ...state.lists,
+        [action.payload.studyPeriod]: selectOptions
       };
       return {
         ...state,
         loading: false,
-        subjectLists: updatedLists
+        lists: updatedLists
       };
     case FETCH_SUBJECT_LIST_FAILURE:
       return { ...state, loading: false, error: action.payload.error };
