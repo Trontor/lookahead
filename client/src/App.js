@@ -1,11 +1,11 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Planner from "./components/Planner";
 
 export default () => {
-  console.log("test");
   return (
-    <>
-      <h1>test</h1>
-    </>
+    <Router>
+      <Route path="/" exact component={Planner} />
+    </Router>
   );
 };
