@@ -1,4 +1,3 @@
-import { Moment } from "moment";
 import moment = require("moment");
 import Subject from "./Subject";
 
@@ -49,14 +48,14 @@ export default class SubjectClass {
     code: string,
     public readonly description: string,
     public readonly day: number,
-    public readonly start: Moment,
-    public readonly finish: Moment,
+    public readonly start: number,
+    public readonly finish: number,
     public readonly weeks: number[],
     location: string
   ) {
     this.codes = [code];
     this.locations = [location];
-    this.duration = moment.duration(finish.diff(start)).asHours();
+    // this.duration = moment.duration(finish.diff(start)).asHours();
     // Parse parts of class code
     const classCodeRaw = code.split("/")[4].trim();
     this.classCode = {
@@ -78,10 +77,15 @@ export default class SubjectClass {
   }
 
   public toString = (): string => {
+    const parseHoursPastMidnight = (num: number) =>
+      moment()
+        .startOf("day")
+        .add(num, "hour")
+        .format("HH:mm");
     return `${this.codes.join(", ")}: ${
       SubjectClass.daysOfWeek[this.day]
-    } ${this.start.format(SubjectClass.timeFormat)} -> ${this.finish.format(
-      SubjectClass.timeFormat
+    } ${parseHoursPastMidnight(this.start)} -> ${parseHoursPastMidnight(
+      this.finish
     )} at ${this.locations.join(", ")}`;
   }
 }

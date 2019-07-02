@@ -14,8 +14,8 @@ describe("Subject Class", () => {
     const locationA = "PAR-David Caro-Podium 202";
     const locationB = "PAR-David Caro-Podium 205";
     const day = 0;
-    const start = moment("17:15", "HH:mm");
-    const finish = moment("18:15", "HH:mm");
+    const start = 17.25;
+    const finish = 18.25;
     const weeks = [31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43];
     classA = new SubjectClass(
       null,

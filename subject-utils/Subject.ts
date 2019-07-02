@@ -14,7 +14,7 @@ export default class Subject {
     return this._mandatoryClasses;
   }
   get streams(): StreamContainer[] {
-    return this.streamContainers;
+    return this._streamContainers;
   }
   get irregularClasses(): SubjectClass[] {
     return this._irregularClasses;
@@ -23,7 +23,7 @@ export default class Subject {
   private _irregularClasses: SubjectClass[] = [];
   private _mandatoryClasses: SubjectClass[] = [];
   private _regularClasses: SubjectClass[] = [];
-  private streamContainers: StreamContainer[] = [];
+  private _streamContainers: StreamContainer[] = [];
 
   /**
    * Intialises a new Subject
@@ -53,7 +53,7 @@ export default class Subject {
         !this._irregularClasses.includes(cls)
     );
     const sortClasses = (a: SubjectClass, b: SubjectClass) =>
-      a.day - b.day || a.start.diff(b.start);
+      a.day - b.day || a.start - b.start;
     this._mandatoryClasses.sort(sortClasses);
     this._regularClasses.sort(sortClasses);
   }
@@ -71,7 +71,7 @@ export default class Subject {
   private mergeStreams = () => {
     let mergeCount = 0;
     // Loop through all stream containers, e.g. Lectures container
-    for (const streamContainer of this.streamContainers) {
+    for (const streamContainer of this._streamContainers) {
       // Loop through all streams within the container
       for (let i = 0; i < streamContainer.streams.length; i++) {
         const stream = streamContainer.streams[i];
@@ -99,8 +99,8 @@ export default class Subject {
             const classB = candidate.classes[k];
             if (
               classA.day !== classB.day ||
-              !classA.start.isSame(classB.start) ||
-              !classA.finish.isSame(classB.finish)
+              classA.start !== classB.start ||
+              classA.finish !== classB.finish
             ) {
               doMerge = false;
             }
@@ -141,7 +141,7 @@ export default class Subject {
    */
   private removeOddStreams = () => {
     // Go through each StreamCountainer to prune odd streams
-    for (const streamContainer of this.streamContainers) {
+    for (const streamContainer of this._streamContainers) {
       let maxClassLength = streamContainer.streams[0].classes.length;
       // Used to track when there are varied stream sizes
       let variedCounts = false;
@@ -185,7 +185,7 @@ export default class Subject {
   // Removes
   private removeSingleStreams() {
     // Loop through each StreamContainer, e.g. Practical, Lecture
-    for (const streamContainer of this.streamContainers) {
+    for (const streamContainer of this._streamContainers) {
       // Checks if there are Streams with > 1 class
       const onlyOneClassInStreams = !streamContainer.streams.some(
         con => con.classes.length !== 1
@@ -198,8 +198,8 @@ export default class Subject {
           this._mandatoryClasses.push(mandatoryClass);
         });
         // Remove this entire StreamContainer from the list
-        this.streamContainers.splice(
-          this.streamContainers.indexOf(streamContainer)
+        this._streamContainers.splice(
+          this._streamContainers.indexOf(streamContainer)
         );
       } else if (onlyOneClassInStreams) {
         // There is only one class in the streams
@@ -207,8 +207,8 @@ export default class Subject {
           // Move all classes to the original classList
           this._classList.push(stream.classes[0]);
         } // Remove this entire StreamContainer from the list
-        this.streamContainers.splice(
-          this.streamContainers.indexOf(streamContainer)
+        this._streamContainers.splice(
+          this._streamContainers.indexOf(streamContainer)
         );
       }
     }
@@ -230,11 +230,11 @@ export default class Subject {
       .filter(cls => streamClassTypes.includes(cls.classCode.type));
     for (const cls of streamedClasses) {
       const type = cls.classCode.type;
-      let container = this.streamContainers.find(con => con.type === type);
+      let container = this._streamContainers.find(con => con.type === type);
       // If the stream container doesn't exist, create it
       if (container === undefined) {
         container = new StreamContainer(type);
-        this.streamContainers.push(container);
+        this._streamContainers.push(container);
       }
       container.addStreamClass(cls);
       this._classList.splice(this._classList.indexOf(cls), 1);
@@ -308,7 +308,7 @@ export default class Subject {
     // Merge classes of the same type, at the same time, different locations
     const sameDay = classA.day === classB.day;
     const sameTime =
-      classA.start.isSame(classB.start) && classA.finish.isSame(classB.finish);
+      classA.start === classB.start && classA.finish === classB.finish;
     const sameType = classA.classCode.type === classB.classCode.type;
     // Checks if the class number is the same, e.g. W01 === W01
     const sameNumber = classA.classCode.number === classB.classCode.number;

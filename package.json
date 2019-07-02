@@ -35,6 +35,7 @@
     "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev-install": "npm i && npm i --prefix client",
     "postinstall": "npm run build-ts",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
