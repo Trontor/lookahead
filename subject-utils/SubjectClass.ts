@@ -1,4 +1,3 @@
-import { Moment } from "moment";
 import moment = require("moment");
 import Subject from "./Subject";
 
@@ -78,8 +77,15 @@ export default class SubjectClass {
   }
 
   public toString = (): string => {
-    return `${this.codes.join(", ")}: ${SubjectClass.daysOfWeek[this.day]} ${
-      this.start
-    } -> ${this.finish} at ${this.locations.join(", ")}`;
+    const parseHoursPastMidnight = (num: number) =>
+      moment()
+        .startOf("day")
+        .add(num, "hour")
+        .format("HH:mm");
+    return `${this.codes.join(", ")}: ${
+      SubjectClass.daysOfWeek[this.day]
+    } ${parseHoursPastMidnight(this.start)} -> ${parseHoursPastMidnight(
+      this.finish
+    )} at ${this.locations.join(", ")}`;
   }
 }
