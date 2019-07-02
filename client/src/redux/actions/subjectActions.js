@@ -1,7 +1,8 @@
 import {
   GET_SUBJECT_BEGIN,
   GET_SUBJECT_SUCCESS,
-  GET_SUBJECT_FAILURE
+  GET_SUBJECT_FAILURE,
+  REMOVE_SUBJECT
 } from "../actionTypes";
 import axios from "axios";
 
@@ -15,7 +16,7 @@ const getSubjectSuccess = (code, classInfo) => ({
   payload: { code, classInfo }
 });
 
-export const getSubjectFailure = (code, error) => ({
+const getSubjectFailure = (code, error) => ({
   type: GET_SUBJECT_FAILURE,
   payload: { code, error }
 });
@@ -30,3 +31,8 @@ export const getSubject = (year, studyPeriod, code, name) => {
       .catch(err => dispatch(getSubjectFailure(code, err)));
   };
 };
+
+export const removeSubject = code => ({
+  type: REMOVE_SUBJECT,
+  payload: { code }
+});

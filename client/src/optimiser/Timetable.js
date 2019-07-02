@@ -1,0 +1,3 @@
+class Timetable {
+  constructor(classList) {}
+}

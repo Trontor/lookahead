@@ -10,9 +10,9 @@ const CURRENT_STUDY_PERIOD_INDEX = 3;
 const CURRENT_SUBJECT_LIST_YEAR = 2019;
 const studyPeriods = [
   { value: "summer_term", label: "Summer" },
-  { value: "semester_1", label: "Semester 1" },
+  { value: "semester_1", label: "Sem 1" },
   { value: "winter_term", label: "Winter" },
-  { value: "semester_2", label: "Semester 2" }
+  { value: "semester_2", label: "Sem 2" }
 ];
 
 const SubjectSelect = props => {
@@ -26,11 +26,13 @@ const SubjectSelect = props => {
   // Tracks the currently entered text in the subject filter
   const [inputValue, setInputValue] = useState("test");
   // Uncomment below to load subjects at the starts
-  // useEffect(() => {
-  //   dispatch(getSubject(2019, "semester_1", "COMP10001", "FOC"));
-  //   dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
-  //   dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
-  // }, []);
+  useEffect(() => {
+    dispatch(getSubject(2019, "semester_1", "SWEN20003", "OOSD"));
+    dispatch(getSubject(2019, "semester_1", "PHYC10001", "Physics 1"));
+    dispatch(getSubject(2019, "semester_1", "COMP10001", "FoC"));
+    // dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
+    // dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
+  }, []);
 
   useEffect(() => {
     const studyPeriod = selectedStudyPeriod.value;
@@ -114,7 +116,7 @@ const SubjectSelect = props => {
       padding: 3px;
     }
     .study-period-select {
-      width: 135px;
+      width: 150px;
     }
     .subject-select {
       width: 100%;

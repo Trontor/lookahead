@@ -17,11 +17,17 @@ export default (state = initialState, action) => {
       // Check if the subject has already been added
       if (state[code]) {
         return state;
-      } else {
-        state[code] = { name, data: null, error: null, loading: true };
       }
-      return { ...state };
+      return {
+        ...state,
+        [code]: { name, data: null, error: null, loading: true }
+      };
     case GET_SUBJECT_SUCCESS:
+      // If the subject entry doesnt exist at all, it's probably been removed
+      if (!state[action.payload.code]) {
+        return state;
+      }
+      // Otherwise, update the subject entry
       return {
         ...state,
         [action.payload.code]: {
@@ -31,6 +37,7 @@ export default (state = initialState, action) => {
         }
       };
     case GET_SUBJECT_FAILURE:
+      // Update error, remove data, stop loading
       return {
         ...state,
         [action.payload.code]: {

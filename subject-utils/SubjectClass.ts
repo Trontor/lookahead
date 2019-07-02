@@ -49,14 +49,14 @@ export default class SubjectClass {
     code: string,
     public readonly description: string,
     public readonly day: number,
-    public readonly start: Moment,
-    public readonly finish: Moment,
+    public readonly start: number,
+    public readonly finish: number,
     public readonly weeks: number[],
     location: string
   ) {
     this.codes = [code];
     this.locations = [location];
-    this.duration = moment.duration(finish.diff(start)).asHours();
+    // this.duration = moment.duration(finish.diff(start)).asHours();
     // Parse parts of class code
     const classCodeRaw = code.split("/")[4].trim();
     this.classCode = {
@@ -78,10 +78,8 @@ export default class SubjectClass {
   }
 
   public toString = (): string => {
-    return `${this.codes.join(", ")}: ${
-      SubjectClass.daysOfWeek[this.day]
-    } ${this.start.format(SubjectClass.timeFormat)} -> ${this.finish.format(
-      SubjectClass.timeFormat
-    )} at ${this.locations.join(", ")}`;
+    return `${this.codes.join(", ")}: ${SubjectClass.daysOfWeek[this.day]} ${
+      this.start
+    } -> ${this.finish} at ${this.locations.join(", ")}`;
   }
 }

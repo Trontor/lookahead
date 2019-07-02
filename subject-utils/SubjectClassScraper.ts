@@ -67,6 +67,10 @@ export const parseSubject = (
     if (!classCode.includes(subjectPeriodShortCode)) {
       return;
     }
+
+    if (classCode.includes("Breakout")) {
+      return;
+    }
     const description = getChild(1);
     const dayRaw = getChild(2);
     const start = getChild(3);
@@ -93,13 +97,16 @@ export const parseSubject = (
     const timeFormat = SubjectClass.timeFormat;
     const startMoment = moment(start, timeFormat);
     const finishMoment = moment(finish, timeFormat);
+
+    const mmtMidnight = startMoment.clone().startOf("day");
+
     const parsedClass = new SubjectClass(
       subject,
       classCode,
       description,
       day,
-      startMoment,
-      finishMoment,
+      startMoment.diff(mmtMidnight, "minutes") / 60,
+      finishMoment.diff(mmtMidnight, "minutes") / 60,
       weeks,
       location
     );
