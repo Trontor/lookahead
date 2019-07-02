@@ -13,6 +13,11 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["*.ts", "subject-utils/*.ts", "test/**/*.*"],
+  "include": [
+    "*.ts",
+    "subject-utils/*.ts",
+    "subject-utils/**/*.json",
+    "test/**/*.*"
+  ],
   "exclude": ["node_modules", ".vscode"]
 }
