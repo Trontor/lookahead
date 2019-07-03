@@ -1,6 +1,7 @@
 import { expect } from "chai";
 import "mocha";
 import moment = require("moment");
+import Subject from "subject-utils/Subject";
 import SubjectClass from "../../subject-utils/SubjectClass";
 
 describe("Subject Class", () => {
@@ -8,6 +9,7 @@ describe("Subject Class", () => {
   let classB: SubjectClass;
   beforeEach(() => {
     // constructor params
+    const subject = new Subject("SUBJECTCODE", "StudyPeriod");
     const codeA = "MAST10006/U/1/SM2/P01/48";
     const codeB = "MAST10006/U/1/SM2/P01/49";
     const description = "Practical 1";
@@ -18,7 +20,7 @@ describe("Subject Class", () => {
     const finish = 18.25;
     const weeks = [31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43];
     classA = new SubjectClass(
-      null,
+      subject,
       codeA,
       description,
       day,
@@ -28,7 +30,7 @@ describe("Subject Class", () => {
       locationA
     );
     classB = new SubjectClass(
-      null,
+      subject,
       codeB,
       description,
       day,
