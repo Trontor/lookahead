@@ -1,15 +1,15 @@
 import { expect } from "chai";
 import "mocha";
-import moment = require("moment");
-import Subject from "subject-utils/Subject";
+import Subject from "../../subject-utils/Subject";
 import SubjectClass from "../../subject-utils/SubjectClass";
+import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
 
 describe("Subject Class", () => {
   let classA: SubjectClass;
   let classB: SubjectClass;
   beforeEach(() => {
     // constructor params
-    const subject = new Subject("SUBJECTCODE", "StudyPeriod");
+    const subject = new Subject("SUBJECTCODE", SubjectPeriod.Semester_1);
     const codeA = "MAST10006/U/1/SM2/P01/48";
     const codeB = "MAST10006/U/1/SM2/P01/49";
     const description = "Practical 1";
