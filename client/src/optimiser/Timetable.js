@@ -62,7 +62,9 @@ export default class Timetable {
         // Check the time between last class end and next class start
         const classBreak = cls.start - lastClass.finish;
         // '15 minute breaks' aren't breaks tbh - TODO: add customisation
-        if (!clashesWithLastClass && classBreak <= 15 / 60) {
+        if (clashesWithLastClass) {
+          continue;
+        } else if (classBreak <= 15 / 60) {
           currentRun += duration + classBreak;
         } else {
           if (currentRun > longestRun) {

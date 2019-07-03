@@ -1,4 +1,11 @@
 import Timetable from "./Timetable";
+import OptimisationType, { LONGEST_RUN } from "./optimisationTypes";
+import {
+  sortByDayAvoid,
+  sortByDaysPresent,
+  sortByDaySpan,
+  sortByLongestRun
+} from "./comparators";
 class Optimiser {
   /**
    * Initialises a new timetable optimiser, given the subject list
@@ -8,7 +15,14 @@ class Optimiser {
     this.subjects = subjects;
   }
 
-  generateAndOptimise() {
+  /**
+   * Generates a list of timetables for the subjects provided, and optimises it
+   * given a list of optimisations to apply, in order.
+   * @param {Array} optimisations An array of
+   * {type: OptimisationType, data: Object} that describes the optimisations to
+   * apply (in order) to the generated timetable list.
+   */
+  generateAndOptimise(optimisations) {
     // Start performance tracking
     const t0 = performance.now();
     const { setPool, streamPool } = this.generateClassPools();
@@ -28,41 +42,32 @@ class Optimiser {
     const timetables = [];
     overallCombinations.forEach(comb => timetables.push(new Timetable(comb)));
     // Sort timetables
-    timetables.sort(
-      (a, b) =>
-        a.clashes - b.clashes ||
-        this.sortByDaysPresent(a, b) ||
-        a.totalDaySpan - b.totalDaySpan
-
-      // this.sortByLongestRun(3, a, b) ||
-      // a.totalDaySpan - b.totalDaySpan
+    timetables.sort((a, b) =>
+      optimisations.reduce(
+        (acc, optimisation) => acc + this.applyOptimisation(optimisation, a, b),
+        0
+      )
     );
     // Stop performance tracking
     const t1 = performance.now();
     const time = t1 - t0;
     return { timetables, time };
   }
-  sortByDaysPresent(a, b) {
-    let aDays = Object.keys(a.dayHours).length;
-    let bDays = Object.keys(b.dayHours).length;
-    return aDays - bDays;
-  }
-  sortByDayAvoid(dayIndex, a, b) {
-    let aHours = 0;
-    let bHours = 0;
-    if (a.dayHours[dayIndex]) {
-      aHours = a.dayHours[dayIndex];
-    }
-    if (b.dayHours[dayIndex]) {
-      bHours = b.dayHours[dayIndex];
-    }
-    return aHours - bHours;
-  }
 
-  sortByLongestRun(longestRun, a, b) {
-    const aValid = a.longestRun <= longestRun;
-    const bValid = b.longestRun <= longestRun;
-    return aValid === bValid ? 0 : aValid ? -1 : 1;
+  applyOptimisation(optimisation, a, b) {
+    const data = optimisation.data;
+    switch (optimisation.type) {
+      case OptimisationType.AVOID_CLASHES:
+        return a.clashes - b.clashes;
+      case OptimisationType.CRAM_CLASSES:
+        return sortByDaysPresent(a, b) || sortByDaySpan(a, b);
+      case OptimisationType.AVOID_DAYS:
+        return sortByDayAvoid(data, a, b);
+      case OptimisationType.LONGEST_RUN:
+        return sortByLongestRun(data, a, b);
+      default:
+        return 0;
+    }
   }
 
   getClassTypes(subject) {

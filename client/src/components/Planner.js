@@ -4,6 +4,7 @@ import Subjects from "./Subjects";
 import TimetableViewer from "./TimetableViewer";
 import { useSelector, useDispatch } from "react-redux";
 import { optimise } from "../redux/actions/optimiserActions";
+import OptimisationTypes from "../optimiser/optimisationTypes";
 
 export default function Planner() {
   const subjects = useSelector(state => state.subjects);
@@ -14,7 +15,16 @@ export default function Planner() {
   if (allLoaded && keys.length > 0) {
     console.log("All loaded!");
     console.log(subjects);
-    dispatch(optimise(subjects));
+    const optimisations = [
+      {
+        type: OptimisationTypes.AVOID_CLASHES
+      },
+      {
+        type: OptimisationTypes.AVOID_DAYS,
+        data: 0
+      }
+    ];
+    dispatch(optimise(subjects, optimisations));
   }
   return (
     <div>
