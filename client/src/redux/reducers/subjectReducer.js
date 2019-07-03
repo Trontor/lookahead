@@ -9,7 +9,6 @@ const initialState = {};
 
 const colors = ["seablue", "red", "orange", "green"].reverse();
 const findColor = state => {
-  let returnColor = "seablue";
   // Copy colors pool
   let colorPool = [...colors];
   Object.entries(state).forEach(([code, { color }]) =>
