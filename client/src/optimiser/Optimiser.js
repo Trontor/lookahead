@@ -1,3 +1,4 @@
+import Timetable from "./Timetable";
 class Optimiser {
   /**
    * Initialises a new timetable optimiser, given the subject list
@@ -23,12 +24,14 @@ class Optimiser {
       const currentCombinations = this.allCombinationsOf(currentSetPool);
       overallCombinations.push(...currentCombinations);
     }
+    // Convert each combination to a timetable
+    const timetables = [];
+    overallCombinations.forEach(comb => timetables.push(new Timetable(comb)));
     // Stop performance tracking
     const t1 = performance.now();
     const time = t1 - t0;
-    return { combinations: overallCombinations, time };
+    return { timetables, time };
   }
-
   getClassTypes(subject) {
     let typeInfo = {};
     if (!subject) {

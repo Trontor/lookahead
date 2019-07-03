@@ -30,7 +30,7 @@ export default class Subject {
    * @param code The subject code as provied by The University of Melbourne
    */
   constructor(
-    private readonly code: string,
+    public readonly code: string,
     private readonly period: SubjectPeriod
   ) {}
 

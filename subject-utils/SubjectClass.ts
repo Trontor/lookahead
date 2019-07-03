@@ -23,6 +23,8 @@ export default class SubjectClass {
   // Verifies if a class code is well formed, i.e. COMP10001/U/1/SM1/W01/55
   public static isWellFormedCode = (code: string): boolean =>
     code.split("/").length === 6
+  // Subject code
+  public subjectCode: string;
   // All class codes that occur at this class time
   public codes: string[];
   // All locations that occur at this class time
@@ -53,6 +55,7 @@ export default class SubjectClass {
     public readonly weeks: number[],
     location: string
   ) {
+    this.subjectCode = subject.code;
     this.codes = [code];
     this.locations = [location];
     // this.duration = moment.duration(finish.diff(start)).asHours();
