@@ -27,9 +27,21 @@ const SubjectSelect = props => {
   const [inputValue, setInputValue] = useState("test");
   // Uncomment below to load subjects at the starts
   useEffect(() => {
-    dispatch(getSubject(2019, "semester_1", "SWEN20003", "OOSD"));
-    // dispatch(getSubject(2019, "semester_1", "PHYC10001", "Physics 1"));
-    // dispatch(getSubject(2019, "semester_1", "COMP10001", "FoC"));
+    dispatch(
+      getSubject(2019, "semester_2", "COMP10001", "Foundations of Computing")
+    );
+    // dispatch(getSubject(2019, "semester_2", "MAST10006", "Calculus 2"));
+    dispatch(
+      getSubject(
+        2019,
+        "semester_2",
+        "SWEN20003",
+        "Object Oriented Software Developmenet"
+      )
+    );
+    // dispatch(
+    //   getSubject(2019, "semester_1", "COMP10001", "Foundations of Computing")
+    // );
     // dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
     // dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
   }, []);

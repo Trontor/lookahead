@@ -8,7 +8,7 @@ class Optimiser {
     this.subjects = subjects;
   }
 
-  generate() {
+  generateAndOptimise() {
     // Start performance tracking
     const t0 = performance.now();
     const { setPool, streamPool } = this.generateClassPools();
@@ -27,17 +27,50 @@ class Optimiser {
     // Convert each combination to a timetable
     const timetables = [];
     overallCombinations.forEach(comb => timetables.push(new Timetable(comb)));
+    // Sort timetables
+    timetables.sort(
+      (a, b) =>
+        a.clashes - b.clashes ||
+        this.sortByDaysPresent(a, b) ||
+        a.totalDaySpan - b.totalDaySpan
+
+      // this.sortByLongestRun(3, a, b) ||
+      // a.totalDaySpan - b.totalDaySpan
+    );
     // Stop performance tracking
     const t1 = performance.now();
     const time = t1 - t0;
     return { timetables, time };
   }
+  sortByDaysPresent(a, b) {
+    let aDays = Object.keys(a.dayHours).length;
+    let bDays = Object.keys(b.dayHours).length;
+    return aDays - bDays;
+  }
+  sortByDayAvoid(dayIndex, a, b) {
+    let aHours = 0;
+    let bHours = 0;
+    if (a.dayHours[dayIndex]) {
+      aHours = a.dayHours[dayIndex];
+    }
+    if (b.dayHours[dayIndex]) {
+      bHours = b.dayHours[dayIndex];
+    }
+    return aHours - bHours;
+  }
+
+  sortByLongestRun(longestRun, a, b) {
+    const aValid = a.longestRun <= longestRun;
+    const bValid = b.longestRun <= longestRun;
+    return aValid === bValid ? 0 : aValid ? -1 : 1;
+  }
+
   getClassTypes(subject) {
     let typeInfo = {};
     if (!subject) {
       return null;
     }
-    for (const cls of subject._classList) {
+    for (const cls of subject._regularClasses) {
       const classCode = cls.classCode.type;
       if (!(classCode in typeInfo)) {
         typeInfo[classCode] = 0;
@@ -75,8 +108,6 @@ class Optimiser {
   }
 
   generateClassPools() {
-    let earliestClass = null;
-    let latestClass = null;
     let setPool = [];
     let streamPool = [];
     const allClassTypes = {};
@@ -87,14 +118,14 @@ class Optimiser {
         continue;
       }
       const subject = data;
-      const { _classList, _mandatoryClasses, _streamContainers } = subject;
+      const { _regularClasses, _mandatoryClasses, _streamContainers } = subject;
       const classTypes = this.getClassTypes(subject);
       // Create a mapping of type: [classes] for each type
       // for example: "W": [classA, classB]
       const typeClassMappings = {};
       for (const type of Object.keys(classTypes)) {
         // Filter all classes in the current subject for this type
-        const matchingClasses = _classList.filter(
+        const matchingClasses = _regularClasses.filter(
           cls => cls.classCode.type === type
         );
         setPool.push(matchingClasses);

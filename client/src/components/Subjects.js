@@ -12,7 +12,6 @@ function Subjects() {
     <ol>
       {Object.keys(subjects).map(code => {
         const { name, loading, data } = subjects[code];
-        console.log(subjects[code]);
         return (
           <li onClick={() => dispatch(removeSubject(code))} key={code}>
             Code: {code}, <br />

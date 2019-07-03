@@ -19,6 +19,8 @@ export default class StreamContainer {
    * Adds a class to an existing stream, or creates a new one if not existing
    */
   public addStreamClass(cls: SubjectClass) {
+    // Change the class type
+    cls.type = "Stream";
     // If the name has not yet been assigned, assign it based on the added class
     if (!this.name) {
       this.name = cls.description.replace(/[^A-Za-z]+/g, "");

@@ -33,6 +33,9 @@ export default class SubjectClass {
   public readonly classCode: IClassCode;
   // The stream number for this class
   public readonly streamNumber: number;
+  // The type of class 'Mandatory', 'Variable', 'Stream' or unknown ''
+  public type: string = "";
+  // The time length of the class
   private readonly duration: number;
   /**
    * Initialises a new SubjectClass, a representation of a university class
