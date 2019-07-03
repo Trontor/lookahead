@@ -1,0 +1,137 @@
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/timegrid/main.css";
+
+// Removes the yellow background highlight for the current day
+.fc-today {
+  background-color: inherit !important;
+}
+
+$opacity: 0.75;
+
+.lookahead-event-wrapper {
+  border-radius: 0px;
+  border: 0;
+  padding: 2px;
+  // margin: -2px;
+  margin-left: -2px;
+  margin-right: -5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 8px;
+  .fc-title {
+    font-weight: bold;
+  }
+  .fc-desc {
+    margin-top: auto;
+  }
+  .fc-code {
+    margin-top: auto;
+  }
+  .event-icon {
+    opacity: $opacity;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+  }
+  .fc-type {
+    opacity: $opacity;
+    position: absolute;
+    top: 1px;
+    right: 15px;
+  }
+  .fc-loc {
+    opacity: $opacity;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+  }
+  .bottom-wrapper {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .lookahead-event-wrapper {
+    font-size: 8px;
+    margin-right: -2px;
+    .fc-title {
+      font-size: 9px;
+      padding-top: 5px;
+    }
+    .fc-type {
+      top: 0px;
+    }
+    .event-icon {
+      font-size: 6px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .lookahead-event-wrapper {
+    font-size: 8px;
+    margin-right: -3px;
+    .fc-time {
+      font-size: 10px;
+    }
+    .fc-type {
+      top: 0px;
+    }
+    .fc-title {
+      font-size: 14px;
+    }
+    .fc-desc {
+      font-size: 10px;
+    }
+    .event-icon {
+      font-size: 6px;
+    }
+    .fc-type {
+      top: 1px;
+      right: 12px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .lookahead-event-wrapper {
+    font-size: 10px;
+    margin-right: -6px;
+
+    .fc-title {
+      font-size: 12px;
+    }
+    .fc-type {
+      top: 0px;
+    }
+    .fc-desc {
+      font-size: 12px;
+    }
+    .event-icon {
+      font-size: 8px;
+    }
+    .fc-type {
+      top: 0px;
+      right: 15px;
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .lookahead-event-wrapper {
+    font-size: 10px;
+    margin-right: -10px;
+    .fc-time {
+      font-size: 12px;
+    }
+    .fc-title {
+      font-size: 12px;
+    }
+    .fc-desc {
+      font-size: 12px;
+    }
+    .event-icon {
+      font-size: 8px;
+    }
+  }
+}

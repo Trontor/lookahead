@@ -23,6 +23,8 @@ export default class SubjectClass {
   // Verifies if a class code is well formed, i.e. COMP10001/U/1/SM1/W01/55
   public static isWellFormedCode = (code: string): boolean =>
     code.split("/").length === 6
+  // Subject code
+  public subjectCode: string;
   // All class codes that occur at this class time
   public codes: string[];
   // All locations that occur at this class time
@@ -31,6 +33,9 @@ export default class SubjectClass {
   public readonly classCode: IClassCode;
   // The stream number for this class
   public readonly streamNumber: number;
+  // The type of class 'Mandatory', 'Variable', 'Stream' or unknown ''
+  public type: string = "";
+  // The time length of the class
   private readonly duration: number;
   /**
    * Initialises a new SubjectClass, a representation of a university class
@@ -53,6 +58,7 @@ export default class SubjectClass {
     public readonly weeks: number[],
     location: string
   ) {
+    this.subjectCode = subject.code;
     this.codes = [code];
     this.locations = [location];
     // this.duration = moment.duration(finish.diff(start)).asHours();

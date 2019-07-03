@@ -7,6 +7,19 @@ import {
 
 const initialState = {};
 
+const colors = ["seablue", "red", "orange", "green"].reverse();
+const findColor = state => {
+  let returnColor = "seablue";
+  // Copy colors pool
+  let colorPool = [...colors];
+  Object.entries(state).forEach(([code, { color }]) =>
+    colorPool.splice(colorPool.indexOf(color), 1)
+  );
+  if (colorPool) {
+    return colorPool.pop();
+  } else return "black";
+};
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_SUBJECT_BEGIN:
@@ -20,7 +33,13 @@ export default (state = initialState, action) => {
       }
       return {
         ...state,
-        [code]: { name, data: null, error: null, loading: true }
+        [code]: {
+          name,
+          color: findColor(state),
+          data: null,
+          error: null,
+          loading: true
+        }
       };
     case GET_SUBJECT_SUCCESS:
       // If the subject entry doesnt exist at all, it's probably been removed

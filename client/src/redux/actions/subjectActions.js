@@ -21,15 +21,13 @@ const getSubjectFailure = (code, error) => ({
   payload: { code, error }
 });
 
-export const getSubject = (year, studyPeriod, code, name) => {
-  return dispatch => {
-    dispatch(getSubjectBegin(code, name));
-    const listURL = `/subject?year=${year}&period=${studyPeriod}&code=${code}`;
-    return axios
-      .get(listURL)
-      .then(res => dispatch(getSubjectSuccess(code, res.data)))
-      .catch(err => dispatch(getSubjectFailure(code, err)));
-  };
+export const getSubject = (year, studyPeriod, code, name) => dispatch => {
+  dispatch(getSubjectBegin(code, name));
+  const listURL = `/subject?year=${year}&period=${studyPeriod}&code=${code}`;
+  return axios
+    .get(listURL)
+    .then(res => dispatch(getSubjectSuccess(code, res.data)))
+    .catch(err => dispatch(getSubjectFailure(code, err)));
 };
 
 export const removeSubject = code => ({

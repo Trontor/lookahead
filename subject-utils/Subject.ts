@@ -30,7 +30,7 @@ export default class Subject {
    * @param code The subject code as provied by The University of Melbourne
    */
   constructor(
-    private readonly code: string,
+    public readonly code: string,
     private readonly period: SubjectPeriod
   ) {}
 
@@ -56,6 +56,13 @@ export default class Subject {
       a.day - b.day || a.start - b.start;
     this._mandatoryClasses.sort(sortClasses);
     this._regularClasses.sort(sortClasses);
+    // Assign class types
+    this._mandatoryClasses.forEach(cls => {
+      cls.type = "Mandatory";
+    });
+    this._regularClasses.forEach(cls => {
+      cls.type = "Variable";
+    });
   }
 
   private extractMandatoryClasses() {
