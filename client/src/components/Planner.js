@@ -20,8 +20,7 @@ export default function Planner() {
         type: OptimisationTypes.AVOID_CLASHES
       },
       {
-        type: OptimisationTypes.AVOID_DAYS,
-        data: 0
+        type: OptimisationTypes.CRAM_CLASSES
       }
     ];
     dispatch(optimise(subjects, optimisations));

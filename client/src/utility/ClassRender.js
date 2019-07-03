@@ -15,7 +15,13 @@ export default function({ event, el }) {
   const height = content.height();
   const width = content.width();
   // Class-specific information is stored in extended props
-  const { subjectName, code, type, locations } = event.extendedProps;
+  const {
+    subjectName,
+    code,
+    type,
+    locations,
+    streamNumber
+  } = event.extendedProps;
 
   // HTML Element for the bottom elements (Subject Name + Code)
   const bottomWrapper = $('<div class="bottom-wrapper"/>');
@@ -44,8 +50,12 @@ export default function({ event, el }) {
     height >= CLASS_TYPE_MINIMUM.height &&
     width >= CLASS_TYPE_MINIMUM.width
   ) {
-    const subjectCodeText = $(`<div class="fc-type">${type}</div>`);
-    subjectCodeText.appendTo(content);
+    const classTypeElement = $(`<div class="fc-type">${type}</div>`);
+    if (type === "Stream") {
+      // prevents JS injection
+      classTypeElement.append(document.createTextNode(` #${streamNumber}`));
+    }
+    classTypeElement.appendTo(content);
   }
   // Render the subject code all the time
   const subjectCode = $(`<div class="fc-code">${code}</div>`);

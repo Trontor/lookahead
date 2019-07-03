@@ -25,7 +25,16 @@ export default function TimetableViewer() {
       const startOfWeek = today.startOf("isoWeek");
       return startOfWeek.add(dayIndex, "days").add(hours, "hours");
     };
-    let { day, start, finish, description, subjectCode, locations, type } = cls;
+    let {
+      day,
+      start,
+      finish,
+      description,
+      subjectCode,
+      locations,
+      type,
+      streamNumber
+    } = cls;
     start = calculateEventDate(day, start).toDate();
     finish = calculateEventDate(day, finish).toDate();
     return {
@@ -33,6 +42,7 @@ export default function TimetableViewer() {
       backgroundColor: subjects[subjectCode].color,
       locations: locations.length,
       type,
+      streamNumber,
       code: subjectCode,
       subjectName: subjects[subjectCode].name,
       className: "lookahead-event-wrapper",

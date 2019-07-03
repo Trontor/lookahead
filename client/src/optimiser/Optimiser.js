@@ -7,12 +7,43 @@ import {
   sortByLongestRun
 } from "./comparators";
 class Optimiser {
+  PERMUTATION_THRESHOLD = 250000;
+  RANDOM_POPULATION = 25000;
+
   /**
    * Initialises a new timetable optimiser, given the subject list
    * @param {*} subjects
    */
   constructor(subjects) {
     this.subjects = subjects;
+  }
+
+  // Calculates the number of unique timetables that can be generated
+  possiblePermutations() {
+    const subjectCodes = Object.keys(this.subjects);
+    // If no subjects, no permutations
+    if (subjectCodes.length === 0) {
+      return 0;
+    }
+    let permutations = 1;
+    // Go through each subject
+    for (const subjectCode of subjectCodes) {
+      const subject = this.subjects[subjectCode].data;
+      const streamContainers = subject._streamContainers;
+      // and each stream container
+      for (const container of streamContainers) {
+        const streamCount = container.streams.length;
+        // then multiply the number of permutations by the number of streams
+        if (streamCount > 0) permutations *= streamCount;
+      }
+      // now, go through each class type, e.g. {'W1': 16} means 16 Workshop 1's
+      const classCodeTypes = this.getClassTypes(subject);
+      for (const type of Object.keys(classCodeTypes)) {
+        // then multiply by the number of classes to choose from of this type/
+        permutations *= classCodeTypes[type];
+      }
+    }
+    return permutations;
   }
 
   /**
@@ -23,6 +54,15 @@ class Optimiser {
    * apply (in order) to the generated timetable list.
    */
   generateAndOptimise(optimisations) {
+    // Calculate possible permutations
+    const permutations = this.possiblePermutations();
+    const random = permutations > this.PERMUTATION_THRESHOLD;
+    console.log("Timetables to Generate:", permutations);
+    if (random) {
+      console.log(
+        "Too many timetables to bruteforce, switching to random generation."
+      );
+    }
     // Start performance tracking
     const t0 = performance.now();
     const { setPool, streamPool } = this.generateClassPools();
@@ -35,8 +75,21 @@ class Optimiser {
       const currentSetPool = [...setPool];
       // Add current combination to the set pool
       streamCombination.flat().forEach(cls => currentSetPool.push([cls]));
-      const currentCombinations = this.allCombinationsOf(currentSetPool);
-      overallCombinations.push(...currentCombinations);
+      // Different generation mechanism for random timetable generation
+      if (random) {
+        const section = this.RANDOM_POPULATION / streamCombinations.length;
+        for (let i = 0; i < section; i++) {
+          const classes = [];
+          currentSetPool.forEach(set => {
+            const randomIndex = Math.floor(Math.random() * set.length);
+            classes.push(set[randomIndex]);
+          });
+          overallCombinations.push(classes);
+        }
+      } else {
+        const currentCombinations = this.allCombinationsOf(currentSetPool);
+        overallCombinations.push(...currentCombinations);
+      }
     }
     // Convert each combination to a timetable
     const timetables = [];
