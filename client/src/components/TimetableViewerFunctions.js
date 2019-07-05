@@ -1,5 +1,6 @@
 import moment from "moment";
 import $ from "jquery";
+
 // Converter class (SubjectClass -> FullCalendar Event Object)
 export const classToEvent = (subjects, cls) => {
   const calculateEventDate = (dayIndex, hours) => {
@@ -37,6 +38,7 @@ export const classToEvent = (subjects, cls) => {
     durationEditable: false
   };
 };
+
 /**
  * Handles when an event has started to be dragged
  * Main actions: make regular events {REGULAR_EVENTS_OPACITY}% visible, show
@@ -128,17 +130,21 @@ const hideBackgroundEvent = event => {
 
 export const generateBackgroundEvents = subjects => {
   const bgEvents = [];
+  // Loop through each subject, generating background events for them 1-by-1
   for (const [code, { data }] of Object.entries(subjects)) {
+    // Check if the data for the subject has been retrieved yet
     if (!data) {
+      // If not, continue to the next subject
       continue;
     }
+    // Helper function to generate unique class names for each background event
+    const generateClassName = ({ subjectCode, description }) =>
+      `lookahead-background-${subjectCode}-${description}`.replace(" ", "");
     // Generate bg events for Variable classes
     for (const cls of data._regularClasses) {
       const event = {
         ...classToEvent(subjects, cls),
-        className: `lookahead-background-${cls.subjectCode}-${
-          cls.description
-        }`.replace(" ", ""),
+        className: generateClassName(cls),
         backgroundColor: "transparent",
         rendering: "background"
       };
@@ -150,9 +156,7 @@ export const generateBackgroundEvents = subjects => {
         for (const cls of classes) {
           const event = {
             ...classToEvent(subjects, cls),
-            className: `lookahead-background-${cls.subjectCode}-${
-              cls.description
-            }`.replace(" ", ""),
+            className: generateClassName(cls),
             backgroundColor: "transparent",
             rendering: "background"
           };

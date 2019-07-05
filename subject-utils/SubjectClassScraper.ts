@@ -19,7 +19,6 @@ export const scrapeSubject = async (
   // tslint:disable-next-line:max-line-length
   const swsURL = `https://sws.unimelb.edu.au/${year}/Reports/List.aspx?objects=${code}&weeks=1-52&days=1-7&periods=1-56&template=module_by_group_list`;
   try {
-    console.log(swsURL);
     const htmlSource = await getHTML(swsURL);
     const subject: Subject = parseSubject(htmlSource, code, period);
     return subject;
