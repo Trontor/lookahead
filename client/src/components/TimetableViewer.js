@@ -17,6 +17,7 @@ import {
   nextTimetable,
   previousTimetable
 } from "../redux/actions/optimiserActions";
+import { updateEvents } from "../redux/actions/timetableActions";
 
 export default function TimetableViewer() {
   const { timetables, currentIndex, customTimetable } = useSelector(
@@ -34,11 +35,9 @@ export default function TimetableViewer() {
   relevantTimetable.classList = relevantTimetable.classList.filter(
     cls => subjects[cls.subjectCode]
   );
-  const events = relevantTimetable.classList.map(cls =>
-    classToEvent(subjects, cls)
-  );
-  events.push(...generateBackgroundEvents(subjects));
-
+  const events = relevantTimetable.classList.map(cls => classToEvent(cls));
+  events.push(...generateBackgroundEvents());
+  dispatch(updateEvents(events));
   return (
     <>
       {timetables && (

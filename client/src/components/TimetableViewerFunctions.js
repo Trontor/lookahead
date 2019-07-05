@@ -1,8 +1,19 @@
 import moment from "moment";
 import $ from "jquery";
+import store from "../redux/store";
 
+export const getSubjects = () => {
+  return store.getState().subjects;
+};
+export const getBackgroundEvents = () => {
+  return store.getState().timetable.backgroundEvents;
+};
+export const getRegularEvents = () => {
+  return store.getState().timetable.regularEvents;
+};
 // Converter class (SubjectClass -> FullCalendar Event Object)
-export const classToEvent = (subjects, cls) => {
+export const classToEvent = cls => {
+  const subjects = getSubjects();
   const calculateEventDate = (dayIndex, hours) => {
     const today = moment();
     const startOfWeek = today.startOf("isoWeek");
@@ -42,7 +53,7 @@ export const classToEvent = (subjects, cls) => {
 };
 
 const REGULAR_EVENTS_OPACITY = 0.25;
-let currentBackgroundEvents = [];
+let currentShownBackgroundEvents = [];
 /**
  * Handles when an event has started to be dragged
  * Main actions: make regular events {REGULAR_EVENTS_OPACITY}% visible, show
@@ -51,21 +62,19 @@ let currentBackgroundEvents = [];
  * @param {Event} currentEvent
  */
 export const handleEventDragStart = (allEvents, currentEvent) => {
+  console.log(getBackgroundEvents());
   // Get all foreground events
-  const regularEvents = allEvents.filter(e => e.rendering !== "background");
+  const regularEvents = getRegularEvents();
   // Make them opaque
   regularEvents.forEach(event => {
     $(`.${event.className}`).css("opacity", REGULAR_EVENTS_OPACITY);
   });
   // Get all allowed drop events
-  const backgroundEvents = allEvents.filter(
+  const backgroundEvents = getBackgroundEvents().filter(
     e =>
-      e.rendering === "background" &&
       e.title === currentEvent.title &&
       e.code === currentEvent.extendedProps.code
   );
-  // Track the currently shown background events
-  currentBackgroundEvents = backgroundEvents;
   // Show all allowed background events
   backgroundEvents.forEach(showBackgroundEvent);
 };
@@ -79,7 +88,7 @@ let currentStreamIndicators = [];
  * @param {[Event]} allEvents
  */
 export const handleEventAllow = (dropLocation, draggedEvent, allEvents) => {
-  const intersects = currentBackgroundEvents.filter(event => {
+  const intersects = currentShownBackgroundEvents.filter(event => {
     const sameDay = dropLocation.start.getDay() === event.start.getDay();
     const sameHour = dropLocation.start.getHours() === event.start.getHours();
     const sameMinutes =
@@ -91,19 +100,16 @@ export const handleEventAllow = (dropLocation, draggedEvent, allEvents) => {
   if (!isStream) {
     return onAClass;
   }
-  const bgEvents = allEvents.filter(event => event.rendering === "background");
   if (onAClass) {
     const intersectingEvent = intersects[0];
-
     // Find all events that are a part of this stream
-    const sameStream = bgEvents.filter(
+    const sameStream = getBackgroundEvents().filter(
       event =>
         event.code === intersectingEvent.code &&
         event.classCode.type === intersectingEvent.classCode.type &&
         event.streamNumber === intersectingEvent.streamNumber &&
         event.className !== intersectingEvent.className
     );
-    console.log(draggedEvent);
     sameStream.forEach(e => currentStreamIndicators.push(e));
     sameStream.forEach(showEventIndicator);
     return true;
@@ -126,20 +132,31 @@ export const handleEventDragStop = (allEvents, currentEvent) => {
   regularEvents.forEach(event => {
     $(`.${event.className}`).css("opacity", 1);
   });
-  // Get all allowed drop events
-  const backgroundEvents = allEvents.filter(e => e.rendering === "background");
-  // Hide all allowed background events
-  backgroundEvents.forEach(hideBackgroundEvent);
-  currentBackgroundEvents = [];
+  // Hide all background events
+  getBackgroundEvents().forEach(hideBackgroundEvent);
+  currentShownBackgroundEvents = [];
 };
 
-export const handleEventDrop = ({ event, oldEvent }) => {
+/**
+ * Triggered when an event is dropped into a new timeslot.
+ */
+export const handleEventDrop = ({ event, oldEvent }, allEvents) => {
   console.log(event, oldEvent);
+  // We need to update the custom timetable (if any, otherwise we create one)
+  const {
+    start,
+    extendedProps: { type, streamNumber }
+  } = event;
+  // Streams require special handling, because they have neighbouring classes
+  if (type === "Stream") {
+    // Stream number the class has come from
+  }
 };
 
 const BACKGROUND_EVENT_COLOR = "orange";
 const showBackgroundEvent = event => {
   const className = event.className;
+  currentShownBackgroundEvents.push(event);
   if (event.type === "Stream") {
     $(`.${className}`).append("Stream #" + event.streamNumber);
   }
@@ -160,8 +177,9 @@ const showEventIndicator = event => {
   $(`.${className}`).css("background-color", "green");
 };
 
-export const generateBackgroundEvents = subjects => {
+export const generateBackgroundEvents = () => {
   const bgEvents = [];
+  const subjects = getSubjects();
   // Loop through each subject, generating background events for them 1-by-1
   for (const [code, { data }] of Object.entries(subjects)) {
     // Check if the data for the subject has been retrieved yet
@@ -178,7 +196,7 @@ export const generateBackgroundEvents = subjects => {
     // Generate bg events for Variable classes
     for (const cls of data._regularClasses) {
       const event = {
-        ...classToEvent(subjects, cls),
+        ...classToEvent(cls),
         className: generateClassName(cls),
         backgroundColor: "transparent",
         rendering: "background"
@@ -190,7 +208,7 @@ export const generateBackgroundEvents = subjects => {
       for (const { classes } of streams) {
         for (const cls of classes) {
           const event = {
-            ...classToEvent(subjects, cls),
+            ...classToEvent(cls),
             className: generateClassName(cls),
             backgroundColor: "transparent",
             rendering: "background"

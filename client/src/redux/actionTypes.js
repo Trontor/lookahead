@@ -20,3 +20,6 @@ export const PREVIOUS_TIMETABLE = "PREVIOUS_TIMETABLE";
 // Custom Timetables
 export const UPDATE_CUSTOM_TIMETABLE = "UPDATE_CUSTOM_TIMETABLE";
 export const CREATE_CUSTOM_TIMETABLE = "CREATE_CUSTOM_TIMETABLE";
+
+// Timetable Viewer Eventns
+export const UPDATE_EVENTS = "UPDATE_EVENTS";
