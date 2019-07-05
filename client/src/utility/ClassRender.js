@@ -5,11 +5,15 @@ const CLASS_LOCATION_MINIMUM = { height: 0, width: 90 };
 const CLASS_TYPE_MINIMUM = { height: 0, width: 120 };
 
 /**
- * Handles the rendering of the class event on the timetable viewer.
+ * Handles the rendering of a class event on the timetable viewer.
  * @param {EventApi} event The FullCalendar Event Object of relevance
  * @param {HTMLElement} el The corresponsind HTMLElement to
  */
 export default function({ event, el }) {
+  // Handle if background event
+  if (event.rendering && event.rendering === "background") {
+    return;
+  }
   const content = $(el);
   // Size information of the current class
   const height = content.height();
@@ -51,6 +55,7 @@ export default function({ event, el }) {
     width >= CLASS_TYPE_MINIMUM.width
   ) {
     const classTypeElement = $(`<div class="fc-type">${type}</div>`);
+    // if its a stream, append the stream number to the text
     if (type === "Stream") {
       // prevents JS injection
       classTypeElement.append(document.createTextNode(` #${streamNumber}`));
@@ -62,6 +67,7 @@ export default function({ event, el }) {
   subjectCode.appendTo(bottomWrapper);
   // Add the bottom wrapper to the calendar element
   bottomWrapper.appendTo(content);
+  // Show appropriate icon at top right
   let iconMapping = {
     Mandatory: "lock",
     Variable: "exchange-alt",

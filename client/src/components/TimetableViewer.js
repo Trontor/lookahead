@@ -2,61 +2,43 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import "./TimetableViewer.scss";
 import handleClassRender from "../utility/ClassRender";
-import moment from "moment";
+import {
+  classToEvent,
+  handleEventAllow,
+  handleEventDragStart,
+  handleEventDragStop,
+  generateBackgroundEvents,
+  handleEventDrop
+} from "./TimetableViewerFunctions";
 import {
   nextTimetable,
   previousTimetable
 } from "../redux/actions/optimiserActions";
 
 export default function TimetableViewer() {
-  const { timetables, currentIndex } = useSelector(state => state.optimiser);
+  const { timetables, currentIndex, customTimetable } = useSelector(
+    state => state.optimiser
+  );
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   if (!timetables) {
     return "No timetables";
   }
   const relevantTimetable = timetables[currentIndex];
-  // Converter class (SubjectClass -> FullCalendar Event Object)
-  const classToEvent = cls => {
-    const calculateEventDate = (dayIndex, hours) => {
-      const today = moment();
-      const startOfWeek = today.startOf("isoWeek");
-      return startOfWeek.add(dayIndex, "days").add(hours, "hours");
-    };
-    let {
-      day,
-      start,
-      finish,
-      description,
-      subjectCode,
-      locations,
-      type,
-      streamNumber
-    } = cls;
-    start = calculateEventDate(day, start).toDate();
-    finish = calculateEventDate(day, finish).toDate();
-    return {
-      title: description,
-      backgroundColor: subjects[subjectCode].color,
-      locations: locations.length,
-      type,
-      streamNumber,
-      code: subjectCode,
-      subjectName: subjects[subjectCode].name,
-      className: "lookahead-event-wrapper",
-      start: start,
-      end: finish,
-      editable: false
-    };
-  };
+
   console.log("Current Timetable:", relevantTimetable);
   // Map timetable classes to events
   relevantTimetable.classList = relevantTimetable.classList.filter(
     cls => subjects[cls.subjectCode]
   );
-  const events = relevantTimetable.classList.map(classToEvent);
+  const events = relevantTimetable.classList.map(cls =>
+    classToEvent(subjects, cls)
+  );
+  events.push(...generateBackgroundEvents(subjects));
+
   return (
     <>
       {timetables && (
@@ -69,7 +51,7 @@ export default function TimetableViewer() {
       )}
       <FullCalendar
         defaultView="timeGridWeek"
-        plugins={[timeGridPlugin]}
+        plugins={[timeGridPlugin, interactionPlugin]}
         weekends={false}
         slotLabelFormat={{
           hour: "numeric",
@@ -79,6 +61,9 @@ export default function TimetableViewer() {
           meridiem: "narrow"
         }}
         events={events}
+        eventDrop={handleEventDrop}
+        eventDragStart={({ event }) => handleEventDragStart(events, event)}
+        eventDragStop={({ event }) => handleEventDragStop(events, event)}
         eventPositioned={handleClassRender}
         header={false}
         handleWindowResize={true}
@@ -88,10 +73,12 @@ export default function TimetableViewer() {
         minTime="08:00:00"
         maxTime="22:30:00"
         snapDuration="00:15"
+        eventAllow={handleEventAllow}
         firstDay={1}
         editable={true}
         slotEventOverlap={false}
         allDaySlot={false}
+        eventResourceEditable={true}
       />
     </>
   );
