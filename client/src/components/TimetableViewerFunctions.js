@@ -10,6 +10,7 @@ export const classToEvent = (subjects, cls) => {
   };
   let {
     day,
+    classCode,
     start,
     finish,
     description,
@@ -27,6 +28,7 @@ export const classToEvent = (subjects, cls) => {
     backgroundColor: subjects[subjectCode].color,
     locations: locations.length,
     type,
+    classCode,
     codes,
     streamNumber,
     code: subjectCode,
@@ -39,6 +41,8 @@ export const classToEvent = (subjects, cls) => {
   };
 };
 
+const REGULAR_EVENTS_OPACITY = 0.25;
+let currentBackgroundEvents = [];
 /**
  * Handles when an event has started to be dragged
  * Main actions: make regular events {REGULAR_EVENTS_OPACITY}% visible, show
@@ -46,8 +50,6 @@ export const classToEvent = (subjects, cls) => {
  * @param {[Event]} allEvents
  * @param {Event} currentEvent
  */
-const REGULAR_EVENTS_OPACITY = 0.25;
-let currentBackgroundEvents = [];
 export const handleEventDragStart = (allEvents, currentEvent) => {
   // Get all foreground events
   const regularEvents = allEvents.filter(e => e.rendering !== "background");
@@ -62,14 +64,21 @@ export const handleEventDragStart = (allEvents, currentEvent) => {
       e.title === currentEvent.title &&
       e.code === currentEvent.extendedProps.code
   );
-  console.log(backgroundEvents);
   // Track the currently shown background events
   currentBackgroundEvents = backgroundEvents;
   // Show all allowed background events
   backgroundEvents.forEach(showBackgroundEvent);
 };
 
-export const handleEventAllow = (dropLocation, draggedEvent) => {
+let currentStreamIndicators = [];
+/**
+ * Determines whether or not an event being dragged can be placed at a certain
+ * location.
+ * @param {DropLocation} dropLocation
+ * @param {Event} draggedEvent
+ * @param {[Event]} allEvents
+ */
+export const handleEventAllow = (dropLocation, draggedEvent, allEvents) => {
   const intersects = currentBackgroundEvents.filter(event => {
     const sameDay = dropLocation.start.getDay() === event.start.getDay();
     const sameHour = dropLocation.start.getHours() === event.start.getHours();
@@ -78,9 +87,29 @@ export const handleEventAllow = (dropLocation, draggedEvent) => {
     return sameDay && sameHour && sameMinutes;
   });
   const onAClass = intersects.length > 0;
+  const isStream = draggedEvent.extendedProps.type === "Stream";
+  if (!isStream) {
+    return onAClass;
+  }
+  const bgEvents = allEvents.filter(event => event.rendering === "background");
   if (onAClass) {
+    const intersectingEvent = intersects[0];
+
+    // Find all events that are a part of this stream
+    const sameStream = bgEvents.filter(
+      event =>
+        event.code === intersectingEvent.code &&
+        event.classCode.type === intersectingEvent.classCode.type &&
+        event.streamNumber === intersectingEvent.streamNumber &&
+        event.className !== intersectingEvent.className
+    );
+    console.log(draggedEvent);
+    sameStream.forEach(e => currentStreamIndicators.push(e));
+    sameStream.forEach(showEventIndicator);
     return true;
   } else {
+    currentStreamIndicators.forEach(hideBackgroundEvent);
+    currentStreamIndicators = [];
     return false;
   }
 };
@@ -98,12 +127,7 @@ export const handleEventDragStop = (allEvents, currentEvent) => {
     $(`.${event.className}`).css("opacity", 1);
   });
   // Get all allowed drop events
-  const backgroundEvents = allEvents.filter(
-    e =>
-      e.rendering === "background" &&
-      e.title === currentEvent.title &&
-      e.code === currentEvent.extendedProps.code
-  );
+  const backgroundEvents = allEvents.filter(e => e.rendering === "background");
   // Hide all allowed background events
   backgroundEvents.forEach(hideBackgroundEvent);
   currentBackgroundEvents = [];
@@ -116,6 +140,9 @@ export const handleEventDrop = ({ event, oldEvent }) => {
 const BACKGROUND_EVENT_COLOR = "orange";
 const showBackgroundEvent = event => {
   const className = event.className;
+  if (event.type === "Stream") {
+    $(`.${className}`).append("Stream #" + event.streamNumber);
+  }
   $(`.${className}`).css("background-color", BACKGROUND_EVENT_COLOR);
   //   $(`.${className}`).removeClass("hide");
   //   $(`.${className}`).addClass("show");
@@ -123,9 +150,14 @@ const showBackgroundEvent = event => {
 
 const hideBackgroundEvent = event => {
   const className = event.className;
+  // Removes all child elements, clearing out rendered text like "Stream #x"
+  $(`.${className}`).empty();
   $(`.${className}`).css("background-color", "transparent");
-  //   $(`.${className}`).showClass("hide");
-  //   $(`.${className}`).removeClass("show");
+};
+
+const showEventIndicator = event => {
+  const className = event.className;
+  $(`.${className}`).css("background-color", "green");
 };
 
 export const generateBackgroundEvents = subjects => {
@@ -138,8 +170,11 @@ export const generateBackgroundEvents = subjects => {
       continue;
     }
     // Helper function to generate unique class names for each background event
-    const generateClassName = ({ subjectCode, description }) =>
-      `lookahead-background-${subjectCode}-${description}`.replace(" ", "");
+    const generateClassName = ({ subjectCode, description, streamNumber }) =>
+      `lookahead-background-${subjectCode}-${description}-${streamNumber}`.replace(
+        " ",
+        ""
+      );
     // Generate bg events for Variable classes
     for (const cls of data._regularClasses) {
       const event = {

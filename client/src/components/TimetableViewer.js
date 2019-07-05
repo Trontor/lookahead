@@ -63,6 +63,9 @@ export default function TimetableViewer() {
         events={events}
         eventDrop={handleEventDrop}
         eventDragStart={({ event }) => handleEventDragStart(events, event)}
+        eventAllow={(dropLocation, draggedEvent) =>
+          handleEventAllow(dropLocation, draggedEvent, events)
+        }
         eventDragStop={({ event }) => handleEventDragStop(events, event)}
         eventPositioned={handleClassRender}
         header={false}
@@ -73,7 +76,6 @@ export default function TimetableViewer() {
         minTime="08:00:00"
         maxTime="22:30:00"
         snapDuration="00:15"
-        eventAllow={handleEventAllow}
         firstDay={1}
         editable={true}
         slotEventOverlap={false}

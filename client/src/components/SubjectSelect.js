@@ -32,14 +32,14 @@ const SubjectSelect = props => {
     // );
     dispatch(getSubject(2019, "semester_2", "MAST10007", "Linear Algebra"));
     // dispatch(getSubject(2019, "semester_2", "MAST10006", "Calculus 2"));
-    // dispatch(
-    //   getSubject(
-    //     2019,
-    //     "semester_2",
-    //     "SWEN20003",
-    //     "Object Oriented Software Developmenet"
-    //   )
-    // );
+    dispatch(
+      getSubject(
+        2019,
+        "semester_2",
+        "SWEN20003",
+        "Object Oriented Software Developmenet"
+      )
+    );
     // dispatch(
     //   getSubject(2019, "semester_1", "COMP10001", "Foundations of Computing")
     // );
