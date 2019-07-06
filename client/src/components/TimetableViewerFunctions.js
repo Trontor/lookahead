@@ -1,16 +1,42 @@
 import moment from "moment";
 import $ from "jquery";
 import store from "../redux/store";
-
+import {
+  createCustomTimetable,
+  changeToCustomView,
+  updateCustomTimetable
+} from "../redux/actions/optimiserActions";
+import Timetable from "../optimiser/Timetable";
 export const getSubjects = () => {
   return store.getState().subjects;
 };
+
 export const getBackgroundEvents = () => {
   return store.getState().timetable.backgroundEvents;
 };
+
 export const getRegularEvents = () => {
   return store.getState().timetable.regularEvents;
 };
+
+export const getCurrentCustomTimetable = () => {
+  const { customTimetables, currentCustomIndex } = store.getState().optimiser;
+  const timetable = customTimetables[currentCustomIndex];
+  if (!timetable) {
+    console.log(
+      "The current custom timetable does not exist... create a new one!"
+    );
+    const { timetables, currentIndex } = store.getState().optimiser;
+    const currentGeneratedTimetable = timetables[currentIndex];
+    store.dispatch(
+      createCustomTimetable("Custom Timetable", currentGeneratedTimetable)
+    );
+    store.dispatch(changeToCustomView());
+    return getCurrentCustomTimetable();
+  }
+  return timetable;
+};
+
 // Converter class (SubjectClass -> FullCalendar Event Object)
 export const classToEvent = cls => {
   const subjects = getSubjects();
@@ -52,7 +78,7 @@ export const classToEvent = cls => {
   };
 };
 
-const REGULAR_EVENTS_OPACITY = 0.25;
+const REGULAR_EVENTS_OPACITY = 0.15;
 let currentShownBackgroundEvents = [];
 /**
  * Handles when an event has started to be dragged
@@ -140,17 +166,65 @@ export const handleEventDragStop = (allEvents, currentEvent) => {
 /**
  * Triggered when an event is dropped into a new timeslot.
  */
-export const handleEventDrop = ({ event, oldEvent }, allEvents) => {
-  console.log(event, oldEvent);
+export const handleEventDrop = ({ event, oldEvent }) => {
+  const subjects = getSubjects();
+  const allRegularClasses = [];
+  Object.keys(subjects).forEach(key =>
+    subjects[key].data._regularClasses.forEach(cls =>
+      allRegularClasses.push(cls)
+    )
+  );
+  // console.log(allRegularClasses);
+  // console.log(event, oldEvent);
   // We need to update the custom timetable (if any, otherwise we create one)
+  // First, destructure necessary information
   const {
     start,
-    extendedProps: { type, streamNumber }
+    title,
+    extendedProps: { type, streamNumber, code, codes }
   } = event;
-  // Streams require special handling, because they have neighbouring classes
-  if (type === "Stream") {
+  const startHoursFractional = start.getHours() + start.getMinutes() / 60;
+  const dayIndex = start.getDay() - 1;
+  // This is the easy part.
+  if (type !== "Stream") {
     // Stream number the class has come from
+    const matchingClasses = allRegularClasses.filter(
+      cls =>
+        cls.description === title &&
+        cls.subjectCode === code &&
+        cls.start === startHoursFractional &&
+        cls.day === dayIndex
+    );
+    if (matchingClasses.length > 0) {
+      // Yay, we found the class we've moved to!
+      const newClass = matchingClasses[0];
+      const subject = code;
+      const fromCode = codes[0];
+      const toCode = newClass.codes[0];
+      moveRegularClass(subject, fromCode, toCode);
+    } else {
+      // This reaaallly shouldn't happen - but if it does...?
+      console.error("This shouldn't happen.", oldEvent, event);
+    }
   }
+  // Streams require special handling, because they have neighbouring classes
+};
+
+const moveRegularClass = (subject, oldCode, newCode) => {
+  console.log(`${subject}: Moving ${oldCode} to ${newCode}`);
+  const {
+    id,
+    name,
+    timetable: { classList }
+  } = getCurrentCustomTimetable();
+  let newClass = getSubjects()[subject].data._regularClasses.filter(
+    cls => cls.codes[0] === newCode
+  )[0];
+  const oldClass = classList.filter(cls => cls.codes[0] === oldCode)[0];
+  classList.splice(classList.indexOf(oldClass), 1, newClass);
+  const newTimetable = new Timetable(classList);
+  console.log("New Timetable:", newTimetable);
+  updateCustomTimetable(id, name, newTimetable);
 };
 
 const BACKGROUND_EVENT_COLOR = "orange";

@@ -1,278 +1,12 @@
 {
   "subject": {
-    "code": "SWEN20003",
+    "code": "ENGR10003",
     "period": "semester_2",
     "_classList": [
       {
         "description": "Workshop 1",
         "day": 0,
-        "start": 13,
-        "finish": 15,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/12"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 12
-      },
-      {
-        "description": "Workshop 1",
-        "day": 0,
-        "start": 15.25,
-        "finish": 17.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/15"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 15
-      },
-      {
-        "description": "Workshop 1",
-        "day": 1,
         "start": 9,
-        "finish": 11,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/21"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-222"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 21
-      },
-      {
-        "description": "Workshop 1",
-        "day": 1,
-        "start": 16.25,
-        "finish": 18.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/17"
-        ],
-        "locations": [
-          "PAR-Old Engineering-EDS6"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 17
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 9,
-        "finish": 11,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/22",
-          "SWEN20003/U/1/SM2/W01/11"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210",
-          "PAR-207-221 Bouverie St-B116"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 22
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 15.25,
-        "finish": 17.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/18"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 18
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 12,
-        "finish": 14,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/05"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 5
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 16.25,
-        "finish": 18.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/01"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 1
-      },
-      {
-        "description": "Workshop 1",
-        "day": 3,
-        "start": 10,
         "finish": 12,
         "weeks": [
           31,
@@ -289,23 +23,23 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/04"
+          "ENGR10003/U/1/SM2/W01/08"
         ],
         "locations": [
-          "PAR-Elec. Engineering-123"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
           "type": "W"
         },
-        "streamNumber": 4
+        "streamNumber": 8
       },
       {
         "description": "Workshop 1",
-        "day": 3,
-        "start": 13,
+        "day": 0,
+        "start": 12,
         "finish": 15,
         "weeks": [
           31,
@@ -322,16 +56,12 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/09",
-          "SWEN20003/U/1/SM2/W01/19",
-          "SWEN20003/U/1/SM2/W01/08"
+          "ENGR10003/U/1/SM2/W01/09"
         ],
         "locations": [
-          "PAR-Elec. Engineering-123",
-          "PAR-Alice Hoy-210",
-          "PAR-Elec. Engineering-122"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
@@ -341,74 +71,8 @@
       },
       {
         "description": "Workshop 1",
-        "day": 3,
-        "start": 19.25,
-        "finish": 21.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/02"
-        ],
-        "locations": [
-          "PAR-Old Engineering-EDS6"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 2
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 18.25,
-        "finish": 20.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/13"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-211"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 13
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 16.25,
+        "day": 0,
+        "start": 15.25,
         "finish": 18.25,
         "weeks": [
           31,
@@ -425,12 +89,12 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/10"
+          "ENGR10003/U/1/SM2/W01/10"
         ],
         "locations": [
-          "PAR-Elec. Engineering-122"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
@@ -440,9 +104,42 @@
       },
       {
         "description": "Workshop 1",
-        "day": 4,
+        "day": 0,
+        "start": 18.25,
+        "finish": 21.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/11"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 11
+      },
+      {
+        "description": "Workshop 1",
+        "day": 1,
         "start": 9,
-        "finish": 11,
+        "finish": 12,
         "weeks": [
           31,
           32,
@@ -458,58 +155,23 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/03"
+          "ENGR10003/U/1/SM2/W01/17"
         ],
         "locations": [
-          "PAR-Elec. Engineering-123"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
           "type": "W"
         },
-        "streamNumber": 3
+        "streamNumber": 17
       },
       {
         "description": "Workshop 1",
-        "day": 4,
-        "start": 11,
-        "finish": 13,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/07",
-          "SWEN20003/U/1/SM2/W01/20"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123",
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 7
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 15.25,
+        "day": 1,
+        "start": 14.25,
         "finish": 17.25,
         "weeks": [
           31,
@@ -526,23 +188,155 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/06"
+          "ENGR10003/U/1/SM2/W01/01"
         ],
         "locations": [
-          "PAR-Elec. Engineering-123"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
           "type": "W"
         },
-        "streamNumber": 6
+        "streamNumber": 1
       },
       {
         "description": "Workshop 1",
-        "day": 4,
-        "start": 19.25,
+        "day": 1,
+        "start": 17.25,
+        "finish": 20.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/05"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 5
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 9,
+        "finish": 12,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/02"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 2
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 12,
+        "finish": 15,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/16"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 16
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 15.25,
+        "finish": 18.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/19"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 19
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 18.25,
         "finish": 21.25,
         "weeks": [
           31,
@@ -559,27 +353,24 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/16"
+          "ENGR10003/U/1/SM2/W01/12"
         ],
         "locations": [
-          "PAR-Old Engineering-EDS6"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
           "type": "W"
         },
-        "streamNumber": 16
-      }
-    ],
-    "_irregularClasses": [],
-    "_mandatoryClasses": [
+        "streamNumber": 12
+      },
       {
-        "description": "Lecture 1",
-        "day": 1,
-        "start": 15.25,
-        "finish": 16.25,
+        "description": "Workshop 1",
+        "day": 3,
+        "start": 9,
+        "finish": 12,
         "weeks": [
           31,
           32,
@@ -594,24 +385,57 @@
           42,
           43
         ],
-        "type": "Mandatory",
-        "subjectCode": "SWEN20003",
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/L01/01"
+          "ENGR10003/U/1/SM2/W01/03"
         ],
         "locations": [
-          "PAR-Glyn Davis (MSD)-B117"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
-          "type": "L"
+          "type": "W"
         },
-        "streamNumber": 1
+        "streamNumber": 3
       },
       {
-        "description": "Lecture 2",
+        "description": "Workshop 1",
         "day": 3,
-        "start": 17.25,
+        "start": 12,
+        "finish": 15,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/15"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 15
+      },
+      {
+        "description": "Workshop 1",
+        "day": 3,
+        "start": 15.25,
         "finish": 18.25,
         "weeks": [
           31,
@@ -627,292 +451,127 @@
           42,
           43
         ],
-        "type": "Mandatory",
-        "subjectCode": "SWEN20003",
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/L02/01"
+          "ENGR10003/U/1/SM2/W01/07"
         ],
         "locations": [
-          "PAR-Sidney Myer Asia Ctr-B02 (Carrillo Gantner Theatre)"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
-          "number": 2,
-          "type": "L"
+          "number": 1,
+          "type": "W"
         },
-        "streamNumber": 1
+        "streamNumber": 7
+      },
+      {
+        "description": "Workshop 1",
+        "day": 4,
+        "start": 9,
+        "finish": 12,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/18"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 18
+      },
+      {
+        "description": "Workshop 1",
+        "day": 4,
+        "start": 12,
+        "finish": 15,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/06"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 6
+      },
+      {
+        "description": "Workshop 1",
+        "day": 4,
+        "start": 15.25,
+        "finish": 18.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/04"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 4
       }
     ],
+    "_irregularClasses": [],
+    "_mandatoryClasses": [],
     "_regularClasses": [
       {
         "description": "Workshop 1",
         "day": 0,
-        "start": 13,
-        "finish": 15,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/12"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 12
-      },
-      {
-        "description": "Workshop 1",
-        "day": 0,
-        "start": 15.25,
-        "finish": 17.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/15"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 15
-      },
-      {
-        "description": "Workshop 1",
-        "day": 1,
         "start": 9,
-        "finish": 11,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/21"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-222"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 21
-      },
-      {
-        "description": "Workshop 1",
-        "day": 1,
-        "start": 16.25,
-        "finish": 18.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/17"
-        ],
-        "locations": [
-          "PAR-Old Engineering-EDS6"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 17
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 9,
-        "finish": 11,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/22",
-          "SWEN20003/U/1/SM2/W01/11"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210",
-          "PAR-207-221 Bouverie St-B116"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 22
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 12,
-        "finish": 14,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/05"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 5
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 15.25,
-        "finish": 17.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/18"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 18
-      },
-      {
-        "description": "Workshop 1",
-        "day": 2,
-        "start": 16.25,
-        "finish": 18.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/01"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 1
-      },
-      {
-        "description": "Workshop 1",
-        "day": 3,
-        "start": 10,
         "finish": 12,
         "weeks": [
           31,
@@ -929,23 +588,23 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/04"
+          "ENGR10003/U/1/SM2/W01/08"
         ],
         "locations": [
-          "PAR-Elec. Engineering-123"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
           "type": "W"
         },
-        "streamNumber": 4
+        "streamNumber": 8
       },
       {
         "description": "Workshop 1",
-        "day": 3,
-        "start": 13,
+        "day": 0,
+        "start": 12,
         "finish": 15,
         "weeks": [
           31,
@@ -962,16 +621,12 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/09",
-          "SWEN20003/U/1/SM2/W01/19",
-          "SWEN20003/U/1/SM2/W01/08"
+          "ENGR10003/U/1/SM2/W01/09"
         ],
         "locations": [
-          "PAR-Elec. Engineering-123",
-          "PAR-Alice Hoy-210",
-          "PAR-Elec. Engineering-122"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
@@ -981,142 +636,8 @@
       },
       {
         "description": "Workshop 1",
-        "day": 3,
-        "start": 19.25,
-        "finish": 21.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/02"
-        ],
-        "locations": [
-          "PAR-Old Engineering-EDS6"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 2
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 9,
-        "finish": 11,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/03"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 3
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 11,
-        "finish": 13,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/07",
-          "SWEN20003/U/1/SM2/W01/20"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123",
-          "PAR-Alice Hoy-210"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 7
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
+        "day": 0,
         "start": 15.25,
-        "finish": 17.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/06"
-        ],
-        "locations": [
-          "PAR-Elec. Engineering-123"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 6
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 16.25,
         "finish": 18.25,
         "weeks": [
           31,
@@ -1133,12 +654,12 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/10"
+          "ENGR10003/U/1/SM2/W01/10"
         ],
         "locations": [
-          "PAR-Elec. Engineering-122"
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
@@ -1148,41 +669,8 @@
       },
       {
         "description": "Workshop 1",
-        "day": 4,
+        "day": 0,
         "start": 18.25,
-        "finish": 20.25,
-        "weeks": [
-          31,
-          32,
-          33,
-          34,
-          35,
-          36,
-          37,
-          38,
-          39,
-          41,
-          42,
-          43
-        ],
-        "type": "Variable",
-        "subjectCode": "SWEN20003",
-        "codes": [
-          "SWEN20003/U/1/SM2/W01/13"
-        ],
-        "locations": [
-          "PAR-Alice Hoy-211"
-        ],
-        "classCode": {
-          "number": 1,
-          "type": "W"
-        },
-        "streamNumber": 13
-      },
-      {
-        "description": "Workshop 1",
-        "day": 4,
-        "start": 19.25,
         "finish": 21.25,
         "weeks": [
           31,
@@ -1199,21 +687,671 @@
           43
         ],
         "type": "Variable",
-        "subjectCode": "SWEN20003",
+        "subjectCode": "ENGR10003",
         "codes": [
-          "SWEN20003/U/1/SM2/W01/16"
+          "ENGR10003/U/1/SM2/W01/11"
         ],
         "locations": [
-          "PAR-Old Engineering-EDS6"
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 11
+      },
+      {
+        "description": "Workshop 1",
+        "day": 1,
+        "start": 9,
+        "finish": 12,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/17"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 17
+      },
+      {
+        "description": "Workshop 1",
+        "day": 1,
+        "start": 14.25,
+        "finish": 17.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/01"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 1
+      },
+      {
+        "description": "Workshop 1",
+        "day": 1,
+        "start": 17.25,
+        "finish": 20.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/05"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 5
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 9,
+        "finish": 12,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/02"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 2
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 12,
+        "finish": 15,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/16"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
         ],
         "classCode": {
           "number": 1,
           "type": "W"
         },
         "streamNumber": 16
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 15.25,
+        "finish": 18.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/19"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 19
+      },
+      {
+        "description": "Workshop 1",
+        "day": 2,
+        "start": 18.25,
+        "finish": 21.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/12"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 12
+      },
+      {
+        "description": "Workshop 1",
+        "day": 3,
+        "start": 9,
+        "finish": 12,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/03"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 3
+      },
+      {
+        "description": "Workshop 1",
+        "day": 3,
+        "start": 12,
+        "finish": 15,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/15"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 15
+      },
+      {
+        "description": "Workshop 1",
+        "day": 3,
+        "start": 15.25,
+        "finish": 18.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/07"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 7
+      },
+      {
+        "description": "Workshop 1",
+        "day": 4,
+        "start": 9,
+        "finish": 12,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/18"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 18
+      },
+      {
+        "description": "Workshop 1",
+        "day": 4,
+        "start": 12,
+        "finish": 15,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/06"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 6
+      },
+      {
+        "description": "Workshop 1",
+        "day": 4,
+        "start": 15.25,
+        "finish": 18.25,
+        "weeks": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          41,
+          42,
+          43
+        ],
+        "type": "Variable",
+        "subjectCode": "ENGR10003",
+        "codes": [
+          "ENGR10003/U/1/SM2/W01/04"
+        ],
+        "locations": [
+          "PAR-Old Engineering-EDS1"
+        ],
+        "classCode": {
+          "number": 1,
+          "type": "W"
+        },
+        "streamNumber": 4
       }
     ],
-    "_streamContainers": []
+    "_streamContainers": [
+      {
+        "streams": [
+          {
+            "type": "L",
+            "classes": [
+              {
+                "description": "Lecture 1",
+                "day": 2,
+                "start": 11,
+                "finish": 12,
+                "weeks": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  41,
+                  42,
+                  43
+                ],
+                "type": "Stream",
+                "subjectCode": "ENGR10003",
+                "codes": [
+                  "ENGR10003/U/1/SM2/L01/02"
+                ],
+                "locations": [
+                  "PAR-Arts West West Wing-B101 (Kathleen Fitzpatrick Theatre)"
+                ],
+                "classCode": {
+                  "number": 1,
+                  "type": "L"
+                },
+                "streamNumber": 2
+              },
+              {
+                "description": "Lecture 2",
+                "day": 3,
+                "start": 15.25,
+                "finish": 16.25,
+                "weeks": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  41,
+                  42,
+                  43
+                ],
+                "type": "Stream",
+                "subjectCode": "ENGR10003",
+                "codes": [
+                  "ENGR10003/U/1/SM2/L02/02"
+                ],
+                "locations": [
+                  "PAR-Arts West West Wing-B101 (Kathleen Fitzpatrick Theatre)"
+                ],
+                "classCode": {
+                  "number": 2,
+                  "type": "L"
+                },
+                "streamNumber": 2
+              },
+              {
+                "description": "Lecture 3",
+                "day": 4,
+                "start": 14.25,
+                "finish": 15.25,
+                "weeks": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  41,
+                  42,
+                  43
+                ],
+                "type": "Stream",
+                "subjectCode": "ENGR10003",
+                "codes": [
+                  "ENGR10003/U/1/SM2/L03/02"
+                ],
+                "locations": [
+                  "PAR-Arts West West Wing-B101 (Kathleen Fitzpatrick Theatre)"
+                ],
+                "classCode": {
+                  "number": 3,
+                  "type": "L"
+                },
+                "streamNumber": 2
+              }
+            ],
+            "streamNumbers": [
+              2
+            ]
+          },
+          {
+            "type": "L",
+            "classes": [
+              {
+                "description": "Lecture 1",
+                "day": 2,
+                "start": 10,
+                "finish": 11,
+                "weeks": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  41,
+                  42,
+                  43
+                ],
+                "type": "Stream",
+                "subjectCode": "ENGR10003",
+                "codes": [
+                  "ENGR10003/U/1/SM2/L01/01"
+                ],
+                "locations": [
+                  "PAR-Arts West West Wing-B101 (Kathleen Fitzpatrick Theatre)"
+                ],
+                "classCode": {
+                  "number": 1,
+                  "type": "L"
+                },
+                "streamNumber": 1
+              },
+              {
+                "description": "Lecture 2",
+                "day": 3,
+                "start": 16.25,
+                "finish": 17.25,
+                "weeks": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  41,
+                  42,
+                  43
+                ],
+                "type": "Stream",
+                "subjectCode": "ENGR10003",
+                "codes": [
+                  "ENGR10003/U/1/SM2/L02/01"
+                ],
+                "locations": [
+                  "PAR-Arts West West Wing-B101 (Kathleen Fitzpatrick Theatre)"
+                ],
+                "classCode": {
+                  "number": 2,
+                  "type": "L"
+                },
+                "streamNumber": 1
+              },
+              {
+                "description": "Lecture 3",
+                "day": 4,
+                "start": 13,
+                "finish": 14,
+                "weeks": [
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  41,
+                  42,
+                  43
+                ],
+                "type": "Stream",
+                "subjectCode": "ENGR10003",
+                "codes": [
+                  "ENGR10003/U/1/SM2/L03/01"
+                ],
+                "locations": [
+                  "PAR-Arts West West Wing-B101 (Kathleen Fitzpatrick Theatre)"
+                ],
+                "classCode": {
+                  "number": 3,
+                  "type": "L"
+                },
+                "streamNumber": 1
+              }
+            ],
+            "streamNumbers": [
+              1
+            ]
+          }
+        ],
+        "type": "L",
+        "name": "Lecture"
+      }
+    ]
   },
-  "timestamp": "2019-07-06T02:05:41.512Z"
+  "timestamp": "2019-07-05T15:24:20.746Z"
 }

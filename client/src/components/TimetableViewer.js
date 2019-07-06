@@ -20,32 +20,43 @@ import {
 import { updateEvents } from "../redux/actions/timetableActions";
 
 export default function TimetableViewer() {
-  const { timetables, currentIndex, customTimetable } = useSelector(
-    state => state.optimiser
-  );
+  const {
+    timetables,
+    currentIndex,
+    customTimetables,
+    currentCustomIndex,
+    currentView
+  } = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   if (!timetables) {
     return "No timetables";
   }
-  const relevantTimetable = timetables[currentIndex];
 
-  console.log("Current Timetable:", relevantTimetable);
+  let currentTimetable = timetables[currentIndex];
+  let headerText = `Timetable ${currentIndex + 1}/${timetables.length}`;
+  if (currentView === "custom") {
+    const { id, name, timetable } = customTimetables[currentCustomIndex];
+    currentTimetable = timetable;
+    headerText = `Custom Timetable ${id}: ${name}`;
+  }
+  console.log("Current Timetable:", currentTimetable);
   // Map timetable classes to events
-  relevantTimetable.classList = relevantTimetable.classList.filter(
+  currentTimetable.classList = currentTimetable.classList.filter(
     cls => subjects[cls.subjectCode]
   );
-  const events = relevantTimetable.classList.map(cls => classToEvent(cls));
+  const events = currentTimetable.classList.map(cls => classToEvent(cls));
   events.push(...generateBackgroundEvents());
   dispatch(updateEvents(events));
+
   return (
     <>
       {timetables && (
         <div>
-          Timetable {currentIndex + 1}/{timetables.length}
+          {headerText}
           <span onClick={() => dispatch(nextTimetable())}>Next</span>
           <span onClick={() => dispatch(previousTimetable())}>Prev</span>
-          <span> Clashes: {relevantTimetable.clashes}</span>
+          <span> Clashes: {currentTimetable.clashes}</span>
         </div>
       )}
       <FullCalendar
