@@ -12,6 +12,8 @@ export default class Timetable {
     this.calculateLongestRun();
     // Calculate the amount of classtime per day
     this.calculateDayHours();
+    // Calculate the amount of classtime per day excluding lectures
+    this.calculateDayHoursExcludingLectures();
   }
 
   // Groups an array of objects by a specified object key
@@ -30,6 +32,24 @@ export default class Timetable {
       return rv;
     }, []);
   }
+
+  calculateDayHoursExcludingLectures() {
+    const classListExclusive = this.classList.filter(
+      cls => !cls.description.toLowerCase().includes("lecture")
+    );
+    // Group all clases by their 'day'
+    const dayGroups = this.groupByArray(classListExclusive, "day");
+    const dayHoursExcludingLectures = {};
+    for (const { key, values } of dayGroups) {
+      // Loop through classes for this day
+      dayHoursExcludingLectures[key] = values.reduce(
+        (prev, curr) => (prev += curr.finish - curr.start),
+        0
+      );
+    }
+    this.dayHoursExcludingLectures = dayHoursExcludingLectures;
+  }
+
   // Calculates the amount of hours of classtime for each day
   // i.e. {0: 6} means Monday has 6 hours of classtime
   calculateDayHours() {

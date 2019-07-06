@@ -4,7 +4,8 @@ import {
   sortByDayAvoid,
   sortByDaysPresent,
   sortByDaySpan,
-  sortByLongestRun
+  sortByLongestRun,
+  sortByDaySpanExcludingLectures
 } from "./comparators";
 class Optimiser {
   PERMUTATION_THRESHOLD = 250000;
@@ -114,6 +115,8 @@ class Optimiser {
         return a.clashes - b.clashes;
       case OptimisationType.CRAM_CLASSES:
         return sortByDaysPresent(a, b) || sortByDaySpan(a, b);
+      case OptimisationType.CRAM_CLASSES_SKIP_LECTURES:
+        return sortByDaysPresent(a, b) || sortByDaySpanExcludingLectures(a, b);
       case OptimisationType.AVOID_DAYS:
         return sortByDayAvoid(data, a, b);
       case OptimisationType.LONGEST_RUN:

@@ -20,7 +20,7 @@ export default function Planner() {
         type: OptimisationTypes.AVOID_CLASHES
       },
       {
-        type: OptimisationTypes.CRAM_CLASSES
+        type: OptimisationTypes.CRAM_CLASSES_SKIP_LECTURES
       }
     ];
     dispatch(optimise(subjects, optimisations));

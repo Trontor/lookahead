@@ -13,14 +13,18 @@ $opacity: 0.75;
   border-radius: 0px;
   border: 0;
   padding: 2px;
+  color: black;
   // margin: -2px;
   margin-left: -2px;
   margin-right: -5px;
   display: flex;
   flex-direction: column;
   font-size: 8px;
+  &:hover {
+    color: black;
+  }
   .fc-title {
-    font-weight: bold;
+    font-weight: 500;
   }
   .fc-desc {
     margin-top: auto;

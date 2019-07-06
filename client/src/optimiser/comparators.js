@@ -25,3 +25,9 @@ export const sortByLongestRun = (longestRun, a, b) => {
 export const sortByDaySpan = (a, b) => {
   return Object.keys(a.daySpans).length - Object.keys(b.daySpans).length;
 };
+export const sortByDaySpanExcludingLectures = (a, b) => {
+  return (
+    Object.keys(a.dayHoursExcludingLectures).length -
+    Object.keys(b.dayHoursExcludingLectures).length
+  );
+};

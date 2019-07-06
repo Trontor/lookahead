@@ -77,7 +77,16 @@ export default function TimetableViewer() {
             <button onClick={() => dispatch(nextTimetable())}>Next</button>
             <button onClick={() => dispatch(previousTimetable())}>Prev</button>
           </div>
-          <span> Clashes: {currentTimetable.clashes}</span>
+          <div>Clashes: {currentTimetable.clashes}</div>
+          <div>
+            Hours/Day:{" "}
+            {Object.keys(currentTimetable.dayHours).map(dayIndex => (
+              <span>
+                {["Mon", "Tue", "Wed", "Thu", "Fri"][dayIndex]}:{" "}
+                {currentTimetable.dayHours[dayIndex]}{" "}
+              </span>
+            ))}
+          </div>
         </div>
       )}
       <FullCalendar
