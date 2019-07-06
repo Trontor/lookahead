@@ -15,7 +15,9 @@ import {
 } from "./TimetableViewerFunctions";
 import {
   nextTimetable,
-  previousTimetable
+  previousTimetable,
+  createCustomTimetable,
+  changeToCustomView
 } from "../redux/actions/optimiserActions";
 import { updateEvents } from "../redux/actions/timetableActions";
 
@@ -48,14 +50,33 @@ export default function TimetableViewer() {
   const events = currentTimetable.classList.map(cls => classToEvent(cls));
   events.push(...generateBackgroundEvents());
   dispatch(updateEvents(events));
-
+  const newCustomTimetable = () => {
+    dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
+  };
+  const viewCustomTimetable = ({ id }) => {
+    dispatch(changeToCustomView(id));
+  };
   return (
     <>
+      <div>
+        <h1>Your Timetables</h1>
+        {customTimetables.map(custom => (
+          <>
+            <div key={custom.id}>Custom Timetable: {custom.name}</div>
+            <button onClick={() => viewCustomTimetable(custom)}>View</button>
+            <hr />{" "}
+          </>
+        ))}
+        <button onClick={newCustomTimetable}>Add a Custom Timetable</button>
+      </div>
+
       {timetables && (
         <div>
           {headerText}
-          <span onClick={() => dispatch(nextTimetable())}>Next</span>
-          <span onClick={() => dispatch(previousTimetable())}>Prev</span>
+          <div>
+            <button onClick={() => dispatch(nextTimetable())}>Next</button>
+            <button onClick={() => dispatch(previousTimetable())}>Prev</button>
+          </div>
           <span> Clashes: {currentTimetable.clashes}</span>
         </div>
       )}

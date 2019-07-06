@@ -30,3 +30,5 @@ node_modules
 # TypeScript compiled output
 dist
 client/\.env
+
+subject-cache/

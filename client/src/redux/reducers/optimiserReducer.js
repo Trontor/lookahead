@@ -38,7 +38,14 @@ export default (state = initialState, action) => {
       return { ...state, currentView: "generated", currentIndex: tt_index };
     case VIEW_CUSTOM_TIMETABLES:
       // Custom timetable index
+      const id = action.payload;
       let ctt_index = state.currentCustomIndex;
+      if (id) {
+        const match = state.customTimetables.find(val => val.id === id);
+        if (match) {
+          ctt_index = state.customTimetables.indexOf(match);
+        }
+      }
       if (ctt_index < 0 || ctt_index >= state.customTimetables.length) {
         ctt_index = 0;
       }
@@ -59,7 +66,7 @@ export default (state = initialState, action) => {
       };
     case UPDATE_CUSTOM_TIMETABLE:
       const customTTCopy = [...state.customTimetables];
-      const customFound = customTTCopy.filter(
+      const customFound = customTTCopy.find(
         ctt => ctt.id === action.payload.id
       );
       if (!customFound) {

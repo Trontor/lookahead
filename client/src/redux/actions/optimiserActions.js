@@ -29,8 +29,8 @@ export const updateCustomTimetable = (id, name, timetable) => dispatch => {
 export const changeToGeneratedView = () => dispatch => {
   dispatch({ type: VIEW_GENERATED_TIMETABLES });
 };
-export const changeToCustomView = () => dispatch => {
-  dispatch({ type: VIEW_CUSTOM_TIMETABLES });
+export const changeToCustomView = id => dispatch => {
+  dispatch({ type: VIEW_CUSTOM_TIMETABLES, payload: id });
 };
 export const optimise = (subjects, optimisations) => dispatch => {
   const optimiser = new Optimiser(subjects);

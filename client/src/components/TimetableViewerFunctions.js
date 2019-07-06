@@ -167,47 +167,81 @@ export const handleEventDragStop = (allEvents, currentEvent) => {
  * Triggered when an event is dropped into a new timeslot.
  */
 export const handleEventDrop = ({ event, oldEvent }) => {
-  const subjects = getSubjects();
-  const allRegularClasses = [];
-  Object.keys(subjects).forEach(key =>
-    subjects[key].data._regularClasses.forEach(cls =>
-      allRegularClasses.push(cls)
-    )
-  );
-  // console.log(allRegularClasses);
-  // console.log(event, oldEvent);
-  // We need to update the custom timetable (if any, otherwise we create one)
-  // First, destructure necessary information
+  // Better name - L O W E R S~T H E~R E P R E S E N T A T I O N A L~G A P
+  const newEvent = event;
+  // Destructure information about the new class time
   const {
     start,
     title,
-    extendedProps: { type, streamNumber, code, codes }
-  } = event;
+    extendedProps: { classCode, type, streamNumber, code, codes }
+  } = newEvent;
+  const subjects = getSubjects();
+  // Extract all regular classes for this subject
+  const regularClasses = subjects[code].data._regularClasses;
+  const streamContainers = subjects[code].data._streamContainers;
   const startHoursFractional = start.getHours() + start.getMinutes() / 60;
   const dayIndex = start.getDay() - 1;
-  // This is the easy part.
-  if (type !== "Stream") {
-    // Stream number the class has come from
-    const matchingClasses = allRegularClasses.filter(
-      cls =>
-        cls.description === title &&
-        cls.subjectCode === code &&
-        cls.start === startHoursFractional &&
-        cls.day === dayIndex
+  const destinationMatch = cls =>
+    cls.description === title &&
+    cls.subjectCode === code &&
+    cls.start === startHoursFractional &&
+    cls.day === dayIndex;
+  if (type === "Stream") {
+    const relevantStreams = streamContainers.find(
+      container => container.type === classCode.type
+    ).streams;
+    const fromStreamNumber = oldEvent.extendedProps.streamNumber;
+    const destinationStream = relevantStreams.find(stream =>
+      stream.classes.some(destinationMatch)
     );
-    if (matchingClasses.length > 0) {
-      // Yay, we found the class we've moved to!
-      const newClass = matchingClasses[0];
-      const subject = code;
-      const fromCode = codes[0];
-      const toCode = newClass.codes[0];
-      moveRegularClass(subject, fromCode, toCode);
-    } else {
-      // This reaaallly shouldn't happen - but if it does...?
-      console.error("This shouldn't happen.", oldEvent, event);
-    }
+    const destinationStreamNumber = destinationStream.streamNumbers[0];
+    console.log(fromStreamNumber, destinationStreamNumber);
+    moveStream(code, classCode.type, fromStreamNumber, destinationStreamNumber);
+    return;
   }
-  // Streams require special handling, because they have neighbouring classes
+  const matchingClasses = regularClasses.filter(destinationMatch);
+  // if (matchingClasses.length === 0) {
+  //   // This reaaallly shouldn't happen - but if it does...?
+  //   console.error("This shouldn't happen.", oldEvent, newEvent);
+  //   return;
+  // }
+  // Yay, we found the class we've moved to!
+  const newClass = matchingClasses[0];
+  const subject = code;
+  const fromCode = codes[0];
+  const toCode = newClass.codes[0];
+  moveRegularClass(subject, fromCode, toCode);
+};
+
+const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
+  console.log(
+    `${subjectCode}: Moving Stream Type ${type}, ${oldStreamNumber} to ${newStreamNumber}`
+  );
+  // Get information about the current custom timetable
+  const {
+    id,
+    name,
+    timetable: { classList }
+  } = getCurrentCustomTimetable();
+  // Extract the old stream classes from the classList
+  const newClassList = classList.filter(
+    cls =>
+      cls.subjectCode !== subjectCode ||
+      cls.classCode.type !== type ||
+      cls.streamNumber !== oldStreamNumber
+  );
+  // Add the new stream classes to the classList
+  // First, get the new stream classes
+  const subject = getSubjects()[subjectCode].data;
+  const newClasses = subject._streamContainers
+    .find(container => container.type === type)
+    .streams.find(stream => stream.streamNumbers.includes(newStreamNumber))
+    .classes;
+  // Add each new class to the class list
+  newClasses.forEach(cls => newClassList.push(cls));
+
+  const newTimetable = new Timetable(newClassList);
+  store.dispatch(updateCustomTimetable(id, name, newTimetable));
 };
 
 const moveRegularClass = (subject, oldCode, newCode) => {
@@ -224,7 +258,7 @@ const moveRegularClass = (subject, oldCode, newCode) => {
   classList.splice(classList.indexOf(oldClass), 1, newClass);
   const newTimetable = new Timetable(classList);
   console.log("New Timetable:", newTimetable);
-  updateCustomTimetable(id, name, newTimetable);
+  store.dispatch(updateCustomTimetable(id, name, newTimetable));
 };
 
 const BACKGROUND_EVENT_COLOR = "orange";
