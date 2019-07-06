@@ -2,64 +2,96 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import "./TimetableViewer.scss";
 import handleClassRender from "../utility/ClassRender";
-import moment from "moment";
+import {
+  classToEvent,
+  handleEventAllow,
+  handleEventDragStart,
+  handleEventDragStop,
+  generateBackgroundEvents,
+  handleEventDrop
+} from "./TimetableViewerFunctions";
 import {
   nextTimetable,
-  previousTimetable
+  previousTimetable,
+  createCustomTimetable,
+  changeToCustomView
 } from "../redux/actions/optimiserActions";
+import { updateEvents } from "../redux/actions/timetableActions";
 
 export default function TimetableViewer() {
-  const { timetables, currentIndex } = useSelector(state => state.optimiser);
+  const {
+    timetables,
+    currentIndex,
+    customTimetables,
+    currentCustomIndex,
+    currentView
+  } = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   if (!timetables) {
     return "No timetables";
   }
-  const relevantTimetable = timetables[currentIndex];
-  // Converter class (SubjectClass -> FullCalendar Event Object)
-  const classToEvent = cls => {
-    const calculateEventDate = (dayIndex, hours) => {
-      const today = moment();
-      const startOfWeek = today.startOf("isoWeek");
-      return startOfWeek.add(dayIndex, "days").add(hours, "hours");
-    };
-    let { day, start, finish, description, subjectCode, locations, type } = cls;
-    start = calculateEventDate(day, start).toDate();
-    finish = calculateEventDate(day, finish).toDate();
-    return {
-      title: description,
-      backgroundColor: subjects[subjectCode].color,
-      locations: locations.length,
-      type,
-      code: subjectCode,
-      subjectName: subjects[subjectCode].name,
-      className: "lookahead-event-wrapper",
-      start: start,
-      end: finish,
-      editable: false
-    };
-  };
-  console.log("Current Timetable:", relevantTimetable);
+
+  let currentTimetable = timetables[currentIndex];
+  let headerText = `Timetable ${currentIndex + 1}/${timetables.length}`;
+  if (currentView === "custom") {
+    const { id, name, timetable } = customTimetables[currentCustomIndex];
+    currentTimetable = timetable;
+    headerText = `Custom Timetable ${id}: ${name}`;
+  }
+  console.log("Current Timetable:", currentTimetable);
   // Map timetable classes to events
-  relevantTimetable.classList = relevantTimetable.classList.filter(
+  currentTimetable.classList = currentTimetable.classList.filter(
     cls => subjects[cls.subjectCode]
   );
-  const events = relevantTimetable.classList.map(classToEvent);
+  const events = currentTimetable.classList.map(cls => classToEvent(cls));
+  events.push(...generateBackgroundEvents());
+  dispatch(updateEvents(events));
+  const newCustomTimetable = () => {
+    dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
+  };
+  const viewCustomTimetable = ({ id }) => {
+    dispatch(changeToCustomView(id));
+  };
   return (
     <>
+      <div>
+        <h1>Your Timetables</h1>
+        {customTimetables.map(custom => (
+          <>
+            <div key={custom.id}>Custom Timetable: {custom.name}</div>
+            <button onClick={() => viewCustomTimetable(custom)}>View</button>
+            <hr />{" "}
+          </>
+        ))}
+        <button onClick={newCustomTimetable}>Add a Custom Timetable</button>
+      </div>
+
       {timetables && (
         <div>
-          Timetable {currentIndex + 1}/{timetables.length}
-          <span onClick={() => dispatch(nextTimetable())}>Next</span>
-          <span onClick={() => dispatch(previousTimetable())}>Prev</span>
-          <span> Clashes: {relevantTimetable.clashes}</span>
+          {headerText}
+          <div>
+            <button onClick={() => dispatch(nextTimetable())}>Next</button>
+            <button onClick={() => dispatch(previousTimetable())}>Prev</button>
+          </div>
+          <div>Clashes: {currentTimetable.clashes}</div>
+          <div>
+            Hours/Day:{" "}
+            {Object.keys(currentTimetable.dayHours).map(dayIndex => (
+              <span>
+                {["Mon", "Tue", "Wed", "Thu", "Fri"][dayIndex]}:{" "}
+                {currentTimetable.dayHours[dayIndex]}{" "}
+              </span>
+            ))}
+          </div>
         </div>
       )}
       <FullCalendar
         defaultView="timeGridWeek"
-        plugins={[timeGridPlugin]}
+        plugins={[timeGridPlugin, interactionPlugin]}
         weekends={false}
         slotLabelFormat={{
           hour: "numeric",
@@ -69,6 +101,12 @@ export default function TimetableViewer() {
           meridiem: "narrow"
         }}
         events={events}
+        eventDrop={handleEventDrop}
+        eventDragStart={({ event }) => handleEventDragStart(events, event)}
+        eventAllow={(dropLocation, draggedEvent) =>
+          handleEventAllow(dropLocation, draggedEvent, events)
+        }
+        eventDragStop={({ event }) => handleEventDragStop(events, event)}
         eventPositioned={handleClassRender}
         header={false}
         handleWindowResize={true}
@@ -82,6 +120,7 @@ export default function TimetableViewer() {
         editable={true}
         slotEventOverlap={false}
         allDaySlot={false}
+        eventResourceEditable={true}
       />
     </>
   );

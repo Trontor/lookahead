@@ -7,7 +7,7 @@ import {
 
 const initialState = {};
 
-const colors = ["seablue", "red", "orange", "green"].reverse();
+const colors = ["#60a9a6", "#eb5f5d", "#fabc74", "#239f95"].reverse();
 const findColor = state => {
   // Copy colors pool
   let colorPool = [...colors];

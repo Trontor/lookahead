@@ -14,7 +14,6 @@ export const getSubjectList = (req: Request, res: Response) => {
     "../../subject-utils/subject-lists",
     filename
   );
-  console.log(subjectPath);
   // Check if the file exists, if so - send it back or return ENOENT
   fs.stat(subjectPath, err => {
     if (err) {
