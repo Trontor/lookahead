@@ -3,10 +3,11 @@ import OptimisationType, { LONGEST_RUN } from "./optimisationTypes";
 import {
   sortByDayAvoid,
   sortByDaysPresent,
-  sortByDaySpan,
+  sortByTotalDaySpan,
   sortByLongestRun,
   sortByDaySpanExcludingLectures
 } from "./comparators";
+
 class Optimiser {
   PERMUTATION_THRESHOLD = 250000;
   RANDOM_POPULATION = 25000;
@@ -16,7 +17,8 @@ class Optimiser {
    * @param {*} subjects
    */
   constructor(subjects) {
-    this.subjects = subjects;
+    // Copy subjects, to allow for internal modifications
+    this.subjects = Object.assign({}, subjects);
   }
 
   // Calculates the number of unique timetables that can be generated
@@ -98,7 +100,8 @@ class Optimiser {
     // Sort timetables
     timetables.sort((a, b) =>
       optimisations.reduce(
-        (acc, optimisation) => acc + this.applyOptimisation(optimisation, a, b),
+        (acc, optimisation) =>
+          acc || this.applyOptimisation(optimisation, a, b),
         0
       )
     );
@@ -108,15 +111,107 @@ class Optimiser {
     return { timetables, time };
   }
 
+  applyTimeRestrictions(earliestStart, latestFinish) {
+    /**
+     * General Methodology:
+     * The idea is to apply the restrictions as requested, but if the
+     * restrictions end up with a subject completely missing a classtype,
+     * such as a Tutorial 1 - the restrictions are too tight.
+     * 1. Get class types before
+     * 2. Go through each _regularClasses and prune classes
+     * 3. Get class types after
+     * 4. If types after != types before, we cut off an entire class type, invalid
+     * 5. Go through each _streamContainers, get stream type counts before
+     * 6. Prune streams from container
+     * 7. Get stream type counts after
+     * 8. If stream types counts after != stream type counts before, invalid
+     * 9. Otherwise, valid!
+     */
+    const classViolation = cls =>
+      cls.start < earliestStart || cls.finish > latestFinish;
+    // Copy subjects, so modifications don't affect class-scope variable
+    const subjects = JSON.parse(JSON.stringify(this.subjects));
+    console.log(
+      `Applying Restrictions\nMin Start: ${earliestStart}\nLatest Finish:${latestFinish}`
+    );
+    // Tracks whether or not these time restrictions are valid
+    for (const [key, value] of Object.entries(subjects)) {
+      const subject = value.data;
+      const subjectName = value.name;
+      console.log(subjectName);
+      // (1) Get class type counts before
+      const beforeTypes = this.getClassTypes(subject);
+      const beforeTypeCount = Object.keys(this.getClassTypes(subject)).length;
+      console.log("\tRegular Classes");
+      console.log("\t\tBefore:", beforeTypes, beforeTypeCount, [
+        ...subject._regularClasses
+      ]);
+      // (2) Now begin pruning
+      const regClasses = subject._regularClasses;
+      for (let i = regClasses.length - 1; i >= 0; i--) {
+        const cls = regClasses[i];
+        if (classViolation(cls)) {
+          regClasses.splice(regClasses.indexOf(cls), 1);
+        }
+      }
+      // (3) Get class type counts after
+      const afterTypes = this.getClassTypes(subject);
+      const afterTypeCount = Object.keys(afterTypes).length;
+      console.log("\t\tAfter:", afterTypes, afterTypeCount, regClasses);
+      // (4) Check for invalid restriction
+      if (afterTypeCount !== beforeTypeCount) {
+        console.error("😠 [Class Pruning] Invalid Restrictions");
+        return false;
+      }
+      const containers = subject._streamContainers;
+      console.log("\tStream Containers");
+      // Go through each streamContainer
+      for (const container of containers) {
+        console.log(`\t  ${container.type}`);
+        const { streams } = container;
+        // (5) Get before stream counts
+        const beforeStreamCount = streams.length;
+        console.log(`\t\tBefore: ${beforeStreamCount}`, [...streams]);
+        // Go through each stream, looking to prune
+        for (let i = streams.length - 1; i >= 0; i--) {
+          const stream = streams[i];
+          const violatesRestriction = stream.classes.some(classViolation);
+          if (violatesRestriction) {
+            // (6) Prune stream
+            streams.splice(i, 1);
+          }
+        }
+        // (6) Get before stream counts
+        const afterStreamCount = streams.length;
+        console.log(`\t\tAfter: ${afterStreamCount}`, streams);
+        if (afterStreamCount === 0) {
+          console.error("😠 [Stream Pruning] Invalid Restrictions");
+          console.log(
+            `Time restrictions have cut off all stream possibilities for ${
+              subject.code
+            }.`
+          );
+          return false;
+        }
+      }
+    }
+    // (9) Valid!
+    this.subjects = subjects;
+  }
+
   applyOptimisation(optimisation, a, b) {
     const data = optimisation.data;
     switch (optimisation.type) {
       case OptimisationType.AVOID_CLASHES:
         return a.clashes - b.clashes;
       case OptimisationType.CRAM_CLASSES:
-        return sortByDaysPresent(a, b) || sortByDaySpan(a, b);
+        return sortByDaysPresent(a, b) || sortByTotalDaySpan(a, b);
       case OptimisationType.CRAM_CLASSES_SKIP_LECTURES:
-        return sortByDaysPresent(a, b) || sortByDaySpanExcludingLectures(a, b);
+        return (
+          sortByDaysPresent(a, b) ||
+          sortByDaySpanExcludingLectures(a, b) ||
+          sortByTotalDaySpan(a, b)
+        );
       case OptimisationType.AVOID_DAYS:
         return sortByDayAvoid(data, a, b);
       case OptimisationType.LONGEST_RUN:
