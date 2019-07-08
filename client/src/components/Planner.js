@@ -5,6 +5,7 @@ import TimetableViewer from "./TimetableViewer";
 import { useSelector, useDispatch } from "react-redux";
 import { optimise } from "../redux/actions/optimiserActions";
 import OptimisationTypes from "../optimiser/optimisationTypes";
+import Notifications from "./Notifications";
 
 export default function Planner() {
   const subjects = useSelector(state => state.subjects);
@@ -31,6 +32,7 @@ export default function Planner() {
   }
   return (
     <div>
+      <Notifications />
       <SubjectSelect />
       <Subjects />
       <TimetableViewer />

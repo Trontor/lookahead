@@ -6,9 +6,9 @@ import {
 } from "../actionTypes";
 import axios from "axios";
 
-const getSubjectBegin = (code, name) => ({
+const getSubjectBegin = (year, code, name) => ({
   type: GET_SUBJECT_BEGIN,
-  payload: { code, name }
+  payload: { year, code, name }
 });
 
 const getSubjectSuccess = (code, classInfo) => ({
@@ -22,7 +22,7 @@ const getSubjectFailure = (code, error) => ({
 });
 
 export const getSubject = (year, studyPeriod, code, name) => dispatch => {
-  dispatch(getSubjectBegin(code, name));
+  dispatch(getSubjectBegin(year, code, name));
   const listURL = `/subject?year=${year}&period=${studyPeriod}&code=${code}`;
   return axios
     .get(listURL)
