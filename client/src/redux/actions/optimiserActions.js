@@ -32,8 +32,12 @@ export const changeToGeneratedView = () => dispatch => {
 export const changeToCustomView = id => dispatch => {
   dispatch({ type: VIEW_CUSTOM_TIMETABLES, payload: id });
 };
-export const optimise = (subjects, optimisations) => dispatch => {
+export const optimise = (subjects, optimisations, restrictions) => dispatch => {
   const optimiser = new Optimiser(subjects);
+  optimiser.applyTimeRestrictions(
+    restrictions.earliestStart,
+    restrictions.latestFinish
+  );
   dispatch({ type: BEGIN_OPTIMISATION });
   const { timetables, time } = optimiser.generateAndOptimise(optimisations);
   dispatch({ type: COMPLETE_OPTIMISATION, payload: { timetables } });

@@ -22,7 +22,7 @@ const findColor = state => {
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_SUBJECT_BEGIN:
-      const { code, name } = action.payload;
+      const { code, name, year } = action.payload;
       // code: "SWEN30006"
       // label: "SWEN30006 - Software Modelling and Design"
       // value: "Software Modelling and Design"
@@ -34,6 +34,7 @@ export default (state = initialState, action) => {
         ...state,
         [code]: {
           name,
+          year,
           color: findColor(state),
           data: null,
           error: null,

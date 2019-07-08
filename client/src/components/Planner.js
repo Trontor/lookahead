@@ -5,6 +5,7 @@ import TimetableViewer from "./TimetableViewer";
 import { useSelector, useDispatch } from "react-redux";
 import { optimise } from "../redux/actions/optimiserActions";
 import OptimisationTypes from "../optimiser/optimisationTypes";
+import Notifications from "./Notifications";
 
 export default function Planner() {
   const subjects = useSelector(state => state.subjects);
@@ -23,10 +24,15 @@ export default function Planner() {
         type: OptimisationTypes.CRAM_CLASSES_SKIP_LECTURES
       }
     ];
-    dispatch(optimise(subjects, optimisations));
+    const restrictions = {
+      earliestStart: 8,
+      latestFinish: 24
+    };
+    dispatch(optimise(subjects, optimisations, restrictions));
   }
   return (
     <div>
+      <Notifications />
       <SubjectSelect />
       <Subjects />
       <TimetableViewer />

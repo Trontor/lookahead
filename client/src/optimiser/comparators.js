@@ -22,9 +22,10 @@ export const sortByLongestRun = (longestRun, a, b) => {
   return aValid === bValid ? 0 : aValid ? -1 : 1;
 };
 
-export const sortByDaySpan = (a, b) => {
-  return Object.keys(a.daySpans).length - Object.keys(b.daySpans).length;
+export const sortByTotalDaySpan = (a, b) => {
+  return a.totalDaySpan - b.totalDaySpan;
 };
+
 export const sortByDaySpanExcludingLectures = (a, b) => {
   return (
     Object.keys(a.dayHoursExcludingLectures).length -
