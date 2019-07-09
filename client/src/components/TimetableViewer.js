@@ -20,6 +20,7 @@ import {
   changeToCustomView
 } from "../redux/actions/optimiserActions";
 import { updateEvents } from "../redux/actions/timetableActions";
+import Optimisations from "./Optimisations";
 
 export default function TimetableViewer() {
   const {
@@ -58,7 +59,7 @@ export default function TimetableViewer() {
   };
   return (
     <>
-      <div>
+      {/* <div>
         <h1>Your Timetables</h1>
         {customTimetables.map(custom => (
           <>
@@ -88,9 +89,10 @@ export default function TimetableViewer() {
             ))}
           </div>
         </div>
-      )}
+      )} */}
       <FullCalendar
         defaultView="timeGridWeek"
+        height="parent"
         plugins={[timeGridPlugin, interactionPlugin]}
         weekends={false}
         slotLabelFormat={{
