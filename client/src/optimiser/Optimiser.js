@@ -108,6 +108,8 @@ class Optimiser {
     // Stop performance tracking
     const t1 = performance.now();
     const time = t1 - t0;
+    console.log(timetables);
+
     return { timetables, time };
   }
 

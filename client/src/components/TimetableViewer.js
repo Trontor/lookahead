@@ -21,6 +21,8 @@ import {
 } from "../redux/actions/optimiserActions";
 import { updateEvents } from "../redux/actions/timetableActions";
 import Optimisations from "./Optimisations";
+import TimetableHeaderControl from "./TimetableHeaderControl";
+import NoTimetables from "./NoTimetables";
 
 export default function TimetableViewer() {
   const {
@@ -33,7 +35,7 @@ export default function TimetableViewer() {
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   if (!timetables) {
-    return "No timetables";
+    return <NoTimetables />;
   }
 
   let currentTimetable = timetables[currentIndex];
@@ -90,6 +92,10 @@ export default function TimetableViewer() {
           </div>
         </div>
       )} */}
+      <TimetableHeaderControl
+        current={currentIndex + 1}
+        total={timetables.length}
+      />
       <FullCalendar
         defaultView="timeGridWeek"
         height="parent"

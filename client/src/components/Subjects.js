@@ -13,14 +13,54 @@ const SubjectWrapper = styled.div`
   font-family: "Montserrat", sans-serif;
 `;
 
+const loadingCSS = css`
+  border-width: 2px;
+  border-radius: 0px;
+  background: white;
+  position: relative;
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * 2px);
+    left: calc(-1 * 2px);
+    height: calc(100% + 2px * 2);
+    width: calc(100% + 2px * 2);
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    border-radius: calc(2 * var(2px));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+`;
 const SubjectHeader = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 3px 15px;
+  padding: 5px 15px;
   min-height: 50px;
-  border-radius: 5px;
+  border-radius: 1px;
   margin: 5px 0;
   background-color: ${props => props.color};
   @media screen and (max-width: 600px) {
@@ -30,48 +70,7 @@ const SubjectHeader = styled.div`
       flex: 100%;
     }
   }
-  ${({ loading }) =>
-    loading &&
-    css`
-      border-width: 2px;
-      border-radius: 0px;
-      background: white;
-      position: relative;
-      @keyframes animatedgradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: calc(-1 * 2px);
-        left: calc(-1 * 2px);
-        height: calc(100% + 2px * 2);
-        width: calc(100% + 2px * 2);
-        background: linear-gradient(
-          60deg,
-          #f79533,
-          #f37055,
-          #ef4e7b,
-          #a166ab,
-          #5073b8,
-          #1098ad,
-          #07b39b,
-          #6fba82
-        );
-        border-radius: calc(2 * var(2px));
-        z-index: -1;
-        animation: animatedgradient 3s ease alternate infinite;
-        background-size: 300% 300%;
-      }
-    `}
+  ${({ loading }) => loading && loadingCSS}
 `;
 
 const SubjectCode = styled.div`
@@ -79,7 +78,7 @@ const SubjectCode = styled.div`
   position: absolute;
   bottom: 2px;
   left: 15px;
-  color: whitesmoke;
+  color: inherit;
   opacity: 0.6;
   font-size: 12px;
   @media screen and (max-width: 600px) {
@@ -87,7 +86,7 @@ const SubjectCode = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
+    top: 2px;
   }
 `;
 const WidthRestriction = styled.div`
