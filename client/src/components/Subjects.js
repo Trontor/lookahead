@@ -58,9 +58,9 @@ const SubjectHeader = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 3px 15px;
+  padding: 5px 15px;
   min-height: 50px;
-  border-radius: 5px;
+  border-radius: 1px;
   margin: 5px 0;
   background-color: ${props => props.color};
   @media screen and (max-width: 600px) {
@@ -86,7 +86,7 @@ const SubjectCode = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    top: 0;
+    top: 2px;
   }
 `;
 const WidthRestriction = styled.div`

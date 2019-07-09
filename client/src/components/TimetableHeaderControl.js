@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
 const NavigationButton = styled.button`
   position: absolute;
   cursor: pointer;
-  max-width: 100px;
+  max-width: 75px;
   border: 1px solid rgb(0, 123, 255);
   border-radius: 2px;
   color: rgb(0, 123, 255);
@@ -45,7 +45,7 @@ export default function TimetableHeaderControl(props) {
       >
         <i className="fa fa-arrow-left" />
       </NavigationButton>
-      Timetable {current} / {total}
+      {current} / {total}
       <NavigationButton onClick={() => dispatch(nextTimetable())} right>
         <i className="fa fa-arrow-right" />
       </NavigationButton>

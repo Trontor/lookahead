@@ -32,9 +32,12 @@ export default function Planner() {
   // Get subject keys
   const keys = Object.keys(subjects);
   const allLoaded = !keys.some(key => subjects[key].data === null);
-  if (allLoaded && keys.length > 0) {
+  const AUTO_OPTIMISE = false;
+  if (AUTO_OPTIMISE && allLoaded && keys.length > 0) {
     console.log("All loaded!");
     console.log(subjects);
+  }
+  const mockOptimise = () => {
     const optimisations = [
       {
         type: OptimisationTypes.AVOID_CLASHES
@@ -48,7 +51,7 @@ export default function Planner() {
       latestFinish: 24
     };
     dispatch(optimise(subjects, optimisations, restrictions));
-  }
+  };
   return (
     <div>
       <Grid>
@@ -57,7 +60,7 @@ export default function Planner() {
           <SubjectSelect />
           <Subjects />
           <Optimisations />
-          <button onClick={() => dispatch(optimise(subjects))}>Optimise</button>
+          <button onClick={() => mockOptimise()}>Optimise</button>
         </Sidebar>
         <Main>
           <TimetableViewer />
