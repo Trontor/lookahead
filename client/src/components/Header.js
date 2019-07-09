@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export default function Header() {
   const HeaderWrapper = styled.div`
-    height: 60px;
+    max-height: 60px;
+    min-height: 20px;
     text-align: left;
     background-color: #4381c1;
     display: flex;
@@ -12,16 +13,18 @@ export default function Header() {
     align-content: center;
     flex-direction: column;
     color: white;
-    padding: 0 15px;
+    padding: 5px 15px;
     margin: 0px;
   `;
   const HeaderText = styled.span`
     letter-spacing: 1.25px;
+    display: inline;
     font-size: 24px;
     font-family: "Karla", sans-serif;
   `;
   const HeaderSubtitle = styled.span`
     font-size: 13px;
+    display: inline;
     font-weight: lighter;
   `;
   const Emoji = styled.span`
