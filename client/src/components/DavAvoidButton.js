@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 const AvoidButton = styled.button`
   outline: 0;
-  border: 1px solid green; /* Green border */
+  border: 1px solid #4caf50; /* Green border */
   ${props => {
     if (props.activated) {
       return css`

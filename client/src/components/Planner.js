@@ -11,16 +11,19 @@ import Optimisations from "./Optimisations";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: [sidebar] 400px [viewer] auto;
+  grid-template-columns: [sidebar] 35vw [viewer] auto;
   grid-template-rows: auto;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 960px) {
     grid-template-columns: 100%;
   }
 `;
 const Sidebar = styled.div`
   grid-row-start: sidebar;
-  @media screen and (max-width: 1024px) {
+  min-width: 300px;
+  max-width: 480px;
+  @media screen and (max-width: 960px) {
     grid-row-start: 1;
+    max-width: inherit;
   }
 `;
 const Main = styled.div`
