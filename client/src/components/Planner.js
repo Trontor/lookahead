@@ -8,10 +8,11 @@ import OptimisationTypes from "../optimiser/optimisationTypes";
 import Notifications from "./Notifications";
 import styled from "styled-components";
 import Optimisations from "./Optimisations";
+import Header from "./Header";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: [sidebar] 35vw [viewer] auto;
+  grid-template-columns: [sidebar] 30vw [viewer] auto;
   grid-template-rows: auto;
   @media screen and (max-width: 960px) {
     grid-template-columns: 100%;
@@ -19,13 +20,19 @@ const Grid = styled.div`
 `;
 const Sidebar = styled.div`
   grid-row-start: sidebar;
-  min-width: 300px;
-  max-width: 480px;
+  height: 100%;
+  min-width: 280px;
+  max-width: 468px;
+  box-shadow: 3px 0 5px -3px rgba(0, 0, 0, 0.12);
   @media screen and (max-width: 960px) {
     grid-row-start: 1;
     max-width: inherit;
+    margin: 0px;
+    box-shadow: none;
+    padding: 0;
   }
 `;
+
 const Main = styled.div`
   grid-row-start: viewer;
 `;
@@ -67,6 +74,12 @@ export default function Planner() {
   const keys = Object.keys(subjects);
   const allLoaded = !keys.some(key => subjects[key].data === null);
   const AUTO_OPTIMISE = true;
+  const showSidebar = true;
+
+  // const toggleSidebar = () => {
+  //   this.Sidebar.maxWidth = 0px,
+  //   this.Sidebar.minWidth = 0px
+  // }
 
   const invokeOptimisation = () => {
     const optimisationTypes = [];

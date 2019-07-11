@@ -5,6 +5,7 @@ import { getSubject } from "../redux/actions/subjectActions";
 import AsyncSelect from "react-select/async";
 import Select from "react-select";
 import styled from "styled-components";
+import { NONAME } from "dns";
 
 const CURRENT_STUDY_PERIOD_INDEX = 3;
 const CURRENT_SUBJECT_LIST_YEAR = 2019;
@@ -113,12 +114,13 @@ const SubjectSelect = props => {
   const customStyles = {
     menu: base => ({
       ...base,
-      zIndex: 100
+      zIndex: 100,
+      marginTop: "2px"
     }),
     option: (provided, state) => ({
       ...provided,
-      fontSize: "12px",
-      textAlign: "center",
+      fontSize: "13px",
+      // textAlign: "center",
       height: "100%"
     }),
     singleValue: (provided, state) => {
@@ -136,7 +138,9 @@ const SubjectSelect = props => {
     display: flex;
     & > div {
       display: inline-block;
-      padding: 3px;
+      font-family: "Karla", sans-serif;
+      font-size: 13px;
+      margin: 0 5px;
     }
     .study-period-select {
       width: 150px;

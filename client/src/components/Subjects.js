@@ -96,8 +96,8 @@ const WidthRestriction = styled.div`
 
 const SubjectName = styled.div`
   font-weight: bold;
-  max-width: 23vw;
-  font-size: 15px;
+  max-width: 18.5vw;
+  font-size: 14px;
   margin-top: 2px;
   margin-bottom: 5px;
   @media screen and (max-width: 960px) {
@@ -111,7 +111,7 @@ const SubjectToolbox = styled.div`
   font-weight: bold;
   vertical-align: middle;
   color: ${({ iconColor }) => iconColor};
-  right: 36px;
+  right: 30px;
   top: 19px;
   position: absolute;
   @media screen and (max-width: 600px) {
@@ -125,7 +125,7 @@ const ToolboxButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 5px;
-  margin: 3px 5px 0 5px;
+  margin: 3px 4px 0 4px;
   color: inherit;
   background-color: transparent;
   border: none;
