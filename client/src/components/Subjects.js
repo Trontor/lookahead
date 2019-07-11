@@ -96,11 +96,11 @@ const WidthRestriction = styled.div`
 
 const SubjectName = styled.div`
   font-weight: bold;
-  max-width: 260px;
-  font-size: 16px;
+  max-width: 23vw;
+  font-size: 15px;
   margin-top: 2px;
   margin-bottom: 5px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 960px) {
     max-width: inherit;
     align-self: center;
     margin-bottom: 0;
