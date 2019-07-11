@@ -5,12 +5,16 @@ import {
   nextTimetable,
   previousTimetable
 } from "../redux/actions/optimiserActions";
+import ArrowKeysReact from "arrow-keys-react";
 
 const HeaderWrapper = styled.div`
   font-family: Montserrat, sans-serif;
   text-align: center;
   position: relative;
   margin: 10px 0;
+  :focus {
+    outline: none;
+  }
 `;
 
 const NavigationButton = styled.button`
@@ -36,8 +40,20 @@ const NavigationButton = styled.button`
 export default function TimetableHeaderControl(props) {
   const { current, total } = props;
   const dispatch = useDispatch();
+  let currentTimeout = null;
+  ArrowKeysReact.config({
+    left: () => {
+      clearTimeout(currentTimeout);
+      currentTimeout = setTimeout(() => dispatch(previousTimetable()));
+    },
+    right: () => {
+      clearTimeout(currentTimeout);
+      currentTimeout = setTimeout(() => dispatch(nextTimetable()));
+    }
+  });
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper tabIndex="1" {...ArrowKeysReact.events}>
       <NavigationButton
         disabled={current === 1}
         onClick={() => dispatch(previousTimetable())}

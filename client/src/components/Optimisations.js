@@ -1,9 +1,23 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
 import "./CustomCheckbox.scss";
 import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
 import moment from "moment";
+import InputRange from "react-input-range";
+import "./InputRange.css";
+import DayAvoidButton from "./DavAvoidButton";
+import {
+  setTimeRange,
+  setBreak,
+  setSkipLectures,
+  setMinimiseClashes,
+  setCramClasses,
+  addAvoidDay,
+  removeAvoidDay
+} from "../redux/actions/optimisationsActions";
+
 const OptimisationsWrapper = styled.div`
   margin: 5px;
   background-color: white;
@@ -39,7 +53,9 @@ const Optimisation = styled.div`
     `};
 `;
 
-const TimeOptimisation = styled.div``;
+const TimeOptimisation = styled.div`
+  margin: 20px;
+`;
 
 const Input = styled.input`
   padding: 0.5em;
@@ -54,30 +70,7 @@ const Input = styled.input`
 const ButtonGroup = styled.div`
   margin: 5px;
   display: inline-block;
-  button {
-    outline: 0;
-    color: #4caf50; /* Green background */
-    border: 1px solid green; /* Green border */
-    background-color: white; /* White text */
-    padding: 5px 10px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-    &:not(:last-child) {
-      border-right: none; /* Prevent double borders */
-    }
-    &:first-child {
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-    }
-    &:last-child {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-    &:hover {
-      background-color: #4caf50;
-      color: white;
-    }
-  }
+
   /* Clear floats (clearfix hack) */
   &::after {
     content: "";
@@ -86,37 +79,79 @@ const ButtonGroup = styled.div`
   }
 `;
 
+const formatRangeLabel = value => {
+  const remainder = value % 1;
+  const postColon = remainder === 0.5 ? "30" : "00";
+  const meridian = value > 12 ? "pm" : "am";
+  if (value >= 13) {
+    value -= 12;
+  }
+  return `${Math.floor(value)}:${postColon}${meridian}`;
+};
+
 function Optimisations() {
+  // const [longestRunToggled, setLongestRunToggled] = useState(false);
+  // const [longestRun, setLongestRun] = useState(24);
+  // const [range, setRange] = useState({ min: 8, max: 22 });
+  const dispatch = useDispatch();
+  const optimisations = useSelector(state => state.optimisations);
+  // console.log(optimisations);
+
   const [longestRunToggled, setLongestRunToggled] = useState(false);
-  const [longestRun, setLongestRun] = useState(24);
+  const {
+    range,
+    avoidDays,
+    skipLectures,
+    cramClasses,
+    breakHours,
+    minimiseClashes
+  } = optimisations;
+
+  const changeRange = ({ min, max }) => {
+    if (max - min >= 2.5) dispatch(setTimeRange(min, max));
+  };
+
+  const setLongestRun = val => {
+    dispatch(setBreak(val));
+  };
+  const longestRunToggleChanged = ({ target: { checked } }) => {
+    setLongestRunToggled(checked);
+    setLongestRun(checked ? 3 : 24);
+  };
+  const longestRunChanged = e => {
+    e.target.value = e.target.value.replace(/[^0-9]/gi, "");
+    let intVal = Number.parseInt(e.target.value);
+    if (!intVal) {
+      setLongestRun("");
+      return;
+    }
+    if (intVal < 1) {
+      intVal = 1;
+    } else if (intVal > 12) {
+      intVal = 24;
+    }
+    e.target.value = intVal;
+    setLongestRun(intVal);
+  };
+
+  console.log(avoidDays);
+
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   return (
     <OptimisationsWrapper>
       <Header>Optimisations</Header>
       {/* <Break /> */}
       <OptimisationsContainer>
-        <Optimisation center>
-          Earliest Start
+        <Optimisation center style={{ marginBottom: "30px" }}>
+          Time Restriction:
           <TimeOptimisation>
-            <TimePicker
-              allowEmpty={false}
-              defaultValue={new moment("8:00", "HH:mm")}
-              showSecond={false}
-              use12Hours={true}
-              focusOnOpen={true}
-              minuteStep={30}
-            />
-          </TimeOptimisation>
-        </Optimisation>
-        <Optimisation center>
-          Latest Finish
-          <TimeOptimisation>
-            <TimePicker
-              allowEmpty={false}
-              defaultValue={new moment("8:00", "HH:mm")}
-              showSecond={false}
-              use12Hours={true}
-              focusOnOpen={true}
-              minuteStep={30}
+            <InputRange
+              formatLabel={formatRangeLabel}
+              maxValue={22}
+              minValue={8}
+              step={0.5}
+              value={range}
+              onChange={changeRange}
             />
           </TimeOptimisation>
         </Optimisation>
@@ -125,8 +160,16 @@ function Optimisations() {
           Try to avoid classes on these days
           <br />
           <ButtonGroup>
-            {["Mon", "Tue", "Wed", "Thu", "Fri"].map(day => (
-              <button>{day}</button>
+            {days.map((day, idx) => (
+              <DayAvoidButton
+                onToggled={val =>
+                  val
+                    ? dispatch(addAvoidDay(idx))
+                    : dispatch(removeAvoidDay(idx))
+                }
+              >
+                {day}
+              </DayAvoidButton>
             ))}
           </ButtonGroup>
         </Optimisation>
@@ -134,29 +177,38 @@ function Optimisations() {
         <Optimisation>
           <input
             class="styled-checkbox"
-            id="styled-checkbox-1"
+            id="skip-lectures"
             type="checkbox"
-            value="value1"
+            value={skipLectures}
+            onChange={({ target: { checked } }) =>
+              dispatch(setSkipLectures(checked))
+            }
           />
-          <label for="styled-checkbox-1">I skip most of my lectures</label>
+          <label for="skip-lectures">I skip most of my lectures</label>
         </Optimisation>
         <Optimisation>
           <input
             class="styled-checkbox"
-            id="styled-checkbox-1"
+            id="minimise-clashes"
             type="checkbox"
-            value="value1"
+            value={minimiseClashes}
+            onChange={({ target: { checked } }) =>
+              dispatch(setMinimiseClashes(checked))
+            }
           />
-          <label for="styled-checkbox-1">I want to minimise clashes</label>
+          <label for="minimise-clashes">I want to minimise clashes</label>
         </Optimisation>
         <Optimisation>
           <input
             class="styled-checkbox"
-            id="styled-checkbox-1"
+            id="cram-classes"
             type="checkbox"
-            value="value1"
+            value={cramClasses}
+            onChange={({ target: { checked } }) =>
+              dispatch(setCramClasses(checked))
+            }
           />
-          <label for="styled-checkbox-1">I like to cram classes together</label>
+          <label for="cram-classes">I like to cram classes together</label>
         </Optimisation>
         <Optimisation>
           <input
@@ -165,10 +217,7 @@ function Optimisations() {
             type="checkbox"
             defaultChecked={longestRunToggled}
             checked={longestRunToggled}
-            onChange={({ target: { checked } }) => {
-              setLongestRunToggled(checked);
-              setLongestRun(checked ? 3 : 24);
-            }}
+            onChange={longestRunToggleChanged}
           />
           <label for="longest-run-toggle">
             I need a break after consecutive classes
@@ -179,25 +228,10 @@ function Optimisations() {
             Longest time without a break:
             <Input
               type="text"
-              onChange={e => {
-                e.target.value = e.target.value.replace(/[^0-9]/gi, "");
-                let intVal = Number.parseInt(e.target.value);
-                if (!intVal) {
-                  setLongestRun(null);
-                  return;
-                }
-                if (intVal < 1) {
-                  intVal = 1;
-                } else if (intVal > 12) {
-                  intVal = 24;
-                }
-                e.target.value = intVal;
-                setLongestRun(intVal);
-              }}
-              value={longestRun}
-              defaultValue={longestRun}
+              onChange={longestRunChanged}
+              value={breakHours}
             />{" "}
-            {longestRun ? `hour${longestRun !== 1 ? "s" : ""}` : ""}
+            {breakHours ? `hour${breakHours !== 1 ? "s" : ""}` : ""}
           </Optimisation>
         )}
       </OptimisationsContainer>

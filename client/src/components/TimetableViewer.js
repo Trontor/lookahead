@@ -23,6 +23,7 @@ import { updateEvents } from "../redux/actions/timetableActions";
 import Optimisations from "./Optimisations";
 import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
+import TimetableTips from "./TimetableTips";
 
 export default function TimetableViewer() {
   const {
@@ -34,31 +35,39 @@ export default function TimetableViewer() {
   } = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
+  const timetable = useSelector(state => state.timetable);
+
+  useEffect(() => {
+    if (!timetables) {
+      return;
+    }
+    let currentTimetable = timetables[currentIndex];
+
+    // let headerText = `Timetable ${currentIndex + 1}/${timetables.length}`;
+    if (currentView === "custom") {
+      const { id, name, timetable } = customTimetables[currentCustomIndex];
+      currentTimetable = timetable;
+      // headerText = `Custom Timetable ${id}: ${name}`;
+    }
+    console.log("Current Timetable:", currentTimetable);
+    // Map timetable classes to events
+    currentTimetable.classList = currentTimetable.classList.filter(
+      cls => subjects[cls.subjectCode]
+    );
+    const events = currentTimetable.classList.map(cls => classToEvent(cls));
+    events.push(...generateBackgroundEvents());
+    dispatch(updateEvents(events));
+  }, [timetables]);
+  // const newCustomTimetable = () => {
+  //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
+  // };
+  // const viewCustomTimetable = ({ id }) => {
+  //   dispatch(changeToCustomView(id));
+  // };
   if (!timetables) {
     return <NoTimetables />;
   }
-
-  let currentTimetable = timetables[currentIndex];
-  let headerText = `Timetable ${currentIndex + 1}/${timetables.length}`;
-  if (currentView === "custom") {
-    const { id, name, timetable } = customTimetables[currentCustomIndex];
-    currentTimetable = timetable;
-    headerText = `Custom Timetable ${id}: ${name}`;
-  }
-  console.log("Current Timetable:", currentTimetable);
-  // Map timetable classes to events
-  currentTimetable.classList = currentTimetable.classList.filter(
-    cls => subjects[cls.subjectCode]
-  );
-  const events = currentTimetable.classList.map(cls => classToEvent(cls));
-  events.push(...generateBackgroundEvents());
-  dispatch(updateEvents(events));
-  const newCustomTimetable = () => {
-    dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
-  };
-  const viewCustomTimetable = ({ id }) => {
-    dispatch(changeToCustomView(id));
-  };
+  const events = timetable.allEvents;
   return (
     <>
       {/* <div>
@@ -92,6 +101,7 @@ export default function TimetableViewer() {
           </div>
         </div>
       )} */}
+      <TimetableTips />
       <TimetableHeaderControl
         current={currentIndex + 1}
         total={timetables.length}
@@ -118,7 +128,6 @@ export default function TimetableViewer() {
         eventPositioned={handleClassRender}
         header={false}
         handleWindowResize={true}
-        height="parent"
         contentHeight="auto"
         columnHeaderFormat={{ weekday: "short" }}
         minTime="08:00:00"

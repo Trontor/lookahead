@@ -1,6 +1,6 @@
 import { UPDATE_EVENTS } from "../actionTypes";
 
-const initialState = { regularEvents: [], backgroundEvents: [] };
+const initialState = { allEvents: [], regularEvents: [], backgroundEvents: [] };
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -8,6 +8,7 @@ export default (state = initialState, action) => {
       const allEvents = action.payload;
       return {
         ...state,
+        allEvents,
         regularEvents: allEvents.filter(
           event => event.rendering !== "background"
         ),
