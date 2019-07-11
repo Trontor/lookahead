@@ -10,7 +10,7 @@ const SubjectsWrapper = styled.div`
 const SubjectWrapper = styled.div`
   color: ${props => props.textColor};
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Karla", sans-serif;
 `;
 
 const loadingCSS = css`
@@ -54,11 +54,11 @@ const loadingCSS = css`
   }
 `;
 const SubjectHeader = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  flex-direction: row;
-  padding: 5px 15px;
+  flex-direction: row; */
+  padding: 12px 12px 8px 12px;
   min-height: 50px;
   border-radius: 1px;
   margin: 5px 0;
@@ -75,18 +75,19 @@ const SubjectHeader = styled.div`
 
 const SubjectCode = styled.div`
   /* align-self: center; */
-  position: absolute;
-  bottom: 2px;
-  left: 15px;
+  /* bottom: 10px; */
+  font-weight: bold;
   color: inherit;
-  opacity: 0.6;
+  opacity: 0.75;
   font-size: 12px;
   @media screen and (max-width: 600px) {
-    margin: 0 auto;
+    /* margin: 0 auto;
     bottom: 0;
     left: 0;
     right: 0;
-    top: 2px;
+    top: 2px; */
+    text-align: center;
+    position: relative;
   }
 `;
 const WidthRestriction = styled.div`
@@ -95,24 +96,56 @@ const WidthRestriction = styled.div`
 
 const SubjectName = styled.div`
   font-weight: bold;
-  align-self: center;
-  margin-top: 5px;
+  max-width: 260px;
+  font-size: 16px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  @media screen and (max-width: 1024px) {
+    max-width: inherit;
+    align-self: center;
+    margin-bottom: 0;
+  }
 `;
 
 const SubjectToolbox = styled.div`
   font-weight: bold;
-  align-self: center;
+  vertical-align: middle;
   color: ${({ iconColor }) => iconColor};
+  right: 36px;
+  top: 19px;
+  position: absolute;
+  @media screen and (max-width: 600px) {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
 `;
 
 const ToolboxButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 5px;
-  margin: 0 5px;
+  margin: 3px 5px 0 5px;
   color: inherit;
   background-color: transparent;
   border: none;
+`;
+
+const DeleteButton = styled.button`
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  padding: 2px;
+  top: 5px;
+  right: 10px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  opacity: 0.75;
+  @media screen and (max-width: 600px) {
+    top: 7px;
+    right: 10px;
+  }
 `;
 
 const SubjectLoader = styled.div`
@@ -164,11 +197,14 @@ function Subjects() {
                 <ToolboxButton onClick={() => openHandbook(year, code)}>
                   <i className="fa fa-book" />
                 </ToolboxButton>
-                <ToolboxButton onClick={() => deleteSubject(year, code)}>
-                  <i className="fa fa-times" />
-                </ToolboxButton>
+                {/* <ToolboxButton onClick={() => deleteSubject(year, code)}>
+                <i className="fa fa-times" />
+                </ToolboxButton> */}
               </SubjectToolbox>
             </SubjectHeader>
+            <DeleteButton onClick={() => deleteSubject(year, code)}>
+             ×
+            </DeleteButton>
           </SubjectWrapper>
         );
       })}
