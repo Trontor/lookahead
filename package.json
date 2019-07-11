@@ -31,7 +31,7 @@
     "dev-debug": "concurrently \"npm run express-debug\" \"npm run client\"",
     "express-debug": "node --inspect=5000 -r ts-node/register server.ts",
     "express-debug:watch": "nodemon",
-    "server": "nodemon server.ts",
+    "server": "nodemon",
     "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
