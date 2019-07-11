@@ -8,7 +8,7 @@ import {
 import ArrowKeysReact from "arrow-keys-react";
 
 const HeaderWrapper = styled.div`
-  font-family: Montserrat, sans-serif;
+  font-family: "Karla", sans-serif;
   text-align: center;
   position: relative;
   margin: 10px 0;

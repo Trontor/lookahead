@@ -11,7 +11,7 @@ const Tip = styled.div`
   margin: 5px 10px;
   padding-left: 10px;
   font-size: 12px;
-  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Karla", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border-left: 2px solid green;
   i {
     font-size: 10px;
