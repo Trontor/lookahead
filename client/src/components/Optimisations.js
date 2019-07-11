@@ -106,6 +106,7 @@ function Optimisations() {
     breakHours,
     minimiseClashes
   } = optimisations;
+  console.log(optimisations);
 
   const changeRange = ({ min, max }) => {
     if (max - min >= 2.5) dispatch(setTimeRange(min, max));
@@ -177,21 +178,9 @@ function Optimisations() {
         <Optimisation>
           <input
             class="styled-checkbox"
-            id="skip-lectures"
-            type="checkbox"
-            value={skipLectures}
-            onChange={({ target: { checked } }) =>
-              dispatch(setSkipLectures(checked))
-            }
-          />
-          <label for="skip-lectures">I skip most of my lectures</label>
-        </Optimisation>
-        <Optimisation>
-          <input
-            class="styled-checkbox"
             id="minimise-clashes"
             type="checkbox"
-            value={minimiseClashes}
+            checked={minimiseClashes}
             onChange={({ target: { checked } }) =>
               dispatch(setMinimiseClashes(checked))
             }
@@ -201,9 +190,21 @@ function Optimisations() {
         <Optimisation>
           <input
             class="styled-checkbox"
+            id="skip-lectures"
+            type="checkbox"
+            checked={skipLectures}
+            onChange={({ target: { checked } }) =>
+              dispatch(setSkipLectures(checked))
+            }
+          />
+          <label for="skip-lectures">I skip most of my lectures</label>
+        </Optimisation>
+        <Optimisation>
+          <input
+            class="styled-checkbox"
             id="cram-classes"
             type="checkbox"
-            value={cramClasses}
+            checked={cramClasses}
             onChange={({ target: { checked } }) =>
               dispatch(setCramClasses(checked))
             }
@@ -215,7 +216,6 @@ function Optimisations() {
             class="styled-checkbox"
             id="longest-run-toggle"
             type="checkbox"
-            defaultChecked={longestRunToggled}
             checked={longestRunToggled}
             onChange={longestRunToggleChanged}
           />

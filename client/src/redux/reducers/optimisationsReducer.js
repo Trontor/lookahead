@@ -14,7 +14,7 @@ const initialState = {
   skipLectures: false,
   cramClasses: true,
   breakHours: 24,
-  minimiseClashes: false
+  minimiseClashes: true
 };
 
 export default (state = initialState, action) => {
