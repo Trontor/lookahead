@@ -5,7 +5,6 @@ import { getSubject } from "../redux/actions/subjectActions";
 import AsyncSelect from "react-select/async";
 import Select from "react-select";
 import styled from "styled-components";
-import { NONAME } from "dns";
 
 const CURRENT_STUDY_PERIOD_INDEX = 3;
 const CURRENT_SUBJECT_LIST_YEAR = 2019;
@@ -36,7 +35,12 @@ const SubjectSelect = props => {
       getSubject(2019, "semester_2", "COMP30020", "Declarative Programming")
     );
     dispatch(
-      getSubject(2019, "semester_2", "SWEN20003", "Object Oriented Software Development")
+      getSubject(
+        2019,
+        "semester_2",
+        "SWEN20003",
+        "Object Oriented Software Development"
+      )
     );
     // dispatch(
     //   getSubject(2019, "semester_2", "COMP10001", "Foundations of Computing")
@@ -56,7 +60,7 @@ const SubjectSelect = props => {
     // );
     // dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
     // dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const studyPeriod = selectedStudyPeriod.value;

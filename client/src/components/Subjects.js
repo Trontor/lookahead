@@ -1,7 +1,6 @@
 import React from "react";
 import { removeSubject } from "../redux/actions/subjectActions";
 import { useSelector, useDispatch } from "react-redux";
-import ClassInfo from "./ClassInfo";
 import styled, { css } from "styled-components";
 
 const SubjectsWrapper = styled.div`
@@ -90,10 +89,6 @@ const SubjectCode = styled.div`
     position: relative;
   }
 `;
-const WidthRestriction = styled.div`
-  max-width: 500px;
-`;
-
 const SubjectName = styled.div`
   font-weight: bold;
   max-width: 18.5vw;
@@ -148,13 +143,6 @@ const DeleteButton = styled.button`
   }
 `;
 
-const SubjectLoader = styled.div`
-  position: absolute;
-  height: 100%;
-  background-color: ${props => props.color};
-  text-align: center;
-`;
-
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
   const dispatch = useDispatch();
@@ -203,7 +191,7 @@ function Subjects() {
               </SubjectToolbox>
             </SubjectHeader>
             <DeleteButton onClick={() => deleteSubject(year, code)}>
-             ×
+              ×
             </DeleteButton>
           </SubjectWrapper>
         );

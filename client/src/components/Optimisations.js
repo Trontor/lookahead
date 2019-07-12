@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
 import "./CustomCheckbox.scss";
-import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
-import moment from "moment";
 import InputRange from "react-input-range";
 import "./InputRange.css";
-import DayAvoidButton from "./DavAvoidButton";
+import DayAvoidButton from "./DayAvoidButton";
 import {
   setTimeRange,
   setBreak,

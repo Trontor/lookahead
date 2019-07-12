@@ -36,7 +36,7 @@ const AvoidButton = styled.button`
     color: white;
   }
 `;
-export default function DavAvoidButton(props) {
+export default function DayAvoidButton(props) {
   const [activated, setActivated] = useState(false);
   const { onToggled } = props;
   useEffect(() => {

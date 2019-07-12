@@ -173,7 +173,7 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   const {
     start,
     title,
-    extendedProps: { classCode, type, streamNumber, code, codes }
+    extendedProps: { classCode, type, /*streamNumber,*/ code, codes }
   } = newEvent;
   const subjects = getSubjects();
   // Extract all regular classes for this subject
@@ -289,7 +289,7 @@ export const generateBackgroundEvents = () => {
   const bgEvents = [];
   const subjects = getSubjects();
   // Loop through each subject, generating background events for them 1-by-1
-  for (const [code, { data }] of Object.entries(subjects)) {
+  for (const [/*code,*/ { data }] of Object.entries(subjects)) {
     // Check if the data for the subject has been retrieved yet
     if (!data) {
       // If not, continue to the next subject

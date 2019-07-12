@@ -42,7 +42,8 @@ const OptimiseButtonWrapper = styled.div`
   justify-content: center;
 `;
 const OptimiseButton = styled.button`
-  background-color: #a6c !important;
+  /* background-color: #a6c !important; */
+  background-color: ${props => props.theme.main};
   color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 0.84rem 2.14rem;

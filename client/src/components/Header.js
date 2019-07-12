@@ -6,7 +6,7 @@ export default function Header() {
     max-height: 60px;
     min-height: 20px;
     text-align: left;
-    background-color: #4B55A5;
+    background-color: ${props => props.theme.main};
     display: flex;
     justify-content: center;
     align-content: center;

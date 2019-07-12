@@ -1,5 +1,5 @@
 import Timetable from "./Timetable";
-import OptimisationType, { LONGEST_RUN } from "./optimisationTypes";
+import OptimisationType from "./optimisationTypes";
 import {
   sortByDayAvoid,
   sortByDaysPresent,
