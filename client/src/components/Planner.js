@@ -8,7 +8,6 @@ import OptimisationTypes from "../optimiser/optimisationTypes";
 import Notifications from "./Notifications";
 import styled from "styled-components";
 import Optimisations from "./Optimisations";
-import Header from "./Header";
 
 const Grid = styled.div`
   display: grid;
