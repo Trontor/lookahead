@@ -9,10 +9,10 @@ const GlobalStyle = createGlobalStyle`
   html {
     height: 100%;
   }
-  #root{ 
+  #root{
     height: 100%;
   }
-  body{ 
+  body{
     height: 100%;
     padding: 0;
     margin: 0;
@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 `;
+
 export default () => {
   const theme = useSelector(state => state.theme);
   return (

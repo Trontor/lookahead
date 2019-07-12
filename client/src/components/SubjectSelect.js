@@ -145,10 +145,10 @@ const SubjectSelect = props => {
       display: inline-block;
       font-family: "Karla", sans-serif;
       font-size: 13px;
-      margin: 0 5px;
     }
     .study-period-select {
       width: 150px;
+      margin-right: 5px;
     }
     .subject-select {
       width: 100%;

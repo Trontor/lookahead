@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
 
 const SubjectsWrapper = styled.div`
-  margin: 5px;
+  /* margin: 5px; */
 `;
 const SubjectWrapper = styled.div`
   color: ${props => props.textColor};
@@ -57,13 +57,13 @@ const SubjectHeader = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row; */
-  padding: 12px 12px 8px 12px;
+  padding: 12px 12px 13px;
   min-height: 50px;
   border-radius: 1px;
   margin: 5px 0;
   background-color: ${props => props.color};
   @media screen and (max-width: 600px) {
-    padding-top: 10px;
+    padding: 10px 0 12px 0;
     & div {
       text-align: center;
       flex: 100%;
@@ -107,7 +107,7 @@ const SubjectToolbox = styled.div`
   vertical-align: middle;
   color: ${({ iconColor }) => iconColor};
   right: 30px;
-  top: 19px;
+  top: 24%;
   position: absolute;
   @media screen and (max-width: 600px) {
     position: relative;
@@ -132,7 +132,7 @@ const DeleteButton = styled.button`
   position: absolute;
   padding: 2px;
   top: 5px;
-  right: 10px;
+  right: 8px;
   color: inherit;
   background-color: transparent;
   border: none;

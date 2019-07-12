@@ -12,7 +12,7 @@ import Optimisations from "./Optimisations";
 const Grid = styled.div`
   height: auto;
   width: 100%;
-  position: absol ute;
+  position: absolute;
   top: 60px;
   bottom: 0;
   display: grid;
@@ -22,17 +22,17 @@ const Grid = styled.div`
     grid-template-columns: 100%;
   }
 `;
+
 const Sidebar = styled.div`
   grid-column-start: sidebar;
   height: 100%;
   min-width: 280px;
-  box-shadow: 3px 0 5px -3px rgba(0, 0, 0, 0.12);
+  padding: 5px;
   @media screen and (max-width: 960px) {
     grid-column-start: 1;
     max-width: inherit;
     margin: 0px;
     box-shadow: none;
-    padding: 0;
   }
 `;
 
