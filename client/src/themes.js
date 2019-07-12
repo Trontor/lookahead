@@ -1,10 +1,12 @@
 const regularTheme = {
-  bodyBackground: "white",
+  headerBg: "#4B55A5",
+  bodyBg: "white",
   main: "#4B55A5",
   text: "black"
 };
 const darkTheme = {
-  bodyBackground: "#202124",
+  headerBg: "#202124",
+  bodyBg: "#121212",
   main: "#202124",
   text: "white"
 };

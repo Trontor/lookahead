@@ -8,7 +8,7 @@ const HeaderWrapper = styled.div`
   max-height: 60px;
   min-height: 20px;
   text-align: left;
-  background-color: ${props => props.theme.main};
+  background-color: ${props => props.theme.headerBg};
   display: flex;
   justify-content: center;
   align-content: center;

@@ -51,7 +51,7 @@ const Optimisation = styled.div`
 `;
 
 const TimeOptimisation = styled.div`
-  margin: 25px;
+  margin: 45px;
 `;
 
 const Input = styled.input`

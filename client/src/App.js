@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: ${props => props.theme.bodyBackground};
+    background-color: ${props => props.theme.bodyBg};
     font-family: "Karla", sans-serif;
     font-size: 12px;
     color: ${props => props.theme.text};
