@@ -52,7 +52,7 @@ const Optimisation = styled.div`
 `;
 
 const TimeOptimisation = styled.div`
-  margin: 20px;
+  margin: 25px;
 `;
 
 const Input = styled.input`

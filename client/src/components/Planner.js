@@ -10,21 +10,25 @@ import styled from "styled-components";
 import Optimisations from "./Optimisations";
 
 const Grid = styled.div`
+  height: auto;
+  width: 100%;
+  position: absol ute;
+  top: 60px;
+  bottom: 0;
   display: grid;
-  grid-template-columns: [sidebar] 30vw [viewer] auto;
+  grid-template-columns: [sidebar] minmax(30%, 250px) [viewer] auto;
   grid-template-rows: auto;
   @media screen and (max-width: 960px) {
     grid-template-columns: 100%;
   }
 `;
 const Sidebar = styled.div`
-  grid-row-start: sidebar;
+  grid-column-start: sidebar;
   height: 100%;
   min-width: 280px;
-  max-width: 468px;
   box-shadow: 3px 0 5px -3px rgba(0, 0, 0, 0.12);
   @media screen and (max-width: 960px) {
-    grid-row-start: 1;
+    grid-column-start: 1;
     max-width: inherit;
     margin: 0px;
     box-shadow: none;
@@ -33,7 +37,10 @@ const Sidebar = styled.div`
 `;
 
 const Main = styled.div`
-  grid-row-start: viewer;
+  grid-column-start: viewer;
+  @media screen and (max-width: 960px) {
+    grid-column-start: 1;
+  }
 `;
 
 const OptimiseButtonWrapper = styled.div`
@@ -126,23 +133,21 @@ export default function Planner() {
     // invokeOptimisation();
   }
   return (
-    <div>
-      <Grid>
-        <Sidebar>
-          <Notifications />
-          <SubjectSelect />
-          <Subjects />
-          <Optimisations />
-          <OptimiseButtonWrapper>
-            <OptimiseButton onClick={() => invokeOptimisation()}>
-              Optimise
-            </OptimiseButton>
-          </OptimiseButtonWrapper>
-        </Sidebar>
-        <Main>
-          <TimetableViewer />
-        </Main>
-      </Grid>
-    </div>
+    <Grid>
+      <Sidebar>
+        <Notifications />
+        <SubjectSelect />
+        <Subjects />
+        <Optimisations />
+        <OptimiseButtonWrapper>
+          <OptimiseButton onClick={() => invokeOptimisation()}>
+            Optimise
+          </OptimiseButton>
+        </OptimiseButtonWrapper>
+      </Sidebar>
+      <Main>
+        <TimetableViewer />
+      </Main>
+    </Grid>
   );
 }

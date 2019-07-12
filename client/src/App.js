@@ -6,7 +6,15 @@ import Header from "./components/Header";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    height: 100%;
+  }
+  #root{ 
+    height: 100%;
+  }
   body{
+    
+    height: 100%;
     padding: 0;
     margin: 0;
     background-color: ${props => props.theme.bodyBackground};
