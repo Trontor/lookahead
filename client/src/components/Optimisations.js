@@ -17,11 +17,10 @@ import {
 } from "../redux/actions/optimisationsActions";
 
 const OptimisationsWrapper = styled.div`
-  margin: 5px;
-  background-color: white;
+  padding: 5px;
   font-size: 16px;
-  font-family: "Karla";
   text-align: center;
+  color: ${props => props.theme.text};
   margin: 0 auto;
   max-width: 500px;
 `;

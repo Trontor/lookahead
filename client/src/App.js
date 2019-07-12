@@ -12,15 +12,14 @@ const GlobalStyle = createGlobalStyle`
   #root{ 
     height: 100%;
   }
-  body{
-    
+  body{ 
     height: 100%;
     padding: 0;
     margin: 0;
     background-color: ${props => props.theme.bodyBackground};
     font-family: "Karla", sans-serif;
     font-size: 12px;
-    color: #373535;
+    color: ${props => props.theme.text};
   }
   *, *::before, *::after{
     box-sizing: border-box;
