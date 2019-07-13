@@ -10,37 +10,38 @@ import styled from "styled-components";
 import Optimisations from "./Optimisations";
 
 const Grid = styled.div`
-  height: auto;
-  width: 100%;
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  display: grid;
-  grid-template-columns: [sidebar] minmax(30%, 250px) [viewer] auto;
-  grid-template-rows: auto;
-  @media screen and (max-width: 960px) {
-    grid-template-columns: 100%;
+  grid-template-columns: 100%;
+
+  @media screen and (min-width: 960px) {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: [sidebar] minmax(30%, 250px) [viewer] auto;
+    grid-template-rows: auto;
   }
 `;
 
 const Sidebar = styled.div`
-  grid-column-start: sidebar;
-  height: 100%;
-  min-width: 280px;
+  grid-column-start: 1;
+  max-width: inherit;
   padding: 5px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  @media screen and (max-width: 960px) {
-    grid-column-start: 1;
-    max-width: inherit;
-    margin: 0px;
-    box-shadow: none;
+  height: 100%;
+
+  @media screen and (min-width: 960px) {
+    grid-column-start: sidebar;
+    min-width: 280px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
   }
 `;
 
 const Main = styled.div`
-  grid-column-start: viewer;
-  @media screen and (max-width: 960px) {
-    grid-column-start: 1;
+  grid-column-start: 1;
+
+  @media screen and (min-width: 960px) {
+    grid-column-start: viewer;
   }
 `;
 
@@ -56,7 +57,7 @@ const OptimiseButton = styled.button`
   padding: 0.84rem 2.14rem;
   font-size: 0.81rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 0.375rem;
   border: 0;
   border-radius: 0.125rem;
