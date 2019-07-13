@@ -7,8 +7,7 @@
 }
 
 $opacity: 0.75;
-.fc-slats td,
-.fc-time-grid td {
+.fc-slats td, .fc-time-grid td {
   height: 2.5em !important;
 }
 
@@ -29,7 +28,7 @@ $opacity: 0.75;
     color: black;
   }
   .fc-title {
-    font-weight: bold;
+    font-weight: 300;
   }
   .fc-desc {
     margin-top: auto;
@@ -92,7 +91,7 @@ $opacity: 0.75;
     }
 
     .fc-title {
-      font-size: 13px;
+      font-size: 12px;
       line-height: 1em;
     }
     .fc-desc {

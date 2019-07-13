@@ -8,6 +8,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   html {
     height: 100%;
+    margin: 0;
   }
   #root{
     height: 100%;
@@ -23,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
   }
   *, *::before, *::after{
     box-sizing: border-box;
+  }
+  h1 {
+    font-size: 24px;
+    font-family: "Quicksand", sans-serif;
   }
 `;
 

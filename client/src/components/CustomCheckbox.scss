@@ -1,3 +1,5 @@
+$checkbox-color: lightsalmon;
+
 .styled-checkbox {
   position: absolute; // take it out of document flow
   opacity: 0; // hide it
@@ -17,14 +19,15 @@
     vertical-align: text-top;
     width: 20px;
     height: 20px;
-    background: white;
+    // background: white;
     border: 1px solid gray;
     box-sizing: border-box;
   }
 
   // Box hover
   &:hover + label:before {
-    background: #f35429;
+    background: $checkbox-color;
+    border-color: $checkbox-color;
   }
 
   // Box focus
@@ -34,7 +37,7 @@
 
   // Box checked
   &:checked + label:before {
-    background: #f35429;
+    background: $checkbox-color;
     border: none;
   }
 

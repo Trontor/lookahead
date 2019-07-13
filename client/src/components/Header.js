@@ -18,7 +18,7 @@ const HeaderWrapper = styled.div`
   margin: 0px;
 
   @media screen and (min-width: 960px) {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   }
 `;
 

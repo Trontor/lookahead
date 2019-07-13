@@ -139,17 +139,18 @@ const SubjectSelect = props => {
     }
   };
   const SelectContainer = styled.div`
-    padding-top: 7px;
+    padding-top: 6px;
     display: flex;
     & > div {
       display: inline-block;
-      font-family: "Karla", sans-serif;
-      font-size: 13px;
+      font-size: 11px;
     }
+
     .study-period-select {
-      width: 150px;
+      width: 140px;
       margin-right: 5px;
     }
+
     .subject-select {
       width: 100%;
     }

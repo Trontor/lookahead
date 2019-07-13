@@ -3,36 +3,56 @@ import styled, { css } from "styled-components";
 
 const AvoidButton = styled.button`
   outline: 0;
-  border: 1px solid #4caf50; /* Green border */
+  width: 50px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid ${props => props.theme.accent};
+  padding: 6px 0; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  margin-bottom: 12px;
+
+  &:hover {
+    
+  }
+
+  @media screen and (min-width: 960px) {
+    width: 40px;
+  }
+
   ${props => {
     if (props.activated) {
       return css`
-        background-color: #4caf50;
+        background-color: ${props => props.theme.accent};
         color: white;
       `;
     } else {
       return css`
-        background-color: white;
-        color: #4caf50;
+        background-color: ${props => props.theme.sidebarBg};
+        color: ${props => props.theme.accent};
       `;
     }
   }}
-  padding: 5px 10px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+
   &:not(:last-child) {
     border-right: none; /* Prevent double borders */
   }
+
   &:first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    padding-left: 2px;
   }
+
   &:last-child {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
+
   &:hover {
-    background-color: #4caf50;
+    background-color: ${props => props.theme.accent};
     color: white;
   }
 `;
