@@ -5,12 +5,13 @@
   & + label {
     position: relative;
     cursor: pointer;
-    padding: 0;
+    letter-spacing: -0.01em;
   }
 
   // Box.
   & + label:before {
     content: "";
+    margin-top: -3px;
     margin-right: 10px;
     display: inline-block;
     vertical-align: text-top;
@@ -56,6 +57,7 @@
     left: 5px;
     top: 9px;
     background: white;
+    margin-top: -3px;
     width: 2px;
     height: 2px;
     box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,

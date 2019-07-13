@@ -14,32 +14,43 @@ const HeaderWrapper = styled.div`
   align-content: center;
   flex-direction: column;
   color: white;
-  padding: 8px 12px;
+  padding: 14px 12px;
   margin: 0px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-`;
-const HeaderText = styled.span`
-  letter-spacing: 0.1em;
-  display: inline;
-  font-size: 24px;
-  font-family: "Cabin", sans-serif;
-  font-weight: bold;
-  padding-bottom: 2px;
-`;
-const HeaderSubtitle = styled.span`
-  font-size: 13px;
-  display: inline;
-  font-family: "Karla", sans-serif;
-`;
-const Emoji = styled.span`
-  @media screen and (max-width: 400px) {
-    display: none;
+
+  @media screen and (min-width: 960px) {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
   }
+`;
+
+const HeaderText = styled.span`
+  letter-spacing: 0.02em;
+  display: inline;
+  font-family: "Quicksand";
+  font-size: 20px;
+  font-weight: 800;
+  padding-bottom: 1px;
+`;
+
+const HeaderSubtitle = styled.span`
+  font-size: 11px;
+  display: inline;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+`;
+
+const Emoji = styled.span`
   right: 12px;
-  font-size: 26px;
+  font-size: 24px;
   position: absolute;
+  transform: translateY(2px);
   text-align: right;
   cursor: pointer;
+
+  @media screen and (max-width: 359px) {
+    display: none;
+  }
 `;
 
 export default function Header() {
@@ -67,7 +78,7 @@ export default function Header() {
   const emoji = getCurrentEmoji();
   return (
     <HeaderWrapper>
-      <HeaderText>lookahead</HeaderText>
+      <HeaderText>lookahead 👀</HeaderText>
       <HeaderSubtitle>
         A University of Melbourne Timetable Optimiser
       </HeaderSubtitle>

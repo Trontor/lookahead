@@ -7,64 +7,35 @@
 }
 
 $opacity: 0.75;
-
-.fc-slats td, .fc-time-grid td {
-  height: 2.5em!important;
-}
-
-th {
-  font-family: "Karla", sans-serif;
-  font-size: 13px;
-}
-
-td {
-  font-family: "Karla", sans-serif;
-  font-size: 12px;
+.fc-slats td,
+.fc-time-grid td {
+  height: 2.5em !important;
 }
 
 .lookahead-event-wrapper {
-  font-family: "Karla", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 2px;
   border: 0;
-  padding: 4px 3px 3px 3px;
-  margin: 0;
-  transform: translate(1px, 1px);
-  color: black;
+  padding: 2px;
+  color: rgb(0, 0, 0);
+  // margin: -2px;
+  margin-left: -2px;
+  margin-right: -5px;
   display: flex;
   flex-direction: column;
-  font-size: 0.6rem;
+  font-size: 8px;
+
   &:hover {
     color: black;
   }
-  .fc-time {
-    max-width: 50%;
-    font-size: 0.625rem;
-    padding-bottom: 2px;
-    white-space: normal;
-    line-height: 0.9em;
-  }
   .fc-title {
-    font-size: 0.7rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: clip;
-    transform: translateY(-2px);
-    line-height: 1em;
+    font-weight: bold;
   }
   .fc-desc {
-    margin-top: 5px;
-    font-size: 0.7rem;
-    line-height: 1em;
-    word-wrap: break-word;
-    @media screen and (max-width: 600px) {
-      display: none;
-    }
+    margin-top: auto;
   }
   .fc-code {
-    word-wrap: break-word;
-    white-space: normal;
-    margin-top: 5px;
-    font-size: 0.6rem;
+    margin-top: auto;
   }
   .event-icon {
     opacity: $opacity;
@@ -85,14 +56,15 @@ td {
     right: 2px;
   }
   .bottom-wrapper {
-    margin-top: 5px;
+    margin-top: auto;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .lookahead-event-wrapper {
-    font-size: 8px;
+    font-size: 7.5px;
     margin-right: -2px;
+
     .fc-title {
       font-size: 9px;
       padding-top: 5px;
@@ -106,71 +78,76 @@ td {
   }
 }
 
-// @media (min-width: 600px) {
-//   .lookahead-event-wrapper {
-//     font-size: 8px;
-//     margin-right: -3px;
-//     .fc-time {
-//       font-size: 10px;
-//     }
-//     .fc-type {
-//       top: 0px;
-//     }
-//     .fc-title {
-//       font-size: 12px;
-//     }
-//     .fc-desc {
-//       font-size: 10px;
-//     }
-//     .event-icon {
-//       font-size: 6px;
-//     }
-//     .fc-type {
-//       top: 1px;
-//       right: 12px;
-//     }
-//   }
-// }
+@media (min-width: 600px) {
+  .lookahead-event-wrapper {
+    font-size: 8px;
+    margin-right: -3px;
 
-// @media (min-width: 1200px) {
-//   .lookahead-event-wrapper {
-//     font-size: 10px;
-//     margin-right: -6px;
+    .fc-time {
+      font-size: 10px;
+    }
 
-//     .fc-title {
-//       font-size: 12px;
-//     }
-//     .fc-type {
-//       top: 0px;
-//     }
-//     .fc-desc {
-//       font-size: 12px;
-//     }
-//     .event-icon {
-//       font-size: 8px;
-//     }
-//     .fc-type {
-//       top: 0px;
-//       right: 15px;
-//     }
-//   }
-// }
+    .fc-type {
+      top: 0px;
+    }
 
-// @media (min-width: 1800px) {
-//   .lookahead-event-wrapper {
-//     font-size: 10px;
-//     margin-right: -10px;
-//     .fc-time {
-//       font-size: 12px;
-//     }
-//     .fc-title {
-//       font-size: 12px;
-//     }
-//     .fc-desc {
-//       font-size: 12px;
-//     }
-//     .event-icon {
-//       font-size: 8px;
-//     }
-//   }
-// }
+    .fc-title {
+      font-size: 13px;
+      line-height: 1em;
+    }
+    .fc-desc {
+      font-size: 10px;
+    }
+    .event-icon {
+      font-size: 6px;
+    }
+    .fc-type {
+      top: 1px;
+      right: 12px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .lookahead-event-wrapper {
+    font-size: 10px;
+    margin-right: -6px;
+
+    .fc-title {
+      font-size: 12px;
+    }
+    .fc-type {
+      top: 0px;
+    }
+    .fc-desc {
+      font-size: 12px;
+    }
+    .event-icon {
+      font-size: 8px;
+    }
+    .fc-type {
+      top: 0px;
+      right: 15px;
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .lookahead-event-wrapper {
+    font-size: 10px;
+    margin-right: -10px;
+
+    .fc-time {
+      font-size: 12px;
+    }
+    .fc-title {
+      font-size: 12px;
+    }
+    .fc-desc {
+      font-size: 12px;
+    }
+    .event-icon {
+      font-size: 8px;
+    }
+  }
+}

@@ -17,28 +17,33 @@ import {
 } from "../redux/actions/optimisationsActions";
 
 const OptimisationsWrapper = styled.div`
-  padding: 5px;
-  font-size: 16px;
   text-align: center;
   color: ${props => props.theme.text};
   margin: 0 auto;
-  max-width: 500px;
+  padding: 5px;
+  /* max-width: 500px; */
 `;
 
 const OptimisationsContainer = styled.div`
   margin: 0 auto;
   display: inline-block;
 `;
+
 const Header = styled.h1`
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
+  font-family: "Quicksand";
+  line-height: 0.8em;
 `;
+
 const Optimisation = styled.div`
   text-align: ${({ center }) => (center ? "center" : "left")};
-  margin: 5px 0;
+  margin: 12px 0;
+
   .rc-time-picker-input {
     width: 75px;
   }
+
   ${({ child }) =>
     child &&
     css`
@@ -51,7 +56,7 @@ const Optimisation = styled.div`
 `;
 
 const TimeOptimisation = styled.div`
-  margin: 45px;
+  margin: 30px 40px 40px 40px;
 `;
 
 const Input = styled.input`
@@ -155,7 +160,7 @@ function Optimisations() {
         </Optimisation>
 
         <Optimisation center>
-          Try to avoid classes on these days
+          Try to avoid classes on these days:
           <br />
           <ButtonGroup>
             {days.map((day, idx) => (
