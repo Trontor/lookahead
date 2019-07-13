@@ -7,9 +7,8 @@
 }
 
 $opacity: 0.75;
-
-.fc-slats td {
-  height: 2.5em!important;
+.fc-slats td, .fc-time-grid td {
+  height: 2.5em !important;
 }
 
 .lookahead-event-wrapper {
