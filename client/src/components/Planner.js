@@ -15,7 +15,6 @@ const Grid = styled.div`
   @media screen and (min-width: 960px) {
     height: auto;
     width: 100%;
-    position: absolute;
     top: 60px;
     bottom: 0;
     display: grid;
@@ -30,12 +29,12 @@ const Sidebar = styled.div`
   max-width: inherit;
   padding: 10px;
   padding-bottom: 20px;
-  z-index: 100;
+  z-index: 1;
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;
     min-width: 280px;
-    max-width: 400px;
+    max-width: 380px;
     /* box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.1); */
     border-right: solid 1px #eee;
   }

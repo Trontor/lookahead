@@ -12,45 +12,55 @@ const SubjectWrapper = styled.div`
 `;
 
 const loadingCSS = css`
-  border-width: 2px;
-  border-radius: 0px;
-  background: white;
-  position: relative;
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    border-top: none!important;
+
+  @media screen and (min-width: 960px) {
+    border-left: none!important;
   }
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(-1 * 2px);
-    left: calc(-1 * 2px);
-    height: calc(100% + 2px * 2);
-    width: calc(100% + 2px * 2);
-    background: linear-gradient(
-      60deg,
-      #f79533,
-      #f37055,
-      #ef4e7b,
-      #a166ab,
-      #5073b8,
-      #1098ad,
-      #07b39b,
-      #6fba82
-    );
-    border-radius: calc(2 * var(2px));
-    z-index: -1;
-    animation: animatedgradient 3s ease alternate infinite;
-    background-size: 300% 300%;
-  }
-`;
+`
+;
+
+// const loadingCSS = css`
+//   border-width: 2px;
+//   border-radius: 0px;
+//   /* background: white; */
+//   position: relative;
+//   @keyframes animatedgradient {
+//     0% {
+//       background-position: 0% 50%;
+//     }
+//     50% {
+//       background-position: 100% 50%;
+//     }
+//     100% {
+//       background-position: 0% 50%;
+//     }
+//   }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: calc(-1 * 2px);
+//     left: calc(-1 * 2px);
+//     height: calc(100% + 2px * 2);
+//     width: calc(100% + 2px * 2);
+//     background: linear-gradient(
+//       60deg,
+//       #f79533,
+//       #f37055,
+//       #ef4e7b,
+//       #a166ab,
+//       #5073b8,
+//       #1098ad,
+//       #07b39b,
+//       #6fba82
+//     );
+//     border-radius: calc(2 * var(2px));
+//     z-index: -1;
+//     animation: animatedgradient 3s ease alternate infinite;
+//     background-size: 300% 300%;
+//   }
+// `;
+
 const SubjectHeader = styled.div`
   padding: 10px 0 12px 0;
   background-color: ${props => props.theme.cardBg};
@@ -75,6 +85,7 @@ const SubjectHeader = styled.div`
     }
   }
   ${({ loading }) => loading && loadingCSS}
+  /* ${({ loading }) => loadingCSS} */
 `;
 
 const SubjectCode = styled.div`
@@ -106,7 +117,7 @@ const SubjectName = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    max-width: 14.5vw;
+    max-width: 13.75vw;
     font-size: 13px;
     margin-top: 2px;
     margin-bottom: 5px;
@@ -188,7 +199,7 @@ function Subjects() {
         let textColor = "white";
         if (loading) {
           bgColor = "transparent";
-          textColor = "black";
+          textColor = "${props => props.theme.text}";
         }
         return (
           <SubjectWrapper textColor={textColor}>

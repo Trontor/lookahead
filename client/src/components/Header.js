@@ -11,16 +11,16 @@ const HeaderWrapper = styled.div`
   background-color: ${props => props.theme.headerBg};
   display: flex;
   justify-content: center;
-  align-content: center;
+  /* align-content: center; */
   flex-direction: column;
   color: white;
   padding: 14px 12px;
   margin: 0px;
   z-index: 9999;
-  border-bottom: 1px solid #eee;
+  position: relative;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.12);
 
   @media screen and (min-width: 960px) {
-    /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1); */
   }
 `;
 
