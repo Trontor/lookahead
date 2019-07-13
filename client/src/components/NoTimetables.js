@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   align-items: center;
   height: 100%;
   margin: 20px auto;
+
+  @media screen and (min-width: 960px) {
+    margin: -200px auto;
+  }
 `;
 
 const Text = styled.span`
@@ -20,7 +24,7 @@ export default function NoTimetables() {
       <Text>
         No Timetables Yet{" "}
         <span role="img" aria-label="Crying Emoji">
-          😭
+          😭😭😭
         </span>
       </Text>
     </Wrapper>
