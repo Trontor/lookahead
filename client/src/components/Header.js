@@ -16,28 +16,36 @@ const HeaderWrapper = styled.div`
   color: white;
   padding: 14px 12px;
   margin: 0px;
+  z-index: 9999;
+  border-bottom: 1px solid #eee;
 
   @media screen and (min-width: 960px) {
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1); */
   }
 `;
 
-const HeaderText = styled.span`
+const HeaderText = styled.div`
   letter-spacing: 0.02em;
+  text-transform: lowercase;
   display: inline;
   font-family: "Quicksand";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 800;
   padding-bottom: 1px;
 `;
 
 const HeaderSubtitle = styled.span`
-  font-size: 11px;
+  font-size: 10px;
   display: inline;
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   opacity: 0.8;
+`;
+
+const EyeEmoji = styled.span`
+  font-size: 24px;
+  transform: translateY(10px);
 `;
 
 const Emoji = styled.span`
@@ -78,7 +86,7 @@ export default function Header() {
   const emoji = getCurrentEmoji();
   return (
     <HeaderWrapper>
-      <HeaderText>lookahead 👀</HeaderText>
+      <HeaderText>Lookahead <EyeEmoji>👀</EyeEmoji></HeaderText>
       <HeaderSubtitle>
         A University of Melbourne Timetable Optimiser
       </HeaderSubtitle>

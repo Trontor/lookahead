@@ -1,11 +1,11 @@
 const regularTheme = {
-  headerBg: "#22C8D2",
+  headerBg: "#29C7DB",
   bodyBg: "#fcfcfc",
   sidebarBg: "#f9f9f9",
   cardBg: "#fefefe",
   main: "#4B55A5",
   text: "#3f3844",
-  accent: "#22C8D2"
+  accent: "#29C7DB"
 };
 
 const darkTheme = {

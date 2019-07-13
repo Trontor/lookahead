@@ -30,11 +30,14 @@ const Sidebar = styled.div`
   max-width: inherit;
   padding: 10px;
   padding-bottom: 20px;
+  z-index: 100;
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;
     min-width: 280px;
-    box-shadow: 2px -2px 5px -2px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    /* box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.1); */
+    border-right: solid 1px #eee;
   }
 `;
 

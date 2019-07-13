@@ -67,7 +67,6 @@ const SubjectHeader = styled.div`
     padding: 12px 12px 13px;
     min-height: 50px;
     /* border-radius: 1px; */
-    margin: 8px 0;
     /* background-color: ${props => props.color}; */
     border-left: 8px solid ${props => props.color};
     border-top: 0;
@@ -97,9 +96,10 @@ const SubjectCode = styled.div`
 const SubjectName = styled.div`
   max-width: inherit;
   align-self: center;
-  margin-bottom: 0;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 7px;
 
   @media screen and (min-width: 600px) {
     font-size: 15px;
@@ -107,9 +107,9 @@ const SubjectName = styled.div`
 
   @media screen and (min-width: 960px) {
     max-width: 14.5vw;
+    font-size: 13px;
     margin-top: 2px;
     margin-bottom: 5px;
-    font-size: 13px;
   }
 
   @media screen and (min-width: 1100px){
