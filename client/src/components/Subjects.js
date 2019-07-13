@@ -1,11 +1,10 @@
 import React from "react";
 import { removeSubject } from "../redux/actions/subjectActions";
 import { useSelector, useDispatch } from "react-redux";
-import ClassInfo from "./ClassInfo";
 import styled, { css } from "styled-components";
 
 const SubjectsWrapper = styled.div`
-  margin: 5px;
+  /* margin: 5px; */
 `;
 const SubjectWrapper = styled.div`
   color: ${props => props.textColor};
@@ -58,13 +57,13 @@ const SubjectHeader = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row; */
-  padding: 12px 12px 8px 12px;
+  padding: 12px 12px 13px;
   min-height: 50px;
   border-radius: 1px;
   margin: 5px 0;
   background-color: ${props => props.color};
   @media screen and (max-width: 600px) {
-    padding-top: 10px;
+    padding: 10px 0 12px 0;
     & div {
       text-align: center;
       flex: 100%;
@@ -90,14 +89,10 @@ const SubjectCode = styled.div`
     position: relative;
   }
 `;
-const WidthRestriction = styled.div`
-  max-width: 500px;
-`;
-
 const SubjectName = styled.div`
   font-weight: bold;
-  max-width: 23vw;
-  font-size: 15px;
+  max-width: 18.5vw;
+  font-size: 14px;
   margin-top: 2px;
   margin-bottom: 5px;
   @media screen and (max-width: 960px) {
@@ -111,8 +106,8 @@ const SubjectToolbox = styled.div`
   font-weight: bold;
   vertical-align: middle;
   color: ${({ iconColor }) => iconColor};
-  right: 36px;
-  top: 19px;
+  right: 30px;
+  top: 24%;
   position: absolute;
   @media screen and (max-width: 600px) {
     position: relative;
@@ -125,7 +120,7 @@ const ToolboxButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 5px;
-  margin: 3px 5px 0 5px;
+  margin: 3px 4px 0 4px;
   color: inherit;
   background-color: transparent;
   border: none;
@@ -137,7 +132,7 @@ const DeleteButton = styled.button`
   position: absolute;
   padding: 2px;
   top: 5px;
-  right: 10px;
+  right: 8px;
   color: inherit;
   background-color: transparent;
   border: none;
@@ -146,13 +141,6 @@ const DeleteButton = styled.button`
     top: 7px;
     right: 10px;
   }
-`;
-
-const SubjectLoader = styled.div`
-  position: absolute;
-  height: 100%;
-  background-color: ${props => props.color};
-  text-align: center;
 `;
 
 function Subjects() {
@@ -203,7 +191,7 @@ function Subjects() {
               </SubjectToolbox>
             </SubjectHeader>
             <DeleteButton onClick={() => deleteSubject(year, code)}>
-             ×
+              ×
             </DeleteButton>
           </SubjectWrapper>
         );

@@ -34,5 +34,8 @@ export const CREATE_CUSTOM_TIMETABLE = "CREATE_CUSTOM_TIMETABLE";
 export const VIEW_GENERATED_TIMETABLES = "VIEW_GENERATED_TIMETABLES";
 export const VIEW_CUSTOM_TIMETABLES = "VIEW_CUSTOM_TIMETABLES";
 
+// Global Theme Switching
+export const SET_THEME = "SET_THEME";
+
 // Timetable Viewer Events
 export const UPDATE_EVENTS = "UPDATE_EVENTS";

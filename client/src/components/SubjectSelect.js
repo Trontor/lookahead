@@ -35,7 +35,12 @@ const SubjectSelect = props => {
       getSubject(2019, "semester_2", "COMP30020", "Declarative Programming")
     );
     dispatch(
-      getSubject(2019, "semester_2", "SWEN20003", "Object Oriented Software Development")
+      getSubject(
+        2019,
+        "semester_2",
+        "SWEN20003",
+        "Object Oriented Software Development"
+      )
     );
     // dispatch(
     //   getSubject(2019, "semester_2", "COMP10001", "Foundations of Computing")
@@ -55,7 +60,7 @@ const SubjectSelect = props => {
     // );
     // dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
     // dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const studyPeriod = selectedStudyPeriod.value;
@@ -113,12 +118,13 @@ const SubjectSelect = props => {
   const customStyles = {
     menu: base => ({
       ...base,
-      zIndex: 100
+      zIndex: 100,
+      marginTop: "2px"
     }),
     option: (provided, state) => ({
       ...provided,
-      fontSize: "12px",
-      textAlign: "center",
+      fontSize: "13px",
+      // textAlign: "center",
       height: "100%"
     }),
     singleValue: (provided, state) => {
@@ -133,13 +139,16 @@ const SubjectSelect = props => {
     }
   };
   const SelectContainer = styled.div`
+    padding-top: 7px;
     display: flex;
     & > div {
       display: inline-block;
-      padding: 3px;
+      font-family: "Karla", sans-serif;
+      font-size: 13px;
     }
     .study-period-select {
       width: 150px;
+      margin-right: 5px;
     }
     .subject-select {
       width: 100%;

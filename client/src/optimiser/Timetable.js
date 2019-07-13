@@ -69,7 +69,7 @@ export default class Timetable {
     let longestRun = 0;
     // Group all clases by their 'day'
     const dayGroups = this.groupByArray(this.classList, "day");
-    for (const { key, values } of dayGroups) {
+    for (const { /*key,*/ values } of dayGroups) {
       const classes = values;
       const orderedClasses = classes.sort((a, b) => a.start - b.start);
       // Tracker variable for the last checked class, initial is start of da

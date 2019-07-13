@@ -10,24 +10,38 @@ import styled from "styled-components";
 import Optimisations from "./Optimisations";
 
 const Grid = styled.div`
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
   display: grid;
-  grid-template-columns: [sidebar] 35vw [viewer] auto;
+  grid-template-columns: [sidebar] minmax(30%, 250px) [viewer] auto;
   grid-template-rows: auto;
   @media screen and (max-width: 960px) {
     grid-template-columns: 100%;
   }
 `;
+
 const Sidebar = styled.div`
-  grid-row-start: sidebar;
-  min-width: 300px;
-  max-width: 480px;
+  grid-column-start: sidebar;
+  height: 100%;
+  min-width: 280px;
+  padding: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   @media screen and (max-width: 960px) {
-    grid-row-start: 1;
+    grid-column-start: 1;
     max-width: inherit;
+    margin: 0px;
+    box-shadow: none;
   }
 `;
+
 const Main = styled.div`
-  grid-row-start: viewer;
+  grid-column-start: viewer;
+  @media screen and (max-width: 960px) {
+    grid-column-start: 1;
+  }
 `;
 
 const OptimiseButtonWrapper = styled.div`
@@ -35,7 +49,8 @@ const OptimiseButtonWrapper = styled.div`
   justify-content: center;
 `;
 const OptimiseButton = styled.button`
-  background-color: #a6c !important;
+  /* background-color: #a6c !important; */
+  background-color: ${props => props.theme.main};
   color: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 0.84rem 2.14rem;
@@ -67,6 +82,12 @@ export default function Planner() {
   const keys = Object.keys(subjects);
   const allLoaded = !keys.some(key => subjects[key].data === null);
   const AUTO_OPTIMISE = true;
+  const showSidebar = true;
+
+  // const toggleSidebar = () => {
+  //   this.Sidebar.maxWidth = 0px,
+  //   this.Sidebar.minWidth = 0px
+  // }
 
   const invokeOptimisation = () => {
     const optimisationTypes = [];
@@ -113,23 +134,21 @@ export default function Planner() {
     // invokeOptimisation();
   }
   return (
-    <div>
-      <Grid>
-        <Sidebar>
-          <Notifications />
-          <SubjectSelect />
-          <Subjects />
-          <Optimisations />
-          <OptimiseButtonWrapper>
-            <OptimiseButton onClick={() => invokeOptimisation()}>
-              Optimise
-            </OptimiseButton>
-          </OptimiseButtonWrapper>
-        </Sidebar>
-        <Main>
-          <TimetableViewer />
-        </Main>
-      </Grid>
-    </div>
+    <Grid>
+      <Sidebar>
+        <Notifications />
+        <SubjectSelect />
+        <Subjects />
+        <Optimisations />
+        <OptimiseButtonWrapper>
+          <OptimiseButton onClick={() => invokeOptimisation()}>
+            Optimise
+          </OptimiseButton>
+        </OptimiseButtonWrapper>
+      </Sidebar>
+      <Main>
+        <TimetableViewer />
+      </Main>
+    </Grid>
   );
 }

@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
 import "./CustomCheckbox.scss";
-import TimePicker from "rc-time-picker";
 import "rc-time-picker/assets/index.css";
-import moment from "moment";
 import InputRange from "react-input-range";
 import "./InputRange.css";
-import DayAvoidButton from "./DavAvoidButton";
+import DayAvoidButton from "./DayAvoidButton";
 import {
   setTimeRange,
   setBreak,
@@ -19,11 +17,10 @@ import {
 } from "../redux/actions/optimisationsActions";
 
 const OptimisationsWrapper = styled.div`
-  margin: 5px;
-  background-color: white;
+  padding: 5px;
   font-size: 16px;
-  font-family: "Karla";
   text-align: center;
+  color: ${props => props.theme.text};
   margin: 0 auto;
   max-width: 500px;
 `;
@@ -54,7 +51,7 @@ const Optimisation = styled.div`
 `;
 
 const TimeOptimisation = styled.div`
-  margin: 20px;
+  margin: 45px;
 `;
 
 const Input = styled.input`
