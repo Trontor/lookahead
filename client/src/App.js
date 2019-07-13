@@ -24,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after{
     box-sizing: border-box;
   }
+  h1 {
+    font-size: 24px;
+    font-family: "Quicksand", sans-serif;
+  }
 `;
 
 export default () => {

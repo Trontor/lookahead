@@ -31,8 +31,6 @@ const OptimisationsContainer = styled.div`
 
 const Header = styled.h1`
   text-align: center;
-  font-size: 20px;
-  font-family: "Quicksand";
   line-height: 0.8em;
 `;
 

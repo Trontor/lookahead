@@ -3,36 +3,54 @@ import styled, { css } from "styled-components";
 
 const AvoidButton = styled.button`
   outline: 0;
-  border: 1px solid #4caf50; /* Green border */
+  width: 50px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  border: 1px solid ${props => props.theme.accent};
+  padding: 7px 0; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  margin-top: 5px;
+
+  &:hover {
+    
+  }
+
+  @media screen and (min-width: 960px) {
+    width: 40px;
+  }
+
   ${props => {
     if (props.activated) {
       return css`
-        background-color: #4caf50;
+        background-color: ${props => props.theme.accent};
         color: white;
       `;
     } else {
       return css`
-        background-color: white;
-        color: #4caf50;
+        background-color: ${props => props.theme.bodyBg};
+        color: ${props => props.theme.accent};
       `;
     }
   }}
-  padding: 5px 10px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+
   &:not(:last-child) {
     border-right: none; /* Prevent double borders */
   }
+
   &:first-child {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
+
   &:last-child {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
+
   &:hover {
-    background-color: #4caf50;
+    background-color: ${props => props.theme.accent};
     color: white;
   }
 `;

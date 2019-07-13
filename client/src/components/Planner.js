@@ -49,6 +49,7 @@ const OptimiseButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const OptimiseButton = styled.button`
   /* background-color: #a6c !important; */
   background-color: ${props => props.theme.main};
