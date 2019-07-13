@@ -75,6 +75,7 @@
   position: relative;
   /* transition: left 0.3s ease-out, width 0.3s ease-out; */
 }
+
 .input-range--disabled .input-range__track {
   background: #eeeeee;
 }

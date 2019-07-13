@@ -7,11 +7,12 @@ const AvoidButton = styled.button`
   text-transform: uppercase;
   font-family: inherit;
   font-weight: bold;
+  font-size: 10px;
   border: 1px solid ${props => props.theme.accent};
-  padding: 7px 0; /* Some padding */
+  padding: 6px 0; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
-  margin-top: 5px;
+  margin-bottom: 12px;
 
   &:hover {
     
@@ -29,7 +30,7 @@ const AvoidButton = styled.button`
       `;
     } else {
       return css`
-        background-color: ${props => props.theme.bodyBg};
+        background-color: ${props => props.theme.sidebarBg};
         color: ${props => props.theme.accent};
       `;
     }
@@ -42,6 +43,7 @@ const AvoidButton = styled.button`
   &:first-child {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    padding-left: 2px;
   }
 
   &:last-child {

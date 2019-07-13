@@ -19,21 +19,22 @@ const Grid = styled.div`
     top: 60px;
     bottom: 0;
     display: grid;
-    grid-template-columns: [sidebar] minmax(30%, 250px) [viewer] auto;
+    grid-template-columns: [sidebar] minmax(28%, 250px) [viewer] auto;
     grid-template-rows: auto;
   }
 `;
 
 const Sidebar = styled.div`
+  background-color: ${props => props.theme.sidebarBg};
   grid-column-start: 1;
   max-width: inherit;
   padding: 5px;
-  height: 100%;
+  padding-bottom: 20px;
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;
     min-width: 280px;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 2px -2px 5px -2px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -52,11 +53,13 @@ const OptimiseButtonWrapper = styled.div`
 
 const OptimiseButton = styled.button`
   /* background-color: #a6c !important; */
-  background-color: ${props => props.theme.main};
+  font-family: "Quicksand";
+  font-size: 15px;
+  /* background-color: ${props => props.theme.accent}; */
+  background-color: lightsalmon;
   color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 0.84rem 2.14rem;
-  font-size: 0.81rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  padding: 12px 25px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 0.375rem;

@@ -8,7 +8,7 @@ const TipWrapper = styled.div`
   border: 5px solid aliceblue; */
 `;
 const Tip = styled.div`
-  margin: 5px 10px;
+  margin: 10px 0px 5px 10px;
   padding-left: 10px;
   font-size: 12px;
   font-family: "Karla", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

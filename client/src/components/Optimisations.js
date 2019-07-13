@@ -34,9 +34,14 @@ const Header = styled.h1`
   line-height: 0.8em;
 `;
 
+const Subheader = styled.h2`
+  font-size: 14px;
+  line-height: 0.5em;
+`;
+
 const Optimisation = styled.div`
   text-align: ${({ center }) => (center ? "center" : "left")};
-  margin: 12px 0;
+  margin: 10px 0;
 
   .rc-time-picker-input {
     width: 75px;
@@ -45,26 +50,36 @@ const Optimisation = styled.div`
   ${({ child }) =>
     child &&
     css`
-      font-size: 14px;
-      input {
-        font-size: 12px;
-      }
-      margin-left: 30px;
-    `};
+    margin-top: -2px;
+    margin-left: 30px;
+
+    input {
+      font-size: 12px;
+      width: 28px;
+      margin-right: 5px;
+
+    }
+  `};
+`;
+
+const HourInputWrapper = styled.div`
+  display: block;
+  margin-top: 8px;
 `;
 
 const TimeOptimisation = styled.div`
   margin: 30px 40px 40px 40px;
+  max-width: 180px;
 `;
 
 const Input = styled.input`
-  padding: 0.5em;
-  margin: 0.5em;
-  color: ${props => props.inputColor || "palevioletred"};
-  border: 1px solid blueviolet;
+  padding: 5px 2px;
+  margin: 2px;
+  color: #555;
+  border: 1px solid #ddd;
   width: 20px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 2px;
 `;
 
 const ButtonGroup = styled.div`
@@ -142,8 +157,8 @@ function Optimisations() {
       <Header>Optimisations</Header>
       {/* <Break /> */}
       <OptimisationsContainer>
-        <Optimisation center style={{ marginBottom: "30px" }}>
-          Time Restriction:
+        <Optimisation center style={{ marginBottom: "60px" }}>
+          <Subheader>Time Restriction</Subheader>
           <TimeOptimisation>
             <InputRange
               formatLabel={formatRangeLabel}
@@ -157,8 +172,7 @@ function Optimisations() {
         </Optimisation>
 
         <Optimisation center>
-          Try to avoid classes on these days:
-          <br />
+         <Subheader>Try to avoid classes on these days:</Subheader>
           <ButtonGroup>
             {days.map((day, idx) => (
               <DayAvoidButton
@@ -226,12 +240,14 @@ function Optimisations() {
         {longestRunToggled && (
           <Optimisation child>
             Longest time without a break:
-            <Input
-              type="text"
-              onChange={longestRunChanged}
-              value={breakHours}
-            />{" "}
-            {breakHours ? `hour${breakHours !== 1 ? "s" : ""}` : ""}
+            <HourInputWrapper>
+              <Input
+                type="text"
+                onChange={longestRunChanged}
+                value={breakHours}
+              />
+              {breakHours ? `hour${breakHours !== 1 ? "s" : ""}` : ""}
+            </HourInputWrapper>
           </Optimisation>
         )}
       </OptimisationsContainer>

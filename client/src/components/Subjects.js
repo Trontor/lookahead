@@ -79,6 +79,7 @@ const SubjectCode = styled.div`
   color: inherit;
   opacity: 0.75;
   font-size: 12px;
+
   @media screen and (max-width: 600px) {
     /* margin: 0 auto;
     bottom: 0;
@@ -91,10 +92,11 @@ const SubjectCode = styled.div`
 `;
 const SubjectName = styled.div`
   font-weight: bold;
-  max-width: 18.5vw;
+  max-width: 18vw;
   font-size: 14px;
   margin-top: 2px;
   margin-bottom: 5px;
+
   @media screen and (max-width: 960px) {
     max-width: inherit;
     align-self: center;
@@ -109,6 +111,7 @@ const SubjectToolbox = styled.div`
   right: 30px;
   top: 24%;
   position: absolute;
+
   @media screen and (max-width: 600px) {
     position: relative;
     right: 0;

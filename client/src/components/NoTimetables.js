@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin: 20px auto;
 `;
 
 const Text = styled.span`
   vertical-align: middle;
   font-size: 24px;
-  font-family: Karla;
+  font-family: "Quicksand";
 `;
 export default function NoTimetables() {
   return (
