@@ -28,6 +28,7 @@ const Sidebar = styled.div`
   height: 100%;
   min-width: 280px;
   padding: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   @media screen and (max-width: 960px) {
     grid-column-start: 1;
     max-width: inherit;
