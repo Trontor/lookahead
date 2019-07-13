@@ -41,14 +41,14 @@ const AvoidButton = styled.button`
   }
 
   &:first-child {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding-left: 2px;
   }
 
   &:last-child {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   &:hover {
