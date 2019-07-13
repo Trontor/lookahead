@@ -19,7 +19,7 @@ const Grid = styled.div`
     top: 60px;
     bottom: 0;
     display: grid;
-    grid-template-columns: [sidebar] minmax(28%, 250px) [viewer] auto;
+    grid-template-columns: [sidebar] minmax(30%, 220px) [viewer] auto;
     grid-template-rows: auto;
   }
 `;
@@ -28,7 +28,7 @@ const Sidebar = styled.div`
   background-color: ${props => props.theme.sidebarBg};
   grid-column-start: 1;
   max-width: inherit;
-  padding: 5px;
+  padding: 10px;
   padding-bottom: 20px;
 
   @media screen and (min-width: 960px) {

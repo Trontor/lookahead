@@ -7,9 +7,8 @@ const SubjectsWrapper = styled.div`
   /* margin: 5px; */
 `;
 const SubjectWrapper = styled.div`
-  color: ${props => props.textColor};
+  /* color: ${props => props.textColor}; */
   position: relative;
-  font-family: "Karla", sans-serif;
 `;
 
 const loadingCSS = css`
@@ -53,96 +52,113 @@ const loadingCSS = css`
   }
 `;
 const SubjectHeader = styled.div`
-  /* display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row; */
-  padding: 12px 12px 13px;
-  min-height: 50px;
-  border-radius: 1px;
-  margin: 5px 0;
-  background-color: ${props => props.color};
-  @media screen and (max-width: 600px) {
-    padding: 10px 0 12px 0;
+  padding: 10px 0 12px 0;
+  background-color: ${props => props.theme.cardBg};
+  border-top: 8px solid ${props => props.color};
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
+  & div {
+    text-align: center;
+    flex: 100%;
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: 12px 12px 13px;
+    min-height: 50px;
+    /* border-radius: 1px; */
+    margin: 8px 0;
+    /* background-color: ${props => props.color}; */
+    border-left: 8px solid ${props => props.color};
+    border-top: 0;
     & div {
-      text-align: center;
-      flex: 100%;
+      text-align: left;
     }
   }
   ${({ loading }) => loading && loadingCSS}
 `;
 
 const SubjectCode = styled.div`
-  /* align-self: center; */
-  /* bottom: 10px; */
+  text-align: center;
+  position: relative;
   font-weight: bold;
-  color: inherit;
   opacity: 0.75;
-  font-size: 12px;
+  font-size: 13px;
 
-  @media screen and (max-width: 600px) {
-    /* margin: 0 auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 2px; */
-    text-align: center;
-    position: relative;
+  @media screen and (min-width: 600px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 960px) {
+    text-align: left;
+    font-size: 11px;
   }
 `;
 const SubjectName = styled.div`
-  font-weight: bold;
-  max-width: 18vw;
+  max-width: inherit;
+  align-self: center;
+  margin-bottom: 0;
   font-size: 14px;
-  margin-top: 2px;
-  margin-bottom: 5px;
+  font-weight: bold;
 
-  @media screen and (max-width: 960px) {
-    max-width: inherit;
-    align-self: center;
-    margin-bottom: 0;
+  @media screen and (min-width: 600px) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: 960px) {
+    max-width: 14.5vw;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  @media screen and (min-width: 1100px){
+    max-width: 18vw;
   }
 `;
 
 const SubjectToolbox = styled.div`
-  font-weight: bold;
-  vertical-align: middle;
-  color: ${({ iconColor }) => iconColor};
-  right: 30px;
-  top: 24%;
-  position: absolute;
+  position: relative;
+  right: 0;
+  top: 0;
+  color: ${props => props.color};
 
-  @media screen and (max-width: 600px) {
-    position: relative;
-    right: 0;
-    top: 0;
+  @media screen and (min-width: 768px) {
+    font-weight: bold;
+    vertical-align: middle;
+    /* color: ${({ iconColor }) => iconColor}; */
+    right: 30px;
+    top: 35%;
+    position: absolute;
   }
 `;
 
 const ToolboxButton = styled.button`
   cursor: pointer;
-  font-size: 16px;
-  padding: 5px;
-  margin: 3px 4px 0 4px;
+  font-size: 15px;
+  padding: 0 10px;
+  /* margin: 3px 4px 0 4px; */
   color: inherit;
   background-color: transparent;
   border: none;
+  opacity: 0.7;
 `;
 
 const DeleteButton = styled.button`
   cursor: pointer;
-  font-size: 16px;
-  position: absolute;
-  padding: 2px;
-  top: 5px;
-  right: 8px;
+  font-size: 15px;
   color: inherit;
   background-color: transparent;
   border: none;
-  opacity: 0.75;
-  @media screen and (max-width: 600px) {
-    top: 7px;
-    right: 10px;
+  opacity: 0.6;
+  top: 10px;
+  right: 5px;
+  position: absolute;
+
+  @media screen and (min-width: 600px) {
+    padding: 2px;
+    top: 4px;
+    right: 7px;
   }
 `;
 
