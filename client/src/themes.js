@@ -1,7 +1,7 @@
 const regularTheme = {
   headerBg: "#29C7DB",
-  bodyBg: "#fcfcfc",
-  sidebarBg: "#f9f9f9",
+  bodyBg: "#fbfbfb",
+  sidebarBg: "#f8f8f8",
   cardBg: "#fefefe",
   main: "#4B55A5",
   text: "#3f3844",
