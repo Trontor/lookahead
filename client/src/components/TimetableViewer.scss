@@ -13,7 +13,7 @@ $opacity: 0.75;
 }
 
 .lookahead-event-wrapper {
-  font-family: "Roboto Condensed", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 2px;
   border: 0;
   padding: 2px;
@@ -24,11 +24,12 @@ $opacity: 0.75;
   display: flex;
   flex-direction: column;
   font-size: 8px;
+
   &:hover {
     color: black;
   }
   .fc-title {
-    font-weight: 500;
+    font-weight: bold;
   }
   .fc-desc {
     margin-top: auto;
@@ -61,8 +62,9 @@ $opacity: 0.75;
 
 @media (max-width: 500px) {
   .lookahead-event-wrapper {
-    font-size: 8px;
+    font-size: 7.5px;
     margin-right: -2px;
+
     .fc-title {
       font-size: 9px;
       padding-top: 5px;
@@ -80,12 +82,15 @@ $opacity: 0.75;
   .lookahead-event-wrapper {
     font-size: 8px;
     margin-right: -3px;
+
     .fc-time {
       font-size: 10px;
     }
+
     .fc-type {
       top: 0px;
     }
+
     .fc-title {
       font-size: 13px;
       line-height: 1em;
@@ -131,6 +136,7 @@ $opacity: 0.75;
   .lookahead-event-wrapper {
     font-size: 10px;
     margin-right: -10px;
+
     .fc-time {
       font-size: 12px;
     }
