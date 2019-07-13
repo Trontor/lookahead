@@ -32,6 +32,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 20px;
     font-family: "Quicksand", sans-serif;
   }
+  /* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */
 `;
 
 export default () => {
