@@ -104,6 +104,7 @@ const SubjectCode = styled.div`
     font-size: 11px;
   }
 `;
+
 const SubjectName = styled.div`
   max-width: inherit;
   align-self: center;
@@ -116,15 +117,19 @@ const SubjectName = styled.div`
     font-size: 15px;
   }
 
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
   @media screen and (min-width: 960px) {
-    max-width: 13.75vw;
+    max-width: 14vw;
     font-size: 13px;
     margin-top: 2px;
     margin-bottom: 5px;
   }
 
-  @media screen and (min-width: 1100px){
-    max-width: 18vw;
+  @media screen and (min-width: 1024px){
+    max-width: 16vw;
   }
 `;
 
@@ -135,24 +140,36 @@ const SubjectToolbox = styled.div`
   color: ${props => props.color};
 
   @media screen and (min-width: 768px) {
+    right: 30px;
+    top: 42%;
+    position: absolute;
+  }
+
+  @media screen and (min-width: 960px) {
     font-weight: bold;
     vertical-align: middle;
     /* color: ${({ iconColor }) => iconColor}; */
-    right: 30px;
     top: 35%;
-    position: absolute;
   }
 `;
 
 const ToolboxButton = styled.button`
   cursor: pointer;
-  font-size: 15px;
-  padding: 0 10px;
-  /* margin: 3px 4px 0 4px; */
+  font-size: 16px;
+  padding: 0 12px;
   color: inherit;
   background-color: transparent;
   border: none;
   opacity: 0.7;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 10px;
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: 0 7px;
+    font-size: 15px;
+  }
 `;
 
 const DeleteButton = styled.button`
@@ -163,13 +180,17 @@ const DeleteButton = styled.button`
   border: none;
   opacity: 0.6;
   top: 10px;
-  right: 5px;
+  right: 4px;
   position: absolute;
 
-  @media screen and (min-width: 600px) {
-    padding: 2px;
-    top: 4px;
-    right: 7px;
+  /* @media screen and (min-width: 600px) {
+    top: 8px;
+    right: 5px;
+  } */
+
+  @media screen and (min-width: 960px) {
+    top: 5px;
+    right: 4px;
   }
 `;
 

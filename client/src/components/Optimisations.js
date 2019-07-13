@@ -21,7 +21,6 @@ const OptimisationsWrapper = styled.div`
   color: ${props => props.theme.text};
   margin: 0 auto;
   padding: 5px;
-  /* max-width: 500px; */
 `;
 
 const OptimisationsContainer = styled.div`
@@ -32,10 +31,11 @@ const OptimisationsContainer = styled.div`
 const Header = styled.h1`
   text-align: center;
   line-height: 0.8em;
+  margin: 5px;
 `;
 
 const Subheader = styled.h2`
-  font-size: 14px;
+  font-size: 13px;
   line-height: 0.5em;
 `;
 
@@ -158,7 +158,7 @@ function Optimisations() {
       <Header>Optimisations</Header>
       {/* <Break /> */}
       <OptimisationsContainer>
-        <Optimisation center style={{ marginBottom: "60px" }}>
+        <Optimisation center style={{ marginBottom: "50px" }}>
           <Subheader>Time Restriction</Subheader>
           <TimeOptimisation>
             <InputRange
