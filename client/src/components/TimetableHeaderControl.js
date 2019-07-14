@@ -11,12 +11,14 @@ const HeaderWrapper = styled.div`
   font-family: "Karla", sans-serif;
   text-align: center;
   position: relative;
-  margin: 10px 0;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px;
   :focus {
     outline: none;
   }
 `;
-
+const TimetableCount = styled.span``;
 const NavigationButton = styled.button`
   position: absolute;
   cursor: pointer;
@@ -61,7 +63,9 @@ export default function TimetableHeaderControl(props) {
       >
         <i className="fa fa-arrow-left" />
       </NavigationButton>
-      {current} / {total}
+      <TimetableCount>
+        {current} / {total}
+      </TimetableCount>
       <NavigationButton onClick={() => dispatch(nextTimetable())} right>
         <i className="fa fa-arrow-right" />
       </NavigationButton>
