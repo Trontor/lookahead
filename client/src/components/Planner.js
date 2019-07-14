@@ -12,6 +12,7 @@ import Optimisations from "./Optimisations";
 const Grid = styled.div`
   grid-template-columns: 100%;
   height: calc(100% - 60px);
+
   @media screen and (min-width: 960px) {
     display: grid;
     grid-template-columns: [sidebar] minmax(20%, 380px) [viewer] auto;
@@ -36,6 +37,7 @@ const Sidebar = styled.div`
 
 const Main = styled.div`
   grid-column-start: 1;
+  padding-top: 10px;
 
   @media screen and (min-width: 960px) {
     grid-column-start: viewer;
@@ -53,7 +55,7 @@ const OptimiseButton = styled.button`
   font-family: "Quicksand";
   font-size: 15px;
   /* background-color: ${props => props.theme.accent}; */
-  background-color:  ${props => props.theme.main};
+  background-color: ${props => props.theme.main};
   color: #fff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   padding: 12px 25px;

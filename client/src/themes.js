@@ -15,13 +15,13 @@ const darkTheme = {
   dragDropRegularEventOpacity: 0.15,
   dragDropEventBorder: "2px dotted orange",
   dragDropEventBg: "purple",
-  headerBg: "#3c3c3c",
-  bodyBg: "#3a3a3a",
-  sidebarBg: "#3f3f3f",
-  cardBg: "#505050",
-  main: "#555555",
-  accent: "salmon",
+  headerBg: "#3A3A46",
+  bodyBg: "#363642",
+  sidebarBg: "#32323C",
+  cardBg: "#3E3E4A",
+  main: "#403F4C",
   text: "#f5f5f5",
+  accent: "lightsalmon",
 };
 
 export { regularTheme, darkTheme };
