@@ -12,23 +12,24 @@ $opacity: 0.75;
 }
 
 .lookahead-event-wrapper {
-  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 2px;
   border: 0;
   padding: 2px;
-  color: rgb(0, 0, 0);
+  color: #222224;
   // margin: -2px;
   margin-left: -2px;
   margin-right: -5px;
   display: flex;
   flex-direction: column;
   font-size: 8px;
+  font-weight: 400;
 
   &:hover {
     color: black;
   }
   .fc-title {
-    font-weight: 300;
+    font-weight: 500;
   }
   .fc-desc {
     margin-top: auto;
