@@ -5,6 +5,22 @@ const TipWrapper = styled.div`
   margin: 10px 5px;
 `;
 
+const TipHeader = styled.h3`
+  margin-left: 7px;
+  margin-bottom: 10px;
+
+  i {
+    color: gold;
+    padding-left: 2px;
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-left: 0;
+    margin-top: -5px;
+  }
+
+`;
+
 const Tip = styled.div`
   margin: 7px;
   padding: 1px 7px;
@@ -62,11 +78,15 @@ const Tip = styled.div`
 export default function TimetableTips() {
   return (
     <TipWrapper>
+      <TipHeader>
+        Tips{"  "}
+        <i className="fa fa-lightbulb" aria-hidden="true"/>
+      </TipHeader>
       <Tip desktop>
         Use your arrow keys ← → to quickly navigate between the timetables.
       </Tip>
       <Tip desktop>
-        Click and drag classes around to customise your timetable (mandatory{"  "}
+        Click and drag classes around to customise your timetable (Mandatory{"  "}
          <i className="fa fa-lock" /> classes can't be changed).
       </Tip>
       <Tip mobile>

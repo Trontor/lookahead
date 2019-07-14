@@ -12,11 +12,17 @@ const HeaderWrapper = styled.div`
   position: relative;
   height: 30px;
   line-height: 30px;
-  margin-bottom: 7px;
+  margin: 7px 10px;
+
   :focus {
     outline: none;
   }
+
+  @media screen and (min-width: 960px){
+    margin: 0 0 10px 0;
+  }
 `;
+
 const TimetableCount = styled.span`
   font-weight: bold;
 `;
@@ -43,6 +49,7 @@ const NavigationButton = styled.button`
     border-color: ${props => props.theme.secondaryDark};
   }
 `;
+
 export default function TimetableHeaderControl(props) {
   const { current, total } = props;
   const dispatch = useDispatch();
