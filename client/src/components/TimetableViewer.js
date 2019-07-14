@@ -68,8 +68,11 @@ export default function TimetableViewer() {
     return <NoTimetables />;
   }
   const events = timetable.allEvents;
-
-  let headerText = `${currentIndex + 1} of ${timetables.length}`;
+  const numberWithCommas = x =>
+    x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  let headerText = `${currentIndex + 1} of ${numberWithCommas(
+    timetables.length
+  )}`;
   if (currentView === "custom") {
     headerText = customTimetables[currentCustomIndex].name;
   }
