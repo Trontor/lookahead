@@ -115,6 +115,14 @@ export default function Planner() {
         data: breakHours === "" ? 24 : breakHours
       });
     }
+    if (avoidDays.length !== 0) {
+      for (const index of avoidDays) {
+        optimisationTypes.push({
+          type: OptimisationTypes.AVOID_DAYS,
+          data: index
+        });
+      }
+    }
     if (cramClasses) {
       if (skipLectures) {
         optimisationTypes.push({
@@ -125,8 +133,6 @@ export default function Planner() {
           type: OptimisationTypes.CRAM_CLASSES
         });
       }
-    }
-    if (avoidDays.length !== 0) {
     }
     const restrictions = {
       earliestStart: min,

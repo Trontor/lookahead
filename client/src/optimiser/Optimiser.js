@@ -97,6 +97,8 @@ class Optimiser {
     // Convert each combination to a timetable
     const timetables = [];
     overallCombinations.forEach(comb => timetables.push(new Timetable(comb)));
+    console.log("Applying the following optimisations:", optimisations);
+
     // Sort timetables
     timetables.sort((a, b) =>
       optimisations.reduce(

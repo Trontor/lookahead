@@ -13,18 +13,12 @@ import {
   generateBackgroundEvents,
   handleEventDrop
 } from "./TimetableViewerFunctions";
-import {
-  nextTimetable,
-  previousTimetable,
-  createCustomTimetable,
-  changeToCustomView,
-  changeToGeneratedView
-} from "../redux/actions/optimiserActions";
 import { updateEvents } from "../redux/actions/timetableActions";
 import Optimisations from "./Optimisations";
 import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
+import CustomTimetableControl from "./CustomTimetableControl";
 
 export default function TimetableViewer() {
   const {
@@ -69,18 +63,16 @@ export default function TimetableViewer() {
   // const newCustomTimetable = () => {
   //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
   // };
-  const viewCustomTimetable = ({ id }) => {
-    dispatch(changeToCustomView(id));
-  };
-  const viewGenerated = () => {
-    dispatch(changeToGeneratedView());
-  };
+
   if (!timetables) {
     return <NoTimetables />;
   }
   const events = timetable.allEvents;
-
-  let headerText = `${currentIndex + 1} of ${timetables.length}`;
+  const numberWithCommas = x =>
+    x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  let headerText = `${currentIndex + 1} of ${numberWithCommas(
+    timetables.length
+  )}`;
   if (currentView === "custom") {
     headerText = customTimetables[currentCustomIndex].name;
   }
@@ -120,12 +112,7 @@ export default function TimetableViewer() {
       )} */}
       <TimetableTips />
       <TimetableHeaderControl header={headerText} />
-      <button onClick={() => viewGenerated()}>View Generated</button>
-      {customTimetables.map(custom => (
-        <button key={custom.id} onClick={() => viewCustomTimetable(custom)}>
-          {custom.name}
-        </button>
-      ))}
+      <CustomTimetableControl />
       <FullCalendar
         defaultView="timeGridWeek"
         height="parent"
