@@ -8,35 +8,39 @@ import {
 import ArrowKeysReact from "arrow-keys-react";
 
 const HeaderWrapper = styled.div`
-  font-family: "Karla", sans-serif;
   text-align: center;
   position: relative;
   height: 30px;
   line-height: 30px;
-  margin: 5px;
+  margin-bottom: 7px;
   :focus {
     outline: none;
   }
 `;
-const TimetableCount = styled.span``;
+const TimetableCount = styled.span`
+  font-weight: bold;
+`;
+
 const NavigationButton = styled.button`
   position: absolute;
   cursor: pointer;
   max-width: 75px;
-  border: 1px solid rgb(0, 123, 255);
-  border-radius: 2px;
-  color: rgb(0, 123, 255);
-  background-color: white;
-  padding: 5px;
+  border-radius: 3px;
+  color: #f9f9f9;
+  background-color: ${props => props.theme.secondary};
+  border-color: ${props => props.theme.secondary};
+  padding: 6px 5px;
   width: 100%;
   left: ${({ left }) => (left ? 0 : "auto")};
   right: ${({ right }) => (right ? 0 : "auto")};
+
   :disabled {
     display: none;
   }
+
   :hover {
-    background-color: rgb(0, 123, 255);
-    color: white;
+    background-color: ${props => props.theme.secondaryDark};
+    border-color: ${props => props.theme.secondaryDark};
   }
 `;
 export default function TimetableHeaderControl(props) {
@@ -64,7 +68,7 @@ export default function TimetableHeaderControl(props) {
         <i className="fa fa-arrow-left" />
       </NavigationButton>
       <TimetableCount>
-        {current} / {total}
+        {current} of {total}
       </TimetableCount>
       <NavigationButton onClick={() => dispatch(nextTimetable())} right>
         <i className="fa fa-arrow-right" />

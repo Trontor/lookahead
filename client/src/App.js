@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     background-color: ${props => props.theme.bodyBg};
-    font-family: "Karla", sans-serif;
+    font-family: "Karla", Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: ${props => props.theme.text};
   }

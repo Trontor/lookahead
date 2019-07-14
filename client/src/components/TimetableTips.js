@@ -67,7 +67,7 @@ export default function TimetableTips() {
       </Tip>
       <Tip desktop>
         Click and drag classes around to customise your timetable (mandatory{"  "}
-         <i className="fa fa-lock" /> classes cant be changed).
+         <i className="fa fa-lock" /> classes can't be changed).
       </Tip>
       <Tip mobile>
         Tap (hold) and drag classes around to customise your timetable.

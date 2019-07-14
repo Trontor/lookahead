@@ -69,12 +69,14 @@ const OptimiseButton = styled.button`
   white-space: normal;
   word-wrap: break-word;
 
-  &:active {
+  /* &:active {
     background-color: #739 !important;
-  }
+  } */
+
   &:hover,
   &:focus {
     outline: none;
+    background-color: ${props => props.theme.mainDark}
   }
 `;
 
