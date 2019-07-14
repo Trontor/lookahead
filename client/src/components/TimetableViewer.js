@@ -13,17 +13,12 @@ import {
   generateBackgroundEvents,
   handleEventDrop
 } from "./TimetableViewerFunctions";
-import {
-  nextTimetable,
-  previousTimetable,
-  createCustomTimetable,
-  changeToCustomView
-} from "../redux/actions/optimiserActions";
 import { updateEvents } from "../redux/actions/timetableActions";
 import Optimisations from "./Optimisations";
 import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
+import CustomTimetableControl from "./CustomTimetableControl";
 
 export default function TimetableViewer() {
   const {
@@ -36,7 +31,6 @@ export default function TimetableViewer() {
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   const timetable = useSelector(state => state.timetable);
-
   useEffect(() => {
     if (!timetables) {
       return;
@@ -45,8 +39,8 @@ export default function TimetableViewer() {
 
     // let headerText = `Timetable ${currentIndex + 1}/${timetables.length}`;
     if (currentView === "custom") {
-      const { id, name, timetable } = customTimetables[currentCustomIndex];
-      currentTimetable = timetable;
+      // const { id, name, timetable } = customTimetables[currentCustomIndex];
+      currentTimetable = customTimetables[currentCustomIndex].timetable;
       // headerText = `Custom Timetable ${id}: ${name}`;
     }
     console.log("Current Timetable:", currentTimetable);
@@ -57,17 +51,32 @@ export default function TimetableViewer() {
     const events = currentTimetable.classList.map(cls => classToEvent(cls));
     events.push(...generateBackgroundEvents());
     dispatch(updateEvents(events));
-  }, [timetables]);
+  }, [
+    currentCustomIndex,
+    currentIndex,
+    currentView,
+    customTimetables,
+    dispatch,
+    subjects,
+    timetables
+  ]);
   // const newCustomTimetable = () => {
   //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
   // };
-  // const viewCustomTimetable = ({ id }) => {
-  //   dispatch(changeToCustomView(id));
-  // };
+
   if (!timetables) {
     return <NoTimetables />;
   }
   const events = timetable.allEvents;
+  const numberWithCommas = x =>
+    x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  let headerText = `${currentIndex + 1} of ${numberWithCommas(
+    timetables.length
+  )}`;
+  if (currentView === "custom") {
+    headerText = customTimetables[currentCustomIndex].name;
+  }
+
   return (
     <>
       {/* <div>
@@ -102,10 +111,8 @@ export default function TimetableViewer() {
         </div>
       )} */}
       <TimetableTips />
-      <TimetableHeaderControl
-        current={currentIndex + 1}
-        total={timetables.length}
-      />
+      <TimetableHeaderControl header={headerText} />
+      <CustomTimetableControl />
       <FullCalendar
         defaultView="timeGridWeek"
         height="parent"

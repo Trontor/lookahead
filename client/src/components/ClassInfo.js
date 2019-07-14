@@ -4,7 +4,7 @@ export default function ClassInfo(props) {
   if (!props.data) {
     return "No data";
   }
-  const { _mandatoryClasses, _regularClasses, _streamContainers } = props.data;
+  // const { _mandatoryClasses, _regularClasses, _streamContainers } = props.data;
 
   return (
     <ul>

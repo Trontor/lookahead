@@ -27,6 +27,8 @@ const SubjectSelect = props => {
   const [inputValue, setInputValue] = useState("test");
   // Uncomment below to load subjects at the starts
   useEffect(() => {
+    if (!(!process.env.NODE_ENV || process.env.NODE_ENV === "development"))
+      return;
     dispatch(getSubject(2019, "semester_2", "COMP30022", "IT Project"));
     dispatch(
       getSubject(2019, "semester_2", "COMP30026", "Models of Computation")
@@ -35,7 +37,12 @@ const SubjectSelect = props => {
       getSubject(2019, "semester_2", "COMP30020", "Declarative Programming")
     );
     dispatch(
-      getSubject(2019, "semester_2", "SWEN20003", "Object Oriented Software Development")
+      getSubject(
+        2019,
+        "semester_2",
+        "SWEN20003",
+        "Object Oriented Software Development"
+      )
     );
     // dispatch(
     //   getSubject(2019, "semester_2", "COMP10001", "Foundations of Computing")
@@ -55,7 +62,7 @@ const SubjectSelect = props => {
     // );
     // dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
     // dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const studyPeriod = selectedStudyPeriod.value;
@@ -113,12 +120,13 @@ const SubjectSelect = props => {
   const customStyles = {
     menu: base => ({
       ...base,
-      zIndex: 100
+      zIndex: 100,
+      marginTop: "2px"
     }),
     option: (provided, state) => ({
       ...provided,
-      fontSize: "12px",
-      textAlign: "center",
+      fontSize: "13px",
+      // textAlign: "center",
       height: "100%"
     }),
     singleValue: (provided, state) => {
@@ -136,11 +144,14 @@ const SubjectSelect = props => {
     display: flex;
     & > div {
       display: inline-block;
-      padding: 3px;
+      font-size: 11px;
     }
+
     .study-period-select {
-      width: 150px;
+      width: 140px;
+      margin-right: 5px;
     }
+
     .subject-select {
       width: 100%;
     }

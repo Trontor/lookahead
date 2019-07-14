@@ -10,38 +10,57 @@ import styled from "styled-components";
 import Optimisations from "./Optimisations";
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: [sidebar] 35vw [viewer] auto;
-  grid-template-rows: auto;
-  @media screen and (max-width: 960px) {
-    grid-template-columns: 100%;
+  grid-template-columns: 100%;
+  height: calc(100% - 60px);
+
+  @media screen and (min-width: 960px) {
+    display: grid;
+    grid-template-columns: [sidebar] minmax(20%, 380px) [viewer] auto;
+    grid-template-rows: auto;
   }
 `;
+
 const Sidebar = styled.div`
-  grid-row-start: sidebar;
-  min-width: 300px;
-  max-width: 480px;
-  @media screen and (max-width: 960px) {
-    grid-row-start: 1;
-    max-width: inherit;
+  background-color: ${props => props.theme.sidebarBg};
+  grid-column-start: 1;
+  max-width: inherit;
+  padding: 10px;
+  padding-bottom: 20px;
+  z-index: 1;
+
+  @media screen and (min-width: 960px) {
+    grid-column-start: sidebar;
+    box-shadow: 2px -2px 1px -2px rgba(0, 0, 0, 0.15);
+    /* border-right: solid 1px #eee; */
   }
 `;
+
 const Main = styled.div`
-  grid-row-start: viewer;
+  grid-column-start: 1;
+  padding-top: 10px;
+
+  @media screen and (min-width: 960px) {
+    grid-column-start: viewer;
+    padding: 10px;
+  }
 `;
 
 const OptimiseButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const OptimiseButton = styled.button`
-  background-color: #a6c !important;
+  /* background-color: #a6c !important; */
+  font-family: "Quicksand";
+  font-size: 15px;
+  /* background-color: ${props => props.theme.accent}; */
+  background-color: ${props => props.theme.main};
   color: #fff;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 0.84rem 2.14rem;
-  font-size: 0.81rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  padding: 12px 25px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 0.375rem;
   border: 0;
   border-radius: 0.125rem;
@@ -50,15 +69,18 @@ const OptimiseButton = styled.button`
   white-space: normal;
   word-wrap: break-word;
 
-  &:active {
+  /* &:active {
     background-color: #739 !important;
-  }
+  } */
+
   &:hover,
   &:focus {
     outline: none;
+    background-color: ${props => props.theme.mainDark}
   }
 `;
 
+let hasAutoOptimised = false;
 export default function Planner() {
   const subjects = useSelector(state => state.subjects);
   const optimisations = useSelector(state => state.optimisations);
@@ -67,6 +89,12 @@ export default function Planner() {
   const keys = Object.keys(subjects);
   const allLoaded = !keys.some(key => subjects[key].data === null);
   const AUTO_OPTIMISE = true;
+  const showSidebar = true;
+
+  // const toggleSidebar = () => {
+  //   this.Sidebar.maxWidth = 0px,
+  //   this.Sidebar.minWidth = 0px
+  // }
 
   const invokeOptimisation = () => {
     const optimisationTypes = [];
@@ -87,6 +115,14 @@ export default function Planner() {
         data: breakHours === "" ? 24 : breakHours
       });
     }
+    if (avoidDays.length !== 0) {
+      for (const index of avoidDays) {
+        optimisationTypes.push({
+          type: OptimisationTypes.AVOID_DAYS,
+          data: index
+        });
+      }
+    }
     if (cramClasses) {
       if (skipLectures) {
         optimisationTypes.push({
@@ -98,8 +134,6 @@ export default function Planner() {
         });
       }
     }
-    if (avoidDays.length !== 0) {
-    }
     const restrictions = {
       earliestStart: min,
       latestFinish: max
@@ -107,29 +141,33 @@ export default function Planner() {
     dispatch(optimise(subjects, optimisationTypes, restrictions));
   };
 
-  if (AUTO_OPTIMISE && allLoaded && keys.length > 0) {
+  if (
+    (!process.env.NODE_ENV || process.env.NODE_ENV === "development") &&
+    allLoaded &&
+    keys.length > 0 &&
+    !hasAutoOptimised
+  ) {
     console.log("All loaded!");
     console.log(subjects);
-    // invokeOptimisation();
+    invokeOptimisation();
+    hasAutoOptimised = true;
   }
   return (
-    <div>
-      <Grid>
-        <Sidebar>
-          <Notifications />
-          <SubjectSelect />
-          <Subjects />
-          <Optimisations />
-          <OptimiseButtonWrapper>
-            <OptimiseButton onClick={() => invokeOptimisation()}>
-              Optimise
-            </OptimiseButton>
-          </OptimiseButtonWrapper>
-        </Sidebar>
-        <Main>
-          <TimetableViewer />
-        </Main>
-      </Grid>
-    </div>
+    <Grid>
+      <Sidebar>
+        <Notifications />
+        <SubjectSelect />
+        <Subjects />
+        <Optimisations />
+        <OptimiseButtonWrapper>
+          <OptimiseButton onClick={() => invokeOptimisation()}>
+            Optimise
+          </OptimiseButton>
+        </OptimiseButtonWrapper>
+      </Sidebar>
+      <Main>
+        <TimetableViewer />
+      </Main>
+    </Grid>
   );
 }

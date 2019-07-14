@@ -19,6 +19,10 @@ export const getRegularEvents = () => {
   return store.getState().timetable.regularEvents;
 };
 
+const getCurrentTheme = () => {
+  return store.getState().theme;
+};
+
 export const getCurrentCustomTimetable = () => {
   const { customTimetables, currentCustomIndex } = store.getState().optimiser;
   const timetable = customTimetables[currentCustomIndex];
@@ -78,7 +82,6 @@ export const classToEvent = cls => {
   };
 };
 
-const REGULAR_EVENTS_OPACITY = 0.15;
 let currentShownBackgroundEvents = [];
 /**
  * Handles when an event has started to be dragged
@@ -88,6 +91,7 @@ let currentShownBackgroundEvents = [];
  * @param {Event} currentEvent
  */
 export const handleEventDragStart = (allEvents, currentEvent) => {
+  let REGULAR_EVENTS_OPACITY = getCurrentTheme().dragDropRegularEventOpacity;
   console.log(getBackgroundEvents());
   // Get all foreground events
   const regularEvents = getRegularEvents();
@@ -173,7 +177,7 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   const {
     start,
     title,
-    extendedProps: { classCode, type, streamNumber, code, codes }
+    extendedProps: { classCode, type, /*streamNumber,*/ code, codes }
   } = newEvent;
   const subjects = getSubjects();
   // Extract all regular classes for this subject
@@ -261,14 +265,17 @@ const moveRegularClass = (subject, oldCode, newCode) => {
   store.dispatch(updateCustomTimetable(id, name, newTimetable));
 };
 
-const BACKGROUND_EVENT_COLOR = "orange";
 const showBackgroundEvent = event => {
+  let BACKGROUND_EVENT_COLOR = getCurrentTheme().dragDropEventBg;
+  let BACKGROUND_EVENT_BORDER = getCurrentTheme().dragDropEventBorder;
   const className = event.className;
   currentShownBackgroundEvents.push(event);
   if (event.type === "Stream") {
     $(`.${className}`).append("Stream #" + event.streamNumber);
   }
+  $(`.${className}`).css("margin", "2.5px");
   $(`.${className}`).css("background-color", BACKGROUND_EVENT_COLOR);
+  $(`.${className}`).css("border", BACKGROUND_EVENT_BORDER);
   //   $(`.${className}`).removeClass("hide");
   //   $(`.${className}`).addClass("show");
 };
@@ -278,6 +285,7 @@ const hideBackgroundEvent = event => {
   // Removes all child elements, clearing out rendered text like "Stream #x"
   $(`.${className}`).empty();
   $(`.${className}`).css("background-color", "transparent");
+  $(`.${className}`).css("border", "none");
 };
 
 const showEventIndicator = event => {

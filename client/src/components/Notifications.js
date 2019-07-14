@@ -4,13 +4,12 @@ import Markdown from "markdown-to-jsx";
 
 const NotificationWrapper = styled.div`
   position: relative;
-  background-color: rgb(0, 200, 81);
+  background-color: #4CAF50;
   border-radius: 2px;
-  margin: 7.5px;
   color: white;
-  font-family: "Montserrat", sans-serif;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  padding: 10px 10px;
+  font-family: "Karla", sans-serif;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
   a {
     color: inherit;
   }
