@@ -12,45 +12,55 @@ const SubjectWrapper = styled.div`
 `;
 
 const loadingCSS = css`
-  border-width: 2px;
-  border-radius: 0px;
-  background: white;
-  position: relative;
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    border-top: none!important;
+
+  @media screen and (min-width: 960px) {
+    border-left: none!important;
   }
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(-1 * 2px);
-    left: calc(-1 * 2px);
-    height: calc(100% + 2px * 2);
-    width: calc(100% + 2px * 2);
-    background: linear-gradient(
-      60deg,
-      #f79533,
-      #f37055,
-      #ef4e7b,
-      #a166ab,
-      #5073b8,
-      #1098ad,
-      #07b39b,
-      #6fba82
-    );
-    border-radius: calc(2 * var(2px));
-    z-index: -1;
-    animation: animatedgradient 3s ease alternate infinite;
-    background-size: 300% 300%;
-  }
-`;
+`
+;
+
+// const loadingCSS = css`
+//   border-width: 2px;
+//   border-radius: 0px;
+//   /* background: white; */
+//   position: relative;
+//   @keyframes animatedgradient {
+//     0% {
+//       background-position: 0% 50%;
+//     }
+//     50% {
+//       background-position: 100% 50%;
+//     }
+//     100% {
+//       background-position: 0% 50%;
+//     }
+//   }
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     top: calc(-1 * 2px);
+//     left: calc(-1 * 2px);
+//     height: calc(100% + 2px * 2);
+//     width: calc(100% + 2px * 2);
+//     background: linear-gradient(
+//       60deg,
+//       #f79533,
+//       #f37055,
+//       #ef4e7b,
+//       #a166ab,
+//       #5073b8,
+//       #1098ad,
+//       #07b39b,
+//       #6fba82
+//     );
+//     border-radius: calc(2 * var(2px));
+//     z-index: -1;
+//     animation: animatedgradient 3s ease alternate infinite;
+//     background-size: 300% 300%;
+//   }
+// `;
+
 const SubjectHeader = styled.div`
   padding: 10px 0 12px 0;
   background-color: ${props => props.theme.cardBg};
@@ -67,7 +77,6 @@ const SubjectHeader = styled.div`
     padding: 12px 12px 13px;
     min-height: 50px;
     /* border-radius: 1px; */
-    margin: 8px 0;
     /* background-color: ${props => props.color}; */
     border-left: 8px solid ${props => props.color};
     border-top: 0;
@@ -76,6 +85,7 @@ const SubjectHeader = styled.div`
     }
   }
   ${({ loading }) => loading && loadingCSS}
+  /* ${({ loading }) => loadingCSS} */
 `;
 
 const SubjectCode = styled.div`
@@ -94,26 +104,32 @@ const SubjectCode = styled.div`
     font-size: 11px;
   }
 `;
+
 const SubjectName = styled.div`
   max-width: inherit;
   align-self: center;
-  margin-bottom: 0;
   font-size: 14px;
   font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 7px;
 
   @media screen and (min-width: 600px) {
     font-size: 15px;
   }
 
-  @media screen and (min-width: 960px) {
-    max-width: 14.5vw;
-    margin-top: 2px;
-    margin-bottom: 5px;
-    font-size: 13px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
   }
 
-  @media screen and (min-width: 1100px){
-    max-width: 18vw;
+  @media screen and (min-width: 960px) {
+    max-width: 14vw;
+    font-size: 13px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (min-width: 1024px){
+    max-width: 16vw;
   }
 `;
 
@@ -124,24 +140,36 @@ const SubjectToolbox = styled.div`
   color: ${props => props.color};
 
   @media screen and (min-width: 768px) {
+    right: 30px;
+    top: 42%;
+    position: absolute;
+  }
+
+  @media screen and (min-width: 960px) {
     font-weight: bold;
     vertical-align: middle;
     /* color: ${({ iconColor }) => iconColor}; */
-    right: 30px;
     top: 35%;
-    position: absolute;
   }
 `;
 
 const ToolboxButton = styled.button`
   cursor: pointer;
-  font-size: 15px;
-  padding: 0 10px;
-  /* margin: 3px 4px 0 4px; */
+  font-size: 16px;
+  padding: 0 12px;
   color: inherit;
   background-color: transparent;
   border: none;
   opacity: 0.7;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 10px;
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: 0 7px;
+    font-size: 15px;
+  }
 `;
 
 const DeleteButton = styled.button`
@@ -152,13 +180,17 @@ const DeleteButton = styled.button`
   border: none;
   opacity: 0.6;
   top: 10px;
-  right: 5px;
+  right: 4px;
   position: absolute;
 
-  @media screen and (min-width: 600px) {
-    padding: 2px;
-    top: 4px;
-    right: 7px;
+  /* @media screen and (min-width: 600px) {
+    top: 8px;
+    right: 5px;
+  } */
+
+  @media screen and (min-width: 960px) {
+    top: 5px;
+    right: 4px;
   }
 `;
 
@@ -188,7 +220,7 @@ function Subjects() {
         let textColor = "white";
         if (loading) {
           bgColor = "transparent";
-          textColor = "black";
+          textColor = "${props => props.theme.text}";
         }
         return (
           <SubjectWrapper textColor={textColor}>

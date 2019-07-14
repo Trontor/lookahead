@@ -11,15 +11,10 @@ import Optimisations from "./Optimisations";
 
 const Grid = styled.div`
   grid-template-columns: 100%;
-
+  height: calc(100% - 60px);
   @media screen and (min-width: 960px) {
-    height: auto;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    bottom: 0;
     display: grid;
-    grid-template-columns: [sidebar] minmax(30%, 220px) [viewer] auto;
+    grid-template-columns: [sidebar] minmax(20%, 380px) [viewer] auto;
     grid-template-rows: auto;
   }
 `;
@@ -30,11 +25,12 @@ const Sidebar = styled.div`
   max-width: inherit;
   padding: 10px;
   padding-bottom: 20px;
+  z-index: 1;
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;
-    min-width: 280px;
-    box-shadow: 2px -2px 5px -2px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.1); */
+    border-right: solid 1px #eee;
   }
 `;
 

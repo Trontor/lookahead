@@ -139,7 +139,6 @@ const SubjectSelect = props => {
     }
   };
   const SelectContainer = styled.div`
-    padding-top: 6px;
     display: flex;
     & > div {
       display: inline-block;

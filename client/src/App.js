@@ -10,9 +10,11 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin: 0;
   }
+
   #root{
     height: 100%;
   }
+
   body{
     height: 100%;
     padding: 0;
@@ -25,10 +27,16 @@ const GlobalStyle = createGlobalStyle`
   *, *::before, *::after{
     box-sizing: border-box;
   }
+
   h1 {
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Quicksand", sans-serif;
   }
+  /* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+} */
 `;
 
 export default () => {

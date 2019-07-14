@@ -13,7 +13,10 @@ const Text = styled.span`
   vertical-align: middle;
   font-size: 24px;
   font-family: "Quicksand";
+  position: relative;
+  bottom: 20%;
 `;
+
 export default function NoTimetables() {
   return (
     <Wrapper>
