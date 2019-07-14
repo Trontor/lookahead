@@ -23,17 +23,18 @@ $checkbox-color: lightsalmon;
     border: 1px solid gray;
     box-sizing: border-box;
   }
-
-  // Box hover
-  &:hover + label:before {
-    background: $checkbox-color;
-    border-color: $checkbox-color;
+  @media (hover: hover) {
+    // Box hover
+    &:hover + label:before {
+      background: $checkbox-color;
+      border-color: $checkbox-color;
+    }
   }
 
-  // Box focus
-  &:focus + label:before {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-  }
+  // // Box focus
+  // &:focus + label:before {
+  //   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  // }
 
   // Box checked
   &:checked + label:before {

@@ -15,7 +15,6 @@ const AvoidButton = styled.button`
   margin-bottom: 12px;
 
   &:hover {
-    
   }
 
   @media screen and (min-width: 960px) {
@@ -24,6 +23,7 @@ const AvoidButton = styled.button`
 
   ${props => {
     if (props.activated) {
+      console.log(props.activated);
       return css`
         background-color: ${props => props.theme.accent};
         color: white;
@@ -50,20 +50,23 @@ const AvoidButton = styled.button`
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-
-  &:hover {
-    background-color: ${props => props.theme.accent};
-    color: white;
+  @media (hover: hover) {
+    &:hover {
+      background-color: ${props => props.theme.accent};
+      color: white;
+    }
   }
 `;
 export default function DayAvoidButton(props) {
   const [activated, setActivated] = useState(false);
   const { onToggled } = props;
-  useEffect(() => {
-    onToggled(activated);
-  }, [activated]);
+  const handleClick = e => {
+    const newActive = !activated;
+    setActivated(newActive);
+    onToggled(newActive);
+  };
   return (
-    <AvoidButton activated={activated} onClick={() => setActivated(!activated)}>
+    <AvoidButton activated={activated} onClick={handleClick}>
       {props.children}
     </AvoidButton>
   );
