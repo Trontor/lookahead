@@ -18,7 +18,7 @@ const HeaderWrapper = styled.div`
     outline: none;
   }
 
-  @media screen and (min-width: 960px){
+  @media screen and (min-width: 960px) {
     margin: 0 0 10px 0;
   }
 `;
@@ -51,7 +51,7 @@ const NavigationButton = styled.button`
 `;
 
 export default function TimetableHeaderControl(props) {
-  const { current, total } = props;
+  const { current, header } = props;
   const dispatch = useDispatch();
   let currentTimeout = null;
   ArrowKeysReact.config({
@@ -74,9 +74,7 @@ export default function TimetableHeaderControl(props) {
       >
         <i className="fa fa-arrow-left" />
       </NavigationButton>
-      <TimetableCount>
-        {current} of {total}
-      </TimetableCount>
+      <TimetableCount>{header}</TimetableCount>
       <NavigationButton onClick={() => dispatch(nextTimetable())} right>
         <i className="fa fa-arrow-right" />
       </NavigationButton>

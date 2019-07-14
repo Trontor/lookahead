@@ -17,7 +17,8 @@ import {
   nextTimetable,
   previousTimetable,
   createCustomTimetable,
-  changeToCustomView
+  changeToCustomView,
+  changeToGeneratedView
 } from "../redux/actions/optimiserActions";
 import { updateEvents } from "../redux/actions/timetableActions";
 import Optimisations from "./Optimisations";
@@ -36,7 +37,6 @@ export default function TimetableViewer() {
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   const timetable = useSelector(state => state.timetable);
-
   useEffect(() => {
     if (!timetables) {
       return;
@@ -45,8 +45,8 @@ export default function TimetableViewer() {
 
     // let headerText = `Timetable ${currentIndex + 1}/${timetables.length}`;
     if (currentView === "custom") {
-      const { id, name, timetable } = customTimetables[currentCustomIndex];
-      currentTimetable = timetable;
+      // const { id, name, timetable } = customTimetables[currentCustomIndex];
+      currentTimetable = customTimetables[currentCustomIndex].timetable;
       // headerText = `Custom Timetable ${id}: ${name}`;
     }
     console.log("Current Timetable:", currentTimetable);
@@ -57,17 +57,34 @@ export default function TimetableViewer() {
     const events = currentTimetable.classList.map(cls => classToEvent(cls));
     events.push(...generateBackgroundEvents());
     dispatch(updateEvents(events));
-  }, [currentIndex, timetables]);
+  }, [
+    currentCustomIndex,
+    currentIndex,
+    currentView,
+    customTimetables,
+    dispatch,
+    subjects,
+    timetables
+  ]);
   // const newCustomTimetable = () => {
   //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
   // };
-  // const viewCustomTimetable = ({ id }) => {
-  //   dispatch(changeToCustomView(id));
-  // };
+  const viewCustomTimetable = ({ id }) => {
+    dispatch(changeToCustomView(id));
+  };
+  const viewGenerated = () => {
+    dispatch(changeToGeneratedView());
+  };
   if (!timetables) {
     return <NoTimetables />;
   }
   const events = timetable.allEvents;
+
+  let headerText = `${currentIndex + 1} of ${timetables.length}`;
+  if (currentView === "custom") {
+    headerText = customTimetables[currentCustomIndex].name;
+  }
+
   return (
     <>
       {/* <div>
@@ -102,10 +119,13 @@ export default function TimetableViewer() {
         </div>
       )} */}
       <TimetableTips />
-      <TimetableHeaderControl
-        current={currentIndex + 1}
-        total={timetables.length}
-      />
+      <TimetableHeaderControl header={headerText} />
+      <button onClick={() => viewGenerated()}>View Generated</button>
+      {customTimetables.map(custom => (
+        <button key={custom.id} onClick={() => viewCustomTimetable(custom)}>
+          {custom.name}
+        </button>
+      ))}
       <FullCalendar
         defaultView="timeGridWeek"
         height="parent"
