@@ -6,9 +6,9 @@ const regularTheme = {
   bodyBg: "#fbfbfb",
   sidebarBg: "#f8f8f8",
   cardBg: "#fefefe",
-  main: "#4B55A5",
+  main: "lightsalmon",
   text: "#3f3844",
-  accent: "#29C7DB"
+  accent: "lightsalmon"
 };
 
 const darkTheme = {
@@ -20,8 +20,8 @@ const darkTheme = {
   sidebarBg: "#3f3f3f",
   cardBg: "#505050",
   main: "#555555",
-  text: "#f5f5f5",
   accent: "salmon"
+  text: "#f5f5f5",
 };
 
 export { regularTheme, darkTheme };
