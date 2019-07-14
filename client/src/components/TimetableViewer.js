@@ -57,7 +57,7 @@ export default function TimetableViewer() {
     const events = currentTimetable.classList.map(cls => classToEvent(cls));
     events.push(...generateBackgroundEvents());
     dispatch(updateEvents(events));
-  }, [timetables]);
+  }, [currentIndex, timetables]);
   // const newCustomTimetable = () => {
   //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
   // };
