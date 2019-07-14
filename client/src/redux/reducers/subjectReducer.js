@@ -27,7 +27,7 @@ export default (state = initialState, action) => {
       // label: "SWEN30006 - Software Modelling and Design"
       // value: "Software Modelling and Design"
       // Check if the subject has already been added
-      if (state[code]) {
+      if (state[code] && state[code].year === year) {
         return state;
       }
       return {
