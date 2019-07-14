@@ -27,6 +27,8 @@ const SubjectSelect = props => {
   const [inputValue, setInputValue] = useState("test");
   // Uncomment below to load subjects at the starts
   useEffect(() => {
+    if (!(!process.env.NODE_ENV || process.env.NODE_ENV === "development"))
+      return;
     dispatch(getSubject(2019, "semester_2", "COMP30022", "IT Project"));
     dispatch(
       getSubject(2019, "semester_2", "COMP30026", "Models of Computation")

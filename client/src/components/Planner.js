@@ -141,7 +141,12 @@ export default function Planner() {
     dispatch(optimise(subjects, optimisationTypes, restrictions));
   };
 
-  if (AUTO_OPTIMISE && allLoaded && keys.length > 0 && !hasAutoOptimised) {
+  if (
+    (!process.env.NODE_ENV || process.env.NODE_ENV === "development") &&
+    allLoaded &&
+    keys.length > 0 &&
+    !hasAutoOptimised
+  ) {
     console.log("All loaded!");
     console.log(subjects);
     invokeOptimisation();
