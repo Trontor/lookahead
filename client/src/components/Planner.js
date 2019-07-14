@@ -12,6 +12,7 @@ import Optimisations from "./Optimisations";
 const Grid = styled.div`
   grid-template-columns: 100%;
   height: calc(100% - 60px);
+
   @media screen and (min-width: 960px) {
     display: grid;
     grid-template-columns: [sidebar] minmax(20%, 380px) [viewer] auto;
@@ -29,16 +30,18 @@ const Sidebar = styled.div`
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;
-    /* box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.1); */
-    border-right: solid 1px #eee;
+    box-shadow: 2px -2px 1px -2px rgba(0, 0, 0, 0.15);
+    /* border-right: solid 1px #eee; */
   }
 `;
 
 const Main = styled.div`
   grid-column-start: 1;
+  padding-top: 10px;
 
   @media screen and (min-width: 960px) {
     grid-column-start: viewer;
+    padding: 10px;
   }
 `;
 
@@ -52,7 +55,7 @@ const OptimiseButton = styled.button`
   font-family: "Quicksand";
   font-size: 15px;
   /* background-color: ${props => props.theme.accent}; */
-  background-color: lightsalmon;
+  background-color: ${props => props.theme.main};
   color: #fff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   padding: 12px 25px;
@@ -66,12 +69,14 @@ const OptimiseButton = styled.button`
   white-space: normal;
   word-wrap: break-word;
 
-  &:active {
+  /* &:active {
     background-color: #739 !important;
-  }
+  } */
+
   &:hover,
   &:focus {
     outline: none;
+    background-color: ${props => props.theme.mainDark}
   }
 `;
 

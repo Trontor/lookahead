@@ -9,51 +9,62 @@
 $opacity: 0.75;
 .fc-slats td, .fc-time-grid td {
   height: 2.5em !important;
+
+  @media screen and (min-width: 960px) {
+    height: 2.2em !important;
+  }
 }
 
 .lookahead-event-wrapper {
-  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", Helvetica, Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 2px;
   border: 0;
   padding: 2px;
-  color: rgb(0, 0, 0);
-  // margin: -2px;
+  color: #262628;
   margin-left: -2px;
   margin-right: -5px;
   display: flex;
   flex-direction: column;
   font-size: 8px;
+  font-weight: 400;
 
   &:hover {
-    color: black;
+    color: #181616;
   }
+
   .fc-title {
-    font-weight: 300;
+    font-weight: 500;
   }
+
   .fc-desc {
     margin-top: auto;
   }
+
   .fc-code {
     margin-top: auto;
   }
+
   .event-icon {
     opacity: $opacity;
     position: absolute;
     right: 3px;
     top: 4px;
   }
+
   .fc-type {
     opacity: $opacity;
     position: absolute;
     top: 1px;
     right: 15px;
   }
+
   .fc-loc {
     opacity: $opacity;
     position: absolute;
     bottom: 2px;
     right: 2px;
   }
+
   .bottom-wrapper {
     margin-top: auto;
   }
@@ -68,9 +79,11 @@ $opacity: 0.75;
       font-size: 9px;
       padding-top: 5px;
     }
+
     .fc-type {
       top: 0px;
     }
+
     .event-icon {
       font-size: 6px;
     }
@@ -91,15 +104,18 @@ $opacity: 0.75;
     }
 
     .fc-title {
-      font-size: 12px;
+      font-size: 11px;
       line-height: 1em;
     }
+
     .fc-desc {
       font-size: 10px;
     }
+
     .event-icon {
       font-size: 6px;
     }
+
     .fc-type {
       top: 1px;
       right: 12px;
@@ -115,15 +131,19 @@ $opacity: 0.75;
     .fc-title {
       font-size: 12px;
     }
+
     .fc-type {
       top: 0px;
     }
+
     .fc-desc {
       font-size: 12px;
     }
+
     .event-icon {
       font-size: 8px;
     }
+
     .fc-type {
       top: 0px;
       right: 15px;
@@ -132,6 +152,7 @@ $opacity: 0.75;
 }
 
 @media (min-width: 1800px) {
+
   .lookahead-event-wrapper {
     font-size: 10px;
     margin-right: -10px;
@@ -139,12 +160,15 @@ $opacity: 0.75;
     .fc-time {
       font-size: 12px;
     }
+
     .fc-title {
       font-size: 12px;
     }
+
     .fc-desc {
       font-size: 12px;
     }
+
     .event-icon {
       font-size: 8px;
     }
