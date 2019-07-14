@@ -34,9 +34,9 @@ const NavigationButton = styled.button`
   border-radius: 3px;
   color: #f9f9f9;
   background-color: ${props => props.theme.secondary};
-  border-color: ${props => props.theme.secondary};
   padding: 6px 5px;
   width: 100%;
+  border: none;
   left: ${({ left }) => (left ? 0 : "auto")};
   right: ${({ right }) => (right ? 0 : "auto")};
 
