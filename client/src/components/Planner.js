@@ -29,7 +29,6 @@ const Sidebar = styled.div`
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;
-    /* box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, 0.1); */
     box-shadow: 2px -2px 1px -2px rgba(0, 0, 0, 0.15);
     /* border-right: solid 1px #eee; */
   }
@@ -40,6 +39,7 @@ const Main = styled.div`
 
   @media screen and (min-width: 960px) {
     grid-column-start: viewer;
+    padding: 10px;
   }
 `;
 

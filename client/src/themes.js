@@ -20,7 +20,7 @@ const darkTheme = {
   sidebarBg: "#3f3f3f",
   cardBg: "#505050",
   main: "#555555",
-  accent: "salmon"
+  accent: "salmon",
   text: "#f5f5f5",
 };
 
