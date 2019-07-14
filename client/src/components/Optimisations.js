@@ -50,16 +50,15 @@ const Optimisation = styled.div`
   ${({ child }) =>
     child &&
     css`
-    margin-top: -2px;
-    margin-left: 30px;
+      margin-top: -2px;
+      margin-left: 30px;
 
-    input {
-      font-size: 12px;
-      width: 28px;
-      margin-right: 5px;
-
-    }
-  `};
+      input {
+        font-size: 12px;
+        width: 28px;
+        margin-right: 5px;
+      }
+    `};
 `;
 
 const HourInputWrapper = styled.div`
@@ -121,7 +120,6 @@ function Optimisations() {
     breakHours,
     minimiseClashes
   } = optimisations;
-  console.log(optimisations);
 
   const changeRange = ({ min, max }) => {
     if (max - min >= 2.5) dispatch(setTimeRange(min, max));
@@ -150,8 +148,6 @@ function Optimisations() {
     setLongestRun(intVal);
   };
 
-  console.log(avoidDays);
-
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   return (
     <OptimisationsWrapper>
@@ -173,7 +169,7 @@ function Optimisations() {
         </Optimisation>
 
         <Optimisation center>
-         <Subheader>Try to avoid classes on these days:</Subheader>
+          <Subheader>Try to avoid classes on these days:</Subheader>
           <ButtonGroup>
             {days.map((day, idx) => (
               <DayAvoidButton
