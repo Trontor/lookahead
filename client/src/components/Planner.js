@@ -75,6 +75,7 @@ const OptimiseButton = styled.button`
   }
 `;
 
+let hasAutoOptimised = false;
 export default function Planner() {
   const subjects = useSelector(state => state.subjects);
   const optimisations = useSelector(state => state.optimisations);
@@ -129,10 +130,11 @@ export default function Planner() {
     dispatch(optimise(subjects, optimisationTypes, restrictions));
   };
 
-  if (AUTO_OPTIMISE && allLoaded && keys.length > 0) {
+  if (AUTO_OPTIMISE && allLoaded && keys.length > 0 && !hasAutoOptimised) {
     console.log("All loaded!");
     console.log(subjects);
-    // invokeOptimisation();
+    invokeOptimisation();
+    hasAutoOptimised = true;
   }
   return (
     <Grid>

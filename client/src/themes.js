@@ -1,4 +1,7 @@
 const regularTheme = {
+  dragDropRegularEventOpacity: 0.15,
+  dragDropEventBorder: "2px dotted green",
+  dragDropEventBg: "red",
   headerBg: "#29C7DB",
   bodyBg: "#fbfbfb",
   sidebarBg: "#f8f8f8",
@@ -9,6 +12,9 @@ const regularTheme = {
 };
 
 const darkTheme = {
+  dragDropRegularEventOpacity: 0.15,
+  dragDropEventBorder: "2px dotted orange",
+  dragDropEventBg: "purple",
   headerBg: "#3c3c3c",
   bodyBg: "#3a3a3a",
   sidebarBg: "#3f3f3f",
