@@ -5,6 +5,7 @@ import styled, { css } from "styled-components";
 
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
+  min-height: 290px;
 `;
 const SubjectWrapper = styled.div`
   /* color: ${props => props.textColor}; */
