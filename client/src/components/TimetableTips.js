@@ -2,12 +2,13 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const TipWrapper = styled.div`
-  margin: 10px 5px;
+  margin: 5px 5px 20px 5px;
+
 `;
 
 const TipHeader = styled.h3`
+  margin-bottom: 9px;
   margin-left: 7px;
-  margin-bottom: 10px;
 
   i {
     color: gold;
@@ -15,8 +16,8 @@ const TipHeader = styled.h3`
   }
 
   @media screen and (min-width: 960px) {
+    margin-top: 0;
     margin-left: 0;
-    margin-top: -5px;
   }
 
 `;

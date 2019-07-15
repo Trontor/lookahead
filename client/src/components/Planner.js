@@ -27,6 +27,7 @@ const Sidebar = styled.div`
   padding: 10px;
   padding-bottom: 20px;
   z-index: 1;
+  box-shadow: -2px 0 3px 0 rgba(0, 0, 0, 0.12);
 
   @media screen and (min-width: 960px) {
     grid-column-start: sidebar;

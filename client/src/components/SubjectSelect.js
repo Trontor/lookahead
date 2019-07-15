@@ -29,40 +29,13 @@ const SubjectSelect = props => {
   useEffect(() => {
     if (!(!process.env.NODE_ENV || process.env.NODE_ENV === "development"))
       return;
-    localStorage.clear();
-    dispatch(getSubject(2019, "semester_2", "COMP30022", "IT Project"));
-    // dispatch(
-    //   getSubject(2019, "semester_2", "COMP30026", "Models of Computation")
-    // );
-    // dispatch(
-    //   getSubject(2019, "semester_2", "COMP30020", "Declarative Programming")
-    // );
-    // dispatch(
-    //   getSubject(
-    //     2019,
-    //     "semester_2",
-    //     "SWEN20003",
-    //     "Object Oriented Software Development"
-    //   )
-    // );
-    // dispatch(
-    //   getSubject(2019, "semester_2", "COMP10001", "Foundations of Computing")
-    // );
-    // dispatch(getSubject(2019, "semester_2", "MAST10007", "Linear Algebra"));
-    // dispatch(getSubject(2019, "semester_2", "MAST10006", "Calculus 2"));
-    // dispatch(
-    //   getSubject(
-    //     2019,
-    //     "semester_2",
-    //     "SWEN20003",
-    //     "Object Oriented Software Developmenet"
-    //   )
-    // );
-    // dispatch(
-    //   getSubject(2019, "semester_1", "COMP10001", "Foundations of Computing")
-    // );
-    // dispatch(getSubject(2019, "semester_1", "COMP10002", "FoA"));
-    // dispatch(getSubject(2019, "semester_1", "COMP10003", "MC"));
+    localStorage.removeItem("notifications");
+    let localStorageSubjects = JSON.parse(localStorage.getItem("subjects"));
+    if (!localStorageSubjects) return;
+    for (const subject of localStorageSubjects) {
+      const { year, code, name, studyPeriod } = subject;
+      dispatch(getSubject(year, studyPeriod, code, name));
+    }
   }, [dispatch]);
 
   useEffect(() => {
