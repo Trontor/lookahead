@@ -4,12 +4,13 @@ import Markdown from "markdown-to-jsx";
 
 const NotificationWrapper = styled.div`
   position: relative;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border-radius: 2px;
   color: white;
   font-family: "Karla", sans-serif;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
   padding: 10px;
+  margin: 6px 0;
   a {
     color: inherit;
   }
@@ -18,7 +19,7 @@ const NotificationHeader = styled.div`
   font-size: 16px;
 `;
 const NotificationContent = styled.div`
-  margin-top: 6px;
+  margin: 6px 0;
   font-size: 13px;
   font-weight: normal;
 `;
