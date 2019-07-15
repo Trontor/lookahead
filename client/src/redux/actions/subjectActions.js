@@ -11,9 +11,9 @@ const getSubjectBegin = (year, code, name) => ({
   payload: { year, code, name }
 });
 
-const getSubjectSuccess = (code, classInfo) => ({
+const getSubjectSuccess = (year, code, name, studyPeriod, classInfo) => ({
   type: GET_SUBJECT_SUCCESS,
-  payload: { code, classInfo }
+  payload: { year, code, name, studyPeriod, classInfo }
 });
 
 const getSubjectFailure = (code, error) => ({
@@ -26,7 +26,9 @@ export const getSubject = (year, studyPeriod, code, name) => dispatch => {
   const listURL = `/subject?year=${year}&period=${studyPeriod}&code=${code}`;
   return axios
     .get(listURL)
-    .then(res => dispatch(getSubjectSuccess(code, res.data)))
+    .then(res =>
+      dispatch(getSubjectSuccess(year, code, name, studyPeriod, res.data))
+    )
     .catch(err => dispatch(getSubjectFailure(code, err)));
 };
 
