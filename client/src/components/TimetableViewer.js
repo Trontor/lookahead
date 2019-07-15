@@ -21,16 +21,17 @@ import TimetableTips from "./TimetableTips";
 import CustomTimetableControl from "./CustomTimetableControl";
 
 export default function TimetableViewer() {
+  const optimiser = useSelector(state => state.optimiser);
+  const dispatch = useDispatch();
+  const subjects = useSelector(state => state.subjects);
+  const timetable = useSelector(state => state.timetable);
   const {
     timetables,
     currentIndex,
     customTimetables,
     currentCustomIndex,
     currentView
-  } = useSelector(state => state.optimiser);
-  const dispatch = useDispatch();
-  const subjects = useSelector(state => state.subjects);
-  const timetable = useSelector(state => state.timetable);
+  } = optimiser;
   useEffect(() => {
     if (!timetables) {
       return;
@@ -50,6 +51,8 @@ export default function TimetableViewer() {
     );
     const events = currentTimetable.classList.map(cls => classToEvent(cls));
     events.push(...generateBackgroundEvents());
+    console.log("Dispatching events...");
+
     dispatch(updateEvents(events));
   }, [
     currentCustomIndex,
@@ -58,7 +61,8 @@ export default function TimetableViewer() {
     customTimetables,
     dispatch,
     subjects,
-    timetables
+    timetables,
+    optimiser
   ]);
   // const newCustomTimetable = () => {
   //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
@@ -112,7 +116,7 @@ export default function TimetableViewer() {
       )} */}
       <TimetableTips />
       <TimetableHeaderControl header={headerText} />
-      <CustomTimetableControl />
+      {/* <CustomTimetableControl /> */}
       <FullCalendar
         defaultView="timeGridWeek"
         height="parent"

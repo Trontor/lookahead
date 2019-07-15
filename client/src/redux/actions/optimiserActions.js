@@ -1,6 +1,7 @@
 import {
   BEGIN_OPTIMISATION,
   COMPLETE_OPTIMISATION,
+  UPDATE_TIMETABLE,
   NEXT_TIMETABLE,
   PREVIOUS_TIMETABLE,
   CREATE_CUSTOM_TIMETABLE,
@@ -26,6 +27,9 @@ export const createCustomTimetable = (name, timetable) => dispatch => {
 export const updateCustomTimetable = (id, name, timetable) => dispatch => {
   dispatch({ type: UPDATE_CUSTOM_TIMETABLE, payload: { id, name, timetable } });
 };
+export const updateTimetable = (index, timetable) => dispatch => {
+  dispatch({ type: UPDATE_TIMETABLE, payload: { index, timetable } });
+};
 
 export const changeToGeneratedView = () => dispatch => {
   dispatch({ type: VIEW_GENERATED_TIMETABLES });
@@ -33,6 +37,7 @@ export const changeToGeneratedView = () => dispatch => {
 export const changeToCustomView = id => dispatch => {
   dispatch({ type: VIEW_CUSTOM_TIMETABLES, payload: id });
 };
+
 export const optimise = (subjects, optimisations, restrictions) => dispatch => {
   const optimiser = new Optimiser(subjects);
   optimiser.applyTimeRestrictions(

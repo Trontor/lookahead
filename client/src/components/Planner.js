@@ -160,8 +160,11 @@ export default function Planner() {
         <Subjects />
         <Optimisations />
         <OptimiseButtonWrapper>
-          <OptimiseButton onClick={() => invokeOptimisation()}>
-            Optimise
+          <OptimiseButton
+            disabled={!allLoaded}
+            onClick={() => invokeOptimisation()}
+          >
+            {allLoaded ? "Optimise" : "Loading..."}
           </OptimiseButton>
         </OptimiseButtonWrapper>
       </Sidebar>

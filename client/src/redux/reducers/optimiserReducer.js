@@ -6,7 +6,8 @@ import {
   CREATE_CUSTOM_TIMETABLE,
   UPDATE_CUSTOM_TIMETABLE,
   VIEW_GENERATED_TIMETABLES,
-  VIEW_CUSTOM_TIMETABLES
+  VIEW_CUSTOM_TIMETABLES,
+  UPDATE_TIMETABLE
 } from "../actionTypes";
 import uuid from "uuid/v1";
 
@@ -31,7 +32,7 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case VIEW_GENERATED_TIMETABLES:
       // Regular timetable index
-      let tt_index = state.currentCustomIndex;
+      let tt_index = state.currentIndex;
       if (tt_index < 0 || tt_index >= state.timetables.length) {
         tt_index = 0;
       }
@@ -62,8 +63,16 @@ export default (state = initialState, action) => {
       };
       return {
         ...state,
-        customTimetables: [...state.customTimetables, newCustomTimetable]
+        customTimetables: [...state.customTimetables, newCustomTimetable],
+        currentCustomIndex: state.currentCustomIndex + 1
       };
+    case UPDATE_TIMETABLE:
+      const updateIndex = action.payload.index;
+      const allTimetables = [...state.timetables];
+      if (updateIndex >= 0 && updateIndex < allTimetables.length) {
+        allTimetables[updateIndex] = action.payload.timetable;
+      }
+      return { ...state, timetables: allTimetables };
     case UPDATE_CUSTOM_TIMETABLE:
       const customTTCopy = [...state.customTimetables];
       const customFound = customTTCopy.find(
