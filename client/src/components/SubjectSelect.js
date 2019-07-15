@@ -25,25 +25,25 @@ const SubjectSelect = props => {
   );
   // Tracks the currently entered text in the subject filter
   const [inputValue, setInputValue] = useState("test");
-  // Uncomment below to load subjects at the starts
+  // Uncomment below to load subjects at the start
   useEffect(() => {
     if (!(!process.env.NODE_ENV || process.env.NODE_ENV === "development"))
       return;
     dispatch(getSubject(2019, "semester_2", "COMP30022", "IT Project"));
-    dispatch(
-      getSubject(2019, "semester_2", "COMP30026", "Models of Computation")
-    );
-    dispatch(
-      getSubject(2019, "semester_2", "COMP30020", "Declarative Programming")
-    );
-    dispatch(
-      getSubject(
-        2019,
-        "semester_2",
-        "SWEN20003",
-        "Object Oriented Software Development"
-      )
-    );
+    // dispatch(
+    //   getSubject(2019, "semester_2", "COMP30026", "Models of Computation")
+    // );
+    // dispatch(
+    //   getSubject(2019, "semester_2", "COMP30020", "Declarative Programming")
+    // );
+    // dispatch(
+    //   getSubject(
+    //     2019,
+    //     "semester_2",
+    //     "SWEN20003",
+    //     "Object Oriented Software Development"
+    //   )
+    // );
     // dispatch(
     //   getSubject(2019, "semester_2", "COMP10001", "Foundations of Computing")
     // );
