@@ -5,6 +5,7 @@ import styled, { css } from "styled-components";
 
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
+  min-height: 290px;
 `;
 const SubjectWrapper = styled.div`
   /* color: ${props => props.textColor}; */
@@ -12,14 +13,14 @@ const SubjectWrapper = styled.div`
 `;
 
 const loadingCSS = css`
-    border-top: none!important;
+  /* border-top: none !important;
 
   @media screen and (min-width: 960px) {
-    border-left: none!important;
-  }
-`
-;
-
+    border-left: none !important;
+  } */
+  background-color: inherit;
+  box-shadow: none;
+`;
 // const loadingCSS = css`
 //   border-width: 2px;
 //   border-radius: 0px;
@@ -84,8 +85,7 @@ const SubjectHeader = styled.div`
       text-align: left;
     }
   }
-  ${({ loading }) => loading && loadingCSS}
-  /* ${({ loading }) => loadingCSS} */
+  ${({ loading }) => loading && loadingCSS} 
 `;
 
 const SubjectCode = styled.div`
@@ -128,7 +128,7 @@ const SubjectName = styled.div`
     margin-bottom: 5px;
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     max-width: 16vw;
   }
 `;
@@ -218,12 +218,12 @@ function Subjects() {
         const { year, name, loading, data, color } = subjects[code];
         let bgColor = color;
         let textColor = "white";
-        if (loading) {
-          bgColor = "transparent";
-          textColor = "${props => props.theme.text}";
-        }
+        // if (loading) {
+        //   bgColor = "transparent";
+        //   textColor = "${props => props.theme.text}";
+        // }
         return (
-          <SubjectWrapper textColor={textColor}>
+          <SubjectWrapper>
             {/* <SubjectLoader color={color} /> */}
 
             <SubjectHeader loading={loading} color={bgColor}>
