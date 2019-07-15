@@ -46,6 +46,30 @@ export default (state = initialState, action) => {
       if (!state[action.payload.code]) {
         return state;
       }
+      console.log("Success!:", action.payload);
+
+      // Update localstorage
+      let subjects = JSON.parse(localStorage.getItem("subjects"));
+      const newSubject = {
+        year: action.payload.year,
+        code: action.payload.code,
+        name: action.payload.name,
+        studyPeriod: action.payload.studyPeriod
+      };
+      if (!subjects) {
+        subjects = [newSubject];
+      } else if (
+        !subjects.some(
+          ({ year, code, studyPeriod }) =>
+            year === action.payload.year &&
+            code === action.payload.code &&
+            studyPeriod === action.payload.studyPeriod
+        )
+      ) {
+        subjects.push(newSubject);
+      }
+      localStorage.setItem("subjects", JSON.stringify(subjects));
+
       // Otherwise, update the subject entry
       return {
         ...state,
@@ -67,6 +91,19 @@ export default (state = initialState, action) => {
         }
       };
     case REMOVE_SUBJECT:
+      // Remove subject from localStorage
+
+      let localStorageSubjects = JSON.parse(localStorage.getItem("subjects"));
+      if (localStorageSubjects) {
+        localStorageSubjects = localStorageSubjects.filter(
+          ({ year, code, studyPeriod }) =>
+            year !== action.payload.year &&
+            code !== action.payload.code &&
+            studyPeriod !== action.payload.studyPeriod
+        );
+
+        localStorage.setItem("subjects", JSON.stringify(localStorageSubjects));
+      }
       // Remove subject from state
       const { [action.payload.code]: value, ...newState } = state;
       return newState;
