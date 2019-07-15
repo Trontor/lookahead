@@ -4,7 +4,8 @@ import store from "../redux/store";
 import {
   createCustomTimetable,
   changeToCustomView,
-  updateCustomTimetable
+  updateCustomTimetable,
+  updateTimetable
 } from "../redux/actions/optimiserActions";
 import Timetable from "../optimiser/Timetable";
 export const getSubjects = () => {
@@ -23,14 +24,24 @@ const getCurrentTheme = () => {
   return store.getState().theme;
 };
 
+const getCurrentTimetable = () => {
+  const { timetables, currentIndex } = store.getState().optimiser;
+  return { currentIndex, timetable: timetables[currentIndex] };
+};
+
 export const getCurrentCustomTimetable = () => {
-  const { customTimetables, currentCustomIndex } = store.getState().optimiser;
+  const {
+    customTimetables,
+    currentCustomIndex,
+    currentView,
+    timetables,
+    currentIndex
+  } = store.getState().optimiser;
   const timetable = customTimetables[currentCustomIndex];
-  if (!timetable) {
+  if (!timetable || currentView !== "custom") {
     console.log(
       "The current custom timetable does not exist... create a new one!"
     );
-    const { timetables, currentIndex } = store.getState().optimiser;
     const currentGeneratedTimetable = timetables[currentIndex];
     store.dispatch(
       createCustomTimetable("Custom Timetable", currentGeneratedTimetable)
@@ -217,16 +228,67 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   moveRegularClass(subject, fromCode, toCode);
 };
 
+// const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
+//   console.log(
+//     `${subjectCode}: Moving Stream Type ${type}, ${oldStreamNumber} to ${newStreamNumber}`
+//   );
+//   // Get information about the current custom timetable
+//   const {
+//     id,
+//     name,
+//     timetable: { classList }
+//   } = getCurrentCustomTimetable();
+//   // Extract the old stream classes from the classList
+//   const newClassList = classList.filter(
+//     cls =>
+//       cls.subjectCode !== subjectCode ||
+//       cls.classCode.type !== type ||
+//       cls.streamNumber !== oldStreamNumber
+//   );
+//   // Add the new stream classes to the classList
+//   // First, get the new stream classes
+//   const subject = getSubjects()[subjectCode].data;
+//   const newClasses = subject._streamContainers
+//     .find(container => container.type === type)
+//     .streams.find(stream => stream.streamNumbers.includes(newStreamNumber))
+//     .classes;
+//   // Add each new class to the class list
+//   newClasses.forEach(cls => newClassList.push(cls));
+
+//   const newTimetable = new Timetable(newClassList);
+//   store.dispatch(updateCustomTimetable(id, name, newTimetable));
+// };
+
+// const moveRegularClass = (subject, oldCode, newCode) => {
+//   console.log(`${subject}: Moving ${oldCode} to ${newCode}`);
+//   const {
+//     id,
+//     name,
+//     timetable: { classList }
+//   } = getCurrentCustomTimetable();
+//   let newClass = getSubjects()[subject].data._regularClasses.filter(
+//     cls => cls.codes[0] === newCode
+//   )[0];
+//   const oldClass = classList.filter(cls => cls.codes[0] === oldCode)[0];
+//   classList.splice(classList.indexOf(oldClass), 1, newClass);
+//   const newTimetable = new Timetable(classList);
+//   console.log("New Timetable:", newTimetable);
+//   store.dispatch(updateCustomTimetable(id, name, newTimetable));
+// };
+
 const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
   console.log(
     `${subjectCode}: Moving Stream Type ${type}, ${oldStreamNumber} to ${newStreamNumber}`
   );
-  // Get information about the current custom timetable
+  // Get current timetable
   const {
-    id,
-    name,
+    currentIndex,
     timetable: { classList }
-  } = getCurrentCustomTimetable();
+  } = getCurrentTimetable();
+  console.log(
+    "Proceeding to update this classlist:",
+    Object.assign({}, classList)
+  );
   // Extract the old stream classes from the classList
   const newClassList = classList.filter(
     cls =>
@@ -243,26 +305,32 @@ const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
     .classes;
   // Add each new class to the class list
   newClasses.forEach(cls => newClassList.push(cls));
-
+  console.log("Updated classlist:", Object.assign({}, newClassList));
   const newTimetable = new Timetable(newClassList);
-  store.dispatch(updateCustomTimetable(id, name, newTimetable));
+  store.dispatch(updateTimetable(currentIndex, newTimetable));
 };
 
 const moveRegularClass = (subject, oldCode, newCode) => {
-  console.log(`${subject}: Moving ${oldCode} to ${newCode}`);
+  console.log(`${subject}: Moving class, ${oldCode} to ${newCode}`);
+  // Get current timetable
   const {
-    id,
-    name,
+    currentIndex,
     timetable: { classList }
-  } = getCurrentCustomTimetable();
-  let newClass = getSubjects()[subject].data._regularClasses.filter(
+  } = getCurrentTimetable();
+  console.log(
+    "Proceeding to update this classlist:",
+    Object.assign({}, classList)
+  );
+  // We filter the subject to get the new class
+  const newClass = getSubjects()[subject].data._regularClasses.filter(
     cls => cls.codes[0] === newCode
   )[0];
   const oldClass = classList.filter(cls => cls.codes[0] === oldCode)[0];
+  // Remove old class, and insert new class
   classList.splice(classList.indexOf(oldClass), 1, newClass);
+  // Create a new timetable off this information
   const newTimetable = new Timetable(classList);
-  console.log("New Timetable:", newTimetable);
-  store.dispatch(updateCustomTimetable(id, name, newTimetable));
+  store.dispatch(updateTimetable(currentIndex, newTimetable));
 };
 
 const showBackgroundEvent = event => {
