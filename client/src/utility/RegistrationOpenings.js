@@ -2,11 +2,11 @@ import moment from "moment";
 
 export const FIRST_YEAR = {
   name: "First Year",
-  time: "2019-07-02 10:00"
+  time: "2019-07-16 10:00"
 };
 export const SECOND_YEAR = {
   name: "Second Year",
-  time: "2019-07-09 10:00"
+  time: "2019-07-11 10:00"
 };
 export const THIRD_YEAR = {
   name: "Third Year",
@@ -39,12 +39,12 @@ export const PANIC = {
 
 const allOpenings = [
   TWO_DAYS,
+  SECOND_YEAR,
   VERY_SOON,
   PANIC,
+  GRAD_HONOURS,
   FIRST_YEAR,
-  SECOND_YEAR,
-  THIRD_YEAR,
-  GRAD_HONOURS
+  THIRD_YEAR
 ];
 
 allOpenings.forEach(opening => {
@@ -52,6 +52,11 @@ allOpenings.forEach(opening => {
 });
 
 // Sort by impending openings and then by closest opening
-allOpenings.sort((a, b) => (a.time.isBefore(moment()) ? 1 : a.time - b.time));
+allOpenings.sort((a, b) => {
+  const now = new moment();
+  const aBefore = a.time.isBefore(now);
+  const bBefore = b.time.isBefore(now); 
+  return aBefore && bBefore ? b.time - a.time : aBefore ? 1 : -1;
+});
 
 export default allOpenings;
