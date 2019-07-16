@@ -30,8 +30,8 @@ const OptimisationsContainer = styled.div`
 
 const Header = styled.h1`
   text-align: center;
-  line-height: 0.8em;
-  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 `;
 
 const Subheader = styled.h2`

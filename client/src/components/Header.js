@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
   color: white;
   padding: 14px 12px;
   margin: 0px;
-  z-index: 9999;
+  z-index: 2;
   position: relative;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.12);
 
@@ -86,7 +86,9 @@ export default function Header() {
   const emoji = getCurrentEmoji();
   return (
     <HeaderWrapper>
-      <HeaderText>Lookahead <EyeEmoji>👀</EyeEmoji></HeaderText>
+      <HeaderText>
+        Lookahead <EyeEmoji>👀</EyeEmoji>
+      </HeaderText>
       <HeaderSubtitle>
         A University of Melbourne Timetable Optimiser
       </HeaderSubtitle>

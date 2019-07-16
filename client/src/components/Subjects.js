@@ -1,8 +1,13 @@
 import React from "react";
-import { removeSubject } from "../redux/actions/subjectActions";
+import {
+  removeSubject,
+  changeSubject,
+  changeSubjectColor
+} from "../redux/actions/subjectActions";
 import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
-
+import { TwitterPicker } from "react-color";
+import ColorPickButton from "./ColorPickButton";
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
   /* min-height: 290px; */
@@ -212,10 +217,16 @@ function Subjects() {
   const deleteSubject = (year, code) => {
     dispatch(removeSubject(code));
   };
+
+  const onColorChange = (subject, color, event) => {
+    console.log(color.hex);
+  };
   return (
     <SubjectsWrapper>
       {Object.keys(subjects).map(code => {
-        const { year, name, loading, data, color } = subjects[code];
+        const { year, studyPeriod, name, loading, data, color } = subjects[
+          code
+        ];
         let bgColor = color;
         let textColor = "white";
         // if (loading) {
@@ -230,15 +241,20 @@ function Subjects() {
               <SubjectCode>{code}</SubjectCode>
               <SubjectName>{name}</SubjectName>
               <SubjectToolbox iconColor={textColor}>
+                <ColorPickButton
+                  onColorChange={color => {
+                    dispatch(
+                      changeSubjectColor(year, studyPeriod, code, color.hex)
+                    );
+                  }}
+                  buttonStyle={ToolboxButton}
+                />
                 <ToolboxButton onClick={() => openSWS(year, code)}>
                   <i className="fa fa-calendar-alt" />
                 </ToolboxButton>
                 <ToolboxButton onClick={() => openHandbook(year, code)}>
                   <i className="fa fa-book" />
                 </ToolboxButton>
-                {/* <ToolboxButton onClick={() => deleteSubject(year, code)}>
-                <i className="fa fa-times" />
-                </ToolboxButton> */}
               </SubjectToolbox>
             </SubjectHeader>
             <DeleteButton onClick={() => deleteSubject(year, code)}>

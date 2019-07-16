@@ -2,7 +2,8 @@ import {
   GET_SUBJECT_BEGIN,
   GET_SUBJECT_SUCCESS,
   GET_SUBJECT_FAILURE,
-  REMOVE_SUBJECT
+  REMOVE_SUBJECT,
+  CHANGE_SUBJECT_COLOR
 } from "../actionTypes";
 import axios from "axios";
 
@@ -30,6 +31,18 @@ export const getSubject = (year, studyPeriod, code, name) => dispatch => {
       dispatch(getSubjectSuccess(year, code, name, studyPeriod, res.data))
     )
     .catch(err => dispatch(getSubjectFailure(code, err)));
+};
+
+export const changeSubjectColor = (
+  year,
+  studyPeriod,
+  code,
+  color
+) => dispatch => {
+  dispatch({
+    type: CHANGE_SUBJECT_COLOR,
+    payload: { year, code, studyPeriod, color }
+  });
 };
 
 export const removeSubject = code => ({
