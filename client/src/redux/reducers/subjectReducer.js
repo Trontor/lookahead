@@ -2,7 +2,8 @@ import {
   GET_SUBJECT_BEGIN,
   REMOVE_SUBJECT,
   GET_SUBJECT_SUCCESS,
-  GET_SUBJECT_FAILURE
+  GET_SUBJECT_FAILURE,
+  CHANGE_SUBJECT_COLOR
 } from "../actionTypes";
 import colors from "../../utility/SubjectColors.js";
 
@@ -19,8 +20,22 @@ const findColor = state => {
   } else return "black";
 };
 
+const changeSubjectColor = (state, { code, studyPeriod, year, color }) => {
+  const newState = { ...state };
+  if (
+    state[code] &&
+    state[code].year === year &&
+    state[code].studyPeriod === studyPeriod
+  ) {
+    state[code].color = color;
+  }
+  return newState;
+};
+
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CHANGE_SUBJECT_COLOR:
+      return changeSubjectColor(state, action.payload);
     case GET_SUBJECT_BEGIN:
       const { code, name, year } = action.payload;
       // code: "SWEN30006"

@@ -16,6 +16,12 @@ $opacity: 0.75;
     height: 2.1em !important;
   }
 }
+.fc-view {
+  z-index: 0;
+  table {
+    z-index: 0;
+  }
+}
 
 .lookahead-event-wrapper {
   font-family: Helvetica, Tahoma, Geneva, Verdana, sans-serif;

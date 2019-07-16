@@ -385,8 +385,6 @@ export const generateBackgroundEvents = () => {
         rendering: "background"
       };
       bgEvents.push(event);
-      console.log(event);
-      console.log(generateClassName(cls));
     }
     // Generate bg events for streams
     for (const { streams } of Object.values(data._streamContainers)) {
