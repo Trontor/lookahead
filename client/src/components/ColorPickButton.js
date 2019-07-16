@@ -18,19 +18,17 @@ const Cover = styled.div`
 
 const TwitterWrapper = styled.div`
   > div > div:not(:last-child) {
-    left: ${props => {
-      if (props.tip) {
-        const boundary = props.tip.x > 276 ? 276 : props.tip.x;
-        return boundary - 20;
+    ${({ tip }) => {
+      if (!tip) {
+        return null;
       }
-      return 12;
-    }}px !important;
-    ${props => {
-      if (props.tip.x > 250) {
-        return css`
+      const xCoord = tip.x;
+      return css`
+        left: ${xCoord > 276 ? 276 - 20 : xCoord - 20}px !important;
+        @media screen and (min-width: 960px) {
           display: none;
-        `;
-      }
+        }
+      `;
     }}
   }
   .twitter-picker {
