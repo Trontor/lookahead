@@ -103,7 +103,6 @@ let currentShownBackgroundEvents = [];
  */
 export const handleEventDragStart = (allEvents, currentEvent) => {
   let REGULAR_EVENTS_OPACITY = getCurrentTheme().dragDropRegularEventOpacity;
-  console.log(getBackgroundEvents());
   // Get all foreground events
   const regularEvents = getRegularEvents();
   // Make them opaque
@@ -113,7 +112,8 @@ export const handleEventDragStart = (allEvents, currentEvent) => {
   // Get all allowed drop events
   const backgroundEvents = getBackgroundEvents().filter(
     e =>
-      e.title === currentEvent.title &&
+      e.classCode.type === currentEvent.extendedProps.classCode.type &&
+      e.classCode.number === currentEvent.extendedProps.classCode.number &&
       e.code === currentEvent.extendedProps.code
   );
   // Show all allowed background events
@@ -197,7 +197,7 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   const startHoursFractional = start.getHours() + start.getMinutes() / 60;
   const dayIndex = start.getDay() - 1;
   const destinationMatch = cls =>
-    cls.description === title &&
+    cls.classCode.type === classCode.type &&
     cls.subjectCode === code &&
     cls.start === startHoursFractional &&
     cls.day === dayIndex;
@@ -373,10 +373,9 @@ export const generateBackgroundEvents = () => {
     }
     // Helper function to generate unique class names for each background event
     const generateClassName = ({ subjectCode, description, streamNumber }) =>
-      `lookahead-background-${subjectCode}-${description}-${streamNumber}`.replace(
-        " ",
-        ""
-      );
+      `lookahead-background-${subjectCode}-${description}-${streamNumber}`
+        .replace(/\W+/g, "-")
+        .toLowerCase();
     // Generate bg events for Variable classes
     for (const cls of data._regularClasses) {
       const event = {
@@ -386,6 +385,8 @@ export const generateBackgroundEvents = () => {
         rendering: "background"
       };
       bgEvents.push(event);
+      console.log(event);
+      console.log(generateClassName(cls));
     }
     // Generate bg events for streams
     for (const { streams } of Object.values(data._streamContainers)) {

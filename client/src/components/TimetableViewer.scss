@@ -8,11 +8,12 @@ $opacity: 0.75;
   background-color: inherit !important;
 }
 
-.fc-slats td, .fc-time-grid td {
+.fc-slats td,
+.fc-time-grid td {
   height: 2.25em !important;
 
   @media screen and (min-width: 960px) {
-    height: 2.2em !important;
+    height: 2.1em !important;
   }
 }
 
@@ -225,7 +226,8 @@ $opacity: 0.75;
       font-size: 8px;
     }
 
-    .fc-loc, .fc-time {
+    .fc-loc,
+    .fc-time {
       font-size: 10px;
     }
 
