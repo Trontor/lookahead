@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Openings from "../utility/RegistrationOpenings";
-import moment from "moment";
-import Countdown from "react-countdown-now";
-import { inherits } from "util";
+import Openings from "../utility/RegistrationOpenings"; 
+import Countdown from "react-countdown-now"; 
 
 const CountdownWrapper = styled.div`
   border-radius: 2px;
@@ -29,8 +27,8 @@ const Opened = styled.span`
 `;
 
 const convertToDate = rawTime => {
-  const parsed = new moment(rawTime);
-  return parsed.toDate();
+  const parsed = new Date(rawTime);
+  return parsed;
 };
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
