@@ -8,6 +8,7 @@ import OptimisationTypes from "../optimiser/optimisationTypes";
 import Notifications from "./Notifications";
 import styled from "styled-components";
 import Optimisations from "./Optimisations";
+import RegistrationCountdown from "./RegistrationCountdown";
 
 const Grid = styled.div`
   grid-template-columns: 100%;
@@ -157,6 +158,7 @@ export default function Planner() {
     <Grid>
       <Sidebar>
         <Notifications />
+        <RegistrationCountdown />
         <SubjectSelect />
         <Subjects />
         <Optimisations />
