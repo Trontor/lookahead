@@ -27,15 +27,15 @@ const SubjectSelect = props => {
   const [inputValue, setInputValue] = useState("test");
   // Uncomment below to load subjects at the start
   useEffect(() => {
-    if (!(!process.env.NODE_ENV || process.env.NODE_ENV === "development"))
-      return;
-    localStorage.removeItem("notifications");
     let localStorageSubjects = JSON.parse(localStorage.getItem("subjects"));
     if (!localStorageSubjects) return;
     for (const subject of localStorageSubjects) {
       const { year, code, name, studyPeriod } = subject;
       dispatch(getSubject(year, studyPeriod, code, name));
     }
+    if (!(!process.env.NODE_ENV || process.env.NODE_ENV === "development"))
+      return;
+    localStorage.removeItem("notifications");
   }, [dispatch]);
 
   useEffect(() => {
