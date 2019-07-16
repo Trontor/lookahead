@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TwitterPicker } from "react-color";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import SubjectColors from "../utility/SubjectColors";
 
 const PopOver = styled.div`
@@ -20,12 +20,18 @@ const TwitterWrapper = styled.div`
   > div > div:not(:last-child) {
     left: ${props => {
       if (props.tip) {
-        console.log(props.tip.x);
         const boundary = props.tip.x > 276 ? 276 : props.tip.x;
         return boundary - 20;
       }
       return 12;
     }}px !important;
+    ${props => {
+      if (props.tip.x > 250) {
+        return css`
+          display: none;
+        `;
+      }
+    }}
   }
   .twitter-picker {
     margin-top: 10px;
@@ -52,7 +58,7 @@ export default function ColorPickButton(props) {
       </Button>
 
       {displayColorPicker ? (
-        <PopOver>
+        <PopOver id="color-pop-over">
           <Cover onClick={handleClose} />
           <TwitterWrapper tip={tipPosition}>
             <TwitterPicker
