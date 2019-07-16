@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TwitterPicker } from "react-color";
 import styled from "styled-components";
+import SubjectColors from "../utility/SubjectColors";
 
 const PopOver = styled.div`
   position: absolute;
@@ -54,7 +55,10 @@ export default function ColorPickButton(props) {
         <PopOver>
           <Cover onClick={handleClose} />
           <TwitterWrapper tip={tipPosition}>
-            <TwitterPicker onChange={props.onColorChange} />
+            <TwitterPicker
+              colors={SubjectColors}
+              onChange={props.onColorChange}
+            />
           </TwitterWrapper>
         </PopOver>
       ) : null}
