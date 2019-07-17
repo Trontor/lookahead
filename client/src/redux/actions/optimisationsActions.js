@@ -5,7 +5,8 @@ import {
   SET_SKIP_LECTURES,
   SET_CRAM_CLASSES,
   SET_BREAK,
-  SET_MINIMISE_CLASHES
+  SET_MINIMISE_CLASHES,
+  SET_KEEP_CLASSES_STREAMED
 } from "../actionTypes";
 
 export const setTimeRange = (min, max) => dispatch => {
@@ -30,6 +31,10 @@ export const setCramClasses = truthy => dispatch => {
 
 export const setMinimiseClashes = truthy => dispatch => {
   dispatch({ type: SET_MINIMISE_CLASHES, payload: truthy });
+};
+
+export const setKeepClassesStreamed = truthy => dispatch => {
+  dispatch({ type: SET_KEEP_CLASSES_STREAMED, payload: truthy });
 };
 
 export const setBreak = hours => dispatch => {
