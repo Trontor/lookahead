@@ -87,7 +87,12 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <HeaderText>
-        Lookahead <EyeEmoji>👀</EyeEmoji>
+        <img
+          height="20"
+          alt="Lookahead Logo"
+          src={require("../lookahead.png")}
+        />
+        {/* Lookahead <EyeEmoji>👀</EyeEmoji> */}
       </HeaderText>
       <HeaderSubtitle>
         A University of Melbourne Timetable Optimiser
