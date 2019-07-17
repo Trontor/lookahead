@@ -8,6 +8,7 @@ import OptimisationTypes from "../optimiser/optimisationTypes";
 import Notifications from "./Notifications";
 import styled from "styled-components";
 import Optimisations from "./Optimisations";
+import Sponsors from "./Sponsors";
 import RegistrationCountdown from "./RegistrationCountdown";
 
 const Grid = styled.div`
@@ -172,6 +173,7 @@ export default function Planner() {
         </OptimiseButtonWrapper>
       </Sidebar>
       <Main>
+        <Sponsors />
         <TimetableViewer />
       </Main>
     </Grid>

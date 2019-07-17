@@ -5,11 +5,14 @@
   "main": "dist/server.js",
   "dependencies": {
     "@types/cheerio": "^0.22.11",
+    "@types/dotenv": "^6.1.1",
     "@types/moment": "^2.13.0",
     "@types/request": "^2.48.1",
     "cheerio": "^1.0.0-rc.3",
     "concurrently": "^4.1.0",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "googleapis": "^39.2.0",
     "moment": "^2.24.0",
     "request": "^2.88.0"
   },
@@ -31,7 +34,7 @@
     "dev-debug": "concurrently \"npm run express-debug\" \"npm run client\"",
     "express-debug": "node --inspect=5000 -r ts-node/register server.ts",
     "express-debug:watch": "nodemon",
-    "server": "nodemon",
+    "server": "nodemon --exec ts-node server.ts",
     "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
