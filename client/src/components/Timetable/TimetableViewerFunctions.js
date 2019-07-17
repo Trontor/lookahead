@@ -20,6 +20,10 @@ export const getRegularEvents = () => {
   return store.getState().timetable.regularEvents;
 };
 
+export const getKeepClassesStreamed = () => {
+  return store.getState().optimisations.keepClassesStreamed;
+};
+
 const getCurrentTheme = () => {
   return store.getState().theme;
 };
@@ -151,8 +155,10 @@ export const handleEventAllow = (dropLocation, draggedEvent, allEvents) => {
         event.streamNumber === intersectingEvent.streamNumber &&
         event.className !== intersectingEvent.className
     );
-    sameStream.forEach(e => currentStreamIndicators.push(e));
-    sameStream.forEach(showEventIndicator);
+    if (getKeepClassesStreamed()) {
+      sameStream.forEach(e => currentStreamIndicators.push(e));
+      sameStream.forEach(showEventIndicator);
+    }
     return true;
   } else {
     currentStreamIndicators.forEach(hideBackgroundEvent);
@@ -211,7 +217,14 @@ export const handleEventDrop = ({ event, oldEvent }) => {
     );
     const destinationStreamNumber = destinationStream.streamNumbers[0];
     console.log(fromStreamNumber, destinationStreamNumber);
-    moveStream(code, classCode.type, fromStreamNumber, destinationStreamNumber);
+    // Todo: make this update the timetable properly
+    if (getKeepClassesStreamed())
+      moveStream(
+        code,
+        classCode.type,
+        fromStreamNumber,
+        destinationStreamNumber
+      );
     return;
   }
   const matchingClasses = regularClasses.filter(destinationMatch);
