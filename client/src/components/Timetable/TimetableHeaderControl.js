@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {
   nextTimetable,
   previousTimetable
-} from "../redux/actions/optimiserActions";
+} from "../../redux/actions/optimiserActions";
 import ArrowKeysReact from "arrow-keys-react";
 
 const HeaderWrapper = styled.div`

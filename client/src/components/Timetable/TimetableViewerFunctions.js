@@ -1,13 +1,13 @@
 import moment from "moment";
 import $ from "jquery";
-import store from "../redux/store";
+import store from "../../redux/store";
 import {
   createCustomTimetable,
   changeToCustomView,
   updateCustomTimetable,
   updateTimetable
-} from "../redux/actions/optimiserActions";
-import Timetable from "../optimiser/Timetable";
+} from "../../redux/actions/optimiserActions";
+import Timetable from "../../optimiser/Timetable";
 export const getSubjects = () => {
   return store.getState().subjects;
 };
