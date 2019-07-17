@@ -8,6 +8,7 @@ import OptimisationTypes from "../optimiser/optimisationTypes";
 import Notifications from "./Notifications";
 import styled from "styled-components";
 import Optimisations from "./Optimisations";
+import Sponsors from "./Sponsors";
 
 const Grid = styled.div`
   grid-template-columns: 100%;
@@ -170,6 +171,7 @@ export default function Planner() {
         </OptimiseButtonWrapper>
       </Sidebar>
       <Main>
+        <Sponsors />
         <TimetableViewer />
       </Main>
     </Grid>

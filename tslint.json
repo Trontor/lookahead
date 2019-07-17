@@ -6,6 +6,7 @@
     "trailing-comma": [false],
     "arrow-parens": false,
     "no-console": false,
+    "object-literal-sort-keys": false,
     "prefer-for-of": false,
     "variable-name": {
       "options": ["allow-leading-underscore"]

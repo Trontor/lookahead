@@ -10,6 +10,11 @@ export const GET_SUBJECT_FAILURE = "GET_SUBJECT_FAILURE";
 export const REMOVE_SUBJECT = "REMOVE_SUBJECT";
 export const CHANGE_SUBJECT_COLOR = "CHANGE_SUBJECT_COLOR";
 
+// Clubs
+export const GET_CLUBS_BEGIN = "GET_CLUBS_BEGIN";
+export const GET_CLUBS_SUCCESS = "GET_CLUBS_SUCCESS";
+export const GET_CLUBS_FAILURE = "GET_CLUBS_FAILURE";
+
 // Optimisations
 export const SET_TIME_RANGE = "SET_TIME_RANGE";
 export const ADD_AVOID_DAY = "SET_AVOID_DAY";
