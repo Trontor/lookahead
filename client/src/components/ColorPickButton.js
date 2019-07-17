@@ -6,6 +6,15 @@ import SubjectColors from "../utility/SubjectColors";
 const PopOver = styled.div`
   position: absolute;
   z-index: 100;
+  left: 25%;
+
+  @media screen and (min-width: 768px) {
+    transform: translateX(-190px);
+  }
+
+  @media screen and (min-width: 960px) {
+    transform: translateX(-20px);
+  }
 `;
 
 const Cover = styled.div`
@@ -25,14 +34,18 @@ const TwitterWrapper = styled.div`
       const xCoord = tip.x;
       return css`
         left: ${xCoord > 276 ? 276 - 20 : xCoord - 20}px !important;
+
         @media screen and (min-width: 960px) {
           display: none;
         }
       `;
     }}
   }
+
   .twitter-picker {
     margin-top: 10px;
+    max-width: 204px;
+    padding-bottom: 8px;
   }
 `;
 
@@ -52,7 +65,7 @@ export default function ColorPickButton(props) {
   return (
     <>
       <Button onClick={handleClick}>
-        <i className="fa fa-paint-brush" />
+      <i class="fas fa-palette"></i>
       </Button>
 
       {displayColorPicker ? (
@@ -60,8 +73,9 @@ export default function ColorPickButton(props) {
           <Cover onClick={handleClose} />
           <TwitterWrapper tip={tipPosition}>
             <TwitterPicker
-              colors={SubjectColors}
+              colors={SubjectColors.reverse()}
               onChange={props.onColorChange}
+              triangle = "hide"
             />
           </TwitterWrapper>
         </PopOver>
