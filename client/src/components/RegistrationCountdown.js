@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Openings from "../utility/RegistrationOpenings"; 
-import Countdown from "react-countdown-now"; 
+import Openings from "../utility/RegistrationOpenings";
+import Countdown from "react-countdown-now";
 
 const CountdownWrapper = styled.div`
   border-radius: 2px;

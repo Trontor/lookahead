@@ -65,20 +65,22 @@ export default function ColorPickButton(props) {
   return (
     <>
       <Button onClick={handleClick}>
-      <i class="fas fa-palette"></i>
+        <i class="fas fa-palette" />
       </Button>
 
       {displayColorPicker ? (
-        <PopOver id="color-pop-over">
-          <Cover onClick={handleClose} />
-          <TwitterWrapper tip={tipPosition}>
-            <TwitterPicker
-              colors={SubjectColors.reverse()}
-              onChange={props.onColorChange}
-              triangle = "hide"
-            />
-          </TwitterWrapper>
-        </PopOver>
+        <>
+          <Cover id="color-cover" onClick={handleClose} />
+          <PopOver id="color-pop-over">
+            <TwitterWrapper tip={tipPosition}>
+              <TwitterPicker
+                colors={SubjectColors.reverse()}
+                onChange={props.onColorChange}
+                triangle="hide"
+              />
+            </TwitterWrapper>
+          </PopOver>
+        </>
       ) : null}
     </>
   );
