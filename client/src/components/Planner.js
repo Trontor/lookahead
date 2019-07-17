@@ -1,11 +1,11 @@
 import React from "react";
 import SubjectSelect from "./SubjectSelect";
-import Subjects from "./Subjects";
-import TimetableViewer from "./TimetableViewer";
+import Subjects from "./SubjectItem/Subjects";
+import TimetableViewer from "./Timetable/TimetableViewer";
 import Notifications from "./Notifications";
 import styled from "styled-components";
-import Optimisations from "./Optimisations";
-import Sponsors from "./Sponsors";
+import Optimisations from "./Optimisations/Optimisations";
+import Sponsors from "./Sponsors/Sponsors";
 import OptimiseButton from "./OptimiseButton";
 import RegistrationCountdown from "./RegistrationCountdown";
 

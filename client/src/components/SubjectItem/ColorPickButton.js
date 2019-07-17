@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TwitterPicker } from "react-color";
 import styled, { css } from "styled-components";
-import SubjectColors from "../utility/SubjectColors";
+import SubjectColors from "../../utility/SubjectColors";
 
 const PopOver = styled.div`
   position: absolute;
@@ -74,7 +74,7 @@ export default function ColorPickButton(props) {
           <PopOver id="color-pop-over">
             <TwitterWrapper tip={tipPosition}>
               <TwitterPicker
-                colors={SubjectColors.reverse()}
+                colors={[...SubjectColors].reverse()}
                 onChange={props.onColorChange}
                 triangle="hide"
               />

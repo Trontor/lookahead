@@ -14,7 +14,7 @@ import {
   setCramClasses,
   addAvoidDay,
   removeAvoidDay
-} from "../redux/actions/optimisationsActions";
+} from "../../redux/actions/optimisationsActions";
 
 const OptimisationsWrapper = styled.div`
   text-align: center;

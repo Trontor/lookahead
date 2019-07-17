@@ -4,7 +4,7 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import "./TimetableViewer.scss";
-import handleClassRender from "../utility/ClassRender";
+import handleClassRender from "../../utility/ClassRender";
 import {
   classToEvent,
   handleEventAllow,
@@ -13,12 +13,10 @@ import {
   generateBackgroundEvents,
   handleEventDrop
 } from "./TimetableViewerFunctions";
-import { updateEvents } from "../redux/actions/timetableActions";
-import Optimisations from "./Optimisations";
+import { updateEvents } from "../../redux/actions/timetableActions";
 import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
-import CustomTimetableControl from "./CustomTimetableControl";
 
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);

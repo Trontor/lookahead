@@ -5,6 +5,8 @@ const regularTheme = {
   cardBg: "#fefefe",
   text: "#3f3844",
 
+  UMSUButtonBg: "rgb(104,33,122)",
+
   main: "teal",
   mainDark: "#00626C",
   secondary: "deepskyblue",
@@ -13,7 +15,7 @@ const regularTheme = {
 
   dragDropRegularEventOpacity: 0.15,
   dragDropEventBorder: "2px dotted green",
-  dragDropEventBg: "red",
+  dragDropEventBg: "red"
 };
 
 const darkTheme = {
@@ -23,6 +25,8 @@ const darkTheme = {
   cardBg: "#3E3E4A",
   text: "#f5f5f5",
 
+  UMSUButtonBg: "rgb(104,33,122)",
+
   main: "#403F4C",
   mainDark: "#4A395D",
   secondary: "#524864",
@@ -31,7 +35,7 @@ const darkTheme = {
 
   dragDropRegularEventOpacity: 0.15,
   dragDropEventBorder: "2px dotted orange",
-  dragDropEventBg: "purple",
+  dragDropEventBg: "purple"
 };
 
 export { regularTheme, darkTheme };
