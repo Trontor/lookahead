@@ -6,6 +6,7 @@ const regularTheme = {
   text: "#3f3844",
 
   UMSUButtonBg: "rgb(104,33,122)",
+  SponsorLogoBg: "inherit",
 
   main: "teal",
   mainDark: "#00626C",
@@ -26,6 +27,7 @@ const darkTheme = {
   text: "#f5f5f5",
 
   UMSUButtonBg: "rgb(104,33,122)",
+  SponsorLogoBg: "white",
 
   main: "#403F4C",
   mainDark: "#4A395D",
