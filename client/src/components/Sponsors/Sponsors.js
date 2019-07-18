@@ -7,6 +7,7 @@ import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
 const filterClubs = (subjectCodes, sponsors) => {
   const goldSilver = [];
   const bronze = [];
+  console.log(sponsors);
   for (const sponsor of sponsors) {
     const { tier, include } = sponsor;
     if (tier === GOLD) {
@@ -28,6 +29,7 @@ const filterClubs = (subjectCodes, sponsors) => {
       bronze.push(sponsor);
     }
   }
+
   return { bronze, goldSilver };
 };
 
