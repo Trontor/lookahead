@@ -27,7 +27,7 @@ export const getClubSheetData = (): Promise<string[][]> => {
         const sheets = google.sheets({ version: "v4", auth });
         sheets.spreadsheets.values.get(
           {
-            range: "Sheet1!A2:G",
+            range: "Sheet1!A2:Z",
             spreadsheetId: "1J_qPZdAIMVLwZWlslRvGd-QmA6ov4yvK0zcidAsArZU"
           },
           (err2, res) => {
