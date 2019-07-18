@@ -31,7 +31,12 @@ const filterClubs = (subjectCodes, sponsors) => {
   return { bronze, goldSilver };
 };
 
-const SponsorTable = styled.table``;
+const SponsorTable = styled.table`
+  display: none;
+  @media screen and (min-width: 960px) {
+    display: table;
+  }
+`;
 
 const SponsorWrapper = styled.div`
   border: 1px solid #e2e2e2;
