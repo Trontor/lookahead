@@ -3,6 +3,11 @@
 
 $opacity: 0.75;
 
+.reserved-event {
+  background-color: gray;
+  border: none;
+  font-size: 20px;
+}
 // Removes the yellow background highlight for the current day
 .fc-today {
   background-color: inherit !important;

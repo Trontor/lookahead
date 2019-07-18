@@ -5,7 +5,8 @@ import {
   SET_SKIP_LECTURES,
   SET_CRAM_CLASSES,
   SET_BREAK,
-  SET_MINIMISE_CLASHES
+  SET_MINIMISE_CLASHES,
+  SET_KEEP_CLASSES_STREAMED
 } from "../actionTypes";
 
 const initialState = {
@@ -14,7 +15,8 @@ const initialState = {
   skipLectures: false,
   cramClasses: true,
   breakHours: 24,
-  minimiseClashes: true
+  minimiseClashes: true,
+  keepClassesStreamed: true
 };
 
 export default (state = initialState, action) => {
@@ -39,6 +41,8 @@ export default (state = initialState, action) => {
       };
     case SET_SKIP_LECTURES:
       return { ...state, skipLectures: action.payload };
+    case SET_KEEP_CLASSES_STREAMED:
+      return { ...state, keepClassesStreamed: action.payload };
     case SET_CRAM_CLASSES:
       return { ...state, cramClasses: action.payload };
     case SET_BREAK:

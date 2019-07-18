@@ -7,7 +7,9 @@ import {
   CREATE_CUSTOM_TIMETABLE,
   VIEW_CUSTOM_TIMETABLES,
   VIEW_GENERATED_TIMETABLES,
-  UPDATE_CUSTOM_TIMETABLE
+  UPDATE_CUSTOM_TIMETABLE,
+  ADD_RESERVED,
+  REMOVE_RESERVED
 } from "../actionTypes";
 
 import Optimiser from "../../optimiser/Optimiser";
@@ -38,14 +40,30 @@ export const changeToCustomView = id => dispatch => {
   dispatch({ type: VIEW_CUSTOM_TIMETABLES, payload: id });
 };
 
-export const optimise = (subjects, optimisations, restrictions) => dispatch => {
+export const addReservedEvent = event => dispatch => {
+  dispatch({ type: ADD_RESERVED, payload: event });
+};
+
+export const removeReservedEvent = event => dispatch => {
+  dispatch({ type: REMOVE_RESERVED, payload: event });
+};
+
+export const optimise = (
+  subjects,
+  optimisations,
+  restrictions,
+  reservations
+) => dispatch => {
   const optimiser = new Optimiser(subjects);
   optimiser.applyTimeRestrictions(
     restrictions.earliestStart,
     restrictions.latestFinish
   );
   dispatch({ type: BEGIN_OPTIMISATION });
-  const { timetables, time } = optimiser.generateAndOptimise(optimisations);
+  const { timetables, time } = optimiser.generateAndOptimise(
+    optimisations,
+    reservations
+  );
   dispatch({
     type: COMPLETE_OPTIMISATION,
     payload: { timetables }

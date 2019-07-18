@@ -1,4 +1,15 @@
-const colors = ["#66CDAA", "#FC7C70", "#FEBF5D", "#8963CA", "#84B4C8"];
+const colors = [
+  "#B5ECAA",
+  "#66CDAA",
+  "#84B4C8",
+  "#AFEEEE",
+  "#99CEFF",
+  "#9B73DF",
+  "#D581E8",
+  "#FF99CD",
+  "#FC7C70",
+  "#FEBF5D"
+];
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -8,4 +19,4 @@ function shuffleArray(array) {
 }
 
 // shuffleArray(colors);
-export default colors.reverse();
+export default colors;

@@ -16,7 +16,7 @@ const HeaderWrapper = styled.div`
   color: white;
   padding: 14px 12px;
   margin: 0px;
-  z-index: 2;
+  z-index: 1;
   position: relative;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.12);
 
@@ -87,7 +87,12 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <HeaderText>
-        Lookahead <EyeEmoji>👀</EyeEmoji>
+        <img
+          height="20"
+          alt="Lookahead Logo"
+          src={require("../lookahead.png")}
+        />
+        {/* Lookahead <EyeEmoji>👀</EyeEmoji> */}
       </HeaderText>
       <HeaderSubtitle>
         A University of Melbourne Timetable Optimiser

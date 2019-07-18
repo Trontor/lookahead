@@ -13,8 +13,9 @@ import {
   setMinimiseClashes,
   setCramClasses,
   addAvoidDay,
-  removeAvoidDay
-} from "../redux/actions/optimisationsActions";
+  removeAvoidDay,
+  setKeepClassesStreamed
+} from "../../redux/actions/optimisationsActions";
 
 const OptimisationsWrapper = styled.div`
   text-align: center;
@@ -30,8 +31,8 @@ const OptimisationsContainer = styled.div`
 
 const Header = styled.h1`
   text-align: center;
-  line-height: 0.8em;
-  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 `;
 
 const Subheader = styled.h2`
@@ -104,21 +105,17 @@ const formatRangeLabel = value => {
 };
 
 function Optimisations() {
-  // const [longestRunToggled, setLongestRunToggled] = useState(false);
-  // const [longestRun, setLongestRun] = useState(24);
-  // const [range, setRange] = useState({ min: 8, max: 22 });
   const dispatch = useDispatch();
   const optimisations = useSelector(state => state.optimisations);
-  // console.log(optimisations);
-
   const [longestRunToggled, setLongestRunToggled] = useState(false);
   const {
     range,
-    avoidDays,
+    /*avoidDays,*/
     skipLectures,
     cramClasses,
     breakHours,
-    minimiseClashes
+    minimiseClashes,
+    keepClassesStreamed
   } = optimisations;
 
   const changeRange = ({ min, max }) => {
@@ -246,6 +243,20 @@ function Optimisations() {
             </HourInputWrapper>
           </Optimisation>
         )}
+        <Optimisation>
+          <input
+            class="styled-checkbox"
+            id="keep-classes-streamed-toggle"
+            type="checkbox"
+            checked={keepClassesStreamed}
+            onChange={({ target: { checked } }) =>
+              dispatch(setKeepClassesStreamed(checked))
+            }
+          />
+          <label for="keep-classes-streamed-toggle">
+            Keep classes streamed
+          </label>
+        </Optimisation>
       </OptimisationsContainer>
     </OptimisationsWrapper>
   );

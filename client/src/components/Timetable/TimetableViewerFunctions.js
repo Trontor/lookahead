@@ -1,13 +1,15 @@
 import moment from "moment";
 import $ from "jquery";
-import store from "../redux/store";
+import store from "../../redux/store";
 import {
   createCustomTimetable,
   changeToCustomView,
   updateCustomTimetable,
-  updateTimetable
-} from "../redux/actions/optimiserActions";
-import Timetable from "../optimiser/Timetable";
+  updateTimetable,
+  addReservedEvent,
+  removeReservedEvent
+} from "../../redux/actions/optimiserActions";
+import Timetable from "../../optimiser/Timetable";
 export const getSubjects = () => {
   return store.getState().subjects;
 };
@@ -18,6 +20,10 @@ export const getBackgroundEvents = () => {
 
 export const getRegularEvents = () => {
   return store.getState().timetable.regularEvents;
+};
+
+export const getKeepClassesStreamed = () => {
+  return store.getState().optimisations.keepClassesStreamed;
 };
 
 const getCurrentTheme = () => {
@@ -93,6 +99,46 @@ export const classToEvent = cls => {
   };
 };
 
+// When an event is clicked
+// https://fullcalendar.io/docs/eventClick
+export const handleEventClick = (eventClickInfo, eventCallback) => {
+  const { event } = eventClickInfo;
+  if (event.id === "reserved") {
+    store.dispatch(removeReservedEvent(event));
+    return;
+  }
+  eventCallback(event);
+};
+
+// Create reserved events
+// https://fullcalendar.io/docs/select-callback
+export const handleSelect = selectionInfo => {
+  const { start, end } = selectionInfo;
+  const newReservedEvent = createReservedEvent(start, end);
+  if (start.getDay() !== end.getDay()) {
+    alert("Sorry! No cross-day reserved events allowed.");
+    return;
+  }
+  store.dispatch(addReservedEvent(newReservedEvent));
+};
+
+export const createReservedEvent = (start, end) => {
+  const differenceInMinutes = (end - start) / 60000;
+  if (differenceInMinutes < 30) {
+    end.setMinutes(start.getMinutes() + 30);
+  }
+  return {
+    id: "reserved",
+    title: "Reserved",
+    start: start,
+    end: end,
+    editable: false,
+    stick: true,
+    //color:'orange',
+    className: "reserved-event"
+  };
+};
+
 let currentShownBackgroundEvents = [];
 /**
  * Handles when an event has started to be dragged
@@ -151,8 +197,10 @@ export const handleEventAllow = (dropLocation, draggedEvent, allEvents) => {
         event.streamNumber === intersectingEvent.streamNumber &&
         event.className !== intersectingEvent.className
     );
-    sameStream.forEach(e => currentStreamIndicators.push(e));
-    sameStream.forEach(showEventIndicator);
+    if (getKeepClassesStreamed()) {
+      sameStream.forEach(e => currentStreamIndicators.push(e));
+      sameStream.forEach(showEventIndicator);
+    }
     return true;
   } else {
     currentStreamIndicators.forEach(hideBackgroundEvent);
@@ -211,7 +259,14 @@ export const handleEventDrop = ({ event, oldEvent }) => {
     );
     const destinationStreamNumber = destinationStream.streamNumbers[0];
     console.log(fromStreamNumber, destinationStreamNumber);
-    moveStream(code, classCode.type, fromStreamNumber, destinationStreamNumber);
+    // Todo: make this update the timetable properly
+    if (getKeepClassesStreamed())
+      moveStream(
+        code,
+        classCode.type,
+        fromStreamNumber,
+        destinationStreamNumber
+      );
     return;
   }
   const matchingClasses = regularClasses.filter(destinationMatch);
