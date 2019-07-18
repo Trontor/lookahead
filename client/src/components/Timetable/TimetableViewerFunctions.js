@@ -101,11 +101,13 @@ export const classToEvent = cls => {
 
 // When an event is clicked
 // https://fullcalendar.io/docs/eventClick
-export const handleEventClick = eventClickInfo => {
+export const handleEventClick = (eventClickInfo, eventCallback) => {
   const { event } = eventClickInfo;
   if (event.id === "reserved") {
     store.dispatch(removeReservedEvent(event));
+    return;
   }
+  eventCallback(event);
 };
 
 // Create reserved events
