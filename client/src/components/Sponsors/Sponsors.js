@@ -5,12 +5,12 @@ import { fetchClubList } from "../../redux/actions/sponsorActions";
 import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
 
 const filterClubs = (subjectCodes, sponsors) => {
-  const returnSponsors = [];
-
+  const goldSilver = [];
+  const bronze = [];
   for (const sponsor of sponsors) {
     const { tier, include } = sponsor;
     if (tier === GOLD) {
-      returnSponsors.push(sponsor);
+      goldSilver.push(sponsor);
       continue;
     }
     if (!include) {
@@ -22,13 +22,26 @@ const filterClubs = (subjectCodes, sponsors) => {
     if (!matchingSubjects) {
       continue;
     }
-    returnSponsors.push(sponsor);
+    if (tier === SILVER) {
+      goldSilver.push(sponsor);
+    } else if (tier === BRONZE) {
+      bronze.push(sponsor);
+    }
   }
-  return returnSponsors;
+  return { bronze, goldSilver };
 };
 
 const SponsorTable = styled.table`
-  border: 1px solid red;
+  display: none;
+  @media screen and (min-width: 960px) {
+    display: table;
+  }
+`;
+
+const SponsorWrapper = styled.div`
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
 `;
 const SponsorRow = styled.tr`
   margin: 2.5px 0;
@@ -47,7 +60,7 @@ const UMSUButton = styled.a`
   font-size: 16px;
   height: 30px;
   background-color: ${props => props.theme.UMSUButtonBg};
-  width: 100%;
+  width: 30px;
   border: none;
   border-radius: 3px;
 `;
@@ -57,6 +70,33 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
 }))`
   padding-top: 7px;
   background-color: #3b5998;
+`;
+const Logo = styled.img.attrs(props => ({ width: "120px", height: "60px" }))`
+  object-fit: scale-down;
+  background-color: ${props => props.theme.SponsorLogoBg};
+  mix-blend-mode: multiply;
+`;
+
+const BronzeCardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+`;
+
+const BronzeCard = styled.div`
+  flex: 0 0 250px;
+  text-align: center;
+  font-size: 12px;
+  span {
+    font-weight: bold;
+  }
+`;
+const BronzeCardButtonGroup = styled.div`
+  margin-top: 10px;
+  & > a:not(:last-of-type) {
+    margin-right: 10px;
+  }
 `;
 
 export default function Sponsors() {
@@ -73,44 +113,73 @@ export default function Sponsors() {
     dispatch(fetchClubList());
   }, [dispatch]);
   // Filter sponsors by currently entered subjects
-  const filteredClubs = filterClubs(Object.keys(subjects), sponsors.clubs);
-  if (!optimiser.timetables || !filteredClubs.length) {
+  const { bronze, goldSilver } = filterClubs(
+    Object.keys(subjects),
+    sponsors.clubs
+  );
+  if (!optimiser.timetables || (!goldSilver.length && !bronze.length)) {
     return null;
   }
   return (
-    <SponsorTable>
-      {filteredClubs &&
-        filteredClubs.map(entry => {
-          const {
-            name,
-            logoURL,
-            description,
-            umsu,
-            facebook,
-            tier,
-            include
-          } = entry;
-          return (
-            <SponsorRow>
-              <SponsorCell>
-                <img
-                  style={{ objectFit: "cover" }}
-                  alt={`${name} logo`}
-                  src={logoURL}
-                  width={120}
-                  height={60}
-                />
-              </SponsorCell>
-              <SponsorCell>{description}</SponsorCell>
-              <SponsorCell>
-                <UMSUButton href={umsu}>UMSU</UMSUButton>
-              </SponsorCell>
-              <SponsorCell>
-                <FacebookButton href={facebook} />
-              </SponsorCell>
-            </SponsorRow>
-          );
-        })}
-    </SponsorTable>
+    <>
+      <SponsorWrapper>
+        <SponsorTable>
+          {goldSilver &&
+            goldSilver.map(entry => {
+              const {
+                name,
+                logoURL,
+                description,
+                umsu,
+                facebook,
+                signup,
+                tier,
+                include
+              } = entry;
+              return (
+                <SponsorRow>
+                  <SponsorCell>
+                    <Logo alt={`${name} logo`} src={logoURL} />
+                  </SponsorCell>
+                  <SponsorCell>{description}</SponsorCell>
+                  <SponsorCell>
+                    <UMSUButton href={signup}>Website</UMSUButton>
+                  </SponsorCell>
+                  <SponsorCell>
+                    <UMSUButton href={umsu}>UMSU</UMSUButton>
+                  </SponsorCell>
+                  <SponsorCell>
+                    <FacebookButton href={facebook} />
+                  </SponsorCell>
+                </SponsorRow>
+              );
+            })}
+        </SponsorTable>
+      </SponsorWrapper>
+      <BronzeCardWrapper>
+        {bronze &&
+          bronze.map(entry => {
+            const {
+              name,
+              logoURL,
+              description,
+              umsu,
+              facebook,
+              tier,
+              include
+            } = entry;
+            return (
+              <BronzeCard>
+                <Logo alt={`${name} logo`} width="100%" src={logoURL} />
+                <span>{name}</span>
+                <BronzeCardButtonGroup>
+                  <UMSUButton href={umsu}>UMSU</UMSUButton>
+                  <FacebookButton href={facebook} />
+                </BronzeCardButtonGroup>
+              </BronzeCard>
+            );
+          })}
+      </BronzeCardWrapper>
+    </>
   );
 }

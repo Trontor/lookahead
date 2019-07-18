@@ -7,6 +7,7 @@ interface ISponsor {
   description: string;
   umsu: string;
   tier: string;
+  signup: string;
   facebook: string;
   include: string[];
 }
@@ -14,7 +15,16 @@ const processRawClubData = (data: string[][]): ISponsor[] => {
   const allSponsors: ISponsor[] = [];
   for (const row of data) {
     console.log(row);
-    const [name, logoURL, description, umsu, facebook, tier, include] = row;
+    const [
+      name,
+      logoURL,
+      description,
+      umsu,
+      facebook,
+      signup,
+      tier,
+      include
+    ] = row;
     let includeArray: string[] = [];
     if (include) {
       includeArray = include.split(",");
@@ -26,6 +36,7 @@ const processRawClubData = (data: string[][]): ISponsor[] => {
       umsu,
       facebook,
       tier,
+      signup,
       include: includeArray
     };
     allSponsors.push(sponsor);

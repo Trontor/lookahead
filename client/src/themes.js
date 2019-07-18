@@ -1,4 +1,6 @@
 const regularTheme = {
+  name: "regular",
+
   headerBg: "#29C7DB",
   bodyBg: "#fbfbfb",
   sidebarBg: "#f8f8f8",
@@ -6,6 +8,7 @@ const regularTheme = {
   text: "#3f3844",
 
   UMSUButtonBg: "rgb(104,33,122)",
+  SponsorLogoBg: "inherit",
 
   main: "teal",
   mainDark: "#00626C",
@@ -19,6 +22,8 @@ const regularTheme = {
 };
 
 const darkTheme = {
+  name: "dark",
+
   headerBg: "#3A3A46",
   bodyBg: "#363642",
   sidebarBg: "#32323C",
@@ -26,6 +31,7 @@ const darkTheme = {
   text: "#f5f5f5",
 
   UMSUButtonBg: "rgb(104,33,122)",
+  SponsorLogoBg: "white",
 
   main: "#403F4C",
   mainDark: "#4A395D",

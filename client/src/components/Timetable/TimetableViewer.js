@@ -25,6 +25,7 @@ import TimetableTips from "./TimetableTips";
 let modalEvent = null;
 const StyledModal = styled(Modal)`
   background-color: green;
+  z-index: 999;
 `;
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);
@@ -167,6 +168,7 @@ export default function TimetableViewer() {
         eventResourceEditable={true}
       />
       <StyledModal
+        style={{ overlay: { zIndex: 10 } }}
         isOpen={modalIsOpen && modalEvent !== null}
         contentLabel="Example Modal"
       >
