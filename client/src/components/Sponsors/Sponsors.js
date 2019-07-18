@@ -52,7 +52,11 @@ const SponsorWrapper = styled.div`
   font-size: 11px;
   color: ${props => props.theme.text};
 
-  @media screen and (min-width: 960px) {
+  /* @media screen and (min-width: 960px) {
+    margin: 0px;
+  } */
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
     margin: 0px;
   }
 `;
@@ -60,11 +64,19 @@ const SponsorWrapper = styled.div`
 const SponsorRow = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 5px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 50%;
+  }
 `;
 
 const SponsorCell = styled.td`
   /* font-size: 12px;
   padding: 0px 5px; */
+`;
+
+const ClubDescription =  styled.div`
 `;
 
 const ButtonWrapper = styled.div`
@@ -76,17 +88,17 @@ const ButtonWrapper = styled.div`
 const UMSUButton = styled.button`
   cursor: pointer;
   display: inline-block;
-  width: 70px;
+  width: 68px;
   height: 26px;
   margin-right: 10px;
   padding: 5px 10px;
   border-radius: 3px;
   color: white;
   font-family: "Quicksand", sans-serif;
+  font-size: 10px;
   text-transform: uppercase;
   background-color: ${props => props.theme.UMSUButtonBg};
   border: none;
-  border-radius: 3px;
 
   &:hover {
     background-color: indigo;
@@ -97,8 +109,9 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
   className: "fab fa-facebook-f"
 }))`
   font-family:  "Font Awesome 5 Brands";
+  font-size: 12px;
   padding-top: 7px;
-  padding-bottom: 8px;
+  padding-bottom: 7px;
   background-color: #3b5998;
   width: 26px;
 
@@ -110,9 +123,11 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
 
 const LogoWrapper = styled.div`
   margin-bottom: -5px;
+  /* text-align: center; */
 `;
 
 const Logo = styled.img.attrs(props => ({ width: "120px", height: "60px" }))`
+  align-self: center;
   object-fit: scale-down;
   background-color: ${props => props.theme.SponsorLogoBg};
   mix-blend-mode: multiply;
@@ -179,15 +194,15 @@ export default function Sponsors() {
             } = entry;
             return (
               <SponsorRow>
-                  <LogoWrapper>
-                    <Logo alt={`${name} logo`} src={logoURL} />
-                  </LogoWrapper>
-                  {description}
-                  <ButtonWrapper>
-                    <a href={signup}><UMSUButton>Website</UMSUButton></a>
-                    <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
-                    <FacebookButton href={facebook} />
-                  </ButtonWrapper>
+                <LogoWrapper>
+                  <Logo alt={`${name} logo`} src={logoURL} />
+                </LogoWrapper>
+                <ClubDescription>{description}</ClubDescription>
+                <ButtonWrapper>
+                  <a href={signup}><UMSUButton>Website</UMSUButton></a>
+                  <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
+                  <FacebookButton href={facebook} />
+                </ButtonWrapper>
               </SponsorRow>
             );
           })}
