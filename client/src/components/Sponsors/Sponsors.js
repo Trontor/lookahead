@@ -33,46 +33,85 @@ const filterClubs = (subjectCodes, sponsors) => {
   return { bronze, goldSilver };
 };
 
-const SponsorTable = styled.table`
-  display: none;
+const SponsorTable = styled.div`
+  /* display: none; */
   @media screen and (min-width: 960px) {
-    display: table;
+    /* display: table; */
   }
 `;
 
 const SponsorWrapper = styled.div`
-  border: 1px solid #e2e2e2;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05), 0 3px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-`;
-const SponsorRow = styled.tr`
-  margin: 2.5px 0;
-`;
-const SponsorCell = styled.td`
-  font-size: 12px;
-  padding: 0px 5px;
+  /* border: 1px solid #e2e2e2; */
+  border-radius: 2px;
+  background: ${props => props.theme.sidebarBg};
+  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
+  margin: 0 10px 5px 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  color: ${props => props.theme.text};
+
+  @media screen and (min-width: 960px) {
+    margin: 0px;
+  }
 `;
 
-const UMSUButton = styled.a`
-  text-decoration: none;
-  color: initial;
+const SponsorRow = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const SponsorCell = styled.td`
+  /* font-size: 12px;
+  padding: 0px 5px; */
+`;
+
+const ButtonWrapper = styled.div`
+  width: 100%;
+  padding-top: 10px;
+  margin-bottom: 10px;
+`;
+
+const UMSUButton = styled.button`
+  cursor: pointer;
+  display: inline-block;
+  width: 70px;
+  height: 26px;
+  margin-right: 10px;
   padding: 5px 10px;
   border-radius: 3px;
   color: white;
-  font-size: 16px;
-  height: 30px;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
   background-color: ${props => props.theme.UMSUButtonBg};
-  width: 30px;
   border: none;
   border-radius: 3px;
+
+  &:hover {
+    background-color: indigo;
+  }
 `;
 
 const FacebookButton = styled(UMSUButton).attrs(() => ({
   className: "fab fa-facebook-f"
 }))`
+  font-family:  "Font Awesome 5 Brands";
   padding-top: 7px;
+  padding-bottom: 8px;
   background-color: #3b5998;
+  width: 26px;
+
+  &:hover {
+    background-color: dodgerblue;
+  }
+
 `;
+
+const LogoWrapper = styled.div`
+  margin-bottom: -5px;
+`;
+
 const Logo = styled.img.attrs(props => ({ width: "120px", height: "60px" }))`
   object-fit: scale-down;
   background-color: ${props => props.theme.SponsorLogoBg};
@@ -94,6 +133,7 @@ const BronzeCard = styled.div`
     font-weight: bold;
   }
 `;
+
 const BronzeCardButtonGroup = styled.div`
   margin-top: 10px;
   & > a:not(:last-of-type) {
@@ -125,38 +165,32 @@ export default function Sponsors() {
   return (
     <>
       <SponsorWrapper>
-        <SponsorTable>
-          {goldSilver &&
-            goldSilver.map(entry => {
-              const {
-                name,
-                logoURL,
-                description,
-                umsu,
-                facebook,
-                signup,
-                tier,
-                include
-              } = entry;
-              return (
-                <SponsorRow>
-                  <SponsorCell>
+        {goldSilver &&
+          goldSilver.map(entry => {
+            const {
+              name,
+              logoURL,
+              description,
+              umsu,
+              facebook,
+              signup,
+              tier,
+              include
+            } = entry;
+            return (
+              <SponsorRow>
+                  <LogoWrapper>
                     <Logo alt={`${name} logo`} src={logoURL} />
-                  </SponsorCell>
-                  <SponsorCell>{description}</SponsorCell>
-                  <SponsorCell>
-                    <UMSUButton href={signup}>Website</UMSUButton>
-                  </SponsorCell>
-                  <SponsorCell>
-                    <UMSUButton href={umsu}>UMSU</UMSUButton>
-                  </SponsorCell>
-                  <SponsorCell>
+                  </LogoWrapper>
+                  {description}
+                  <ButtonWrapper>
+                    <a href={signup}><UMSUButton>Website</UMSUButton></a>
+                    <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
                     <FacebookButton href={facebook} />
-                  </SponsorCell>
-                </SponsorRow>
-              );
-            })}
-        </SponsorTable>
+                  </ButtonWrapper>
+              </SponsorRow>
+            );
+          })}
       </SponsorWrapper>
       <BronzeCardWrapper>
         {bronze &&
