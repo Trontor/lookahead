@@ -1,4 +1,6 @@
 const regularTheme = {
+  name: "regular",
+
   headerBg: "#29C7DB",
   bodyBg: "#fbfbfb",
   sidebarBg: "#f8f8f8",
@@ -20,6 +22,8 @@ const regularTheme = {
 };
 
 const darkTheme = {
+  name: "dark",
+
   headerBg: "#3A3A46",
   bodyBg: "#363642",
   sidebarBg: "#32323C",
