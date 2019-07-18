@@ -16,7 +16,7 @@ const initialState = {
   cramClasses: true,
   breakHours: 24,
   minimiseClashes: true,
-  keepClassesStreamed: false
+  keepClassesStreamed: true
 };
 
 export default (state = initialState, action) => {

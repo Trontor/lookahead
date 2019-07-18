@@ -44,6 +44,10 @@ export const UPDATE_TIMETABLE = "UPDATE_TIMETABLE";
 export const VIEW_GENERATED_TIMETABLES = "VIEW_GENERATED_TIMETABLES";
 export const VIEW_CUSTOM_TIMETABLES = "VIEW_CUSTOM_TIMETABLES";
 
+// Reserved time slots
+export const ADD_RESERVED = "ADD_RESERVED";
+export const REMOVE_RESERVED = "REMOVE_RESERVED";
+
 // Global Theme Switching
 export const SET_THEME = "SET_THEME";
 

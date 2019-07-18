@@ -8,7 +8,7 @@ const CountdownWrapper = styled.div`
   border: 2px solid orange;
 `;
 const Opening = styled.div`
-  margin: 20px;
+  margin: 5px;
   font-size: ${props => (props.prominent ? 24 : 12)}px;
 `;
 
@@ -37,10 +37,16 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     return <Opened>OPENED</Opened>;
   }
   let outputString = "";
-  if (days) outputString += `${days} d `;
-  if (hours) outputString += `${hours} h `;
-  if (minutes) outputString += `${minutes} m `;
-  if (seconds) outputString += `${seconds} s `;
+  if (days) outputString += `${days} day${days === 1 ? "" : "s"}`;
+  if (days < 2) {
+    if (hours) outputString += `${hours} h `;
+    if (hours < 2) {
+      if (minutes) outputString += `${minutes} minutes `;
+      if (minutes < 5) {
+        outputString += `${seconds} seconds `;
+      }
+    }
+  }
   // Render a countdown
   return (
     <OpeningTime days={days} hours={hours} minutes={minutes} seconds={seconds}>

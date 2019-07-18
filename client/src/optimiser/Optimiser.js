@@ -55,8 +55,10 @@ class Optimiser {
    * @param {Array} optimisations An array of
    * {type: OptimisationType, data: Object} that describes the optimisations to
    * apply (in order) to the generated timetable list.
+   * @param {Array} reserved An array of FullCalendar Event Object's that are to
+   * be considered when optimising.
    */
-  generateAndOptimise(optimisations) {
+  generateAndOptimise(optimisations, reserved) {
     // Calculate possible permutations
     const permutations = this.possiblePermutations();
     const random = permutations > this.PERMUTATION_THRESHOLD;
@@ -69,6 +71,18 @@ class Optimiser {
     // Start performance tracking
     const t0 = performance.now();
     const { setPool, streamPool } = this.generateClassPools();
+    // Add reserved events to their own set in the set pool
+    for (const reservedEvent of [...reserved]) {
+      const start = reservedEvent.start;
+      const finish = reservedEvent.end;
+      const transformedEvent = {
+        id: reservedEvent.id,
+        start: start.getHours() + start.getMinutes() / 60,
+        finish: finish.getHours() + finish.getMinutes() / 60,
+        day: start.getDay() - 1
+      };
+      setPool.push([transformedEvent]);
+    }
     // Generate all combinations of the set pool
     const streamCombinations = this.allCombinationsOf(streamPool);
     // If there are stream combinations, we go through each possibility

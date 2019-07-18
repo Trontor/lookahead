@@ -7,12 +7,15 @@ import {
   UPDATE_CUSTOM_TIMETABLE,
   VIEW_GENERATED_TIMETABLES,
   VIEW_CUSTOM_TIMETABLES,
-  UPDATE_TIMETABLE
+  UPDATE_TIMETABLE,
+  ADD_RESERVED,
+  REMOVE_RESERVED
 } from "../actionTypes";
 import uuid from "uuid/v1";
 
 const initialState = {
   optimising: false,
+  reserved: [],
   timetables: null,
   currentView: "generated",
   currentIndex: 0,
@@ -30,6 +33,19 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case ADD_RESERVED:
+      return { ...state, reserved: [...state.reserved, action.payload] };
+    case REMOVE_RESERVED:
+      console.log(state.reserved, action.payload);
+
+      return {
+        ...state,
+        reserved: [
+          ...state.reserved.filter(
+            e => e.start.valueOf() !== action.payload.start.valueOf()
+          )
+        ]
+      };
     case VIEW_GENERATED_TIMETABLES:
       // Regular timetable index
       let tt_index = state.currentIndex;

@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import "./TimetableViewer.scss";
+import Modal from "react-modal";
+import styled from "styled-components";
 import handleClassRender from "../../utility/ClassRender";
 import {
   classToEvent,
@@ -11,13 +13,19 @@ import {
   handleEventDragStart,
   handleEventDragStop,
   generateBackgroundEvents,
-  handleEventDrop
+  handleEventDrop,
+  handleSelect,
+  handleEventClick
 } from "./TimetableViewerFunctions";
 import { updateEvents } from "../../redux/actions/timetableActions";
 import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
 
+let modalEvent = null;
+const StyledModal = styled(Modal)`
+  background-color: green;
+`;
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
@@ -28,8 +36,10 @@ export default function TimetableViewer() {
     currentIndex,
     customTimetables,
     currentCustomIndex,
-    currentView
+    currentView,
+    reserved
   } = optimiser;
+  const [modalIsOpen, setModalOpen] = useState(false);
   useEffect(() => {
     if (!timetables) {
       return;
@@ -49,8 +59,9 @@ export default function TimetableViewer() {
     );
     const events = currentTimetable.classList.map(cls => classToEvent(cls));
     events.push(...generateBackgroundEvents());
+    console.log(reserved);
+    events.push(...reserved);
     console.log("Dispatching events...");
-
     dispatch(updateEvents(events));
   }, [
     currentCustomIndex,
@@ -60,11 +71,15 @@ export default function TimetableViewer() {
     dispatch,
     subjects,
     timetables,
-    optimiser
+    optimiser,
+    reserved
   ]);
-  // const newCustomTimetable = () => {
-  //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
-  // };
+
+  const showEvent = event => {
+    modalEvent = event;
+    console.log("Showing:", modalEvent);
+    setModalOpen(true);
+  };
 
   if (!timetables) {
     return <NoTimetables />;
@@ -128,6 +143,8 @@ export default function TimetableViewer() {
           meridiem: "narrow"
         }}
         events={events}
+        eventClick={eInfo => handleEventClick(eInfo, showEvent)}
+        select={handleSelect}
         eventDrop={handleEventDrop}
         eventDragStart={({ event }) => handleEventDragStart(events, event)}
         eventAllow={(dropLocation, draggedEvent) =>
@@ -138,6 +155,7 @@ export default function TimetableViewer() {
         header={false}
         handleWindowResize={true}
         contentHeight="auto"
+        selectable={true}
         columnHeaderFormat={{ weekday: "short" }}
         minTime="08:00:00"
         maxTime="22:30:00"
@@ -148,6 +166,22 @@ export default function TimetableViewer() {
         allDaySlot={false}
         eventResourceEditable={true}
       />
+      <StyledModal
+        isOpen={modalIsOpen && modalEvent !== null}
+        contentLabel="Example Modal"
+      >
+        {modalEvent && (
+          <div>
+            <h1>{modalEvent.extendedProps.code}</h1>
+            <h2>{modalEvent.extendedProps.subjectName}</h2>
+            <h2>{modalEvent.extendedProps.streamNumber}</h2>
+            <h2>{modalEvent.extendedProps.type}</h2>
+            <h2>{modalEvent.extendedProps.classCode.type}</h2>
+            <h2>{modalEvent.extendedProps.classCode.type}</h2>
+            <h2>{modalEvent.extendedProps.locations}</h2>
+          </div>
+        )}
+      </StyledModal>
     </>
   );
 }

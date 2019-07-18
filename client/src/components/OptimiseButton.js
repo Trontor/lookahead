@@ -42,6 +42,7 @@ let hasAutoOptimised = false;
 export default () => {
   const subjects = useSelector(state => state.subjects);
   const optimisations = useSelector(state => state.optimisations);
+  const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
   // Get subject keys
   const keys = Object.keys(subjects);
@@ -64,6 +65,8 @@ export default () => {
       breakHours,
       minimiseClashes
     } = optimisations;
+    const { reserved } = optimiser;
+
     if (minimiseClashes) {
       optimisationTypes.push({ type: OptimisationTypes.AVOID_CLASHES });
     }
@@ -96,7 +99,7 @@ export default () => {
       earliestStart: min,
       latestFinish: max
     };
-    dispatch(optimise(subjects, optimisationTypes, restrictions));
+    dispatch(optimise(subjects, optimisationTypes, restrictions, reserved));
   };
 
   if (

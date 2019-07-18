@@ -14,6 +14,10 @@ export default function({ event, el }) {
   if (event.rendering && event.rendering === "background") {
     return;
   }
+  // Handle if reserved event
+  if (event.id === "reserved") {
+    return;
+  }
   const content = $(el);
   // Size information of the current class
   const height = content.height();

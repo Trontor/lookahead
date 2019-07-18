@@ -5,7 +5,9 @@ import {
   createCustomTimetable,
   changeToCustomView,
   updateCustomTimetable,
-  updateTimetable
+  updateTimetable,
+  addReservedEvent,
+  removeReservedEvent
 } from "../../redux/actions/optimiserActions";
 import Timetable from "../../optimiser/Timetable";
 export const getSubjects = () => {
@@ -94,6 +96,46 @@ export const classToEvent = cls => {
     end: finish,
     editable: locked,
     durationEditable: false
+  };
+};
+
+// When an event is clicked
+// https://fullcalendar.io/docs/eventClick
+export const handleEventClick = (eventClickInfo, eventCallback) => {
+  const { event } = eventClickInfo;
+  if (event.id === "reserved") {
+    store.dispatch(removeReservedEvent(event));
+    return;
+  }
+  eventCallback(event);
+};
+
+// Create reserved events
+// https://fullcalendar.io/docs/select-callback
+export const handleSelect = selectionInfo => {
+  const { start, end } = selectionInfo;
+  const newReservedEvent = createReservedEvent(start, end);
+  if (start.getDay() !== end.getDay()) {
+    alert("Sorry! No cross-day reserved events allowed.");
+    return;
+  }
+  store.dispatch(addReservedEvent(newReservedEvent));
+};
+
+export const createReservedEvent = (start, end) => {
+  const differenceInMinutes = (end - start) / 60000;
+  if (differenceInMinutes < 30) {
+    end.setMinutes(start.getMinutes() + 30);
+  }
+  return {
+    id: "reserved",
+    title: "Reserved",
+    start: start,
+    end: end,
+    editable: false,
+    stick: true,
+    //color:'orange',
+    className: "reserved-event"
   };
 };
 
