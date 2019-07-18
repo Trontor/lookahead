@@ -7,6 +7,10 @@ export default class Timetable {
     this.classList = classList;
     // Calculates the number of clashes in this timetable
     this.calculateClashes();
+    // We've calculated clashes, we can remove the reserved events now!
+    this.classList = this.classList.filter(
+      cls => !(cls.id && cls.id === "reserved")
+    );
     this.calculateDaySpans();
     // Keep track of the overall longest period of consecutive classes in a row.
     this.calculateLongestRun();

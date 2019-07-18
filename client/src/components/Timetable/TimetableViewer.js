@@ -11,7 +11,9 @@ import {
   handleEventDragStart,
   handleEventDragStop,
   generateBackgroundEvents,
-  handleEventDrop
+  handleEventDrop,
+  handleSelect,
+  handleEventClick
 } from "./TimetableViewerFunctions";
 import { updateEvents } from "../../redux/actions/timetableActions";
 import TimetableHeaderControl from "./TimetableHeaderControl";
@@ -28,7 +30,8 @@ export default function TimetableViewer() {
     currentIndex,
     customTimetables,
     currentCustomIndex,
-    currentView
+    currentView,
+    reserved
   } = optimiser;
   useEffect(() => {
     if (!timetables) {
@@ -49,8 +52,9 @@ export default function TimetableViewer() {
     );
     const events = currentTimetable.classList.map(cls => classToEvent(cls));
     events.push(...generateBackgroundEvents());
+    console.log(reserved);
+    events.push(...reserved);
     console.log("Dispatching events...");
-
     dispatch(updateEvents(events));
   }, [
     currentCustomIndex,
@@ -60,7 +64,8 @@ export default function TimetableViewer() {
     dispatch,
     subjects,
     timetables,
-    optimiser
+    optimiser,
+    reserved
   ]);
   // const newCustomTimetable = () => {
   //   dispatch(createCustomTimetable("Unnamed Timetable", currentTimetable));
@@ -128,6 +133,8 @@ export default function TimetableViewer() {
           meridiem: "narrow"
         }}
         events={events}
+        eventClick={handleEventClick}
+        select={handleSelect}
         eventDrop={handleEventDrop}
         eventDragStart={({ event }) => handleEventDragStart(events, event)}
         eventAllow={(dropLocation, draggedEvent) =>
@@ -138,6 +145,7 @@ export default function TimetableViewer() {
         header={false}
         handleWindowResize={true}
         contentHeight="auto"
+        selectable={true}
         columnHeaderFormat={{ weekday: "short" }}
         minTime="08:00:00"
         maxTime="22:30:00"
