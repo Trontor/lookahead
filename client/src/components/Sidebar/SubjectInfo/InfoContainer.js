@@ -15,6 +15,8 @@ const InfoTable = styled.table`
   line-height: 1.15em;
 
   th {
+    width: 25%;
+
     &.header {
       font-size: 14px;
       font-weight: bold;
