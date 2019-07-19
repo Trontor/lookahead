@@ -33,17 +33,9 @@ const filterClubs = (subjectCodes, sponsors) => {
   return { bronze, goldSilver };
 };
 
-const SponsorTable = styled.div`
-  /* display: none; */
-  @media screen and (min-width: 960px) {
-    /* display: table; */
-  }
-`;
-
 const SponsorWrapper = styled.div`
-  justify-content: center;
   border-radius: 2px;
-  margin: 0 10px 5px 10px;
+  margin: 0 10px 50x 10px;
   display: flex;
   flex-direction: column;
   font-size: 11px;
@@ -80,12 +72,16 @@ const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    max-width: 340px;
     height: 210px;
   }
 
-  @media screen and (min-width: 1064px) {
+  @media screen and (min-width: 1080px) {
     height: 192px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 180px;
+    max-width: 395px;
   }
 `;
 
