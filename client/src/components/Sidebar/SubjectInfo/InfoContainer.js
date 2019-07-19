@@ -13,7 +13,7 @@ const InfoTable = styled.table`
   box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   line-height: 1.15em;
-
+  border-spacing: 0;
   th {
     width: 25%;
 
@@ -31,6 +31,9 @@ const ClassInfoRow = styled.tr`
     css`
       background-color: orange;
     `}
+  td {
+    padding: 0;
+  }
 `;
 
 export default function InfoContainer(props) {
@@ -46,7 +49,7 @@ export default function InfoContainer(props) {
   }
   const { description, classes } = props;
   return (
-    <InfoTable>
+    <InfoTable cellspacing="0" cellpadding="0">
       <tr>
         <th className="header" colspan={4}>
           {description}
