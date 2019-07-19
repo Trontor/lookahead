@@ -32,16 +32,6 @@ const GoBackButton = styled.button`
 
 export default function SubjectInfo(props) {
   const dispatch = useDispatch();
-  const optimiser = useSelector(state => state.optimiser);
-  const { currentIndex, timetables } = optimiser;
-  const currentCodes = [];
-  // Popular currentCodes with all classcodes of the timetable, for highlighting
-  if (timetables && currentIndex >= 0 && currentIndex < timetables.length) {
-    const currentTimetable = timetables[currentIndex];
-    for (const entry of currentTimetable.classList) {
-      currentCodes.push(...entry.codes);
-    }
-  }
   const { subject } = props;
   const {
     name,
@@ -70,6 +60,10 @@ export default function SubjectInfo(props) {
       {period}
       {_mandatoryClasses &&
         groupByArray(_mandatoryClasses, "description").map((kvp, idx) => (
+          <InfoContainer key={idx} description={kvp.key} classes={kvp.values} />
+        ))}
+      {_regularClasses &&
+        groupByArray(_regularClasses, "description").map((kvp, idx) => (
           <InfoContainer key={idx} description={kvp.key} classes={kvp.values} />
         ))}
     </ViewSubjectWrapper>

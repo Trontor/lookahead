@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import { useSelector } from "react-redux";
+import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
 import timeIntToString from "../../../utility/TimeIntToString";
 
@@ -13,11 +14,27 @@ const InfoTable = styled.table`
       color: rebeccapurple;
     }
   }
-  tr {
-    text-align: center;
-  }
 `;
+const ClassInfoRow = styled.tr`
+  text-align: center;
+  ${props =>
+    props.highlight &&
+    css`
+      background-color: orange;
+    `}
+`;
+
 export default function InfoContainer(props) {
+  const optimiser = useSelector(state => state.optimiser);
+  const { currentIndex, timetables } = optimiser;
+  const currentCodes = [];
+  // Popular currentCodes with all classcodes of the timetable, for highlighting
+  if (timetables && currentIndex >= 0 && currentIndex < timetables.length) {
+    const currentTimetable = timetables[currentIndex];
+    for (const entry of currentTimetable.classList) {
+      currentCodes.push(...entry.codes);
+    }
+  }
   const { description, classes } = props;
   return (
     <InfoTable>
@@ -34,13 +51,16 @@ export default function InfoContainer(props) {
       </tr>
       {classes.map(cls => {
         const { description, day, start, finish, weeks, locations } = cls;
+        const isOnTimetable = cls.codes.some(code =>
+          currentCodes.includes(code)
+        );
         return (
-          <tr>
+          <ClassInfoRow highlight={isOnTimetable}>
             <td>{daysOfWeek[day]}</td>
             <td>{timeIntToString(start)}</td>
             <td>{timeIntToString(finish)}</td>
             <td>{weeks.length}</td>
-          </tr>
+          </ClassInfoRow>
         );
       })}
     </InfoTable>
