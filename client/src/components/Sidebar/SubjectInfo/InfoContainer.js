@@ -6,17 +6,24 @@ import timeIntToString from "../../../utility/TimeIntToString";
 
 const InfoTable = styled.table`
   width: 100%;
-  border: 1px solid black;
+  background: ${props => props.theme.cardBg};
   margin: 10px 0;
+  padding: 7px;
+  text-align: left;
+  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  line-height: 1.15em;
+
   th {
     &.header {
-      font-size: 20px;
-      color: rebeccapurple;
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 `;
 const ClassInfoRow = styled.tr`
-  text-align: center;
+  /* text-align: center; */
+  cursor: pointer;
   ${props =>
     props.highlight &&
     css`

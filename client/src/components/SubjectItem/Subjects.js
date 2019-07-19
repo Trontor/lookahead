@@ -134,9 +134,6 @@ const SubjectName = styled.div`
     margin-bottom: 5px;
   }
 
-  @media screen and (min-width: 1024px) {
-    max-width: 16vw;
-  }
 `;
 
 const SubjectToolbox = styled.div`
