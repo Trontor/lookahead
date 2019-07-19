@@ -389,19 +389,12 @@ const moveRegularClass = (subject, oldCode, newCode) => {
 };
 
 const showBackgroundEvent = event => {
-  let BACKGROUND_EVENT_COLOR = getCurrentTheme().dragDropEventBg;
-  let BACKGROUND_EVENT_BORDER = getCurrentTheme().dragDropEventBorder;
   const className = event.className;
   currentShownBackgroundEvents.push(event);
   if (event.type === "Stream") {
     $(`.${className}`).append("Stream #" + event.streamNumber);
   }
   $(`.${className}`).addClass("show-background-event");
-  // $(`.${className}`).css("margin", "2.5px");
-  // $(`.${className}`).css("background-color", BACKGROUND_EVENT_COLOR);
-  // $(`.${className}`).css("border", BACKGROUND_EVENT_BORDER);
-  //   $(`.${className}`).removeClass("hide");
-  //   $(`.${className}`).addClass("show");
 };
 
 const hideBackgroundEvent = event => {
@@ -410,14 +403,11 @@ const hideBackgroundEvent = event => {
   $(`.${className}`).empty();
   $(`.${className}`).removeClass("show-background-event");
   $(`.${className}`).removeClass("show-background-stream-event");
-  // $(`.${className}`).css("background-color", "transparent");
-  // $(`.${className}`).css("border", "none");
 };
 
 const showEventIndicator = event => {
   const className = event.className;
   $(`.${className}`).addClass("show-background-stream-event");
-  // $(`.${className}`).css("background-color", "green");
 };
 
 export const generateBackgroundEvents = () => {
