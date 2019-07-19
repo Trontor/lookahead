@@ -5,8 +5,8 @@ const colors = [
   "#84B4C8", //ice blue
   "#99CEFF", //baby blue
   "#FF99CD", //pink
-  "#D581E8", //lavender
-  "#9B73DF", //dark purple
+  "#D581E8", //violet
+  "#9382F0", //lavender
   "#FC7C70", //red
   "#FEBF5D" //orange
 ];

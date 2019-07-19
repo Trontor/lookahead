@@ -9,7 +9,9 @@ const ViewSubjectWrapper = styled.div``;
 
 const GoBackButton = styled.button`
   cursor: pointer;
-  max-width: 50px;
+  max-width: 115px;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
   margin-top: 10px;
   border-radius: 3px;
   color: #f9f9f9;
@@ -19,6 +21,10 @@ const GoBackButton = styled.button`
   border: none;
   left: ${({ left }) => (left ? 0 : "auto")};
   right: ${({ right }) => (right ? 0 : "auto")};
+
+  i {
+    margin-right: 10px;
+  }
 
   :disabled {
     display: none;
@@ -66,7 +72,7 @@ export default function SubjectInfo(props) {
   return (
     <ViewSubjectWrapper>
       <GoBackButton onClick={() => dispatch(stopViewing())}>
-        <i className="fa fa-angle-left" />
+        <i className="fa fa-angle-left"/>All Subjects
       </GoBackButton>
       <InfoWrapper>
         <Info>{name}</Info>

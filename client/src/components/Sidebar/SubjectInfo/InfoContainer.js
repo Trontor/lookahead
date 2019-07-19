@@ -10,7 +10,7 @@ const InfoTable = styled.table`
   margin: 10px 0;
   padding: 7px;
   text-align: left;
-  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   border-spacing: 0;
   /* border-top: 8px solid ${props => props.color}; */
@@ -40,9 +40,9 @@ const ClassInfoRow = styled.tr`
     `}
 
   td {
-    padding: 1px 4px;
+    padding: 2px 4px;
   }
- 
+
   td:first-child {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;

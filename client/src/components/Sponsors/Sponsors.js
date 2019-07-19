@@ -55,7 +55,7 @@ const SponsorCard = styled.div`
   background: ${props => props.theme.cardBg};
   color: ${props => props.theme.text};
   margin-bottom: 12px;
-  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   letter-spacing: -0.01em;
