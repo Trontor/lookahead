@@ -57,7 +57,7 @@ const SponsorCard = styled.div`
   color: ${props => props.theme.text};
   margin-bottom: 12px;
   box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.15);
-  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   letter-spacing: -0.01em;
 
   @media screen and (min-width: 768px) {
