@@ -58,7 +58,7 @@ export default function Planner() {
         <OptimiseButton />
       </Sidebar>
       <Main>
-        {/* <Sponsors /> */}
+        <Sponsors />
         <TimetableViewer />
       </Main>
     </Grid>

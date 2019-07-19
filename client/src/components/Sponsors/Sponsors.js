@@ -108,12 +108,8 @@ const UMSUButton = styled.button`
 const FacebookButton = styled(UMSUButton).attrs(() => ({
   className: "fab fa-facebook-f"
 }))`
-<<<<<<< HEAD
   font-family:  "Font Awesome 5 Brands";
   font-size: 12px;
-=======
-  font-family: "Font Awesome 5 Brands";
->>>>>>> styling
   padding-top: 7px;
   padding-bottom: 7px;
   background-color: #3b5998;
@@ -126,11 +122,7 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
 
 const LogoWrapper = styled.div`
   margin-bottom: -5px;
-<<<<<<< HEAD
   /* text-align: center; */
-=======
-  width: 100%;
->>>>>>> styling
 `;
 
 const Logo = styled.img.attrs(props => ({ width: "120px", height: "60px" }))`
@@ -203,21 +195,10 @@ export default function Sponsors() {
                 <LogoWrapper>
                   <Logo alt={`${name} logo`} src={logoURL} />
                 </LogoWrapper>
-<<<<<<< HEAD
                 <ClubDescription>{description}</ClubDescription>
                 <ButtonWrapper>
                   <a href={signup}><UMSUButton>Website</UMSUButton></a>
                   <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
-=======
-                {description}
-                <ButtonWrapper>
-                  <a href={signup}>
-                    <UMSUButton>Website</UMSUButton>
-                  </a>
-                  <a href={umsu}>
-                    <UMSUButton>UMSU</UMSUButton>
-                  </a>
->>>>>>> styling
                   <FacebookButton href={facebook} />
                 </ButtonWrapper>
               </SponsorRow>
