@@ -11,31 +11,38 @@ const StreamClassInfoRow = styled.tr`
   ${props =>
     props.highlight &&
     css`
-      background-color: ${props => props.color};
+      background-color: ${props.color};
+      ${props.firstRow &&
+        css`
+          td:last-child {
+            border-top-right-radius: 3px;
+          }
+          td:first-child {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+          }
+        `}
+      ${props.lastRow &&
+        css`
+          td:last-child {
+            border-bottom-right-radius: 3px;
+          }
+        `}
+    `}
+
+  ${props =>
+    props.odd &&
+    !props.highlight &&
+    css`
+      background-color: #eee;
+      td:first-child {
+        background-color: inherit;
+      }
     `}
 
   td {
     padding: 2px 4px;
   }
-  ${props =>
-    props.firstRow &&
-    css`
-      td:last-child {
-        border-top-right-radius: 3px;
-      }
-      td:first-child {
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px;
-      }
-    `}
-
-  ${props =>
-    props.lastRow &&
-    css`
-      td:last-child {
-        border-bottom-right-radius: 3px;
-      }
-    `}
 `;
 
 export default function StreamInfoContainer(props) {
@@ -67,7 +74,7 @@ export default function StreamInfoContainer(props) {
         <th>Weeks</th>
       </tr>
       {/* We map the streams */}
-      {streams.map(stream => {
+      {streams.map((stream, streamIndex) => {
         // Important information
         const { classes, streamNumbers } = stream;
         const rowSpan = classes.length;
@@ -82,6 +89,7 @@ export default function StreamInfoContainer(props) {
               );
               return (
                 <StreamClassInfoRow
+                  odd={streamIndex % 2 !== 0}
                   firstRow={idx === 0}
                   lastRow={idx === rowSpan - 1}
                   highlight={isOnTimetable}

@@ -39,6 +39,13 @@ export const ClassInfoRow = styled.tr`
       background-color: ${props => props.color};
     `}
 
+  ${props =>
+    props.odd &&
+    !props.highlight &&
+    css`
+      background-color: #eee;
+    `}
+
   td {
     padding: 2px 4px;
   }
@@ -79,13 +86,17 @@ export default function InfoContainer(props) {
         <th>Finish</th>
         <th>Weeks</th>
       </tr>
-      {classes.map(cls => {
+      {classes.map((cls, idx) => {
         const { description, day, start, finish, weeks, locations } = cls;
         const isOnTimetable = cls.codes.some(code =>
           currentCodes.includes(code)
         );
         return (
-          <ClassInfoRow highlight={isOnTimetable} color={color}>
+          <ClassInfoRow
+            odd={idx % 2 !== 1}
+            highlight={isOnTimetable}
+            color={color}
+          >
             <td>{daysOfWeek[day]}</td>
             <td>{timeIntToString(start)}</td>
             <td>{timeIntToString(finish)}</td>
