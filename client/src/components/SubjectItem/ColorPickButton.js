@@ -64,7 +64,7 @@ export default function ColorPickButton(props) {
   const Button = props.buttonStyle;
   return (
     <>
-      <Button onClick={handleClick}>
+      <Button title="Change Colour" onClick={handleClick}>
         <i class="fas fa-palette" />
       </Button>
 

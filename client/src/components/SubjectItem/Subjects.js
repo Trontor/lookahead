@@ -218,9 +218,6 @@ function Subjects() {
     dispatch(removeSubject(code));
   };
 
-  const onColorChange = (subject, color, event) => {
-    console.log(color.hex);
-  };
   return (
     <SubjectsWrapper>
       {Object.keys(subjects).map(code => {
@@ -249,10 +246,16 @@ function Subjects() {
                   }}
                   buttonStyle={ToolboxButton}
                 />
-                <ToolboxButton onClick={() => openSWS(year, code)}>
+                <ToolboxButton
+                  title="View Official Timetable"
+                  onClick={() => openSWS(year, code)}
+                >
                   <i className="fa fa-calendar-alt" />
                 </ToolboxButton>
-                <ToolboxButton onClick={() => openHandbook(year, code)}>
+                <ToolboxButton
+                  title="View Handbook Entry"
+                  onClick={() => openHandbook(year, code)}
+                >
                   <i className="fa fa-book" />
                 </ToolboxButton>
               </SubjectToolbox>
