@@ -1,11 +1,11 @@
 const colors = [
-  "#AFEEEE", //pale plue
+  "#84B4C8", //dark ice blue
   "#B5ECAA", //light green
   "#66CDAA", //dark green
-  "#84B4C8", //ice blue
-  "#99CEFF", //baby blue
   "#FF99CD", //pink
   "#D581E8", //violet
+  "#AFEEEE", //pale plue
+  "#99CEFF", //baby blue
   "#9382F0", //lavender
   "#FC7C70", //red
   "#FEBF5D" //orange

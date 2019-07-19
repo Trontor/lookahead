@@ -40,7 +40,7 @@ const StreamClassInfoRow = styled.tr`
     `}
 
   td {
-    padding: 2px 4px;
+    padding: 3px 5px;
   }
 `;
 
