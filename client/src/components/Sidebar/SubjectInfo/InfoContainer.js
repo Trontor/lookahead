@@ -16,15 +16,13 @@ const InfoTable = styled.table`
   /* border-top: 8px solid ${props => props.color}; */
   th {
     width: 25%;
+    padding-left: 4px;
+    padding-bottom: 3px;
 
     &.header {
       font-size: 14px;
       font-weight: bold;
     }
-  }
-
-  td {
-    padding: 2px 4px;
   }
 
   @media screen and (min-width: 960px) {
@@ -40,8 +38,19 @@ const ClassInfoRow = styled.tr`
     css`
       background-color: ${props => props.color};
     `}
+
   td {
-    padding: 0;
+    padding: 1px 4px;
+  }
+
+  td:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  td:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
   }
 `;
 
