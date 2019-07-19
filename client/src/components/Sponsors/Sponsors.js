@@ -96,7 +96,7 @@ const UMSUButton = styled.button`
 const FacebookButton = styled(UMSUButton).attrs(() => ({
   className: "fab fa-facebook-f"
 }))`
-  font-family:  "Font Awesome 5 Brands";
+  font-family: "Font Awesome 5 Brands";
   padding-top: 7px;
   padding-bottom: 8px;
   background-color: #3b5998;
@@ -105,7 +105,6 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
   &:hover {
     background-color: dodgerblue;
   }
-
 `;
 
 const LogoWrapper = styled.div`
@@ -115,7 +114,6 @@ const LogoWrapper = styled.div`
 const Logo = styled.img.attrs(props => ({ width: "120px", height: "60px" }))`
   object-fit: scale-down;
   background-color: ${props => props.theme.SponsorLogoBg};
-  mix-blend-mode: multiply;
 `;
 
 const BronzeCardWrapper = styled.div`
@@ -179,15 +177,19 @@ export default function Sponsors() {
             } = entry;
             return (
               <SponsorRow>
-                  <LogoWrapper>
-                    <Logo alt={`${name} logo`} src={logoURL} />
-                  </LogoWrapper>
-                  {description}
-                  <ButtonWrapper>
-                    <a href={signup}><UMSUButton>Website</UMSUButton></a>
-                    <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
-                    <FacebookButton href={facebook} />
-                  </ButtonWrapper>
+                <LogoWrapper>
+                  <Logo alt={`${name} logo`} src={logoURL} />
+                </LogoWrapper>
+                {description}
+                <ButtonWrapper>
+                  <a href={signup}>
+                    <UMSUButton>Website</UMSUButton>
+                  </a>
+                  <a href={umsu}>
+                    <UMSUButton>UMSU</UMSUButton>
+                  </a>
+                  <FacebookButton href={facebook} />
+                </ButtonWrapper>
               </SponsorRow>
             );
           })}
