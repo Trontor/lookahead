@@ -68,10 +68,13 @@ export const parseSubject = (
       return;
     }
 
-    if (WeirdNames.includes(classCode)) {
+    const description = getChild(1);
+    if (
+      WeirdNames.includes(classCode.toLowerCase().trim()) ||
+      WeirdNames.includes(description.toLowerCase().trim())
+    ) {
       return;
     }
-    const description = getChild(1);
     const dayRaw = getChild(2);
     const start = getChild(3);
     const finish = getChild(4);

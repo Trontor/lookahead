@@ -5,5 +5,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 export default createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
+  composeWithDevTools(
+    applyMiddleware(thunk)
+    // other store enhancers if any
+  )
 );
