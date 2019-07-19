@@ -6,6 +6,8 @@ import timetable from "./timetableReducer";
 import optimisations from "./optimisationsReducer";
 import theme from "./themeReducer";
 import sponsors from "./sponsorReducer";
+import viewSubject from "./viewSubjectReducer";
+
 export default combineReducers({
   optimiser,
   optimisations,
@@ -13,5 +15,6 @@ export default combineReducers({
   subjects,
   timetable,
   theme,
-  sponsors
+  sponsors,
+  viewSubject
 });
