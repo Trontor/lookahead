@@ -38,6 +38,7 @@ const SponsorWrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 11px;
+  padding: 0 10px;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -45,6 +46,7 @@ const SponsorWrapper = styled.div`
 
   @media screen and (min-width: 960px) {
     margin: 0;
+    padding: 0;
   }
 `;
 

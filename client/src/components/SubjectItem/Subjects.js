@@ -133,7 +133,6 @@ const SubjectName = styled.div`
     margin-top: 2px;
     margin-bottom: 5px;
   }
-
 `;
 
 const SubjectToolbox = styled.div`
@@ -239,7 +238,7 @@ function Subjects() {
                   title="View Subject Information"
                   onClick={() => dispatch(viewSubject(subject))}
                 >
-                  <i className="fa fa-list" />
+                  <i className="fa fa-list"/>
                 </ToolboxButton>
                 <ColorPickButton
                   onColorChange={color => {

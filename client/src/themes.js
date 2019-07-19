@@ -5,8 +5,7 @@ const regularTheme = {
   headerBg: "#29C7DB",
   /*=== Timetable (tt) Viewer ===*/
   ttBorderColor: "#ddd",
-  ttTextColor: "#ddd",
-  ttTextFontWeight: "lighter",
+  ttTextColor: "#62656E",
   /*=== Body ===*/
   bodyBg: "#fbfbfb",
   /*=== Sidebar ===*/
@@ -42,7 +41,6 @@ const darkTheme = {
   /*===Timetable (tt) Viewer===*/
   ttBorderColor: "#3E3E4A",
   ttTextColor: "#ddd",
-  ttTextFontWeight: "lighter",
   /*=== Body ===*/
   bodyBg: "#363642",
   /*=== Sidebar ===*/

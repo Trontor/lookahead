@@ -6,7 +6,6 @@ import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
 
 const StreamClassInfoRow = styled.tr`
-  /* text-align: center; */
   cursor: pointer;
   ${props =>
     props.highlight &&
@@ -34,7 +33,7 @@ const StreamClassInfoRow = styled.tr`
     props.odd &&
     !props.highlight &&
     css`
-      background-color: #eee;
+      background-color: ${props => props.theme.sidebarBg};
       td:first-child {
         background-color: inherit;
       }
@@ -67,7 +66,7 @@ export default function StreamInfoContainer(props) {
         </th>
       </tr>
       <tr>
-        <th>Streams</th>
+        <th>Stream</th>
         <th>Day</th>
         <th>Start</th>
         <th>Finish</th>

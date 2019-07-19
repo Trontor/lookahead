@@ -7,7 +7,7 @@ import timeIntToString from "../../../utility/TimeIntToString";
 export const InfoTable = styled.table`
   width: 100%;
   background: ${props => props.theme.cardBg};
-  margin: 10px 0;
+  margin-top: 10px;
   padding: 7px;
   text-align: left;
   box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ export const InfoTable = styled.table`
   }
 `;
 export const ClassInfoRow = styled.tr`
-  /* text-align: center; */
+  letter-spacing: -0.01em;
   cursor: pointer;
   ${props =>
     props.highlight &&
@@ -43,21 +43,22 @@ export const ClassInfoRow = styled.tr`
     props.odd &&
     !props.highlight &&
     css`
-      background-color: #eee;
+      background-color: ${props => props.theme.sidebarBg};
     `}
 
   td {
-    padding: 2px 4px;
+    padding: 3px 4px;
   }
 
   td:first-child {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding-left: 5px;
   }
 
   td:last-child {
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
   }
 `;
 

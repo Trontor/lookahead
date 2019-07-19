@@ -23,7 +23,8 @@ export default styled.div`
   .fc-unthemed th,
   .fc-axis {
     color: ${props => props.theme.ttTextColor};
-    font-weight: ${props => props.theme.ttTextFontWeight};
+    font-weight: lighter;
+    text-align: center;
   }
   /* // Removes the yellow background highlight for the current day */
   .fc-today {
