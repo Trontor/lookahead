@@ -12,8 +12,8 @@ const InfoTable = styled.table`
   text-align: left;
   box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
+  border-spacing: 0;
   /* border-top: 8px solid ${props => props.color}; */
-
   th {
     width: 25%;
 
@@ -40,6 +40,9 @@ const ClassInfoRow = styled.tr`
     css`
       background-color: ${props => props.color};
     `}
+  td {
+    padding: 0;
+  }
 `;
 
 export default function InfoContainer(props) {
@@ -55,7 +58,7 @@ export default function InfoContainer(props) {
   }
   const { description, classes, color } = props;
   return (
-    <InfoTable color={color}>
+    <InfoTable>
       <tr>
         <th className="header" colspan={4}>
           {description}
