@@ -12,7 +12,7 @@ const InfoTable = styled.table`
   text-align: left;
   box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  line-height: 1.15em;
+  /* border-top: 8px solid ${props => props.color}; */
 
   th {
     width: 25%;
@@ -22,6 +22,15 @@ const InfoTable = styled.table`
       font-weight: bold;
     }
   }
+
+  td {
+    padding: 2px 4px;
+  }
+
+  @media screen and (min-width: 960px) {
+    /* border-left: 8px solid ${props => props.color};
+    border-top: none; */
+  }
 `;
 const ClassInfoRow = styled.tr`
   /* text-align: center; */
@@ -29,7 +38,7 @@ const ClassInfoRow = styled.tr`
   ${props =>
     props.highlight &&
     css`
-      background-color: orange;
+      background-color: ${props => props.color};
     `}
 `;
 
@@ -44,9 +53,9 @@ export default function InfoContainer(props) {
       currentCodes.push(...entry.codes);
     }
   }
-  const { description, classes } = props;
+  const { description, classes, color } = props;
   return (
-    <InfoTable>
+    <InfoTable color={color}>
       <tr>
         <th className="header" colspan={4}>
           {description}
@@ -64,7 +73,7 @@ export default function InfoContainer(props) {
           currentCodes.includes(code)
         );
         return (
-          <ClassInfoRow highlight={isOnTimetable}>
+          <ClassInfoRow highlight={isOnTimetable} color={color}>
             <td>{daysOfWeek[day]}</td>
             <td>{timeIntToString(start)}</td>
             <td>{timeIntToString(finish)}</td>

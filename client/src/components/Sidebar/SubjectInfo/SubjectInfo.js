@@ -51,6 +51,7 @@ export default function SubjectInfo(props) {
   const { subject } = props;
   const {
     name,
+    color,
     year,
     data: {
       code,
@@ -75,11 +76,11 @@ export default function SubjectInfo(props) {
       </InfoWrapper>
       {_mandatoryClasses &&
         groupByArray(_mandatoryClasses, "description").map((kvp, idx) => (
-          <InfoContainer key={idx} description={kvp.key} classes={kvp.values} />
+          <InfoContainer color={color} key={idx} description={kvp.key} classes={kvp.values} />
         ))}
       {_regularClasses &&
         groupByArray(_regularClasses, "description").map((kvp, idx) => (
-          <InfoContainer key={idx} description={kvp.key} classes={kvp.values} />
+          <InfoContainer color={color} key={idx} description={kvp.key} classes={kvp.values} />
         ))}
     </ViewSubjectWrapper>
   );
