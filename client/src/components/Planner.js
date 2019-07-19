@@ -8,6 +8,7 @@ import Optimisations from "./Optimisations/Optimisations";
 import Sponsors from "./Sponsors/Sponsors";
 import OptimiseButton from "./OptimiseButton";
 import RegistrationCountdown from "./RegistrationCountdown";
+import Sidebar from "./Sidebar/Sidebar";
 
 const Grid = styled.div`
   grid-template-columns: 100%;
@@ -20,7 +21,7 @@ const Grid = styled.div`
   }
 `;
 
-const Sidebar = styled.div`
+const SidebarWrapper = styled.div`
   background-color: ${props => props.theme.sidebarBg};
   grid-column-start: 1;
   max-width: inherit;
@@ -49,14 +50,9 @@ const Main = styled.div`
 export default function Planner() {
   return (
     <Grid>
-      <Sidebar>
-        <Notifications />
-        {/* <RegistrationCountdown /> */}
-        <SubjectSelect />
-        <Subjects />
-        <Optimisations />
-        <OptimiseButton />
-      </Sidebar>
+      <SidebarWrapper>
+        <Sidebar />
+      </SidebarWrapper>
       <Main>
         <Sponsors />
         <TimetableViewer />

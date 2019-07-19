@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
 import { TwitterPicker } from "react-color";
 import ColorPickButton from "./ColorPickButton";
+import { viewSubject } from "../../redux/actions/viewSubjectActions";
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
   /* min-height: 290px; */
@@ -221,9 +222,8 @@ function Subjects() {
   return (
     <SubjectsWrapper>
       {Object.keys(subjects).map(code => {
-        const { year, studyPeriod, name, loading, data, color } = subjects[
-          code
-        ];
+        const subject = subjects[code];
+        const { year, studyPeriod, name, loading, data, color } = subject;
         let bgColor = color;
         let textColor = "white";
         // if (loading) {
@@ -238,6 +238,12 @@ function Subjects() {
               <SubjectCode>{code}</SubjectCode>
               <SubjectName>{name}</SubjectName>
               <SubjectToolbox iconColor={textColor}>
+                <ToolboxButton
+                  title="View Subject Information"
+                  onClick={() => dispatch(viewSubject(subject))}
+                >
+                  <i className="fa fa-list" />
+                </ToolboxButton>
                 <ColorPickButton
                   onColorChange={color => {
                     dispatch(
