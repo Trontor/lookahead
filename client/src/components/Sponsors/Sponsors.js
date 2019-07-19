@@ -41,39 +41,52 @@ const SponsorTable = styled.div`
 `;
 
 const SponsorWrapper = styled.div`
-  /* border: 1px solid #e2e2e2; */
+  justify-content: center;
   border-radius: 2px;
-  background: ${props => props.theme.sidebarBg};
-  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
   margin: 0 10px 5px 10px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   font-size: 11px;
-  color: ${props => props.theme.text};
 
-  /* @media screen and (min-width: 960px) {
-    margin: 0px;
-  } */
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    margin: 0px;
+  }
+
+  @media screen and (min-width: 960px) {
+    margin: 0;
   }
 `;
 
-const SponsorRow = styled.div`
+const SponsorCard = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 5px;
+  padding: 10px;
+  background: ${props => props.theme.sidebarBg};
+  color: ${props => props.theme.text};
+  margin-bottom: 12px;
+  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  letter-spacing: -0.01em;
 
   @media screen and (min-width: 768px) {
-    max-width: 50%;
-  }
-`;
+    position: relative;
+    width: 50%;
+    height: 186px;
+    margin-right: 10px;
 
-const SponsorCell = styled.td`
-  /* font-size: 12px;
-  padding: 0px 5px; */
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    max-width: 340px;
+    height: 210px;
+  }
+
+  @media screen and (min-width: 1064px) {
+    height: 192px;
+  }
 `;
 
 const ClubDescription =  styled.div`
@@ -82,13 +95,17 @@ const ClubDescription =  styled.div`
 const ButtonWrapper = styled.div`
   width: 100%;
   padding-top: 10px;
-  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 10px;
+  }
 `;
 
 const UMSUButton = styled.button`
   cursor: pointer;
   display: inline-block;
-  width: 68px;
+  width: 70px;
   height: 26px;
   margin-right: 10px;
   padding: 5px 10px;
@@ -101,8 +118,9 @@ const UMSUButton = styled.button`
   border: none;
 
   &:hover {
-    background-color: indigo;
+    background-color: darkorchid;
   }
+
 `;
 
 const FacebookButton = styled(UMSUButton).attrs(() => ({
@@ -121,7 +139,7 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
 `;
 
 const LogoWrapper = styled.div`
-  margin-bottom: -5px;
+  margin: -8px 0;
   /* text-align: center; */
 `;
 
@@ -191,7 +209,7 @@ export default function Sponsors() {
               include
             } = entry;
             return (
-              <SponsorRow>
+              <SponsorCard>
                 <LogoWrapper>
                   <Logo alt={`${name} logo`} src={logoURL} />
                 </LogoWrapper>
@@ -201,7 +219,7 @@ export default function Sponsors() {
                   <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
                   <FacebookButton href={facebook} />
                 </ButtonWrapper>
-              </SponsorRow>
+              </SponsorCard>
             );
           })}
       </SponsorWrapper>
