@@ -21,7 +21,7 @@ import { updateEvents } from "../../redux/actions/timetableActions";
 import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
-
+import TimetableViewerWrapper from "./TimetableViewerStyles";
 let modalEvent = null;
 const StyledModal = styled(Modal)`
   background-color: green;
@@ -131,42 +131,44 @@ export default function TimetableViewer() {
       <TimetableTips />
       <TimetableHeaderControl header={headerText} />
       {/* <CustomTimetableControl /> */}
-      <FullCalendar
-        defaultView="timeGridWeek"
-        height="parent"
-        plugins={[timeGridPlugin, interactionPlugin]}
-        weekends={false}
-        slotLabelFormat={{
-          hour: "numeric",
-          minute: "2-digit",
-          omitZeroMinute: true,
-          hour12: false,
-          meridiem: "narrow"
-        }}
-        events={events}
-        eventClick={eInfo => handleEventClick(eInfo, showEvent)}
-        select={handleSelect}
-        eventDrop={handleEventDrop}
-        eventDragStart={({ event }) => handleEventDragStart(events, event)}
-        eventAllow={(dropLocation, draggedEvent) =>
-          handleEventAllow(dropLocation, draggedEvent, events)
-        }
-        eventDragStop={({ event }) => handleEventDragStop(events, event)}
-        eventPositioned={handleClassRender}
-        header={false}
-        handleWindowResize={true}
-        contentHeight="auto"
-        selectable={true}
-        columnHeaderFormat={{ weekday: "short" }}
-        minTime="08:00:00"
-        maxTime="22:30:00"
-        snapDuration="00:15"
-        firstDay={1}
-        editable={true}
-        slotEventOverlap={false}
-        allDaySlot={false}
-        eventResourceEditable={true}
-      />
+      <TimetableViewerWrapper>
+        <FullCalendar
+          defaultView="timeGridWeek"
+          height="parent"
+          plugins={[timeGridPlugin, interactionPlugin]}
+          weekends={false}
+          slotLabelFormat={{
+            hour: "numeric",
+            minute: "2-digit",
+            omitZeroMinute: true,
+            hour12: false,
+            meridiem: "narrow"
+          }}
+          events={events}
+          eventClick={eInfo => handleEventClick(eInfo, showEvent)}
+          select={handleSelect}
+          eventDrop={handleEventDrop}
+          eventDragStart={({ event }) => handleEventDragStart(events, event)}
+          eventAllow={(dropLocation, draggedEvent) =>
+            handleEventAllow(dropLocation, draggedEvent, events)
+          }
+          eventDragStop={({ event }) => handleEventDragStop(events, event)}
+          eventPositioned={handleClassRender}
+          header={false}
+          handleWindowResize={true}
+          contentHeight="auto"
+          selectable={true}
+          columnHeaderFormat={{ weekday: "short" }}
+          minTime="08:00:00"
+          maxTime="22:30:00"
+          snapDuration="00:15"
+          firstDay={1}
+          editable={true}
+          slotEventOverlap={false}
+          allDaySlot={false}
+          eventResourceEditable={true}
+        />
+      </TimetableViewerWrapper>
       <StyledModal
         style={{ overlay: { zIndex: 10 } }}
         isOpen={modalIsOpen && modalEvent !== null}
