@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { stopViewing } from "../../../redux/actions/viewSubjectActions";
 import groupByArray from "../../../utility/GroupByArray";
 import InfoContainer from "./InfoContainer";
+import StreamInfoContainer from "./StreamInfoContainer";
 
 const ViewSubjectWrapper = styled.div``;
 
@@ -66,27 +67,49 @@ export default function SubjectInfo(props) {
       _streamContainers
     }
   } = subject;
-  console.log(subject);
+  const streamKeys = Object.keys(_streamContainers);
+  console.log(streamKeys);
 
   return (
     <ViewSubjectWrapper>
       <GoBackButton onClick={() => dispatch(stopViewing())}>
-        <i className="fa fa-angle-left"/>Subjects List
+        <i className="fa fa-angle-left" />
+        Subjects List
       </GoBackButton>
       <InfoWrapper>
         <Info>{name}</Info>
-        {/* <Info>{year}</Info>
-        <Info>{code}</Info> */}
-        {/* <Info>{period}</Info> */}
       </InfoWrapper>
       {_mandatoryClasses &&
         groupByArray(_mandatoryClasses, "description").map((kvp, idx) => (
-          <InfoContainer color={color} key={idx} description={kvp.key} classes={kvp.values} />
+          <InfoContainer
+            color={color}
+            key={idx}
+            description={kvp.key}
+            classes={kvp.values}
+          />
         ))}
       {_regularClasses &&
         groupByArray(_regularClasses, "description").map((kvp, idx) => (
-          <InfoContainer color={color} key={idx} description={kvp.key} classes={kvp.values} />
+          <InfoContainer
+            color={color}
+            key={idx}
+            description={kvp.key}
+            classes={kvp.values}
+          />
         ))}
+      {streamKeys &&
+        streamKeys.map((key, idx) => {
+          const container = _streamContainers[key];
+          console.log(container);
+          return (
+            <StreamInfoContainer
+              color={color}
+              key={idx}
+              name={container.name}
+              streams={container.streams}
+            />
+          );
+        })}
     </ViewSubjectWrapper>
   );
 }

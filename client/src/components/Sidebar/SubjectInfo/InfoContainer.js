@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
 import timeIntToString from "../../../utility/TimeIntToString";
 
-const InfoTable = styled.table`
+export const InfoTable = styled.table`
   width: 100%;
   background: ${props => props.theme.cardBg};
   margin: 10px 0;
@@ -30,7 +30,7 @@ const InfoTable = styled.table`
     border-top: none; */
   }
 `;
-const ClassInfoRow = styled.tr`
+export const ClassInfoRow = styled.tr`
   /* text-align: center; */
   cursor: pointer;
   ${props =>
