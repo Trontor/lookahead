@@ -42,7 +42,7 @@ const ClassInfoRow = styled.tr`
   td {
     padding: 1px 4px;
   }
-
+ 
   td:first-child {
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;

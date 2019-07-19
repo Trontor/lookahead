@@ -34,7 +34,6 @@ const filterClubs = (subjectCodes, sponsors) => {
 };
 
 const SponsorWrapper = styled.div`
-  border-radius: 2px;
   margin: 0 10px 50x 10px;
   display: flex;
   flex-direction: column;
@@ -53,11 +52,12 @@ const SponsorCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background: ${props => props.theme.sidebarBg};
+  background: ${props => props.theme.cardBg};
   color: ${props => props.theme.text};
   margin-bottom: 12px;
-  box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   letter-spacing: -0.01em;
 
   @media screen and (min-width: 768px) {
