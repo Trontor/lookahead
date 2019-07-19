@@ -4,11 +4,28 @@ export default styled.div`
   $opacity: 0.75;
 
   .reserved-event {
-    background-color: gray;
-    border: none;
-    font-size: 20px;
+    background-color: ${props => props.theme.reservedBg};
+    border: ${props => props.theme.reservedBorder};
+    color: ${props => props.theme.reservedText};
+    font-size: 16px;
+    backdrop-filter: blur(5px);
   }
-  // Removes the yellow background highlight for the current day
+
+  /* When a user drags a class around, the possible drop events adopt this class */
+  .show-background-event {
+    background-color: green !important;
+  }
+
+  .show-background-stream-event {
+    background-color: green !important;
+  }
+
+  .fc-unthemed th,
+  .fc-axis {
+    color: ${props => props.theme.ttTextColor};
+    font-weight: ${props => props.theme.ttTextFontWeight};
+  }
+  /* // Removes the yellow background highlight for the current day */
   .fc-today {
     background-color: inherit !important;
   }
@@ -26,11 +43,26 @@ export default styled.div`
     table {
       z-index: 0;
     }
+    table {
+      border-color: ${props => props.theme.ttBorderColor};
+    }
+  }
+  .fc-unthemed th,
+  .fc-unthemed td,
+  .fc-unthemed thead,
+  .fc-unthemed tbody,
+  .fc-unthemed .fc-divider,
+  .fc-unthemed .fc-row,
+  .fc-unthemed .fc-content,
+  .fc-unthemed .fc-popover,
+  .fc-unthemed .fc-list-view,
+  .fc-unthemed .fc-list-heading td {
+    border-color: inherit;
   }
 
   .lookahead-event-wrapper {
     font-family: Helvetica, Tahoma, Geneva, Verdana, sans-serif;
-    color: #262628; //text color
+    color: #262628;
     border-radius: 2px;
     border: 0;
     padding: 2px;

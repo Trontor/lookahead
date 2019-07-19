@@ -109,6 +109,7 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
 
 const LogoWrapper = styled.div`
   margin-bottom: -5px;
+  width: 100%;
 `;
 
 const Logo = styled.img.attrs(props => ({ width: "120px", height: "60px" }))`
