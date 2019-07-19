@@ -26,7 +26,7 @@ const Sidebar = styled.div`
   max-width: inherit;
   padding: 10px;
   padding-bottom: 20px;
-  z-index: 0;
+  z-index: 2;
   box-shadow: -2px 0 3px 0 rgba(0, 0, 0, 0.12);
 
   @media screen and (min-width: 960px) {

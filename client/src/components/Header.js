@@ -16,7 +16,8 @@ const HeaderWrapper = styled.div`
   color: white;
   padding: 14px 12px;
   margin: 0px;
-  z-index: 1;
+  /* Should always be on top7 */
+  z-index: 100;
   position: relative;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.12);
 
