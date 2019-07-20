@@ -76,7 +76,8 @@ export const classToEvent = cls => {
     locations,
     type,
     streamNumber,
-    codes
+    codes,
+    weeks
   } = cls;
   const startDate = calculateEventDate(day, start).toDate();
   const finishDate = calculateEventDate(day, finish).toDate();
@@ -97,7 +98,8 @@ export const classToEvent = cls => {
     startInt: start,
     finishInt: finish,
     editable: locked,
-    durationEditable: false
+    durationEditable: false,
+    weeks: weeks.join(", ")
   };
 };
 

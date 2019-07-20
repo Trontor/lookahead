@@ -14,23 +14,59 @@ const StyledModal = styled(Modal)`
   flex-direction: column;
   padding: 15px;
   position: absolute;
-  width: 90%;
-  top: 20%;
-  left: 5%;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  top: 23%;
+  position: relative;
+
+  @media screen and (min-width: 480px) {
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 600px) {
+    padding: 28px;
+    max-width: 560px;
+  }
+`;
+
+const ModalHeader = styled.h1`
+  margin-top: 0;
+  font-size: 17px;
+  border-bottom: solid 1px ${props => props.theme.ttBorderColor};
+  padding-bottom: 7px;
 `;
 
 const SubjectAttribute = styled.div`
   font-weight: bold;
+
+  @media screen and (min-width: 480px) {
+    width: 128px;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 150px;
+  }
 `;
 
 const SubjectInfo = styled.div`
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 4px;
+  }
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 export default function ClassModal(props) {
   const {
     subjectName,
+    codes,
     code,
     day,
     color,
@@ -48,6 +84,7 @@ export default function ClassModal(props) {
       isOpen={isOpen}
       contentLabel="Example Modal"
     >
+        <ModalHeader>{codes}</ModalHeader>
         <SubjectInfo>
           <SubjectAttribute>Subject Code:</SubjectAttribute>
           {code}
@@ -63,6 +100,10 @@ export default function ClassModal(props) {
         <SubjectInfo>
           <SubjectAttribute>Finish: </SubjectAttribute>
           {timeIntToString(finishInt)}
+        </SubjectInfo>
+        <SubjectInfo>
+          <SubjectAttribute>Weeks: </SubjectAttribute>
+          {weeks}
         </SubjectInfo>
         <SubjectInfo>
           <SubjectAttribute>Locations: </SubjectAttribute>
