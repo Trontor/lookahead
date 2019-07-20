@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import Modal from "react-modal";
-
-// let modalEvent = {
-//   extendedProps: {
-//     locations: 1,
-//     type: "Variable",
-//     classCode: { number: 1, type: "W" },
-//     codes: ["COMP10001/U/1/SM2/W01/08"],
-//     streamNumber: 8,
-//     code: "COMP10001",
-//     subjectName: "Foundations of Computing"
-//   }
-// };
+import timeIntToString from "../../utility/TimeIntToString";
 
 const StyledModal = styled(Modal)`
   background-color: white;
@@ -21,12 +10,21 @@ const StyledModal = styled(Modal)`
   border-radius: 3px;
   z-index: 999;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  padding: 15px;
   position: absolute;
   width: 90%;
   top: 20%;
   left: 5%;
+`;
+
+const SubjectAttribute = styled.div`
+  font-weight: bold;
+`;
+
+const SubjectInfo = styled.div`
+  font-size: 14px;
+  margin-bottom: 10px;
 `;
 
 export default function ClassModal(props) {
@@ -49,14 +47,26 @@ export default function ClassModal(props) {
       isOpen={isOpen}
       contentLabel="Example Modal"
     >
-      <div>
-        <h1>Subject Code: {code}</h1>
-        <h2>Subject Name: {subjectName}</h2>
-        <h2>Color: {color}</h2>
-        <h2>Start: {startInt}</h2>
-        <h2>Finish: {finishInt}</h2>
-        <h2>Locations: {locations}</h2>
-      </div>
+        <SubjectInfo>
+          <SubjectAttribute>Subject Code:</SubjectAttribute>
+          {code}
+        </SubjectInfo>
+        <SubjectInfo>
+          <SubjectAttribute>Subject Name: </SubjectAttribute>
+          {subjectName}
+        </SubjectInfo>
+        <SubjectInfo>
+          <SubjectAttribute>Start: </SubjectAttribute>
+          {timeIntToString(startInt)}
+        </SubjectInfo>
+        <SubjectInfo>
+          <SubjectAttribute>Finish: </SubjectAttribute>
+          {timeIntToString(finishInt)}
+        </SubjectInfo>
+        <SubjectInfo>
+          <SubjectAttribute>Locations: </SubjectAttribute>
+          {locations}
+        </SubjectInfo>
     </StyledModal>
   );
 }
