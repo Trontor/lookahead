@@ -22,7 +22,17 @@ import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
 import TimetableViewerWrapper from "./TimetableViewerStyles";
-let modalEvent = null;
+let modalEvent = {
+  extendedProps: {
+    locations: 1,
+    type: "Variable",
+    classCode: { number: 1, type: "W" },
+    codes: ["COMP10001/U/1/SM2/W01/08"],
+    streamNumber: 8,
+    code: "COMP10001",
+    subjectName: "Foundations of Computing"
+  }
+};
 const StyledModal = styled(Modal)`
   background-color: green;
   z-index: 999;
@@ -40,7 +50,7 @@ export default function TimetableViewer() {
     currentView,
     reserved
   } = optimiser;
-  const [modalIsOpen, setModalOpen] = useState(false);
+  const [modalIsOpen, setModalOpen] = useState(true);
   useEffect(() => {
     if (!timetables) {
       return;
@@ -171,7 +181,7 @@ export default function TimetableViewer() {
       </TimetableViewerWrapper>
       <StyledModal
         style={{ overlay: { zIndex: 10 } }}
-        isOpen={false && modalEvent !== null}
+        isOpen={modalIsOpen && modalEvent !== null}
         contentLabel="Example Modal"
       >
         {modalEvent && (
