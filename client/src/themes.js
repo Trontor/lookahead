@@ -17,6 +17,7 @@ const regularTheme = {
   /*=== Sponsor Special Buttons ===*/
   UMSUButtonBg: "rgb(104,33,122)",
   SponsorLogoBg: "inherit",
+  SponsorFilter: "none",
   /*=== Reserved Event ===*/
   reservedBg: "transparent",
   reservedBorder: "2px dotted black",
@@ -46,12 +47,13 @@ const darkTheme = {
   /*=== Sidebar ===*/
   sidebarBg: "#32323C",
   /*=== Subject List ===*/
-  cardBg: "#3E3E4A",
+  cardBg: "#3C3C4F",
   /*=== Global Text ===*/
   text: "#f5f5f5",
   /*=== Sponsor Special Buttons ===*/
-  UMSUButtonBg: "rgb(104,33,122)",
-  SponsorLogoBg: "white",
+  UMSUButtonBg: "#8B259B",
+  SponsorLogoBg: "inherit",
+  SponsorFilter: "invert(1) grayscale(100%) brightness(300%)",
   /*=== Reserved Event ===*/
   reservedBg: "transparent",
   reservedBorder: "2px dotted white",
