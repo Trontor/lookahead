@@ -4,8 +4,6 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import "./TimetableViewer.scss";
-import Modal from "react-modal";
-import styled from "styled-components";
 import handleClassRender from "../../utility/ClassRender";
 import {
   classToEvent,
@@ -37,21 +35,6 @@ let modalEvent = {
   }
 };
 
-const StyledModal = styled(Modal)`
-  background-color: white;
-  color: black;
-  outline: 0;
-  border-radius: 3px;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  width: 90%;
-  top: 20%;
-  left: 5%;
-`;
-
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
@@ -65,7 +48,8 @@ export default function TimetableViewer() {
     currentView,
     reserved
   } = optimiser;
-  const [modalIsOpen, setModalOpen] = useState(true);
+  const [modalIsOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     if (!timetables) {
       return;
@@ -120,39 +104,10 @@ export default function TimetableViewer() {
     headerText = customTimetables[currentCustomIndex].name;
   }
 
+  console.log("Modal Event:", modalEvent);
+
   return (
     <>
-      {/* <div>
-        <h1>Your Timetables</h1>
-        {customTimetables.map(custom => (
-          <>
-            <div key={custom.id}>Custom Timetable: {custom.name}</div>
-            <button onClick={() => viewCustomTimetable(custom)}>View</button>
-            <hr />{" "}
-          </>
-        ))}
-        <button onClick={newCustomTimetable}>Add a Custom Timetable</button>
-      </div>
-
-      {timetables && (
-        <div>
-          {headerText}
-          <div>
-            <button onClick={() => dispatch(nextTimetable())}>Next</button>
-            <button onClick={() => dispatch(previousTimetable())}>Prev</button>
-          </div>
-          <div>Clashes: {currentTimetable.clashes}</div>
-          <div>
-            Hours/Day:{" "}
-            {Object.keys(currentTimetable.dayHours).map(dayIndex => (
-              <span>
-                {["Mon", "Tue", "Wed", "Thu", "Fri"][dayIndex]}:{" "}
-                {currentTimetable.dayHours[dayIndex]}{" "}
-              </span>
-            ))}
-          </div>
-        </div>
-      )} */}
       <TimetableTips />
       <TimetableHeaderControl header={headerText} />
       {/* <CustomTimetableControl /> */}
@@ -194,15 +149,14 @@ export default function TimetableViewer() {
           eventResourceEditable={true}
         />
       </TimetableViewerWrapper>
-      <StyledModal
-        style={{ overlay: { zIndex: 10 } }}
-        isOpen={modalIsOpen && modalEvent !== null}
-        contentLabel="Example Modal"
-      >
-        {modalEvent && (
-          <ClassModal {...modalEvent.extendedProps} />
-        )}
-      </StyledModal>
+
+      {modalEvent && (
+        <ClassModal
+          isOpen={modalIsOpen}
+          color={modalEvent.backgroundColor}
+          {...modalEvent.extendedProps}
+        />
+      )}
     </>
   );
 }

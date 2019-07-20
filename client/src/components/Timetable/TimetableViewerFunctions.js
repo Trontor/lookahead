@@ -78,8 +78,8 @@ export const classToEvent = cls => {
     streamNumber,
     codes
   } = cls;
-  start = calculateEventDate(day, start).toDate();
-  finish = calculateEventDate(day, finish).toDate();
+  const startDate = calculateEventDate(day, start).toDate();
+  const finishDate = calculateEventDate(day, finish).toDate();
   const locked = type === "Mandatory" ? false : true;
   return {
     title: description,
@@ -92,8 +92,10 @@ export const classToEvent = cls => {
     code: subjectCode,
     subjectName: subjects[subjectCode].name,
     className: "lookahead-event-wrapper",
-    start: start,
-    end: finish,
+    start: startDate,
+    end: finishDate,
+    startInt: start,
+    finishInt: finish,
     editable: locked,
     durationEditable: false
   };
@@ -103,6 +105,8 @@ export const classToEvent = cls => {
 // https://fullcalendar.io/docs/eventClick
 export const handleEventClick = (eventClickInfo, eventCallback) => {
   const { event } = eventClickInfo;
+  console.log("Event:", event);
+
   if (event.id === "reserved") {
     store.dispatch(removeReservedEvent(event));
     return;
