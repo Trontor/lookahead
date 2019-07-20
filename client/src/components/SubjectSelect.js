@@ -93,10 +93,14 @@ const SubjectSelect = props => {
     };
   };
   const customStyles = {
-    input: styles => ({
+    input: provided => ({
+      ...provided,
+      fontSize: "12px",
       color: props.theme.color
     }),
-    placeholder: styles => ({
+    placeholder: provided => ({
+      ...provided,
+      fontSize: "12px",
       color: props.theme.color
     }),
     menu: base => ({
@@ -168,7 +172,7 @@ const SubjectSelect = props => {
         styles={customStyles}
         cacheOptions
         loadOptions={loadOptions}
-        placeholder="Search for a subject..."
+        placeholder={"Search for a subject..."}
         theme={applySelectTheme}
         value={inputValue}
         defaultOptions
