@@ -154,8 +154,7 @@ export default function TimetableViewer() {
         <ClassModal
           isOpen={modalIsOpen}
           color={modalEvent.backgroundColor}
-          {...modalEvent.extendedProps}
-        />
+          {...modalEvent.extendedProps}        />
       )}
     </>
   );

@@ -5,7 +5,8 @@ import timeIntToString from "../../utility/TimeIntToString";
 
 const StyledModal = styled(Modal)`
   background-color: ${props => props.theme.sidebarBg};
-  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.5);
+  border-top: 7px solid ${props => props.color};
   color: ${props => props.theme.text};
   outline: 0;
   border-radius: 3px;
@@ -63,6 +64,18 @@ const SubjectInfo = styled.div`
   }
 `;
 
+const CloseButton = styled.button`
+  cursor: pointer;
+  font-size: 16px;
+  color: ${props => props.theme.text};
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+  top: 18px;
+  right: 18px;
+  position: absolute;
+`;
+
 export default function ClassModal(props) {
   const {
     subjectName,
@@ -73,17 +86,29 @@ export default function ClassModal(props) {
     startInt,
     finishInt,
     weeks,
-    locations,
-    isOpen
+    locations
   } = props;
-  console.log("Received props", props);
+
+  const [isOpen, setIsOpen ] = useState(props.isOpen);
+
+  useEffect(() =>{
+    setIsOpen(props.isOpen);
+    }, [props.isOpen]);
+
+  console.log("Received props", props.isOpen);
+
+  const closeModal = () => {
+    setIsOpen(false);
+  }
 
   return (
     <StyledModal
-      style={{ overlay: { zIndex: 10, backgroundColor: 'rgba(0, 0, 0, 0.7)' } }}
+      style={{ overlay: { zIndex: 10, backgroundColor: 'rgba(0, 0, 0, 0.75)' } }}
       isOpen={isOpen}
       contentLabel="Example Modal"
+      color = {color}
     >
+        <CloseButton onClick={() => closeModal()}>×</CloseButton>
         <ModalHeader>{codes}</ModalHeader>
         <SubjectInfo>
           <SubjectAttribute>Subject Code:</SubjectAttribute>
