@@ -5,6 +5,7 @@ import { getSubject } from "../redux/actions/subjectActions";
 import AsyncSelect from "react-select/async";
 import Select from "react-select";
 import styled from "styled-components";
+import { withTheme } from "styled-components";
 
 const CURRENT_STUDY_PERIOD_INDEX = 3;
 const CURRENT_SUBJECT_LIST_YEAR = 2019;
@@ -88,17 +89,29 @@ const SubjectSelect = props => {
   const applySelectTheme = theme => {
     return {
       ...theme,
-      borderRadius: 0
+      borderRadius: "3px"
     };
   };
   const customStyles = {
+    input: provided => ({
+      ...provided,
+      fontSize: "12px",
+      color: props.theme.color
+    }),
+    placeholder: provided => ({
+      ...provided,
+      fontSize: "12px",
+      color: props.theme.color
+    }),
     menu: base => ({
       ...base,
       zIndex: 100,
       marginTop: "2px"
     }),
-    option: (provided, state) => ({
+    option: (provided, { data, isDisabled, isFocused, isSelected }) => ({
       ...provided,
+      backgroundColor: isFocused ? props.theme.accent : null,
+      color: isFocused ? props.theme.mainDark : null,
       fontSize: "13px",
       // textAlign: "center",
       height: "100%"
@@ -108,6 +121,7 @@ const SubjectSelect = props => {
       const transition = "opacity 3000ms";
       return {
         ...provided,
+        color: props.theme.color,
         opacity,
         transition,
         fontSize: "12px"
@@ -117,8 +131,10 @@ const SubjectSelect = props => {
   const SelectContainer = styled.div`
     display: flex;
     & > div {
+      & > div {
+        background-color: ${props => props.theme.sidebarBg};
+      }
       display: inline-block;
-      font-size: 11px;
     }
 
     .study-period-select {
@@ -155,7 +171,7 @@ const SubjectSelect = props => {
         styles={customStyles}
         cacheOptions
         loadOptions={loadOptions}
-        placeholder="Search for a subject..."
+        placeholder={"Search for a subject..."}
         theme={applySelectTheme}
         value={inputValue}
         defaultOptions
@@ -167,6 +183,4 @@ const SubjectSelect = props => {
   );
 };
 
-SubjectSelect.propTypes = {};
-
-export default SubjectSelect;
+export default withTheme(SubjectSelect);

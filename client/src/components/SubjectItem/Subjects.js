@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
 import { TwitterPicker } from "react-color";
 import ColorPickButton from "./ColorPickButton";
+import { viewSubject } from "../../redux/actions/viewSubjectActions";
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
   /* min-height: 290px; */
@@ -100,13 +101,12 @@ const SubjectCode = styled.div`
   opacity: 0.75;
   font-size: 13px;
 
-  @media screen and (min-width: 600px) {
+  /* @media screen and (min-width: 600px) {
     font-size: 14px;
-  }
+  } */
 
   @media screen and (min-width: 960px) {
     text-align: left;
-    font-size: 11px;
   }
 `;
 
@@ -131,10 +131,6 @@ const SubjectName = styled.div`
     font-size: 13px;
     margin-top: 2px;
     margin-bottom: 5px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    max-width: 16vw;
   }
 `;
 
@@ -218,15 +214,11 @@ function Subjects() {
     dispatch(removeSubject(code));
   };
 
-  const onColorChange = (subject, color, event) => {
-    console.log(color.hex);
-  };
   return (
     <SubjectsWrapper>
       {Object.keys(subjects).map(code => {
-        const { year, studyPeriod, name, loading, data, color } = subjects[
-          code
-        ];
+        const subject = subjects[code];
+        const { year, studyPeriod, name, loading, data, color } = subject;
         let bgColor = color;
         let textColor = "white";
         // if (loading) {
@@ -241,6 +233,12 @@ function Subjects() {
               <SubjectCode>{code}</SubjectCode>
               <SubjectName>{name}</SubjectName>
               <SubjectToolbox iconColor={textColor}>
+                <ToolboxButton
+                  title="View Subject Information"
+                  onClick={() => dispatch(viewSubject(subject))}
+                >
+                  <i className="fa fa-list" />
+                </ToolboxButton>
                 <ColorPickButton
                   onColorChange={color => {
                     dispatch(
@@ -249,10 +247,16 @@ function Subjects() {
                   }}
                   buttonStyle={ToolboxButton}
                 />
-                <ToolboxButton onClick={() => openSWS(year, code)}>
+                <ToolboxButton
+                  title="View Official Timetable"
+                  onClick={() => openSWS(year, code)}
+                >
                   <i className="fa fa-calendar-alt" />
                 </ToolboxButton>
-                <ToolboxButton onClick={() => openHandbook(year, code)}>
+                <ToolboxButton
+                  title="View Handbook Entry"
+                  onClick={() => openHandbook(year, code)}
+                >
                   <i className="fa fa-book" />
                 </ToolboxButton>
               </SubjectToolbox>

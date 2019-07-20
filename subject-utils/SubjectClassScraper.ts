@@ -4,6 +4,7 @@ import Subject from "./Subject";
 import SubjectClass from "./SubjectClass";
 import { SubjectPeriod } from "./SubjectPeriods";
 import { getHTML } from "./WebUtils";
+import WeirdNames from "./WeirdNames";
 
 /**
  * Scrapes the SWS Timetabling System for Subject information.
@@ -67,10 +68,13 @@ export const parseSubject = (
       return;
     }
 
-    if (classCode.includes("Breakout")) {
+    const description = getChild(1);
+    if (
+      WeirdNames.includes(classCode.toLowerCase().trim()) ||
+      WeirdNames.includes(description.toLowerCase().trim())
+    ) {
       return;
     }
-    const description = getChild(1);
     const dayRaw = getChild(2);
     const start = getChild(3);
     const finish = getChild(4);

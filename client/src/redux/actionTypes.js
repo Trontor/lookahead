@@ -10,6 +10,10 @@ export const GET_SUBJECT_FAILURE = "GET_SUBJECT_FAILURE";
 export const REMOVE_SUBJECT = "REMOVE_SUBJECT";
 export const CHANGE_SUBJECT_COLOR = "CHANGE_SUBJECT_COLOR";
 
+// View Subject Information
+export const VIEW_SUBJECT = "VIEW_SUBJECT";
+export const STOP_VIEWING_SUBJECT = "STOP_VIEWING_SUBJECT";
+
 // Clubs
 export const GET_CLUBS_BEGIN = "GET_CLUBS_BEGIN";
 export const GET_CLUBS_SUCCESS = "GET_CLUBS_SUCCESS";
