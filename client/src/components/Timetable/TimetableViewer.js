@@ -22,6 +22,7 @@ import TimetableHeaderControl from "./TimetableHeaderControl";
 import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
 import TimetableViewerWrapper from "./TimetableViewerStyles";
+import ClassModal from "./ClassModal";
 let modalEvent = {
   extendedProps: {
     locations: 1,
@@ -30,13 +31,27 @@ let modalEvent = {
     codes: ["COMP10001/U/1/SM2/W01/08"],
     streamNumber: 8,
     code: "COMP10001",
-    subjectName: "Foundations of Computing"
+    subjectName: "Foundations of Computing",
+    start: "14:15",
+    finish: "15:15"
   }
 };
+
 const StyledModal = styled(Modal)`
-  background-color: green;
+  background-color: white;
+  color: black;
+  outline: 0;
+  border-radius: 3px;
   z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 90%;
+  top: 20%;
+  left: 5%;
 `;
+
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
@@ -185,15 +200,7 @@ export default function TimetableViewer() {
         contentLabel="Example Modal"
       >
         {modalEvent && (
-          <div>
-            <h1>{modalEvent.extendedProps.code}</h1>
-            <h2>{modalEvent.extendedProps.subjectName}</h2>
-            <h2>{modalEvent.extendedProps.streamNumber}</h2>
-            <h2>{modalEvent.extendedProps.type}</h2>
-            <h2>{modalEvent.extendedProps.classCode.type}</h2>
-            <h2>{modalEvent.extendedProps.classCode.type}</h2>
-            <h2>{modalEvent.extendedProps.locations}</h2>
-          </div>
+          <ClassModal {...modalEvent.extendedProps} />
         )}
       </StyledModal>
     </>
