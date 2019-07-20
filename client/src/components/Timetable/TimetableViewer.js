@@ -171,7 +171,7 @@ export default function TimetableViewer() {
       </TimetableViewerWrapper>
       <StyledModal
         style={{ overlay: { zIndex: 10 } }}
-        isOpen={false && modalEvent !== null}
+        isOpen={modalIsOpen && modalEvent !== null}
         contentLabel="Example Modal"
       >
         {modalEvent && (

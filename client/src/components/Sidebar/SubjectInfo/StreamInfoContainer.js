@@ -12,6 +12,7 @@ const StreamClassInfoRow = styled.tr`
     props.highlight &&
     css`
       background-color: ${props.color};
+      color: #3f3844;
       ${props.firstRow &&
         css`
           td:last-child {

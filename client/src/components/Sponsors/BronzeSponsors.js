@@ -10,7 +10,7 @@ const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px;
+  margin: 20px 10px;
 `;
 
 const BronzeCard = styled.div`
@@ -35,6 +35,7 @@ const Logo = styled.img.attrs(props => ({
   align-self: center;
   object-fit: scale-down;
   background-color: ${props => props.theme.SponsorLogoBg};
+  filter: ${props => props.theme.SponsorFilter};
 `;
 
 export default function BronzeSponsors() {

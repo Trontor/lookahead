@@ -38,6 +38,7 @@ export const ClassInfoRow = styled.tr`
     props.highlight &&
     css`
       background-color: ${props => props.color};
+      color: #3f3844;
     `}
 
   ${props =>

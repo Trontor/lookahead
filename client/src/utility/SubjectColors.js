@@ -5,7 +5,7 @@ const colors = [
   "#FF99CD", //pink
   "#D581E8", //violet
   "#AFEEEE", //pale plue
-  "#99CEFF", //baby blue
+  "#87B7ED", //baby blue
   "#9382F0", //lavender
   "#FC7C70", //red
   "#FEBF5D" //orange
