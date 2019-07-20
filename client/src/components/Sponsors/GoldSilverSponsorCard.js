@@ -16,7 +16,7 @@ const SponsorCard = styled.div`
   @media screen and (min-width: 768px) {
     position: relative;
     width: 50%;
-    height: 186px;
+    height: 190px;
     margin-right: 10px;
 
     &:last-child {
@@ -25,15 +25,15 @@ const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    height: 210px;
+    height: 220px;
   }
 
   @media screen and (min-width: 1080px) {
-    height: 192px;
+    height: 212px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 200px;
+    height: 204px;
     max-width: 395px;
   }
 `;
@@ -86,8 +86,10 @@ export const FacebookButton = styled(UMSUButton).attrs(() => ({
 `;
 
 const LogoWrapper = styled.div`
-  /* margin: -8px 0; */
-  /* text-align: center; */
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 5px;
 `;
 
 const Logo = styled.img.attrs(props => ({
@@ -97,6 +99,8 @@ const Logo = styled.img.attrs(props => ({
   align-self: center;
   object-fit: scale-down;
   background-color: ${props => props.theme.SponsorLogoBg};
+  margin-top: -10px;
+  filter: ${props => props.theme.SponsorFilter};
 `;
 
 const DeleteButton = styled.button`
@@ -106,8 +110,8 @@ const DeleteButton = styled.button`
   background-color: transparent;
   border: none;
   opacity: 0.6;
-  top: 10px;
-  right: 4px;
+  top: 6px;
+  right: 2px;
   position: absolute;
 
   /* @media screen and (min-width: 600px) {

@@ -35,6 +35,7 @@ const Logo = styled.img.attrs(props => ({
   align-self: center;
   object-fit: scale-down;
   background-color: ${props => props.theme.SponsorLogoBg};
+  filter: ${props => props.theme.SponsorFilter};
 `;
 
 export default function BronzeSponsors() {
