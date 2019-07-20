@@ -7,7 +7,6 @@ import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
 const filterClubs = (subjectCodes, sponsors) => {
   const goldSilver = [];
   const bronze = [];
-  console.log(sponsors);
   for (const sponsor of sponsors) {
     const { tier, include } = sponsor;
     if (tier === GOLD) {
@@ -37,7 +36,7 @@ const SponsorWrapper = styled.div`
   margin: 0 10px 50x 10px;
   display: flex;
   flex-direction: column;
-  font-size: 11px;
+  font-size: 12px;
   padding: 0 10px;
 
   @media screen and (min-width: 768px) {
@@ -82,13 +81,12 @@ const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 1200px) {
-    height: 180px;
+    height: 200px;
     max-width: 395px;
   }
 `;
 
-const ClubDescription =  styled.div`
-`;
+const ClubDescription = styled.div``;
 
 const ButtonWrapper = styled.div`
   width: 100%;
@@ -118,13 +116,12 @@ const UMSUButton = styled.button`
   &:hover {
     background-color: darkorchid;
   }
-
 `;
 
 const FacebookButton = styled(UMSUButton).attrs(() => ({
   className: "fab fa-facebook-f"
 }))`
-  font-family:  "Font Awesome 5 Brands";
+  font-family: "Font Awesome 5 Brands";
   font-size: 12px;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -137,7 +134,7 @@ const FacebookButton = styled(UMSUButton).attrs(() => ({
 `;
 
 const LogoWrapper = styled.div`
-  margin: -8px 0;
+  /* margin: -8px 0; */
   /* text-align: center; */
 `;
 
@@ -213,8 +210,12 @@ export default function Sponsors() {
                 </LogoWrapper>
                 <ClubDescription>{description}</ClubDescription>
                 <ButtonWrapper>
-                  <a href={signup}><UMSUButton>Website</UMSUButton></a>
-                  <a href={umsu}><UMSUButton>UMSU</UMSUButton></a>
+                  <a href={signup}>
+                    <UMSUButton>Website</UMSUButton>
+                  </a>
+                  <a href={umsu}>
+                    <UMSUButton>UMSU</UMSUButton>
+                  </a>
                   <FacebookButton href={facebook} />
                 </ButtonWrapper>
               </SponsorCard>

@@ -135,7 +135,6 @@ const SubjectSelect = props => {
         background-color: ${props => props.theme.sidebarBg};
       }
       display: inline-block;
-      font-size: 11px;
     }
 
     .study-period-select {

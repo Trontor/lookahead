@@ -101,13 +101,12 @@ const SubjectCode = styled.div`
   opacity: 0.75;
   font-size: 13px;
 
-  @media screen and (min-width: 600px) {
+  /* @media screen and (min-width: 600px) {
     font-size: 14px;
-  }
+  } */
 
   @media screen and (min-width: 960px) {
     text-align: left;
-    font-size: 11px;
   }
 `;
 
@@ -238,7 +237,7 @@ function Subjects() {
                   title="View Subject Information"
                   onClick={() => dispatch(viewSubject(subject))}
                 >
-                  <i className="fa fa-list"/>
+                  <i className="fa fa-list" />
                 </ToolboxButton>
                 <ColorPickButton
                   onColorChange={color => {
