@@ -4,8 +4,9 @@ import Modal from "react-modal";
 import timeIntToString from "../../utility/TimeIntToString";
 
 const StyledModal = styled(Modal)`
-  background-color: white;
-  color: black;
+  background-color: ${props => props.theme.sidebarBg};
+  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.1);
+  color: ${props => props.theme.text};
   outline: 0;
   border-radius: 3px;
   z-index: 999;
@@ -43,7 +44,7 @@ export default function ClassModal(props) {
 
   return (
     <StyledModal
-      style={{ overlay: { zIndex: 10 } }}
+      style={{ overlay: { zIndex: 10, backgroundColor: 'rgba(0, 0, 0, 0.7)' } }}
       isOpen={isOpen}
       contentLabel="Example Modal"
     >
