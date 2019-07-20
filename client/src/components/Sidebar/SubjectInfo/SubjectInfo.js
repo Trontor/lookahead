@@ -82,7 +82,6 @@ export default function SubjectInfo(props) {
       {_mandatoryClasses &&
         groupByArray(_mandatoryClasses, "description").map((kvp, idx) => (
           <InfoContainer
-            subjectCode={subject.code}
             color={color}
             key={idx}
             description={kvp.key}
@@ -92,7 +91,6 @@ export default function SubjectInfo(props) {
       {_regularClasses &&
         groupByArray(_regularClasses, "description").map((kvp, idx) => (
           <InfoContainer
-            subjectCode={subject.code}
             color={color}
             key={idx}
             description={kvp.key}
@@ -102,11 +100,12 @@ export default function SubjectInfo(props) {
       {streamKeys &&
         streamKeys.map((key, idx) => {
           const container = _streamContainers[key];
-          console.log(container);
           return (
             <StreamInfoContainer
+              subjectCode={code}
               color={color}
               key={idx}
+              type={container.type}
               name={container.name}
               streams={container.streams}
             />

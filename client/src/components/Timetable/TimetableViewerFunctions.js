@@ -283,7 +283,12 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   moveRegularClassByCode(subject, fromCode, toCode);
 };
 
-const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
+export const moveStream = (
+  subjectCode,
+  type,
+  oldStreamNumber,
+  newStreamNumber
+) => {
   console.log(
     `${subjectCode}: Moving Stream Type ${type}, ${oldStreamNumber} to ${newStreamNumber}`
   );
