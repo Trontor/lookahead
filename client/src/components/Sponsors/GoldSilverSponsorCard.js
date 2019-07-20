@@ -29,11 +29,11 @@ const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 1080px) {
-    height: 212px;
+    height: 208px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 204px;
+    height: 200px;
     max-width: 395px;
   }
 `;

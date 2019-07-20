@@ -10,7 +10,7 @@ const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px;
+  margin: 20px 10px;
 `;
 
 const BronzeCard = styled.div`
