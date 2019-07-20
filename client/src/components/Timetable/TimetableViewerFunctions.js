@@ -280,58 +280,15 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   const subject = code;
   const fromCode = codes[0];
   const toCode = newClass.codes[0];
-  moveRegularClass(subject, fromCode, toCode);
+  moveRegularClassByCode(subject, fromCode, toCode);
 };
 
-// const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
-//   console.log(
-//     `${subjectCode}: Moving Stream Type ${type}, ${oldStreamNumber} to ${newStreamNumber}`
-//   );
-//   // Get information about the current custom timetable
-//   const {
-//     id,
-//     name,
-//     timetable: { classList }
-//   } = getCurrentCustomTimetable();
-//   // Extract the old stream classes from the classList
-//   const newClassList = classList.filter(
-//     cls =>
-//       cls.subjectCode !== subjectCode ||
-//       cls.classCode.type !== type ||
-//       cls.streamNumber !== oldStreamNumber
-//   );
-//   // Add the new stream classes to the classList
-//   // First, get the new stream classes
-//   const subject = getSubjects()[subjectCode].data;
-//   const newClasses = subject._streamContainers
-//     .find(container => container.type === type)
-//     .streams.find(stream => stream.streamNumbers.includes(newStreamNumber))
-//     .classes;
-//   // Add each new class to the class list
-//   newClasses.forEach(cls => newClassList.push(cls));
-
-//   const newTimetable = new Timetable(newClassList);
-//   store.dispatch(updateCustomTimetable(id, name, newTimetable));
-// };
-
-// const moveRegularClass = (subject, oldCode, newCode) => {
-//   console.log(`${subject}: Moving ${oldCode} to ${newCode}`);
-//   const {
-//     id,
-//     name,
-//     timetable: { classList }
-//   } = getCurrentCustomTimetable();
-//   let newClass = getSubjects()[subject].data._regularClasses.filter(
-//     cls => cls.codes[0] === newCode
-//   )[0];
-//   const oldClass = classList.filter(cls => cls.codes[0] === oldCode)[0];
-//   classList.splice(classList.indexOf(oldClass), 1, newClass);
-//   const newTimetable = new Timetable(classList);
-//   console.log("New Timetable:", newTimetable);
-//   store.dispatch(updateCustomTimetable(id, name, newTimetable));
-// };
-
-const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
+export const moveStream = (
+  subjectCode,
+  type,
+  oldStreamNumber,
+  newStreamNumber
+) => {
   console.log(
     `${subjectCode}: Moving Stream Type ${type}, ${oldStreamNumber} to ${newStreamNumber}`
   );
@@ -365,7 +322,41 @@ const moveStream = (subjectCode, type, oldStreamNumber, newStreamNumber) => {
   store.dispatch(updateTimetable(currentIndex, newTimetable));
 };
 
-const moveRegularClass = (subject, oldCode, newCode) => {
+/**
+ * Moves a class type (Workshop 1, Lecture 2, e.t.c) to a new class time by class
+ */
+export const moveRegularClassByNewClass = newClass => {
+  console.log(` Moving to a new class`, newClass);
+  // Get current timetable
+  const {
+    currentIndex,
+    timetable: { classList }
+  } = getCurrentTimetable();
+  if (!classList) {
+    return;
+  }
+  console.log(
+    "Proceeding to update this classlist:",
+    Object.assign({}, classList)
+  );
+  const {
+    classCode: { type, name }
+  } = newClass;
+  // We filter the timetable to get the old class
+  const oldClass = classList.filter(
+    cls => cls.classCode.type === type && cls.classCode.name === name
+  )[0];
+  // Remove old class, and insert new class
+  classList.splice(classList.indexOf(oldClass), 1, newClass);
+  // Create a new timetable off this information
+  const newTimetable = new Timetable(classList);
+  store.dispatch(updateTimetable(currentIndex, newTimetable));
+};
+
+/**
+ * Moves a class type (Workshop 1, Lecture 2, e.t.c) to a new class time by code
+ */
+const moveRegularClassByCode = (subject, oldCode, newCode) => {
   console.log(`${subject}: Moving class, ${oldCode} to ${newCode}`);
   // Get current timetable
   const {

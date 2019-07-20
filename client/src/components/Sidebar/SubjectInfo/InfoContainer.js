@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
 import timeIntToString from "../../../utility/TimeIntToString";
+import { moveRegularClassByNewClass } from "../../Timetable/TimetableViewerFunctions";
 
 export const InfoTable = styled.table`
   width: 100%;
@@ -73,7 +74,7 @@ export default function InfoContainer(props) {
       currentCodes.push(...entry.codes);
     }
   }
-  const { description, classes, color } = props;
+  const { description, classes, color, subjectCode } = props;
   return (
     <InfoTable>
       <tr>
@@ -97,6 +98,7 @@ export default function InfoContainer(props) {
             odd={idx % 2 !== 1}
             highlight={isOnTimetable}
             color={color}
+            onClick={() => moveRegularClassByNewClass(cls)}
           >
             <td>{daysOfWeek[day]}</td>
             <td>{timeIntToString(start)}</td>

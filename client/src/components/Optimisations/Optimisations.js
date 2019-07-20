@@ -69,7 +69,7 @@ const HourInputWrapper = styled.div`
 
 const TimeOptimisation = styled.div`
   margin: 30px 40px 40px 40px;
-  max-width: 180px;
+  max-width: 200px;
 `;
 
 const Input = styled.input`

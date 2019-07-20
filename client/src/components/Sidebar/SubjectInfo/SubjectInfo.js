@@ -100,11 +100,12 @@ export default function SubjectInfo(props) {
       {streamKeys &&
         streamKeys.map((key, idx) => {
           const container = _streamContainers[key];
-          console.log(container);
           return (
             <StreamInfoContainer
+              subjectCode={code}
               color={color}
               key={idx}
+              type={container.type}
               name={container.name}
               streams={container.streams}
             />

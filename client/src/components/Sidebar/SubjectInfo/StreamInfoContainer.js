@@ -4,6 +4,7 @@ import { InfoTable, ClassInfoRow } from "./InfoContainer";
 import timeIntToString from "../../../utility/TimeIntToString";
 import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
+import { moveStream } from "../../Timetable/TimetableViewerFunctions";
 
 const StreamClassInfoRow = styled.tr`
   cursor: pointer;
@@ -45,7 +46,7 @@ const StreamClassInfoRow = styled.tr`
 `;
 
 export default function StreamInfoContainer(props) {
-  const { streams, type, name, color } = props;
+  const { streams, type, name, color, subjectCode } = props;
   const optimiser = useSelector(state => state.optimiser);
   const { currentIndex, timetables } = optimiser;
   const currentCodes = [];
@@ -57,6 +58,15 @@ export default function StreamInfoContainer(props) {
     }
   }
 
+  const currentStream = streams.find(stream =>
+    stream.classes.some(cls =>
+      cls.codes.some(code => currentCodes.includes(code))
+    )
+  );
+
+  const currentStreamNumbers = !currentStream
+    ? null
+    : currentStream.streamNumbers;
   return (
     <InfoTable>
       {/* Headers */}
@@ -93,6 +103,14 @@ export default function StreamInfoContainer(props) {
                   lastRow={idx === rowSpan - 1}
                   highlight={isOnTimetable}
                   color={color}
+                  onClick={() =>
+                    moveStream(
+                      subjectCode,
+                      type,
+                      currentStreamNumbers[0],
+                      streamNumbers[0]
+                    )
+                  }
                 >
                   {idx === 0 && <td rowSpan={rowSpan}>{streamText}</td>}
                   <td>{daysOfWeek[day]}</td>

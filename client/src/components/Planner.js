@@ -9,6 +9,7 @@ import Sponsors from "./Sponsors/Sponsors";
 import OptimiseButton from "./OptimiseButton";
 import RegistrationCountdown from "./RegistrationCountdown";
 import Sidebar from "./Sidebar/Sidebar";
+import BronzeSponsors from "./Sponsors/BronzeSponsors";
 
 const Grid = styled.div`
   grid-template-columns: 100%;
@@ -56,6 +57,7 @@ export default function Planner() {
       <Main>
         <Sponsors />
         <TimetableViewer />
+        <BronzeSponsors />
       </Main>
     </Grid>
   );

@@ -91,7 +91,7 @@ export default function TimetableTips() {
         Use your arrow keys ← → to quickly navigate between the timetables.
       </Tip>
       <Tip desktop>
-        Click and drag classes around to customise your timetable (Mandatory
+        Click and drag classes around to customise your timetable (Mandatory{" "}
         <i className="fa fa-lock" /> classes can't be changed).
       </Tip>
       <Tip mobile>
