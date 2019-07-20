@@ -4,24 +4,62 @@ import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
 import timeIntToString from "../../../utility/TimeIntToString";
 
-const InfoTable = styled.table`
+export const InfoTable = styled.table`
   width: 100%;
-  border: 1px solid black;
-  margin: 10px 0;
+  background: ${props => props.theme.cardBg};
+  margin-top: 10px;
+  padding: 7px;
+  text-align: left;
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  border-spacing: 0;
+  /* border-top: 8px solid ${props => props.color}; */
   th {
+    width: 25%;
+    padding-left: 4px;
+    padding-bottom: 3px;
+
     &.header {
-      font-size: 20px;
-      color: rebeccapurple;
+      font-size: 14px;
+      font-weight: bold;
     }
   }
+
+  @media screen and (min-width: 960px) {
+    /* border-left: 8px solid ${props => props.color};
+    border-top: none; */
+  }
 `;
-const ClassInfoRow = styled.tr`
-  text-align: center;
+export const ClassInfoRow = styled.tr`
+  letter-spacing: -0.01em;
+  cursor: pointer;
   ${props =>
     props.highlight &&
     css`
-      background-color: orange;
+      background-color: ${props => props.color};
     `}
+
+  ${props =>
+    props.odd &&
+    !props.highlight &&
+    css`
+      background-color: ${props => props.theme.sidebarBg};
+    `}
+
+  td {
+    padding: 3px 4px;
+  }
+
+  td:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding-left: 5px;
+  }
+
+  td:last-child {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+  }
 `;
 
 export default function InfoContainer(props) {
@@ -35,7 +73,7 @@ export default function InfoContainer(props) {
       currentCodes.push(...entry.codes);
     }
   }
-  const { description, classes } = props;
+  const { description, classes, color } = props;
   return (
     <InfoTable>
       <tr>
@@ -49,13 +87,17 @@ export default function InfoContainer(props) {
         <th>Finish</th>
         <th>Weeks</th>
       </tr>
-      {classes.map(cls => {
+      {classes.map((cls, idx) => {
         const { description, day, start, finish, weeks, locations } = cls;
         const isOnTimetable = cls.codes.some(code =>
           currentCodes.includes(code)
         );
         return (
-          <ClassInfoRow highlight={isOnTimetable}>
+          <ClassInfoRow
+            odd={idx % 2 !== 1}
+            highlight={isOnTimetable}
+            color={color}
+          >
             <td>{daysOfWeek[day]}</td>
             <td>{timeIntToString(start)}</td>
             <td>{timeIntToString(finish)}</td>

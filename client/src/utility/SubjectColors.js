@@ -1,14 +1,14 @@
 const colors = [
-  "#B5ECAA",
-  "#66CDAA",
-  "#84B4C8",
-  "#AFEEEE",
-  "#99CEFF",
-  "#9B73DF",
-  "#D581E8",
-  "#FF99CD",
-  "#FC7C70",
-  "#FEBF5D"
+  "#84B4C8", //dark ice blue
+  "#B5ECAA", //light green
+  "#66CDAA", //dark green
+  "#FF99CD", //pink
+  "#D581E8", //violet
+  "#AFEEEE", //pale plue
+  "#99CEFF", //baby blue
+  "#9382F0", //lavender
+  "#FC7C70", //red
+  "#FEBF5D" //orange
 ];
 
 function shuffleArray(array) {
