@@ -22,15 +22,12 @@ const OptimiseButton = styled.button`
   border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 0.375rem;
   border: 0;
-  border-radius: 0.125rem;
+  border-radius: 3px;
   cursor: pointer;
   text-transform: uppercase;
   white-space: normal;
   word-wrap: break-word;
-
-  /* &:active {
-    background-color: #739 !important;
-  } */
+  letter-spacing: 0.02em;
 
   &:hover,
   &:focus {

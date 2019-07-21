@@ -36,13 +36,13 @@ const Header = styled.h1`
 `;
 
 const Subheader = styled.h2`
-  font-size: 13px;
+  font-size: 15px;
   line-height: 0.5em;
 `;
 
 const Optimisation = styled.div`
   text-align: ${({ center }) => (center ? "center" : "left")};
-  margin: 10px 0;
+  margin: 8px 0;
 
   .rc-time-picker-input {
     width: 75px;

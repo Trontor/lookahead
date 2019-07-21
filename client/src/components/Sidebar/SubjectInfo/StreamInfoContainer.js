@@ -66,7 +66,7 @@ export default function StreamInfoContainer(props) {
   );
 
   const currentStreamNumbers = !currentStream
-    ? null
+    ? []
     : currentStream.streamNumbers;
   return (
     <InfoTable>
@@ -104,14 +104,17 @@ export default function StreamInfoContainer(props) {
                   lastRow={idx === rowSpan - 1}
                   highlight={isOnTimetable}
                   color={color}
-                  onClick={() =>
+                  onClick={() => {
+                    if (!currentStreamNumbers.length) {
+                      return;
+                    }
                     moveStream(
                       subjectCode,
                       type,
                       currentStreamNumbers[0],
                       streamNumbers[0]
-                    )
-                  }
+                    );
+                  }}
                 >
                   {idx === 0 && <td rowSpan={rowSpan}>{streamText}</td>}
                   <td>{daysOfWeek[day]}</td>

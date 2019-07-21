@@ -1,4 +1,4 @@
-$checkbox-color: lightsalmon;
+$checkbox-color: lightsteelblue;
 
 .styled-checkbox {
   position: absolute; // take it out of document flow
@@ -23,6 +23,7 @@ $checkbox-color: lightsalmon;
     border: 1px solid gray;
     box-sizing: border-box;
   }
+
   @media (hover: hover) {
     // Box hover
     &:hover + label:before {

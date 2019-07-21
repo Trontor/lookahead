@@ -113,22 +113,18 @@ const SubjectCode = styled.div`
 const SubjectName = styled.div`
   max-width: inherit;
   align-self: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   margin-top: 4px;
   margin-bottom: 7px;
-
-  @media screen and (min-width: 600px) {
-    font-size: 15px;
-  }
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 
   @media screen and (min-width: 960px) {
-    max-width: 10vw;
-    font-size: 13px;
+    max-width: 55%;
+    font-size: 14px;
     margin-top: 2px;
     margin-bottom: 5px;
   }
