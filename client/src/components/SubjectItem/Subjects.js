@@ -23,25 +23,40 @@ const hideMe= css`
 `;
 
 const loadingCSS = css`
+  position: relative;
   border-color: transparent;
-  height: 70px;
-    background-image:
+  height: auto;
+  background-image:
     linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-    linear-gradient(-45deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg});
-  background-repeat: no-repeat;
-  background-size: 100% 100%, 100% 200%;
-  animation: animatedgradient 3s ease alternate infinite;
+    linear-gradient(90deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor});
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  animation: gradient 1s alternate infinite;
+  opacity: 0.65;
+  background-size: 100% 200%, 100% 100%;
+  background-position: 20px;
 
-  @keyframes animatedgradient {
+  /* @keyframes gradient {
     0% {
-      background-position: 0% 50%;
+      background-position: 25%;
     }
+
     50% {
-      background-position: 100% 50%;
+      background-position: 50%;
     }
+
     100% {
-      background-position: 0% 50%;
+      background-position: 100%;
     }
+  } */
+
+  @media screen and (min-width: 960px) {
+    border-color: transparent;
+    background-image:
+      linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
+      linear-gradient(180deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg});
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
   }
 `;
 
@@ -124,7 +139,6 @@ const SubjectCode = styled.div`
   font-weight: bold;
   opacity: 0.75;
   font-size: 13px;
-  ${({ loading }) => hideMe}
 
   @media screen and (min-width: 960px) {
     text-align: left;
@@ -138,7 +152,6 @@ const SubjectName = styled.div`
   font-weight: bold;
   margin-top: 4px;
   margin-bottom: 7px;
-  ${({ loading }) => hideMe}
 
   @media screen and (min-width: 768px) {
     font-size: 16px;

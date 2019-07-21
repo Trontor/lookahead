@@ -91,7 +91,7 @@ export default (state = initialState, action) => {
         [action.payload.code]: {
           ...state[action.payload.code],
           data: action.payload.classInfo,
-          loading: true
+          loading: false
         }
       };
     case GET_SUBJECT_FAILURE:
