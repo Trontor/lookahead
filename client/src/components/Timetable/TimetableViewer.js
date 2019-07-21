@@ -153,8 +153,10 @@ export default function TimetableViewer() {
       {modalEvent && (
         <ClassModal
           isOpen={modalIsOpen}
+          closeModal={() => setModalOpen(false)}
           color={modalEvent.backgroundColor}
-          {...modalEvent.extendedProps}        />
+          {...modalEvent.extendedProps}
+        />
       )}
     </>
   );

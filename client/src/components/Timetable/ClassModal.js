@@ -86,54 +86,49 @@ export default function ClassModal(props) {
     startInt,
     finishInt,
     weeks,
-    locations
+    locations,
+    isOpen
   } = props;
 
-  const [isOpen, setIsOpen ] = useState(props.isOpen);
-
-  useEffect(() =>{
-    setIsOpen(props.isOpen);
-    }, [props.isOpen]);
-
-  console.log("Received props", props.isOpen);
-
   const closeModal = () => {
-    setIsOpen(false);
-  }
+    props.closeModal();
+  };
 
   return (
     <StyledModal
-      style={{ overlay: { zIndex: 10, backgroundColor: 'rgba(0, 0, 0, 0.75)' } }}
+      style={{
+        overlay: { zIndex: 10, backgroundColor: "rgba(0, 0, 0, 0.75)" }
+      }}
       isOpen={isOpen}
       contentLabel="Example Modal"
-      color = {color}
+      color={color}
     >
-        <CloseButton onClick={() => closeModal()}>×</CloseButton>
-        <ModalHeader>{codes}</ModalHeader>
-        <SubjectInfo>
-          <SubjectAttribute>Subject Code:</SubjectAttribute>
-          {code}
-        </SubjectInfo>
-        <SubjectInfo>
-          <SubjectAttribute>Subject Name: </SubjectAttribute>
-          {subjectName}
-        </SubjectInfo>
-        <SubjectInfo>
-          <SubjectAttribute>Start: </SubjectAttribute>
-          {timeIntToString(startInt)}
-        </SubjectInfo>
-        <SubjectInfo>
-          <SubjectAttribute>Finish: </SubjectAttribute>
-          {timeIntToString(finishInt)}
-        </SubjectInfo>
-        <SubjectInfo>
-          <SubjectAttribute>Weeks: </SubjectAttribute>
-          {weeks}
-        </SubjectInfo>
-        <SubjectInfo>
-          <SubjectAttribute>Locations: </SubjectAttribute>
-          {locations}
-        </SubjectInfo>
+      <CloseButton onClick={() => closeModal()}>×</CloseButton>
+      <ModalHeader>{codes}</ModalHeader>
+      <SubjectInfo>
+        <SubjectAttribute>Subject Code:</SubjectAttribute>
+        {code}
+      </SubjectInfo>
+      <SubjectInfo>
+        <SubjectAttribute>Subject Name: </SubjectAttribute>
+        {subjectName}
+      </SubjectInfo>
+      <SubjectInfo>
+        <SubjectAttribute>Start: </SubjectAttribute>
+        {timeIntToString(startInt)}
+      </SubjectInfo>
+      <SubjectInfo>
+        <SubjectAttribute>Finish: </SubjectAttribute>
+        {timeIntToString(finishInt)}
+      </SubjectInfo>
+      <SubjectInfo>
+        <SubjectAttribute>Weeks: </SubjectAttribute>
+        {weeks}
+      </SubjectInfo>
+      <SubjectInfo>
+        <SubjectAttribute>Locations: </SubjectAttribute>
+        {locations}
+      </SubjectInfo>
     </StyledModal>
   );
 }
