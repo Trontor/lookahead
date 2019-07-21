@@ -99,11 +99,12 @@ export default function ClassModal(props) {
       style={{
         overlay: { zIndex: 10, backgroundColor: "rgba(0, 0, 0, 0.75)" }
       }}
+      onRequestClose={closeModal}
       isOpen={isOpen}
       contentLabel="Example Modal"
       color={color}
     >
-      <CloseButton onClick={() => closeModal()}>×</CloseButton>
+      <CloseButton onClick={closeModal}>×</CloseButton>
       <ModalHeader>{codes}</ModalHeader>
       <SubjectInfo>
         <SubjectAttribute>Subject Code:</SubjectAttribute>
