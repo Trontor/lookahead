@@ -28,35 +28,34 @@ const loadingCSS = css`
   height: auto;
   background-image:
     linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-    linear-gradient(90deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor});
+    repeating-linear-gradient(90deg, lightsteelblue 0%, ${props => props.theme.cardBg} 25%, lightsteelblue 50%, ${props => props.theme.cardBg} 70%, lightsteelblue 100%);
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
-  animation: gradient 1s alternate infinite;
-  opacity: 0.65;
-  background-size: 100% 200%, 100% 100%;
-  background-position: 20px;
+  opacity: 0.6;
+  background-size: 100% 100%, 200% auto;
+  background-position: 0 0, 0 200%;
+  background-origin: padding-box, border-box;
+  animation: gradient 3s linear infinite;
+  animation-fill-mode: forwards;
 
-  /* @keyframes gradient {
-    0% {
-      background-position: 25%;
-    }
-
-    50% {
-      background-position: 50%;
-    }
-
-    100% {
-      background-position: 100%;
-    }
-  } */
+  @keyframes gradient {
+    0%   { background-position: 0 0, 0 0; }
+    100% { background-position: 0 0, -200% -200%; }
+  }
 
   @media screen and (min-width: 960px) {
     border-color: transparent;
     background-image:
       linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-      linear-gradient(180deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg});
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
+      linear-gradient(180deg, lightsteelblue 0%, ${props => props.theme.cardBg} 50%, lightsteelblue 100%);
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 100%;
+    animation: gradient 2s infinite;
+
+    @keyframes gradient {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 0 0, 0 -200%; }
+    }
   }
 `;
 
