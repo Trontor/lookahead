@@ -18,47 +18,64 @@ const SubjectWrapper = styled.div`
   position: relative;
 `;
 
-const hideMe= css`
+const hideMe = css`
   display: none;
 `;
 
-const loadingCSS = css`
-  position: relative;
-  border-color: transparent;
-  height: auto;
-  background-image:
-    linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-    linear-gradient(90deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor});
-  background-origin: padding-box, border-box;
-  background-clip: padding-box, border-box;
-  animation: gradient 1s alternate infinite;
-  opacity: 0.65;
-  background-size: 100% 200%, 100% 100%;
-  background-position: 20px;
+// const loadingCSS = css`
+//   position: relative;
+//   border-color: transparent;
+//   height: auto;
+//   background-image: linear-gradient(
+//       ${props => props.theme.cardBg},
+//       ${props => props.theme.cardBg}
+//     ),
+//     linear-gradient(
+//       90deg,
+//       ${props => props.theme.ttBorderColor},
+//       ${props => props.theme.bodyBg},
+//       ${props => props.theme.ttBorderColor},
+//       ${props => props.theme.bodyBg},
+//       ${props => props.theme.ttBorderColor}
+//     );
+//   background-origin: padding-box, border-box;
+//   background-clip: padding-box, border-box;
+//   animation: gradient 1s alternate infinite;
+//   opacity: 0.65;
+//   background-size: 100% 200%, 100% 100%;
+//   background-position: 20px;
 
-  /* @keyframes gradient {
-    0% {
-      background-position: 25%;
-    }
+//   @keyframes gradient {
+//     0% {
+//       background-position: 25%;
+//     }
 
-    50% {
-      background-position: 50%;
-    }
+//     50% {
+//       background-position: 50%;
+//     }
 
-    100% {
-      background-position: 100%;
-    }
-  } */
+//     100% {
+//       background-position: 100%;
+//     }
+//   }
 
-  @media screen and (min-width: 960px) {
-    border-color: transparent;
-    background-image:
-      linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-      linear-gradient(180deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg});
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-  }
-`;
+//   @media screen and (min-width: 960px) {
+//     border-color: transparent;
+//     background-image: linear-gradient(
+//         ${props => props.theme.cardBg},
+//         ${props => props.theme.cardBg}
+//       ),
+//       linear-gradient(
+//         180deg,
+//         ${props => props.theme.ttBorderColor},
+//         ${props => props.theme.bodyBg},
+//         ${props => props.theme.ttBorderColor},
+//         ${props => props.theme.bodyBg}
+//       );
+//     background-origin: padding-box, border-box;
+//     background-clip: padding-box, border-box;
+//   }
+// `;
 
 const LoadingLine = css`
   width: 50%;
@@ -66,46 +83,56 @@ const LoadingLine = css`
   background-color: #ccc;
 `;
 
-// const loadingCSS = css`
-//   border-width: 2px;
-//   border-radius: 0px;
-//   /* background: white; */
-//   position: relative;
-//   @keyframes animatedgradient {
-//     0% {
-//       background-position: 0% 50%;
-//     }
-//     50% {
-//       background-position: 100% 50%;
-//     }
-//     100% {
-//       background-position: 0% 50%;
-//     }
-//   }
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: calc(-1 * 2px);
-//     left: calc(-1 * 2px);
-//     height: calc(100% + 2px * 2);
-//     width: calc(100% + 2px * 2);
-//     background: linear-gradient(
-//       60deg,
-//       #f79533,
-//       #f37055,
-//       #ef4e7b,
-//       #a166ab,
-//       #5073b8,
-//       #1098ad,
-//       #07b39b,
-//       #6fba82
-//     );
-//     border-radius: calc(2 * var(2px));
-//     z-index: -1;
-//     animation: animatedgradient 3s ease alternate infinite;
-//     background-size: 300% 300%;
-//   }
-// `;
+const loadingCSS = css`
+  /* background: white; */
+  position: relative;
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: -8px;
+    left: 0;
+    height: 8px;
+    width: 100%;
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    @media screen and (min-width: 960px) {
+      border-radius: inherit;
+      top: 0;
+      left: -8px;
+      height: 100%;
+      width: 8px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    z-index: 2;
+    animation: animatedgradient 0.5s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+`;
 
 const SubjectHeader = styled.div`
   padding: 10px 0 12px 0;
