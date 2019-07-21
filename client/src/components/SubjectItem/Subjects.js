@@ -18,15 +18,39 @@ const SubjectWrapper = styled.div`
   position: relative;
 `;
 
-const loadingCSS = css`
-  /* border-top: none !important;
-
-  @media screen and (min-width: 960px) {
-    border-left: none !important;
-  } */
-  background-color: inherit;
-  box-shadow: none;
+const hideMe= css`
+  display: none;
 `;
+
+const loadingCSS = css`
+  border-color: transparent;
+  height: 70px;
+    background-image:
+    linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
+    linear-gradient(-45deg, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg}, ${props => props.theme.ttBorderColor}, ${props => props.theme.bodyBg});
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 200%;
+  animation: animatedgradient 3s ease alternate infinite;
+
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+`;
+
+const LoadingLine = css`
+  width: 50%;
+  height: 15px;
+  background-color: #ccc;
+`;
+
 // const loadingCSS = css`
 //   border-width: 2px;
 //   border-radius: 0px;
@@ -91,7 +115,7 @@ const SubjectHeader = styled.div`
       text-align: left;
     }
   }
-  ${({ loading }) => loading && loadingCSS} 
+  ${({ loading }) => loading && loadingCSS}
 `;
 
 const SubjectCode = styled.div`
@@ -100,10 +124,7 @@ const SubjectCode = styled.div`
   font-weight: bold;
   opacity: 0.75;
   font-size: 13px;
-
-  /* @media screen and (min-width: 600px) {
-    font-size: 14px;
-  } */
+  ${({ loading }) => hideMe}
 
   @media screen and (min-width: 960px) {
     text-align: left;
@@ -117,6 +138,7 @@ const SubjectName = styled.div`
   font-weight: bold;
   margin-top: 4px;
   margin-bottom: 7px;
+  ${({ loading }) => hideMe}
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -145,7 +167,6 @@ const SubjectToolbox = styled.div`
   @media screen and (min-width: 960px) {
     font-weight: bold;
     vertical-align: middle;
-    /* color: ${({ iconColor }) => iconColor}; */
     top: 35%;
   }
 `;
@@ -158,6 +179,7 @@ const ToolboxButton = styled.button`
   background-color: transparent;
   border: none;
   opacity: 0.7;
+  ${({ loading }) => loading && hideMe}
 
   @media screen and (min-width: 768px) {
     padding: 0 10px;
@@ -179,11 +201,6 @@ const DeleteButton = styled.button`
   top: 10px;
   right: 4px;
   position: absolute;
-
-  /* @media screen and (min-width: 600px) {
-    top: 8px;
-    right: 5px;
-  } */
 
   @media screen and (min-width: 960px) {
     top: 5px;
