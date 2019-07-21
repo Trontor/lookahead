@@ -321,15 +321,14 @@ function Subjects() {
               ) : (
                 <SubjectNameLoading />
               )}
-              {loading && (
+              {loading ? (
                 <LoadingDotWrapper>
                   <LoadingDot />
                   <LoadingDot />
                   <LoadingDot />
                   <LoadingDot />
                 </LoadingDotWrapper>
-              )}
-              {!loading && (
+              ) : (
                 <SubjectToolbox iconColor={textColor}>
                   <ToolboxButton
                     title="View Subject Information"
