@@ -9,25 +9,42 @@ import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 20px 10px;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  max-width: 960px;
 `;
 
 const BronzeCard = styled.div`
-  flex: 0 0 250px;
+  flex: 0 0 180px;
   text-align: center;
   font-size: 12px;
-  span {
+  height: 140px;
+  margin-bottom: 30px;
+  position: relative;
+  width: 50%;
+
+  div {
     font-weight: bold;
+    margin-top: 2px;
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-bottom: 0;
   }
 `;
 
 const BronzeCardButtonGroup = styled.div`
-  margin-top: 10px;
+  margin: 10px auto;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -50px;
+
   & > a:not(:last-of-type) {
     margin-right: 10px;
   }
 `;
+
 const Logo = styled.img.attrs(props => ({
   width: "120px",
   height: "60px"
@@ -61,7 +78,7 @@ export default function BronzeSponsors() {
           return (
             <BronzeCard>
               <Logo alt={`${name} logo`} width="100%" src={logoURL} />
-              <span>{name}</span>
+              <div>{name}</div>
               <BronzeCardButtonGroup>
                 <UMSUButton href={umsu}>UMSU</UMSUButton>
                 <FacebookButton href={facebook} />
