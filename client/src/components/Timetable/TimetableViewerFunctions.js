@@ -79,13 +79,14 @@ export const classToEvent = cls => {
     codes,
     weeks
   } = cls;
+
   const startDate = calculateEventDate(day, start).toDate();
   const finishDate = calculateEventDate(day, finish).toDate();
   const locked = type === "Mandatory" ? false : true;
   return {
     title: description,
     backgroundColor: subjects[subjectCode].color,
-    locations: locations.length,
+    locations: locations,
     type,
     classCode,
     codes,

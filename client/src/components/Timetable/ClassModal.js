@@ -136,7 +136,12 @@ export default function ClassModal(props) {
       </SubjectInfo>
       <SubjectInfo>
         <SubjectAttribute>Locations: </SubjectAttribute>
-        {locations}
+        {locations.map(loc => (
+          <>
+            {loc}
+            <br />
+          </>
+        ))}
       </SubjectInfo>
     </StyledModal>
   );
