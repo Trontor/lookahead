@@ -113,22 +113,18 @@ const SubjectCode = styled.div`
 const SubjectName = styled.div`
   max-width: inherit;
   align-self: center;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   margin-top: 4px;
   margin-bottom: 7px;
-
-  @media screen and (min-width: 600px) {
-    font-size: 15px;
-  }
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 
   @media screen and (min-width: 960px) {
-    max-width: 14vw;
-    font-size: 13px;
+    max-width: 55%;
+    font-size: 14px;
     margin-top: 2px;
     margin-bottom: 5px;
   }
@@ -232,34 +228,36 @@ function Subjects() {
             <SubjectHeader loading={loading} color={bgColor}>
               <SubjectCode>{code}</SubjectCode>
               <SubjectName>{name}</SubjectName>
-              <SubjectToolbox iconColor={textColor}>
-                <ToolboxButton
-                  title="View Subject Information"
-                  onClick={() => dispatch(viewSubject(subject))}
-                >
-                  <i className="fa fa-list" />
-                </ToolboxButton>
-                <ColorPickButton
-                  onColorChange={color => {
-                    dispatch(
-                      changeSubjectColor(year, studyPeriod, code, color.hex)
-                    );
-                  }}
-                  buttonStyle={ToolboxButton}
-                />
-                <ToolboxButton
-                  title="View Official Timetable"
-                  onClick={() => openSWS(year, code)}
-                >
-                  <i className="fa fa-calendar-alt" />
-                </ToolboxButton>
-                <ToolboxButton
-                  title="View Handbook Entry"
-                  onClick={() => openHandbook(year, code)}
-                >
-                  <i className="fa fa-book" />
-                </ToolboxButton>
-              </SubjectToolbox>
+              {!loading && (
+                <SubjectToolbox iconColor={textColor}>
+                  <ToolboxButton
+                    title="View Subject Information"
+                    onClick={() => dispatch(viewSubject(subject))}
+                  >
+                    <i className="fa fa-list" />
+                  </ToolboxButton>
+                  <ColorPickButton
+                    onColorChange={color => {
+                      dispatch(
+                        changeSubjectColor(year, studyPeriod, code, color.hex)
+                      );
+                    }}
+                    buttonStyle={ToolboxButton}
+                  />
+                  <ToolboxButton
+                    title="View Official Timetable"
+                    onClick={() => openSWS(year, code)}
+                  >
+                    <i className="fa fa-calendar-alt" />
+                  </ToolboxButton>
+                  <ToolboxButton
+                    title="View Handbook Entry"
+                    onClick={() => openHandbook(year, code)}
+                  >
+                    <i className="fa fa-book" />
+                  </ToolboxButton>
+                </SubjectToolbox>
+              )}
             </SubjectHeader>
             <DeleteButton onClick={() => deleteSubject(year, code)}>
               ×

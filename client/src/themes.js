@@ -27,7 +27,7 @@ const regularTheme = {
   mainDark: "#00626C",
   secondary: "deepskyblue",
   secondaryDark: "dodgerblue",
-  accent: "lightsalmon",
+  accent: "#FF9C94",
 
   dragDropRegularEventOpacity: 0.15,
   dragDropEventBorder: "2px dotted green",
@@ -40,7 +40,7 @@ const darkTheme = {
   /*=== Header ===*/
   headerBg: "#3A3A46",
   /*===Timetable (tt) Viewer===*/
-  ttBorderColor: "#3E3E4A",
+  ttBorderColor: "#454554",
   ttTextColor: "#ddd",
   /*=== Body ===*/
   bodyBg: "#363642",
@@ -63,7 +63,7 @@ const darkTheme = {
   mainDark: "#4A395D",
   secondary: "#524864",
   secondaryDark: "#562876",
-  accent: "lightsalmon",
+  accent: "mediumslateblue",
 
   dragDropRegularEventOpacity: 0.15,
   dragDropEventBorder: "2px dotted orange",
