@@ -68,15 +68,20 @@ const loadingCSS = css`
 
 const gradientShimmer = css`
   height: 16px;
+  opacity: 0.5;
   background-image: repeating-linear-gradient(-60deg,
     ${props => props.theme.loadingGradient} 0%,
     ${props => props.theme.cardBg} 50%,
     ${props => props.theme.loadingGradient} 100%);
   background-size: 200% auto;
   background-position: 0 100%;
-  animation: shimmer 1s linear infinite;
+  animation: shimmer 1s infinite;
   animation-fill-mode: forwards;
   border-radius: 2px;
+
+  @media screen and (min-width: 960px) {
+    height: 14px;
+  }
 
   @keyframes shimmer {
     0%   { background-position: 0 0; }
@@ -85,7 +90,7 @@ const gradientShimmer = css`
 `;
 
 const SubjectCodeLoading = styled.div`
-  width: 10%;
+  width: 100px;
   margin: 2px auto 8px auto;
   ${gradientShimmer}
 
@@ -97,7 +102,7 @@ const SubjectCodeLoading = styled.div`
 `;
 
 const SubjectNameLoading = styled.div`
-  width: 30%;
+  width: 240px;
   margin: 0 auto;
   ${gradientShimmer}
 

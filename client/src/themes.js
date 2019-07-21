@@ -12,7 +12,7 @@ const regularTheme = {
   sidebarBg: "#f8f8f8",
   /*=== Subject List ===*/
   cardBg: "#fefefe",
-  loadingGradient: "#D9E6F0",
+  loadingGradient: "#DBE3EF",
   /*=== Global Text ===*/
   text: "#3f3844",
   /*=== Sponsor Special Buttons ===*/
