@@ -36,7 +36,7 @@ const HeaderText = styled.div`
 `;
 
 const HeaderSubtitle = styled.span`
-  font-size: 10px;
+  font-size: 11px;
   display: inline;
   text-transform: uppercase;
   font-weight: bold;

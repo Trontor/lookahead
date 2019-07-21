@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: ${props => props.theme.bodyBg};
     font-family: "Karla", Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     color: ${props => props.theme.text};
   }
   *, *::before, *::after{
@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 22px;
     font-family: "Quicksand", sans-serif;
   }
   /* * {

@@ -23,6 +23,7 @@ $checkbox-color: lightsalmon;
     border: 1px solid gray;
     box-sizing: border-box;
   }
+
   @media (hover: hover) {
     // Box hover
     &:hover + label:before {

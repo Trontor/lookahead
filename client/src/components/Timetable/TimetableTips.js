@@ -24,7 +24,6 @@ const Tip = styled.div`
   margin: 7px;
   padding: 1px 7px;
   font-size: 12px;
-  font-family: "Karla", Helvetica, sans-serif;
   border-left: 3px solid ${props => props.theme.accent};
   letter-spacing: -0.01em;
 

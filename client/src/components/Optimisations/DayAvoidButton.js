@@ -7,7 +7,7 @@ const AvoidButton = styled.button`
   text-transform: uppercase;
   font-family: inherit;
   font-weight: bold;
-  font-size: 10px;
+  font-size: 11px;
   border: 1px solid ${props => props.theme.accent};
   padding: 6px 0; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
