@@ -93,6 +93,7 @@ export default function ClassModal(props) {
   const closeModal = () => {
     props.closeModal();
   };
+  console.log(codes);
 
   return (
     <StyledModal
@@ -105,7 +106,14 @@ export default function ClassModal(props) {
       color={color}
     >
       <CloseButton onClick={closeModal}>×</CloseButton>
-      <ModalHeader>{codes.join("\n")}</ModalHeader>
+      <ModalHeader>
+        {codes.map(code => (
+          <>
+            {code}
+            <br />
+          </>
+        ))}
+      </ModalHeader>
       <SubjectInfo>
         <SubjectAttribute>Subject Code:</SubjectAttribute>
         {code}
