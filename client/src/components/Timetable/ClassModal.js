@@ -105,7 +105,7 @@ export default function ClassModal(props) {
       color={color}
     >
       <CloseButton onClick={closeModal}>×</CloseButton>
-      <ModalHeader>{codes}</ModalHeader>
+      <ModalHeader>{codes.join("\n")}</ModalHeader>
       <SubjectInfo>
         <SubjectAttribute>Subject Code:</SubjectAttribute>
         {code}
