@@ -42,11 +42,11 @@ const SubjectAttribute = styled.div`
   font-weight: bold;
 
   @media screen and (min-width: 480px) {
-    width: 128px;
+    flex: 0 0 128px;
   }
 
   @media screen and (min-width: 600px) {
-    width: 150px;
+    flex: 0 0 150px;
   }
 `;
 
