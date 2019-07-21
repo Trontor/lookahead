@@ -112,6 +112,37 @@ const SubjectNameLoading = styled.div`
   }
 `;
 
+const LoadingDotWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  margin-top: 12px;
+`;
+
+const LoadingDot = styled.div`
+  height: 10px;
+  max-width: 10px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background:
+    linear-gradient(-60deg,
+      ${props => props.theme.loadingGradient} 0%,
+      ${props => props.theme.cardBg} 50%,
+      ${props => props.theme.loadingGradient} 100%);
+  background-size: 400% auto;
+  background-position: 0 100%;
+  animation: dot linear 5s infinite;
+  animation-fill-mode: forwards;
+  opacity: 0.5;
+
+  @keyframes dot {
+    0%   { background-position: 0 0; }
+    100% { background-position: 200px; }
+  }
+
+`;
+
 const SubjectHeader = styled.div`
   padding: 10px 0 12px 0;
   background-color: ${props => props.theme.cardBg};
@@ -256,6 +287,12 @@ function Subjects() {
             <SubjectHeader loading={loading} color={bgColor}>
               {!loading ? <SubjectCode>{code}</SubjectCode>: <SubjectCodeLoading/> }
               {!loading ? <SubjectName>{name}</SubjectName>: <SubjectNameLoading /> }
+              <LoadingDotWrapper>
+                <LoadingDot />
+                <LoadingDot />
+                <LoadingDot />
+                <LoadingDot />
+              </LoadingDotWrapper>
               {!loading && (
                 <SubjectToolbox iconColor={textColor}>
                   <ToolboxButton
