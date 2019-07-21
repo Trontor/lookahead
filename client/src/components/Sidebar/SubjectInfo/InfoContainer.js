@@ -69,7 +69,11 @@ export default function InfoContainer(props) {
   const { currentIndex, timetables } = optimiser;
   const currentCodes = [];
   // Popular currentCodes with all classcodes of the timetable, for highlighting
-  if (timetables && currentIndex >= 0 && currentIndex < timetables.length) {
+  const hasValidTimetable =
+    currentIndex >= 0 &&
+    currentIndex < timetables.length &&
+    timetables[currentIndex].classList.length;
+  if (timetables && hasValidTimetable) {
     const currentTimetable = timetables[currentIndex];
     for (const entry of currentTimetable.classList) {
       currentCodes.push(...entry.codes);
@@ -99,7 +103,9 @@ export default function InfoContainer(props) {
             odd={idx % 2 !== 1}
             highlight={isOnTimetable}
             color={color}
-            onClick={() => moveRegularClassByNewClass(cls)}
+            onClick={() => {
+              if (hasValidTimetable) moveRegularClassByNewClass(cls);
+            }}
           >
             <td>{daysOfWeek[day]}</td>
             <td>{timeIntToString(start)}</td>

@@ -297,6 +297,9 @@ export const moveStream = (
     currentIndex,
     timetable: { classList }
   } = getCurrentTimetable();
+  if (!classList) {
+    return;
+  }
   console.log(
     "Proceeding to update this classlist:",
     Object.assign({}, classList)
