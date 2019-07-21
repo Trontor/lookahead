@@ -28,10 +28,14 @@ const loadingCSS = css`
   height: auto;
   background-image:
     linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-    repeating-linear-gradient(90deg, lightsteelblue 0%, ${props => props.theme.cardBg} 25%, lightsteelblue 50%, ${props => props.theme.cardBg} 70%, lightsteelblue 100%);
+    repeating-linear-gradient(60deg,
+      ${props => props.theme.loadingGradient} 0%,
+      ${props => props.theme.cardBg} 25%,
+      ${props => props.theme.loadingGradient} 50%,
+      ${props => props.theme.cardBg} 70%,
+      ${props => props.theme.loadingGradient} 100%);
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
-  opacity: 0.6;
   background-size: 100% 100%, 200% auto;
   background-position: 0 0, 0 200%;
   background-origin: padding-box, border-box;
@@ -47,10 +51,13 @@ const loadingCSS = css`
     border-color: transparent;
     background-image:
       linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-      linear-gradient(180deg, lightsteelblue 0%, ${props => props.theme.cardBg} 50%, lightsteelblue 100%);
+      linear-gradient(180deg,
+        ${props => props.theme.loadingGradient} 0%,
+        ${props => props.theme.cardBg} 50%,
+        ${props => props.theme.loadingGradient} 100%);
     background-size: 100% 100%, 100% 200%;
     background-position: 0 0, 0 100%;
-    animation: gradient 2s infinite;
+    animation: gradient 1.5s infinite;
 
     @keyframes gradient {
       0% { background-position: 0 0, 0 0; }
@@ -59,10 +66,45 @@ const loadingCSS = css`
   }
 `;
 
-const LoadingLine = css`
-  width: 50%;
-  height: 15px;
-  background-color: #ccc;
+const gradientShimmer = css`
+  height: 16px;
+  background-image: repeating-linear-gradient(-60deg,
+    ${props => props.theme.loadingGradient} 0%,
+    ${props => props.theme.cardBg} 50%,
+    ${props => props.theme.loadingGradient} 100%);
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: shimmer 1s linear infinite;
+  animation-fill-mode: forwards;
+  border-radius: 2px;
+
+  @keyframes shimmer {
+    0%   { background-position: 0 0; }
+    100% { background-position: -200% 0; }
+  }
+`;
+
+const SubjectCodeLoading = styled.div`
+  width: 10%;
+  margin: 2px auto 8px auto;
+  ${gradientShimmer}
+
+
+  @media screen and (min-width: 960px) {
+    margin-left: 0;
+    width: 25%;
+  }
+`;
+
+const SubjectNameLoading = styled.div`
+  width: 30%;
+  margin: 0 auto;
+  ${gradientShimmer}
+
+  @media screen and (min-width: 960px) {
+    margin-left: 0;
+    width: 50%;
+  }
 `;
 
 // const loadingCSS = css`
@@ -255,8 +297,8 @@ function Subjects() {
             {/* <SubjectLoader color={color} /> */}
 
             <SubjectHeader loading={loading} color={bgColor}>
-              <SubjectCode>{code}</SubjectCode>
-              <SubjectName>{name}</SubjectName>
+              {!loading ? <SubjectCode>{code}</SubjectCode>: <SubjectCodeLoading/> }
+              {!loading ? <SubjectName>{name}</SubjectName>: <SubjectNameLoading /> }
               {!loading && (
                 <SubjectToolbox iconColor={textColor}>
                   <ToolboxButton

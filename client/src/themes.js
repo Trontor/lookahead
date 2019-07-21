@@ -12,6 +12,7 @@ const regularTheme = {
   sidebarBg: "#f8f8f8",
   /*=== Subject List ===*/
   cardBg: "#fefefe",
+  loadingGradient: "#D9E6F0",
   /*=== Global Text ===*/
   text: "#3f3844",
   /*=== Sponsor Special Buttons ===*/
@@ -48,6 +49,7 @@ const darkTheme = {
   sidebarBg: "#32323C",
   /*=== Subject List ===*/
   cardBg: "#3C3C4F",
+  loadingGradient: "#5E5C87",
   /*=== Global Text ===*/
   text: "#f5f5f5",
   /*=== Sponsor Special Buttons ===*/

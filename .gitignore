@@ -34,3 +34,5 @@ client/\.env
 subject-cache/
 
 google-sheets/credentials\.json
+
+\.vscode/
