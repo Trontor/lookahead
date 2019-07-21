@@ -281,6 +281,7 @@ export default class Subject {
    * Identifies classes that occur less/more than 12 weeks in Sem 1/2
    */
   private identifyIrregularClasses = () => {
+    // TODO: Fix this logic and handle in front-end
     this._irregularClasses = [];
     if (
       this.period !== SubjectPeriod.Semester_1 &&
@@ -289,7 +290,7 @@ export default class Subject {
       return;
     }
     // At least 9 weeks of teaching for Semesters 1/2. Why 9? idk
-    const regularWeekCount = 9;
+    const regularWeekCount = 0;
     this._classList.forEach(cls => {
       const weekCount = cls.weeks.length;
       // Check if class at least 9 weeks
