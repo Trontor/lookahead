@@ -18,7 +18,7 @@ const SubjectWrapper = styled.div`
   position: relative;
 `;
 
-const hideMe= css`
+const hideMe = css`
   display: none;
 `;
 
@@ -26,14 +26,18 @@ const loadingBorder = css`
   position: relative;
   border-color: transparent;
   height: auto;
-  background-image:
-    linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-    repeating-linear-gradient(60deg,
+  background-image: linear-gradient(
+      ${props => props.theme.cardBg},
+      ${props => props.theme.cardBg}
+    ),
+    repeating-linear-gradient(
+      60deg,
       ${props => props.theme.loadingGradient} 0%,
       ${props => props.theme.cardBg} 25%,
       ${props => props.theme.loadingGradient} 50%,
       ${props => props.theme.cardBg} 70%,
-      ${props => props.theme.loadingGradient} 100%);
+      ${props => props.theme.loadingGradient} 100%
+    );
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
   background-size: 100% 100%, 200% auto;
@@ -43,25 +47,37 @@ const loadingBorder = css`
   animation-fill-mode: forwards;
 
   @keyframes gradient {
-    0%   { background-position: 0 0, 0 0; }
-    100% { background-position: 0 0, -200% -200%; }
+    0% {
+      background-position: 0 0, 0 0;
+    }
+    100% {
+      background-position: 0 0, -200% -200%;
+    }
   }
 
   @media screen and (min-width: 960px) {
     border-color: transparent;
-    background-image:
-      linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
-      linear-gradient(180deg,
+    background-image: linear-gradient(
+        ${props => props.theme.cardBg},
+        ${props => props.theme.cardBg}
+      ),
+      linear-gradient(
+        180deg,
         ${props => props.theme.loadingGradient} 0%,
         ${props => props.theme.cardBg} 50%,
-        ${props => props.theme.loadingGradient} 100%);
+        ${props => props.theme.loadingGradient} 100%
+      );
     background-size: 100% 100%, 100% 200%;
     background-position: 0 0, 0 100%;
     animation: gradient 1.5s infinite;
 
     @keyframes gradient {
-      0% { background-position: 0 0, 0 0; }
-      100% { background-position: 0 0, 0 -200%; }
+      0% {
+        background-position: 0 0, 0 0;
+      }
+      100% {
+        background-position: 0 0, 0 -200%;
+      }
     }
   }
 `;
@@ -69,10 +85,12 @@ const loadingBorder = css`
 const gradientShimmer = css`
   height: 16px;
   opacity: 0.5;
-  background-image: repeating-linear-gradient(-60deg,
+  background-image: repeating-linear-gradient(
+    -60deg,
     ${props => props.theme.loadingGradient} 0%,
     ${props => props.theme.cardBg} 50%,
-    ${props => props.theme.loadingGradient} 100%);
+    ${props => props.theme.loadingGradient} 100%
+  );
   background-size: 200% auto;
   background-position: 0 100%;
   animation: shimmer 1s infinite;
@@ -84,8 +102,12 @@ const gradientShimmer = css`
   }
 
   @keyframes shimmer {
-    0%   { background-position: 0 0; }
-    100% { background-position: -200% 0; }
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
   }
 `;
 
@@ -93,7 +115,6 @@ const SubjectCodeLoading = styled.div`
   width: 100px;
   margin: 2px auto 8px auto;
   ${gradientShimmer}
-
 
   @media screen and (min-width: 960px) {
     margin-left: 0;
@@ -125,11 +146,12 @@ const LoadingDot = styled.div`
   max-width: 10px;
   margin: 0 10px;
   border-radius: 50%;
-  background:
-    linear-gradient(-60deg,
-      ${props => props.theme.loadingGradient} 0%,
-      ${props => props.theme.cardBg} 50%,
-      ${props => props.theme.loadingGradient} 100%);
+  background: linear-gradient(
+    -60deg,
+    ${props => props.theme.loadingGradient} 0%,
+    ${props => props.theme.cardBg} 50%,
+    ${props => props.theme.loadingGradient} 100%
+  );
   background-size: 400% auto;
   background-position: 0 100%;
   animation: dot linear 5s infinite;
@@ -137,10 +159,13 @@ const LoadingDot = styled.div`
   opacity: 0.5;
 
   @keyframes dot {
-    0%   { background-position: 0 0; }
-    100% { background-position: 200px; }
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200px;
+    }
   }
-
 `;
 
 const SubjectHeader = styled.div`
@@ -177,6 +202,7 @@ const SubjectCode = styled.div`
   @media screen and (min-width: 960px) {
     text-align: left;
   }
+  $
 `;
 
 const SubjectName = styled.div`
@@ -285,14 +311,24 @@ function Subjects() {
         return (
           <SubjectWrapper>
             <SubjectHeader loading={loading} color={bgColor}>
-              {!loading ? <SubjectCode>{code}</SubjectCode>: <SubjectCodeLoading/> }
-              {!loading ? <SubjectName>{name}</SubjectName>: <SubjectNameLoading /> }
-              <LoadingDotWrapper>
-                <LoadingDot />
-                <LoadingDot />
-                <LoadingDot />
-                <LoadingDot />
-              </LoadingDotWrapper>
+              {!loading ? (
+                <SubjectCode>{code}</SubjectCode>
+              ) : (
+                <SubjectCodeLoading />
+              )}
+              {!loading ? (
+                <SubjectName>{name}</SubjectName>
+              ) : (
+                <SubjectNameLoading />
+              )}
+              {loading && (
+                <LoadingDotWrapper>
+                  <LoadingDot />
+                  <LoadingDot />
+                  <LoadingDot />
+                  <LoadingDot />
+                </LoadingDotWrapper>
+              )}
               {!loading && (
                 <SubjectToolbox iconColor={textColor}>
                   <ToolboxButton
