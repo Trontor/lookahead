@@ -12,6 +12,8 @@ const BronzeCardWrapper = styled.div`
   justify-content: space-evenly;
   max-width: 960px;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const BronzeCard = styled.div`
