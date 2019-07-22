@@ -356,7 +356,7 @@ function Subjects() {
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
         const { year, studyPeriod, name, loading, data, color } = subject;
-        const { period } = data || {};
+        const { period = "" } = data || {};
         let bgColor = color;
         let textColor = "white";
 
