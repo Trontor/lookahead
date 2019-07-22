@@ -226,9 +226,25 @@ const SubjectCode = styled.div`
   font-weight: bold;
   opacity: 0.75;
   font-size: 13px;
+  text-transform: uppercase;
 
   @media screen and (min-width: 960px) {
     text-align: left;
+  }
+
+  span {
+    font-weight: normal;
+    opacity: 0.55;
+    margin: 0 5px;
+    display: inline-block;
+    letter-spacing: 0.02em;
+
+    &:nth-child(2) {
+      margin: 0;
+      font-size: 11px;
+      transform: translateY(-0.1em);
+      opacity: 0.8;
+    }
   }
 `;
 
@@ -309,6 +325,13 @@ const DeleteButton = styled.button`
   }
 `;
 
+const studyPeriods = {
+  summer_term: "Summer",
+  semester_1: "Sem 1",
+  winter_term: "Winter",
+  semester_2: "Sem 2"
+};
+
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
   const dispatch = useDispatch();
@@ -340,7 +363,11 @@ function Subjects() {
           <SubjectWrapper>
             <SubjectHeader loading={loading} color={bgColor}>
               {!loading ? (
-                <SubjectCode>{code}</SubjectCode>
+                <SubjectCode>
+                {code}
+                <span>•</span>
+                <span>{studyPeriods[data.period]}</span>
+                </SubjectCode>
               ) : (
                 <SubjectCodeLoading />
               )}
