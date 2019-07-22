@@ -10,8 +10,8 @@ const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 20px auto;
   max-width: 960px;
+  margin-top: 30px;
 `;
 
 const BronzeCard = styled.div`
@@ -22,6 +22,7 @@ const BronzeCard = styled.div`
   margin-bottom: 30px;
   position: relative;
   width: 50%;
+  align-self: center;
 
   div {
     font-weight: bold;

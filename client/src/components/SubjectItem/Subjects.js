@@ -9,6 +9,7 @@ import styled, { css } from "styled-components";
 import { TwitterPicker } from "react-color";
 import ColorPickButton from "./ColorPickButton";
 import { viewSubject } from "../../redux/actions/viewSubjectActions";
+
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
   /* min-height: 290px; */
@@ -56,7 +57,7 @@ const loadingCard = css`
   }
 
   @media screen and (min-width: 960px) {
-    height: 64px;
+    height: 63px;
     border-color: transparent;
     background-image: linear-gradient(
         ${props => props.theme.cardBg},
@@ -208,7 +209,7 @@ const SubjectHeader = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    padding: 12px 12px 13px;
+    padding: 12px 10px;
     min-height: 50px;
     border-left: 8px solid ${props => props.color};
     border-top: 0;
@@ -244,7 +245,7 @@ const SubjectName = styled.div`
   }
 
   @media screen and (min-width: 960px) {
-    max-width: 55%;
+    max-width: 51%;
     font-size: 14px;
     margin-top: 2px;
     margin-bottom: 5px;
@@ -266,7 +267,8 @@ const SubjectToolbox = styled.div`
   @media screen and (min-width: 960px) {
     font-weight: bold;
     vertical-align: middle;
-    top: 35%;
+    top: 36%;
+    right: 28px;
   }
 `;
 
@@ -285,7 +287,7 @@ const ToolboxButton = styled.button`
   }
 
   @media screen and (min-width: 960px) {
-    padding: 0 7px;
+    padding: 0 6px;
     font-size: 15px;
   }
 `;
