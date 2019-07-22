@@ -1,6 +1,7 @@
 // Load .env file
 import dotenv from "dotenv";
 import express, { Application, Request, Response } from "express";
+import morgan from "morgan";
 import path = require("path");
 import apiRouter from "./api/api";
 import { initialise } from "./google-sheets/sheets";

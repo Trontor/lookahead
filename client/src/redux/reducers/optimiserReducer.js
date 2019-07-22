@@ -12,6 +12,7 @@ import {
   REMOVE_RESERVED
 } from "../actionTypes";
 import uuid from "uuid/v1";
+import ReactGA from "react-ga";
 
 const initialState = {
   optimising: false,
@@ -34,10 +35,16 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_RESERVED:
+      ReactGA.event({
+        category: "Reserved",
+        action: "Add Reserved"
+      });
       return { ...state, reserved: [...state.reserved, action.payload] };
     case REMOVE_RESERVED:
-      console.log(state.reserved, action.payload);
-
+      ReactGA.event({
+        category: "Reserved",
+        action: "Remove Reserved"
+      });
       return {
         ...state,
         reserved: [
@@ -88,6 +95,10 @@ export default (state = initialState, action) => {
       if (updateIndex >= 0 && updateIndex < allTimetables.length) {
         allTimetables[updateIndex] = action.payload.timetable;
       }
+      ReactGA.event({
+        category: "Timetables",
+        action: "Updated Timetable"
+      });
       return { ...state, timetables: allTimetables };
     case UPDATE_CUSTOM_TIMETABLE:
       const customTTCopy = [...state.customTimetables];
@@ -103,11 +114,19 @@ export default (state = initialState, action) => {
       }
       return { ...state, customTimetables: customTTCopy };
     case NEXT_TIMETABLE:
+      ReactGA.event({
+        category: "Timetables",
+        action: "Next Timetable"
+      });
       if (state.currentIndex + 1 < state.timetables.length) {
         return { ...state, currentIndex: state.currentIndex + 1 };
       }
       return state;
     case PREVIOUS_TIMETABLE:
+      ReactGA.event({
+        category: "Timetables",
+        action: "Previous Timetable"
+      });
       if (state.currentIndex - 1 >= 0) {
         return { ...state, currentIndex: state.currentIndex - 1 };
       }
@@ -117,6 +136,11 @@ export default (state = initialState, action) => {
     case COMPLETE_OPTIMISATION:
       const { timetables } = action.payload;
       console.log(timetables.length + " timetables generated.");
+      ReactGA.event({
+        category: "Optimisations",
+        action: "Optimised Timetables",
+        value: timetables.length
+      });
       return {
         ...state,
         optimising: false,
