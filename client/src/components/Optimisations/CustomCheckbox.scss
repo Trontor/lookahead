@@ -24,13 +24,13 @@ $checkbox-color: lightsteelblue;
     box-sizing: border-box;
   }
 
-  @media (hover: hover) {
-    // Box hover
-    &:hover + label:before {
-      background: $checkbox-color;
-      border-color: $checkbox-color;
-    }
-  }
+  // @media (hover: hover) {
+  //   // Box hover
+  //   &:hover + label:before {
+  //     background: $checkbox-color;
+  //     border-color: $checkbox-color;
+  //   }
+  // }
 
   // // Box focus
   // &:focus + label:before {

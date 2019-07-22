@@ -17,7 +17,7 @@ const Grid = styled.div`
 
   @media screen and (min-width: 960px) {
     display: grid;
-    grid-template-columns: [sidebar] minmax(20%, 380px) [viewer] auto;
+    grid-template-columns: [sidebar] minmax(22%, 350px) [viewer] auto;
     grid-template-rows: auto;
   }
 `;

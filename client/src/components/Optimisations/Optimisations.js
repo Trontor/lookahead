@@ -192,7 +192,7 @@ function Optimisations() {
               dispatch(setMinimiseClashes(checked))
             }
           />
-          <label for="minimise-clashes">I want to minimise clashes</label>
+          <label for="minimise-clashes">Minimise clashes</label>
         </Optimisation>
         <Optimisation>
           <input
@@ -216,7 +216,7 @@ function Optimisations() {
               dispatch(setCramClasses(checked))
             }
           />
-          <label for="cram-classes">I like to cram classes together</label>
+          <label for="cram-classes">Cram classes together</label>
         </Optimisation>
         <Optimisation>
           <input
@@ -227,7 +227,7 @@ function Optimisations() {
             onChange={longestRunToggleChanged}
           />
           <label for="longest-run-toggle">
-            I need a break after consecutive classes
+            Allocate a break after consecutive classes
           </label>
         </Optimisation>
         {longestRunToggled && (
