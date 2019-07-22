@@ -110,10 +110,9 @@ const SubjectSelect = props => {
     }),
     option: (provided, { data, isDisabled, isFocused, isSelected }) => ({
       ...provided,
-      backgroundColor: isFocused ? props.theme.accent : null,
-      color: isFocused ? props.theme.mainDark : null,
+      backgroundColor: isFocused ? "lightsteelblue" : null,
+      color: isFocused ? "#62656E" : null,
       fontSize: "13px",
-      // textAlign: "center",
       height: "100%"
     }),
     singleValue: (provided, state) => {
