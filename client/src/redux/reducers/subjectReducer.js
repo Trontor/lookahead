@@ -6,6 +6,7 @@ import {
   CHANGE_SUBJECT_COLOR
 } from "../actionTypes";
 import colors from "../../utility/SubjectColors.js";
+import ReactGA from "react-ga";
 
 const initialState = {};
 
@@ -84,7 +85,10 @@ export default (state = initialState, action) => {
         subjects.push(newSubject);
       }
       localStorage.setItem("subjects", JSON.stringify(subjects));
-
+      ReactGA.event({
+        category: "Subjects",
+        action: "Loaded " + action.payload.code
+      });
       // Otherwise, update the subject entry
       return {
         ...state,

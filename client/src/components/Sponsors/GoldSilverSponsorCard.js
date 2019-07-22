@@ -150,7 +150,9 @@ export default function GoldSilverSponsorCard(props) {
         <a href={umsu}>
           <UMSUButton>UMSU</UMSUButton>
         </a>
-        <FacebookButton href={facebook} />
+        <a href={facebook}>
+          <FacebookButton />
+        </a>
       </ButtonWrapper>
     </SponsorCard>
   );
