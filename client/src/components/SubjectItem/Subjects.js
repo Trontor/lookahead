@@ -112,8 +112,8 @@ const gradientShimmer = css`
 `;
 
 const SubjectCodeLoading = styled.div`
-  width: 100px;
-  margin: 2px auto 8px auto;
+  max-width: 100px;
+  margin: 2px auto 10px auto;
   ${gradientShimmer}
 
   @media screen and (min-width: 960px) {
@@ -123,9 +123,13 @@ const SubjectCodeLoading = styled.div`
 `;
 
 const SubjectNameLoading = styled.div`
-  width: 240px;
+  max-width: 240px;
   margin: 0 auto;
   ${gradientShimmer}
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 8px;
+  }
 
   @media screen and (min-width: 960px) {
     margin-left: 0;
@@ -133,38 +137,60 @@ const SubjectNameLoading = styled.div`
   }
 `;
 
-const LoadingDotWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  margin-top: 12px;
-`;
+const LoadingDots = styled.div`
+  padding: 0px;
+  margin: 10px auto 0 auto;
 
-const LoadingDot = styled.div`
-  height: 10px;
-  max-width: 10px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background: linear-gradient(
-    -60deg,
-    ${props => props.theme.loadingGradient} 0%,
-    ${props => props.theme.cardBg} 50%,
-    ${props => props.theme.loadingGradient} 100%
-  );
-  background-size: 400% auto;
-  background-position: 0 100%;
-  animation: dot linear 5s infinite;
-  animation-fill-mode: forwards;
-  opacity: 0.5;
+  span {
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 3px 5px;
+    background: ${props => props.theme.loadingGradient};
+    animation: dot 1s ease-in-out infinite alternate;
+    animation-fill-mode: forwards;
+  }
+
+  span:nth-child(1) {
+    animation-delay: -1s;
+    }
+
+  span:nth-child(2) {
+    animation-delay: -0.7s;
+  }
+
+  span:nth-child(3) {
+    animation-delay: -0.5s;
+  }
+
+  span:nth-child(4) {
+    animation-delay: -0.1s;
+  }
 
   @keyframes dot {
     0% {
-      background-position: 0 0;
+      transform: scale(0, 0);
+    }
+    50% {
+      opacity: 0.8;
     }
     100% {
-      background-position: 200px;
+      transform: scale(1, 1);
+      opacity: 0.2;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 40px;
+    top: 20%;
+  }
+
+  @media screen and (min-width: 960px) {
+    vertical-align: middle;
+    top: 23%;
+    right: 20px;
   }
 `;
 
@@ -202,7 +228,6 @@ const SubjectCode = styled.div`
   @media screen and (min-width: 960px) {
     text-align: left;
   }
-  $
 `;
 
 const SubjectName = styled.div`
@@ -322,12 +347,12 @@ function Subjects() {
                 <SubjectNameLoading />
               )}
               {loading ? (
-                <LoadingDotWrapper>
-                  <LoadingDot />
-                  <LoadingDot />
-                  <LoadingDot />
-                  <LoadingDot />
-                </LoadingDotWrapper>
+                <LoadingDots>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </LoadingDots>
               ) : (
                 <SubjectToolbox iconColor={textColor}>
                   <ToolboxButton
