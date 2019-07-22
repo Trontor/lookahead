@@ -14,7 +14,6 @@ interface ISponsor {
 const processRawClubData = (data: string[][]): ISponsor[] => {
   const allSponsors: ISponsor[] = [];
   for (const row of data) {
-    console.log(row);
     const [
       name,
       logoURL,

@@ -47,7 +47,7 @@ export default function({ event, el }) {
     width >= CLASS_LOCATION_MINIMUM.width
   ) {
     const locationsText = $(
-      `<div class="fc-loc">${locations} location${
+      `<div class="fc-loc">${locations.length} location${
         locations > 1 ? "s" : ""
       }</div>`
     );

@@ -35,7 +35,6 @@ export const getClubSheetData = (): Promise<string[][]> => {
               return console.log("The API returned an error: " + err2);
             }
             const rows = res.data.values;
-            console.log(rows);
             resolve(rows);
           }
         );

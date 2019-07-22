@@ -21,20 +21,8 @@ import NoTimetables from "./NoTimetables";
 import TimetableTips from "./TimetableTips";
 import TimetableViewerWrapper from "./TimetableViewerStyles";
 import ClassModal from "./ClassModal";
-let modalEvent = {
-  extendedProps: {
-    locations: 1,
-    type: "Variable",
-    classCode: { number: 1, type: "W" },
-    codes: ["COMP10001/U/1/SM2/W01/08"],
-    streamNumber: 8,
-    code: "COMP10001",
-    subjectName: "Foundations of Computing",
-    start: "14:15",
-    finish: "15:15"
-  }
-};
 
+let modalEvent = null;
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();

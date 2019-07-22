@@ -18,55 +18,182 @@ const SubjectWrapper = styled.div`
   position: relative;
 `;
 
-const loadingCSS = css`
-  /* border-top: none !important;
+const loadingCard = css`
+  height: 92px;
+  position: relative;
+  border-color: transparent;
+  background-image: linear-gradient(
+      ${props => props.theme.cardBg},
+      ${props => props.theme.cardBg}
+    ),
+    repeating-linear-gradient(
+      60deg,
+      ${props => props.theme.loadingGradient} 0%,
+      ${props => props.theme.cardBg} 25%,
+      ${props => props.theme.loadingGradient} 50%,
+      ${props => props.theme.cardBg} 70%,
+      ${props => props.theme.loadingGradient} 100%
+    );
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 200% auto;
+  background-position: 0 0, 0 200%;
+  background-origin: padding-box, border-box;
+  animation: gradient 3s linear infinite;
+  animation-fill-mode: forwards;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 0, 0 0;
+    }
+    100% {
+      background-position: 0 0, -200% -200%;
+    }
+  }
 
   @media screen and (min-width: 960px) {
-    border-left: none !important;
-  } */
-  background-color: inherit;
-  box-shadow: none;
+    height: 75px;
+  }
+
+  @media screen and (min-width: 960px) {
+    height: 64px;
+    border-color: transparent;
+    background-image: linear-gradient(
+        ${props => props.theme.cardBg},
+        ${props => props.theme.cardBg}
+      ),
+      linear-gradient(
+        180deg,
+        ${props => props.theme.loadingGradient} 0%,
+        ${props => props.theme.cardBg} 50%,
+        ${props => props.theme.loadingGradient} 100%
+      );
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 100%;
+    animation: gradient 1.5s infinite;
+
+    @keyframes gradient {
+      0% {
+        background-position: 0 0, 0 0;
+      }
+      100% {
+        background-position: 0 0, 0 -200%;
+      }
+    }
+  }
 `;
-// const loadingCSS = css`
-//   border-width: 2px;
-//   border-radius: 0px;
-//   /* background: white; */
-//   position: relative;
-//   @keyframes animatedgradient {
-//     0% {
-//       background-position: 0% 50%;
-//     }
-//     50% {
-//       background-position: 100% 50%;
-//     }
-//     100% {
-//       background-position: 0% 50%;
-//     }
-//   }
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: calc(-1 * 2px);
-//     left: calc(-1 * 2px);
-//     height: calc(100% + 2px * 2);
-//     width: calc(100% + 2px * 2);
-//     background: linear-gradient(
-//       60deg,
-//       #f79533,
-//       #f37055,
-//       #ef4e7b,
-//       #a166ab,
-//       #5073b8,
-//       #1098ad,
-//       #07b39b,
-//       #6fba82
-//     );
-//     border-radius: calc(2 * var(2px));
-//     z-index: -1;
-//     animation: animatedgradient 3s ease alternate infinite;
-//     background-size: 300% 300%;
-//   }
-// `;
+
+const gradientShimmer = css`
+  height: 16px;
+  opacity: 0.5;
+  background-image: repeating-linear-gradient(
+    -60deg,
+    ${props => props.theme.loadingGradient} 0%,
+    ${props => props.theme.cardBg} 50%,
+    ${props => props.theme.loadingGradient} 100%
+  );
+  background-size: 200% auto;
+  background-position: 0 100%;
+  animation: shimmer 1s infinite;
+  animation-fill-mode: forwards;
+  border-radius: 5px;
+
+  @media screen and (min-width: 960px) {
+    height: 14px;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+`;
+
+const SubjectCodeLoading = styled.div`
+  max-width: 100px;
+  margin: 2px auto 8px auto;
+  ${gradientShimmer}
+
+  @media screen and (min-width: 960px) {
+    margin-left: 0;
+    width: 80px;
+  }
+`;
+
+const SubjectNameLoading = styled.div`
+  max-width: 240px;
+  margin: 0 auto;
+  ${gradientShimmer}
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-left: 0;
+    width: 50%;
+  }
+`;
+
+const LoadingDots = styled.div`
+  padding: 0px;
+  margin: 8px auto 0 auto;
+
+  span {
+    border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 3px 5px;
+    background: ${props => props.theme.loadingGradient};
+    animation: dot 1s ease-in-out infinite alternate;
+    animation-fill-mode: forwards;
+  }
+
+  span:nth-child(1) {
+    animation-delay: -1s;
+    }
+
+  span:nth-child(2) {
+    animation-delay: -0.7s;
+  }
+
+  span:nth-child(3) {
+    animation-delay: -0.5s;
+  }
+
+  span:nth-child(4) {
+    animation-delay: -0.1s;
+  }
+
+  @keyframes dot {
+    0% {
+      transform: scale(0, 0);
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0.2;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    right: 40px;
+    top: 20%;
+  }
+
+  @media screen and (min-width: 960px) {
+    vertical-align: middle;
+    top: 23%;
+    right: 20px;
+  }
+`;
 
 const SubjectHeader = styled.div`
   padding: 10px 0 12px 0;
@@ -83,15 +210,13 @@ const SubjectHeader = styled.div`
   @media screen and (min-width: 960px) {
     padding: 12px 12px 13px;
     min-height: 50px;
-    /* border-radius: 1px; */
-    /* background-color: ${props => props.color}; */
     border-left: 8px solid ${props => props.color};
     border-top: 0;
     & div {
       text-align: left;
     }
   }
-  ${({ loading }) => loading && loadingCSS} 
+  ${({ loading }) => loading && loadingCard}
 `;
 
 const SubjectCode = styled.div`
@@ -100,10 +225,6 @@ const SubjectCode = styled.div`
   font-weight: bold;
   opacity: 0.75;
   font-size: 13px;
-
-  /* @media screen and (min-width: 600px) {
-    font-size: 14px;
-  } */
 
   @media screen and (min-width: 960px) {
     text-align: left;
@@ -145,7 +266,6 @@ const SubjectToolbox = styled.div`
   @media screen and (min-width: 960px) {
     font-weight: bold;
     vertical-align: middle;
-    /* color: ${({ iconColor }) => iconColor}; */
     top: 35%;
   }
 `;
@@ -158,6 +278,7 @@ const ToolboxButton = styled.button`
   background-color: transparent;
   border: none;
   opacity: 0.7;
+  ${({ loading }) => loading}
 
   @media screen and (min-width: 768px) {
     padding: 0 10px;
@@ -179,11 +300,6 @@ const DeleteButton = styled.button`
   top: 10px;
   right: 4px;
   position: absolute;
-
-  /* @media screen and (min-width: 600px) {
-    top: 8px;
-    right: 5px;
-  } */
 
   @media screen and (min-width: 960px) {
     top: 5px;
@@ -217,18 +333,28 @@ function Subjects() {
         const { year, studyPeriod, name, loading, data, color } = subject;
         let bgColor = color;
         let textColor = "white";
-        // if (loading) {
-        //   bgColor = "transparent";
-        //   textColor = "${props => props.theme.text}";
-        // }
+
         return (
           <SubjectWrapper>
-            {/* <SubjectLoader color={color} /> */}
-
             <SubjectHeader loading={loading} color={bgColor}>
-              <SubjectCode>{code}</SubjectCode>
-              <SubjectName>{name}</SubjectName>
-              {!loading && (
+              {!loading ? (
+                <SubjectCode>{code}</SubjectCode>
+              ) : (
+                <SubjectCodeLoading />
+              )}
+              {!loading ? (
+                <SubjectName>{name}</SubjectName>
+              ) : (
+                <SubjectNameLoading />
+              )}
+              {loading ? (
+                <LoadingDots>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </LoadingDots>
+              ) : (
                 <SubjectToolbox iconColor={textColor}>
                   <ToolboxButton
                     title="View Subject Information"
