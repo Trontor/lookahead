@@ -18,14 +18,10 @@ const SubjectWrapper = styled.div`
   position: relative;
 `;
 
-const hideMe = css`
-  display: none;
-`;
-
-const loadingBorder = css`
+const loadingCard = css`
+  height: 92px;
   position: relative;
   border-color: transparent;
-  height: auto;
   background-image: linear-gradient(
       ${props => props.theme.cardBg},
       ${props => props.theme.cardBg}
@@ -56,6 +52,11 @@ const loadingBorder = css`
   }
 
   @media screen and (min-width: 960px) {
+    height: 75px;
+  }
+
+  @media screen and (min-width: 960px) {
+    height: 64px;
     border-color: transparent;
     background-image: linear-gradient(
         ${props => props.theme.cardBg},
@@ -113,7 +114,7 @@ const gradientShimmer = css`
 
 const SubjectCodeLoading = styled.div`
   max-width: 100px;
-  margin: 2px auto 10px auto;
+  margin: 2px auto 8px auto;
   ${gradientShimmer}
 
   @media screen and (min-width: 960px) {
@@ -139,7 +140,7 @@ const SubjectNameLoading = styled.div`
 
 const LoadingDots = styled.div`
   padding: 0px;
-  margin: 10px auto 0 auto;
+  margin: 8px auto 0 auto;
 
   span {
     border-radius: 50%;
@@ -215,7 +216,7 @@ const SubjectHeader = styled.div`
       text-align: left;
     }
   }
-  ${({ loading }) => loading && loadingBorder}
+  ${({ loading }) => loading && loadingCard}
 `;
 
 const SubjectCode = styled.div`
@@ -277,7 +278,7 @@ const ToolboxButton = styled.button`
   background-color: transparent;
   border: none;
   opacity: 0.7;
-  ${({ loading }) => loading && hideMe}
+  ${({ loading }) => loading}
 
   @media screen and (min-width: 768px) {
     padding: 0 10px;
