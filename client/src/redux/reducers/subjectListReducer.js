@@ -3,6 +3,7 @@ import {
   FETCH_SUBJECT_LIST_SUCCESS,
   FETCH_SUBJECT_LIST_FAILURE
 } from "../actionTypes";
+import ReactGA from "react-ga";
 
 const initialState = {
   loading: false,
@@ -17,6 +18,10 @@ export default (state = initialState, action) => {
     case FETCH_SUBJECT_LIST_SUCCESS:
       const list = action.payload.list;
       const selectOptions = [];
+      ReactGA.event({
+        category: "Subject List",
+        action: "Loaded " + action.payload.studyPeriod
+      });
       list.forEach(subject => {
         selectOptions.push({
           label: subject.code + " - " + subject.name,

@@ -3,7 +3,15 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Planner from "./components/Planner";
 import Header from "./components/Header";
+import ReactGA from "react-ga";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+
+if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
+  ReactGA.initialize("UA-131760351-1", {
+    debug: true
+  });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 const GlobalStyle = createGlobalStyle`
   html {
