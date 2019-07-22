@@ -156,7 +156,7 @@ const LoadingDots = styled.div`
 
   span:nth-child(1) {
     animation-delay: -1s;
-    }
+  }
 
   span:nth-child(2) {
     animation-delay: -0.7s;
@@ -356,6 +356,7 @@ function Subjects() {
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
         const { year, studyPeriod, name, loading, data, color } = subject;
+        const { period } = data || {};
         let bgColor = color;
         let textColor = "white";
 
@@ -364,9 +365,9 @@ function Subjects() {
             <SubjectHeader loading={loading} color={bgColor}>
               {!loading ? (
                 <SubjectCode>
-                {code}
-                <span>•</span>
-                <span>{studyPeriods[data.period]}</span>
+                  {code}
+                  <span>•</span>
+                  <span>{studyPeriods[period]}</span>
                 </SubjectCode>
               ) : (
                 <SubjectCodeLoading />
@@ -378,10 +379,10 @@ function Subjects() {
               )}
               {loading ? (
                 <LoadingDots>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span />
+                  <span />
+                  <span />
+                  <span />
                 </LoadingDots>
               ) : (
                 <SubjectToolbox iconColor={textColor}>
