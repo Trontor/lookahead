@@ -15,11 +15,13 @@ const SubjectsWrapper = styled.div`
   /* margin: 5px; */
   /* min-height: 290px; */
 `;
+
 const SubjectWrapper = styled.div`
   /* color: ${props => props.textColor}; */
   position: relative;
 `;
 
+/* * * * * * * * * * * * * * * * LOADING CARD * * * * * * * * * * * * * * * */
 const loadingCard = css`
   height: 92px;
   position: relative;
@@ -40,7 +42,6 @@ const loadingCard = css`
   background-clip: padding-box, border-box;
   background-size: 100% 100%, 200% auto;
   background-position: 0 0, 0 200%;
-  background-origin: padding-box, border-box;
   animation: gradient 3s linear infinite;
   animation-fill-mode: forwards;
 
@@ -53,7 +54,7 @@ const loadingCard = css`
     }
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 768px) {
     height: 75px;
   }
 
@@ -197,6 +198,29 @@ const LoadingDots = styled.div`
   }
 `;
 
+/* * * * * * * * * * * * * * * * ERROR CARD * * * * * * * * * * * * * * * */
+const ErrorCard = css`
+  position: relative;
+  border-color: crimson;
+
+  @media screen and (min-width: 960px) {
+    border-color: crimson;
+  }
+`;
+
+const ErrorText = css`
+  opacity: 1;
+`;
+
+const ErrorMsg = styled.div`
+  margin: -5px 0 5px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+`;
+
+/* * * * * * * * * * * * * * * * SUBJECT CARD * * * * * * * * * * * * * * * */
 const SubjectHeader = styled.div`
   padding: 10px 0 12px 0;
   background-color: ${props => props.theme.cardBg};
@@ -222,10 +246,6 @@ const SubjectHeader = styled.div`
   ${({ error }) => error && ErrorCard}
 `;
 
-const ErrorCard = css`
-  background-color: red;
-`;
-
 const SubjectCode = styled.div`
   text-align: center;
   position: relative;
@@ -233,6 +253,8 @@ const SubjectCode = styled.div`
   opacity: 0.75;
   font-size: 13px;
   text-transform: uppercase;
+
+  ${({ error }) => ErrorText}
 
   @media screen and (min-width: 960px) {
     text-align: left;
@@ -250,6 +272,12 @@ const SubjectCode = styled.div`
       font-size: 11px;
       transform: translateY(-0.1em);
       opacity: 0.8;
+
+      ${({ error }) => { return css`
+        i {
+          color: crimson;
+        }
+      `;}}
     }
   }
 `;
@@ -272,6 +300,8 @@ const SubjectName = styled.div`
     margin-top: 2px;
     margin-bottom: 5px;
   }
+
+  ${({ error }) => ErrorText}
 `;
 
 const SubjectToolbox = styled.div`
@@ -395,7 +425,11 @@ function Subjects() {
                 <SubjectCode>
                   {code}
                   <span>•</span>
-                  <span>{studyPeriods[period]}</span>
+                  {error ? (
+                    <span><i class="fas fa-exclamation-triangle"></i></span>
+                    ) : (
+                    <span>{studyPeriods[period]}</span>
+                    )}
                 </SubjectCode>
               ) : (
                 <SubjectCodeLoading />
@@ -412,14 +446,20 @@ function Subjects() {
                   <span />
                   <span />
                 </LoadingDots>
-              ) : (
+              ): (<>
+                <ErrorMsg>
+                  Oops! We had trouble loading your subject.
+                </ErrorMsg>
                 <SubjectToolbox iconColor={textColor}>
+                {!error &&
                   <ToolboxButton
                     title="View Subject Information"
                     onClick={() => dispatch(viewSubject(subject))}
                   >
                     <i className="fa fa-list" />
                   </ToolboxButton>
+                }
+                {!error &&
                   <ColorPickButton
                     onColorChange={color => {
                       dispatch(
@@ -427,7 +467,7 @@ function Subjects() {
                       );
                     }}
                     buttonStyle={ToolboxButton}
-                  />
+                 />}
                   <ToolboxButton
                     title="View Official Timetable"
                     onClick={() => openSWS(year, code)}
@@ -441,6 +481,7 @@ function Subjects() {
                     <i className="fa fa-book" />
                   </ToolboxButton>
                 </SubjectToolbox>
+                </>
               )}
             </SubjectHeader>
             <DeleteButton onClick={() => deleteSubject(year, code)}>
