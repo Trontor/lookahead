@@ -6,6 +6,21 @@ import { fetchClubList } from "../../redux/actions/sponsorActions";
 import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 
+const BronzeHeading = styled.h4`
+  font-weight: normal;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+
+i {
+    display: inline-block;
+    transform: translateY(0.1em);
+    font-size: 18px;
+    color: darkorchid;
+    margin-right: 5px;
+  }
+`;
+
 const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -70,29 +85,34 @@ export default function BronzeSponsors() {
   const sponsors = useSelector(state => state.sponsors, shallowEqual);
   const { bronze } = getCategorisedSponsors(sponsors);
   return (
-    <BronzeCardWrapper>
-      {bronze &&
-        bronze.map(entry => {
-          const {
-            name,
-            logoURL,
-            description,
-            umsu,
-            facebook,
-            tier,
-            include
-          } = entry;
-          return (
-            <BronzeCard>
-              <Logo alt={`${name} logo`} width="100%" src={logoURL} />
-              <div>{name}</div>
-              <BronzeCardButtonGroup>
-                <UMSUButton href={umsu}>UMSU</UMSUButton>
-                <FacebookButton href={facebook} />
-              </BronzeCardButtonGroup>
-            </BronzeCard>
-          );
-        })}
+    <>
+      <BronzeHeading>
+        <i class="fas fa-dice"></i> You may also be interested in the following clubs and societies:
+      </BronzeHeading>
+      <BronzeCardWrapper>
+        {bronze &&
+          bronze.map(entry => {
+            const {
+              name,
+              logoURL,
+              description,
+              umsu,
+              facebook,
+              tier,
+              include
+            } = entry;
+            return (
+              <BronzeCard>
+                <Logo alt={`${name} logo`} width="100%" src={logoURL} />
+                <div>{name}</div>
+                <BronzeCardButtonGroup>
+                  <UMSUButton href={umsu}>UMSU</UMSUButton>
+                  <FacebookButton href={facebook} />
+                </BronzeCardButtonGroup>
+              </BronzeCard>
+            );
+          })}
     </BronzeCardWrapper>
+    </>
   );
 }
