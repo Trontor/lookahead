@@ -9,6 +9,7 @@ import styled, { css } from "styled-components";
 import { TwitterPicker } from "react-color";
 import ColorPickButton from "./ColorPickButton";
 import { viewSubject } from "../../redux/actions/viewSubjectActions";
+import Warning from "./Warning";
 
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
@@ -337,8 +338,6 @@ const studyPeriods = {
   semester_2: "Sem 2"
 };
 
-const Warning = styled.div``;
-
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
   const dispatch = useDispatch();
@@ -371,10 +370,7 @@ function Subjects() {
   return (
     <SubjectsWrapper>
       {crossStudyPeriod && (
-        <Warning>
-          You have entered subjects from two or more different study periods,
-          you probably don't want that...
-        </Warning>
+        <Warning/>
       )}
 
       {Object.keys(subjects).map(code => {
