@@ -332,6 +332,8 @@ const studyPeriods = {
   semester_2: "Sem 2"
 };
 
+const Warning = styled.div``;
+
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
   const dispatch = useDispatch();
@@ -350,9 +352,26 @@ function Subjects() {
   const deleteSubject = (year, code) => {
     dispatch(removeSubject(code));
   };
+  const periods = Object.keys(subjects).reduce(
+    (prev, key) =>
+      !subjects[key].loading && subjects[key].data
+        ? [...prev, subjects[key].data.period]
+        : prev,
+    []
+  );
+  const uniquePeriods = Array.from(new Set(periods));
+  const crossStudyPeriod = uniquePeriods.length > 1;
+  console.log(uniquePeriods);
 
   return (
     <SubjectsWrapper>
+      {crossStudyPeriod && (
+        <Warning>
+          You have entered subjects from two or more different study periods,
+          you probably don't want that...
+        </Warning>
+      )}
+
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
         const { year, studyPeriod, name, loading, data, color } = subject;

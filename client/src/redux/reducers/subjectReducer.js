@@ -38,14 +38,18 @@ export default (state = initialState, action) => {
     case CHANGE_SUBJECT_COLOR:
       return changeSubjectColor(state, action.payload);
     case GET_SUBJECT_BEGIN:
-      const { code, name, year } = action.payload;
+      const { code, name, year, studyPeriod } = action.payload;
       // code: "SWEN30006"
       // label: "SWEN30006 - Software Modelling and Design"
       // value: "Software Modelling and Design"
       // Check if the subject has already been added
-      if (state[code] && state[code].year === year) {
-        return state;
-      }
+      // if (
+      //   state[code] &&
+      //   state[code].year === year &&
+      //   state[code].studyPeriod === studyPeriod
+      // ) {
+      //   return state;
+      // }
       return {
         ...state,
         [code]: {
@@ -89,6 +93,8 @@ export default (state = initialState, action) => {
         category: "Subjects",
         action: "Loaded " + action.payload.code
       });
+      console.log(subjects);
+
       // Otherwise, update the subject entry
       return {
         ...state,
