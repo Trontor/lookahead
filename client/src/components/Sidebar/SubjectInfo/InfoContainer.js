@@ -70,6 +70,7 @@ export default function InfoContainer(props) {
   const currentCodes = [];
   // Popular currentCodes with all classcodes of the timetable, for highlighting
   const hasValidTimetable =
+    timetables &&
     currentIndex >= 0 &&
     currentIndex < timetables.length &&
     timetables[currentIndex].classList.length;

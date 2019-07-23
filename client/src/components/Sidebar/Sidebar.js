@@ -11,9 +11,6 @@ import SubjectInfo from "./SubjectInfo/SubjectInfo";
 
 export default function Sidebar() {
   const viewSubject = useSelector(state => state.viewSubject);
-  //   if (viewSubject.viewing) {
-  //     return;
-  //   }
   return (
     <>
       <Notifications />
