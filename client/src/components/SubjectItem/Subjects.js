@@ -218,6 +218,11 @@ const SubjectHeader = styled.div`
     }
   }
   ${({ loading }) => loading && loadingCard}
+  ${({ error }) => error && ErrorCard}
+`;
+
+const ErrorCard = css`
+  background-color: red;
 `;
 
 const SubjectCode = styled.div`
@@ -374,14 +379,22 @@ function Subjects() {
 
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
-        const { year, studyPeriod, name, loading, data, color } = subject;
+        const {
+          year,
+          studyPeriod,
+          name,
+          loading,
+          data,
+          color,
+          error
+        } = subject;
         const { period = "" } = data || {};
         let bgColor = color;
         let textColor = "white";
 
         return (
           <SubjectWrapper>
-            <SubjectHeader loading={loading} color={bgColor}>
+            <SubjectHeader error={error} loading={loading} color={bgColor}>
               {!loading ? (
                 <SubjectCode>
                   {code}
