@@ -156,7 +156,7 @@ const LoadingDots = styled.div`
 
   span:nth-child(1) {
     animation-delay: -1s;
-    }
+  }
 
   span:nth-child(2) {
     animation-delay: -0.7s;
@@ -226,9 +226,25 @@ const SubjectCode = styled.div`
   font-weight: bold;
   opacity: 0.75;
   font-size: 13px;
+  text-transform: uppercase;
 
   @media screen and (min-width: 960px) {
     text-align: left;
+  }
+
+  span {
+    font-weight: normal;
+    opacity: 0.55;
+    margin: 0 5px;
+    display: inline-block;
+    letter-spacing: 0.02em;
+
+    &:nth-child(2) {
+      margin: 0;
+      font-size: 11px;
+      transform: translateY(-0.1em);
+      opacity: 0.8;
+    }
   }
 `;
 
@@ -309,6 +325,13 @@ const DeleteButton = styled.button`
   }
 `;
 
+const studyPeriods = {
+  summer_term: "Summer",
+  semester_1: "Sem 1",
+  winter_term: "Winter",
+  semester_2: "Sem 2"
+};
+
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
   const dispatch = useDispatch();
@@ -333,6 +356,7 @@ function Subjects() {
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
         const { year, studyPeriod, name, loading, data, color } = subject;
+        const { period = "" } = data || {};
         let bgColor = color;
         let textColor = "white";
 
@@ -340,7 +364,11 @@ function Subjects() {
           <SubjectWrapper>
             <SubjectHeader loading={loading} color={bgColor}>
               {!loading ? (
-                <SubjectCode>{code}</SubjectCode>
+                <SubjectCode>
+                  {code}
+                  <span>•</span>
+                  <span>{studyPeriods[period]}</span>
+                </SubjectCode>
               ) : (
                 <SubjectCodeLoading />
               )}
@@ -351,10 +379,10 @@ function Subjects() {
               )}
               {loading ? (
                 <LoadingDots>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span />
+                  <span />
+                  <span />
+                  <span />
                 </LoadingDots>
               ) : (
                 <SubjectToolbox iconColor={textColor}>

@@ -9,9 +9,10 @@ import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 960px;
+  justify-content: center;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const BronzeCard = styled.div`
@@ -20,8 +21,8 @@ const BronzeCard = styled.div`
   font-size: 12px;
   height: 140px;
   margin-bottom: 30px;
+  margin-right: 5%;
   position: relative;
-  width: 50%;
   align-self: center;
 
   div {
@@ -31,6 +32,11 @@ const BronzeCard = styled.div`
 
   @media screen and (min-width: 960px) {
     margin-bottom: 0;
+    margin-right: 2%;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 `;
 
