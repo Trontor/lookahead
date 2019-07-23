@@ -68,8 +68,8 @@ export default function SubjectInfo(props) {
     }
   } = subject;
   const streamKeys = Object.keys(_streamContainers);
-  console.log(streamKeys);
-
+  const mandatoryClassGroups = groupByArray(_mandatoryClasses, "description");
+  const regularClassGroups = groupByArray(_regularClasses, "description");
   return (
     <ViewSubjectWrapper>
       <GoBackButton onClick={() => dispatch(stopViewing())}>
@@ -80,7 +80,7 @@ export default function SubjectInfo(props) {
         <Info>{name}</Info>
       </InfoWrapper>
       {_mandatoryClasses &&
-        groupByArray(_mandatoryClasses, "description").map((kvp, idx) => (
+        mandatoryClassGroups.map((kvp, idx) => (
           <InfoContainer
             color={color}
             key={idx}
@@ -89,7 +89,7 @@ export default function SubjectInfo(props) {
           />
         ))}
       {_regularClasses &&
-        groupByArray(_regularClasses, "description").map((kvp, idx) => (
+        regularClassGroups.map((kvp, idx) => (
           <InfoContainer
             color={color}
             key={idx}
