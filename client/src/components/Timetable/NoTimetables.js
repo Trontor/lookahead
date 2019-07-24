@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   align-items: center;
   height: 100%;
   margin: 20px auto;
+
+  @media screen and (min-width: 960px) {
+    margin : 0 auto;
+  }
 `;
 
 const Text = styled.span`

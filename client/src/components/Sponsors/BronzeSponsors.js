@@ -86,9 +86,11 @@ export default function BronzeSponsors() {
   const { bronze } = getCategorisedSponsors(sponsors);
   return (
     <>
+    {bronze.length > 0 &&
       <BronzeHeading>
         <i class="fas fa-dice"></i> You may also be interested in the following clubs and societies:
       </BronzeHeading>
+    }
       <BronzeCardWrapper>
         {bronze &&
           bronze.map(entry => {
