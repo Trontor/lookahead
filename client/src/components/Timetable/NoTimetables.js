@@ -6,11 +6,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 20px auto;
-
-  @media screen and (min-width: 960px) {
-    margin: 0 auto;
-  }
+  margin: 20px auto;
 `;
 
 const Text = styled.span`
@@ -18,7 +14,7 @@ const Text = styled.span`
   font-size: 24px;
   font-family: "Quicksand";
   position: relative;
-  bottom: 20%;
+  bottom: 10%;
 `;
 
 export default function NoTimetables() {
