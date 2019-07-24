@@ -273,11 +273,13 @@ const SubjectCode = styled.div`
       transform: translateY(-0.1em);
       opacity: 0.8;
 
-      ${({ error }) => { return css`
-        i {
-          color: crimson;
-        }
-      `;}}
+      ${({ error }) => {
+        return css`
+          i {
+            color: crimson;
+          }
+        `;
+      }}
     }
   }
 `;
@@ -398,9 +400,7 @@ function Subjects() {
 
   return (
     <SubjectsWrapper>
-      {crossStudyPeriod && (
-        <Warning/>
-      )}
+      {crossStudyPeriod && <Warning />}
 
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
@@ -425,10 +425,12 @@ function Subjects() {
                   {code}
                   <span>•</span>
                   {error ? (
-                    <span><i class="fas fa-exclamation-triangle"></i></span>
-                    ) : (
+                    <span>
+                      <i class="fas fa-exclamation-triangle" />
+                    </span>
+                  ) : (
                     <span>{studyPeriods[period]}</span>
-                    )}
+                  )}
                 </SubjectCode>
               ) : (
                 <SubjectCodeLoading />
@@ -445,42 +447,50 @@ function Subjects() {
                   <span />
                   <span />
                 </LoadingDots>
-              ): (<>
-                {error &&
-                <ErrorMsg>
-                  Oops! We had trouble loading your subject.
-                </ErrorMsg>}
-                <SubjectToolbox iconColor={textColor}>
-                {!error &&
-                  <ToolboxButton
-                    title="View Subject Information"
-                    onClick={() => dispatch(viewSubject(subject))}
-                  >
-                    <i className="fa fa-list" />
-                  </ToolboxButton>
-                }
-                {!error &&
-                  <ColorPickButton
-                    onColorChange={color => {
-                      dispatch(
-                        changeSubjectColor(year, studyPeriod, code, color.hex)
-                      );
-                    }}
-                    buttonStyle={ToolboxButton}
-                 />}
-                  <ToolboxButton
-                    title="View Official Timetable"
-                    onClick={() => openSWS(year, code)}
-                  >
-                    <i className="fa fa-calendar-alt" />
-                  </ToolboxButton>
-                  <ToolboxButton
-                    title="View Handbook Entry"
-                    onClick={() => openHandbook(year, code)}
-                  >
-                    <i className="fa fa-book" />
-                  </ToolboxButton>
-                </SubjectToolbox>
+              ) : (
+                <>
+                  {error && (
+                    <ErrorMsg>
+                      Oops! We had trouble loading your subject.
+                    </ErrorMsg>
+                  )}
+                  <SubjectToolbox iconColor={textColor}>
+                    {!error && (
+                      <ToolboxButton
+                        title="View Subject Information"
+                        onClick={() => dispatch(viewSubject(subject))}
+                      >
+                        <i className="fa fa-list" />
+                      </ToolboxButton>
+                    )}
+                    {!error && (
+                      <ColorPickButton
+                        onColorChange={color => {
+                          dispatch(
+                            changeSubjectColor(
+                              year,
+                              studyPeriod,
+                              code,
+                              color.hex
+                            )
+                          );
+                        }}
+                        buttonStyle={ToolboxButton}
+                      />
+                    )}
+                    <ToolboxButton
+                      title="View Official Timetable"
+                      onClick={() => openSWS(year, code)}
+                    >
+                      <i className="fa fa-calendar-alt" />
+                    </ToolboxButton>
+                    <ToolboxButton
+                      title="View Handbook Entry"
+                      onClick={() => openHandbook(year, code)}
+                    >
+                      <i className="fa fa-book" />
+                    </ToolboxButton>
+                  </SubjectToolbox>
                 </>
               )}
             </SubjectCard>

@@ -5,21 +5,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { fetchClubList } from "../../redux/actions/sponsorActions";
 import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
-
-const BronzeHeading = styled.h4`
-  font-weight: normal;
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-
-i {
-    display: inline-block;
-    transform: translateY(0.1em);
-    font-size: 18px;
-    color: ${props => props.theme.UMSUButtonBg};
-    margin-right: 5px;
-  }
-`;
+import { SponsorHeading } from "./Sponsors";
 
 const BronzeCardWrapper = styled.div`
   display: flex;
@@ -87,11 +73,12 @@ export default function BronzeSponsors() {
   const { bronze } = getCategorisedSponsors(sponsors);
   return (
     <>
-    {bronze.length > 0 &&
-      <BronzeHeading>
-        <i class="fas fa-dice"></i> You may also be interested in the following clubs and societies:
-      </BronzeHeading>
-    }
+      {bronze.length > 0 && (
+        <SponsorHeading>
+          <i class="fas fa-dice" /> You may also be interested in the following
+          clubs and societies...
+        </SponsorHeading>
+      )}
       <BronzeCardWrapper>
         {bronze &&
           bronze.map(entry => {
@@ -115,7 +102,7 @@ export default function BronzeSponsors() {
               </BronzeCard>
             );
           })}
-    </BronzeCardWrapper>
+      </BronzeCardWrapper>
     </>
   );
 }

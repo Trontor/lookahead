@@ -5,14 +5,14 @@ import { fetchClubList } from "../../redux/actions/sponsorActions";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 import GoldSilverSponsorCard from "./GoldSilverSponsorCard";
 
-const SponsorHeading = styled.h3`
-  margin: 0 0 10px 0;
-
+export const SponsorHeading = styled.h3`
+  margin: 10px;
+  font-weight: normal;
   i {
     display: inline-block;
     transform: translateY(0.1em);
     font-size: 20px;
-    color: ${props => props.theme.UMSUButtonBg};
+    color: ${props => props.theme.text};
     margin-right: 5px;
   }
 `;
@@ -51,9 +51,10 @@ export default function Sponsors() {
   }
   return (
     <>
-    <SponsorHeading>
-      <i class="fas fa-chess-knight"></i>Clubs and societies you may be interested in:
-    </SponsorHeading>
+      <SponsorHeading>
+        <i class="fas fa-icons" />
+        Clubs and societies you may be interested in...
+      </SponsorHeading>
       <SponsorWrapper>
         {goldSilver &&
           goldSilver.map(entry => {
