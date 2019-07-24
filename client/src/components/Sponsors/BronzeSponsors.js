@@ -77,9 +77,9 @@ export default function BronzeSponsors() {
           following clubs and societies...
         </SponsorHeading>
       )}
-      <BronzeCardWrapper>
-        {bronze &&
-          bronze.map(entry => {
+      {bronze && bronze.length > 0 && (
+        <BronzeCardWrapper>
+          {bronze.map(entry => {
             const {
               name,
               logoURL,
@@ -105,7 +105,8 @@ export default function BronzeSponsors() {
               </BronzeCard>
             );
           })}
-      </BronzeCardWrapper>
+        </BronzeCardWrapper>
+      )}
     </>
   );
 }

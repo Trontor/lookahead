@@ -20,7 +20,6 @@ const HeaderWrapper = styled.div`
   z-index: 3;
   position: relative;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.12);
-
   @media screen and (min-width: 960px) {
   }
 `;
@@ -91,7 +90,7 @@ export default function Header() {
         {/* Lookahead <EyeEmoji>👀</EyeEmoji> */}
       </HeaderText>
       <HeaderSubtitle>
-        A University of Melbourne Timetable Optimiser
+        A University of Melbourne Semester Planner
       </HeaderSubtitle>
       <Emoji onClick={switchTheme}>
         <span aria-label={`${emoji} emoji`} role="img">

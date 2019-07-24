@@ -4,21 +4,22 @@ import styled from "styled-components";
 import Sponsors from "./Sponsors/Sponsors";
 import Sidebar from "./Sidebar/Sidebar";
 import BronzeSponsors from "./Sponsors/BronzeSponsors";
+import Footer from "./Footer";
 
 const Grid = styled.div`
+  display: grid;
   grid-template-columns: 100%;
-  height: calc(100% - 60px);
-
+  grid-template-rows: auto auto [footer] 100px;
   @media screen and (min-width: 960px) {
-    display: grid;
+    height: calc(100% - 60px);
+    grid-template-rows: [content] auto [footer] 100px;
     grid-template-columns: [sidebar] minmax(22%, 350px) [viewer] auto;
-    grid-template-rows: auto;
   }
 `;
 
 const SidebarWrapper = styled.div`
   background-color: ${props => props.theme.sidebarBg};
-  grid-column-start: 1;
+  grid-row: 1;
   max-width: inherit;
   padding: 10px;
   padding-bottom: 20px;
@@ -33,12 +34,13 @@ const SidebarWrapper = styled.div`
 `;
 
 const Main = styled.div`
-  grid-column-start: 1;
+  grid-row: 2;
   padding-top: 10px;
 
   @media screen and (min-width: 960px) {
     grid-column-start: viewer;
-    padding: 10px;
+    grid-row: 1 / 3;
+    padding: 10px 10px 0;
   }
 `;
 
@@ -53,6 +55,7 @@ export default function Planner() {
         <TimetableViewer />
         <BronzeSponsors />
       </Main>
+      <Footer />
     </Grid>
   );
 }
