@@ -139,7 +139,7 @@ export default class Timetable {
     this.daySpans = daySpans;
     let totalDaySpan = 0;
     let longestSpan = 0;
-    for (const [key, span] of Object.entries(daySpans)) {
+    for (const [, /* key ,*/ span] of Object.entries(daySpans)) {
       const hoursDiff = span.finish - span.start;
       if (hoursDiff > longestSpan) {
         longestSpan = hoursDiff;

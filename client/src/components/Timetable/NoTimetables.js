@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   margin: 20px auto;
 
   @media screen and (min-width: 960px) {
-    margin : 0 auto;
+    margin: 0 auto;
   }
 `;
 
@@ -20,8 +20,8 @@ const Text = styled.span`
   font-family: "Quicksand";
   position: relative;
   bottom: 10%;
-
-  &:nth-child(n+2) {
+  margin-top: 5px;
+  &:nth-child(n + 2) {
     font-size: 13px;
     font-family: "Karla", sans-serif;
   }
@@ -36,9 +36,7 @@ export default function NoTimetables() {
           😭
         </span>
       </Text>
-      <Text>
-        Select one or more subjects from the menu.
-      </Text>
+      <Text>Select one or more subjects from the menu</Text>
     </Wrapper>
   );
 }

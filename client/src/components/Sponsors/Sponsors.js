@@ -52,13 +52,13 @@ export default function Sponsors() {
   return (
     <>
       <SponsorHeading>
-        <i class="fas fa-icons" />
+        <i className="fas fa-icons" />
         Clubs and societies you may be interested in...
       </SponsorHeading>
       <SponsorWrapper>
         {goldSilver &&
           goldSilver.map(entry => {
-            return <GoldSilverSponsorCard {...entry} />;
+            return <GoldSilverSponsorCard key={entry.name} {...entry} />;
           })}
       </SponsorWrapper>
     </>

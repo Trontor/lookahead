@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import Modal from "react-modal";
 import timeIntToString from "../../utility/TimeIntToString";
 
@@ -81,7 +81,7 @@ export default function ClassModal(props) {
     subjectName,
     codes,
     code,
-    day,
+    // day,
     color,
     startInt,
     finishInt,

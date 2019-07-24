@@ -153,7 +153,7 @@ class Optimiser {
       `Applying Restrictions\nMin Start: ${earliestStart}\nLatest Finish:${latestFinish}`
     );
     // Tracks whether or not these time restrictions are valid
-    for (const [key, value] of Object.entries(subjects)) {
+    for (const [, value] of Object.entries(subjects)) {
       const subject = value.data;
       const subjectName = value.name;
       console.log(subjectName);
@@ -310,7 +310,7 @@ class Optimiser {
         setPool.push([mandatoryClass]);
       }
       // Now, deal with Streams
-      for (const { type, streams, name } of _streamContainers) {
+      for (const { /* type , */ streams /* ,name */ } of _streamContainers) {
         // console.log(type);
         const streamTypeClasses = [];
         for (const stream of streams) {
