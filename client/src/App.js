@@ -7,7 +7,9 @@ import ReactGA from "react-ga";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
-  ReactGA.initialize("UA-131760351-1");
+  ReactGA.initialize("UA-131760351-1", {
+    debug: false
+  });
   ReactGA.pageview(window.location.pathname + window.location.search);
   console.log = () => {};
 }
