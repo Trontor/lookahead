@@ -1,24 +1,25 @@
 import React from "react";
 import {
   removeSubject,
-  changeSubject,
   changeSubjectColor
 } from "../../redux/actions/subjectActions";
 import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
-import { TwitterPicker } from "react-color";
 import ColorPickButton from "./ColorPickButton";
 import { viewSubject } from "../../redux/actions/viewSubjectActions";
+import Warning from "./Warning";
 
 const SubjectsWrapper = styled.div`
   /* margin: 5px; */
   /* min-height: 290px; */
 `;
+
 const SubjectWrapper = styled.div`
   /* color: ${props => props.textColor}; */
   position: relative;
 `;
 
+/* * * * * * * * * * * * * * * * LOADING CARD * * * * * * * * * * * * * * * */
 const loadingCard = css`
   height: 92px;
   position: relative;
@@ -39,7 +40,6 @@ const loadingCard = css`
   background-clip: padding-box, border-box;
   background-size: 100% 100%, 200% auto;
   background-position: 0 0, 0 200%;
-  background-origin: padding-box, border-box;
   animation: gradient 3s linear infinite;
   animation-fill-mode: forwards;
 
@@ -52,12 +52,12 @@ const loadingCard = css`
     }
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 768px) {
     height: 75px;
   }
 
   @media screen and (min-width: 960px) {
-    height: 63px;
+    height: 58px;
     border-color: transparent;
     background-image: linear-gradient(
         ${props => props.theme.cardBg},
@@ -196,37 +196,63 @@ const LoadingDots = styled.div`
   }
 `;
 
-const SubjectHeader = styled.div`
+/* * * * * * * * * * * * * * * * ERROR CARD * * * * * * * * * * * * * * * */
+const ErrorCard = css`
+  position: relative;
+  border-color: crimson;
+
+  @media screen and (min-width: 960px) {
+    border-color: crimson;
+  }
+`;
+
+const ErrorText = css`
+  opacity: 1;
+`;
+
+const ErrorMsg = styled.div`
+  margin: -5px 0 5px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+`;
+
+/* * * * * * * * * * * * * * * * SUBJECT CARD * * * * * * * * * * * * * * * */
+const SubjectCard = styled.div`
   padding: 10px 0 12px 0;
   background-color: ${props => props.theme.cardBg};
   border-top: 8px solid ${props => props.color};
   border-radius: 5px;
   margin: 10px 0;
   box-shadow: 2px 2px 3px -2px rgba(0, 0, 0, 0.1);
+  line-height: 1.25em;
   & div {
     text-align: center;
     flex: 100%;
   }
 
   @media screen and (min-width: 960px) {
-    padding: 12px 10px;
-    min-height: 50px;
+    padding: 10px 10px 8px;
     border-left: 8px solid ${props => props.color};
     border-top: 0;
     & div {
       text-align: left;
     }
   }
-  ${({ loading }) => loading && loadingCard}
+  ${({ $loading }) => $loading && loadingCard}
+  ${({ error }) => error && ErrorCard}
 `;
 
 const SubjectCode = styled.div`
   text-align: center;
   position: relative;
   font-weight: bold;
-  opacity: 0.75;
+  opacity: 0.7;
   font-size: 13px;
   text-transform: uppercase;
+
+  ${({ error }) => error && ErrorText}
 
   @media screen and (min-width: 960px) {
     text-align: left;
@@ -244,6 +270,14 @@ const SubjectCode = styled.div`
       font-size: 11px;
       transform: translateY(-0.1em);
       opacity: 0.8;
+
+      ${({ error }) => {
+        return css`
+          i {
+            color: crimson;
+          }
+        `;
+      }}
     }
   }
 `;
@@ -254,18 +288,19 @@ const SubjectName = styled.div`
   font-size: 15px;
   font-weight: bold;
   margin-top: 4px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
 
   @media screen and (min-width: 960px) {
-    max-width: 51%;
+    max-width: 53%;
     font-size: 14px;
     margin-top: 2px;
-    margin-bottom: 5px;
   }
+
+  ${({ error }) => ErrorText}
 `;
 
 const SubjectToolbox = styled.div`
@@ -332,8 +367,6 @@ const studyPeriods = {
   semester_2: "Sem 2"
 };
 
-const Warning = styled.div``;
-
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
   const dispatch = useDispatch();
@@ -365,28 +398,37 @@ function Subjects() {
 
   return (
     <SubjectsWrapper>
-      {crossStudyPeriod && (
-        <Warning>
-          You have entered subjects from two or more different study periods,
-          you probably don't want that...
-        </Warning>
-      )}
+      {crossStudyPeriod && <Warning />}
 
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
-        const { year, studyPeriod, name, loading, data, color } = subject;
+        const {
+          year,
+          studyPeriod,
+          name,
+          loading,
+          data,
+          color,
+          error
+        } = subject;
         const { period = "" } = data || {};
         let bgColor = color;
         let textColor = "white";
 
         return (
-          <SubjectWrapper>
-            <SubjectHeader loading={loading} color={bgColor}>
+          <SubjectWrapper key={code}>
+            <SubjectCard error={error} $loading={loading} color={bgColor}>
               {!loading ? (
                 <SubjectCode>
                   {code}
                   <span>•</span>
-                  <span>{studyPeriods[period]}</span>
+                  {error ? (
+                    <span>
+                      <i className="fas fa-exclamation-triangle" />
+                    </span>
+                  ) : (
+                    <span>{studyPeriods[period]}</span>
+                  )}
                 </SubjectCode>
               ) : (
                 <SubjectCodeLoading />
@@ -404,36 +446,52 @@ function Subjects() {
                   <span />
                 </LoadingDots>
               ) : (
-                <SubjectToolbox iconColor={textColor}>
-                  <ToolboxButton
-                    title="View Subject Information"
-                    onClick={() => dispatch(viewSubject(subject))}
-                  >
-                    <i className="fa fa-list" />
-                  </ToolboxButton>
-                  <ColorPickButton
-                    onColorChange={color => {
-                      dispatch(
-                        changeSubjectColor(year, studyPeriod, code, color.hex)
-                      );
-                    }}
-                    buttonStyle={ToolboxButton}
-                  />
-                  <ToolboxButton
-                    title="View Official Timetable"
-                    onClick={() => openSWS(year, code)}
-                  >
-                    <i className="fa fa-calendar-alt" />
-                  </ToolboxButton>
-                  <ToolboxButton
-                    title="View Handbook Entry"
-                    onClick={() => openHandbook(year, code)}
-                  >
-                    <i className="fa fa-book" />
-                  </ToolboxButton>
-                </SubjectToolbox>
+                <>
+                  {error && (
+                    <ErrorMsg>
+                      Oops! We had trouble loading your subject.
+                    </ErrorMsg>
+                  )}
+                  <SubjectToolbox iconColor={textColor}>
+                    {!error && (
+                      <ToolboxButton
+                        title="View Subject Information"
+                        onClick={() => dispatch(viewSubject(subject))}
+                      >
+                        <i className="fa fa-list" />
+                      </ToolboxButton>
+                    )}
+                    {!error && (
+                      <ColorPickButton
+                        onColorChange={color => {
+                          dispatch(
+                            changeSubjectColor(
+                              year,
+                              studyPeriod,
+                              code,
+                              color.hex
+                            )
+                          );
+                        }}
+                        buttonStyle={ToolboxButton}
+                      />
+                    )}
+                    <ToolboxButton
+                      title="View Official Timetable"
+                      onClick={() => openSWS(year, code)}
+                    >
+                      <i className="fa fa-calendar-alt" />
+                    </ToolboxButton>
+                    <ToolboxButton
+                      title="View Handbook Entry"
+                      onClick={() => openHandbook(year, code)}
+                    >
+                      <i className="fa fa-book" />
+                    </ToolboxButton>
+                  </SubjectToolbox>
+                </>
               )}
-            </SubjectHeader>
+            </SubjectCard>
             <DeleteButton onClick={() => deleteSubject(year, code)}>
               ×
             </DeleteButton>

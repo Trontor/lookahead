@@ -10,16 +10,14 @@ const OptimiseButtonWrapper = styled.div`
 `;
 
 const OptimiseButton = styled.button`
-  /* background-color: #a6c !important; */
   font-family: "Quicksand";
   font-size: 15px;
-  /* background-color: ${props => props.theme.accent}; */
   background-color: ${props => props.theme.main};
   color: #fff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   padding: 12px 25px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 0.375rem;
   border: 0;
   border-radius: 3px;
@@ -32,7 +30,7 @@ const OptimiseButton = styled.button`
   &:hover,
   &:focus {
     outline: none;
-    background-color: ${props => props.theme.mainDark}
+    background-color: ${props => props.theme.mainDark};
   }
 `;
 let hasAutoOptimised = false;
@@ -44,8 +42,6 @@ export default () => {
   // Get subject keys
   const keys = Object.keys(subjects);
   const allLoaded = !keys.some(key => subjects[key].data === null);
-  const AUTO_OPTIMISE = true;
-  const showSidebar = true;
 
   // const toggleSidebar = () => {
   //   this.Sidebar.maxWidth = 0px,

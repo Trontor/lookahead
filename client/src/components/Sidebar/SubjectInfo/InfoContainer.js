@@ -80,7 +80,12 @@ export default function InfoContainer(props) {
       currentCodes.push(...entry.codes);
     }
   }
-  const { description, classes, color, subjectCode } = props;
+  const {
+    description,
+    classes,
+    color
+    // subjectCode
+  } = props;
   return (
     <InfoTable>
       <tr>
@@ -95,7 +100,14 @@ export default function InfoContainer(props) {
         <th>Weeks</th>
       </tr>
       {classes.map((cls, idx) => {
-        const { description, day, start, finish, weeks, locations } = cls;
+        const {
+          // description,
+          day,
+          start,
+          finish,
+          weeks
+          // locations
+        } = cls;
         const isOnTimetable = cls.codes.some(code =>
           currentCodes.includes(code)
         );

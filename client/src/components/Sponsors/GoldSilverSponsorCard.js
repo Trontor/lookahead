@@ -132,9 +132,9 @@ export default function GoldSilverSponsorCard(props) {
     description,
     umsu,
     facebook,
-    signup,
-    tier,
-    include
+    signup
+    /* tier,
+    include */
   } = props;
   return (
     <SponsorCard dismissed={dismissed}>

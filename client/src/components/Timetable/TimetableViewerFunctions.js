@@ -4,7 +4,7 @@ import store from "../../redux/store";
 import {
   createCustomTimetable,
   changeToCustomView,
-  updateCustomTimetable,
+  // updateCustomTimetable,
   updateTimetable,
   addReservedEvent,
   removeReservedEvent
@@ -242,7 +242,7 @@ export const handleEventDrop = ({ event, oldEvent }) => {
   // Destructure information about the new class time
   const {
     start,
-    title,
+    // title,
     extendedProps: { classCode, type, /*streamNumber,*/ code, codes }
   } = newEvent;
   const subjects = getSubjects();
@@ -415,7 +415,7 @@ export const generateBackgroundEvents = () => {
   const bgEvents = [];
   const subjects = getSubjects();
   // Loop through each subject, generating background events for them 1-by-1
-  for (const [code, { data }] of Object.entries(subjects)) {
+  for (const [, { data }] of Object.entries(subjects)) {
     // Check if the data for the subject has been retrieved yet
     if (!data) {
       // If not, continue to the next subject

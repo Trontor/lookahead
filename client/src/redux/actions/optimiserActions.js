@@ -13,7 +13,6 @@ import {
 } from "../actionTypes";
 
 import Optimiser from "../../optimiser/Optimiser";
-import Timetable from "../../optimiser/Timetable";
 
 export const nextTimetable = () => dispatch => {
   dispatch({ type: NEXT_TIMETABLE });
@@ -60,10 +59,10 @@ export const optimise = (
     restrictions.latestFinish
   );
   dispatch({ type: BEGIN_OPTIMISATION });
-  const { timetables, time } = optimiser.generateAndOptimise(
-    optimisations,
-    reservations
-  );
+  const {
+    timetables
+    //  time
+  } = optimiser.generateAndOptimise(optimisations, reservations);
   dispatch({
     type: COMPLETE_OPTIMISATION,
     payload: { timetables }

@@ -32,13 +32,13 @@ export default function({ event, el }) {
   } = event.extendedProps;
 
   // HTML Element for the bottom elements (Subject Name + Code)
-  const bottomWrapper = $('<div class="bottom-wrapper"/>');
+  const bottomWrapper = $('<div className="bottom-wrapper"/>');
   // Render subject name, e.g. "Software Modelling and Design" - if allowed
   if (
     height >= SUBJECT_NAME_MINIMUM.height &&
     width >= SUBJECT_NAME_MINIMUM.width
   ) {
-    const subjectNameText = $(`<div class="fc-desc">${subjectName}</div>`);
+    const subjectNameText = $(`<div className="fc-desc">${subjectName}</div>`);
     subjectNameText.appendTo(bottomWrapper);
   }
   // Render number of locations available - if allowed
@@ -47,7 +47,7 @@ export default function({ event, el }) {
     width >= CLASS_LOCATION_MINIMUM.width
   ) {
     const locationsText = $(
-      `<div class="fc-loc">${locations.length} location${
+      `<div className="fc-loc">${locations.length} location${
         locations > 1 ? "s" : ""
       }</div>`
     );
@@ -58,7 +58,7 @@ export default function({ event, el }) {
     height >= CLASS_TYPE_MINIMUM.height &&
     width >= CLASS_TYPE_MINIMUM.width
   ) {
-    const classTypeElement = $(`<div class="fc-type">${type}</div>`);
+    const classTypeElement = $(`<div className="fc-type">${type}</div>`);
     // if its a stream, append the stream number to the text
     if (type === "Stream") {
       // prevents JS injection
@@ -67,7 +67,7 @@ export default function({ event, el }) {
     classTypeElement.appendTo(content);
   }
   // Render the subject code all the time
-  const subjectCode = $(`<div class="fc-code">${code}</div>`);
+  const subjectCode = $(`<div className="fc-code">${code}</div>`);
   subjectCode.appendTo(bottomWrapper);
   // Add the bottom wrapper to the calendar element
   bottomWrapper.appendTo(content);
@@ -78,7 +78,7 @@ export default function({ event, el }) {
     Stream: "water"
   };
   const lockElement = $(
-    `<i class="fa fa-${iconMapping[type]} fa-fw event-icon"/i>`
+    `<i className="fa fa-${iconMapping[type]} fa-fw event-icon"/i>`
   );
   lockElement.appendTo(content);
 }

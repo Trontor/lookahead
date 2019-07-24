@@ -11,6 +11,7 @@ if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
     debug: true
   });
   ReactGA.pageview(window.location.pathname + window.location.search);
+  console.log = () => {};
 }
 
 const GlobalStyle = createGlobalStyle`

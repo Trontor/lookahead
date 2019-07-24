@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 
 const AvoidButton = styled.button`
@@ -8,7 +8,7 @@ const AvoidButton = styled.button`
   font-family: inherit;
   font-weight: bold;
   font-size: 11px;
-  border: 1px solid ${props => props.theme.accent};
+  border: 1px solid ${props => props.theme.main};
   padding: 6px 0; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   float: left; /* Float the buttons side by side */
@@ -25,13 +25,13 @@ const AvoidButton = styled.button`
     if (props.activated) {
       console.log(props.activated);
       return css`
-        background-color: ${props => props.theme.accent};
+        background-color: ${props => props.theme.main};
         color: white;
       `;
     } else {
       return css`
         background-color: ${props => props.theme.sidebarBg};
-        color: ${props => props.theme.accent};
+        color: ${props => props.theme.main};
       `;
     }
   }}
@@ -52,7 +52,7 @@ const AvoidButton = styled.button`
   }
   @media (hover: hover) {
     &:hover {
-      background-color: ${props => props.theme.accent};
+      background-color: ${props => props.theme.main};
       color: white;
     }
   }

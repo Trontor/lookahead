@@ -44,11 +44,6 @@ const HeaderSubtitle = styled.span`
   opacity: 0.8;
 `;
 
-const EyeEmoji = styled.span`
-  font-size: 24px;
-  transform: translateY(10px);
-`;
-
 const Emoji = styled.span`
   right: 12px;
   font-size: 24px;
