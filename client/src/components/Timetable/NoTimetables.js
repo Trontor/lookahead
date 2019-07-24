@@ -38,10 +38,11 @@ export default function NoTimetables(props) {
           😭
         </span>
       </Text>
-      {!hasSubjects && <Text>Select one or more subjects from the menu</Text>}
-      {hasSubjects && (
-        <Text>Select your optimisations then click 'Optimise'</Text>
-      )}
+      <Text>
+        {!hasSubjects
+          ? "Select one or more subjects from the menu"
+          : "Select your optimisations then click 'Optimise"}
+      </Text>
     </Wrapper>
   );
 }
