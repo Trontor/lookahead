@@ -23,7 +23,7 @@ const getSubjectFailure = (code, error) => ({
 });
 
 export const getSubject = (year, studyPeriod, code, name) => dispatch => {
-  dispatch(getSubjectBegin(year, code, name));
+  dispatch(getSubjectBegin(year, code, name, studyPeriod));
   const listURL = `/subject?year=${year}&period=${studyPeriod}&code=${code}`;
   return axios
     .get(listURL)

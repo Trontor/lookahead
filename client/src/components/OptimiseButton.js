@@ -10,10 +10,8 @@ const OptimiseButtonWrapper = styled.div`
 `;
 
 const OptimiseButton = styled.button`
-  /* background-color: #a6c !important; */
   font-family: "Quicksand";
   font-size: 15px;
-  /* background-color: ${props => props.theme.accent}; */
   background-color: ${props => props.theme.main};
   color: #fff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.12);

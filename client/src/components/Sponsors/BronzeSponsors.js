@@ -5,6 +5,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { fetchClubList } from "../../redux/actions/sponsorActions";
 import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
+import { SponsorHeading } from "./Sponsors";
 
 const BronzeCardWrapper = styled.div`
   display: flex;
@@ -37,6 +38,7 @@ const BronzeCard = styled.div`
 
   &:last-child {
     margin-right: 0;
+    letter-spacing: -0.01em;
   }
 `;
 
@@ -70,29 +72,37 @@ export default function BronzeSponsors() {
   const sponsors = useSelector(state => state.sponsors, shallowEqual);
   const { bronze } = getCategorisedSponsors(sponsors);
   return (
-    <BronzeCardWrapper>
-      {bronze &&
-        bronze.map(entry => {
-          const {
-            name,
-            logoURL,
-            description,
-            umsu,
-            facebook,
-            tier,
-            include
-          } = entry;
-          return (
-            <BronzeCard>
-              <Logo alt={`${name} logo`} width="100%" src={logoURL} />
-              <div>{name}</div>
-              <BronzeCardButtonGroup>
-                <UMSUButton href={umsu}>UMSU</UMSUButton>
-                <FacebookButton href={facebook} />
-              </BronzeCardButtonGroup>
-            </BronzeCard>
-          );
-        })}
-    </BronzeCardWrapper>
+    <>
+      {bronze.length > 0 && (
+        <SponsorHeading>
+          <i class="fas fa-dice" /> You may also be interested in the following
+          clubs and societies...
+        </SponsorHeading>
+      )}
+      <BronzeCardWrapper>
+        {bronze &&
+          bronze.map(entry => {
+            const {
+              name,
+              logoURL,
+              description,
+              umsu,
+              facebook,
+              tier,
+              include
+            } = entry;
+            return (
+              <BronzeCard>
+                <Logo alt={`${name} logo`} width="100%" src={logoURL} />
+                <div>{name}</div>
+                <BronzeCardButtonGroup>
+                  <UMSUButton href={umsu}>UMSU</UMSUButton>
+                  <FacebookButton href={facebook} />
+                </BronzeCardButtonGroup>
+              </BronzeCard>
+            );
+          })}
+      </BronzeCardWrapper>
+    </>
   );
 }

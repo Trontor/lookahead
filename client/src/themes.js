@@ -24,7 +24,7 @@ const regularTheme = {
   reservedBorder: "2px dotted black",
   reservedText: "black",
   /*=== General ===*/
-  main: "teal",
+  main: "#20B2AA",
   mainDark: "#00626C",
   secondary: "deepskyblue",
   secondaryDark: "dodgerblue",
@@ -39,16 +39,16 @@ const darkTheme = {
   /*=== Theme Name ===*/
   name: "dark",
   /*=== Header ===*/
-  headerBg: "#3A3A46",
+  headerBg: "#363646",
   /*===Timetable (tt) Viewer===*/
   ttBorderColor: "#454554",
   ttTextColor: "#ddd",
   /*=== Body ===*/
-  bodyBg: "#363642",
+  bodyBg: "#2E2E39",
   /*=== Sidebar ===*/
-  sidebarBg: "#32323C",
+  sidebarBg: "#32323E",
   /*=== Subject List ===*/
-  cardBg: "#3C3C4F",
+  cardBg: "#3E3E52",
   loadingGradient: "#5E5C87",
   /*=== Global Text ===*/
   text: "#f5f5f5",
@@ -61,7 +61,7 @@ const darkTheme = {
   reservedBorder: "2px dotted white",
   reservedText: "white",
   /*=== General ===*/
-  main: "#403F4C",
+  main: "#8368D1",
   mainDark: "#4A395D",
   secondary: "#524864",
   secondaryDark: "#562876",
