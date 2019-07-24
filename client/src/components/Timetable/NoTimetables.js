@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -10,7 +11,7 @@ const Wrapper = styled.div`
   margin: 20px auto;
 
   @media screen and (min-width: 960px) {
-    margin : 0 auto;
+    margin: 0 auto;
   }
 `;
 
@@ -20,14 +21,15 @@ const Text = styled.span`
   font-family: "Quicksand";
   position: relative;
   bottom: 10%;
-
-  &:nth-child(n+2) {
+  margin-top: 5px;
+  &:nth-child(n + 2) {
     font-size: 13px;
     font-family: "Karla", sans-serif;
   }
 `;
 
-export default function NoTimetables() {
+export default function NoTimetables(props) {
+  const { hasSubjects } = props;
   return (
     <Wrapper>
       <Text>
@@ -37,7 +39,9 @@ export default function NoTimetables() {
         </span>
       </Text>
       <Text>
-        Select one or more subjects from the menu.
+        {!hasSubjects
+          ? "Select one or more subjects from the menu"
+          : "Select your optimisations then click 'Optimise"}
       </Text>
     </Wrapper>
   );
