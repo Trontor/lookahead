@@ -16,7 +16,7 @@ i {
     display: inline-block;
     transform: translateY(0.1em);
     font-size: 18px;
-    color: darkorchid;
+    color: ${props => props.theme.UMSUButtonBg};
     margin-right: 5px;
   }
 `;

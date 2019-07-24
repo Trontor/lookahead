@@ -12,7 +12,7 @@ const SponsorHeading = styled.h3`
     display: inline-block;
     transform: translateY(0.1em);
     font-size: 20px;
-    color: darkorchid;
+    color: ${props => props.theme.UMSUButtonBg};
     margin-right: 5px;
   }
 `;
