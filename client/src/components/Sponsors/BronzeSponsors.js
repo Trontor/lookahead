@@ -52,6 +52,7 @@ const BronzeCard = styled.div`
 
   &:last-child {
     margin-right: 0;
+    letter-spacing: -0.01em;
   }
 `;
 

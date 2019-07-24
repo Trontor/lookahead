@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -19,6 +20,11 @@ const Text = styled.span`
   font-family: "Quicksand";
   position: relative;
   bottom: 10%;
+
+  &:nth-child(n+2) {
+    font-size: 13px;
+    font-family: "Karla", sans-serif;
+  }
 `;
 
 export default function NoTimetables() {
@@ -27,8 +33,11 @@ export default function NoTimetables() {
       <Text>
         No Timetables Yet{" "}
         <span role="img" aria-label="Crying Emoji">
-          😭😭😭
+          😭
         </span>
+      </Text>
+      <Text>
+        Select one or more subjects from the menu.
       </Text>
     </Wrapper>
   );
