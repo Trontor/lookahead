@@ -55,6 +55,7 @@ export default (state = initialState, action) => {
         [code]: {
           name,
           year,
+          studyPeriod,
           color: findColor(state),
           data: null,
           error: null,

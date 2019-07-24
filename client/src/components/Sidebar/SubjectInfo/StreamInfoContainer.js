@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { InfoTable, ClassInfoRow } from "./InfoContainer";
+import { InfoTable } from "./InfoContainer";
 import timeIntToString from "../../../utility/TimeIntToString";
 import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
@@ -93,7 +93,14 @@ export default function StreamInfoContainer(props) {
         return (
           <>
             {classes.map((cls, idx) => {
-              const { description, day, start, finish, weeks, locations } = cls;
+              const {
+                //  description,
+                day,
+                start,
+                finish,
+                weeks
+                // locations
+              } = cls;
               const isOnTimetable = cls.codes.some(code =>
                 currentCodes.includes(code)
               );
@@ -127,20 +134,6 @@ export default function StreamInfoContainer(props) {
           </>
         );
       })}
-      {/* {classes.map(cls => {
-        const { description, day, start, finish, weeks, locations } = cls;
-        const isOnTimetable = cls.codes.some(code =>
-          currentCodes.includes(code)
-        );
-        return (
-          <ClassInfoRow highlight={isOnTimetable} color={color}>
-            <td>{daysOfWeek[day]}</td>
-            <td>{timeIntToString(start)}</td>
-            <td>{timeIntToString(finish)}</td>
-            <td>{weeks.length}</td>
-          </ClassInfoRow>
-        );
-      })} */}
     </InfoTable>
   );
 }

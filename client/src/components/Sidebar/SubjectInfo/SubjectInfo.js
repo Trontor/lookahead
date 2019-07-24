@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { stopViewing } from "../../../redux/actions/viewSubjectActions";
 import groupByArray from "../../../utility/GroupByArray";
@@ -58,10 +58,10 @@ export default function SubjectInfo(props) {
   const {
     name,
     color,
-    year,
+    // year,
     data: {
       code,
-      period,
+      // period,
       _mandatoryClasses,
       _regularClasses,
       _streamContainers

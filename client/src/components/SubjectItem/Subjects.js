@@ -1,12 +1,10 @@
 import React from "react";
 import {
   removeSubject,
-  changeSubject,
   changeSubjectColor
 } from "../../redux/actions/subjectActions";
 import { useSelector, useDispatch } from "react-redux";
 import styled, { css } from "styled-components";
-import { TwitterPicker } from "react-color";
 import ColorPickButton from "./ColorPickButton";
 import { viewSubject } from "../../redux/actions/viewSubjectActions";
 import Warning from "./Warning";
@@ -242,7 +240,7 @@ const SubjectCard = styled.div`
       text-align: left;
     }
   }
-  ${({ loading }) => loading && loadingCard}
+  ${({ $loading }) => $loading && loadingCard}
   ${({ error }) => error && ErrorCard}
 `;
 
@@ -418,15 +416,15 @@ function Subjects() {
         let textColor = "white";
 
         return (
-          <SubjectWrapper>
-            <SubjectCard error={error} loading={loading} color={bgColor}>
+          <SubjectWrapper key={code}>
+            <SubjectCard error={error} $loading={loading} color={bgColor}>
               {!loading ? (
                 <SubjectCode>
                   {code}
                   <span>•</span>
                   {error ? (
                     <span>
-                      <i class="fas fa-exclamation-triangle" />
+                      <i className="fas fa-exclamation-triangle" />
                     </span>
                   ) : (
                     <span>{studyPeriods[period]}</span>

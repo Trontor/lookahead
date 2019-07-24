@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { UMSUButton, FacebookButton } from "./GoldSilverSponsorCard";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { fetchClubList } from "../../redux/actions/sponsorActions";
-import { GOLD, SILVER, BRONZE } from "../../utility/SponsorTiers";
+import { shallowEqual, useSelector } from "react-redux";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 import { SponsorHeading } from "./Sponsors";
 
@@ -75,8 +73,8 @@ export default function BronzeSponsors() {
     <>
       {bronze.length > 0 && (
         <SponsorHeading>
-          <i class="fas fa-dice" /> You may also be interested in the following
-          clubs and societies...
+          <i className="fas fa-dice" /> You may also be interested in the
+          following clubs and societies...
         </SponsorHeading>
       )}
       <BronzeCardWrapper>
@@ -85,19 +83,24 @@ export default function BronzeSponsors() {
             const {
               name,
               logoURL,
-              description,
+              // description,
               umsu,
-              facebook,
-              tier,
-              include
+              facebook
+              // tier,
+              // include
             } = entry;
+
             return (
-              <BronzeCard>
+              <BronzeCard key={name}>
                 <Logo alt={`${name} logo`} width="100%" src={logoURL} />
                 <div>{name}</div>
                 <BronzeCardButtonGroup>
-                  <UMSUButton href={umsu}>UMSU</UMSUButton>
-                  <FacebookButton href={facebook} />
+                  <a href={umsu}>
+                    <UMSUButton>UMSU</UMSUButton>
+                  </a>
+                  <a href={facebook}>
+                    <FacebookButton />
+                  </a>
                 </BronzeCardButtonGroup>
               </BronzeCard>
             );

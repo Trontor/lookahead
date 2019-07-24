@@ -170,6 +170,7 @@ function Optimisations() {
           <ButtonGroup>
             {days.map((day, idx) => (
               <DayAvoidButton
+                key={day}
                 onToggled={val =>
                   val
                     ? dispatch(addAvoidDay(idx))
@@ -184,7 +185,7 @@ function Optimisations() {
 
         <Optimisation>
           <input
-            class="styled-checkbox"
+            className="styled-checkbox"
             id="minimise-clashes"
             type="checkbox"
             checked={minimiseClashes}
@@ -192,11 +193,11 @@ function Optimisations() {
               dispatch(setMinimiseClashes(checked))
             }
           />
-          <label for="minimise-clashes">Minimise clashes</label>
+          <label htmlFor="minimise-clashes">Minimise clashes</label>
         </Optimisation>
         <Optimisation>
           <input
-            class="styled-checkbox"
+            className="styled-checkbox"
             id="skip-lectures"
             type="checkbox"
             checked={skipLectures}
@@ -204,11 +205,11 @@ function Optimisations() {
               dispatch(setSkipLectures(checked))
             }
           />
-          <label for="skip-lectures">I skip most of my lectures</label>
+          <label htmlFor="skip-lectures">I skip most of my lectures</label>
         </Optimisation>
         <Optimisation>
           <input
-            class="styled-checkbox"
+            className="styled-checkbox"
             id="cram-classes"
             type="checkbox"
             checked={cramClasses}
@@ -216,17 +217,17 @@ function Optimisations() {
               dispatch(setCramClasses(checked))
             }
           />
-          <label for="cram-classes">Cram classes together</label>
+          <label htmlFor="cram-classes">Cram classes together</label>
         </Optimisation>
         <Optimisation>
           <input
-            class="styled-checkbox"
+            className="styled-checkbox"
             id="longest-run-toggle"
             type="checkbox"
             checked={longestRunToggled}
             onChange={longestRunToggleChanged}
           />
-          <label for="longest-run-toggle">
+          <label htmlFor="longest-run-toggle">
             Allocate a break after consecutive classes
           </label>
         </Optimisation>
@@ -245,7 +246,7 @@ function Optimisations() {
         )}
         <Optimisation>
           <input
-            class="styled-checkbox"
+            className="styled-checkbox"
             id="keep-classes-streamed-toggle"
             type="checkbox"
             checked={keepClassesStreamed}
@@ -253,7 +254,7 @@ function Optimisations() {
               dispatch(setKeepClassesStreamed(checked))
             }
           />
-          <label for="keep-classes-streamed-toggle">
+          <label htmlFor="keep-classes-streamed-toggle">
             Keep classes streamed
           </label>
         </Optimisation>
