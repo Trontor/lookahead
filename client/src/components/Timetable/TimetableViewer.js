@@ -26,7 +26,7 @@ let modalEvent = null;
 export default function TimetableViewer() {
   const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
-  const subjects = useSelector(state => state.subjects, () => true);
+  const subjects = useSelector(state => state.subjects);
   const timetable = useSelector(state => state.timetable);
   const {
     timetables,

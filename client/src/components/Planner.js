@@ -10,8 +10,8 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto [footer] 100px;
+  height: calc(100% - 60px);
   @media screen and (min-width: 960px) {
-    height: calc(100% - 60px);
     grid-template-rows: [content] auto [footer] 100px;
     grid-template-columns: [sidebar] minmax(22%, 350px) [viewer] auto;
   }
