@@ -67,7 +67,10 @@ export default (state = initialState, action) => {
       if (!state[action.payload.code]) {
         return state;
       }
-      console.log("Success!:", action.payload);
+      console.log(
+        `Subject Retrieval Success (${action.payload.code}):`,
+        action.payload
+      );
 
       // Update localstorage
       let subjects = JSON.parse(localStorage.getItem("subjects"));
@@ -94,7 +97,6 @@ export default (state = initialState, action) => {
         category: "Subjects",
         action: "Loaded " + action.payload.code
       });
-      console.log(subjects);
 
       // Otherwise, update the subject entry
       return {

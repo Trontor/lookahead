@@ -88,45 +88,48 @@ export default function InfoContainer(props) {
   } = props;
   return (
     <InfoTable>
-      <tr>
-        <th className="header" colspan={4}>
-          {description}
-        </th>
-      </tr>
-      <tr>
-        <th>Day</th>
-        <th>Start</th>
-        <th>Finish</th>
-        <th>Weeks</th>
-      </tr>
-      {classes.map((cls, idx) => {
-        const {
-          // description,
-          day,
-          start,
-          finish,
-          weeks
-          // locations
-        } = cls;
-        const isOnTimetable = cls.codes.some(code =>
-          currentCodes.includes(code)
-        );
-        return (
-          <ClassInfoRow
-            odd={idx % 2 !== 1}
-            highlight={isOnTimetable}
-            color={color}
-            onClick={() => {
-              if (hasValidTimetable) moveRegularClassByNewClass(cls);
-            }}
-          >
-            <td>{daysOfWeek[day]}</td>
-            <td>{timeIntToString(start)}</td>
-            <td>{timeIntToString(finish)}</td>
-            <td>{weeks.length}</td>
-          </ClassInfoRow>
-        );
-      })}
+      <tbody>
+        <tr>
+          <th className="header" colSpan={4}>
+            {description}
+          </th>
+        </tr>
+        <tr>
+          <th>Day</th>
+          <th>Start</th>
+          <th>Finish</th>
+          <th>Weeks</th>
+        </tr>
+        {classes.map((cls, idx) => {
+          const {
+            // description,
+            day,
+            start,
+            finish,
+            weeks
+            // locations
+          } = cls;
+          const isOnTimetable = cls.codes.some(code =>
+            currentCodes.includes(code)
+          );
+          return (
+            <ClassInfoRow
+              key={cls.codes[0]}
+              odd={idx % 2 !== 1}
+              highlight={isOnTimetable}
+              color={color}
+              onClick={() => {
+                if (hasValidTimetable) moveRegularClassByNewClass(cls);
+              }}
+            >
+              <td>{daysOfWeek[day]}</td>
+              <td>{timeIntToString(start)}</td>
+              <td>{timeIntToString(finish)}</td>
+              <td>{weeks.length}</td>
+            </ClassInfoRow>
+          );
+        })}
+      </tbody>
     </InfoTable>
   );
 }

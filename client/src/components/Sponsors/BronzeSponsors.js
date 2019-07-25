@@ -5,6 +5,61 @@ import { shallowEqual, useSelector } from "react-redux";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 import { SponsorHeading } from "./Sponsors";
 
+export default function BronzeSponsors() {
+  const optimiser = useSelector(
+    state => state.optimiser,
+    (left, right) => left.timetables.length === right.timetables.length
+  );
+  const sponsors = useSelector(state => state.sponsors, shallowEqual);
+  const { bronze } = getCategorisedSponsors(sponsors);
+  const { timetables } = optimiser;
+  const showSponsors =
+    timetables && (timetables.length !== 1 && timetables[0].classList);
+  if (!showSponsors) {
+    return null;
+  }
+  return (
+    <>
+      {bronze.length > 0 && (
+        <SponsorHeading>
+          <i className="fas fa-dice" /> You may also be interested in the
+          following clubs and societies...
+        </SponsorHeading>
+      )}
+      {bronze && bronze.length > 0 && (
+        <BronzeCardWrapper>
+          {bronze.map(entry => {
+            const {
+              name,
+              logoURL,
+              // description,
+              umsu,
+              facebook
+              // tier,
+              // include
+            } = entry;
+
+            return (
+              <BronzeCard key={name}>
+                <Logo alt={`${name} logo`} width="100%" src={logoURL} />
+                <div>{name}</div>
+                <BronzeCardButtonGroup>
+                  <a href={umsu}>
+                    <UMSUButton>UMSU</UMSUButton>
+                  </a>
+                  <a href={facebook}>
+                    <FacebookButton />
+                  </a>
+                </BronzeCardButtonGroup>
+              </BronzeCard>
+            );
+          })}
+        </BronzeCardWrapper>
+      )}
+    </>
+  );
+}
+
 const BronzeCardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -61,52 +116,3 @@ const Logo = styled.img.attrs(props => ({
   background-color: ${props => props.theme.SponsorLogoBg};
   filter: ${props => props.theme.SponsorFilter};
 `;
-
-export default function BronzeSponsors() {
-  useSelector(
-    state => state.optimiser,
-    (left, right) => left.timetables.length === right.timetables.length
-  );
-  const sponsors = useSelector(state => state.sponsors, shallowEqual);
-  const { bronze } = getCategorisedSponsors(sponsors);
-  return (
-    <>
-      {bronze.length > 0 && (
-        <SponsorHeading>
-          <i className="fas fa-dice" /> You may also be interested in the
-          following clubs and societies...
-        </SponsorHeading>
-      )}
-      {bronze && bronze.length > 0 && (
-        <BronzeCardWrapper>
-          {bronze.map(entry => {
-            const {
-              name,
-              logoURL,
-              // description,
-              umsu,
-              facebook
-              // tier,
-              // include
-            } = entry;
-
-            return (
-              <BronzeCard key={name}>
-                <Logo alt={`${name} logo`} width="100%" src={logoURL} />
-                <div>{name}</div>
-                <BronzeCardButtonGroup>
-                  <a href={umsu}>
-                    <UMSUButton>UMSU</UMSUButton>
-                  </a>
-                  <a href={facebook}>
-                    <FacebookButton />
-                  </a>
-                </BronzeCardButtonGroup>
-              </BronzeCard>
-            );
-          })}
-        </BronzeCardWrapper>
-      )}
-    </>
-  );
-}

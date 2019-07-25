@@ -9,6 +9,7 @@
     "@types/moment": "^2.13.0",
     "@types/morgan": "^1.7.36",
     "@types/request": "^2.48.1",
+    "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
     "concurrently": "^4.1.0",
     "dotenv": "^8.0.0",
@@ -16,7 +17,8 @@
     "googleapis": "^39.2.0",
     "moment": "^2.24.0",
     "morgan": "^1.9.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "rotating-file-stream": "^1.4.3"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
