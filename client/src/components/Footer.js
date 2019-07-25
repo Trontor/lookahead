@@ -18,7 +18,7 @@ const FooterWrapper = styled.div`
 `;
 const Credit = styled.div`
   font-weight: normal;
-  margin: 5px 0;
+  margin: 4px 0;
   opacity: 0.5;
   font-size: 12px;
   color: ${props => props.theme.text};
@@ -79,9 +79,12 @@ export default function Footer() {
           <Spacer />
           Styling
           <Spacer />
-          <SocialIcon name="linkedin" />
-          <SocialIcon name="github" />
-          <SocialIcon name="envelope" solid />
+          <SocialIcon
+            name="linkedin"
+            href={"https://www.linkedin.com/in/giselleleung/"}
+          />
+          <SocialIcon name="github" href="https://github.com/giggleinu"/>
+          <SocialIcon name="envelope" solid href="mailto:gleung@student.unimelb.edu.au"/>
         </Credit>
         <Credit>
           Rohyl
