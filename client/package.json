@@ -8,7 +8,7 @@
     "@fullcalendar/react": "^4.2.0",
     "@fullcalendar/timegrid": "^4.2.0",
     "arrow-keys-react": "^1.0.6",
-    "axios": "^0.19.0",
+    "axios": "^0.18.1",
     "concurrently": "^4.1.0",
     "history": "^4.9.0",
     "jquery": "^3.4.1",

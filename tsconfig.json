@@ -15,6 +15,7 @@
   },
   "include": [
     "*.ts",
+    "api/**/*.*",
     "subject-utils/*.ts",
     "subject-utils/**/*.json",
     "test/**/*.*"
