@@ -1,6 +1,61 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
+export default function Footer() {
+  const [love, setLove] = useState(randomHeart());
+  timeout += 50;
+  setTimeout(() => {
+    const nextHeart = randomHeart();
+    setLove(nextHeart);
+  }, timeout);
+
+  return (
+    <FooterWrapper>
+      <div>
+        <div>Made for you with {love}</div>
+        <Credit>
+          Click <a href="https://lookahead-v1.rohyl.io">here</a> for the the
+          original lookahead.
+        </Credit>
+        <Credit>
+          Gigi
+          <Spacer />
+          Styling
+          <Spacer />
+          <SocialIcon
+            name="linkedin"
+            href={"https://www.linkedin.com/in/giselleleung/"}
+          />
+          <SocialIcon name="github" href="https://github.com/giggleinu" />
+          <SocialIcon name="codepen" href="https://codepen.io/giggleinu" />
+          <SocialIcon
+            name="envelope"
+            solid
+            href="mailto:gleung@student.unimelb.edu.au"
+          />
+        </Credit>
+        <Credit>
+          Rohyl
+          <Spacer />
+          Development
+          <Spacer />
+          <SocialIcon
+            name="linkedin"
+            href={"https://www.linkedin.com/in/rohyl/"}
+          />
+          <SocialIcon name="github" href={"https://github.com/Trontor"} />
+          <SocialIcon
+            name="envelope"
+            solid
+            href={
+              "mailto:rohylj@student.unimelb.edu.au?subject=RE:%20Lookahead%20Semester%20Planner"
+            }
+          />
+        </Credit>
+      </div>
+    </FooterWrapper>
+  );
+}
 const FooterWrapper = styled.div`
   height: 100%;
   background-color: ${props => props.theme.sidebarBg};
@@ -54,6 +109,7 @@ const randomInt = (min, max) => {
 };
 let lastHeart = null;
 let newHeart;
+let timeout = 1000;
 const randomHeart = () => {
   do {
     newHeart = heartPool[randomInt(0, heartPool.length)];
@@ -61,51 +117,3 @@ const randomHeart = () => {
   lastHeart = newHeart;
   return newHeart;
 };
-let timeout = 1000;
-export default function Footer() {
-  const [love, setLove] = useState(randomHeart());
-  timeout += 50;
-  setTimeout(() => {
-    const nextHeart = randomHeart();
-    setLove(nextHeart);
-  }, timeout);
-
-  return (
-    <FooterWrapper>
-      <div>
-        <div>Made for you with {love}</div>
-        <Credit>
-          Gigi
-          <Spacer />
-          Styling
-          <Spacer />
-          <SocialIcon
-            name="linkedin"
-            href={"https://www.linkedin.com/in/giselleleung/"}
-          />
-          <SocialIcon name="github" href="https://github.com/giggleinu"/>
-          <SocialIcon name="codepen" href="https://codepen.io/giggleinu"/>
-          <SocialIcon name="envelope" solid href="mailto:gleung@student.unimelb.edu.au"/>
-        </Credit>
-        <Credit>
-          Rohyl
-          <Spacer />
-          Development
-          <Spacer />
-          <SocialIcon
-            name="linkedin"
-            href={"https://www.linkedin.com/in/rohyl/"}
-          />
-          <SocialIcon name="github" href={"https://github.com/Trontor"} />
-          <SocialIcon
-            name="envelope"
-            solid
-            href={
-              "mailto:rohylj@student.unimelb.edu.au?subject=RE:%20Lookahead%20Semester%20Planner"
-            }
-          />
-        </Credit>
-      </div>
-    </FooterWrapper>
-  );
-}
