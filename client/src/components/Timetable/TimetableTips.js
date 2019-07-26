@@ -82,6 +82,8 @@ export default function TimetableTips() {
       <Tip desktop>
         Click and drag somewhere on the timetable to create a reserved event.
       </Tip>
+      <Tip mobile>Tap on a reserved event to delete it.</Tip>
+      <Tip desktop>Click on a reserved event to delete it.</Tip>
       <Tip mobile>
         Tap, hold then drag somewhere on the timetable to create a reserved.
         event.
