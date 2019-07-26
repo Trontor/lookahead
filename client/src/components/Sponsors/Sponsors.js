@@ -24,7 +24,7 @@ const SponsorWrapper = styled.div`
   font-size: 12px;
   padding: 0 10px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     flex-direction: row;
   }
 

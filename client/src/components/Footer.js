@@ -84,6 +84,7 @@ export default function Footer() {
             href={"https://www.linkedin.com/in/giselleleung/"}
           />
           <SocialIcon name="github" href="https://github.com/giggleinu"/>
+          <SocialIcon name="codepen" href="https://codepen.io/giggleinu"/>
           <SocialIcon name="envelope" solid href="mailto:gleung@student.unimelb.edu.au"/>
         </Credit>
         <Credit>

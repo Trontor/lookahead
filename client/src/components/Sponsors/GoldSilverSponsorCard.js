@@ -14,10 +14,10 @@ const SponsorCard = styled.div`
   letter-spacing: -0.01em;
   line-height: 1.16em;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     position: relative;
     width: 50%;
-    height: 190px;
+    height: 200px;
     margin-right: 10px;
 
     &:last-child {
@@ -50,7 +50,7 @@ const ButtonWrapper = styled.div`
   width: 100%;
   padding-top: 10px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     position: absolute;
     bottom: 10px;
   }
