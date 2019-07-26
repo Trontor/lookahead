@@ -6,8 +6,11 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import axios from "axios";
+import uuid from "uuid/v4";
 
 axios.defaults.baseURL = "/api/";
+axios.defaults.params = {};
+axios.defaults.params["uuid"] = uuid().split("-")[0];
 
 ReactDOM.render(
   <Provider store={store}>

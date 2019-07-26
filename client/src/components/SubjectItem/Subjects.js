@@ -394,8 +394,6 @@ function Subjects() {
   );
   const uniquePeriods = Array.from(new Set(periods));
   const crossStudyPeriod = uniquePeriods.length > 1;
-  console.log(uniquePeriods);
-
   return (
     <SubjectsWrapper>
       {crossStudyPeriod && <Warning />}

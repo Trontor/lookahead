@@ -33,7 +33,7 @@ const OptimiseButton = styled.button`
     background-color: ${props => props.theme.mainDark};
   }
 `;
-let hasAutoOptimised = false;
+let hasAutoOptimised = true;
 export default () => {
   const subjects = useSelector(state => state.subjects);
   const optimisations = useSelector(state => state.optimisations);

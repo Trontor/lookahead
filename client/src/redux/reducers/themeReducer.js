@@ -2,9 +2,11 @@ import { SET_THEME } from "../actionTypes";
 import { regularTheme, darkTheme } from "../../themes";
 import ReactGA from "react-ga";
 
-const initialState =
-  localStorage.getItem("theme") === "regular" ? regularTheme : darkTheme;
-
+let initialState = regularTheme;
+if (localStorage.getItem("theme")) {
+  initialState =
+    localStorage.getItem("theme") === "regular" ? regularTheme : darkTheme;
+}
 let themeTimeout = null;
 export default (state = initialState, action) => {
   switch (action.type) {

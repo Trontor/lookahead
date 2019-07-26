@@ -79,8 +79,8 @@ export default function TimetableViewer() {
     setModalOpen(true);
   };
 
-  if (!timetables) {
-    return <NoTimetables />;
+  if (!timetables || (timetables.length === 1 && timetables[0].classList)) {
+    return <NoTimetables hasSubjects={Object.keys(subjects).length > 0} />;
   }
   const events = timetable.allEvents;
   const numberWithCommas = x =>

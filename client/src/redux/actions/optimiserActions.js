@@ -12,6 +12,7 @@ import {
   REMOVE_RESERVED
 } from "../actionTypes";
 
+import axios from "axios";
 import Optimiser from "../../optimiser/Optimiser";
 
 export const nextTimetable = () => dispatch => {
@@ -59,10 +60,18 @@ export const optimise = (
     restrictions.latestFinish
   );
   dispatch({ type: BEGIN_OPTIMISATION });
-  const {
-    timetables
-    //  time
-  } = optimiser.generateAndOptimise(optimisations, reservations);
+  const { timetables, time } = optimiser.generateAndOptimise(
+    optimisations,
+    reservations
+  );
+  axios.post("/report/optimise", {
+    subjects: Object.keys(subjects),
+    earliest: restrictions.earliestStart,
+    latest: restrictions.latestFinish,
+    generated: timetables.length,
+    optimisations,
+    time
+  });
   dispatch({
     type: COMPLETE_OPTIMISATION,
     payload: { timetables }

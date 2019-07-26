@@ -1,6 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 
+export default function NoTimetables(props) {
+  const { hasSubjects } = props;
+
+  return (
+    <Wrapper>
+      <Text>
+        No Timetables Yet{" "}
+        <span role="img" aria-label="Crying Emoji">
+          😭
+        </span>
+      </Text>
+      <Text>
+        {!hasSubjects
+          ? "Select one or more subjects from the menu"
+          : "Select your optimisations then click 'Optimise'"}
+      </Text>
+    </Wrapper>
+  );
+}
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -26,17 +46,3 @@ const Text = styled.span`
     font-family: "Karla", sans-serif;
   }
 `;
-
-export default function NoTimetables() {
-  return (
-    <Wrapper>
-      <Text>
-        No Timetables Yet{" "}
-        <span role="img" aria-label="Crying Emoji">
-          😭
-        </span>
-      </Text>
-      <Text>Select one or more subjects from the menu</Text>
-    </Wrapper>
-  );
-}

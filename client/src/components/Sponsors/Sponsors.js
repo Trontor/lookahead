@@ -40,13 +40,15 @@ export default function Sponsors() {
     state => state.optimiser,
     (left, right) => left.timetables.length === right.timetables.length
   );
-  console.log("Rendering Sponsors js");
   useEffect(() => {
     dispatch(fetchClubList());
   }, [dispatch]);
   // Filter sponsors by currently entered subjects
   const { bronze, goldSilver } = getCategorisedSponsors(sponsors);
-  if (!optimiser.timetables || (!goldSilver.length && !bronze.length)) {
+  const { timetables } = optimiser;
+  const showSponsors =
+    timetables && (timetables.length !== 1 && timetables[0].classList);
+  if (!showSponsors) {
     return null;
   }
   return (
