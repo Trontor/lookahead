@@ -12,7 +12,7 @@ const FooterWrapper = styled.div`
   & > div {
     text-align: center;
   }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     box-shadow: -5px 2px 1px 5px rgba(0, 0, 0, 0.15);
   }
 `;

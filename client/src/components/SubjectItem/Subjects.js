@@ -56,7 +56,7 @@ const loadingCard = css`
     height: 75px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     height: 58px;
     border-color: transparent;
     background-image: linear-gradient(
@@ -99,7 +99,7 @@ const gradientShimmer = css`
   animation-fill-mode: forwards;
   border-radius: 5px;
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     height: 14px;
   }
 
@@ -118,7 +118,7 @@ const SubjectCodeLoading = styled.div`
   margin: 2px auto 8px auto;
   ${gradientShimmer}
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin-left: 0;
     width: 80px;
   }
@@ -133,7 +133,7 @@ const SubjectNameLoading = styled.div`
     margin-bottom: 8px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin-left: 0;
     width: 50%;
   }
@@ -189,7 +189,7 @@ const LoadingDots = styled.div`
     top: 20%;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     vertical-align: middle;
     top: 23%;
     right: 20px;
@@ -201,7 +201,7 @@ const ErrorCard = css`
   position: relative;
   border-color: crimson;
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     border-color: crimson;
   }
 `;
@@ -232,7 +232,7 @@ const SubjectCard = styled.div`
     flex: 100%;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     padding: 10px 10px 8px;
     border-left: 8px solid ${props => props.color};
     border-top: 0;
@@ -254,7 +254,7 @@ const SubjectCode = styled.div`
 
   ${({ error }) => error && ErrorText}
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     text-align: left;
   }
 
@@ -294,7 +294,7 @@ const SubjectName = styled.div`
     font-size: 16px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     max-width: 53%;
     font-size: 14px;
     margin-top: 2px;
@@ -315,7 +315,7 @@ const SubjectToolbox = styled.div`
     position: absolute;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     font-weight: bold;
     vertical-align: middle;
     top: 36%;
@@ -337,7 +337,7 @@ const ToolboxButton = styled.button`
     padding: 0 10px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     padding: 0 6px;
     font-size: 15px;
   }
@@ -354,7 +354,7 @@ const DeleteButton = styled.button`
   right: 4px;
   position: absolute;
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     top: 5px;
     right: 4px;
   }

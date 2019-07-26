@@ -28,7 +28,7 @@ const SponsorWrapper = styled.div`
     flex-direction: row;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin: 0;
     padding: 0;
   }

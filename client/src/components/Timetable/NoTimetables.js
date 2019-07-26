@@ -29,7 +29,7 @@ const Wrapper = styled.div`
   height: 100%;
   margin: 20px auto;
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin: 0 auto;
   }
 `;

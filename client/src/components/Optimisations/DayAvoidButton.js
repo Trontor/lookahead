@@ -17,7 +17,7 @@ const AvoidButton = styled.button`
   &:hover {
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     width: 40px;
   }
 

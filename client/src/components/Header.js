@@ -20,7 +20,7 @@ const HeaderWrapper = styled.div`
   z-index: 3;
   position: relative;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.12);
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
   }
 `;
 
