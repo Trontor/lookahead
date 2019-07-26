@@ -90,8 +90,10 @@ class Optimiser {
     for (const streamCombination of streamCombinations) {
       // Copy setPool
       const currentSetPool = [...setPool];
+      // Implementation of flat to please IE/Edge
+      const flatSingle = arr => [].concat(...arr);
       // Add current combination to the set pool
-      streamCombination.flat().forEach(cls => currentSetPool.push([cls]));
+      flatSingle(streamCombination).forEach(cls => currentSetPool.push([cls]));
       // Different generation mechanism for random timetable generation
       if (random) {
         const section = this.RANDOM_POPULATION / streamCombinations.length;
