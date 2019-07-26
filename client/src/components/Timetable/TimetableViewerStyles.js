@@ -35,7 +35,7 @@ export default styled.div`
   .fc-time-grid td {
     height: 2.25em !important;
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1024px) {
       height: 2.1em !important;
     }
   }
@@ -189,7 +189,7 @@ export default styled.div`
     }
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: 1024px) {
     .lookahead-event-wrapper {
       margin-left: -2px;
       margin-right: -3px;

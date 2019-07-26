@@ -12,6 +12,7 @@ const SponsorCard = styled.div`
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   letter-spacing: -0.01em;
+  line-height: 1.16em;
 
   @media screen and (min-width: 768px) {
     position: relative;
@@ -24,21 +25,26 @@ const SponsorCard = styled.div`
     }
   }
 
-  @media screen and (min-width: 960px) {
-    height: 220px;
+  @media screen and (min-width: 1024px) {
+    height: calc(260px - 1vw);
   }
 
   @media screen and (min-width: 1080px) {
-    height: 208px;
+    height: calc(260px - 2vw);
+    max-width: 395px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 200px;
-    max-width: 395px;
+    height: 210px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    height: 195px;
   }
 `;
 
-const ClubDescription = styled.div``;
+const ClubDescription = styled.div`
+`;
 
 const ButtonWrapper = styled.div`
   width: 100%;
@@ -53,7 +59,7 @@ const ButtonWrapper = styled.div`
 export const UMSUButton = styled.button`
   cursor: pointer;
   display: inline-block;
-  width: 70px;
+  width: 64px;
   height: 26px;
   margin-right: 10px;
   padding: 5px 10px;
@@ -119,7 +125,7 @@ const DeleteButton = styled.button`
     right: 5px;
   } */
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     top: 5px;
     right: 4px;
   }

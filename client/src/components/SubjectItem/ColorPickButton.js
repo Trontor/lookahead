@@ -12,7 +12,7 @@ const PopOver = styled.div`
     transform: translateX(-190px);
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     transform: translateX(-20px);
   }
 `;
@@ -35,7 +35,7 @@ const TwitterWrapper = styled.div`
       return css`
         left: ${xCoord > 276 ? 276 - 20 : xCoord - 20}px !important;
 
-        @media screen and (min-width: 960px) {
+        @media screen and (min-width: 1024px) {
           display: none;
         }
       `;
