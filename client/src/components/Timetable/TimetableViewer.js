@@ -74,6 +74,9 @@ export default function TimetableViewer() {
   ]);
 
   const showEvent = event => {
+    if (event.background) {
+      return;
+    }
     modalEvent = event;
     console.log("Showing:", modalEvent);
     setModalOpen(true);
