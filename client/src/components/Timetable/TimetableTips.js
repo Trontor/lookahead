@@ -14,7 +14,7 @@ const TipHeader = styled.h3`
     padding-left: 2px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin-top: 0;
     margin-left: 0;
   }
@@ -31,14 +31,14 @@ const Tip = styled.div`
     font-size: 10px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin: 5px 0;
   }
 
   ${({ mobile }) =>
     mobile &&
     css`
-      @media screen and (min-width: 960px) {
+      @media screen and (min-width: 1024px) {
         display: none;
       }
     `}
@@ -49,7 +49,7 @@ const Tip = styled.div`
     css`
       display: none;
 
-      @media screen and (min-width: 960px) {
+      @media screen and (min-width: 1024px) {
         display: block;
       }
     `}

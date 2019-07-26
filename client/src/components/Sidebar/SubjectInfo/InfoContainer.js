@@ -26,7 +26,7 @@ export const InfoTable = styled.table`
     }
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     /* border-left: 8px solid ${props => props.color};
     border-top: none; */
   }

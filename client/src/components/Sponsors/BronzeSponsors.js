@@ -84,7 +84,7 @@ const BronzeCard = styled.div`
     margin-top: 2px;
   }
 
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     margin-bottom: 0;
     margin-right: 2%;
   }
