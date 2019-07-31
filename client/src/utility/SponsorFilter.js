@@ -1,14 +1,13 @@
 import store from "../redux/store";
 import { GOLD, SILVER, BRONZE } from "./SponsorTiers";
 
-export const getCategorisedSponsors = sponsors => {
+export const getCategorisedSponsors = ({ sponsors }) => {
   const goldSilver = [];
   const bronze = [];
-  const clubs = sponsors.clubs;
   const subjects = store.getState().subjects;
   const subjectCodes = Object.keys(subjects);
   const matchCond = str => subjectCodes.some(code => code.includes(str));
-  for (const sponsor of clubs) {
+  for (const sponsor of sponsors) {
     const { tier, include } = sponsor;
     if (tier === GOLD) {
       goldSilver.push(sponsor);

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getClubSheetData } from "../../google-sheets/sheets";
+import { getSponsorSheetData } from "../../google-sheets/sheets";
 
 /**
  * Specifies how a sponsor object should look like, mimics the Google Sheets
@@ -19,7 +19,7 @@ interface ISponsor {
 /**
  * Takes a raw Google Sheets response and parses rows into an array of ISponsor
  */
-const processRawClubData = (data: string[][]): ISponsor[] => {
+const processRawSponsorData = (data: string[][]): ISponsor[] => {
   // will store output sponsors
   const allSponsors: ISponsor[] = [];
   // loop through 2d data array
@@ -60,7 +60,7 @@ const processRawClubData = (data: string[][]): ISponsor[] => {
 /**
  * Asyncronously retrieve and parse sponsorship data
  */
-export const getClubs = async (req: Request, res: Response) => {
-  const data = await getClubSheetData();
-  res.send(processRawClubData(data));
+export const getSponsors = async (req: Request, res: Response) => {
+  const data = await getSponsorSheetData();
+  res.send(processRawSponsorData(data));
 };
