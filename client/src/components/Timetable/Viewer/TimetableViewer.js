@@ -4,7 +4,7 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import "./TimetableViewer.scss";
-import handleClassRender from "../../utility/ClassRender";
+import handleClassRender from "../../../utility/ClassRender";
 import {
   classToEvent,
   handleEventAllow,
@@ -14,13 +14,13 @@ import {
   handleEventDrop,
   handleSelect,
   handleEventClick
-} from "./TimetableViewerFunctions";
-import { updateEvents } from "../../redux/actions/timetableActions";
-import TimetableHeaderControl from "./TimetableHeaderControl";
-import NoTimetables from "./NoTimetables";
-import TimetableTips from "./TimetableTips";
+} from "./utility/TimetableViewerFunctions";
+import { updateEvents } from "../../../redux/actions/timetableActions";
+import TimetableHeaderControl from "../Header/TimetableHeaderControl";
+import NoTimetables from "../NoTimetables/NoTimetables";
+import TimetableTips from "../Tips/TimetableTips";
 import TimetableViewerWrapper from "./TimetableViewerStyles";
-import ClassModal from "./ClassModal";
+import ClassModal from "../ClassModal/ClassModal";
 
 let modalEvent = null;
 export default function TimetableViewer() {

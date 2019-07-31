@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 import styled, { css } from "styled-components";
-
-const AvoidButton = styled.button`
+export const AvoidButton = styled.button`
   outline: 0;
   width: 50px;
   text-transform: uppercase;
@@ -57,17 +55,3 @@ const AvoidButton = styled.button`
     }
   }
 `;
-export default function DayAvoidButton(props) {
-  const [activated, setActivated] = useState(false);
-  const { onToggled } = props;
-  const handleClick = e => {
-    const newActive = !activated;
-    setActivated(newActive);
-    onToggled(newActive);
-  };
-  return (
-    <AvoidButton activated={activated} onClick={handleClick}>
-      {props.children}
-    </AvoidButton>
-  );
-}

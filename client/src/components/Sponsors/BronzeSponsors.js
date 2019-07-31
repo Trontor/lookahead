@@ -1,9 +1,15 @@
 import React from "react";
-import styled from "styled-components";
-import { UMSUButton, FacebookButton } from "./GoldSilverSponsorCard";
+import {
+  SponsorHeading,
+  BronzeCard,
+  BronzeCardWrapper,
+  BronzeCardButtonGroup,
+  Logo,
+  UMSUButton,
+  FacebookButton
+} from "./SponsorStyles";
 import { shallowEqual, useSelector } from "react-redux";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
-import { SponsorHeading } from "./Sponsors";
 
 export default function BronzeSponsors() {
   const optimiser = useSelector(
@@ -41,7 +47,7 @@ export default function BronzeSponsors() {
 
             return (
               <BronzeCard key={name}>
-                <Logo alt={`${name} logo`} width="100%" src={logoURL} />
+                <Logo bronze alt={`${name} logo`} width="100%" src={logoURL} />
                 <div>{name}</div>
                 <BronzeCardButtonGroup>
                   <a href={umsu}>
@@ -59,60 +65,3 @@ export default function BronzeSponsors() {
     </>
   );
 }
-
-const BronzeCardWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const BronzeCard = styled.div`
-  flex: 0 0 180px;
-  text-align: center;
-  font-size: 12px;
-  height: 140px;
-  margin-bottom: 30px;
-  margin-right: 5%;
-  position: relative;
-  align-self: center;
-
-  div {
-    font-weight: bold;
-    margin-top: 2px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 0;
-    margin-right: 2%;
-  }
-
-  &:last-child {
-    margin-right: 0;
-    letter-spacing: -0.01em;
-  }
-`;
-
-const BronzeCardButtonGroup = styled.div`
-  margin: 10px auto;
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  margin-left: -50px;
-
-  & > a:not(:last-of-type) {
-    margin-right: 10px;
-  }
-`;
-
-const Logo = styled.img.attrs(props => ({
-  width: "120px",
-  height: "60px"
-}))`
-  align-self: center;
-  object-fit: scale-down;
-  background-color: ${props => props.theme.SponsorLogoBg};
-  filter: ${props => props.theme.SponsorFilter};
-`;

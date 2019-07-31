@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchSubjectList } from "../redux/actions/subjectListActions";
-import { getSubject } from "../redux/actions/subjectActions";
-import AsyncSelect from "react-select/async";
-import Select from "react-select";
-import styled from "styled-components";
+import { fetchSubjectList } from "../../../redux/actions/subjectListActions";
+import { getSubject } from "../../../redux/actions/subjectActions";
 import { withTheme } from "styled-components";
+import { SelectContainer } from "./SubjectSelectStyles";
+import Select from "react-select";
+import AsyncSelect from "react-select/async";
 
 const CURRENT_STUDY_PERIOD_INDEX = 3;
 const CURRENT_SUBJECT_LIST_YEAR = 2019;
@@ -127,24 +127,7 @@ const SubjectSelect = props => {
       };
     }
   };
-  const SelectContainer = styled.div`
-    display: flex;
-    & > div {
-      & > div {
-        background-color: ${props => props.theme.sidebarBg};
-      }
-      display: inline-block;
-    }
 
-    .study-period-select {
-      width: 140px;
-      margin-right: 5px;
-    }
-
-    .subject-select {
-      width: 100%;
-    }
-  `;
   const handleSubjectSelect = ({ code, value }) => {
     dispatch(
       getSubject(
@@ -155,6 +138,7 @@ const SubjectSelect = props => {
       )
     );
   };
+
   return (
     <SelectContainer>
       <Select
