@@ -1,50 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { InfoTable } from "./InfoContainer";
+import { InfoTable, StreamClassInfoRow } from "./ContainerStyles";
 import timeIntToString from "../../../utility/TimeIntToString";
-import styled, { css } from "styled-components";
 import daysOfWeek from "../../../utility/DaysOfWeek";
-import { moveStream } from "../../Timetable/TimetableViewerFunctions";
-
-const StreamClassInfoRow = styled.tr`
-  cursor: pointer;
-  ${props =>
-    props.highlight &&
-    css`
-      background-color: ${props.color};
-      color: #3f3844;
-      ${props.firstRow &&
-        css`
-          td:last-child {
-            border-top-right-radius: 3px;
-          }
-          td:first-child {
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 3px;
-          }
-        `}
-      ${props.lastRow &&
-        css`
-          td:last-child {
-            border-bottom-right-radius: 3px;
-          }
-        `}
-    `}
-
-  ${props =>
-    props.odd &&
-    !props.highlight &&
-    css`
-      background-color: ${props => props.theme.sidebarBg};
-      td:first-child {
-        background-color: inherit;
-      }
-    `}
-
-  td {
-    padding: 3px 5px;
-  }
-`;
+import { moveStream } from "../../Timetable/Viewer/utility/TimetableViewerFunctions";
 
 export default function StreamInfoContainer(props) {
   const { streams, type, name, color, subjectCode } = props;

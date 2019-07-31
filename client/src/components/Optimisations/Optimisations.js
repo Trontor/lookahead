@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import styled, { css } from "styled-components";
 import "./CustomCheckbox.scss";
 import "rc-time-picker/assets/index.css";
 import InputRange from "react-input-range";
 import "./InputRange.css";
-import DayAvoidButton from "./DayAvoidButton";
+import DayAvoidButton from "./DayAvoidButton/DayAvoidButton";
 import {
   setTimeRange,
   setBreak,
@@ -16,83 +15,17 @@ import {
   removeAvoidDay,
   setKeepClassesStreamed
 } from "../../redux/actions/optimisationsActions";
-
-const OptimisationsWrapper = styled.div`
-  text-align: center;
-  color: ${props => props.theme.text};
-  margin: 0 auto;
-  padding: 5px;
-`;
-
-const OptimisationsContainer = styled.div`
-  margin: 0 auto;
-  display: inline-block;
-`;
-
-const Header = styled.h1`
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 5px;
-`;
-
-const Subheader = styled.h2`
-  font-size: 15px;
-  line-height: 0.5em;
-`;
-
-const Optimisation = styled.div`
-  text-align: ${({ center }) => (center ? "center" : "left")};
-  margin: 8px 0;
-
-  .rc-time-picker-input {
-    width: 75px;
-  }
-
-  ${({ child }) =>
-    child &&
-    css`
-      margin-top: -2px;
-      margin-left: 30px;
-
-      input {
-        font-size: 12px;
-        width: 28px;
-        margin-right: 5px;
-      }
-    `};
-`;
-
-const HourInputWrapper = styled.div`
-  display: block;
-  margin-top: 8px;
-`;
-
-const TimeOptimisation = styled.div`
-  margin: 30px 40px 40px 40px;
-  max-width: 200px;
-`;
-
-const Input = styled.input`
-  padding: 5px 2px;
-  margin: 2px;
-  color: #555;
-  border: 1px solid #ddd;
-  width: 20px;
-  text-align: center;
-  border-radius: 2px;
-`;
-
-const ButtonGroup = styled.div`
-  margin: 5px;
-  display: inline-block;
-
-  /* Clear floats (clearfix hack) */
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-`;
+import {
+  ButtonGroup,
+  Header,
+  HourInputWrapper,
+  Input,
+  Optimisation,
+  OptimisationsContainer,
+  OptimisationsWrapper,
+  Subheader,
+  TimeOptimisation
+} from "./OptimisationsStyles";
 
 const formatRangeLabel = value => {
   const remainder = value % 1;

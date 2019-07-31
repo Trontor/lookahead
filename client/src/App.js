@@ -2,9 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Planner from "./components/Planner";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import ReactGA from "react-ga";
-import Sponsorship from "./components/Sponsorship/Sponsorship";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
@@ -57,7 +56,6 @@ export default () => {
         <GlobalStyle />
         <Header />
         <Route path="/" exact component={Planner} />
-        <Route path="/sponsorship" exact component={Sponsorship} />
       </Router>
     </ThemeProvider>
   );
