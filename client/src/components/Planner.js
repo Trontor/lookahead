@@ -35,12 +35,12 @@ const SidebarWrapper = styled.div`
 
 const Main = styled.div`
   grid-row: 2;
-  padding-top: 10px;
+  padding: 10px 0 0;
 
   @media screen and (min-width: 1024px) {
     grid-column-start: viewer;
     grid-row: 1 / 3;
-    padding: 10px 10px 0;
+    padding: 10px;
   }
 `;
 

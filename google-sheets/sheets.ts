@@ -14,7 +14,7 @@ export const initialise = () => {
   initialiseCredentials();
 };
 
-export const getClubSheetData = (): Promise<string[][]> => {
+export const getSponsorSheetData = (): Promise<string[][]> => {
   return new Promise((resolve, reject) => {
     // Load client secrets from a local file.
     fs.readFile("google-sheets/credentials.json", (err, content) => {

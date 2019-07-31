@@ -16,7 +16,7 @@ const port = process.env.PORT || 5000;
 app.use(express.static("client/build"));
 // Parse application/json
 app.use(bodyParser.json());
-// Initialise Google Sheets API (to access club list)
+// Initialise Google Sheets API (to access sponsor list)
 initialise();
 // Serves the React build
 app.get("/", (req: Request, res: Response) =>

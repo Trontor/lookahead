@@ -23,7 +23,7 @@ export default function BronzeSponsors() {
       {bronze.length > 0 && (
         <SponsorHeading>
           <i className="fas fa-dice" /> You may also be interested in the
-          following clubs and societies...
+          following sponsors and societies...
         </SponsorHeading>
       )}
       {bronze && bronze.length > 0 && (
