@@ -20,7 +20,7 @@ Published at: https://lookahead.rohyl.io/
 
 This project has been built in React frontend with a Node.js backend. This means that to get this running locally, you will have to run two installation scripts. You must have Node.js and consequentially `npm` installed.
 
-### Node JS Dependency Installation
+### Node.js Dependency Installation
 
 In the root folder, issue the following installation command:
 
