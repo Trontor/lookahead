@@ -2,7 +2,7 @@
 
 Lookahead is an online application that allows students at the University of Melbourne to plan their semester. A variety of customisations and optimisations are provided to help students make the most out of their semester.
 
-## Notable Features
+## Features
 
 - Subject class list viewer
 - Time restrictions
@@ -12,7 +12,7 @@ Lookahead is an online application that allows students at the University of Mel
 - Break provisioning after a specified number of consecutive classes
 - Support for streams
 - Customisable timetable (drag and drop)
-- Most importantly: dark mode.
+- Most importantly: dark mode
 
 Published at: https://lookahead.rohyl.io/
 
