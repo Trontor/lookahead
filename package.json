@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build-ts": "tsc",
-    "start": "node dist/server.js --tls-min-v1.0",
+    "start": "node --tls-min-v1.0 dist/server.js ",
     "dev-debug": "concurrently \"npm run express-debug\" \"npm run client\"",
     "express-debug": "node --inspect=5000 -r ts-node/register server.ts",
     "express-debug:watch": "nodemon",
