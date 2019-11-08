@@ -22,7 +22,10 @@ export const getSubject = async (req: Request, res: Response) => {
     return;
   }
   // check if the given subject period is valid
-  if (SubjectPeriod[period] === null) {
+  if (
+    !(typeof period === "string") &&
+    Object.values(SubjectPeriod).includes(period)
+  ) {
     res
       .status(400)
       .json({ error: "Invalid Query Syntax", message: "Period not defined" });

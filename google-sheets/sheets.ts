@@ -28,7 +28,7 @@ export const getSponsorSheetData = (): Promise<string[][]> => {
         sheets.spreadsheets.values.get(
           {
             range: "Sheet1!A2:Z",
-            spreadsheetId: "1J_qPZdAIMVLwZWlslRvGd-QmA6ov4yvK0zcidAsArZU"
+            spreadsheetId: process.env.GS_SHEET_ID
           },
           (err2, res) => {
             if (err2) {
@@ -57,7 +57,7 @@ const TOKEN_PATH = "google-sheets/token.json";
  * @param {function} callback The callback to call with the authorized client.
  */
 function authorize(credentials: any, callback: (client: any) => void) {
-  const { client_secret, client_id, redirect_uris } = credentials.installed;
+  const { client_secret, client_id, redirect_uris } = credentials.web;
   const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,

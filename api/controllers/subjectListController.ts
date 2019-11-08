@@ -9,9 +9,16 @@ import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
 export const getSubjectList = (req: Request, res: Response) => {
   const { year, period } = req.query;
   // Get valid semester periods from enum
-  const validPeriodValues = Object.keys(SubjectPeriod).map(
-    k => SubjectPeriod[k as any]
-  );
+  const validPeriodValues = [
+    "semester_1",
+    "semester_2",
+    "summer_term",
+    "winter_term"
+  ];
+  // This used to work in TypeScript strict mode, but it doesn't now.
+  // Object.keys(SubjectPeriod).map(
+  //   k => SubjectPeriod[k as any]
+  // );
   // Guards to prevent path traversal (thanks @josephsurin)
   const validYear = !isNaN(year);
   const validPeriod = validPeriodValues.some(val => val === period);
