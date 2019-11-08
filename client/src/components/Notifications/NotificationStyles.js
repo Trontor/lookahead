@@ -23,8 +23,7 @@ export const NotificationContent = styled.div`
   margin: 6px 0;
   font-size: 13px;
   font-weight: normal;
-  transition: max-height 0.5s;
-  transition: opacity 0.5s;
+  transition: max-height 0.5s, opacity 0.5s;
   ${props =>
     props.toggled &&
     css`
