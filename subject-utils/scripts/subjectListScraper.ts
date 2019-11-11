@@ -33,7 +33,7 @@ type BaseURL = string;
  */
 const getBaseURL = (year: number, studyPeriod: SubjectPeriod): BaseURL =>
   // tslint:disable-next-line:max-line-length
-  `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=all&sort=_score|desc`;
+  `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=all&sort=external_code%7Casc`;
 /**
  * Returns the number of pages given a base search URL
  */
@@ -177,7 +177,7 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
   );
   // A list of scrape promises we must resolve to finish this subject scrape
   const scrapePromises: Array<Promise<SubjectInfo[]>> = [];
-  for (let page = 0; page < pageCount; page++) {
+  for (let page = 0; page <= pageCount; page++) {
     const promise = scrapePageNew(baseURL, page);
     scrapePromises.push(promise);
   }
