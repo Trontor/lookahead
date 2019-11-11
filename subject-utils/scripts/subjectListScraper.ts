@@ -33,15 +33,14 @@ type BaseURL = string;
  */
 const getBaseURL = (year: number, studyPeriod: SubjectPeriod): BaseURL =>
   // tslint:disable-next-line:max-line-length
-  `https://handbook.unimelb.edu.au/search?query=&year=${year}&types%5B%5D=subject&sort=external_code%7Casc&study_periods%5B%5D=${studyPeriod.toLowerCase()}`;
-
+  `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=all&sort=_score|desc`;
 /**
  * Returns the number of pages given a base search URL
  */
 const getPageCount = async (baseURL: BaseURL) => {
   const html: string = await getHTML(baseURL);
   const $ = cheerio.load(html);
-  const pageCountDirty = $(".search-results__paginate > div > span").text();
+  const pageCountDirty = $(".search-results__paginate > span").text();
   const pageCountClean = parseInt(pageCountDirty.replace(/^\D+/g, ""), 10);
   return pageCountClean;
 };
@@ -104,6 +103,67 @@ const scrapePage = async (
 };
 
 /**
+ * Parses subjects on a given page provided a base search URL
+ * @param url The base url to search with
+ * @param page The search result page to search
+ */
+const scrapePageNew = async (
+  url: BaseURL,
+  page: number
+): Promise<SubjectInfo[]> => {
+  const pageURL: string = `${url}&page=${page}`;
+  const pageHTML = await getHTML(pageURL);
+  const pageSubjects: SubjectInfo[] = [];
+  const $ = cheerio.load(pageHTML);
+  // The subject list parent element
+  const list = $(".search-results__list > li");
+  // Loop through the list and store subject information
+  list.each((index, element) => {
+    const code = $(element)
+      .find(".search-result-item__code")
+      .text()
+      .trim();
+    const name = $(element)
+      .find(".search-result-item__name > h3")
+      .text()
+      .replace(code, "")
+      .trim();
+    const details = $(element)
+      .find(".search-result-item__meta-primary")
+      .text()
+      .trim();
+
+    const leftBound = "Offered:";
+    const rightBound = "2020";
+    const offered = details.substring(
+      details.lastIndexOf(leftBound) + leftBound.length,
+      details.lastIndexOf(rightBound)
+    );
+    const subjectPeriods: SubjectPeriod[] = offered
+      .split(",")
+      .map(item => {
+        item = item.trim();
+        switch (item) {
+          case "Semester 1":
+            return SubjectPeriod.Semester_1;
+          case "Semester 2":
+            return SubjectPeriod.Semester_2;
+          case "Winter Term":
+            return SubjectPeriod.Winter_Term;
+          case "Summer Term":
+            return SubjectPeriod.Summer_Term;
+          default:
+            // console.log("Unknown Offering Period:" + item);
+            return;
+        }
+      })
+      .filter(p => p !== undefined);
+    pageSubjects.push(new SubjectInfo(code, name, subjectPeriods));
+  });
+  return pageSubjects;
+};
+
+/**
  * Scrapes all the subjects offered on a specific year and subject period
  * @param year The year to scrape
  * @param period The subject period to scrape
@@ -118,7 +178,7 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
   // A list of scrape promises we must resolve to finish this subject scrape
   const scrapePromises: Array<Promise<SubjectInfo[]>> = [];
   for (let page = 0; page < pageCount; page++) {
-    const promise = scrapePage(baseURL, page);
+    const promise = scrapePageNew(baseURL, page);
     scrapePromises.push(promise);
   }
   const allSubjects = await Promise.all(scrapePromises);
@@ -129,7 +189,7 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
 // Driver code below
 //
 
-const years = [2018, 2019];
+const years = [2020];
 const studyPeriods = Object.keys(SubjectPeriod);
 
 years.forEach(year => {

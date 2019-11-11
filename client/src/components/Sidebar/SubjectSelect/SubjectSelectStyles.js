@@ -9,7 +9,7 @@ export const SelectContainer = styled.div`
   }
 
   .study-period-select {
-    width: 140px;
+    width: 225px;
     margin-right: 5px;
   }
 
