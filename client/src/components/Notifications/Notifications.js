@@ -36,8 +36,7 @@ export default function Notifications() {
     }
   ];
   let seenNotifications = localStorage.getItem("notifications");
-  let collapsedNotifications =
-    localStorage.getItem("collapsed-notifications") || [];
+  let collapsedNotifications = localStorage.getItem("collapsed-notifications");
   if (seenNotifications) {
     seenNotifications = JSON.parse(seenNotifications);
     initialNotifications = initialNotifications.filter(
