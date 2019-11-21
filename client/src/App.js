@@ -5,8 +5,10 @@ import Planner from "./components/Planner";
 import Header from "./components/Header/Header";
 import ReactGA from "react-ga";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+import LogRocket from "logrocket";
 
 if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
+  LogRocket.init("ae9dbf/lookahead");
   ReactGA.initialize("UA-131760351-1", {
     debug: false
   });

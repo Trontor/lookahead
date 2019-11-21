@@ -95,7 +95,7 @@ export default function Notifications() {
   };
 
   return notifications.map(({ id, title, content, collapsed }) => (
-    <NotificationWrapper key={id}>
+    <NotificationWrapper key={id} collapsable={collapsed !== undefined}>
       <NotificationHeader>
         <Markdown>{title}</Markdown>
       </NotificationHeader>
