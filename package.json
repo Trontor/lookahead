@@ -28,17 +28,18 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1",
-    "ts-node": "^8.2.0",
+    "ts-node": "^8.4.1",
+    "tsc": "^1.20150623.0",
     "tslint": "^5.17.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.7.2"
   },
   "scripts": {
     "build-ts": "tsc",
-    "start": "node dist/server.js",
+    "start": "node --tls-min-v1.0 dist/server.js ",
     "dev-debug": "concurrently \"npm run express-debug\" \"npm run client\"",
     "express-debug": "node --inspect=5000 -r ts-node/register server.ts",
     "express-debug:watch": "nodemon",
-    "server": "npm run build --prefix client && nodemon --exec ts-node server.ts",
+    "server": "nodemon --tls-min-v1.0 --exec \" ts-node server.ts\" ",
     "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

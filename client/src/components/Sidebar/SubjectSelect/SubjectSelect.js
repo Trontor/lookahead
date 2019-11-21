@@ -7,13 +7,13 @@ import { SelectContainer } from "./SubjectSelectStyles";
 import Select from "react-select";
 import AsyncSelect from "react-select/async";
 
-const CURRENT_STUDY_PERIOD_INDEX = 3;
-const CURRENT_SUBJECT_LIST_YEAR = 2019;
+const CURRENT_STUDY_PERIOD_INDEX = 0;
+const CURRENT_SUBJECT_LIST_YEAR = 2020;
 const studyPeriods = [
-  { value: "summer_term", label: "Summer" },
-  { value: "semester_1", label: "Sem 1" },
-  { value: "winter_term", label: "Winter" },
-  { value: "semester_2", label: "Sem 2" }
+  { value: "summer_term", label: "Summer 2020", year: "2020" },
+  { value: "semester_1", label: "Sem 1 2020", year: "2020" },
+  { value: "winter_term", label: "Winter 2020", year: "2020" },
+  { value: "semester_2", label: "Sem 2 2020", year: "2020" }
 ];
 
 const SubjectSelect = props => {
@@ -41,9 +41,10 @@ const SubjectSelect = props => {
 
   useEffect(() => {
     const studyPeriod = selectedStudyPeriod.value;
+    const studyPeriodYear = selectedStudyPeriod.year;
     if (!subjectLists.lists[studyPeriod]) {
       setInputValue("");
-      dispatch(fetchSubjectList(CURRENT_SUBJECT_LIST_YEAR, studyPeriod));
+      dispatch(fetchSubjectList(studyPeriodYear, studyPeriod));
     }
   }, [dispatch, selectedStudyPeriod, subjectLists.lists]);
 
