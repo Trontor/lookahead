@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactGA, { OutboundLink } from "react-ga";
 import { Credit, FooterWrapper, SocialIcon, Spacer } from "./FooterStyles";
 const heartPool = [
   "\u{1F9E1}",
@@ -40,8 +41,9 @@ export default function Footer() {
       <div>
         <div>Made for you with {love}</div>
         <Credit>
-          Click <a href="https://lookahead-v1.rohyl.io">here</a> for the the
-          original lookahead.
+          {/* Click <a href="https://lookahead-v1.rohyl.io">here</a> for the the
+          original lookahead. */}
+          Don't forget to share this with your friends :) The more the merrier.
         </Credit>
         <Credit>
           Gigi
@@ -49,15 +51,25 @@ export default function Footer() {
           UI & Styling
           <Spacer />
           <SocialIcon
+            eventLabel="Gigi LinkedIn"
+            to={"https://www.linkedin.com/in/giselleleung/"}
             name="linkedin"
-            href={"https://www.linkedin.com/in/giselleleung/"}
           />
-          <SocialIcon name="github" href="https://github.com/giggleinu" />
-          <SocialIcon name="codepen" href="https://codepen.io/giggleinu" />
+          <SocialIcon
+            eventLabel="Gigi GitHub"
+            to={"https://github.com/giggleinu"}
+            name="github"
+          />
+          <SocialIcon
+            eventLabel="Gigi Codepen"
+            to={"https://codepen.io/giggleinu"}
+            name="codepen"
+          />
           <SocialIcon
             name="envelope"
+            eventLabel="Gigi Email"
             solid
-            href="mailto:gleung@student.unimelb.edu.au"
+            to="mailto:gleung@student.unimelb.edu.au"
           />
         </Credit>
         <Credit>
@@ -66,14 +78,20 @@ export default function Footer() {
           Development
           <Spacer />
           <SocialIcon
+            eventLabel="Rohyl LinkedIn"
+            to={"https://www.linkedin.com/in/rohyl/"}
             name="linkedin"
-            href={"https://www.linkedin.com/in/rohyl/"}
           />
-          <SocialIcon name="github" href={"https://github.com/Trontor"} />
+          <SocialIcon
+            eventLabel="Rohyl GitHub"
+            to={"https://github.com/Trontor"}
+            name="github"
+          />
           <SocialIcon
             name="envelope"
+            eventLabel="Rohyl Email"
             solid
-            href={
+            to={
               "mailto:rohylj@student.unimelb.edu.au?subject=RE:%20Lookahead%20Semester%20Planner"
             }
           />
