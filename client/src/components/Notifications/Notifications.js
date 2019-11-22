@@ -19,14 +19,14 @@ export default function Notifications() {
     {
       id: "allocate-plus-introduction2",
       title: "#**Important**: Allocate+",
-      content: `From *November 11, 2019* the university will be launching a 
-      **new timetabling system** [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). 
-      As a part of the new system, there is a "planner" feature that you can try
-      out and compare with *Lookahead*. Needless to say, I think there is definitely
-      still some use for *Lookahead*, so it will be left up. The new timetabling
-      system is a **preference based system** as opposed to the **free for all** first come, first serve system we
-      used to have. It is not clear how certain class preferences affect the
-      outcome of other class preferences. You may still find utility in using it as a general class information lookup tool.`,
+      content: `The university has migrated to a new timetable management system, [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). The new system is a **preference** based system as opposed to our current **free for all** system. A component of this new system  is a timetable planner, you can see how to use it [here](https://students.unimelb.edu.au/admin/class-timetable/plan-your-timetable) (I have a feeling you'll come back, though). This new system is a three stage process, learn more about it [here]( https://students.unimelb.edu.au/admin/class-timetable ). The [key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetable-dates ) you have to be aware of are
+      
+###Preference Entry Period
+**26th November 2019** until **3rd February 2020, 10am**
+      
+###Review and Adjustment Period
+**10th February 2020** until **20th March 2020, 10am**
+      `,
       collapsed: false
     },
     {
