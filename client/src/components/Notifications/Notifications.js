@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import Markdown from "markdown-to-jsx";
 import {
   NotificationContent,
   NotificationDismiss,
   NotificationHeader,
-  NotificationWrapper,
-  NotificationMarkdown
+  NotificationMarkdown,
+  NotificationTitle,
+  NotificationWrapper
 } from "./NotificationStyles";
+import React, { useState } from "react";
+
+import Markdown from "markdown-to-jsx";
 
 export default function Notifications() {
   const originalURL = "https://lookahead-v1.rohyl.io";
@@ -18,21 +20,31 @@ export default function Notifications() {
     // },
     {
       id: "allocate-plus-introduction2",
-      title: "#**Important**: Allocate+",
-      content: `The university has migrated to a new timetable management system, [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). The new system is a **preference** based system as opposed to our current **free for all** system. A component of this new system  is a timetable planner, you can see how to use it [here](https://students.unimelb.edu.au/admin/class-timetable/plan-your-timetable) (I have a feeling you'll come back, though). This new system is a three stage process, learn more about it [here]( https://students.unimelb.edu.au/admin/class-timetable ). The [key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetable-dates ) you have to be aware of are
+      title: "#Important: Allocate+",
+      content: `The university has migrated to a new timetable management system, [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). The new system is **preference-based**, as opposed to our current **free-for-all** system.
+      
+A component of this new system  is a timetable planner, see how to use it [here](https://students.unimelb.edu.au/admin/class-timetable/plan-your-timetable).
+
+This new system is a 3-stage process, learn more about it [here]( https://students.unimelb.edu.au/admin/class-timetable ).
+      
+The [key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetable-dates ) you should be aware of are:
       
 ###Preference Entry Period
-**26th November 2019** until **3rd February 2020, 10am**
+**Start: ** 26th Nov, 2019  
+**End: ** 3rd Feb, 2020, 10am
       
 ###Review and Adjustment Period
-**10th February 2020** until **20th March 2020, 10am**
+**Start: ** 10th Feb, 2020  
+**End: ** 20th Mar, 2020, 10am
       `,
-      collapsed: false
+      collapsed: false,
+      color: "#2BA676"
     },
     {
       id: "2020-subjects",
-      title: "2020 Subject Pool",
-      content: `The 2020 subject pool has been added, it is now the default.`
+      title: "#2020 Subject Pool",
+      content: `The 2020 subject pool has been added, it is now the default.`,
+      color: "#2BA676"
     }
   ];
   let seenNotifications = localStorage.getItem("notifications");
@@ -97,23 +109,29 @@ export default function Notifications() {
   return notifications.map(({ id, title, content, collapsed }) => (
     <NotificationWrapper key={id} collapsable={collapsed !== undefined}>
       <NotificationHeader>
-        <Markdown>{title}</Markdown>
+        <Markdown
+          options={{
+            overrides: {
+              h1: NotificationTitle
+            }
+          }}>{title}
+        </Markdown>
+        <NotificationDismiss
+          toggled={collapsed !== undefined}
+          onClick={() => {
+            if (collapsed !== undefined) {
+              toggleCollapse(id);
+            } else {
+              hideNotification(id);
+            }
+          }}
+        >
+          {collapsed !== undefined ? (collapsed ? "?" : <i class="fas fa-chevron-up"></i>) : "×"}
+        </NotificationDismiss>
       </NotificationHeader>
       <NotificationContent toggled={collapsed}>
         <NotificationMarkdown>{content}</NotificationMarkdown>
       </NotificationContent>
-      <NotificationDismiss
-        toggled={collapsed !== undefined}
-        onClick={() => {
-          if (collapsed !== undefined) {
-            toggleCollapse(id);
-          } else {
-            hideNotification(id);
-          }
-        }}
-      >
-        {collapsed !== undefined ? (collapsed ? "?" : "k.") : "×"}
-      </NotificationDismiss>
     </NotificationWrapper>
   ));
 }

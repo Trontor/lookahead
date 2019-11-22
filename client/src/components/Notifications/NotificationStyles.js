@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
+
 import Markdown from "markdown-to-jsx";
 
 export const NotificationWrapper = styled.div`
   position: relative;
-  background-color: #4caf50;
+  background-color: #2BA676;
   border-radius: 2px;
   color: white;
   font-family: "Karla", sans-serif;
@@ -18,14 +19,32 @@ export const NotificationWrapper = styled.div`
   a {
     color: inherit;
   }
+
+  p {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-bottom: 0.2em;
+  }
 `;
 
 export const NotificationHeader = styled.div`
-  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin-top: 10px;
+`;
+
+export const NotificationTitle = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75em;
 `;
 
 export const NotificationContent = styled.div`
-  margin: 6px 0;
   font-size: 13px;
   font-weight: normal;
   transition: max-height 0.5s, opacity 0.5s;
@@ -38,15 +57,16 @@ export const NotificationContent = styled.div`
 `;
 
 export const NotificationDismiss = styled.span`
-  position: absolute;
-  top: 0px;
   cursor: pointer;
-  right: 7px;
-  padding: ${props => (props.toggled ? "5px 5px 0 0" : "bold")};
-  font-size: ${props => (props.toggled ? "inherit" : "bold")};
-  font-size: ${props => (props.toggled ? "20px" : "24px")};
+  /* font-size: ${props => (props.toggled ? "inherit" : "bold")}; */
+  font-size: ${props => (props.toggled ? "18px" : "20px")};
+  margin-top: -2px;
+
+  i {
+    font-size: 12px;
+  }
 `;
 
 export const NotificationMarkdown = styled(Markdown)`
-  line-height: 20px;
+  line-height: 1.35em;
 `;
