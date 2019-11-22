@@ -46,7 +46,7 @@ export default function Footer() {
         <Credit>
           Gigi
           <Spacer />
-          Styling
+          UI & Styling
           <Spacer />
           <SocialIcon
             name="linkedin"
