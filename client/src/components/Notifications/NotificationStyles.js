@@ -34,7 +34,7 @@ export const NotificationContent = styled.div`
     css`
       opacity: 0;
     `};
-  max-height: ${props => (props.toggled ? "0px" : "300px")};
+  max-height: ${props => (props.toggled ? "0px" : "500px")};
 `;
 
 export const NotificationDismiss = styled.span`
