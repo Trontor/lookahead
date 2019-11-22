@@ -114,7 +114,9 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
             overrides: {
               h1: NotificationTitle
             }
-          }}>{title}
+          }}
+        >
+          {title}
         </Markdown>
         <NotificationDismiss
           toggled={collapsed !== undefined}
@@ -126,11 +128,21 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
             }
           }}
         >
-          {collapsed !== undefined ? (collapsed ? "?" : <i class="fas fa-chevron-up"></i>) : "×"}
+          {collapsed !== undefined ? (
+            collapsed ? (
+              "?"
+            ) : (
+              <i class="fas fa-chevron-up"></i>
+            )
+          ) : (
+            "×"
+          )}
         </NotificationDismiss>
       </NotificationHeader>
       <NotificationContent toggled={collapsed}>
-        <NotificationMarkdown>{content}</NotificationMarkdown>
+        {collapsed !== undefined && !collapsed && (
+          <NotificationMarkdown>{content}</NotificationMarkdown>
+        )}
       </NotificationContent>
     </NotificationWrapper>
   ));

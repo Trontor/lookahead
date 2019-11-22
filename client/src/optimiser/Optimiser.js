@@ -207,9 +207,7 @@ class Optimiser {
         if (afterStreamCount === 0) {
           console.error("😠 [Stream Pruning] Invalid Restrictions");
           console.log(
-            `Time restrictions have cut off all stream possibilities for ${
-              subject.code
-            }.`
+            `Time restrictions have cut off all stream possibilities for ${subject.code}.`
           );
           return false;
         }
@@ -217,6 +215,7 @@ class Optimiser {
     }
     // (9) Valid!
     this.subjects = subjects;
+    return true;
   }
 
   applyOptimisation(optimisation, a, b) {
