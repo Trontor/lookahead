@@ -58,7 +58,10 @@ const SubjectSelect = props => {
       return currentList;
     }
     return currentList.filter(i => {
-      return i.label.toLowerCase().includes(inputValue.toLowerCase());
+      return (
+        i.label.toLowerCase().includes(inputValue.toLowerCase()) ||
+        i.value.toLowerCase().includes(inputValue.toLowerCase())
+      );
     });
   };
 
