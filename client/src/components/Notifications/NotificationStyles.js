@@ -59,7 +59,7 @@ export const NotificationContent = styled.div`
 export const NotificationDismiss = styled.span`
   cursor: pointer;
   /* font-size: ${props => (props.toggled ? "inherit" : "bold")}; */
-  font-size: ${props => (props.toggled ? "18px" : "20px")};
+  font-size: ${props => (props.toggled ? "15px" : "20px")};
   margin-top: -2px;
 
   i {

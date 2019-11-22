@@ -27,7 +27,7 @@ A component of this new system  is a timetable planner, see how to use it [here]
 
 This new system is a 3-stage process, learn more about it [here]( https://students.unimelb.edu.au/admin/class-timetable ).
       
-The [key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetable-dates ) you should be aware of are:
+The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetable-dates )** you should be aware of are:
       
 ###Preference Entry Period
 **Start: ** 26th Nov, 2019  
