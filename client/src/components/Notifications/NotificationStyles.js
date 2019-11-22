@@ -10,6 +10,11 @@ export const NotificationWrapper = styled.div`
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
   padding: 10px;
   margin-bottom: 10px;
+  ${props =>
+    props.collapsable &&
+    css`
+      padding: 1px 15px;
+    `}
   a {
     color: inherit;
   }
