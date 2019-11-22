@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { optimise } from "../../../redux/actions/optimiserActions";
 import { OptimiseButton, OptimiseButtonWrapper } from "./OptimiseButtonStyles";
 import OptimisationTypes from "../../../optimiser/optimisationTypes";
-import {
-  NotificationWrapper,
-  NotificationHeader
-} from "../../Notifications/NotificationStyles";
+import Optimiser from "../../../optimiser/Optimiser";
 
 let hasAutoOptimised = true;
 export default () => {
   const subjects = useSelector(state => state.subjects);
   const optimisations = useSelector(state => state.optimisations);
   const optimiser = useSelector(state => state.optimiser);
+  const [permutations, setPermutations] = useState(null);
+  const [validRestrictions, setValidRestrictions] = useState(true);
   const dispatch = useDispatch();
   // Get subject keys
   const keys = Object.keys(subjects);
@@ -23,7 +22,27 @@ export default () => {
   //   this.Sidebar.minWidth = 0px
   // }
 
-  const { failed } = optimiser;
+  const updatePermutations = useCallback(() => {
+    if (!allLoaded) return;
+    const optimiser = new Optimiser(subjects);
+    const {
+      range: { min, max }
+    } = optimisations;
+    const restrictions = {
+      earliestStart: min,
+      latestFinish: max
+    };
+    const validRestrictions = optimiser.applyTimeRestrictions(
+      restrictions.earliestStart,
+      restrictions.latestFinish
+    );
+    setValidRestrictions(validRestrictions);
+    if (validRestrictions) {
+      const permutations = optimiser.possiblePermutations();
+      console.log(permutations);
+      setPermutations(permutations);
+    }
+  }, [optimisations]);
   const invokeOptimisation = () => {
     const optimisationTypes = [];
     const {
@@ -82,14 +101,28 @@ export default () => {
     invokeOptimisation();
     hasAutoOptimised = true;
   }
+  const timeout = useRef(null);
+  useEffect(() => {
+    if (timeout) clearTimeout(timeout.current);
+    timeout.current = setTimeout(() => {
+      updatePermutations();
+    }, 250);
+  }, [optimisations, updatePermutations]);
+
   return (
-    <OptimiseButtonWrapper>
-      <OptimiseButton
-        disabled={!allLoaded}
-        onClick={() => invokeOptimisation()}
-      >
-        {allLoaded ? "Optimise" : "Loading..."}
-      </OptimiseButton>
-    </OptimiseButtonWrapper>
+    <>
+      {!validRestrictions && <div>Invalid Time Restrictions</div>}
+      {validRestrictions && permutations && (
+        <div>{permutations} possibilities</div>
+      )}
+      <OptimiseButtonWrapper>
+        <OptimiseButton
+          disabled={!allLoaded}
+          onClick={() => invokeOptimisation()}
+        >
+          {allLoaded ? "Optimise" : "Loading..."}
+        </OptimiseButton>
+      </OptimiseButtonWrapper>
+    </>
   );
 };

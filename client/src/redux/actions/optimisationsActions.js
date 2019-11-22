@@ -6,11 +6,16 @@ import {
   SET_CRAM_CLASSES,
   SET_BREAK,
   SET_MINIMISE_CLASHES,
-  SET_KEEP_CLASSES_STREAMED
+  SET_KEEP_CLASSES_STREAMED,
+  UPDATE_POSSIBILITIES
 } from "../actionTypes";
 
 export const setTimeRange = (min, max) => dispatch => {
   dispatch({ type: SET_TIME_RANGE, payload: { min, max } });
+};
+
+export const updatePossibilities = () => dispatch => {
+  dispatch({ type: UPDATE_POSSIBILITIES });
 };
 
 export const addAvoidDay = dayIndex => dispatch => {
