@@ -9,7 +9,8 @@ import {
   VIEW_CUSTOM_TIMETABLES,
   UPDATE_TIMETABLE,
   ADD_RESERVED,
-  REMOVE_RESERVED
+  REMOVE_RESERVED,
+  FAIL_OPTIMISATION
 } from "../actionTypes";
 import uuid from "uuid/v1";
 import ReactGA from "react-ga";
@@ -21,6 +22,7 @@ const initialState = {
   currentView: "generated",
   currentIndex: 0,
   currentCustomIndex: 0,
+  failed: false,
   customTimetables: [
     /**
      * {
@@ -133,6 +135,8 @@ export default (state = initialState, action) => {
       return state;
     case BEGIN_OPTIMISATION:
       return { ...state, optimising: true };
+    case FAIL_OPTIMISATION:
+      return { ...state, optimising: false, timetables: null, failed: true };
     case COMPLETE_OPTIMISATION:
       const { timetables } = action.payload;
       console.log(timetables.length + " timetables generated.");
@@ -143,6 +147,7 @@ export default (state = initialState, action) => {
       });
       return {
         ...state,
+        failed: false,
         optimising: false,
         currentIndex: 0,
         timetables

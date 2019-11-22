@@ -3,6 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { optimise } from "../../../redux/actions/optimiserActions";
 import { OptimiseButton, OptimiseButtonWrapper } from "./OptimiseButtonStyles";
 import OptimisationTypes from "../../../optimiser/optimisationTypes";
+import {
+  NotificationWrapper,
+  NotificationHeader
+} from "../../Notifications/NotificationStyles";
 
 let hasAutoOptimised = true;
 export default () => {
@@ -19,6 +23,7 @@ export default () => {
   //   this.Sidebar.minWidth = 0px
   // }
 
+  const { failed } = optimiser;
   const invokeOptimisation = () => {
     const optimisationTypes = [];
     const {
