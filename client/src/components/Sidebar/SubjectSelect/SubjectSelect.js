@@ -7,7 +7,7 @@ import { SelectContainer } from "./SubjectSelectStyles";
 import Select from "react-select";
 import AsyncSelect from "react-select/async";
 
-const CURRENT_STUDY_PERIOD_INDEX = 0;
+const CURRENT_STUDY_PERIOD_INDEX = 1;
 const CURRENT_SUBJECT_LIST_YEAR = 2020;
 const studyPeriods = [
   { value: "summer_term", label: "Summer 2020", year: "2020" },
