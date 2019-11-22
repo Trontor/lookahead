@@ -4,7 +4,7 @@ import Markdown from "markdown-to-jsx";
 
 export const NotificationWrapper = styled.div`
   position: relative;
-  background-color: #2BA676;
+  background-color: #2ba676;
   border-radius: 2px;
   color: white;
   font-family: "Karla", sans-serif;
@@ -53,6 +53,7 @@ export const NotificationContent = styled.div`
     css`
       opacity: 0;
     `};
+  z-index: -10;
   max-height: ${props => (props.toggled ? "0px" : "500px")};
 `;
 

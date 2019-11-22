@@ -12,6 +12,7 @@ export const GoBackButton = styled.button`
   background-color: ${props => props.theme.secondary};
   padding: 6px 5px;
   border: none;
+  z-index: 100;
   left: ${({ left }) => (left ? 0 : "auto")};
   right: ${({ right }) => (right ? 0 : "auto")};
 
