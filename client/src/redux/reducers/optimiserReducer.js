@@ -23,7 +23,7 @@ const initialState = {
   currentView: "generated",
   currentIndex: 0,
   currentCustomIndex: 0,
-  failed: false,
+  failed: true,
   customTimetables: [
     /**
      * {
