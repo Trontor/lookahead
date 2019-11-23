@@ -139,7 +139,7 @@ export default class Subject {
         }
       }
     }
-  }
+  };
 
   /**
    * Some StreamContainers can have streams with like 1 AND 2 classes in them,
@@ -175,7 +175,7 @@ export default class Subject {
         streamContainer.streams = newStreams;
       }
     }
-  }
+  };
 
   private getClassTypeCounts() {
     const typeInfo: { [type: string]: number } = {};
@@ -223,9 +223,9 @@ export default class Subject {
 
   private removeUnnecessaryStreams = () => {
     this.mergeStreams();
-    this.removeOddStreams();
+    // this.removeOddStreams();
     this.removeSingleStreams();
-  }
+  };
 
   private extractStreams = () => {
     // Get classcodes that are a part of a stream
@@ -246,7 +246,7 @@ export default class Subject {
       container.addStreamClass(cls);
       this._classList.splice(this._classList.indexOf(cls), 1);
     }
-  }
+  };
 
   /**
    * Finds out what are the class types that are likely in a stream
@@ -275,7 +275,7 @@ export default class Subject {
       });
     });
     return codes;
-  }
+  };
 
   /**
    * Identifies classes that occur less/more than 12 weeks in Sem 1/2
@@ -300,7 +300,7 @@ export default class Subject {
         this._classList.splice(this._classList.indexOf(cls), 1);
       }
     });
-  }
+  };
 
   /**
    * Checks if two classes can be merged together
@@ -334,7 +334,7 @@ export default class Subject {
     );
     const inAStream = sameStreamClasses.length > 0;
     return !inAStream && sameDay && sameTime && sameType && sameNumber;
-  }
+  };
 
   /**
    * Merges classes together if they are at the same time and are the same type
@@ -365,5 +365,5 @@ export default class Subject {
       }
     }
     // console.log(`Merged ${totalMerged} classes.`);
-  }
+  };
 }
