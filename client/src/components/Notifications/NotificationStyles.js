@@ -4,7 +4,7 @@ import Markdown from "markdown-to-jsx";
 
 export const NotificationWrapper = styled.div`
   position: relative;
-  background-color: #2ba676;
+  background-color: ${props => props.color};
   border-radius: 2px;
   color: white;
   font-family: "Karla", sans-serif;
@@ -14,7 +14,7 @@ export const NotificationWrapper = styled.div`
   ${props =>
     props.collapsable &&
     css`
-      padding: 1px 15px;
+      padding: 10px;
     `}
   a {
     color: inherit;
@@ -33,7 +33,7 @@ export const NotificationHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: top;
-  margin-top: 10px;
+  margin-top: 5px;
 `;
 
 export const NotificationTitle = styled.div`
@@ -41,7 +41,7 @@ export const NotificationTitle = styled.div`
   font-weight: bold;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.03em;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 `;
 
 export const NotificationContent = styled.div`

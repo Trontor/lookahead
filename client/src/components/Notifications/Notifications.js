@@ -38,7 +38,7 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
 **End: ** 20th Mar, 2020, 10am
       `,
       collapsed: false,
-      color: "#2BA676"
+      color: "#3645AD"
     },
     {
       id: "2020-subjects",
@@ -106,8 +106,8 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
     setNotifications(notifications.filter(notif => notif.id !== id));
   };
 
-  return notifications.map(({ id, title, content, collapsed }) => (
-    <NotificationWrapper key={id} collapsable={collapsed !== undefined}>
+  return notifications.map(({ id, title, content, collapsed, color }) => (
+    <NotificationWrapper key={id} collapsable={collapsed !== undefined} color={color}>
       <NotificationHeader>
         <Markdown
           options={{

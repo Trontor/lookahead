@@ -15,7 +15,7 @@ export const SidebarWrapper = styled.div`
   grid-row: 1;
   max-width: inherit;
   padding: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   z-index: 2;
   box-shadow: -2px 0 3px 0 rgba(0, 0, 0, 0.12);
 
