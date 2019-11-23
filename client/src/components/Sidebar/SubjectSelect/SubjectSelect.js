@@ -6,6 +6,9 @@ import { withTheme } from "styled-components";
 import { SelectContainer } from "./SubjectSelectStyles";
 import Select from "react-select";
 import AsyncSelect from "react-select/async";
+import LogRocket from "logrocket";
+
+let LogRocketInitialised = false;
 
 const CURRENT_STUDY_PERIOD_INDEX = 1;
 const CURRENT_SUBJECT_LIST_YEAR = 2020;
@@ -133,6 +136,10 @@ const SubjectSelect = props => {
   };
 
   const handleSubjectSelect = ({ code, value }) => {
+    if (!LogRocketInitialised) {
+      LogRocket.init("ae9dbf/lookahead");
+      LogRocketInitialised = true;
+    }
     dispatch(
       getSubject(
         CURRENT_SUBJECT_LIST_YEAR,
