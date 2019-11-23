@@ -13,6 +13,16 @@ if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
   ReactGA.pageview(window.location.pathname + window.location.search);
   console.log = () => {};
 }
+if (!Object.entries) {
+  Object.entries = function(obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
+
+    return resArray;
+  };
+}
 
 const GlobalStyle = createGlobalStyle`
   html {
