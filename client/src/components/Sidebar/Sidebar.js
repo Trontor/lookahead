@@ -17,7 +17,6 @@ import { useSelector } from "react-redux";
 export default function Sidebar() {
   const viewSubject = useSelector(state => state.viewSubject);
   const optimiser = useSelector(state => state.optimiser);
-  const { failed } = optimiser;
   return (
     <>
       <Notifications />

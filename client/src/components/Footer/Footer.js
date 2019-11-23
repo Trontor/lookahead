@@ -1,6 +1,6 @@
+import { Credit, FooterWrapper, SocialIcon, Spacer } from "./FooterStyles";
 import React, { useState } from "react";
 import ReactGA, { OutboundLink } from "react-ga";
-import { Credit, FooterWrapper, SocialIcon, Spacer } from "./FooterStyles";
 const heartPool = [
   "\u{1F9E1}",
   "\u{1F493}",
@@ -43,7 +43,7 @@ export default function Footer() {
         <Credit>
           {/* Click <a href="https://lookahead-v1.rohyl.io">here</a> for the the
           original lookahead. */}
-          Don't forget to share this with your friends :) The more the merrier.
+          Don't forget to share this with your friends 😊
         </Credit>
         <Credit>
           Gigi

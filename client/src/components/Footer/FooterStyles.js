@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { OutboundLink } from "react-ga";
+import styled from "styled-components";
 export const FooterWrapper = styled.div`
   height: 100%;
   background-color: ${props => props.theme.sidebarBg};
@@ -18,9 +18,8 @@ export const FooterWrapper = styled.div`
 export const Credit = styled.div`
   font-weight: normal;
   margin: 4px 0;
-  opacity: 0.5;
   font-size: 12px;
-  color: ${props => props.theme.text};
+  color: #888;
 `;
 export const Spacer = styled.span`
   margin: 0 7.5px;
