@@ -19,16 +19,18 @@ export default function Sponsors() {
   const { goldSilver } = getCategorisedSponsors(sponsors);
   const { timetables } = optimiser;
   const showSponsors =
-    timetables && (timetables.length !== 1 && timetables[0].classList);
+    timetables && timetables.length !== 1 && timetables[0].classList;
   if (!showSponsors) {
     return null;
   }
   return (
     <>
-      <SponsorHeading>
-        <i className="fas fa-icons" />
-        Clubs and societies you may be interested in...
-      </SponsorHeading>
+      {goldSilver.length > 0 && (
+        <SponsorHeading>
+          <i className="fas fa-icons" />
+          Clubs and societies you may be interested in...
+        </SponsorHeading>
+      )}
       <SponsorWrapper>
         {goldSilver &&
           goldSilver.map(entry => {
