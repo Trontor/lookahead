@@ -8,6 +8,7 @@ export const FooterWrapper = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  padding-bottom: 20px;
   & > div {
     text-align: center;
   }
