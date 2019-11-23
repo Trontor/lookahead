@@ -140,7 +140,8 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
         </NotificationDismiss>
       </NotificationHeader>
       <NotificationContent toggled={collapsed}>
-        {collapsed !== undefined && !collapsed && (
+        {(collapsed === undefined ||
+          (collapsed !== undefined && !collapsed)) && (
           <NotificationMarkdown>{content}</NotificationMarkdown>
         )}
       </NotificationContent>
