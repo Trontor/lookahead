@@ -4,7 +4,7 @@ export const OptimisationsWrapper = styled.div`
   text-align: center;
   color: ${props => props.theme.text};
   margin: 0 auto;
-  padding: 5px;
+  padding: 5px 0;
 `;
 
 export const OptimisationsContainer = styled.div`
@@ -19,8 +19,14 @@ export const Header = styled.h1`
 `;
 
 export const Subheader = styled.h2`
-  font-size: 15px;
-  line-height: 0.5em;
+  font-size: 14px;
+  line-height: 1em;
+`;
+
+export const SmallMsg = styled.span`
+  font-size: 0.85em;
+  line-height: 2em;
+  opacity: 0.7;
 `;
 
 export const Optimisation = styled.div`
