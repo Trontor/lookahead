@@ -137,8 +137,10 @@ const SubjectSelect = props => {
 
   const handleSubjectSelect = ({ code, value }) => {
     if (!LogRocketInitialised) {
-      LogRocket.init("ae9dbf/lookahead");
-      LogRocketInitialised = true;
+      if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
+        LogRocket.init("ae9dbf/lookahead");
+        LogRocketInitialised = true;
+      }
     }
     dispatch(
       getSubject(
