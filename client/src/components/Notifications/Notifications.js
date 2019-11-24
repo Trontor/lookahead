@@ -20,7 +20,7 @@ export default function Notifications() {
     // },
     {
       id: "allocate-plus-introduction2",
-      title: "#Important: Allocate+",
+      title: "####Information: MyTimetable",
       content: `The university has migrated to a new timetable management system, [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). The new system is **preference-based**, as opposed to our current **free-for-all** system.
       
 A component of this new system  is a timetable planner, see how to use it [here](https://students.unimelb.edu.au/admin/class-timetable/plan-your-timetable).
@@ -107,7 +107,11 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
   };
 
   return notifications.map(({ id, title, content, collapsed, color }) => (
-    <NotificationWrapper key={id} collapsable={collapsed !== undefined} color={color}>
+    <NotificationWrapper
+      key={id}
+      collapsable={collapsed !== undefined}
+      color={color}
+    >
       <NotificationHeader>
         <Markdown
           options={{

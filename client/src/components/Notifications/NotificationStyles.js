@@ -27,6 +27,9 @@ export const NotificationWrapper = styled.div`
   h3 {
     margin-bottom: 0.2em;
   }
+  h4 {
+    margin: 0px;
+  }
 `;
 
 export const NotificationHeader = styled.div`
