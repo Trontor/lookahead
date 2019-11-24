@@ -5,16 +5,16 @@ import Markdown from "markdown-to-jsx";
 export const NotificationWrapper = styled.div`
   position: relative;
   background-color: ${props => props.color};
-  border-radius: 2px;
+  border-radius: 3px;
   color: white;
   font-family: "Karla", sans-serif;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
   margin-bottom: 10px;
   ${props =>
     props.collapsable &&
     css`
-      padding: 10px;
+      padding: 5px 10px;
     `}
   a {
     color: inherit;
@@ -40,11 +40,11 @@ export const NotificationHeader = styled.div`
 `;
 
 export const NotificationTitle = styled.div`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.03em;
-  margin-bottom: 0.5em;
+  margin-bottom: 6px;
 `;
 
 export const NotificationContent = styled.div`
