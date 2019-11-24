@@ -227,8 +227,8 @@ class Optimiser {
         return sortByDaysPresent(a, b) || sortByTotalDaySpan(a, b);
       case OptimisationType.CRAM_CLASSES_SKIP_LECTURES:
         return (
-          sortByDaysPresent(a, b) ||
           sortByDaySpanExcludingLectures(a, b) ||
+          sortByDaysPresent(a, b) ||
           sortByTotalDaySpan(a, b)
         );
       case OptimisationType.AVOID_DAYS:
