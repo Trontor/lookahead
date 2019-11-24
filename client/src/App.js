@@ -5,6 +5,10 @@ import Planner from "./components/Planner";
 import Header from "./components/Header/Header";
 import ReactGA from "react-ga";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+import smoothscroll from "smoothscroll-polyfill";
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
   ReactGA.initialize("UA-131760351-1", {
