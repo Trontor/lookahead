@@ -123,9 +123,14 @@ export default () => {
         {validRestrictions && permutations ? (
           <PossibilitiesStat>
             <span>{permutations.toLocaleString()} timetables</span>
-            {permutations > PERMUTATION_THRESHOLD && (
+            {permutations > PERMUTATION_THRESHOLD ? (
               <PossibilitiesDisclaimer>
                 That's a lot, so we'll only show you around 25,000
+              </PossibilitiesDisclaimer>
+            ) : (
+              <PossibilitiesDisclaimer>
+                We're confident we can generate the best timetable based on your
+                optimisations
               </PossibilitiesDisclaimer>
             )}
           </PossibilitiesStat>

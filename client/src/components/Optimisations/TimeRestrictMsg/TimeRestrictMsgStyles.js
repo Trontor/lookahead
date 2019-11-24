@@ -30,4 +30,6 @@ export const PossibilitiesDisclaimer = styled.div`
   font-weight: normal;
   font-style: italic;
   text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
 `;
