@@ -1,8 +1,9 @@
 import React from "react";
 import { Tip, TipHeader, TipWrapper } from "./TimetableTipStyles";
-export default function TimetableTips() {
+
+const TimetableTips = React.forwardRef((_, ref) => {
   return (
-    <TipWrapper>
+    <TipWrapper ref={ref}>
       <TipHeader>
         Tips{"  "}
         <i className="fa fa-lightbulb" aria-hidden="true" />
@@ -28,4 +29,6 @@ export default function TimetableTips() {
       </Tip>
     </TipWrapper>
   );
-}
+});
+
+export default TimetableTips;

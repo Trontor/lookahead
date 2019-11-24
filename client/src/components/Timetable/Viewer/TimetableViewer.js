@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -37,7 +37,7 @@ export default function TimetableViewer() {
     reserved
   } = optimiser;
   const [modalIsOpen, setModalOpen] = useState(false);
-
+  const viewerRef = useRef(null);
   useEffect(() => {
     if (!timetables) {
       return;
@@ -72,6 +72,16 @@ export default function TimetableViewer() {
     optimiser,
     reserved
   ]);
+  useEffect(() => {
+    if (!timetables) {
+      return;
+    }
+    setTimeout(() => {
+      viewerRef.current.scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 100);
+  }, [timetables]);
 
   const showEvent = event => {
     if (event.background) {
@@ -99,7 +109,7 @@ export default function TimetableViewer() {
 
   return (
     <>
-      <TimetableTips />
+      <TimetableTips ref={viewerRef} />
       <TimetableHeaderControl header={headerText} />
       {/* <CustomTimetableControl /> */}
       <TimetableViewerWrapper>
