@@ -7,6 +7,7 @@ import { SelectContainer } from "./SubjectSelectStyles";
 import Select from "react-select";
 import AsyncSelect from "react-select/async";
 import LogRocket from "logrocket";
+import setupLogRocketReact from "logrocket-react";
 
 let LogRocketInitialised = false;
 
@@ -139,6 +140,7 @@ const SubjectSelect = props => {
     if (!LogRocketInitialised) {
       if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
         LogRocket.init("ae9dbf/lookahead");
+        setupLogRocketReact(LogRocket);
         LogRocketInitialised = true;
       }
     }
