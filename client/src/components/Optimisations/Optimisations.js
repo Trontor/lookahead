@@ -1,20 +1,7 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import "./CustomCheckbox.scss";
 import "rc-time-picker/assets/index.css";
-import InputRange from "react-input-range";
 import "./InputRange.css";
-import DayAvoidButton from "./DayAvoidButton/DayAvoidButton";
-import {
-  setTimeRange,
-  setBreak,
-  setSkipLectures,
-  setMinimiseClashes,
-  setCramClasses,
-  addAvoidDay,
-  removeAvoidDay,
-  setKeepClassesStreamed
-} from "../../redux/actions/optimisationsActions";
+
 import {
   ButtonGroup,
   Header,
@@ -26,6 +13,21 @@ import {
   Subheader,
   TimeOptimisation
 } from "./OptimisationsStyles";
+import React, { useState } from "react";
+import {
+  addAvoidDay,
+  removeAvoidDay,
+  setBreak,
+  setCramClasses,
+  setKeepClassesStreamed,
+  setMinimiseClashes,
+  setSkipLectures,
+  setTimeRange
+} from "../../redux/actions/optimisationsActions";
+import { useDispatch, useSelector } from "react-redux";
+
+import DayAvoidButton from "./DayAvoidButton/DayAvoidButton";
+import InputRange from "react-input-range";
 
 const formatRangeLabel = value => {
   const remainder = value % 1;
@@ -99,7 +101,7 @@ function Optimisations() {
         </Optimisation>
 
         <Optimisation center>
-          <Subheader>Try to avoid classes on these days:</Subheader>
+          <Subheader>If possible, avoid classes on these days:</Subheader>
           <ButtonGroup>
             {days.map((day, idx) => (
               <DayAvoidButton
