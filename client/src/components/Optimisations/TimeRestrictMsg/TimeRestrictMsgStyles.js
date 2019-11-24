@@ -5,20 +5,29 @@ export const TimeRestrictMsgWrapper = styled.div`
 `;
 
 export const TimeRestrictError = styled.div`
-  border: 2px solid #FFC7B0;
+  border: 2px solid #ffc7b0;
   /* background-color: #FFEFEB; */
-  color: #FA7E65;
+  color: #fa7e65;
   padding: 12px;
   border-radius: 4px;
   font-weight: bold;
   line-height: 1.375em;
-`
+`;
 
 export const PossibilitiesStat = styled.div`
   color: ${props => props.theme.accent};
   border-radius: 4px;
   font-weight: bold;
   line-height: 1.375em;
+  font-size: 16px;
   text-align: center;
 `;
-
+export const PossibilitiesDisclaimer = styled.div`
+  color: ${props => props.theme.text};
+  border-radius: 4px;
+  line-height: 1.375em;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+`;

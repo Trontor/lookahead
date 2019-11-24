@@ -1,10 +1,14 @@
 import { OptimiseButton, OptimiseButtonWrapper } from "./OptimiseButtonStyles";
-import { PossibilitiesStat, TimeRestrictMsgWrapper } from "../TimeRestrictMsg/TimeRestrictMsgStyles";
+import {
+  PossibilitiesStat,
+  PossibilitiesDisclaimer,
+  TimeRestrictMsgWrapper
+} from "../TimeRestrictMsg/TimeRestrictMsgStyles";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import OptimisationTypes from "../../../optimiser/optimisationTypes";
-import Optimiser from "../../../optimiser/Optimiser";
+import Optimiser, { PERMUTATION_THRESHOLD } from "../../../optimiser/Optimiser";
 import TimeRestrictMsg from "../TimeRestrictMsg/TimeRestrictMsg";
 import { optimise } from "../../../redux/actions/optimiserActions";
 
@@ -115,10 +119,17 @@ export default () => {
   return (
     <>
       <TimeRestrictMsgWrapper>
-        {!validRestrictions && <TimeRestrictMsg/>}
-        {validRestrictions && permutations && (
-          <PossibilitiesStat>{permutations} timetable possibilities...</PossibilitiesStat>
-        )}
+        {!validRestrictions && <TimeRestrictMsg />}
+        {validRestrictions && permutations ? (
+          <PossibilitiesStat>
+            <span>{permutations.toLocaleString()} timetables</span>
+            {permutations > PERMUTATION_THRESHOLD && (
+              <PossibilitiesDisclaimer>
+                That's a lot, so we'll only show you around 25,000
+              </PossibilitiesDisclaimer>
+            )}
+          </PossibilitiesStat>
+        ) : null}
       </TimeRestrictMsgWrapper>
       <OptimiseButtonWrapper>
         <OptimiseButton

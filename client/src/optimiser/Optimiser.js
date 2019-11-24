@@ -8,8 +8,8 @@ import {
   sortByDaySpanExcludingLectures
 } from "./comparators";
 
+export const PERMUTATION_THRESHOLD = 250000;
 class Optimiser {
-  PERMUTATION_THRESHOLD = 250000;
   RANDOM_POPULATION = 25000;
 
   /**
