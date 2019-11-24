@@ -79,7 +79,8 @@ export const optimise = (
       type: COMPLETE_OPTIMISATION,
       payload: { timetables }
     });
-  } catch {
+  } catch (err) {
+    console.error(err);
     dispatch({
       type: FAIL_OPTIMISATION
     });
