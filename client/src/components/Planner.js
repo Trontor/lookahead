@@ -1,6 +1,5 @@
 import React from "react";
 import TimetableViewer from "./Timetable/Viewer/TimetableViewer";
-import styled from "styled-components";
 import Sponsors from "./Sponsors/Sponsors";
 import Sidebar from "./Sidebar/Sidebar";
 import BronzeSponsors from "./Sponsors/BronzeSponsors";

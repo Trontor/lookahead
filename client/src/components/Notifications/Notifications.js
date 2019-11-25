@@ -11,7 +11,6 @@ import React, { useState } from "react";
 import Markdown from "markdown-to-jsx";
 
 export default function Notifications() {
-  const originalURL = "https://lookahead-v1.rohyl.io";
   let initialNotifications = [
     // {
     //   id: "remake",

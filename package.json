@@ -29,6 +29,7 @@
     "mocha": "^6.2.2",
     "nodemon": "^1.19.4",
     "ts-node": "^8.5.2",
+    "ts-node-dev": "^1.0.0-pre.44",
     "tsc": "^1.20150623.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.2"
@@ -39,7 +40,7 @@
     "dev-debug": "concurrently \"npm run express-debug\" \"npm run client\"",
     "express-debug": "node --inspect=5000 -r ts-node/register server.ts",
     "express-debug:watch": "nodemon",
-    "server": "nodemon --tls-min-v1.0 --exec \" ts-node server.ts\" ",
+    "server": "npx ts-node-dev --tls-min-v1.0 -- server.ts",
     "test": "npm run build-ts && mocha dist/test --recursive",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

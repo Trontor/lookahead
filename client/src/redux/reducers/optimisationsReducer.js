@@ -6,8 +6,7 @@ import {
   SET_CRAM_CLASSES,
   SET_BREAK,
   SET_MINIMISE_CLASHES,
-  SET_KEEP_CLASSES_STREAMED,
-  UPDATE_POSSIBILITIES
+  SET_KEEP_CLASSES_STREAMED
 } from "../actionTypes";
 
 const initialState = {
