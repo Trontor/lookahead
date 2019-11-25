@@ -20,7 +20,7 @@ export default function Notifications() {
     // },
     {
       id: "allocate-plus-introduction2",
-      title: "####Information: MyTimetable",
+      title: "#Information: MyTimetable",
       content: `The university has migrated to a new timetable management system, [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). The new system is **preference-based**, as opposed to our current **free-for-all** system.
       
 A component of this new system  is a timetable planner, see how to use it [here](https://students.unimelb.edu.au/admin/class-timetable/plan-your-timetable).

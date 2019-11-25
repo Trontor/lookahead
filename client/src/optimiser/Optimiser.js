@@ -61,7 +61,7 @@ class Optimiser {
   generateAndOptimise(optimisations, reserved) {
     // Calculate possible permutations
     const permutations = this.possiblePermutations();
-    const random = permutations > this.PERMUTATION_THRESHOLD;
+    const random = permutations > PERMUTATION_THRESHOLD;
     console.log("Timetables to Generate:", permutations);
     if (random) {
       console.log(
