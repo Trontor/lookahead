@@ -49,7 +49,7 @@ export default () => {
       console.log(permutations);
       setPermutations(permutations);
     }
-  }, [optimisations]);
+  }, [optimisations, allLoaded, subjects]);
   const invokeOptimisation = () => {
     const optimisationTypes = [];
     const {
