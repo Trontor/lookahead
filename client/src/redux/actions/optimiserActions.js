@@ -14,7 +14,7 @@ import {
 } from "../actionTypes";
 
 import axios from "axios";
-import Optimiser from "../../optimiser/Optimiser";
+import Optimiser, { PERMUTATION_THRESHOLD } from "../../optimiser/Optimiser";
 
 export const nextTimetable = () => dispatch => {
   dispatch({ type: NEXT_TIMETABLE });
@@ -62,25 +62,40 @@ export const optimise = (
     restrictions.latestFinish
   );
   dispatch({ type: BEGIN_OPTIMISATION });
-  try {
-    const { timetables, time } = optimiser.generateAndOptimise(
-      optimisations,
-      reservations
-    );
-    axios.post("/report/optimise", {
-      subjects: Object.keys(subjects),
-      earliest: restrictions.earliestStart,
-      latest: restrictions.latestFinish,
-      generated: timetables.length,
-      optimisations,
-      time
-    });
-    dispatch({
-      type: COMPLETE_OPTIMISATION,
-      payload: { timetables }
-    });
-  } catch (err) {
-    console.error(err);
+  let tries = 0;
+  let success = false;
+  let threshold = PERMUTATION_THRESHOLD;
+  while (tries <= 3 && !success) {
+    tries++;
+    try {
+      const { timetables, time } = optimiser.generateAndOptimise(
+        optimisations,
+        reservations,
+        threshold
+      );
+      axios.post("/report/optimise", {
+        subjects: Object.keys(subjects),
+        earliest: restrictions.earliestStart,
+        latest: restrictions.latestFinish,
+        generated: timetables.length,
+        optimisations,
+        time
+      });
+      success = true;
+      dispatch({
+        type: COMPLETE_OPTIMISATION,
+        payload: { timetables }
+      });
+    } catch (err) {
+      console.error(err);
+      threshold /= 3;
+      if (tries === 3) {
+        threshold = 0;
+      }
+      console.log("Lowering threshold to:" + threshold);
+    }
+  }
+  if (!success) {
     dispatch({
       type: FAIL_OPTIMISATION
     });

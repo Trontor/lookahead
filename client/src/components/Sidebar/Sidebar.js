@@ -1,9 +1,3 @@
-import {
-  NotificationContent,
-  NotificationHeader,
-  NotificationWrapper
-} from "../Notifications/NotificationStyles";
-
 import FailedMsg from "./FailedMsg/FailedMsg";
 import Notifications from "../Notifications/Notifications";
 import Optimisations from "../Optimisations/Optimisations";
@@ -28,7 +22,7 @@ export default function Sidebar() {
       )}
       <Optimisations />
       <OptimiseButton />
-      <FailedMsg/>
+      <FailedMsg />
     </>
   );
 }

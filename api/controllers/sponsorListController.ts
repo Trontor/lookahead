@@ -23,6 +23,9 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
   // will store output sponsors
   const allSponsors: ISponsor[] = [];
   // loop through 2d data array
+  if (!data) {
+    return allSponsors;
+  }
   for (const row of data) {
     // destructure entries
     const [

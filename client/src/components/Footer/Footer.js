@@ -1,6 +1,5 @@
 import { Credit, FooterWrapper, SocialIcon, Spacer } from "./FooterStyles";
 import React, { useState } from "react";
-import ReactGA, { OutboundLink } from "react-ga";
 const heartPool = [
   "\u{1F9E1}",
   "\u{1F493}",
