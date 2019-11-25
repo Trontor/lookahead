@@ -1,5 +1,5 @@
 {
   "verbose": true,
   "ignore": ["client/*", "subject-cache/*"],
-  "watch": ["server.ts", "api/**/*", "subject-utils/**/*.ts"]
+  "watch": ["*.ts"]
 }
