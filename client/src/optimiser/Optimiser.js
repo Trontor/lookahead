@@ -58,10 +58,14 @@ class Optimiser {
    * @param {Array} reserved An array of FullCalendar Event Object's that are to
    * be considered when optimising.
    */
-  generateAndOptimise(optimisations, reserved) {
+  generateAndOptimise(
+    optimisations,
+    reserved,
+    threshold = PERMUTATION_THRESHOLD
+  ) {
     // Calculate possible permutations
     const permutations = this.possiblePermutations();
-    const random = permutations > this.PERMUTATION_THRESHOLD;
+    const random = permutations > threshold;
     console.log("Timetables to Generate:", permutations);
     if (random) {
       console.log(
