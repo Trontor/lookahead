@@ -87,10 +87,21 @@ function Subjects() {
                       <i className="fas fa-exclamation-triangle" />
                     </span>
                   ) : (
-                    <span>
-                      {studyPeriods[period]}
-                      {isWeird && "WEIRD"}
-                    </span>
+                    <span>{studyPeriods[period]}</span>
+                  )}
+                  {isWeird && (
+                    <>
+                      <span>•</span>
+                      <span
+                        onClick={() =>
+                          alert(
+                            "This subject is weird because some streams have an unbalanced number of classes in them."
+                          )
+                        }
+                      >
+                        WEIRD
+                      </span>
+                    </>
                   )}
                 </SubjectCode>
               ) : (
