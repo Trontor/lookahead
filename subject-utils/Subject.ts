@@ -1,7 +1,14 @@
-import Stream from "./Stream";
 import StreamContainer from "./StreamContainer";
 import SubjectClass from "./SubjectClass";
 import { SubjectPeriod } from "./SubjectPeriods";
+
+interface IWeirdStreamContainer {
+  name: string;
+  type: string;
+  weirdNumbers: number;
+  okNumbers: number;
+  maxCount: number;
+}
 
 /**
  * Represents a subject at the University of Melbourne
@@ -19,11 +26,15 @@ export default class Subject {
   get irregularClasses(): SubjectClass[] {
     return this._irregularClasses;
   }
+  get weirdStreamContainers(): SubjectClass[] {
+    return this._irregularClasses;
+  }
   private _classList: SubjectClass[] = [];
   private _irregularClasses: SubjectClass[] = [];
   private _mandatoryClasses: SubjectClass[] = [];
   private _regularClasses: SubjectClass[] = [];
   private _streamContainers: StreamContainer[] = [];
+  private _weirdStreamContainers: IWeirdStreamContainer[] = [];
 
   /**
    * Intialises a new Subject
@@ -46,6 +57,7 @@ export default class Subject {
     this.extractStreams();
     this.removeUnnecessaryStreams();
     this.extractMandatoryClasses();
+    this.identifyWeirdStreams();
     // Now, regular classes are those that aren't mandatory and aren't in a stream
     this._regularClasses = this._classList.filter(
       cls =>
@@ -141,6 +153,42 @@ export default class Subject {
     }
   };
 
+  private identifyWeirdStreams = () => {
+    // Go through each StreamCountainer to prune odd streams
+    for (const streamContainer of this._streamContainers) {
+      let maxClassLength = streamContainer.streams[0].classes.length;
+      // Used to track when there are varied stream sizes
+      let variedCounts = false;
+      for (const stream of streamContainer.streams) {
+        if (stream.classes.length !== maxClassLength) {
+          // Indicate the existence of mismatched stream sizes
+          variedCounts = true;
+          // Update max stream length to new max
+          if (stream.classes.length > maxClassLength) {
+            maxClassLength = stream.classes.length;
+          }
+        }
+      }
+      // If there are varied class lengths, remove the ones with less than max
+      if (variedCounts) {
+        // Filter out streams with < maxClassLength
+        const goodStreams = streamContainer.streams.filter(
+          stream => stream.classes.length === maxClassLength
+        );
+        const weirdStreams = streamContainer.streams.filter(
+          stream => stream.classes.length !== maxClassLength
+        );
+        const weirdStreamContainer: IWeirdStreamContainer = {
+          name: streamContainer.name,
+          type: streamContainer.type,
+          okNumbers: goodStreams.length,
+          weirdNumbers: weirdStreams.length,
+          maxCount: maxClassLength
+        };
+        this._weirdStreamContainers.push(weirdStreamContainer);
+      }
+    }
+  };
   /**
    * Some StreamContainers can have streams with like 1 AND 2 classes in them,
    * probably a uni error? See Workshops for COMP10001 for reference, some W01's dont

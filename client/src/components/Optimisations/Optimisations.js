@@ -22,7 +22,8 @@ import {
   setKeepClassesStreamed,
   setMinimiseClashes,
   setSkipLectures,
-  setTimeRange
+  setTimeRange,
+  setIgnoreWeirdStreams
 } from "../../redux/actions/optimisationsActions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -50,7 +51,8 @@ function Optimisations() {
     cramClasses,
     breakHours,
     minimiseClashes,
-    keepClassesStreamed
+    keepClassesStreamed,
+    ignoreWeirdStreams
   } = optimisations;
 
   const changeRange = ({ min, max }) => {
@@ -193,6 +195,22 @@ function Optimisations() {
             Keep classes streamed
           </label>
         </Optimisation>
+        {keepClassesStreamed && (
+          <Optimisation sub>
+            <input
+              className="styled-checkbox"
+              id="ignore-weird-streams-toggle"
+              type="checkbox"
+              checked={ignoreWeirdStreams}
+              onChange={({ target: { checked } }) =>
+                dispatch(setIgnoreWeirdStreams(checked))
+              }
+            />
+            <label htmlFor="ignore-weird-streams-toggle">
+              Ignore weird streams
+            </label>
+          </Optimisation>
+        )}
       </OptimisationsContainer>
     </OptimisationsWrapper>
   );

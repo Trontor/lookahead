@@ -56,7 +56,7 @@ export const optimise = (
   restrictions,
   reservations
 ) => dispatch => {
-  const optimiser = new Optimiser(subjects);
+  const optimiser = new Optimiser(subjects, optimisations.ignoreWeirdStreams);
   optimiser.applyTimeRestrictions(
     restrictions.earliestStart,
     restrictions.latestFinish

@@ -16,7 +16,7 @@ const stream = rfs("access.log", {
  */
 morgan.token("id", req => {
   if (!req.query.uuid) {
-    return "localhost";
+    return "no user id";
   }
   return req.query.uuid;
 });

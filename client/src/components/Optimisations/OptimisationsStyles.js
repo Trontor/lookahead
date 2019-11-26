@@ -32,7 +32,7 @@ export const SmallMsg = styled.span`
 export const Optimisation = styled.div`
   text-align: ${({ center }) => (center ? "center" : "left")};
   margin: 8px 0;
-
+  padding-left: ${({ sub }) => (sub ? "25px" : "0px")};
   .rc-time-picker-input {
     width: 75px;
   }
