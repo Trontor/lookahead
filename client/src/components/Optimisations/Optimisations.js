@@ -43,6 +43,13 @@ const formatRangeLabel = value => {
 function Optimisations() {
   const dispatch = useDispatch();
   const optimisations = useSelector(state => state.optimisations);
+  const subjects = useSelector(state => state.subjects);
+
+  console.log(Object.entries(subjects));
+
+  const isWeird = Object.entries(subjects).some(
+    ([_, { data }]) => data && data._weirdStreamContainers.length > 0
+  );
   const [longestRunToggled, setLongestRunToggled] = useState(false);
   const {
     range,
@@ -195,7 +202,7 @@ function Optimisations() {
             Keep classes streamed
           </label>
         </Optimisation>
-        {keepClassesStreamed && (
+        {keepClassesStreamed && isWeird && (
           <Optimisation sub>
             <input
               className="styled-checkbox"
