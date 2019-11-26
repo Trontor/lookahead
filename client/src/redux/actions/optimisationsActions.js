@@ -7,7 +7,8 @@ import {
   SET_BREAK,
   SET_MINIMISE_CLASHES,
   SET_KEEP_CLASSES_STREAMED,
-  UPDATE_POSSIBILITIES
+  UPDATE_POSSIBILITIES,
+  SET_IGNORE_WEIRD_STREAMS
 } from "../actionTypes";
 
 export const setTimeRange = (min, max) => dispatch => {
@@ -40,6 +41,10 @@ export const setMinimiseClashes = truthy => dispatch => {
 
 export const setKeepClassesStreamed = truthy => dispatch => {
   dispatch({ type: SET_KEEP_CLASSES_STREAMED, payload: truthy });
+};
+
+export const setIgnoreWeirdStreams = truthy => dispatch => {
+  dispatch({ type: SET_IGNORE_WEIRD_STREAMS, payload: truthy });
 };
 
 export const setBreak = hours => dispatch => {

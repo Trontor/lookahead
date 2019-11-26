@@ -6,7 +6,8 @@ import {
   SET_CRAM_CLASSES,
   SET_BREAK,
   SET_MINIMISE_CLASHES,
-  SET_KEEP_CLASSES_STREAMED
+  SET_KEEP_CLASSES_STREAMED,
+  SET_IGNORE_WEIRD_STREAMS
 } from "../actionTypes";
 
 const initialState = {
@@ -16,7 +17,8 @@ const initialState = {
   cramClasses: true,
   breakHours: 24,
   minimiseClashes: true,
-  keepClassesStreamed: true
+  keepClassesStreamed: true,
+  ignoreWeirdStreams: true
 };
 
 export default (state = initialState, action) => {
@@ -47,6 +49,8 @@ export default (state = initialState, action) => {
       return { ...state, cramClasses: action.payload };
     case SET_BREAK:
       return { ...state, breakHours: action.payload };
+    case SET_IGNORE_WEIRD_STREAMS:
+      return { ...state, ignoreWeirdStreams: action.payload };
     case SET_MINIMISE_CLASHES:
       return { ...state, minimiseClashes: action.payload };
     default:

@@ -70,10 +70,11 @@ function Subjects() {
           color,
           error
         } = subject;
-        const { period = "" } = data || {};
+        const { period = "", _weirdStreamContainers = [] } = data || {};
         let bgColor = color;
         let textColor = "white";
 
+        const isWeird = _weirdStreamContainers.length > 0;
         return (
           <SubjectWrapper key={code}>
             <SubjectCard error={error} $loading={loading} color={bgColor}>
@@ -86,7 +87,10 @@ function Subjects() {
                       <i className="fas fa-exclamation-triangle" />
                     </span>
                   ) : (
-                    <span>{studyPeriods[period]}</span>
+                    <span>
+                      {studyPeriods[period]}
+                      {isWeird && "WEIRD"}
+                    </span>
                   )}
                 </SubjectCode>
               ) : (

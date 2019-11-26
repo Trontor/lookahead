@@ -7,6 +7,7 @@ import {
   sortByLongestRun,
   sortByDaySpanExcludingLectures
 } from "./comparators";
+import optimisationTypes from "./optimisationTypes";
 
 export const PERMUTATION_THRESHOLD = 250000;
 class Optimiser {
@@ -16,9 +17,34 @@ class Optimiser {
    * Initialises a new timetable optimiser, given the subject list
    * @param {*} subjects
    */
-  constructor(subjects) {
+  constructor(subjects, removeWeirdStreams) {
     // Copy subjects, to allow for internal modifications
-    this.subjects = Object.assign({}, subjects);
+    this.subjects = JSON.parse(JSON.stringify(subjects));
+    if (removeWeirdStreams) {
+      this.removeWeirdStreams();
+    }
+  }
+  removeWeirdStreams() {
+    const subjectCodes = Object.keys(this.subjects);
+    for (const subjectCode of subjectCodes) {
+      const subject = this.subjects[subjectCode].data;
+      const streamContainers = subject._streamContainers;
+      // and each stream container
+      for (const container of streamContainers) {
+        // then multiply the number of permutations by the number of streams
+        const matchingWeirdContainers = subject._weirdStreamContainers.filter(
+          w => w.name === container.name
+        );
+        if (matchingWeirdContainers.length === 0) {
+          continue;
+        }
+        const weirdContainer = matchingWeirdContainers[0];
+        const newStreams = container.streams.filter(
+          s => s.classes.length === weirdContainer.maxCount
+        );
+        container.streams = newStreams;
+      }
+    }
   }
 
   // Calculates the number of unique timetables that can be generated
@@ -67,6 +93,11 @@ class Optimiser {
     const permutations = this.possiblePermutations();
     const random = permutations > threshold;
     console.log("Timetables to Generate:", permutations);
+    if (
+      optimisations.some(o => o.type === optimisationTypes.IGNORE_WEIRD_STREAMS)
+    ) {
+      this.removeWeirdStreams();
+    }
     if (random) {
       console.log(
         "Too many timetables to bruteforce, switching to random generation."

@@ -31,10 +31,13 @@ export default () => {
 
   const updatePermutations = useCallback(() => {
     if (!allLoaded) return;
-    const optimiser = new Optimiser(subjects);
     const {
-      range: { min, max }
+      range: { min, max },
+      ignoreWeirdStreams
     } = optimisations;
+    console.log("WEIRD: " + ignoreWeirdStreams);
+
+    const optimiser = new Optimiser(subjects, ignoreWeirdStreams);
     const restrictions = {
       earliestStart: min,
       latestFinish: max
@@ -57,6 +60,7 @@ export default () => {
       avoidDays,
       skipLectures,
       cramClasses,
+      ignoreWeirdStreams,
       breakHours,
       minimiseClashes
     } = optimisations;
@@ -64,6 +68,9 @@ export default () => {
 
     if (minimiseClashes) {
       optimisationTypes.push({ type: OptimisationTypes.AVOID_CLASHES });
+    }
+    if (ignoreWeirdStreams) {
+      optimisationTypes.push({ type: OptimisationTypes.IGNORE_WEIRD_STREAMS });
     }
     if (breakHours) {
       optimisationTypes.push({
