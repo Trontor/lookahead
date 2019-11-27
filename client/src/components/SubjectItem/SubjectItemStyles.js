@@ -256,11 +256,18 @@ export const SubjectCode = styled.div`
     display: inline-block;
     letter-spacing: 0.02em;
 
-    &:nth-child(2) {
+    &:nth-child(4) {
+      color: crimson;
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
       margin: 0;
       font-size: 11px;
       transform: translateY(-0.1em);
       opacity: 0.8;
+      cursor: pointer;
 
       ${({ error }) => {
         return css`
