@@ -87,6 +87,9 @@ export const parseSubject = (
       day = -1;
     } else {
       day = SubjectClass.daysOfWeek.indexOf(dayRaw);
+      if (day > 4) {
+        subject.hasWeekendClasses();
+      }
     }
     // Try parse week format
     let weeks: number[];
@@ -173,6 +176,17 @@ export const subjectPeriodToShortCode = (period: SubjectPeriod) => {
       return "SUM";
     case SubjectPeriod.Winter_Term:
       return "WIN";
+
+    case SubjectPeriod.January:
+      return "JAN";
+    case SubjectPeriod.February:
+      return "FEB";
+    case SubjectPeriod.March:
+      return "MAR";
+    case SubjectPeriod.April:
+      return "APR";
+    case SubjectPeriod.May:
+      return "MAY";
   }
 };
 

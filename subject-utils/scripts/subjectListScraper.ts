@@ -92,6 +92,16 @@ const scrapePage = async (
           return SubjectPeriod.Winter_Term;
         case "Summer Term":
           return SubjectPeriod.Summer_Term;
+        case "January":
+          return SubjectPeriod.January;
+        case "February":
+          return SubjectPeriod.February;
+        case "March":
+          return SubjectPeriod.March;
+        case "April":
+          return SubjectPeriod.April;
+        case "May":
+          return SubjectPeriod.May;
         default:
           // console.log("Unknown Offering Period:" + item);
           return;
@@ -152,6 +162,16 @@ const scrapePageNew = async (
             return SubjectPeriod.Winter_Term;
           case "Summer Term":
             return SubjectPeriod.Summer_Term;
+          case "January":
+            return SubjectPeriod.January;
+          case "February":
+            return SubjectPeriod.February;
+          case "March":
+            return SubjectPeriod.March;
+          case "April":
+            return SubjectPeriod.April;
+          case "May":
+            return SubjectPeriod.May;
           default:
             // console.log("Unknown Offering Period:" + item);
             return;
