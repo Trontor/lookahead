@@ -259,7 +259,8 @@ export default class Subject {
         });
         // Remove this entire StreamContainer from the list
         this._streamContainers.splice(
-          this._streamContainers.indexOf(streamContainer)
+          this._streamContainers.indexOf(streamContainer),
+          1
         );
       } else if (onlyOneClassInStreams) {
         // There is only one class in the streams
