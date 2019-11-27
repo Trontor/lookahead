@@ -38,6 +38,10 @@ export default function TimetableViewer() {
   } = optimiser;
   const [modalIsOpen, setModalOpen] = useState(false);
   const viewerRef = useRef(null);
+  // Check if any subject has a class on the weekend
+  const hasWeekendClasses = Object.entries(subjects).some(
+    ([_, { data }]) => data && data._weekendClasses
+  );
   useEffect(() => {
     if (!timetables) {
       return;
@@ -51,6 +55,7 @@ export default function TimetableViewer() {
       // headerText = `Custom Timetable ${id}: ${name}`;
     }
     console.log("Current Timetable:", currentTimetable);
+
     // Map timetable classes to events
     currentTimetable.classList = currentTimetable.classList.filter(
       cls => subjects[cls.subjectCode]
@@ -117,7 +122,7 @@ export default function TimetableViewer() {
           defaultView="timeGridWeek"
           height="parent"
           plugins={[timeGridPlugin, interactionPlugin]}
-          weekends={false}
+          weekends={hasWeekendClasses}
           slotLabelFormat={{
             hour: "numeric",
             minute: "2-digit",

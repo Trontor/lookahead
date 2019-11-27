@@ -25,7 +25,12 @@ const studyPeriods = {
   summer_term: "Summer",
   semester_1: "Sem 1",
   winter_term: "Winter",
-  semester_2: "Sem 2"
+  semester_2: "Sem 2",
+  january: "January",
+  february: "February",
+  march: "March",
+  april: "April",
+  may: "May"
 };
 
 function Subjects() {

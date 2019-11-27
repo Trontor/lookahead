@@ -35,6 +35,7 @@ export default class Subject {
   private _regularClasses: SubjectClass[] = [];
   private _streamContainers: StreamContainer[] = [];
   private _weirdStreamContainers: IWeirdStreamContainer[] = [];
+  private _weekendClasses: boolean = false;
 
   /**
    * Intialises a new Subject
@@ -44,6 +45,10 @@ export default class Subject {
     public readonly code: string,
     private readonly period: SubjectPeriod
   ) {}
+
+  public hasWeekendClasses(): void {
+    this._weekendClasses = true;
+  }
 
   /**
    * Adds classes to the subject
@@ -333,7 +338,12 @@ export default class Subject {
     this._irregularClasses = [];
     if (
       this.period !== SubjectPeriod.Semester_1 &&
-      this.period !== SubjectPeriod.Semester_2
+      this.period !== SubjectPeriod.Semester_2 &&
+      this.period !== SubjectPeriod.January &&
+      this.period !== SubjectPeriod.February &&
+      this.period !== SubjectPeriod.March &&
+      this.period !== SubjectPeriod.April &&
+      this.period !== SubjectPeriod.May
     ) {
       return;
     }

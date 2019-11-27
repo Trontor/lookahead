@@ -16,13 +16,15 @@ export default class SubjectClass {
     "Tuesday",
     "Wednesday",
     "Thursday",
-    "Friday"
+    "Friday",
+    "Saturday",
+    "Sunday"
   ];
   // The time format used by the SWS timetable system to represent times
   public static readonly timeFormat = "HH:mm";
   // Verifies if a class code is well formed, i.e. COMP10001/U/1/SM1/W01/55
   public static isWellFormedCode = (code: string): boolean =>
-    code.split("/").length === 6
+    code.split("/").length === 6;
   // Subject code
   public subjectCode: string;
   // All class codes that occur at this class time
@@ -80,7 +82,7 @@ export default class SubjectClass {
       ...new Set([...this.locations, ...subjectClass.locations])
     ];
     this.codes = this.codes.concat(subjectClass.codes);
-  }
+  };
 
   public toString = (): string => {
     const parseHoursPastMidnight = (num: number) =>
@@ -93,5 +95,5 @@ export default class SubjectClass {
     } ${parseHoursPastMidnight(this.start)} -> ${parseHoursPastMidnight(
       this.finish
     )} at ${this.locations.join(", ")}`;
-  }
+  };
 }

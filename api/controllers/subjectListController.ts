@@ -13,7 +13,12 @@ export const getSubjectList = (req: Request, res: Response) => {
     "semester_1",
     "semester_2",
     "summer_term",
-    "winter_term"
+    "winter_term",
+    "january",
+    "february",
+    "march",
+    "april",
+    "may"
   ];
   // This used to work in TypeScript strict mode, but it doesn't now.
   // Object.keys(SubjectPeriod).map(

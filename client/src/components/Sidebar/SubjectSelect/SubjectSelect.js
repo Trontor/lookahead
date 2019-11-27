@@ -17,7 +17,12 @@ const studyPeriods = [
   { value: "summer_term", label: "Summer 2020", year: "2020" },
   { value: "semester_1", label: "Sem 1 2020", year: "2020" },
   { value: "winter_term", label: "Winter 2020", year: "2020" },
-  { value: "semester_2", label: "Sem 2 2020", year: "2020" }
+  { value: "semester_2", label: "Sem 2 2020", year: "2020" },
+  { value: "january", label: "January", year: "2020" },
+  { value: "february", label: "February", year: "2020" },
+  { value: "march", label: "March", year: "2020" },
+  { value: "april", label: "April", year: "2020" },
+  { value: "may", label: "May", year: "2020" }
 ];
 
 const SubjectSelect = props => {
