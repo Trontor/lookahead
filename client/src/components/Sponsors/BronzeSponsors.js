@@ -20,7 +20,7 @@ export default function BronzeSponsors() {
   const { bronze } = getCategorisedSponsors(sponsors);
   const { timetables } = optimiser;
   const showSponsors =
-    timetables && (timetables.length !== 1 && timetables[0].classList);
+    timetables && timetables.length !== 0 && timetables[0].classList;
   if (!showSponsors) {
     return null;
   }
