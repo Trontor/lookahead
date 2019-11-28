@@ -36,14 +36,8 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
 **Start: ** 10th Feb, 2020  
 **End: ** 20th Mar, 2020, 10am
       `,
-      collapsed: false,
+      collapsed: true,
       color: "#3645AD"
-    },
-    {
-      id: "2020-subjects",
-      title: "#2020 Subject Pool",
-      content: `The 2020 subject pool has been added, it is now the default.`,
-      color: "#2BA676"
     }
   ];
   let seenNotifications = localStorage.getItem("notifications");
