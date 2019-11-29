@@ -9,7 +9,7 @@ import {
 } from "./comparators";
 import optimisationTypes from "./optimisationTypes";
 
-export const PERMUTATION_THRESHOLD = 250000;
+export const PERMUTATION_THRESHOLD = 175000;
 class Optimiser {
   RANDOM_POPULATION = 25000;
 
