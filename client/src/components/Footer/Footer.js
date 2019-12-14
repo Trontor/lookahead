@@ -45,33 +45,6 @@ export default function Footer() {
           Don't forget to share this with your friends 😊
         </Credit>
         <Credit>
-          Gigi
-          <Spacer />
-          UI & Styling
-          <Spacer />
-          <SocialIcon
-            eventLabel="Gigi LinkedIn"
-            to={"https://www.linkedin.com/in/giselleleung/"}
-            name="linkedin"
-          />
-          <SocialIcon
-            eventLabel="Gigi GitHub"
-            to={"https://github.com/giggleinu"}
-            name="github"
-          />
-          <SocialIcon
-            eventLabel="Gigi Codepen"
-            to={"https://codepen.io/giggleinu"}
-            name="codepen"
-          />
-          <SocialIcon
-            name="envelope"
-            eventLabel="Gigi Email"
-            solid
-            to="mailto:gleung@student.unimelb.edu.au"
-          />
-        </Credit>
-        <Credit>
           Rohyl
           <Spacer />
           Development
