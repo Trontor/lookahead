@@ -32,6 +32,7 @@ const studyPeriods = {
   april: "April",
   may: "May"
 };
+const empty = array => !Array.isArray(array) || !array.length;
 
 function Subjects() {
   const subjects = useSelector(state => state.subjects);
@@ -75,10 +76,23 @@ function Subjects() {
           color,
           error
         } = subject;
-        const { period = "", _weirdStreamContainers = [] } = data || {};
+        const {
+          period = "",
+          _weirdStreamContainers = [],
+          _classList = [],
+          _irregularClasses = [],
+          _mandatoryClasses = [],
+          _regularClasses = [],
+          _streamContainers = []
+        } = data || {};
         let bgColor = color;
         let textColor = "white";
-
+        const isEmpty =
+          empty(_classList) &&
+          empty(_irregularClasses) &&
+          empty(_mandatoryClasses) &&
+          empty(_regularClasses) &&
+          empty(_streamContainers);
         const isWeird = _weirdStreamContainers.length > 0;
         return (
           <SubjectWrapper key={code}>
@@ -93,6 +107,20 @@ function Subjects() {
                     </span>
                   ) : (
                     <span>{studyPeriods[period]}</span>
+                  )}
+                  {isEmpty && (
+                    <>
+                      <span>•</span>
+                      <span
+                        onClick={() =>
+                          alert(
+                            'No timetable data could be loaded for this subject. Confirm this by clicking "View Timetable" in the handbook entry for this subject. If you believe this is incorrect, shoot us an email.'
+                          )
+                        }
+                      >
+                        EMPTY
+                      </span>
+                    </>
                   )}
                   {isWeird && (
                     <>

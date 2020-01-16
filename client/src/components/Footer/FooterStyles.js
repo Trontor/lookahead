@@ -21,6 +21,9 @@ export const Credit = styled.div`
   margin: 4px 0;
   font-size: 12px;
   color: #888;
+  a {
+    color: inherit;
+  }
 `;
 export const Spacer = styled.span`
   margin: 0 7.5px;

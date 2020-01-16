@@ -72,6 +72,9 @@ export const cacheSubject = (
     empty(subject.regularClasses) &&
     empty(subject.streams);
   if (!ENABLE_CACHING || emptySubject) {
+    if (emptySubject) {
+      console.log("Did not cache " + subject.code + " as it is empty.");
+    }
     return;
   }
   initialiseCacheDirectory();
