@@ -39,7 +39,7 @@ export default function Notifications() {
       // This is the space ID. A space is like a project folder in Contentful terms
       space: "ijvt5o1mpw83",
       // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-      accessToken: "MNI3naV3xpcCyGO6N1EgKLf58GicgLr92Z4IOVzjq-c"
+      accessToken: process.env.CONTENTFUL_TOKEN
     });
     // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
     client.getEntries("notifications").then(data => {
