@@ -4,6 +4,7 @@
   "description": "UoM Timetable Optimiser",
   "main": "dist/server.js",
   "dependencies": {
+    "@sentry/node": "^5.9.0",
     "@types/cheerio": "^0.22.14",
     "@types/dotenv": "^6.1.1",
     "@types/moment": "^2.13.0",
