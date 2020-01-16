@@ -40,38 +40,6 @@ export default function Footer() {
       <div>
         <div>Made for you with {love}</div>
         <Credit>
-          {/* Click <a href="https://lookahead-v1.rohyl.io">here</a> for the the
-          original lookahead. */}
-          Don't forget to share this with your friends 😊
-        </Credit>
-        <Credit>	
-          Gigi	
-          <Spacer />	
-          UI & Styling	
-          <Spacer />	
-          <SocialIcon	
-            eventLabel="Gigi LinkedIn"	
-            to={"https://www.linkedin.com/in/giselleleung/"}	
-            name="linkedin"	
-          />	
-          <SocialIcon	
-            eventLabel="Gigi GitHub"	
-            to={"https://github.com/giggleinu"}	
-            name="github"	
-          />	
-          <SocialIcon	
-            eventLabel="Gigi Codepen"	
-            to={"https://codepen.io/giggleinu"}	
-            name="codepen"	
-          />	
-          <SocialIcon	
-            name="envelope"	
-            eventLabel="Gigi Email"	
-            solid	
-            to="mailto:gleung@student.unimelb.edu.au"	
-          />	
-        </Credit>
-        <Credit>
           Rohyl
           <Spacer />
           Development
@@ -94,6 +62,45 @@ export default function Footer() {
               "mailto:rohylj@student.unimelb.edu.au?subject=RE:%20Lookahead%20Semester%20Planner"
             }
           />
+        </Credit>
+        <Credit>
+          Gigi
+          <Spacer />
+          UI & Styling
+          <Spacer />
+          <SocialIcon
+            eventLabel="Gigi LinkedIn"
+            to={"https://www.linkedin.com/in/giselleleung/"}
+            name="linkedin"
+          />
+          <SocialIcon
+            eventLabel="Gigi GitHub"
+            to={"https://github.com/giggleinu"}
+            name="github"
+          />
+          <SocialIcon
+            eventLabel="Gigi Codepen"
+            to={"https://codepen.io/giggleinu"}
+            name="codepen"
+          />
+          <SocialIcon
+            name="envelope"
+            eventLabel="Gigi Email"
+            solid
+            to="mailto:gleung@student.unimelb.edu.au"
+          />
+        </Credit>
+
+        <Credit>
+          {/* Click <a href="https://lookahead-v1.rohyl.io">here</a> for the the
+          original lookahead. */}
+          <a
+            href="https://paypal.me/rohyl
+"
+          >
+            Buy us a protein shake
+          </a>{" "}
+          or share with your friends
         </Credit>
       </div>
     </FooterWrapper>
