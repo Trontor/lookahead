@@ -6,64 +6,54 @@ import {
   NotificationTitle,
   NotificationWrapper
 } from "./NotificationStyles";
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import * as contentful from "contentful";
 import Markdown from "markdown-to-jsx";
 
-export default function Notifications() {
-  let initialNotifications = [
-    // {
-    //   id: "remake",
-    //   title: "**Remake**",
-    //   content: `Been here before? This is a remake of ***Lookahead***. If you encounter any issues, feel free to use the [original](${originalURL}).`
-    // },
-    {
-      id: "allocate-plus-introduction2",
-      title: "#Information: MyTimetable",
-      content: `The university has migrated to a new timetable management system, [MyTimetable](https://students.unimelb.edu.au/admin/class-timetable). The new system is **preference-based**, as opposed to our current **free-for-all** system.
-      
-A component of this new system  is a timetable planner, see how to use it [here](https://students.unimelb.edu.au/admin/class-timetable/plan-your-timetable).
-
-This new system is a 3-stage process, learn more about it [here]( https://students.unimelb.edu.au/admin/class-timetable ).
-      
-The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetable-dates )** you should be aware of are:
-      
-###Preference Entry Period
-**Start: ** 26th Nov, 2019  
-**End: ** 3rd Feb, 2020, 10am
-      
-###Review and Adjustment Period
-**Start: ** 10th Feb, 2020  
-**End: ** 20th Mar, 2020, 10am
-      `,
-      collapsed: true,
-      color: "#3645AD"
-    },
-    {
-      id: "10k-woot",
-      title: "Milestone 🥳",
-      content: `We just crossed 10,000 unique visitors and 20,000 sessions in less than a year of release 🤯. Your continued support & messages keep this service operational 🚂!`,
-      collapsed: undefined,
-      color: "orange"
-    }
-  ];
+const filterNotifications = notifcations => {
   let seenNotifications = localStorage.getItem("notifications");
   let collapsedNotifications = localStorage.getItem("collapsed-notifications");
   if (seenNotifications) {
     seenNotifications = JSON.parse(seenNotifications);
-    initialNotifications = initialNotifications.filter(
+    notifcations = notifcations.filter(
       ({ id }) => !seenNotifications.includes(id)
     );
   }
   if (collapsedNotifications) {
     collapsedNotifications = JSON.parse(collapsedNotifications);
-    initialNotifications.forEach(({ id }, idx) => {
+    notifcations.forEach(({ id }, idx) => {
       if (collapsedNotifications.includes(id)) {
-        initialNotifications[idx].collapsed = true;
+        notifcations[idx].collapsed = true;
       }
     });
   }
-  const [notifications, setNotifications] = useState(initialNotifications);
+  return notifcations;
+};
+
+export default function Notifications() {
+  const [notifications, setNotifications] = useState([]);
+
+  // On component load, fetch notifications from Contentful space
+  useEffect(() => {
+    const client = contentful.createClient({
+      // This is the space ID. A space is like a project folder in Contentful terms
+      space: "ijvt5o1mpw83",
+      // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+      accessToken: "MNI3naV3xpcCyGO6N1EgKLf58GicgLr92Z4IOVzjq-c"
+    });
+    // This API call will request an entry with the specified ID from the space defined at the top, using a space-specific access token.
+    client.getEntries("notifications").then(data => {
+      const rawNotifs = data.items.map(item => {
+        const parsedItem = { ...item.fields };
+        return parsedItem;
+      });
+      console.log("Raw Notifications");
+      console.log(rawNotifs);
+      setNotifications(filterNotifications(rawNotifs));
+    });
+  }, []);
+
+  // Handles the toggle of a collapse of a notification
   const toggleCollapse = id => {
     const currentNotifs = [...notifications];
     const currentNotif = currentNotifs.filter(notif => notif.id === id)[0];
