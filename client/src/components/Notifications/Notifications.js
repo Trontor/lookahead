@@ -42,7 +42,7 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
     {
       id: "10k-woot",
       title: "Milestone 🥳",
-      content: `We just crossed 10,000 unique visitors and 20,000 sessions in less than a year of operation! 🤯`,
+      content: `We just crossed 10,000 unique visitors and 20,000 sessions in less than a year of release 🤯. Your continued support & messages keep this service operational 🚂!`,
       collapsed: undefined,
       color: "orange"
     }
