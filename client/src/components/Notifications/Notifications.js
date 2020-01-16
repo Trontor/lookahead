@@ -38,6 +38,13 @@ The **[key dates]( https://students.unimelb.edu.au/admin/class-timetable/timetab
       `,
       collapsed: true,
       color: "#3645AD"
+    },
+    {
+      id: "10k-woot",
+      title: "Milestone 🥳",
+      content: `We just crossed 10,000 unique visitors and 20,000 sessions in less than a year of operation! 🤯`,
+      collapsed: undefined,
+      color: "orange"
     }
   ];
   let seenNotifications = localStorage.getItem("notifications");

@@ -114,7 +114,7 @@ function Subjects() {
                       <span
                         onClick={() =>
                           alert(
-                            'No timetable data could be loaded for this subject. Confirm this by clicking "View Timetable" in the handbook entry for this subject'
+                            'No timetable data could be loaded for this subject. Confirm this by clicking "View Timetable" in the handbook entry for this subject. If you believe this is incorrect, shoot us an email.'
                           )
                         }
                       >
