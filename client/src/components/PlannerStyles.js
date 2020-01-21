@@ -29,6 +29,8 @@ export const SidebarWrapper = styled.div`
 export const Main = styled.div`
   grid-row: 2;
   padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 1024px) {
     grid-column-start: viewer;
