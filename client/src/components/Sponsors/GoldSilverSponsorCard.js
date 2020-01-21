@@ -24,7 +24,14 @@ export default function GoldSilverSponsorCard(props) {
   } = props;
   return (
     <SponsorCard dismissed={dismissed}>
-      <DeleteButton onClick={() => setDismissed(true)}>×</DeleteButton>
+      <DeleteButton
+        onClick={() => {
+          setDismissed(true);
+          props.onDismissed();
+        }}
+      >
+        ×
+      </DeleteButton>
       <LogoWrapper>
         <Logo alt={`${name} logo`} src={logoURL} />
       </LogoWrapper>
