@@ -8,17 +8,17 @@ import { SponsorHeading, SponsorWrapper } from "./SponsorStyles";
 export default function Sponsors() {
   const dispatch = useDispatch();
   const sponsors = useSelector(state => state.sponsors, shallowEqual);
-  const optimiser = useSelector(
-    state => state.optimiser,
-    (left, right) => left.timetables.length === right.timetables.length
-  );
+  // const optimiser = useSelector(
+  //   state => state.optimiser,
+  //   (left, right) => left.timetables.length === right.timetables.length
+  // );
   const [dismissedCount, setDismissedCount] = useState(0);
   useEffect(() => {
     dispatch(fetchClubList());
   }, [dispatch]);
   // Filter sponsors by currently entered subjects
   const { goldSilver } = getCategorisedSponsors(sponsors);
-  const { timetables } = optimiser;
+  // const { timetables } = optimiser;
   // const showSponsors =
   //   timetables && timetables.length !== 0 && timetables[0].classList;
   // if (!showSponsors) {
