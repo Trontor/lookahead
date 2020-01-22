@@ -6,6 +6,11 @@ let initialState = regularTheme;
 if (localStorage.getItem("theme")) {
   initialState =
     localStorage.getItem("theme") === "regular" ? regularTheme : darkTheme;
+} else if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  initialState = darkTheme;
 }
 let themeTimeout = null;
 export default (state = initialState, action) => {
