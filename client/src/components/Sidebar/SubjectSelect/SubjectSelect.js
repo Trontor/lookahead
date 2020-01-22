@@ -66,12 +66,14 @@ const SubjectSelect = props => {
     } else if (!inputValue) {
       return currentList;
     }
-    return currentList.filter(i => {
+    const returnList = currentList.filter(i => {
       return (
-        i.label.toLowerCase().includes(inputValue.toLowerCase()) ||
-        i.value.toLowerCase().includes(inputValue.toLowerCase())
+        i.code.toLowerCase().includes(inputValue.toLowerCase().trim()) ||
+        i.value.toLowerCase().includes(inputValue.toLowerCase().trim())
       );
     });
+    console.log("Filter:", inputValue, currentList, returnList);
+    return returnList;
   };
 
   const loadOptions = (inputValue, callback) => {
@@ -158,7 +160,6 @@ const SubjectSelect = props => {
       )
     );
   };
-
   return (
     <SelectContainer>
       <Select
@@ -172,9 +173,10 @@ const SubjectSelect = props => {
       <AsyncSelect
         className="subject-select"
         styles={customStyles}
-        cacheOptions
         loadOptions={loadOptions}
-        placeholder={"Search for a subject..."}
+        placeholder={
+          subjectLists.loading ? "Loading..." : "Search for a subject..."
+        }
         theme={applySelectTheme}
         value={inputValue}
         defaultOptions
