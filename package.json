@@ -8,8 +8,11 @@
     "@types/cheerio": "^0.22.14",
     "@types/dotenv": "^6.1.1",
     "@types/moment": "^2.13.0",
+    "@types/moment-timezone": "^0.5.12",
     "@types/morgan": "^1.7.37",
     "@types/request": "^2.48.3",
+    "@types/winston": "^2.4.4",
+    "aws-sdk": "^2.608.0",
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
     "concurrently": "^4.1.2",
@@ -17,9 +20,12 @@
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
     "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
     "morgan": "^1.9.1",
     "request": "^2.88.0",
-    "rotating-file-stream": "^1.4.6"
+    "rotating-file-stream": "^1.4.6",
+    "s3-streamlogger": "^1.5.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/chai": "^4.2.5",

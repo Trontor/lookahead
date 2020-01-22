@@ -3,20 +3,12 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Planner from "./components/Planner";
 import Header from "./components/Header/Header";
-import ReactGA from "react-ga";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import smoothscroll from "smoothscroll-polyfill";
 
 // kick off the polyfill!
 smoothscroll.polyfill();
 
-if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
-  ReactGA.initialize("UA-131760351-1", {
-    debug: false
-  });
-  ReactGA.pageview(window.location.pathname + window.location.search);
-  console.log = () => {};
-}
 if (!Object.entries) {
   Object.entries = function(obj) {
     var ownProps = Object.keys(obj),

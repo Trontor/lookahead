@@ -1,14 +1,31 @@
 import express, { Application } from "express";
 import fs from "fs";
-import moment from "moment";
+import moment from "moment-timezone";
 import morgan from "morgan";
 import path from "path";
 import rfs from "rotating-file-stream";
+import winston from "winston";
+const S3StreamLogger = require("s3-streamlogger").S3StreamLogger;
 
 // create a rotating write stream
 const stream = rfs("access.log", {
   interval: "1d", // rotate daily
   path: path.join(__dirname, "../log")
+});
+
+const s3_stream = new S3StreamLogger({
+  bucket: "lookahead-rohyl",
+  name_format: "%d-%m-%Y",
+  access_key_id: process.env.AWS_ACCESS_KEY_ID,
+  secret_access_key: process.env.AWS_SECRET_ACCESS_KEY,
+  rotate_every: 86400000 /* every day */
+});
+var transport = new winston.transports.Stream({
+  stream: s3_stream
+});
+
+var logger = winston.createLogger({
+  transports: [transport]
 });
 
 /**
@@ -66,7 +83,7 @@ const formatOptimisations = (arr: object[]): string =>
  */
 morgan.token("date", () => {
   return moment()
-    .utcOffset(10)
+    .tz("Australia/Melbourne")
     .format("hh:mm");
 });
 
@@ -80,7 +97,7 @@ const setupMorgan = (format: string, route: string) =>
     skip: (req, res) => {
       return req.baseUrl + req.path !== `/api/${route}`;
     },
-    stream
+    stream: { write: str => logger.info(str.trim()) }
   });
 
 /**

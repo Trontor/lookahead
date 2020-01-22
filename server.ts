@@ -1,14 +1,13 @@
 // Load .env file
 import Sentry = require("@sentry/node");
 import bodyParser from "body-parser";
-import dotenv from "dotenv";
+require("dotenv").config();
 import express, { Application, Request, Response } from "express";
 import path = require("path");
 import apiRouter from "./api/api";
 import { initialiseLogging } from "./api/logging";
 import { initialise } from "./google-sheets/sheets";
 
-dotenv.config();
 Sentry.init({
   dsn: "https://fb5c9266745c450e93696aaf15378c73@sentry.io/1836276"
 });
