@@ -90,7 +90,7 @@ export const FacebookButton = styled(UMSUButton).attrs(() => ({
 `;
 
 export const LogoWrapper = styled.div`
-  width: 120px;
+  width: 100%;
   height: 40px;
   overflow: hidden;
   margin-bottom: 5px;
@@ -165,14 +165,14 @@ export const BronzeCardButtonGroup = styled.div`
   }
 `;
 
-export const Logo = styled.img.attrs(props => ({
-  width: "120px",
-  height: "60px"
-}))`
+export const Logo = styled.img.attrs(props => ({}))`
   align-self: center;
   object-fit: scale-down;
+  height: inherit;
+  /* width: 100%; */
+  margin-top: 0;
   background-color: ${props => props.theme.SponsorLogoBg};
-  margin-top: ${props => (props.bronze ? 0 : "-10px")};
+  /* margin-top: ${props => (props.bronze ? 0 : "-10px")}; */
   filter: ${props => props.theme.SponsorFilter};
 `;
 export const SponsorHeading = styled.h3`
