@@ -9,7 +9,14 @@ import {
   UMSUButton,
   FacebookButton
 } from "./SponsorStyles";
+import { logClick } from "../../redux/actions/sponsorActions";
 
+const logAndRedirect = (name, item, destination) => e => {
+  e.preventDefault();
+  logClick(name, item).then(_ => {
+    document.location.href = destination;
+  });
+};
 export default function GoldSilverSponsorCard(props) {
   const [dismissed, setDismissed] = useState(false);
   const {
@@ -18,7 +25,8 @@ export default function GoldSilverSponsorCard(props) {
     description,
     umsu,
     facebook,
-    signup
+    signup,
+    website
     /* tier,
     include */
   } = props;
@@ -37,13 +45,16 @@ export default function GoldSilverSponsorCard(props) {
       </LogoWrapper>
       <ClubDescription>{description}</ClubDescription>
       <ButtonWrapper>
-        <a href={signup}>
+        <a href={signup} onClick={logAndRedirect(name, "signup", signup)}>
+          <UMSUButton>Signup</UMSUButton>
+        </a>
+        <a href={website} onClick={logAndRedirect(name, "website", website)}>
           <UMSUButton>Website</UMSUButton>
         </a>
-        <a href={umsu}>
+        <a href={umsu} onClick={logAndRedirect(name, "umsu", umsu)}>
           <UMSUButton>UMSU</UMSUButton>
         </a>
-        <a href={facebook}>
+        <a href={facebook} onClick={logAndRedirect(name, "facebook", facebook)}>
           <FacebookButton />
         </a>
       </ButtonWrapper>

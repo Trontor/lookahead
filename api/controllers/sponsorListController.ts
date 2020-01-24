@@ -12,6 +12,7 @@ interface ISponsor {
   umsu: string;
   tier: string;
   signup: string;
+  website: string;
   facebook: string;
   include: string[];
 }
@@ -36,7 +37,8 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
       facebook,
       signup,
       tier,
-      include
+      include,
+      website
     ] = row;
     // will store a list of subject code matching patterns
     let includeArray: string[] = [];
@@ -50,6 +52,7 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
       logoURL,
       description,
       umsu,
+      website,
       facebook,
       tier,
       signup,
@@ -66,4 +69,14 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
 export const getSponsors = async (req: Request, res: Response) => {
   const data = await getSponsorSheetData();
   res.send(processRawSponsorData(data));
+};
+
+export const logSponsors = async (req: Request, res: Response) => {
+  const { name } = req.body;
+  const { uuid } = req.query;
+  if (!uuid || !name) {
+    res.status(400).send("Unauthorized");
+    return;
+  }
+  res.sendStatus(200);
 };

@@ -17,7 +17,7 @@ export const SponsorCard = styled.div`
   @media screen and (min-width: 960px) {
     position: relative;
     width: 50%;
-    height: 200px;
+    height: 250px;
     margin-right: 10px;
 
     &:last-child {
@@ -26,11 +26,11 @@ export const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    height: calc(296px - 1vw);
+    height: calc(296px - 0vw);
   }
 
   @media screen and (min-width: 1080px) {
-    height: calc(280px - 2vw);
+    height: calc(296px - 0vw);
     max-width: 395px;
   }
 
