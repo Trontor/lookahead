@@ -104,9 +104,8 @@ const setupMorgan = (format: string, route: string) =>
       write: str => {
         if (process.env.NODE_ENV === "production") {
           logger.info(str.trim());
-        } else {
-          console.log(str);
         }
+        console.log(str);
       }
     }
   });
