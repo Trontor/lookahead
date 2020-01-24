@@ -8,15 +8,16 @@ export const SponsorCard = styled.div`
   color: ${props => props.theme.text};
   margin-bottom: 12px;
   box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  letter-spacing: -0.01em;
-  line-height: 1.16em;
+  letter-spacing: -0.02em;
+  line-height: 1.18em;
+  border-top: 8px solid gold;
 
   @media screen and (min-width: 960px) {
     position: relative;
     width: 50%;
-    height: 200px;
+    height: 250px;
     margin-right: 10px;
 
     &:last-child {
@@ -25,20 +26,20 @@ export const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    height: calc(260px - 1vw);
+    height: calc(296px - 0vw);
   }
 
   @media screen and (min-width: 1080px) {
-    height: calc(260px - 2vw);
+    height: calc(296px - 0vw);
     max-width: 395px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 210px;
+    height: 236px;
   }
 
   @media screen and (min-width: 1400px) {
-    height: 195px;
+    height: 208px;
   }
 `;
 

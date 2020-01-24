@@ -29,3 +29,8 @@ export const fetchClubList = () => {
       .catch(err => dispatch(getClubsFailure(err)));
   };
 };
+
+export const logClick = (name, item) => {
+  const logURL = "/sponsorlist/log";
+  return axios.post(logURL, { name, item });
+};

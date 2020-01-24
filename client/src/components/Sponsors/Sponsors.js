@@ -3,7 +3,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { fetchClubList } from "../../redux/actions/sponsorActions";
 import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 import GoldSilverSponsorCard from "./GoldSilverSponsorCard";
-import { SponsorHeading, SponsorWrapper } from "./SponsorStyles";
+import { SponsorWrapper } from "./SponsorStyles";
 
 export default function Sponsors() {
   const dispatch = useDispatch();
@@ -26,12 +26,12 @@ export default function Sponsors() {
   // }
   return (
     <>
-      {goldSilver.length - dismissedCount > 0 && (
+      {/* {goldSilver.length - dismissedCount > 0 && (
         <SponsorHeading>
           <i className="fas fa-icons" />
           Clubs and societies you may be interested in...
         </SponsorHeading>
-      )}
+      )} */}
       <SponsorWrapper>
         {goldSilver &&
           goldSilver.map(entry => {

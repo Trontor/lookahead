@@ -87,6 +87,9 @@ morgan.token("date", () => {
     .format("hh:mm");
 });
 
+morgan.token("sponsorname", req => req.body.name);
+morgan.token("clickitem", req => req.body.item);
+
 /**
  * Setup morgan logging to the rotating file stream
  * @param {string} format The morgan format string
@@ -97,7 +100,15 @@ const setupMorgan = (format: string, route: string) =>
     skip: (req, res) => {
       return req.baseUrl + req.path !== `/api/${route}`;
     },
-    stream: { write: str => logger.info(str.trim()) }
+    stream: {
+      write: str => {
+        if (process.env.NODE_ENV === "production") {
+          logger.info(str.trim());
+        } else {
+          console.log(str);
+        }
+      }
+    }
   });
 
 /**
@@ -107,6 +118,12 @@ const setupMorgan = (format: string, route: string) =>
 export const initialiseLogging = (app: Application) => {
   app.use(setupMorgan("[:date[web]] :id: [Subject] :subjectinfo ", "subject/"));
   app.use(setupMorgan("[:date[web]] :id: [List] :listinfo ", "subjectlist/"));
+  app.use(
+    setupMorgan(
+      "[:date[web]] :id: [SponsorClick] :sponsorname :clickitem ",
+      "sponsorlist/log"
+    )
+  );
   app.use(
     setupMorgan(
       "[:date[web]] :id: [Optimise] :optimiseinfo ",
