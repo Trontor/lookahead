@@ -26,12 +26,14 @@ export default function GoldSilverSponsorCard(props) {
     umsu,
     facebook,
     signup,
-    website
-    /* tier,
-    include */
+    website,
+    tier,
+    include
   } = props;
+  console.log(include);
+
   return (
-    <SponsorCard dismissed={dismissed}>
+    <SponsorCard dismissed={dismissed} tier={tier}>
       <DeleteButton
         onClick={() => {
           setDismissed(true);
