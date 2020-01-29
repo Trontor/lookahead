@@ -6,7 +6,6 @@ export const SponsorCard = styled.div`
   padding: 10px;
   background: ${props => props.theme.cardBg};
   color: ${props => props.theme.text};
-  margin-bottom: 12px;
   box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.05);
@@ -16,30 +15,31 @@ export const SponsorCard = styled.div`
 
   @media screen and (min-width: 960px) {
     position: relative;
-    width: 50%;
-    height: 260px;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    height: 250px;
   }
 
   @media screen and (min-width: 1024px) {
-    height: calc(320px - 5%);
+    height: calc(300px - 1vw);
   }
 
   @media screen and (min-width: 1080px) {
-    height: calc(324px - 15%);
-    max-width: 395px;
+    height: calc(300px - 1.5vw);
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
+    height: calc(280px - 2.5vw);
+  }
+
+  @media screen and (min-width: 1366px) {
+    height: 270px;
+  }
+
+  @media screen and (min-width: 1440px) {
     height: 260px;
   }
 
-  @media screen and (min-width: 1400px) {
-    height: 224px;
+  @media screen and (min-width: 1660px) {
+    height: 270px;
   }
 `;
 
@@ -61,7 +61,7 @@ export const UMSUButton = styled.button`
   display: inline-block;
   width: 62px;
   height: 25px;
-  margin: 0 6px 5px 0;
+  margin-right: 5px;
   border-radius: 3px;
   color: white;
   font-family: "Quicksand", sans-serif;
@@ -74,8 +74,8 @@ export const UMSUButton = styled.button`
     background-color: darkorchid;
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1200px) {
-    font-size: 10px;
+  @media screen and (min-width: 1024px) {
+    font-size: 9.5px;
     letter-spacing: 0.03em;
     width: auto;
     padding: auto 5px;
@@ -100,7 +100,6 @@ export const FacebookButton = styled(UMSUButton).attrs(() => ({
   }
 
   @media screen and (min-width: 1024px) and (max-width: 1200px) {
-    font-size: 10px;
     width: 22px;
     height: 22px;
   }
@@ -205,18 +204,27 @@ export const SponsorHeading = styled.h3`
 `;
 
 export const SponsorWrapper = styled.div`
-  margin: 0 10px 50x 10px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 10px 50px 10px;
+  display: grid;
+  grid-template-columns: 100%;
   font-size: 12px;
-  padding: 0 10px;
+  grid-gap: 10px;
 
   @media screen and (min-width: 960px) {
-    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @media screen and (min-width: 1024px) {
-    margin: 0;
-    padding: 0;
+    margin: 0 0px 50px 0px;
   }
+
+  @media screen and (min-width: 1366px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 1660px) {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1500px;
+  }
+
 `;

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { fetchClubList } from "../../redux/actions/sponsorActions";
-import { getCategorisedSponsors } from "../../utility/SponsorFilter";
+
 import GoldSilverSponsorCard from "./GoldSilverSponsorCard";
 import { SponsorWrapper } from "./SponsorStyles";
+import { fetchClubList } from "../../redux/actions/sponsorActions";
+import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 
 export default function Sponsors() {
   const dispatch = useDispatch();
