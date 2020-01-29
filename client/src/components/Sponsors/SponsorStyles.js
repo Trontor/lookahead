@@ -17,7 +17,7 @@ export const SponsorCard = styled.div`
   @media screen and (min-width: 960px) {
     position: relative;
     width: 50%;
-    height: 250px;
+    height: 260px;
     margin-right: 10px;
 
     &:last-child {
@@ -26,20 +26,20 @@ export const SponsorCard = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    height: calc(296px - 0vw);
+    height: calc(320px - 5%);
   }
 
   @media screen and (min-width: 1080px) {
-    height: calc(296px - 0vw);
+    height: calc(324px - 15%);
     max-width: 395px;
   }
 
   @media screen and (min-width: 1200px) {
-    height: 236px;
+    height: 260px;
   }
 
   @media screen and (min-width: 1400px) {
-    height: 208px;
+    height: 224px;
   }
 `;
 
@@ -48,6 +48,7 @@ export const ClubDescription = styled.div``;
 export const ButtonWrapper = styled.div`
   width: 100%;
   padding-top: 10px;
+  padding-right: 10px;
 
   @media screen and (min-width: 960px) {
     position: absolute;
@@ -58,10 +59,9 @@ export const ButtonWrapper = styled.div`
 export const UMSUButton = styled.button`
   cursor: pointer;
   display: inline-block;
-  width: 64px;
-  height: 26px;
-  margin-right: 10px;
-  padding: 5px 10px;
+  width: 62px;
+  height: 25px;
+  margin: 0 6px 5px 0;
   border-radius: 3px;
   color: white;
   font-family: "Quicksand", sans-serif;
@@ -73,6 +73,14 @@ export const UMSUButton = styled.button`
   &:hover {
     background-color: darkorchid;
   }
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px) {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    width: auto;
+    padding: auto 5px;
+    height: 22px;
+  }
 `;
 
 export const FacebookButton = styled(UMSUButton).attrs(() => ({
@@ -80,13 +88,21 @@ export const FacebookButton = styled(UMSUButton).attrs(() => ({
 }))`
   font-family: "Font Awesome 5 Brands";
   font-size: 12px;
-  padding-top: 7px;
-  padding-bottom: 7px;
   background-color: #3b5998;
-  width: 26px;
+  width: 25px;
+
+  ::before {
+    margin-left: 1px;
+  }
 
   &:hover {
     background-color: dodgerblue;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1200px) {
+    font-size: 10px;
+    width: 22px;
+    height: 22px;
   }
 `;
 
