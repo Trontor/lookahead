@@ -9,16 +9,19 @@ import { getCategorisedSponsors } from "../../utility/SponsorFilter";
 export default function Sponsors() {
   const dispatch = useDispatch();
   const sponsors = useSelector(state => state.sponsors, shallowEqual);
-  // const optimiser = useSelector(
-  //   state => state.optimiser,
-  //   (left, right) => left.timetables.length === right.timetables.length
-  // );
+  const [goldSilver, setGoldSilver] = useState([]);
+  const optimiser = useSelector(
+    state => state.optimiser,
+    (left, right) => left.timetables.length === right.timetables.length
+  );
   const [dismissedCount, setDismissedCount] = useState(0);
   useEffect(() => {
     dispatch(fetchClubList());
   }, [dispatch]);
-  // Filter sponsors by currently entered subjects
-  const { goldSilver } = getCategorisedSponsors(sponsors);
+
+  useEffect(() => {
+    setGoldSilver(getCategorisedSponsors(sponsors).goldSilver);
+  }, [optimiser.timetables, sponsors]);
   // const { timetables } = optimiser;
   // const showSponsors =
   //   timetables && timetables.length !== 0 && timetables[0].classList;
