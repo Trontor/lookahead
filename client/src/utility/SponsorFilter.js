@@ -10,7 +10,10 @@ export const getCategorisedSponsors = ({ sponsors }) => {
   for (const sponsor of sponsors) {
     const { tier, include } = sponsor;
     if (tier === GOLD) {
-      goldSilver.push(sponsor);
+      // Adds randomness to the gold tier sponsors, so that no specific sponsor always appears first
+      Math.random() < 0.5
+        ? goldSilver.push(sponsor)
+        : goldSilver.unshift(sponsor);
       continue;
     }
     if (!include) {
