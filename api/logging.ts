@@ -16,6 +16,7 @@ const stream = rfs("access.log", {
 const s3_stream = new S3StreamLogger({
   bucket: "lookahead-rohyl",
   name_format: "%d-%m-%Y",
+  upload_every: 1314000, // based on 2000 request limit on AWS free tier for S3
   access_key_id: process.env.AWS_ACCESS_KEY_ID,
   secret_access_key: process.env.AWS_SECRET_ACCESS_KEY,
   rotate_every: 86400000 /* every day */
