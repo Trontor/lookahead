@@ -5,8 +5,6 @@ let goldCache = [];
 export const getCategorisedSponsors = ({ sponsors }) => {
   const goldSilver = [...goldCache];
   const isCached = goldCache.length !== 0;
-  console.log("CACHED:", isCached, goldSilver, goldCache);
-
   const bronze = [];
   const subjects = store.getState().subjects;
   const subjectCodes = Object.keys(subjects);
