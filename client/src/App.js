@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Planner from "./components/Planner";
+import Planner from "./components/Route-Planner/Planner";
 import Header from "./components/Header/Header";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import smoothscroll from "smoothscroll-polyfill";
+import { ViewSaved } from "./components/Route-View-Saved/ViewSaved";
 
 // kick off the polyfill!
 smoothscroll.polyfill();
@@ -62,6 +63,7 @@ export default () => {
         <GlobalStyle />
         <Header />
         <Route path="/" exact component={Planner} />
+        <Route path="/view/:id" exact component={ViewSaved} />
       </Router>
     </ThemeProvider>
   );
