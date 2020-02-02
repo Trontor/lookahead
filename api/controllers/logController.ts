@@ -20,6 +20,10 @@ export const getLatestLog = async (req: Request, res: Response) => {
   if (!validHistory) {
     history = "0";
   }
+  objects.Contents.sort(
+    (a, b) => b.LastModified.getTime() - a.LastModified.getTime()
+  ).reverse();
+
   const latestLogKey =
     objects.Contents[objects.Contents.length - parseInt(history) - 1].Key;
   const logData = await s3

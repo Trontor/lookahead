@@ -33,10 +33,11 @@ export default function TimetableHeaderControl(props) {
     <HeaderWrapper tabIndex="1" {...ArrowKeysReact.events}>
       <NavigationButtonWrapper left>
         <NavigationButton
+          fixed
           disabled={current === 1}
           onClick={() => dispatch(firstTimetable())}
           left
-          style={{ width: "10px", marginRight: "5px" }}
+          style={{ width: "25px", marginRight: "5px" }}
         >
           <i class="fas fa-angle-double-left"></i>
         </NavigationButton>
@@ -54,6 +55,7 @@ export default function TimetableHeaderControl(props) {
           <i className="fa fa-arrow-right" />
         </NavigationButton>
         <NavigationButton
+          fixed
           disabled={current === 1}
           onClick={() => dispatch(lastTimetable())}
           left

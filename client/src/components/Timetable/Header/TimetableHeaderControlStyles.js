@@ -31,7 +31,7 @@ export const NavigationButton = styled.button`
   cursor: pointer;
   border-radius: 3px;
   color: #f9f9f9;
-  flex-grow: 1;
+  flex-grow: ${props => (props.fixed ? 0 : 1)};
   background-color: ${props => props.theme.secondary};
   padding: 6px 5px;
   border: none;
