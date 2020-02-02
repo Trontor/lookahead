@@ -10,6 +10,8 @@ import {
   UPDATE_CUSTOM_TIMETABLE,
   UPDATE_TIMETABLE,
   VIEW_CUSTOM_TIMETABLES,
+  LAST_TIMETABLE,
+  FIRST_TIMETABLE,
   VIEW_GENERATED_TIMETABLES
 } from "../actionTypes";
 
@@ -132,6 +134,24 @@ export default (state = initialState, action) => {
       });
       if (state.currentIndex - 1 >= 0) {
         return { ...state, currentIndex: state.currentIndex - 1 };
+      }
+      return state;
+    case LAST_TIMETABLE:
+      ReactGA.event({
+        category: "Timetables",
+        action: "Last Timetable"
+      });
+      if (state.timetables.length > 0) {
+        return { ...state, currentIndex: state.timetables.length - 1 };
+      }
+      return state;
+    case FIRST_TIMETABLE:
+      ReactGA.event({
+        category: "Timetables",
+        action: "First Timetable"
+      });
+      if (state.timetables.length > 0) {
+        return { ...state, currentIndex: 0 };
       }
       return state;
     case BEGIN_OPTIMISATION:

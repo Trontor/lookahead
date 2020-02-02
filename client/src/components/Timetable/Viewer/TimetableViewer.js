@@ -20,10 +20,13 @@ import TimetableHeaderControl from "../Header/TimetableHeaderControl";
 import NoTimetables from "../NoTimetables/NoTimetables";
 import TimetableTips from "../Tips/TimetableTips";
 import TimetableViewerWrapper from "./TimetableViewerStyles";
-import ClassModal from "../ClassModal/ClassModal";
+import {
+  serializeEvents,
+  deserializeEvents
+} from "../../../utility/TimetableSerialization";
+import { Timetable } from "./Timetable";
 
-let modalEvent = null;
-export default function TimetableViewer() {
+export default function TimetableViewer({ disableControls, showTips }) {
   const optimiser = useSelector(state => state.optimiser);
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
@@ -36,7 +39,6 @@ export default function TimetableViewer() {
     currentView,
     reserved
   } = optimiser;
-  const [modalIsOpen, setModalOpen] = useState(false);
   const viewerRef = useRef(null);
   // Check if any subject has a class on the weekend
   const hasWeekendClasses = Object.entries(subjects).some(
@@ -88,15 +90,6 @@ export default function TimetableViewer() {
     }, 100);
   }, [timetables]);
 
-  const showEvent = event => {
-    if (event.background) {
-      return;
-    }
-    modalEvent = event;
-    console.log("Showing:", modalEvent);
-    setModalOpen(true);
-  };
-
   if (!timetables || (timetables.length === 1 && !timetables[0].classList)) {
     return <NoTimetables hasSubjects={Object.keys(subjects).length > 0} />;
   }
@@ -110,60 +103,16 @@ export default function TimetableViewer() {
     headerText = customTimetables[currentCustomIndex].name;
   }
 
-  console.log("Modal Event:", modalEvent);
+  console.log("Showing timetable", serializeEvents(timetable.regularEvents));
 
   return (
     <>
-      <TimetableTips ref={viewerRef} />
-      <TimetableHeaderControl header={headerText} />
+      {!showTips && <TimetableTips ref={viewerRef} />}
+      {!disableControls && <TimetableHeaderControl header={headerText} />}
       {/* <CustomTimetableControl /> */}
       <TimetableViewerWrapper>
-        <FullCalendar
-          defaultView="timeGridWeek"
-          height="parent"
-          plugins={[timeGridPlugin, interactionPlugin]}
-          weekends={hasWeekendClasses}
-          slotLabelFormat={{
-            hour: "numeric",
-            minute: "2-digit",
-            omitZeroMinute: true,
-            hour12: false,
-            meridiem: "narrow"
-          }}
-          events={events}
-          eventClick={eInfo => handleEventClick(eInfo, showEvent)}
-          select={handleSelect}
-          eventDrop={handleEventDrop}
-          eventDragStart={({ event }) => handleEventDragStart(events, event)}
-          eventAllow={(dropLocation, draggedEvent) =>
-            handleEventAllow(dropLocation, draggedEvent, events)
-          }
-          eventDragStop={({ event }) => handleEventDragStop(events, event)}
-          eventPositioned={handleClassRender}
-          header={false}
-          handleWindowResize={true}
-          contentHeight="auto"
-          selectable={true}
-          columnHeaderFormat={{ weekday: "short" }}
-          minTime="08:00:00"
-          maxTime="22:30:00"
-          snapDuration="00:15"
-          firstDay={1}
-          editable={true}
-          slotEventOverlap={false}
-          allDaySlot={false}
-          eventResourceEditable={true}
-        />
+        <Timetable weekendClasses={hasWeekendClasses} events={events} />
       </TimetableViewerWrapper>
-
-      {modalEvent && (
-        <ClassModal
-          isOpen={modalIsOpen}
-          closeModal={() => setModalOpen(false)}
-          color={modalEvent.backgroundColor}
-          {...modalEvent.extendedProps}
-        />
-      )}
     </>
   );
 }

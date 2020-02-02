@@ -3,11 +3,14 @@ import { useDispatch } from "react-redux";
 import {
   HeaderWrapper,
   NavigationButton,
-  TimetableCount
+  TimetableCount,
+  NavigationButtonWrapper
 } from "./TimetableHeaderControlStyles";
 import {
   nextTimetable,
-  previousTimetable
+  previousTimetable,
+  lastTimetable,
+  firstTimetable
 } from "../../../redux/actions/optimiserActions";
 import ArrowKeysReact from "arrow-keys-react";
 
@@ -28,17 +31,37 @@ export default function TimetableHeaderControl(props) {
 
   return (
     <HeaderWrapper tabIndex="1" {...ArrowKeysReact.events}>
-      <NavigationButton
-        disabled={current === 1}
-        onClick={() => dispatch(previousTimetable())}
-        left
-      >
-        <i className="fa fa-arrow-left" />
-      </NavigationButton>
+      <NavigationButtonWrapper left>
+        <NavigationButton
+          disabled={current === 1}
+          onClick={() => dispatch(firstTimetable())}
+          left
+          style={{ width: "10px", marginRight: "5px" }}
+        >
+          <i class="fas fa-angle-double-left"></i>
+        </NavigationButton>
+        <NavigationButton
+          disabled={current === 1}
+          onClick={() => dispatch(previousTimetable())}
+          left
+        >
+          <i className="fa fa-arrow-left" />
+        </NavigationButton>
+      </NavigationButtonWrapper>
       <TimetableCount>{header}</TimetableCount>
-      <NavigationButton onClick={() => dispatch(nextTimetable())} right>
-        <i className="fa fa-arrow-right" />
-      </NavigationButton>
+      <NavigationButtonWrapper right>
+        <NavigationButton onClick={() => dispatch(nextTimetable())} right>
+          <i className="fa fa-arrow-right" />
+        </NavigationButton>
+        <NavigationButton
+          disabled={current === 1}
+          onClick={() => dispatch(lastTimetable())}
+          left
+          style={{ width: "25px", marginLeft: "5px" }}
+        >
+          <i class="fas fa-angle-double-right"></i>
+        </NavigationButton>
+      </NavigationButtonWrapper>
     </HeaderWrapper>
   );
 }

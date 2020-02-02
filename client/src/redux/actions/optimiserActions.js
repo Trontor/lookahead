@@ -10,7 +10,9 @@ import {
   UPDATE_CUSTOM_TIMETABLE,
   ADD_RESERVED,
   REMOVE_RESERVED,
-  FAIL_OPTIMISATION
+  FAIL_OPTIMISATION,
+  LAST_TIMETABLE,
+  FIRST_TIMETABLE
 } from "../actionTypes";
 
 import axios from "axios";
@@ -22,6 +24,14 @@ export const nextTimetable = () => dispatch => {
 
 export const previousTimetable = () => dispatch => {
   dispatch({ type: PREVIOUS_TIMETABLE });
+};
+
+export const lastTimetable = () => dispatch => {
+  dispatch({ type: LAST_TIMETABLE });
+};
+
+export const firstTimetable = () => dispatch => {
+  dispatch({ type: FIRST_TIMETABLE });
 };
 
 export const createCustomTimetable = (name, timetable) => dispatch => {

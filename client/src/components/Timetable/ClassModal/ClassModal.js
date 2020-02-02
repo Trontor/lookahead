@@ -28,6 +28,7 @@ export default function ClassModal(props) {
 
   return (
     <StyledModal
+      ariaHideApp={false}
       style={{
         overlay: { zIndex: 10, backgroundColor: "rgba(0, 0, 0, 0.75)" }
       }}
@@ -39,10 +40,10 @@ export default function ClassModal(props) {
       <CloseButton onClick={closeModal}>×</CloseButton>
       <ModalHeader>
         {codes.map(code => (
-          <>
+          <React.Fragment key={code}>
             {code}
             <br />
-          </>
+          </React.Fragment>
         ))}
       </ModalHeader>
       <SubjectInfo>
@@ -68,10 +69,10 @@ export default function ClassModal(props) {
       <SubjectInfo>
         <SubjectAttribute>Locations: </SubjectAttribute>
         {locations.map(loc => (
-          <>
+          <React.Fragment key={loc}>
             {loc}
             <br />
-          </>
+          </React.Fragment>
         ))}
       </SubjectInfo>
     </StyledModal>

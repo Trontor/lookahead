@@ -18,19 +18,23 @@ export const HeaderWrapper = styled.div`
 export const TimetableCount = styled.span`
   font-weight: bold;
 `;
-
-export const NavigationButton = styled.button`
-  position: absolute;
-  cursor: pointer;
-  max-width: 75px;
-  border-radius: 3px;
-  color: #f9f9f9;
-  background-color: ${props => props.theme.secondary};
-  padding: 6px 5px;
+export const NavigationButtonWrapper = styled.div`
   width: 100%;
-  border: none;
+  display: inline-flex;
+  max-width: 150px;
+  position: absolute;
   left: ${({ left }) => (left ? 0 : "auto")};
   right: ${({ right }) => (right ? 0 : "auto")};
+`;
+
+export const NavigationButton = styled.button`
+  cursor: pointer;
+  border-radius: 3px;
+  color: #f9f9f9;
+  flex-grow: 1;
+  background-color: ${props => props.theme.secondary};
+  padding: 6px 5px;
+  border: none;
 
   :disabled {
     display: none;
