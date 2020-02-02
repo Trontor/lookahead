@@ -26,12 +26,14 @@ export default function GoldSilverSponsorCard(props) {
     umsu,
     facebook,
     signup,
-    website
-    /* tier,
-    include */
+    website,
+    tier,
+    include
   } = props;
+  console.log(include);
+
   return (
-    <SponsorCard dismissed={dismissed}>
+    <SponsorCard dismissed={dismissed} tier={tier}>
       <DeleteButton
         onClick={() => {
           setDismissed(true);
@@ -45,18 +47,29 @@ export default function GoldSilverSponsorCard(props) {
       </LogoWrapper>
       <ClubDescription>{description}</ClubDescription>
       <ButtonWrapper>
-        <a href={signup} onClick={logAndRedirect(name, "signup", signup)}>
-          <UMSUButton>Signup</UMSUButton>
-        </a>
-        <a href={website} onClick={logAndRedirect(name, "website", website)}>
-          <UMSUButton>Website</UMSUButton>
-        </a>
-        <a href={umsu} onClick={logAndRedirect(name, "umsu", umsu)}>
-          <UMSUButton>UMSU</UMSUButton>
-        </a>
-        <a href={facebook} onClick={logAndRedirect(name, "facebook", facebook)}>
-          <FacebookButton />
-        </a>
+        {signup && (
+          <a href={signup} onClick={logAndRedirect(name, "signup", signup)}>
+            <UMSUButton>Signup</UMSUButton>
+          </a>
+        )}
+        {website && (
+          <a href={website} onClick={logAndRedirect(name, "website", website)}>
+            <UMSUButton>Website</UMSUButton>
+          </a>
+        )}
+        {umsu && (
+          <a href={umsu} onClick={logAndRedirect(name, "umsu", umsu)}>
+            <UMSUButton>UMSU</UMSUButton>
+          </a>
+        )}
+        {facebook && (
+          <a
+            href={facebook}
+            onClick={logAndRedirect(name, "facebook", facebook)}
+          >
+            <FacebookButton />
+          </a>
+        )}
       </ButtonWrapper>
     </SponsorCard>
   );

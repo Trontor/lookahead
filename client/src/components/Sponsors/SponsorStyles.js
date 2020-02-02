@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { GOLD } from "../../utility/SponsorTiers";
 
 export const SponsorCard = styled.div`
   display: ${props => (props.dismissed ? "none" : "flex")};
@@ -11,7 +12,8 @@ export const SponsorCard = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.05);
   letter-spacing: -0.02em;
   line-height: 1.18em;
-  border-top: 8px solid gold;
+  border-top: ${props =>
+    props.tier === GOLD ? "8px solid gold" : "8px solid silver"};
 
   @media screen and (min-width: 960px) {
     position: relative;
@@ -226,5 +228,4 @@ export const SponsorWrapper = styled.div`
     grid-template-columns: repeat(5, 1fr);
     max-width: 1500px;
   }
-
 `;
