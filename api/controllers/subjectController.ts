@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import {
   cacheSubject,
-  getCachedSubject
+  getCachedSubject,
 } from "../../subject-utils/SubjectCacher";
 import { scrapeSubject } from "../../subject-utils/SubjectClassScraper";
 import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
@@ -10,9 +10,9 @@ import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
  * Serves an appropriate subject list file given a year and study period.
  */
 export const getSubject = async (req: Request, res: Response) => {
-  const year = req.query.year.trim();
-  const period = req.query.period.trim();
-  const code = req.query.code.trim();
+  const year = parseInt((req.query.year as string).trim());
+  const period = (req.query.period as string).trim() as SubjectPeriod;
+  const code = (req.query.code as string).trim();
 
   // check cache
   const cachedSubject = await getCachedSubject(year, period, code);

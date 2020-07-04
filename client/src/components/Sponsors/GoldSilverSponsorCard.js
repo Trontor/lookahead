@@ -12,9 +12,14 @@ import {
 import { logClick } from "../../redux/actions/sponsorActions";
 
 const logAndRedirect = (name, item, destination) => e => {
+  const controlPressed = e.ctrlKey;
   e.preventDefault();
   logClick(name, item).then(_ => {
-    document.location.href = destination;
+    if (!controlPressed) {
+      document.location.href = destination;
+    } else {
+      window.open(destination);
+    }
   });
 };
 export default function GoldSilverSponsorCard(props) {

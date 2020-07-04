@@ -206,7 +206,7 @@ export const SponsorHeading = styled.h3`
 `;
 
 export const SponsorWrapper = styled.div`
-  margin: 0 10px 50px 10px;
+  margin: 0 10px 20px 10px;
   display: grid;
   grid-template-columns: 100%;
   font-size: 12px;
@@ -216,8 +216,8 @@ export const SponsorWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media screen and (min-width: 1024px) {
-    margin: 0 0px 50px 0px;
+  @media screen and (max-width: 1024px) {
+    margin: 0 0px 0 0px;
   }
 
   @media screen and (min-width: 1366px) {
