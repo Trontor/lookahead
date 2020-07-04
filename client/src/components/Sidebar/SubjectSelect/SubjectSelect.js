@@ -11,7 +11,7 @@ import setupLogRocketReact from "logrocket-react";
 
 let LogRocketInitialised = false;
 
-const CURRENT_STUDY_PERIOD_INDEX = 1;
+const CURRENT_STUDY_PERIOD_INDEX = new Date().getMonth() <= 5 ? 1 : 3; // Switch to Semester 2 from July onwards
 const CURRENT_SUBJECT_LIST_YEAR = 2020;
 const studyPeriods = [
   { value: "summer_term", label: "Summer 2020", year: "2020" },
@@ -22,12 +22,12 @@ const studyPeriods = [
   { value: "february", label: "February", year: "2020" },
   { value: "march", label: "March", year: "2020" },
   { value: "april", label: "April", year: "2020" },
-  { value: "may", label: "May", year: "2020" }
+  { value: "may", label: "May", year: "2020" },
 ];
 
-const SubjectSelect = props => {
+const SubjectSelect = (props) => {
   // Redux hooks
-  const subjectLists = useSelector(state => state.subjectLists, true);
+  const subjectLists = useSelector((state) => state.subjectLists, true);
   const dispatch = useDispatch();
   // React hooks
   const [selectedStudyPeriod, setSelectedStudyPeriod] = useState(
@@ -60,13 +60,13 @@ const SubjectSelect = props => {
   const currentList = subjectLists.lists[selectedStudyPeriod.value];
 
   // Filters input to provide relevant subjects
-  const filterSubjects = inputValue => {
+  const filterSubjects = (inputValue) => {
     if (!currentList) {
       return [];
     } else if (!inputValue) {
       return currentList;
     }
-    const returnList = currentList.filter(i => {
+    const returnList = currentList.filter((i) => {
       return (
         i.code.toLowerCase().includes(inputValue.toLowerCase().trim()) ||
         i.value.toLowerCase().includes(inputValue.toLowerCase().trim())
@@ -86,7 +86,7 @@ const SubjectSelect = props => {
     callback(filterSubjects(inputValue));
   };
   // Determines what message to display if there are no options provided
-  const noOptionsMessage = inputValue => {
+  const noOptionsMessage = (inputValue) => {
     const optionLength = filterSubjects(inputValue);
     // Filter returned 'undefined', so we need more text!
     if (optionLength.length) {
@@ -101,34 +101,34 @@ const SubjectSelect = props => {
       return null;
     }
   };
-  const applySelectTheme = theme => {
+  const applySelectTheme = (theme) => {
     return {
       ...theme,
-      borderRadius: "3px"
+      borderRadius: "3px",
     };
   };
   const customStyles = {
-    input: provided => ({
+    input: (provided) => ({
       ...provided,
       fontSize: "12px",
-      color: props.theme.color
+      color: props.theme.color,
     }),
-    placeholder: provided => ({
+    placeholder: (provided) => ({
       ...provided,
       fontSize: "12px",
-      color: props.theme.color
+      color: props.theme.color,
     }),
-    menu: base => ({
+    menu: (base) => ({
       ...base,
       zIndex: 100,
-      marginTop: "2px"
+      marginTop: "2px",
     }),
     option: (provided, { data, isDisabled, isFocused, isSelected }) => ({
       ...provided,
       backgroundColor: isFocused ? "lightsteelblue" : null,
       color: isFocused ? "#62656E" : null,
       fontSize: "13px",
-      height: "100%"
+      height: "100%",
     }),
     singleValue: (provided, state) => {
       const opacity = state.isDisabled ? 0.5 : 1;
@@ -138,9 +138,9 @@ const SubjectSelect = props => {
         color: props.theme.color,
         opacity,
         transition,
-        fontSize: "12px"
+        fontSize: "12px",
       };
-    }
+    },
   };
 
   const handleSubjectSelect = ({ code, value }) => {
@@ -166,7 +166,7 @@ const SubjectSelect = props => {
         styles={customStyles}
         className="study-period-select"
         value={selectedStudyPeriod}
-        onChange={option => setSelectedStudyPeriod(option)}
+        onChange={(option) => setSelectedStudyPeriod(option)}
         options={studyPeriods}
         theme={applySelectTheme}
       />
@@ -182,7 +182,7 @@ const SubjectSelect = props => {
         defaultOptions
         isDisabled={subjectLists.loading}
         onChange={handleSubjectSelect}
-        noOptionsMessage={obj => noOptionsMessage(obj.inputValue)}
+        noOptionsMessage={(obj) => noOptionsMessage(obj.inputValue)}
       />
     </SelectContainer>
   );

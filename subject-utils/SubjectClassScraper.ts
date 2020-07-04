@@ -52,11 +52,7 @@ export const parseSubject = (
   $(".cyon_table > tbody > tr").each((_, element) => {
     const children = $(element).children();
     // Helper method to parse table cell text
-    const getChild = (index: number) =>
-      children
-        .eq(index)
-        .text()
-        .trim();
+    const getChild = (index: number) => children.eq(index).text().trim();
     const classCode = getChild(0);
     const isWellFormedCode = SubjectClass.isWellFormedCode(classCode);
     if (!isWellFormedCode) {
@@ -131,7 +127,7 @@ const parseWeeks = (rawWeeks: string): number[] => {
   // ["10‑16","18‑22"]
   const weekParts = rawWeeks.split(",");
   const parsedWeeks: number[] = [];
-  weekParts.forEach(part => {
+  weekParts.forEach((part) => {
     // Note: This is a non-breaking hypen, not a regular hypen!
     const nonBreakingHypen = "‑";
     // If the part ("10-16") contains a hyphen
@@ -189,8 +185,3 @@ export const subjectPeriodToShortCode = (period: SubjectPeriod) => {
       return "MAY";
   }
 };
-
-// scrapeSubject(2019, SubjectPeriod.Semester_1, "SWEN20003");
-// scrapeSubject(2019, SubjectPeriod.Semester_1, "COMP20007").then(subject =>
-//   console.log(JSON.stringify(subject))
-// );

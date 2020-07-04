@@ -1,42 +1,34 @@
-import express, { Application } from "express";
-import fs from "fs";
+import { Application, Request } from "express";
 import moment from "moment-timezone";
 import morgan from "morgan";
-import path from "path";
-import rfs from "rotating-file-stream";
 import winston from "winston";
 const S3StreamLogger = require("s3-streamlogger").S3StreamLogger;
-
-// create a rotating write stream
-const stream = rfs("access.log", {
-  interval: "1d", // rotate daily
-  path: path.join(__dirname, "../log")
-});
 
 const s3_stream = new S3StreamLogger({
   bucket: "lookahead-rohyl",
   name_format: "%d-%m-%Y",
-  upload_every: 1314000, // based on 2000 request limit on AWS free tier for S3
+  upload_every: 43200000, // based on 2000 request limit on AWS free tier for S3
   access_key_id: process.env.AWS_ACCESS_KEY_ID,
   secret_access_key: process.env.AWS_SECRET_ACCESS_KEY,
-  rotate_every: 86400000 /* every day */
+  rotate_every: 86400000 /* every day */,
 });
+
 var transport = new winston.transports.Stream({
-  stream: s3_stream
+  stream: s3_stream,
 });
 
 var logger = winston.createLogger({
-  transports: [transport]
+  transports: [transport],
 });
 
 /**
  * Retrieve the UUID of the incoming request
  */
-morgan.token("id", req => {
+morgan.token("id", (req: Request) => {
   if (!req.query.uuid) {
     return "no user id";
   }
-  return req.query.uuid;
+  return req.query.uuid as string;
 });
 
 /**
@@ -44,26 +36,31 @@ morgan.token("id", req => {
  */
 morgan.token(
   "subjectinfo",
-  req => `${req.query.code} (${req.query.year}) (${req.query.period})`
+  (req: Request) =>
+    `${req.query.code} (${req.query.year}) (${req.query.period})`
 );
 
 /**
  * Format subject list retrieval query
  */
-morgan.token("listinfo", req => `${req.query.year} - ${req.query.period}`);
+morgan.token(
+  "listinfo",
+  (req: Request) => `${req.query.year} - ${req.query.period}`
+);
 
 /**
  * Format optimise query
  */
 morgan.token(
   "optimiseinfo",
-  req =>
+  (req: Request) =>
     `(${req.body.subjects.join(", ")}) Generated ${
       req.body.generated
     } timetables in ${Math.round(req.body.time) / 1000} seconds. Min: ${
       req.body.earliest
-    }, Max: ${req.body.latest}. ${req.body.optimisations &&
-      formatOptimisations(req.body.optimisations)}`
+    }, Max: ${req.body.latest}. ${
+      req.body.optimisations && formatOptimisations(req.body.optimisations)
+    }`
 );
 
 /**
@@ -83,13 +80,11 @@ const formatOptimisations = (arr: object[]): string =>
  * Get current time in Melbourne
  */
 morgan.token("date", () => {
-  return moment()
-    .tz("Australia/Melbourne")
-    .format("hh:mm");
+  return moment().tz("Australia/Melbourne").format("hh:mm");
 });
 
-morgan.token("sponsorname", req => req.body.name);
-morgan.token("clickitem", req => req.body.item);
+morgan.token("sponsorname", (req: Request) => req.body.name);
+morgan.token("clickitem", (req: Request) => req.body.item);
 
 /**
  * Setup morgan logging to the rotating file stream
@@ -98,17 +93,17 @@ morgan.token("clickitem", req => req.body.item);
  */
 const setupMorgan = (format: string, route: string) =>
   morgan(format, {
-    skip: (req, res) => {
+    skip: (req: Request, _) => {
       return req.baseUrl + req.path !== `/api/${route}`;
     },
     stream: {
-      write: str => {
+      write: (str) => {
         if (process.env.NODE_ENV === "production") {
           logger.info(str.trim());
         }
         console.log(str);
-      }
-    }
+      },
+    },
   });
 
 /**

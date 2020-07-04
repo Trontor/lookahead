@@ -16,16 +16,22 @@ export const getLatestLog = async (req: Request, res: Response) => {
     return;
   }
   const validHistory =
-    history !== undefined && objects.Contents.length - parseInt(history) > 0;
+    history !== undefined &&
+    objects.Contents.length - parseInt(history as string) > 0;
   if (!validHistory) {
     history = "0";
   }
+  objects.Contents.sort(
+    (a, b) => b.LastModified.getTime() - a.LastModified.getTime()
+  ).reverse();
+
   const latestLogKey =
-    objects.Contents[objects.Contents.length - parseInt(history) - 1].Key;
+    objects.Contents[objects.Contents.length - parseInt(history as string) - 1]
+      .Key;
   const logData = await s3
     .getObject({
       Bucket: "lookahead-rohyl",
-      Key: latestLogKey
+      Key: latestLogKey,
     })
     .promise();
   res.set("Content-Type", "text/plain");
