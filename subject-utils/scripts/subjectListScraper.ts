@@ -20,7 +20,7 @@ export class SubjectInfo {
   constructor(code: string, name: string, offered: SubjectPeriod[]) {
     this.code = code;
     this.name = name;
-    this.offered = offered.filter(subjectPeriod => subjectPeriod != null);
+    this.offered = offered.filter((subjectPeriod) => subjectPeriod != null);
   }
 }
 
@@ -50,74 +50,8 @@ const getPageCount = async (baseURL: BaseURL) => {
  * @param url The base url to search with
  * @param page The search result page to search
  */
-const scrapePage = async (
-  url: BaseURL,
-  page: number
-): Promise<SubjectInfo[]> => {
-  const pageURL: string = `${url}&page=${page}`;
-  const pageHTML = await getHTML(pageURL);
-  const pageSubjects: SubjectInfo[] = [];
-  const $ = cheerio.load(pageHTML);
-  // The subject list parent element
-  const list = $(".search-results__accordion > li");
-  // Loop through the list and store subject information
-  list.each((index, element) => {
-    const code = $(element)
-      .find(".search-results__accordion-code")
-      .text()
-      .trim();
-    const name = $(element)
-      .find(".search-results__accordion-title")
-      .text()
-      .replace(code, "")
-      .trim();
-    const details = $(element)
-      .find(".search-results__accordion-detail")
-      .text()
-      .trim();
-    const leftBound = "Offered:";
-    const rightBound = "Year:";
-    const offered = details.substring(
-      details.lastIndexOf(leftBound) + leftBound.length,
-      details.lastIndexOf(rightBound)
-    );
-    const subjectPeriods: SubjectPeriod[] = offered.split(",").map(item => {
-      item = item.trim();
-      switch (item) {
-        case "Semester 1":
-          return SubjectPeriod.Semester_1;
-        case "Semester 2":
-          return SubjectPeriod.Semester_2;
-        case "Winter Term":
-          return SubjectPeriod.Winter_Term;
-        case "Summer Term":
-          return SubjectPeriod.Summer_Term;
-        case "January":
-          return SubjectPeriod.January;
-        case "February":
-          return SubjectPeriod.February;
-        case "March":
-          return SubjectPeriod.March;
-        case "April":
-          return SubjectPeriod.April;
-        case "May":
-          return SubjectPeriod.May;
-        default:
-          // console.log("Unknown Offering Period:" + item);
-          return;
-      }
-    });
-    pageSubjects.push(new SubjectInfo(code, name, subjectPeriods));
-  });
-  return pageSubjects;
-};
-
-/**
- * Parses subjects on a given page provided a base search URL
- * @param url The base url to search with
- * @param page The search result page to search
- */
-const scrapePageNew = async (
+const scrapeSearchResultsPage = async (
+  year: number,
   url: BaseURL,
   page: number
 ): Promise<SubjectInfo[]> => {
@@ -129,10 +63,7 @@ const scrapePageNew = async (
   const list = $(".search-results__list > li");
   // Loop through the list and store subject information
   list.each((index, element) => {
-    const code = $(element)
-      .find(".search-result-item__code")
-      .text()
-      .trim();
+    const code = $(element).find(".search-result-item__code").text().trim();
     const name = $(element)
       .find(".search-result-item__name > h3")
       .text()
@@ -143,20 +74,26 @@ const scrapePageNew = async (
       .text()
       .trim();
 
-    const leftBound = "Offered:";
-    const rightBound = "2020";
+    const leftBound = "Offered";
+    const rightBound = year.toString();
     const offered = details.substring(
       details.lastIndexOf(leftBound) + leftBound.length,
       details.lastIndexOf(rightBound)
     );
     const subjectPeriods: SubjectPeriod[] = offered
+      .trim()
       .split(",")
-      .map(item => {
+      .filter((s) => s.trim() !== "")
+      .map((item) => {
         item = item.trim();
         switch (item) {
           case "Semester 1":
+          case "Semester 1 (Early-Start)":
+          case "Semester 1 (Extended)":
             return SubjectPeriod.Semester_1;
           case "Semester 2":
+          case "Semester 2 (Early-Start)":
+          case "Semester 2 (Extended)":
             return SubjectPeriod.Semester_2;
           case "Winter Term":
             return SubjectPeriod.Winter_Term;
@@ -172,12 +109,26 @@ const scrapePageNew = async (
             return SubjectPeriod.April;
           case "May":
             return SubjectPeriod.May;
+          case "June":
+            return SubjectPeriod.June;
+          case "July":
+            return SubjectPeriod.June;
+          case "August":
+            return SubjectPeriod.August;
+          case "September":
+            return SubjectPeriod.September;
+          case "October":
+            return SubjectPeriod.October;
+          case "November":
+            return SubjectPeriod.November;
           default:
-            // console.log("Unknown Offering Period:" + item);
+            console.log(
+              `Subject: ${code} has an unknown offering period: ${item} `
+            );
             return;
         }
       })
-      .filter(p => p !== undefined);
+      .filter((p) => p !== undefined);
     pageSubjects.push(new SubjectInfo(code, name, subjectPeriods));
   });
   return pageSubjects;
@@ -198,7 +149,7 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
   // A list of scrape promises we must resolve to finish this subject scrape
   const scrapePromises: Array<Promise<SubjectInfo[]>> = [];
   for (let page = 0; page <= pageCount; page++) {
-    const promise = scrapePageNew(baseURL, page);
+    const promise = scrapeSearchResultsPage(year, baseURL, page);
     scrapePromises.push(promise);
   }
   const allSubjects = await Promise.all(scrapePromises);
@@ -209,11 +160,11 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
 // Driver code below
 //
 
-const years = [2020];
+const years = [2021];
 const studyPeriods = Object.keys(SubjectPeriod);
 
-years.forEach(year => {
-  studyPeriods.forEach(periodStr => {
+years.forEach((year) => {
+  studyPeriods.forEach((periodStr) => {
     const period: SubjectPeriod = periodStr as SubjectPeriod;
     const outputFileName = `subjects_${year}_${period.toLowerCase()}.json`;
     const outputPath = path.resolve(
@@ -221,8 +172,8 @@ years.forEach(year => {
       "../subject-lists",
       outputFileName
     );
-    scrapeSubjects(year, period).then(subjects => {
-      writeFile(outputPath, JSON.stringify(subjects), error => {
+    scrapeSubjects(year, period).then((subjects) => {
+      writeFile(outputPath, JSON.stringify(subjects, null, 1), (error) => {
         if (error) {
           console.error(`Could not save file, error encountered!\n${error}`);
         }

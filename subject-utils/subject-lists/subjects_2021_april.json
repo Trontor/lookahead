@@ -1,0 +1,646 @@
+[
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90014",
+  "name": "Brand Management",
+  "offered": [
+   "summer_term",
+   "april",
+   "june"
+  ]
+ },
+ {
+  "code": "BUSA90026",
+  "name": "Business Strategy",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90074",
+  "name": "Global Business Economics",
+  "offered": [
+   "january",
+   "april",
+   "june"
+  ]
+ },
+ {
+  "code": "BUSA90090",
+  "name": "Financial Institutions",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "april",
+   "may",
+   "june"
+  ]
+ },
+ {
+  "code": "BUSA90224",
+  "name": "Managing People",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90227",
+  "name": "Operations",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90261",
+  "name": "Marketing Strategy",
+  "offered": [
+   "april",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90270",
+  "name": "Mergers and Acquisitions",
+  "offered": [
+   "april",
+   "june"
+  ]
+ },
+ {
+  "code": "BUSA90273",
+  "name": "Negotiations",
+  "offered": [
+   "february",
+   "april",
+   "june"
+  ]
+ },
+ {
+  "code": "BUSA90341",
+  "name": "Supply Chain Management",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90479",
+  "name": "MBA Internship",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "april",
+   "march",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90491",
+  "name": "Game Theory for Business Strategy",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90498",
+  "name": "Leading in Transformational Times",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90505",
+  "name": "Executive Management 1",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90519",
+  "name": "Internet Marketing & Electronic Commerce",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CHEM90042",
+  "name": "Automatic Chemical Analysis",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CHEM90044",
+  "name": "Synchrotron & NMR Structural Techniques",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CLRS90028",
+  "name": "Advanced Clinical Trial Design",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CLRS90029",
+  "name": "Research Development and Translation",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CLRS90031",
+  "name": "Research Development & Translation Pt 2",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CUMC90005",
+  "name": "Conservation Assessment and Treatment 2",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "CUMC90027",
+  "name": "RESPECT",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "EDUC90140",
+  "name": "Curriculum Leadership and Management",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "EDUC90505",
+  "name": "Listening and the Learning Environment",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "EDUC90683",
+  "name": "Reading Texts: Selection to Response",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "EDUC90846",
+  "name": "Learning Intervention 2",
+  "offered": [
+   "april",
+   "september"
+  ]
+ },
+ {
+  "code": "EDUC90987",
+  "name": "Clinical Teaching Practice (EC&P) 4",
+  "offered": [
+   "semester_1",
+   "april"
+  ]
+ },
+ {
+  "code": "EDUC91024",
+  "name": "Professional Pedagogical Practices (P3)",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "ENST90034",
+  "name": "Adapting to Climate Change",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "EVSC90022",
+  "name": "Bushfire Urban Planning",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "FRST90022",
+  "name": "Ecosystem Processes of Water and Soil",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "GEOL90048",
+  "name": "Sedimentary Basins and Resource Analysis",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "HIST90038",
+  "name": "Enlightenment and Revolutions 1750-1820",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "HLTH90004",
+  "name": "Health & Human Services Research Project",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "INDG90003",
+  "name": "Disruption and Change",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS70024",
+  "name": "Corporate Tax A",
+  "offered": [
+   "april",
+   "semester_2"
+  ]
+ },
+ {
+  "code": "LAWS70100",
+  "name": "Environmental Law",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS70176",
+  "name": "Construction Law",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS70203",
+  "name": "Transfer Pricing: Practice and Problems",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS70308",
+  "name": "International Economic Law",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS70421",
+  "name": "Law and Emerging Health Technologies",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS90103",
+  "name": "Private Law and Government",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS90168",
+  "name": "Animal Law and Policy",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS90205",
+  "name": "Digital Technologies and Labour Law",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "LAWS90208",
+  "name": "Law of Construction Delay and Disruption",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "MEDI90019",
+  "name": "Clinical Research Proposal",
+  "offered": [
+   "april",
+   "semester_2"
+  ]
+ },
+ {
+  "code": "MEDI90107",
+  "name": "Disaster Medicine Principles & Responses",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "MGMT90182",
+  "name": "Innovation and Entrepreneurship Strategy",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "MGMT90255",
+  "name": "Designing Supply Chains",
+  "offered": [
+   "april",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90272",
+  "name": "Procurement and Supply Management",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90273",
+  "name": "Service Supply Chain Management",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90274",
+  "name": "Supply Chain Finance and Contracts",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90275",
+  "name": "Sustainable Supply Chain Management",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90276",
+  "name": "Logistics and Transportation Management",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90277",
+  "name": "Supply Chain Intelligence",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90278",
+  "name": "Supply Chain Strategy",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MGMT90279",
+  "name": "Supply Chain Technologies",
+  "offered": [
+   "february",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "MKTG90039",
+  "name": "Marketing Analytics",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "PADM90009",
+  "name": "Working Ethically",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "PADM90019",
+  "name": "Democracy, Power and the Public Service",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "PHIL90022",
+  "name": "Thinking and Acting Ethically",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "POPH90112",
+  "name": "Infectious Disease Epidemiology",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "PSYT90097",
+  "name": "Engaging and Assessing Young People",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "PSYT90101",
+  "name": "Early Intervention in Mental Health",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "REHB90012",
+  "name": "Rehabilitation Professional Project",
+  "offered": [
+   "semester_1",
+   "april",
+   "semester_2"
+  ]
+ },
+ {
+  "code": "SCWK90049",
+  "name": "Supervised Field Placement 1B",
+  "offered": [
+   "summer_term",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "SCWK90051",
+  "name": "Supervised Field Placement 2B",
+  "offered": [
+   "summer_term",
+   "april",
+   "june",
+   "october"
+  ]
+ },
+ {
+  "code": "SCWK90071",
+  "name": "Social Work Research Project",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "SOCI90004",
+  "name": "Contemporary Social Problems",
+  "offered": [
+   "april"
+  ]
+ },
+ {
+  "code": "VETS90087",
+  "name": "Transboundary Animal Diseases",
+  "offered": [
+   "april"
+  ]
+ }
+]

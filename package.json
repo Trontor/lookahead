@@ -32,7 +32,7 @@
     "chai": "^4.2.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
-    "ts-node": "^8.10.2",
+    "ts-node": "^9.1.1",
     "ts-node-dev": "1.0.0-pre.50",
     "typescript": "^3.9.6"
   },
@@ -58,9 +58,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Trontor/lookahead/issues"
-  },
-  "engines": {
-    "node": "12.13.0"
   },
   "homepage": "https://github.com/Trontor/lookahead#readme",
   "proxy": "http://localhost:5000/"

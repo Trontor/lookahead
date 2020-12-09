@@ -1,0 +1,899 @@
+[
+ {
+  "code": "ABPL90282",
+  "name": "Principles of Heritage and Conservation",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "ABPL90323",
+  "name": "Construction Scheduling",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "AGRI90013",
+  "name": "Financial Management for Agribusiness",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "ANSC90004",
+  "name": "Monogastric Science",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "ANTH40012",
+  "name": "Explanation and Understanding",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "ARTS90005",
+  "name": "Intensive Research Workshop",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90094",
+  "name": "Finance",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90271",
+  "name": "Mergers and Acquisitions",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90322",
+  "name": "Special Topics in Management",
+  "offered": [
+   "january",
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90480",
+  "name": "Leadership",
+  "offered": [
+   "summer_term",
+   "march",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "april",
+   "march",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "BUSA90488",
+  "name": "Business in Complex Environments",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90499",
+  "name": "Introduction to Business Problems",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90514",
+  "name": "Industry Studies in Europe",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90517",
+  "name": "Social Entrepreneur Consulting Practicum",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "BUSA90526",
+  "name": "Strategic Consulting for Social Impact",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CHEM90047",
+  "name": "Organic Electronics",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CHEM90053",
+  "name": "Interfacial Chemistry and Sonochemistry",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CLRS90011",
+  "name": "Study Design in Clinical Research",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CRIM90012",
+  "name": "Introduction to Forensic Disability",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CRIM90036",
+  "name": "Data in Criminology Policy and Practice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CUMC90026",
+  "name": "Conservation Professional Practices",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "CUMC90028",
+  "name": "Introduction to Conservation Treatment",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "DEVT90001",
+  "name": "Development Project Management & Design",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "DEVT90041",
+  "name": "Development Research Design & Assessment",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "DEVT90074",
+  "name": "Contemporary Development",
+  "offered": [
+   "march",
+   "september"
+  ]
+ },
+ {
+  "code": "DEVT90078",
+  "name": "Development, Culture and Conflict",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "DRAM90018",
+  "name": "Creating a Project Vision",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "ECON90025",
+  "name": "Cooperation and Conflict in World Trade",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "EDUC30076",
+  "name": "Wakanda: African Futures in Education",
+  "offered": [
+   "march",
+   "winter_term"
+  ]
+ },
+ {
+  "code": "EDUC90006",
+  "name": "Environmental Education",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90050",
+  "name": "Supervised Teaching (Second Language)",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "EDUC90096",
+  "name": "Supervised Observation (Second Language)",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "EDUC90195",
+  "name": "Specific Learning Difficulties: Literacy",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90222",
+  "name": "Intervention in Problems of Young People",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90223",
+  "name": "Exceptionality:Assessment & Intervention",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90224",
+  "name": "Counselling Skills for Ed. Psychologists",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90225",
+  "name": "Psychological Tests",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90506",
+  "name": "Language & Literacy Development",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90507",
+  "name": "Oral Language, Literacy & Learning",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90587",
+  "name": "Grammar for Language Teachers",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90615",
+  "name": "Mathematics: Teaching with Technology",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90631",
+  "name": "Second Language Acquisition and Teaching",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90638",
+  "name": "Education, Knowledge and Power",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90803",
+  "name": "Pedagogy into Practice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90804",
+  "name": "Clinical Assessment & Course Evaluation",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90836",
+  "name": "Leadership in Clinical Education",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90870",
+  "name": "Laying the Foundations for Your Research",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90882",
+  "name": "Educational Foundations (Prim)",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90885",
+  "name": "Introduction to Clinical Practice (Prim)",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "EDUC90946",
+  "name": "Mathematics Across the Curriculum",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90950",
+  "name": "Globalisation and Education Policy",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90952",
+  "name": "Informal Science Communication",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "EDUC90988",
+  "name": "Clinical Teaching Practice (EC&P) 5",
+  "offered": [
+   "march",
+   "semester_2"
+  ]
+ },
+ {
+  "code": "EDUC90996",
+  "name": "Supervised Teaching-Adult (Second Lang)",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "FINA90002",
+  "name": "Research Methods",
+  "offered": [
+   "march",
+   "semester_1"
+  ]
+ },
+ {
+  "code": "FNCE90043",
+  "name": "Special Topics in Finance A",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEND90006",
+  "name": "Gender, Globalisation and Development",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEND90013",
+  "name": "Research in Gender",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEOG30031",
+  "name": "Law Space: Geographies of Justice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEOL90027",
+  "name": "Advanced Structural Mapping",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEOL90028",
+  "name": "Geochronology and Thermochronology",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEOL90029",
+  "name": "Geology of Gold",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "GEOL90047",
+  "name": "Basin Evolution & Sequence Stratigraphy",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "IBUS90005",
+  "name": "Business in Asia",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70009",
+  "name": "Comparative Corporate Tax",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70021",
+  "name": "Patent Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70110",
+  "name": "International Financial System",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70113",
+  "name": "Public Private Partnerships Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70173",
+  "name": "International Law",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "LAWS70217",
+  "name": "Fundamentals of the Common Law",
+  "offered": [
+   "march",
+   "may",
+   "june",
+   "september"
+  ]
+ },
+ {
+  "code": "LAWS70264",
+  "name": "International Human Rights Law",
+  "offered": [
+   "march",
+   "june"
+  ]
+ },
+ {
+  "code": "LAWS70314",
+  "name": "Principles of Construction Law",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70323",
+  "name": "Foundations of Tax Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70371",
+  "name": "Principles of Employment Law",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70380",
+  "name": "Australian Consumer Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70385",
+  "name": "White Collar Crime",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS70468",
+  "name": "Negotiation Skills",
+  "offered": [
+   "february",
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS90043",
+  "name": "Mineral and Petroleum Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS90049",
+  "name": "Reimagining Human Rights Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS90144",
+  "name": "International Sustainable Finance",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS90145",
+  "name": "Artificial Intelligence and the Law",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "LAWS90199",
+  "name": "Pandemic Law and Practice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "MAST90100",
+  "name": "Inference Methods in Biostatistics",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "MEDS90036",
+  "name": "MD Research Skills 2",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "MGMT90127",
+  "name": "Leadership Theory & Practice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "MGMT90231",
+  "name": "BioDesign Innovation",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "MGMT90257",
+  "name": "Supply Chain Challenges & Opportunities",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "MULT90005",
+  "name": "Interdisciplinarity and the Environment",
+  "offered": [
+   "march",
+   "semester_2"
+  ]
+ },
+ {
+  "code": "MUSI90179",
+  "name": "Evidence-Based Performance Teaching",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90018",
+  "name": "Consumer Perspective: Theory & Practice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90078",
+  "name": "Assessment in Mental Health Nursing",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90079",
+  "name": "Neonatal Intensive Care  1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90082",
+  "name": "Cancer and Palliative Care Nursing 1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90083",
+  "name": "Rural Critical Care Nursing 1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90084",
+  "name": "Paediatric Nursing 1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90085",
+  "name": "Paediatric Intensive Care Nursing 1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90099",
+  "name": "Critical Care Nursing Practice",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90112",
+  "name": "Nursing Specialty 1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90114",
+  "name": "Nursing Practice 1",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "NURS90122",
+  "name": "Foundations of Critical Care Nursing",
+  "offered": [
+   "march",
+   "september"
+  ]
+ },
+ {
+  "code": "NURS90127",
+  "name": "Intensive Care Nursing 2",
+  "offered": [
+   "march",
+   "september"
+  ]
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ]
+ },
+ {
+  "code": "PADM90013",
+  "name": "Leadership in Clinical Settings",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PHIL90024",
+  "name": "Philosophy Methods",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "POPH90095",
+  "name": "Economic Evaluation 2",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "POPH90206",
+  "name": "Health Policy",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "POPH90218",
+  "name": "Public Health Leadership and Management",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "POPH90243",
+  "name": "Epidemiology 3",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PPMN90006",
+  "name": "Executive Leadership and Management",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PPMN90007",
+  "name": "Public Policy Analysis",
+  "offered": [
+   "march",
+   "september"
+  ]
+ },
+ {
+  "code": "PPMN90037",
+  "name": "Governance",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PPMN90042",
+  "name": "Political Problems and Policy Responses",
+  "offered": [
+   "march",
+   "semester_2"
+  ]
+ },
+ {
+  "code": "PSYC90008",
+  "name": "Ethics and Professional Issues",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PSYT90096",
+  "name": "Foundations of Youth Mental Health",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PSYT90100",
+  "name": "Mental Ill-health in Young People 2",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "PSYT90105",
+  "name": "Practice-based Research Methods",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "SOCI90011",
+  "name": "Foundations of Social Policy",
+  "offered": [
+   "march"
+  ]
+ },
+ {
+  "code": "VETS40023",
+  "name": "Professional Veterinary Practice Part 2",
+  "offered": [
+   "march",
+   "semester_2",
+   "september"
+  ]
+ }
+]

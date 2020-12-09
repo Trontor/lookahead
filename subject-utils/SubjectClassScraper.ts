@@ -172,7 +172,6 @@ export const subjectPeriodToShortCode = (period: SubjectPeriod) => {
       return "SUM";
     case SubjectPeriod.Winter_Term:
       return "WIN";
-
     case SubjectPeriod.January:
       return "JAN";
     case SubjectPeriod.February:
@@ -183,5 +182,8 @@ export const subjectPeriodToShortCode = (period: SubjectPeriod) => {
       return "APR";
     case SubjectPeriod.May:
       return "MAY";
+    case SubjectPeriod.June:
+      return "JUN";
   }
+  throw new Error("No short code mapping for period:" + period);
 };

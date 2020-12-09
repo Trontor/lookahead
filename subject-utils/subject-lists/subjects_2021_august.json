@@ -1,0 +1,551 @@
+[
+ {
+  "code": "ABPL90355",
+  "name": "Issues and Techniques in Global Heritage",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "ANSC90006",
+  "name": "Genetics and Animal Breeding",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "ANTH30019",
+  "name": "Innovation, Design, and Society",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "BUSA90482",
+  "name": "General Management 1",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "BUSA90501",
+  "name": "Advanced Business Analytics",
+  "offered": [
+   "may",
+   "august"
+  ]
+ },
+ {
+  "code": "BUSA90502",
+  "name": "Analytics Lab",
+  "offered": [
+   "august",
+   "october"
+  ]
+ },
+ {
+  "code": "BUSA90504",
+  "name": "Individual Research Project",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "BUSA90507",
+  "name": "Executive Management 3",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "BUSA90524",
+  "name": "Fintech: Blockchain in the New Economy",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "CHEM90040",
+  "name": "Biological and Medicinal Chemistry",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "CHEM90041",
+  "name": "Exciton Science",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "CHEM90049",
+  "name": "Advanced Materials & Characterisation",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "CLRS90010",
+  "name": "Data Analysis in Clinical Research",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "CRIM90010",
+  "name": "Crime Prevention: Critical Approaches",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "CUMC90032",
+  "name": "Technical Examination and Documentation",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "DEVT90062",
+  "name": "Development and Inequality",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "ECON20010",
+  "name": "TDM International Negotiation",
+  "offered": [
+   "january",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90482",
+  "name": "Linguistics and Sociolinguistics of CLIL",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90508",
+  "name": "Language & Literacy Intervention",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90587",
+  "name": "Grammar for Language Teachers",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90631",
+  "name": "Second Language Acquisition and Teaching",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90642",
+  "name": "Critical Thinking and Curriculum",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90728",
+  "name": "Innovative Spaces and Pedagogy",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90752",
+  "name": "Researching Leadership Practice",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90801",
+  "name": "Clinical Education Modules",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90802",
+  "name": "Research in Clinical Education",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90805",
+  "name": "Clinical Simulation",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90877",
+  "name": "Clinical Teaching Practice (Prim) 1",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90878",
+  "name": "Clinical Teaching Practice (Prim) 2",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90881",
+  "name": "Diverse and Inclusive Classrooms (Prim)",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90884",
+  "name": "Integrating Clinical Practice (Prim)",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90892",
+  "name": "Clinical Teaching Practice (EC) 1",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90893",
+  "name": "Clinical Teaching Practice (EC) 2",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90894",
+  "name": "Clinical Teaching Practice (EC) 3",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC90936",
+  "name": "Communities of Arts Practices",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "EDUC91006",
+  "name": "Clinical Teaching Practice (Prim) 1 PT",
+  "offered": [
+   "semester_1",
+   "august"
+  ]
+ },
+ {
+  "code": "ERTH90060",
+  "name": "Spatial Data Analytics and Geoprocessing",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "FLTV20021",
+  "name": "Melbourne Film Festival Studio",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "FRST90034",
+  "name": "Ecological Restoration",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "GEOL90046",
+  "name": "Environmental Geology Field Techniques",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "GEOL90049",
+  "name": "Introduction to Structural Geology",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "INDG90005",
+  "name": "Indigenous Leadership",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS50042",
+  "name": "Jessup Moot",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70025",
+  "name": "Equality and Discrimination at Work",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70028",
+  "name": "International Trade Law",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70061",
+  "name": "Interpretation and Validity of Patents",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70111",
+  "name": "Debt Capital Markets",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70133",
+  "name": "Construction Dispute Resolution",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70161",
+  "name": "International Petroleum Transactions",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70219",
+  "name": "International Environmental Law",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70314",
+  "name": "Principles of Construction Law",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70336",
+  "name": "Advanced Commercial Law: Current Issues",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70371",
+  "name": "Principles of Employment Law",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70402",
+  "name": "Remedies in Commercial Law",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS70423",
+  "name": "International Mineral Law",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS90125",
+  "name": "Fundamentals of Intellectual Property",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "LAWS90174",
+  "name": "Human Rights in Australia",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "MGMT90126",
+  "name": "Budgets and Financial Management",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "MGMT90244",
+  "name": "Leading in Data Driven Organisations",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "MGMT90257",
+  "name": "Supply Chain Challenges & Opportunities",
+  "offered": [
+   "march",
+   "august"
+  ]
+ },
+ {
+  "code": "MULT90056",
+  "name": "Digital Archives: Tools and Methods",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "MULT90058",
+  "name": "Conflict, Security and Development",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ]
+ },
+ {
+  "code": "PADM90002",
+  "name": "Managing Effectively",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PADM90003",
+  "name": "Managing Public Finances",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PADM90014",
+  "name": "Leading Healthcare Change for Impact",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "POPH90209",
+  "name": "Comparative Health Systems",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "POPH90242",
+  "name": "Epidemiology 2",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PPMN90010",
+  "name": "Professional Practice in Policy Research",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PPMN90046",
+  "name": "Persuasion for Policymakers",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PPMN90048",
+  "name": "Crisis Management",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PSYT90024",
+  "name": "Consultation Liaison Psychiatry",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PSYT90093",
+  "name": "Psychiatric Research Project",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "PSYT90094",
+  "name": "Special Topics in Psychiatry",
+  "offered": [
+   "august"
+  ]
+ },
+ {
+  "code": "SCWK90050",
+  "name": "Supervised Field Placement 2A",
+  "offered": [
+   "february",
+   "may",
+   "august",
+   "november"
+  ]
+ }
+]

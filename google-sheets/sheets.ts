@@ -3,7 +3,10 @@ import { google } from "googleapis";
 import readline from "readline";
 
 const initialiseCredentials = () => {
-  fs.writeFile(process.env.GS_KEY_FILE, process.env.GS_CRED, err => {
+  if (!process.env.GS_CRED) {
+    return;
+  }
+  fs.writeFile(process.env.GS_KEY_FILE, process.env.GS_CRED, (err) => {
     if (!err) {
       return;
     }
@@ -14,7 +17,10 @@ export const initialise = () => {
   initialiseCredentials();
 };
 
-export const getSponsorSheetData = (): Promise<string[][]> => {
+export const getSponsorSheetData = (): Promise<string[][] | null> => {
+  if (!fs.existsSync("google-sheets/credentials.json")) {
+    return null;
+  }
   return new Promise((resolve, reject) => {
     // Load client secrets from a local file.
     fs.readFile("google-sheets/credentials.json", (err, content) => {
@@ -23,12 +29,12 @@ export const getSponsorSheetData = (): Promise<string[][]> => {
         return console.log("Error loading client secret file:", err);
       }
       // Authorize a client with credentials, then call the Google Sheets API.
-      authorize(JSON.parse(content.toString()), auth => {
+      authorize(JSON.parse(content.toString()), (auth) => {
         const sheets = google.sheets({ version: "v4", auth });
         sheets.spreadsheets.values.get(
           {
             range: "Sheet1!A2:Z",
-            spreadsheetId: process.env.GS_SHEET_ID
+            spreadsheetId: process.env.GS_SHEET_ID,
           },
           (err2, res) => {
             if (err2) {
@@ -83,14 +89,14 @@ function authorize(credentials: any, callback: (client: any) => void) {
 function getNewToken(oAuth2Client: any, callback: any) {
   const authUrl = oAuth2Client.generateAuthUrl({
     access_type: "offline",
-    scope: SCOPES
+    scope: SCOPES,
   });
   console.log("Authorize this app by visiting this url:", authUrl);
   const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout,
   });
-  rl.question("Enter the code from that page here: ", code => {
+  rl.question("Enter the code from that page here: ", (code) => {
     rl.close();
     oAuth2Client.getToken(code, (err: any, token: any) => {
       if (err) {

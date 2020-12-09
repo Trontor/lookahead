@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import * as fs from "fs";
+import moment from "moment";
 import path from "path";
 import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
 
@@ -14,12 +15,7 @@ export const getSubjectList = (req: Request, res: Response) => {
     "semester_2",
     "summer_term",
     "winter_term",
-    "january",
-    "february",
-    "march",
-    "april",
-    "may",
-  ];
+  ].concat(moment.months().map((m) => m.toLowerCase()));
   // This used to work in TypeScript strict mode, but it doesn't now.
   // Object.keys(SubjectPeriod).map(
   //   k => SubjectPeriod[k as any]

@@ -8,5 +8,10 @@ export enum SubjectPeriod {
   March = "march",
   April = "april",
   May = "may",
-  June = "June"
+  June = "june",
+  July = "july",
+  August = "august",
+  September = "september",
+  October = "october",
+  November = "november",
 }

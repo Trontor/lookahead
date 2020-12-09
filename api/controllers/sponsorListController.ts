@@ -38,7 +38,7 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
       signup,
       tier,
       include,
-      website
+      website,
     ] = row;
     // will store a list of subject code matching patterns
     let includeArray: string[] = [];
@@ -56,7 +56,7 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
       facebook,
       tier,
       signup,
-      include: includeArray
+      include: includeArray,
     };
     allSponsors.push(sponsor);
   }
@@ -68,6 +68,10 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
  */
 export const getSponsors = async (req: Request, res: Response) => {
   const data = await getSponsorSheetData();
+  if (data == null) {
+    res.send([]);
+    return;
+  }
   res.send(processRawSponsorData(data));
 };
 
