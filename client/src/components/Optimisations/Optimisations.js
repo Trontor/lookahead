@@ -33,7 +33,7 @@ import InputRange from "react-input-range";
 const formatRangeLabel = value => {
   const remainder = value % 1;
   const postColon = remainder === 0.5 ? "30" : "00";
-  const meridian = value > 12 ? "pm" : "am";
+  const meridian = value >= 12 ? "pm" : "am";
   if (value >= 13) {
     value -= 12;
   }
