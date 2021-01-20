@@ -39,6 +39,19 @@ export const HeaderSubtitle = styled.span`
   opacity: 0.8;
 `;
 
+export const TimeFormatText = styled.span`
+  right: 70px;
+  font-size: 24px;
+  position: absolute;
+  transform: translateY(2px);
+  text-align: right;
+  cursor: pointer;
+
+  @media screen and (max-width: 359px) {
+    display: none;
+  }
+`;
+
 export const Emoji = styled.span`
   right: 12px;
   font-size: 24px;

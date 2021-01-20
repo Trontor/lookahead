@@ -60,3 +60,6 @@ export const SET_THEME = 'SET_THEME';
 
 // Timetable Viewer Events
 export const UPDATE_EVENTS = 'UPDATE_EVENTS';
+
+// Time Format Events
+export const SET_TIME_FORMAT = 'SET_TIME_FORMAT';

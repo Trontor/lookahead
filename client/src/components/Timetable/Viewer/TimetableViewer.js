@@ -28,6 +28,7 @@ export default function TimetableViewer() {
   const dispatch = useDispatch();
   const subjects = useSelector(state => state.subjects);
   const timetable = useSelector(state => state.timetable);
+  const is24 = useSelector(state => state.timeFormat === '24hr');
   const {
     timetables,
     currentIndex,
@@ -120,13 +121,17 @@ export default function TimetableViewer() {
           height="parent"
           plugins={[timeGridPlugin, interactionPlugin]}
           weekends={hasWeekendClasses}
-          slotLabelFormat={{
-            hour: 'numeric',
-            minute: '2-digit',
-            omitZeroMinute: true,
-            hour12: false,
-            meridiem: 'narrow',
-          }}
+          slotLabelFormat={
+            is24
+              ? {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  omitZeroMinute: true,
+                  hour12: false,
+                  meridiem: 'narrow',
+                }
+              : undefined
+          }
           events={events}
           eventClick={eInfo => handleEventClick(eInfo, showEvent)}
           select={handleSelect}
