@@ -132,7 +132,7 @@ export default function TimetableViewer() {
                                   hour: "numeric",
                                   minute: "2-digit",
                                   omitZeroMinute: true,
-                                  hour12: true,
+                                  hour12: false,
                                   meridiem: "narrow",
                               }
                             : undefined
