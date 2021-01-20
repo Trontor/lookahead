@@ -46,6 +46,9 @@ export const TimeFormatText = styled.span`
     transform: translateY(2px);
     text-align: right;
     cursor: pointer;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 
     @media screen and (max-width: 359px) {
         display: none;
