@@ -39,7 +39,21 @@ export const HeaderSubtitle = styled.span`
     opacity: 0.8;
 `;
 
-export const TimeFormatText = styled.span`
+export const TimeFormatButton = styled.span`
+    border: none;
+    background-colour: white
+    color: black;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
     right: 70px;
     font-size: 24px;
     position: absolute;

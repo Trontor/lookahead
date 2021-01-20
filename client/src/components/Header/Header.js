@@ -7,7 +7,8 @@ import {
     HeaderSubtitle,
     HeaderText,
     HeaderWrapper,
-    TimeFormatText,
+    TimeFormatSwitch,
+    TimeFormatButton,
 } from "./HeaderStyles";
 import { setTimeFormat } from "../../redux/actions/timeFormatActions";
 
@@ -56,9 +57,11 @@ export default function Header() {
             <HeaderSubtitle>
                 A University of Melbourne Semester Planner
             </HeaderSubtitle>
-            <TimeFormatText onClick={switchTimeFormat}>
+
+            <TimeFormatButton onClick={switchTimeFormat}>
                 <span>{currentTimeFormat} time</span>
-            </TimeFormatText>
+            </TimeFormatButton>
+
             <Emoji onClick={switchTheme}>
                 <span aria-label={`${emoji} emoji`} role="img">
                     {emoji}
