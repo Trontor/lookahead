@@ -7,7 +7,6 @@ import {
     HeaderSubtitle,
     HeaderText,
     HeaderWrapper,
-    TimeFormatSwitch,
     TimeFormatButton,
 } from "./HeaderStyles";
 import { setTimeFormat } from "../../redux/actions/timeFormatActions";
