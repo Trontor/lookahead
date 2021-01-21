@@ -37,9 +37,13 @@ type BaseURL = string;
  */
 const getBaseURL = (year: number, studyPeriod: SubjectPeriod, online:boolean)  =>{
   // tslint:disable-next-line:max-line-length
+
+  //for all online subjects set URL attribute campus_and_attendance_mode[]=Online
   if(online){
     return `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=Online&sort=external_code%7Casc`;
   }
+
+  //otherwise set URL attribute campus_and_attendance_mode[]=Dual-Delivery&campus_and_attendance_mode[]=Off+Campus
   else {
     return `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=Dual-Delivery&campus_and_attendance_mode[]=Off+Campus&sort=external_code%7Casc`;
   }
@@ -187,7 +191,7 @@ years.forEach((year) => {
 
     // first scrape all subjects that are only offline ("Dual-Deliver", "Off+Campus") subjects,
     // then scrape all subjects that are online ("Online"),
-    // then merge them into one file
+    // then concat subject lists into one array
     // alternative: if we want separate online/offline subject json files, make an outer for each loop through [true,false]
     scrapeSubjects(year, period, false).then((offlineSubjects) => {
       scrapeSubjects(year, period, true).then((onlineSubjects) => {
