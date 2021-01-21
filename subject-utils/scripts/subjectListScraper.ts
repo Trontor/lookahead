@@ -11,16 +11,19 @@ export class SubjectInfo {
   public readonly code: string;
   public readonly name: string;
   public readonly offered: SubjectPeriod[];
+  public readonly online: boolean;
   /**
    * Initialises a new SubjectInfo
    * @param code The subject code, e.g. COMP10001
    * @param name The name of the subject, e.g. Foundations of Computation
    * @param semester The subject period this subject is offered in
+   * @param online Whether the subject is online only
    */
-  constructor(code: string, name: string, offered: SubjectPeriod[]) {
+  constructor(code: string, name: string, offered: SubjectPeriod[], online:boolean) {
     this.code = code;
     this.name = name;
     this.offered = offered.filter((subjectPeriod) => subjectPeriod != null);
+    this.online = online;
   }
 }
 
@@ -30,11 +33,18 @@ type BaseURL = string;
  *  Generates a base search url given the year and study period
  * @param year The year to search for
  * @param studyPeriod The study period to search for
+ * @param online Whether the subject is online only
  */
-const getBaseURL = (year: number, studyPeriod: SubjectPeriod): BaseURL =>
+const getBaseURL = (year: number, studyPeriod: SubjectPeriod, online:boolean)  =>{
   // tslint:disable-next-line:max-line-length
-  `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=all&sort=external_code%7Casc`;
-/**
+  if(online){
+    return `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=Online&sort=external_code%7Casc`;
+  }
+  else {
+    return `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=Dual-Delivery&campus_and_attendance_mode[]=Off+Campus&sort=external_code%7Casc`;
+  }
+};
+  /**
  * Returns the number of pages given a base search URL
  */
 const getPageCount = async (baseURL: BaseURL) => {
@@ -53,7 +63,8 @@ const getPageCount = async (baseURL: BaseURL) => {
 const scrapeSearchResultsPage = async (
   year: number,
   url: BaseURL,
-  page: number
+  page: number,
+  online: boolean
 ): Promise<SubjectInfo[]> => {
   const pageURL: string = `${url}&page=${page}`;
   const pageHTML = await getHTML(pageURL);
@@ -129,7 +140,7 @@ const scrapeSearchResultsPage = async (
         }
       })
       .filter((p) => p !== undefined);
-    pageSubjects.push(new SubjectInfo(code, name, subjectPeriods));
+    pageSubjects.push(new SubjectInfo(code, name, subjectPeriods, online));
   });
   return pageSubjects;
 };
@@ -138,9 +149,10 @@ const scrapeSearchResultsPage = async (
  * Scrapes all the subjects offered on a specific year and subject period
  * @param year The year to scrape
  * @param period The subject period to scrape
+ * @param online Whether to scrape online or offline subjects
  */
-const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
-  const baseURL = getBaseURL(year, period);
+const scrapeSubjects = async (year: number, period: SubjectPeriod, online: boolean) => {
+  const baseURL = getBaseURL(year, period, online);
   // Get the number of pages to search
   const pageCount = await getPageCount(baseURL);
   console.log(
@@ -149,7 +161,7 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod) => {
   // A list of scrape promises we must resolve to finish this subject scrape
   const scrapePromises: Array<Promise<SubjectInfo[]>> = [];
   for (let page = 0; page <= pageCount; page++) {
-    const promise = scrapeSearchResultsPage(year, baseURL, page);
+    const promise = scrapeSearchResultsPage(year, baseURL, page, online);
     scrapePromises.push(promise);
   }
   const allSubjects = await Promise.all(scrapePromises);
@@ -172,11 +184,18 @@ years.forEach((year) => {
       "../subject-lists",
       outputFileName
     );
-    scrapeSubjects(year, period).then((subjects) => {
-      writeFile(outputPath, JSON.stringify(subjects, null, 1), (error) => {
-        if (error) {
-          console.error(`Could not save file, error encountered!\n${error}`);
-        }
+
+    // first scrape all subjects that are only offline ("Dual-Deliver", "Off+Campus") subjects,
+    // then scrape all subjects that are online ("Online"),
+    // then merge them into one file
+    // alternative: if we want separate online/offline subject json files, make an outer for each loop through [true,false]
+    scrapeSubjects(year, period, false).then((offlineSubjects) => {
+      scrapeSubjects(year, period, true).then((onlineSubjects) => {
+        writeFile(outputPath, JSON.stringify([].concat(offlineSubjects,onlineSubjects), null, 1), (error) => {
+          if (error) {
+            console.error(`Could not save file, error encountered!\n${error}`);
+          }
+        });
       });
     });
   });
