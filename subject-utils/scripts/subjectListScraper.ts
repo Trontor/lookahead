@@ -47,11 +47,11 @@ const getBaseURL = (year: number, studyPeriod: SubjectPeriod, online:boolean)  =
   ];
   // not necessary to include the =all parameters
 
-  const campusAttendanceModes = online ? ['Online'] :
+  let campusAttendanceModes = online ? ['Online'] :
       ['Dual-Delivery', 'Off+Campus'];
 
   // now make it a valid query param
-  campusAttendanceModes.map(mode => 'campus_and_attendance_mode[]=' + mode);
+  campusAttendanceModes = campusAttendanceModes.map(mode => 'campus_and_attendance_mode[]=' + mode);
 
   // and append the attendance mode params to the initial array of parameters
   queryParameters = queryParameters.concat(campusAttendanceModes);

@@ -1,36 +1,11 @@
 [
  {
-  "code": "PSYT90068",
-  "name": "Perinatal Psychiatry",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "CHEM90045",
-  "name": "Advanced Physical Organic Chemistry",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90124",
-  "name": "Implementation of Strategy",
-  "offered": [
-   "summer_term",
-   "may"
-  ],
-  "online": false
- },
- {
   "code": "LAWS90087",
   "name": "Disability Human Rights Law",
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90753",
@@ -38,24 +13,7 @@
   "offered": [
    "may"
   ],
-  "online": false
- },
- {
-  "code": "EDUC90987",
-  "name": "Clinical Teaching Practice (EC&P) 4",
-  "offered": [
-   "semester_1",
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90509",
-  "name": "Executive Management 5",
-  "offered": [
-   "may"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS90165",
@@ -63,15 +21,7 @@
   "offered": [
    "may"
   ],
-  "online": false
- },
- {
-  "code": "BUSA90226",
-  "name": "Managing People",
-  "offered": [
-   "may"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS70031",
@@ -79,7 +29,7 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS70049",
@@ -87,7 +37,7 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90943",
@@ -95,7 +45,7 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS70207",
@@ -103,7 +53,7 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "PSYT90088",
@@ -111,15 +61,7 @@
   "offered": [
    "may"
   ],
-  "online": false
- },
- {
-  "code": "BUSA90523",
-  "name": "Managing Diversity in the Workplace",
-  "offered": [
-   "may"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "PSYT90022",
@@ -127,7 +69,7 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "DEVT90068",
@@ -136,19 +78,7 @@
    "may",
    "november"
   ],
-  "online": false
- },
- {
-  "code": "BUSA90201",
-  "name": "Managerial Project",
-  "offered": [
-   "summer_term",
-   "january",
-   "april",
-   "may",
-   "june"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "PSYT90059",
@@ -156,7 +86,7 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS70392",
@@ -165,223 +95,23 @@
    "may",
    "october"
   ],
-  "online": false
+  "online": true
  },
  {
-  "code": "EDUC90987",
-  "name": "Clinical Teaching Practice (EC&P) 4",
-  "offered": [
-   "semester_1",
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90226",
-  "name": "Managing People",
+  "code": "LAWS90022",
+  "name": "International Dispute Settlement",
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
  },
  {
-  "code": "BUSA90509",
-  "name": "Executive Management 5",
+  "code": "EDUC90786",
+  "name": "Leading Educational Research",
   "offered": [
    "may"
   ],
-  "online": false
- },
- {
-  "code": "LAWS90165",
-  "name": "Digital Consumer Protection Law",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "CUMC90022",
-  "name": "Digital Protocols",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90132",
-  "name": "Professional Communication",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "FNCE90044",
-  "name": "Special Topics in Finance B",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "GEOL90030",
-  "name": "Coastal Environmental Geomorphology",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "PADM90017",
-  "name": "Political Advising",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "ENGM90018",
-  "name": "Project Management Practices",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "PSYT90016",
-  "name": "Forensic Psychiatry",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "ORAL30003",
-  "name": "Oral Health Therapy Research Int'l",
-  "offered": [
-   "summer_term",
-   "february",
-   "march",
-   "may",
-   "june",
-   "june",
-   "august"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70206",
-  "name": "Banking and Secured Finance",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70382",
-  "name": "Business and Human Rights",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70217",
-  "name": "Fundamentals of the Common Law",
-  "offered": [
-   "march",
-   "may",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "PADM90006",
-  "name": "The Rule of Law",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "PSYC90094",
-  "name": "Positive Psychology in Practice",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90002",
-  "name": "Financial Accounting",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90086",
-  "name": "Conducting Workplace Investigations",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70234",
-  "name": "International Humanitarian Law",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90172",
-  "name": "Core Principles of Contract",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90152",
-  "name": "Health Data Governance",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90054",
-  "name": "Corporate Strategy",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90050",
-  "name": "Supervised Field Placement 2A",
-  "offered": [
-   "february",
-   "may",
-   "august",
-   "november"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS70225",
@@ -389,432 +119,43 @@
   "offered": [
    "may"
   ],
-  "online": false
+  "online": true
+ },
+ {
+  "code": "PSYC90094",
+  "name": "Positive Psychology in Practice",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70234",
+  "name": "International Humanitarian Law",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90172",
+  "name": "Core Principles of Contract",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90086",
+  "name": "Conducting Workplace Investigations",
+  "offered": [
+   "may"
+  ],
+  "online": true
  },
  {
   "code": "LAWS70293",
   "name": "Climate Change Law",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90807",
-  "name": "Building Positive Education Communities",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "MEDS90027",
-  "name": "Clinical Elective",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90501",
-  "name": "Advanced Business Analytics",
-  "offered": [
-   "may",
-   "august"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI90027",
-  "name": "Piano Pedagogy",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90080",
-  "name": "Negotiation and Dispute Resolution",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "CUMC90029",
-  "name": "Preventive Conservation",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90127",
-  "name": "Comparative Indigenous Rights",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "GEOL90038",
-  "name": "Igneous Geodynamics and Ore Deposits",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "GEOL90044",
-  "name": "Ore Deposit Models",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70210",
-  "name": "Resources Joint Ventures",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90500",
-  "name": "Business Analytics Foundations",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70319",
-  "name": "Tax Policy",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90941",
-  "name": "Leading the Educational Organisation",
-  "offered": [
-   "may",
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "ANSC90007",
-  "name": "Animal Welfare",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "SOCI90025",
-  "name": "Social Justice: Policy and Practice",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "PHTY90003",
-  "name": "Advanced Practice in Pelvic Floor Physio",
-  "offered": [
-   "may"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90307",
-  "name": "MSD Vocational Placement",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "may",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70031",
-  "name": "Goods and Services Tax",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90523",
-  "name": "Managing Diversity in the Workplace",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90022",
-  "name": "Cognitive Behaviour Therapy",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70049",
-  "name": "Taxation of Small and Medium Enterprises",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90943",
-  "name": "Marketing and Innovation in Education",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90068",
-  "name": "Contemporary Leadership",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70207",
-  "name": "Copyright Law",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90088",
-  "name": "History & Philosophy of Psychiatry",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90786",
-  "name": "Leading Educational Research",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90201",
-  "name": "Managerial Project",
-  "offered": [
-   "summer_term",
-   "january",
-   "april",
-   "may",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90059",
-  "name": "Substance Use Disorders",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90218",
-  "name": "Innovation",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70392",
-  "name": "International Business Transactions",
-  "offered": [
-   "may",
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90022",
-  "name": "International Dispute Settlement",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90002",
-  "name": "The Pelvic Floor:Function&Dysfunction",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90068",
-  "name": "Perinatal Psychiatry",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "CHEM90045",
-  "name": "Advanced Physical Organic Chemistry",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90124",
-  "name": "Implementation of Strategy",
-  "offered": [
-   "summer_term",
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90087",
-  "name": "Disability Human Rights Law",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90753",
-  "name": "Leading Learning and Teaching",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90218",
-  "name": "Innovation",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90002",
-  "name": "The Pelvic Floor:Function&Dysfunction",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90022",
-  "name": "International Dispute Settlement",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90786",
-  "name": "Leading Educational Research",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "CUMC90022",
-  "name": "Digital Protocols",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT90132",
-  "name": "Professional Communication",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "FNCE90044",
-  "name": "Special Topics in Finance B",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "GEOL90030",
-  "name": "Coastal Environmental Geomorphology",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PADM90017",
-  "name": "Political Advising",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "ENGM90018",
-  "name": "Project Management Practices",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90016",
-  "name": "Forensic Psychiatry",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "ORAL30003",
-  "name": "Oral Health Therapy Research Int'l",
-  "offered": [
-   "summer_term",
-   "february",
-   "march",
-   "may",
-   "june",
-   "june",
-   "august"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70206",
-  "name": "Banking and Secured Finance",
   "offered": [
    "may"
   ],
@@ -856,14 +197,6 @@
   "online": true
  },
  {
-  "code": "BUSA90002",
-  "name": "Financial Accounting",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
   "code": "LAWS90086",
   "name": "Conducting Workplace Investigations",
   "offered": [
@@ -880,8 +213,56 @@
   "online": true
  },
  {
-  "code": "CUMC90029",
-  "name": "Preventive Conservation",
+  "code": "LAWS90172",
+  "name": "Core Principles of Contract",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90152",
+  "name": "Health Data Governance",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70225",
+  "name": "Medical Litigation",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70293",
+  "name": "Climate Change Law",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90080",
+  "name": "Negotiation and Dispute Resolution",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90127",
+  "name": "Comparative Indigenous Rights",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70210",
+  "name": "Resources Joint Ventures",
   "offered": [
    "may"
   ],
@@ -892,17 +273,6 @@
   "name": "Tax Policy",
   "offered": [
    "may"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90307",
-  "name": "MSD Vocational Placement",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "may",
-   "semester_2"
   ],
   "online": true
  },
@@ -918,159 +288,6 @@
  {
   "code": "SOCI90025",
   "name": "Social Justice: Policy and Practice",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90003",
-  "name": "Advanced Practice in Pelvic Floor Physio",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "ANSC90007",
-  "name": "Animal Welfare",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70210",
-  "name": "Resources Joint Ventures",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "GEOL90038",
-  "name": "Igneous Geodynamics and Ore Deposits",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90127",
-  "name": "Comparative Indigenous Rights",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "GEOL90044",
-  "name": "Ore Deposit Models",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90500",
-  "name": "Business Analytics Foundations",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "CUMC90022",
-  "name": "Digital Protocols",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT90132",
-  "name": "Professional Communication",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PADM90017",
-  "name": "Political Advising",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70206",
-  "name": "Banking and Secured Finance",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70217",
-  "name": "Fundamentals of the Common Law",
-  "offered": [
-   "march",
-   "may",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "GEOL90030",
-  "name": "Coastal Environmental Geomorphology",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "FNCE90044",
-  "name": "Special Topics in Finance B",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "ORAL30003",
-  "name": "Oral Health Therapy Research Int'l",
-  "offered": [
-   "summer_term",
-   "february",
-   "march",
-   "may",
-   "june",
-   "june",
-   "august"
-  ],
-  "online": true
- },
- {
-  "code": "ANSC90007",
-  "name": "Animal Welfare",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "SOCI90025",
-  "name": "Social Justice: Policy and Practice",
-  "offered": [
-   "may"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90003",
-  "name": "Advanced Practice in Pelvic Floor Physio",
   "offered": [
    "may"
   ],

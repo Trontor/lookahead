@@ -1,32 +1,5 @@
 [
  {
-  "code": "GEOM90020",
-  "name": "Spatial Information Research Project",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90319",
-  "name": "GIS In Planning, Design & Development",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MCEN90049",
-  "name": "Helicopter Design",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
   "code": "THTR30042",
   "name": "Hashtag Cyberstar",
   "offered": [
@@ -35,7 +8,7 @@
    "winter_term",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "FINA20026",
@@ -48,40 +21,7 @@
    "june",
    "semester_2"
   ],
-  "online": false
- },
- {
-  "code": "EDUC30072",
-  "name": "Positive Leadership and Careers",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "CLAS10004",
-  "name": "Ancient Greek 1",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "HPSC30037",
-  "name": "Thinking about Science: Past and Present",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "ITAL10008",
-  "name": "Italian 1 (Intensive)",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "THTR20043",
@@ -89,572 +29,6 @@
   "offered": [
    "june",
    "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT20011",
-  "name": "Business Negotiations",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MULT90014",
-  "name": "Business Risk Management",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MECM90037",
-  "name": "Online Community Management",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "DNCE20040",
-  "name": "Travelling Studio",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "ARTS90026",
-  "name": "Interdisciplinary Industry Project 1",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "GEOM90013",
-  "name": "Spatial Information Research Project C",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20045",
-  "name": "Introduction to Screenprinting",
-  "offered": [
-   "summer_term",
-   "march",
-   "april",
-   "winter_term",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "SCIE90013",
-  "name": "Communication for Research Scientists",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90404",
-  "name": "Place Making for The Built Environment",
-  "offered": [
-   "february",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "SPAN20025",
-  "name": "Realities and Fictions of Argentina",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "THTR20043",
-  "name": "Design and the Moving Image",
-  "offered": [
-   "june",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "CLAS10004",
-  "name": "Ancient Greek 1",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20026",
-  "name": "Painting Techniques",
-  "offered": [
-   "summer_term",
-   "february",
-   "semester_1",
-   "winter_term",
-   "june",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "ITAL10008",
-  "name": "Italian 1 (Intensive)",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "THTR30042",
-  "name": "Hashtag Cyberstar",
-  "offered": [
-   "summer_term",
-   "february",
-   "winter_term",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT20011",
-  "name": "Business Negotiations",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "HPSC30037",
-  "name": "Thinking about Science: Past and Present",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "PERF30001",
-  "name": "Public Event Design",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90527",
-  "name": "Digital Product Management",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL30063",
-  "name": "AA Visiting School Undergraduate",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "GEOM90010",
-  "name": "Spatial Information Research Project A",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "GEOM90023",
-  "name": "Spatial Information Research Project B",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90529",
-  "name": "Building Entrepreneurial Ventures",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "GDES30004",
-  "name": "Design Visualisation: Analogue",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "EVSC90014",
-  "name": "Environmental Risk Assessment",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MAST90007",
-  "name": "Statistics for Research Workers",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MECM90031",
-  "name": "Audiovisual Communication",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90525",
-  "name": "Business and Economics Internship",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "DNCE20038",
-  "name": "Global Atelier: Travelling Studio",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20044",
-  "name": "Art and the Botanical",
-  "offered": [
-   "summer_term",
-   "february",
-   "semester_1",
-   "winter_term",
-   "june",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "KORE30001",
-  "name": "Korean Politics and Society",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "GEOL30009",
-  "name": "Advanced Field Geology",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "VETS90083",
-  "name": "Selection & Interpretation of Lab Tests",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL30070",
-  "name": "Venice Studio",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90490",
-  "name": "Integrative Business Capstone",
-  "offered": [
-   "summer_term",
-   "june",
-   "winter_term",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "ARTS90027",
-  "name": "Interdisciplinary Industry Project 2",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "AMGT90029",
-  "name": "Applied Research Methods",
-  "offered": [
-   "february",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "GEOL90043",
-  "name": "Fundamentals of Geological CO2 Storage",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90386",
-  "name": "AA Visiting School Graduate",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90429",
-  "name": "Venice Studio",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "SPAN30020",
-  "name": "Realities and Fictions of Argentina",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "EURO40002",
-  "name": "Seminars in Languages and Linguistics A",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "FREN30018",
-  "name": "In the Heart of the Loire Valley",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "CLAS30045",
-  "name": "Intensive Ancient Greek 1",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MULT20013",
-  "name": "Australia Now",
-  "offered": [
-   "february",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "CLAS20035",
-  "name": "Intensive Ancient Greek 1",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "FLTV30022",
-  "name": "Making Movies 3 Practical Production",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC30076",
-  "name": "Wakanda: African Futures in Education",
-  "offered": [
-   "march",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20035",
-  "name": "Drawing with Anatomy",
-  "offered": [
-   "winter_term",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "PAED90005",
-  "name": "Child Public Health",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC91017",
-  "name": "Education Randomised Controlled Trials",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90037",
-  "name": "Conflict and Negotiation",
-  "offered": [
-   "summer_term",
-   "winter_term",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MULT30015",
-  "name": "Independent Research Project",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90513",
-  "name": "Industry Studies in America",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "COMP90050",
-  "name": "Advanced Database Systems",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "PSYC90103",
-  "name": "Psychology of Advertising",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "PHIL20046",
-  "name": "Feminism",
-  "offered": [
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "FREN10004",
-  "name": "French 1",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "MULT90014",
-  "name": "Business Risk Management",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "MECM90037",
-  "name": "Online Community Management",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "DNCE20040",
-  "name": "Travelling Studio",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ARTS90026",
-  "name": "Interdisciplinary Industry Project 1",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "GEOM90013",
-  "name": "Spatial Information Research Project C",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
   ],
   "online": true
  },
@@ -682,19 +56,6 @@
   "name": "Realities and Fictions of Argentina",
   "offered": [
    "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20045",
-  "name": "Introduction to Screenprinting",
-  "offered": [
-   "summer_term",
-   "march",
-   "april",
-   "winter_term",
-   "june",
-   "september"
   ],
   "online": true
  },
@@ -715,39 +76,10 @@
   "online": true
  },
  {
-  "code": "AIND20012",
-  "name": "Ancient & Contemporary Indigenous Arts 2",
-  "offered": [
-   "summer_term",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20036",
-  "name": "Under Camera Animation",
-  "offered": [
-   "summer_term",
-   "february",
-   "winter_term",
-   "june"
-  ],
-  "online": true
- },
- {
   "code": "GERM10004",
   "name": "German 1",
   "offered": [
    "summer_term",
-   "semester_1",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "SPAN10001",
-  "name": "Spanish 1",
-  "offered": [
    "semester_1",
    "winter_term"
   ],
@@ -762,183 +94,6 @@
   "online": true
  },
  {
-  "code": "MCEN90049",
-  "name": "Helicopter Design",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "GEOM90020",
-  "name": "Spatial Information Research Project",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90319",
-  "name": "GIS In Planning, Design & Development",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC30072",
-  "name": "Positive Leadership and Careers",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20026",
-  "name": "Painting Techniques",
-  "offered": [
-   "summer_term",
-   "february",
-   "semester_1",
-   "winter_term",
-   "june",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC30072",
-  "name": "Positive Leadership and Careers",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "CLAS10004",
-  "name": "Ancient Greek 1",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "HPSC30037",
-  "name": "Thinking about Science: Past and Present",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ITAL10008",
-  "name": "Italian 1 (Intensive)",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "THTR20043",
-  "name": "Design and the Moving Image",
-  "offered": [
-   "june",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT20011",
-  "name": "Business Negotiations",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90513",
-  "name": "Industry Studies in America",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "PAED90005",
-  "name": "Child Public Health",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT90037",
-  "name": "Conflict and Negotiation",
-  "offered": [
-   "summer_term",
-   "winter_term",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "MULT30015",
-  "name": "Independent Research Project",
-  "offered": [
-   "summer_term",
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC91017",
-  "name": "Education Randomised Controlled Trials",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "COMP90050",
-  "name": "Advanced Database Systems",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "PSYC90103",
-  "name": "Psychology of Advertising",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FREN10004",
-  "name": "French 1",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "PHIL20046",
-  "name": "Feminism",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
   "code": "PERF30001",
   "name": "Public Event Design",
   "offered": [
@@ -947,26 +102,23 @@
   "online": true
  },
  {
-  "code": "BUSA90527",
-  "name": "Digital Product Management",
+  "code": "DNCE20038",
+  "name": "Global Atelier: Travelling Studio",
   "offered": [
    "winter_term"
   ],
   "online": true
  },
  {
-  "code": "BUSA90529",
-  "name": "Building Entrepreneurial Ventures",
+  "code": "FINA20044",
+  "name": "Art and the Botanical",
   "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL30063",
-  "name": "AA Visiting School Undergraduate",
-  "offered": [
-   "winter_term"
+   "summer_term",
+   "february",
+   "semester_1",
+   "winter_term",
+   "june",
+   "semester_2"
   ],
   "online": true
  },
@@ -979,79 +131,10 @@
   "online": true
  },
  {
-  "code": "GEOL30009",
-  "name": "Advanced Field Geology",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "VETS90083",
-  "name": "Selection & Interpretation of Lab Tests",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL30070",
-  "name": "Venice Studio",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90490",
-  "name": "Integrative Business Capstone",
-  "offered": [
-   "summer_term",
-   "june",
-   "winter_term",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ARTS90027",
-  "name": "Interdisciplinary Industry Project 2",
-  "offered": [
-   "semester_1",
-   "winter_term",
-   "semester_2"
-  ],
-  "online": true
- },
- {
   "code": "AMGT90029",
   "name": "Applied Research Methods",
   "offered": [
    "february",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "GEOL90043",
-  "name": "Fundamentals of Geological CO2 Storage",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90386",
-  "name": "AA Visiting School Graduate",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90429",
-  "name": "Venice Studio",
-  "offered": [
    "winter_term"
   ],
   "online": true
@@ -1083,14 +166,6 @@
   "online": true
  },
  {
-  "code": "CLAS30045",
-  "name": "Intensive Ancient Greek 1",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
   "code": "MULT20013",
   "name": "Australia Now",
   "offered": [
@@ -1100,51 +175,10 @@
   "online": true
  },
  {
-  "code": "CLAS20035",
-  "name": "Intensive Ancient Greek 1",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FLTV30022",
-  "name": "Making Movies 3 Practical Production",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
   "code": "EDUC30076",
   "name": "Wakanda: African Futures in Education",
   "offered": [
    "march",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20035",
-  "name": "Drawing with Anatomy",
-  "offered": [
-   "winter_term",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "PAED90005",
-  "name": "Child Public Health",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC91017",
-  "name": "Education Randomised Controlled Trials",
-  "offered": [
    "winter_term"
   ],
   "online": true
@@ -1171,41 +205,8 @@
   "online": true
  },
  {
-  "code": "BUSA90513",
-  "name": "Industry Studies in America",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
   "code": "COMP90050",
   "name": "Advanced Database Systems",
-  "offered": [
-   "semester_1",
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "PSYC90103",
-  "name": "Psychology of Advertising",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "PHIL20046",
-  "name": "Feminism",
-  "offered": [
-   "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "FREN10004",
-  "name": "French 1",
   "offered": [
    "semester_1",
    "winter_term"

@@ -5,7 +5,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90053",
@@ -13,7 +13,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS50091",
@@ -21,7 +21,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90744",
@@ -30,7 +30,7 @@
    "february",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90287",
@@ -38,7 +38,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90065",
@@ -46,7 +46,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90938",
@@ -54,7 +54,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "ABPL90394",
@@ -62,15 +62,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "FRST30001",
-  "name": "Forest Systems",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "FRST90025",
@@ -78,7 +70,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS50106",
@@ -86,15 +78,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "CLRS90027",
-  "name": "Principles of Clinical Research",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90942",
@@ -103,15 +87,7 @@
    "february",
    "june"
   ],
-  "online": false
- },
- {
-  "code": "PHTY90013",
-  "name": "Paediatric Physiotherapy Theory",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90742",
@@ -120,7 +96,7 @@
    "february",
    "semester_2"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "PSYT90004",
@@ -128,7 +104,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90806",
@@ -136,7 +112,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90859",
@@ -145,7 +121,7 @@
    "february",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "ABPL90404",
@@ -154,35 +130,7 @@
    "february",
    "winter_term"
   ],
-  "online": false
- },
- {
-  "code": "EDUC91002",
-  "name": "Health and Physical Education (EC&P)",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC20078",
-  "name": "Pop-up Theatre: Performance in Community",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20036",
-  "name": "Under Camera Animation",
-  "offered": [
-   "summer_term",
-   "february",
-   "winter_term",
-   "june"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "THTR20023",
@@ -191,7 +139,7 @@
    "february",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "MUSI20163",
@@ -202,7 +150,7 @@
    "june",
    "semester_2"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90579",
@@ -210,7 +158,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "MEDS90035",
@@ -218,7 +166,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90367",
@@ -226,7 +174,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "VETS90086",
@@ -234,7 +182,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90258",
@@ -243,7 +191,7 @@
    "february",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90898",
@@ -251,7 +199,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS50064",
@@ -260,24 +208,7 @@
    "february",
    "semester_1"
   ],
-  "online": false
- },
- {
-  "code": "EDUC90563",
-  "name": "Engaging Children in the Arts",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90200",
-  "name": "Principles of Social Research Design",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90057",
@@ -285,7 +216,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90903",
@@ -293,7 +224,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90778",
@@ -301,7 +232,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90750",
@@ -309,15 +240,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "EVSC90025",
-  "name": "Water Sensitive Urban Design",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90759",
@@ -325,7 +248,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90896",
@@ -333,7 +256,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS70468",
@@ -342,7 +265,7 @@
    "february",
    "march"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90889",
@@ -350,15 +273,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "NURS90046",
-  "name": "Fundamentals of Palliative Care",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90064",
@@ -366,7 +281,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "BIOM40001",
@@ -374,7 +289,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "FINA20026",
@@ -387,7 +302,7 @@
    "june",
    "semester_2"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "THTR30042",
@@ -398,15 +313,7 @@
    "winter_term",
    "june"
   ],
-  "online": false
- },
- {
-  "code": "ZOOL30008",
-  "name": "Experimental Marine Biology",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90629",
@@ -414,7 +321,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90891",
@@ -423,18 +330,7 @@
    "february",
    "semester_2"
   ],
-  "online": false
- },
- {
-  "code": "SCWK90050",
-  "name": "Supervised Field Placement 2A",
-  "offered": [
-   "february",
-   "may",
-   "august",
-   "november"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90977",
@@ -442,34 +338,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "RADI90010",
-  "name": "Radiology for Physiotherapists",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "GEND40005",
-  "name": "Gender Studies Research Methods",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "PADM90016",
@@ -477,7 +346,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC91001",
@@ -485,25 +354,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "BUSA90273",
-  "name": "Negotiations",
-  "offered": [
-   "february",
-   "april",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90872",
-  "name": "Foundations of the Science of Learning",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC90905",
@@ -511,259 +362,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "LAWS70401",
-  "name": "Regulation of Health Practitioners",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "HORT90041",
-  "name": "Tree Growth and Function",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90741",
-  "name": "Effective Clinical Teaching",
-  "offered": [
-   "february",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "CVEN90069",
-  "name": "Dredging Engineering",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "ATOC90015",
-  "name": "Data Assimilation and Model Improvement",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90895",
-  "name": "Educational Foundations (EC)",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "POLS90007",
-  "name": "US Foreign Policy",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "ORAL30003",
-  "name": "Oral Health Therapy Research Int'l",
-  "offered": [
-   "summer_term",
-   "february",
-   "march",
-   "may",
-   "june",
-   "june",
-   "august"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90880",
-  "name": "Becoming a Clinical Practitioner (Prim)",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "FINA10030",
-  "name": "Related Studies Photography",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90189",
-  "name": "Health Program Design & Implementation",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS20011",
-  "name": "Sport and the Law",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90907",
-  "name": "Inclusive Language, Literacy & Numeracy",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90419",
-  "name": "Education Research Methodology",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "AGRI10039",
-  "name": "Australia in the Wine World",
-  "offered": [
-   "february",
-   "june",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90977",
-  "name": "Diverse and Inclusive Classrooms (EC&P)",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90891",
-  "name": "Becoming a Clinical Practitioner (EC)",
-  "offered": [
-   "february",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90629",
-  "name": "Leading Change for Student Wellbeing",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "RADI90010",
-  "name": "Radiology for Physiotherapists",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90050",
-  "name": "Supervised Field Placement 2A",
-  "offered": [
-   "february",
-   "may",
-   "august",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "GEND40005",
-  "name": "Gender Studies Research Methods",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "PADM90016",
-  "name": "Public Sector Governance",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC91001",
-  "name": "Science, Tech (Digital & Design) (EC&P)",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90905",
-  "name": "Becoming a Clinical Practitioner (Sec)",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90872",
-  "name": "Foundations of the Science of Learning",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90273",
-  "name": "Negotiations",
-  "offered": [
-   "february",
-   "april",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90845",
-  "name": "Learning Intervention 1",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70387",
-  "name": "Fundamentals of Patent Drafting",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "FINA20044",
@@ -776,7 +375,7 @@
    "june",
    "semester_2"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90059",
@@ -784,15 +383,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "POLS40013",
-  "name": "Social Science Research Seminar",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90066",
@@ -800,7 +391,23 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
+ },
+ {
+  "code": "POLS40013",
+  "name": "Social Science Research Seminar",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC30065",
+  "name": "Ethics, gender and the family",
+  "offered": [
+   "february"
+  ],
+  "online": true
  },
  {
   "code": "MECM20012",
@@ -810,7 +417,7 @@
    "semester_1",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "EDUC20069",
@@ -818,15 +425,7 @@
   "offered": [
    "february"
   ],
-  "online": false
- },
- {
-  "code": "EDUC30065",
-  "name": "Ethics, gender and the family",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "BLAW20002",
@@ -834,7 +433,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "JOUR90006",
@@ -843,24 +442,23 @@
    "february",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
-  "code": "AMGT90029",
-  "name": "Applied Research Methods",
-  "offered": [
-   "february",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90060",
-  "name": "Advanced Narrative Skills Development",
+  "code": "GEOG90029",
+  "name": "Research Methods in Geography",
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
+ },
+ {
+  "code": "MGMT90283",
+  "name": "Business Analysis & Decision Making",
+  "offered": [
+   "february"
+  ],
+  "online": true
  },
  {
   "code": "EDUC90755",
@@ -868,7 +466,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "PADM90007",
@@ -877,15 +475,7 @@
    "february",
    "june"
   ],
-  "online": false
- },
- {
-  "code": "EDUC90837",
-  "name": "Clinical Education Research Proposal",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "AMGT90029",
@@ -894,7 +484,7 @@
    "february",
    "winter_term"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "SCWK90060",
@@ -902,7 +492,7 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "MGMT90276",
@@ -913,15 +503,7 @@
    "june",
    "october"
   ],
-  "online": false
- },
- {
-  "code": "POPH90217",
-  "name": "Foundations of Public Health",
-  "offered": [
-   "february"
-  ],
-  "online": false
+  "online": true
  },
  {
   "code": "ABPL90419",
@@ -929,7 +511,136 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
+ },
+ {
+  "code": "PADM90016",
+  "name": "Public Sector Governance",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC91001",
+  "name": "Science, Tech (Digital & Design) (EC&P)",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90905",
+  "name": "Becoming a Clinical Practitioner (Sec)",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "FINA20044",
+  "name": "Art and the Botanical",
+  "offered": [
+   "summer_term",
+   "february",
+   "semester_1",
+   "winter_term",
+   "june",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "SCWK90059",
+  "name": "Engaging with Families",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "POLS40013",
+  "name": "Social Science Research Seminar",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "SCWK90066",
+  "name": "Social Work Theory and Practice",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "MECM20012",
+  "name": "Analysing Professional Communication",
+  "offered": [
+   "february",
+   "semester_1",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC20069",
+  "name": "Deafness and Communication",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC30065",
+  "name": "Ethics, gender and the family",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "BLAW20002",
+  "name": "Regulating Digital Platforms",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "JOUR90006",
+  "name": "Dilemmas in Journalism: Law and Ethics",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "AMGT90029",
+  "name": "Applied Research Methods",
+  "offered": [
+   "february",
+   "winter_term"
+  ],
+  "online": true
+ },
+ {
+  "code": "SCWK90060",
+  "name": "Advanced Narrative Skills Development",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "GEOG90029",
+  "name": "Research Methods in Geography",
+  "offered": [
+   "february"
+  ],
+  "online": true
  },
  {
   "code": "EDUC90628",
@@ -938,7 +649,7 @@
    "february",
    "june"
   ],
-  "online": false
+  "online": true
  },
  {
   "code": "LAWS50128",
@@ -946,751 +657,17 @@
   "offered": [
    "february"
   ],
-  "online": false
+  "online": true
  },
  {
-  "code": "EDUC90619",
-  "name": "Leading Educational Ideas",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "AGRI30043",
-  "name": "Resource Management Economics",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90684",
-  "name": "21st Century Literacies: Policy & Praxis",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90279",
-  "name": "Supply Chain Technologies",
+  "code": "MGMT90276",
+  "name": "Logistics and Transportation Management",
   "offered": [
    "february",
    "april",
    "june",
    "october"
   ],
-  "online": false
- },
- {
-  "code": "AGRI20027",
-  "name": "Vine to Wine",
-  "offered": [
-   "february"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI20164",
-  "name": "Free Play New Music Improvisation Ensem",
-  "offered": [
-   "february",
-   "semester_1",
-   "june",
-   "semester_2"
-  ],
-  "online": false
- },
- {
-  "code": "MULT20013",
-  "name": "Australia Now",
-  "offered": [
-   "february",
-   "winter_term"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90898",
-  "name": "Introduction to Clinical Practice (EC)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50064",
-  "name": "Employment Law",
-  "offered": [
-   "february",
-   "semester_1"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90563",
-  "name": "Engaging Children in the Arts",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90200",
-  "name": "Principles of Social Research Design",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90057",
-  "name": "Working with Groups and Communities",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90579",
-  "name": "Interpersonal and Group Processes",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "MEDS90035",
-  "name": "MD Research Skills 1",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90367",
-  "name": "Foundational English Literacy",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "VETS90086",
-  "name": "Epidemiology of Epidemics",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90258",
-  "name": "Student Wellbeing: Current Approaches",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70468",
-  "name": "Negotiation Skills",
-  "offered": [
-   "february",
-   "march"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90759",
-  "name": "Education Research Project",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90903",
-  "name": "Contemporary Education Debates",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90778",
-  "name": "Primary Mathematics Education 1",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EVSC90025",
-  "name": "Water Sensitive Urban Design",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90750",
-  "name": "Leading Schools Through Leading Self",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90064",
-  "name": "Lifespan Risk and Resilience",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90889",
-  "name": "Scientific and Environmental Learning",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "NURS90046",
-  "name": "Fundamentals of Palliative Care",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90896",
-  "name": "Educational Leadership (EC & Prim)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "BIOM40001",
-  "name": "Introduction To Biomedical Research",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "THTR30042",
-  "name": "Hashtag Cyberstar",
-  "offered": [
-   "summer_term",
-   "february",
-   "winter_term",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20026",
-  "name": "Painting Techniques",
-  "offered": [
-   "summer_term",
-   "february",
-   "semester_1",
-   "winter_term",
-   "june",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "ZOOL30008",
-  "name": "Experimental Marine Biology",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90705",
-  "name": "Language & Literacy Learning in Children",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90053",
-  "name": "Counselling and Interviewing Skills",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50091",
-  "name": "International Investment Law",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90744",
-  "name": "Assessing Clinical Learners",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90394",
-  "name": "ZEMCH Sustainable Design Workshop",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90287",
-  "name": "Promoting Positive Learning",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90065",
-  "name": "Social Policy for Social Work Practice",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90938",
-  "name": "Quality Assessment Design",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "FRST30001",
-  "name": "Forest Systems",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "FRST90025",
-  "name": "Patterns and Processes of Landscape Fire",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50106",
-  "name": "Murder",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "CLRS90027",
-  "name": "Principles of Clinical Research",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90942",
-  "name": "Managing the Educational Organisation",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC91002",
-  "name": "Health and Physical Education (EC&P)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90742",
-  "name": "Effective Clinical Supervision",
-  "offered": [
-   "february",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90004",
-  "name": "Psychiatry of Old Age",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70468",
-  "name": "Negotiation Skills",
-  "offered": [
-   "february",
-   "march"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90889",
-  "name": "Scientific and Environmental Learning",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "NURS90046",
-  "name": "Fundamentals of Palliative Care",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90064",
-  "name": "Lifespan Risk and Resilience",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "BIOM40001",
-  "name": "Introduction To Biomedical Research",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20026",
-  "name": "Painting Techniques",
-  "offered": [
-   "summer_term",
-   "february",
-   "semester_1",
-   "winter_term",
-   "june",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "THTR30042",
-  "name": "Hashtag Cyberstar",
-  "offered": [
-   "summer_term",
-   "february",
-   "winter_term",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "ZOOL30008",
-  "name": "Experimental Marine Biology",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90286",
-  "name": "Construction Methods A",
-  "offered": [
-   "february",
-   "semester_1"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90063",
-  "name": "Social Work Practice: Indigenous Peoples",
-  "offered": [
-   "february",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "FINA10039",
-  "name": "Related Studies Drawing & Printmedia",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90006",
-  "name": "Child and Adolescent Psychiatry",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90875",
-  "name": "Literacy for the Primary Years",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "ASIA90015",
-  "name": "Conflict and Terrorism in Southeast Asia",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "CVEN90070",
-  "name": "Port and Harbour Engineering",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90743",
-  "name": "Clinical Education in Practice",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90157",
-  "name": "Esports and the Law",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90058",
-  "name": "Researching Social Work Practice 2",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90897",
-  "name": "Infant & Toddler Learning & Development",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70270",
-  "name": "Construction Contract Analysis, Drafting",
-  "offered": [
-   "february",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70401",
-  "name": "Regulation of Health Practitioners",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "HORT90041",
-  "name": "Tree Growth and Function",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90741",
-  "name": "Effective Clinical Teaching",
-  "offered": [
-   "february",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "CVEN90069",
-  "name": "Dredging Engineering",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "ATOC90015",
-  "name": "Data Assimilation and Model Improvement",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90895",
-  "name": "Educational Foundations (EC)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "POLS90007",
-  "name": "US Foreign Policy",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "ORAL30003",
-  "name": "Oral Health Therapy Research Int'l",
-  "offered": [
-   "summer_term",
-   "february",
-   "march",
-   "may",
-   "june",
-   "june",
-   "august"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90880",
-  "name": "Becoming a Clinical Practitioner (Prim)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "FINA10030",
-  "name": "Related Studies Photography",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90189",
-  "name": "Health Program Design & Implementation",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS20011",
-  "name": "Sport and the Law",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90907",
-  "name": "Inclusive Language, Literacy & Numeracy",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90419",
-  "name": "Education Research Methodology",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "AGRI10039",
-  "name": "Australia in the Wine World",
-  "offered": [
-   "february",
-   "june",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90977",
-  "name": "Diverse and Inclusive Classrooms (EC&P)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90891",
-  "name": "Becoming a Clinical Practitioner (EC)",
-  "offered": [
-   "february",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90629",
-  "name": "Leading Change for Student Wellbeing",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "RADI90010",
-  "name": "Radiology for Physiotherapists",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
   "online": true
  },
  {
@@ -1702,8 +679,16 @@
   "online": true
  },
  {
-  "code": "EDUC90628",
-  "name": "Relationship Skills for Educators 1",
+  "code": "EDUC90619",
+  "name": "Leading Educational Ideas",
+  "offered": [
+   "february"
+  ],
+  "online": true
+ },
+ {
+  "code": "PADM90007",
+  "name": "The World of Public Administration",
   "offered": [
    "february",
    "june"
@@ -1711,16 +696,16 @@
   "online": true
  },
  {
-  "code": "LAWS50128",
-  "name": "Intellectual Property & Popular Culture",
+  "code": "EDUC90755",
+  "name": "Evidence for Learning and Teaching",
   "offered": [
    "february"
   ],
   "online": true
  },
  {
-  "code": "EDUC90619",
-  "name": "Leading Educational Ideas",
+  "code": "MGMT90283",
+  "name": "Business Analysis & Decision Making",
   "offered": [
    "february"
   ],
@@ -1754,14 +739,6 @@
   "online": true
  },
  {
-  "code": "AGRI20027",
-  "name": "Vine to Wine",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
   "code": "MUSI20164",
   "name": "Free Play New Music Improvisation Ensem",
   "offered": [
@@ -1778,236 +755,6 @@
   "offered": [
    "february",
    "winter_term"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90286",
-  "name": "Construction Methods A",
-  "offered": [
-   "february",
-   "semester_1"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90063",
-  "name": "Social Work Practice: Indigenous Peoples",
-  "offered": [
-   "february",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "CVEN90070",
-  "name": "Port and Harbour Engineering",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90157",
-  "name": "Esports and the Law",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "FINA10030",
-  "name": "Related Studies Photography",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90741",
-  "name": "Effective Clinical Teaching",
-  "offered": [
-   "february",
-   "semester_2"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90875",
-  "name": "Literacy for the Primary Years",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "FINA10039",
-  "name": "Related Studies Drawing & Printmedia",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90880",
-  "name": "Becoming a Clinical Practitioner (Prim)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90189",
-  "name": "Health Program Design & Implementation",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "POLS90007",
-  "name": "US Foreign Policy",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "ORAL30003",
-  "name": "Oral Health Therapy Research Int'l",
-  "offered": [
-   "summer_term",
-   "february",
-   "march",
-   "may",
-   "june",
-   "june",
-   "august"
-  ],
-  "online": true
- },
- {
-  "code": "ASIA90015",
-  "name": "Conflict and Terrorism in Southeast Asia",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90006",
-  "name": "Child and Adolescent Psychiatry",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90743",
-  "name": "Clinical Education in Practice",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "ATOC90015",
-  "name": "Data Assimilation and Model Improvement",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90895",
-  "name": "Educational Foundations (EC)",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "HORT90041",
-  "name": "Tree Growth and Function",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70401",
-  "name": "Regulation of Health Practitioners",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90897",
-  "name": "Infant & Toddler Learning & Development",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "CVEN90069",
-  "name": "Dredging Engineering",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70270",
-  "name": "Construction Contract Analysis, Drafting",
-  "offered": [
-   "february",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90058",
-  "name": "Researching Social Work Practice 2",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS20011",
-  "name": "Sport and the Law",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90907",
-  "name": "Inclusive Language, Literacy & Numeracy",
-  "offered": [
-   "february"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90419",
-  "name": "Education Research Methodology",
-  "offered": [
-   "february",
-   "june"
-  ],
-  "online": true
- },
- {
-  "code": "AGRI10039",
-  "name": "Australia in the Wine World",
-  "offered": [
-   "february",
-   "june",
-   "semester_2"
   ],
   "online": true
  }
