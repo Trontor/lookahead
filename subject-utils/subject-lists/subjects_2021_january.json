@@ -1,75 +1,45 @@
 [
  {
-  "code": "ABPL90360",
-  "name": "MUCH Heritage Industry Internship",
-  "offered": [
-   "january",
-   "semester_1",
-   "semester_2"
-  ]
- },
- {
-  "code": "ANAT90008",
-  "name": "Surgical Anatomy",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "BUSA90001",
-  "name": "Financial Accounting",
-  "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ]
- },
- {
-  "code": "BUSA90046",
-  "name": "Corporate Finance",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "BUSA90060",
-  "name": "Data Analysis",
-  "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ]
- },
- {
   "code": "BUSA90074",
   "name": "Global Business Economics",
   "offered": [
    "january",
    "april",
    "june"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "BUSA90093",
-  "name": "Finance",
+  "code": "PPMN90031",
+  "name": "Public Policy Lobbying Strategies",
   "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ]
+   "january"
+  ],
+  "online": false
  },
  {
-  "code": "BUSA90193",
-  "name": "Managerial Economics",
+  "code": "EDUC90584",
+  "name": "Learning and Teaching Contexts 2",
   "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ]
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANAT90008",
+  "name": "Surgical Anatomy",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90007",
+  "name": "Oral Health Sciences 4 (Part 2)",
+  "offered": [
+   "january"
+  ],
+  "online": false
  },
  {
   "code": "BUSA90224",
@@ -79,17 +49,46 @@
    "april",
    "june",
    "september"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "BUSA90227",
-  "name": "Operations",
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
   "offered": [
    "january",
    "april",
    "june",
    "september"
-  ]
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90128",
+  "name": "Intensive Care Nursing Practice",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90479",
+  "name": "MBA Internship",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
  },
  {
   "code": "BUSA90243",
@@ -99,22 +98,36 @@
    "april",
    "june",
    "september"
-  ]
+  ],
+  "online": false
  },
  {
   "code": "BUSA90248",
   "name": "Marketing Communications",
   "offered": [
    "january"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "BUSA90322",
-  "name": "Special Topics in Management",
+  "code": "BUSA90201",
+  "name": "Managerial Project",
   "offered": [
+   "summer_term",
    "january",
-   "march"
-  ]
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90531",
+  "name": "Analytics for Strategic Management",
+  "offered": [
+   "january"
+  ],
+  "online": false
  },
  {
   "code": "BUSA90485",
@@ -122,80 +135,51 @@
   "offered": [
    "january",
    "november"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "BUSA90492",
-  "name": "Financial Analysis and Valuation",
+  "code": "BUSA90093",
+  "name": "Finance",
   "offered": [
-   "january"
-  ]
- },
- {
-  "code": "BUSA90521",
-  "name": "Supply Chain Analytics",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "BUSA90531",
-  "name": "Analytics for Strategic Management",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "DENT90120",
-  "name": "Dental Practice 2",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "DENT90121",
-  "name": "Oral Medicine, Surgery and Special Needs",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "DENT90122",
-  "name": "Principles of Dental Practice 2",
-  "offered": [
-   "january"
-  ]
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
  },
  {
   "code": "DENT90125",
   "name": "Clinical Practice 4",
   "offered": [
    "january"
-  ]
+  ],
+  "online": false
  },
  {
   "code": "DENT90126",
   "name": "Intro to Dental Medicine and Surgery",
   "offered": [
    "january"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "DEVT90008",
-  "name": "International Internship in Development",
+  "code": "EDUC90630",
+  "name": "Relationship Skills for Educators 2",
   "offered": [
-   "january",
-   "semester_1",
-   "semester_2"
-  ]
+   "january"
+  ],
+  "online": false
  },
  {
-  "code": "ECON20010",
-  "name": "TDM International Negotiation",
+  "code": "DENT90122",
+  "name": "Principles of Dental Practice 2",
   "offered": [
-   "january",
-   "august"
-  ]
+   "january"
+  ],
+  "online": false
  },
  {
   "code": "EDUC90126",
@@ -203,50 +187,16 @@
   "offered": [
    "january",
    "june"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "EDUC90137",
-  "name": "Personal and Interpersonal Leadership",
-  "offered": [
-   "january",
-   "september"
-  ]
- },
- {
-  "code": "EDUC90582",
-  "name": "Evidence Based Learning and Teaching 2",
+  "code": "ORAL90009",
+  "name": "Oral Path & Adult Oral Function (Part 2)",
   "offered": [
    "january"
-  ]
- },
- {
-  "code": "EDUC90584",
-  "name": "Learning and Teaching Contexts 2",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "EDUC90630",
-  "name": "Relationship Skills for Educators 2",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "EDUC90822",
-  "name": "Connecting and Engaging Students",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "EDUC91032",
-  "name": "Primary Humanities Education (EC&P)",
-  "offered": [
-   "january"
-  ]
+  ],
+  "online": false
  },
  {
   "code": "LAWS50059",
@@ -257,65 +207,168 @@
    "june",
    "semester_2",
    "november"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "MEDS90006",
-  "name": "Context of Surgical Education",
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
   "offered": [
-   "january"
-  ]
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
  },
  {
-  "code": "MEDS90007",
-  "name": "Learning & Teaching in Surgical Practice",
+  "code": "ABPL90360",
+  "name": "MUCH Heritage Industry Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90005",
+  "name": "Oral Health Practice 4 (Part 2)",
   "offered": [
    "january"
-  ]
+  ],
+  "online": false
+ },
+ {
+  "code": "DENT90121",
+  "name": "Oral Medicine, Surgery and Special Needs",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90137",
+  "name": "Personal and Interpersonal Leadership",
+  "offered": [
+   "january",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90521",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91032",
+  "name": "Primary Humanities Education (EC&P)",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90492",
+  "name": "Financial Analysis and Valuation",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "ECON20010",
+  "name": "TDM International Negotiation",
+  "offered": [
+   "january",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "DENT90120",
+  "name": "Dental Practice 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90046",
+  "name": "Corporate Finance",
+  "offered": [
+   "january"
+  ],
+  "online": false
  },
  {
   "code": "MEDS90010",
   "name": "Minor Thesis - Surgical Education",
   "offered": [
    "january"
-  ]
+  ],
+  "online": false
  },
  {
-  "code": "MEDS90011",
-  "name": "Research Methods in Surgical Education",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "MEDS90013",
-  "name": "Teaching Professionalism in Surgery",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "MEDS90015",
-  "name": "Simulation in Surgical Education",
-  "offered": [
-   "january"
-  ]
- },
- {
-  "code": "MEDS90029",
-  "name": "Minor Thesis Part 1",
+  "code": "BUSA90227",
+  "name": "Operations",
   "offered": [
    "january",
-   "semester_2"
-  ]
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
  },
  {
-  "code": "MEDS90030",
-  "name": "Minor Thesis Part 2",
+  "code": "EDUC90582",
+  "name": "Evidence Based Learning and Teaching 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90822",
+  "name": "Connecting and Engaging Students",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90007",
+  "name": "Oral Health Sciences 4 (Part 2)",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90224",
+  "name": "Managing People",
   "offered": [
    "january",
-   "semester_2"
-  ]
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
  },
  {
   "code": "NURS90128",
@@ -323,34 +376,331 @@
   "offered": [
    "january",
    "june"
-  ]
+  ],
+  "online": true
  },
  {
-  "code": "ORAL90005",
-  "name": "Oral Health Practice 4 (Part 2)",
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
   "offered": [
-   "january"
-  ]
+   "january",
+   "april"
+  ],
+  "online": true
  },
  {
-  "code": "ORAL90007",
-  "name": "Oral Health Sciences 4 (Part 2)",
+  "code": "BUSA90479",
+  "name": "MBA Internship",
   "offered": [
-   "january"
-  ]
+   "january",
+   "april"
+  ],
+  "online": true
  },
  {
-  "code": "ORAL90009",
-  "name": "Oral Path & Adult Oral Function (Part 2)",
+  "code": "BUSA90248",
+  "name": "Marketing Communications",
   "offered": [
    "january"
-  ]
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90531",
+  "name": "Analytics for Strategic Management",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "DENT90126",
+  "name": "Intro to Dental Medicine and Surgery",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90485",
+  "name": "Global Business Practicum",
+  "offered": [
+   "january",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "DENT90125",
+  "name": "Clinical Practice 4",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90074",
+  "name": "Global Business Economics",
+  "offered": [
+   "january",
+   "april",
+   "june"
+  ],
+  "online": true
  },
  {
   "code": "PPMN90031",
   "name": "Public Policy Lobbying Strategies",
   "offered": [
    "january"
-  ]
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90584",
+  "name": "Learning and Teaching Contexts 2",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "ANAT90008",
+  "name": "Surgical Anatomy",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "DENT90120",
+  "name": "Dental Practice 2",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "MEDS90010",
+  "name": "Minor Thesis - Surgical Education",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90046",
+  "name": "Corporate Finance",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "ECON20010",
+  "name": "TDM International Negotiation",
+  "offered": [
+   "january",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90227",
+  "name": "Operations",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90582",
+  "name": "Evidence Based Learning and Teaching 2",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90822",
+  "name": "Connecting and Engaging Students",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90630",
+  "name": "Relationship Skills for Educators 2",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "ORAL90009",
+  "name": "Oral Path & Adult Oral Function (Part 2)",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "DENT90122",
+  "name": "Principles of Dental Practice 2",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90126",
+  "name": "School Effectiveness and Improvement",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "ORAL90005",
+  "name": "Oral Health Practice 4 (Part 2)",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "DENT90121",
+  "name": "Oral Medicine, Surgery and Special Needs",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "ABPL90360",
+  "name": "MUCH Heritage Industry Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90521",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90137",
+  "name": "Personal and Interpersonal Leadership",
+  "offered": [
+   "january",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC91032",
+  "name": "Primary Humanities Education (EC&P)",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90492",
+  "name": "Financial Analysis and Valuation",
+  "offered": [
+   "january"
+  ],
+  "online": true
  }
 ]
