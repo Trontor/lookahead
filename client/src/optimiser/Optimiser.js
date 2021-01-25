@@ -1,13 +1,13 @@
-import Timetable from "./Timetable";
-import OptimisationType from "./optimisationTypes";
+import Timetable from './Timetable';
+import OptimisationType from './optimisationTypes';
 import {
   sortByDayAvoid,
   sortByDaysPresent,
   sortByTotalDaySpan,
   sortByLongestRun,
-  sortByDaySpanExcludingLectures
-} from "./comparators";
-import optimisationTypes from "./optimisationTypes";
+  sortByDaySpanExcludingLectures,
+} from './comparators';
+import optimisationTypes from './optimisationTypes';
 
 export const PERMUTATION_THRESHOLD = 175000;
 class Optimiser {
@@ -84,28 +84,20 @@ class Optimiser {
    * @param {Array} reserved An array of FullCalendar Event Object's that are to
    * be considered when optimising.
    */
-  generateAndOptimise(
-    optimisations,
-    reserved,
-    threshold = PERMUTATION_THRESHOLD
-  ) {
+  generateAndOptimise(optimisations, reserved, threshold = PERMUTATION_THRESHOLD) {
     // Calculate possible permutations
     const permutations = this.possiblePermutations();
     const random = permutations > threshold;
-    console.log("Timetables to Generate:", permutations);
-    if (
-      optimisations.some(o => o.type === optimisationTypes.IGNORE_WEIRD_STREAMS)
-    ) {
+    console.log('Timetables to Generate:', permutations);
+    if (optimisations.some(o => o.type === optimisationTypes.IGNORE_WEIRD_STREAMS)) {
       this.removeWeirdStreams();
     }
     if (random) {
-      console.log(
-        "Too many timetables to bruteforce, switching to random generation."
-      );
+      console.log('Too many timetables to bruteforce, switching to random generation.');
     }
     // Start performance tracking
     const t0 = performance.now();
-    const { setPool, streamPool } = this.generateClassPools();
+    const {setPool, streamPool} = this.generateClassPools();
     // Add reserved events to their own set in the set pool
     for (const reservedEvent of [...reserved]) {
       const start = reservedEvent.start;
@@ -114,7 +106,7 @@ class Optimiser {
         id: reservedEvent.id,
         start: start.getHours() + start.getMinutes() / 60,
         finish: finish.getHours() + finish.getMinutes() / 60,
-        day: start.getDay() - 1
+        day: start.getDay() - 1,
       };
       setPool.push([transformedEvent]);
     }
@@ -148,13 +140,12 @@ class Optimiser {
     // Convert each combination to a timetable
     const timetables = [];
     overallCombinations.forEach(comb => timetables.push(new Timetable(comb)));
-    console.log("Applying the following optimisations:", optimisations);
+    console.log('Applying the following optimisations:', optimisations);
 
     // Sort timetables
     timetables.sort((a, b) =>
       optimisations.reduce(
-        (acc, optimisation) =>
-          acc || this.applyOptimisation(optimisation, a, b),
+        (acc, optimisation) => acc || this.applyOptimisation(optimisation, a, b),
         0
       )
     );
@@ -163,7 +154,7 @@ class Optimiser {
     const time = t1 - t0;
     console.log(timetables);
 
-    return { timetables, time };
+    return {timetables, time};
   }
 
   applyTimeRestrictions(earliestStart, latestFinish) {
@@ -182,8 +173,7 @@ class Optimiser {
      * 8. If stream types counts after != stream type counts before, invalid
      * 9. Otherwise, valid!
      */
-    const classViolation = cls =>
-      cls.start < earliestStart || cls.finish > latestFinish;
+    const classViolation = cls => cls.start < earliestStart || cls.finish > latestFinish;
     // Copy subjects, so modifications don't affect class-scope variable
     const subjects = JSON.parse(JSON.stringify(this.subjects));
     console.log(
@@ -197,10 +187,8 @@ class Optimiser {
       // (1) Get class type counts before
       const beforeTypes = this.getClassTypes(subject);
       const beforeTypeCount = Object.keys(this.getClassTypes(subject)).length;
-      console.log("\tRegular Classes");
-      console.log("\t\tBefore:", beforeTypes, beforeTypeCount, [
-        ...subject._regularClasses
-      ]);
+      console.log('\tRegular Classes');
+      console.log('\t\tBefore:', beforeTypes, beforeTypeCount, [...subject._regularClasses]);
       // (2) Now begin pruning
       const regClasses = subject._regularClasses;
       for (let i = regClasses.length - 1; i >= 0; i--) {
@@ -212,18 +200,18 @@ class Optimiser {
       // (3) Get class type counts after
       const afterTypes = this.getClassTypes(subject);
       const afterTypeCount = Object.keys(afterTypes).length;
-      console.log("\t\tAfter:", afterTypes, afterTypeCount, regClasses);
+      console.log('\t\tAfter:', afterTypes, afterTypeCount, regClasses);
       // (4) Check for invalid restriction
       if (afterTypeCount !== beforeTypeCount) {
-        console.error("😠 [Class Pruning] Invalid Restrictions");
+        console.error('😠 [Class Pruning] Invalid Restrictions');
         return false;
       }
       const containers = subject._streamContainers;
-      console.log("\tStream Containers");
+      console.log('\tStream Containers');
       // Go through each streamContainer
       for (const container of containers) {
         console.log(`\t  ${container.type}`);
-        const { streams } = container;
+        const {streams} = container;
         // (5) Get before stream counts
         const beforeStreamCount = streams.length;
         console.log(`\t\tBefore: ${beforeStreamCount}`, [...streams]);
@@ -240,7 +228,7 @@ class Optimiser {
         const afterStreamCount = streams.length;
         console.log(`\t\tAfter: ${afterStreamCount}`, streams);
         if (afterStreamCount === 0) {
-          console.error("😠 [Stream Pruning] Invalid Restrictions");
+          console.error('😠 [Stream Pruning] Invalid Restrictions');
           console.log(
             `Time restrictions have cut off all stream possibilities for ${subject.code}.`
           );
@@ -323,21 +311,19 @@ class Optimiser {
     const allClassTypes = {};
     // Looping through arrays created from Object.keys
     const subjects = Object.entries(this.subjects);
-    for (const [subjectCode, { data }] of subjects) {
+    for (const [subjectCode, {data}] of subjects) {
       if (!data) {
         continue;
       }
       const subject = data;
-      const { _regularClasses, _mandatoryClasses, _streamContainers } = subject;
+      const {_regularClasses, _mandatoryClasses, _streamContainers} = subject;
       const classTypes = this.getClassTypes(subject);
       // Create a mapping of type: [classes] for each type
       // for example: "W": [classA, classB]
       const typeClassMappings = {};
       for (const type of Object.keys(classTypes)) {
         // Filter all classes in the current subject for this type
-        const matchingClasses = _regularClasses.filter(
-          cls => cls.classCode.type === type
-        );
+        const matchingClasses = _regularClasses.filter(cls => cls.classCode.type === type);
         setPool.push(matchingClasses);
         typeClassMappings[type] = matchingClasses;
       }
@@ -346,7 +332,7 @@ class Optimiser {
         setPool.push([mandatoryClass]);
       }
       // Now, deal with Streams
-      for (const { /* type , */ streams /* ,name */ } of _streamContainers) {
+      for (const {/* type , */ streams /* ,name */} of _streamContainers) {
         // console.log(type);
         const streamTypeClasses = [];
         for (const stream of streams) {
@@ -356,7 +342,7 @@ class Optimiser {
       }
       allClassTypes[subjectCode] = typeClassMappings;
     }
-    return { setPool, streamPool };
+    return {setPool, streamPool};
   }
 }
 

@@ -1,5 +1,5 @@
-import moment = require("moment");
-import Subject from "./Subject";
+import moment = require('moment');
+import Subject from './Subject';
 
 interface IClassCode {
   type: string;
@@ -12,19 +12,18 @@ interface IClassCode {
 export default class SubjectClass {
   // Internal representation of day ordering, useful for mapping to and from int
   public static readonly daysOfWeek: string[] = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday"
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
   ];
   // The time format used by the SWS timetable system to represent times
-  public static readonly timeFormat = "HH:mm";
+  public static readonly timeFormat = 'HH:mm';
   // Verifies if a class code is well formed, i.e. COMP10001/U/1/SM1/W01/55
-  public static isWellFormedCode = (code: string): boolean =>
-    code.split("/").length === 6;
+  public static isWellFormedCode = (code: string): boolean => code.split('/').length === 6;
   // Subject code
   public subjectCode: string;
   // All class codes that occur at this class time
@@ -36,7 +35,7 @@ export default class SubjectClass {
   // The stream number for this class
   public readonly streamNumber: number;
   // The type of class 'Mandatory', 'Variable', 'Stream' or unknown ''
-  public type: string = "";
+  public type: string = '';
   // The time length of the class
   private readonly duration: number;
   /**
@@ -65,12 +64,12 @@ export default class SubjectClass {
     this.locations = [location];
     // this.duration = moment.duration(finish.diff(start)).asHours();
     // Parse parts of class code
-    const classCodeRaw = code.split("/")[4].trim();
+    const classCodeRaw = code.split('/')[4].trim();
     this.classCode = {
-      number: parseInt(classCodeRaw.replace(/\D/g, ""), 10),
-      type: classCodeRaw.replace(/[^a-zA-Z]+/g, "")
+      number: parseInt(classCodeRaw.replace(/\D/g, ''), 10),
+      type: classCodeRaw.replace(/[^a-zA-Z]+/g, ''),
     };
-    this.streamNumber = parseInt(code.split("/")[5], 10);
+    this.streamNumber = parseInt(code.split('/')[5], 10);
   }
 
   /**
@@ -78,22 +77,15 @@ export default class SubjectClass {
    */
   public mergeClass = (subjectClass: SubjectClass) => {
     // Merge locations, removing duplicates
-    this.locations = [
-      ...new Set([...this.locations, ...subjectClass.locations])
-    ];
+    this.locations = [...new Set([...this.locations, ...subjectClass.locations])];
     this.codes = this.codes.concat(subjectClass.codes);
   };
 
   public toString = (): string => {
     const parseHoursPastMidnight = (num: number) =>
-      moment()
-        .startOf("day")
-        .add(num, "hour")
-        .format("HH:mm");
-    return `${this.codes.join(", ")}: ${
-      SubjectClass.daysOfWeek[this.day]
-    } ${parseHoursPastMidnight(this.start)} -> ${parseHoursPastMidnight(
-      this.finish
-    )} at ${this.locations.join(", ")}`;
+      moment().startOf('day').add(num, 'hour').format('HH:mm');
+    return `${this.codes.join(', ')}: ${SubjectClass.daysOfWeek[this.day]} ${parseHoursPastMidnight(
+      this.start
+    )} -> ${parseHoursPastMidnight(this.finish)} at ${this.locations.join(', ')}`;
   };
 }

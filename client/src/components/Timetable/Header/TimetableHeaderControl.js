@@ -1,18 +1,11 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import {
-  HeaderWrapper,
-  NavigationButton,
-  TimetableCount
-} from "./TimetableHeaderControlStyles";
-import {
-  nextTimetable,
-  previousTimetable
-} from "../../../redux/actions/optimiserActions";
-import ArrowKeysReact from "arrow-keys-react";
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import {HeaderWrapper, NavigationButton, TimetableCount} from './TimetableHeaderControlStyles';
+import {nextTimetable, previousTimetable} from '../../../redux/actions/optimiserActions';
+import ArrowKeysReact from 'arrow-keys-react';
 
 export default function TimetableHeaderControl(props) {
-  const { current, header } = props;
+  const {current, header} = props;
   const dispatch = useDispatch();
   let currentTimeout = null;
   ArrowKeysReact.config({
@@ -23,16 +16,12 @@ export default function TimetableHeaderControl(props) {
     right: () => {
       clearTimeout(currentTimeout);
       currentTimeout = setTimeout(() => dispatch(nextTimetable()));
-    }
+    },
   });
 
   return (
     <HeaderWrapper tabIndex="1" {...ArrowKeysReact.events}>
-      <NavigationButton
-        disabled={current === 1}
-        onClick={() => dispatch(previousTimetable())}
-        left
-      >
+      <NavigationButton disabled={current === 1} onClick={() => dispatch(previousTimetable())} left>
         <i className="fa fa-arrow-left" />
       </NavigationButton>
       <TimetableCount>{header}</TimetableCount>

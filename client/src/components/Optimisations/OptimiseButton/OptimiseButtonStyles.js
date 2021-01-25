@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const OptimiseButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
 
 export const OptimiseButton = styled.button`
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   font-size: 15px;
   background-color: ${props => props.theme.main};
   color: #fff;

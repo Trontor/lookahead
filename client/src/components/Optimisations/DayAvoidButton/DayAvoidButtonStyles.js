@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from 'styled-components';
 export const AvoidButton = styled.button`
   outline: 0;
   width: 50px;

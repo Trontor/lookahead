@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from 'styled-components';
 export const PopOver = styled.div`
   position: absolute;
   z-index: 100;
@@ -23,7 +23,7 @@ export const Cover = styled.div`
 
 export const TwitterWrapper = styled.div`
   > div > div:not(:last-child) {
-    ${({ tip }) => {
+    ${({tip}) => {
       if (!tip) {
         return null;
       }

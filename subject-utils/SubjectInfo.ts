@@ -1,4 +1,4 @@
-import { SubjectPeriod } from "./SubjectPeriods";
+import {SubjectPeriod} from './SubjectPeriods';
 
 /**
  * Stores basic information about a subject

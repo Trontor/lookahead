@@ -1,10 +1,7 @@
-import { Request, Response } from "express";
-import {
-  cacheSubject,
-  getCachedSubject,
-} from "../../subject-utils/SubjectCacher";
-import { scrapeSubject } from "../../subject-utils/SubjectClassScraper";
-import { SubjectPeriod } from "../../subject-utils/SubjectPeriods";
+import {Request, Response} from 'express';
+import {cacheSubject, getCachedSubject} from '../../subject-utils/SubjectCacher';
+import {scrapeSubject} from '../../subject-utils/SubjectClassScraper';
+import {SubjectPeriod} from '../../subject-utils/SubjectPeriods';
 
 /**
  * Serves an appropriate subject list file given a year and study period.
@@ -22,13 +19,8 @@ export const getSubject = async (req: Request, res: Response) => {
     return;
   }
   // check if the given subject period is valid
-  if (
-    !(typeof period === "string") &&
-    Object.values(SubjectPeriod).includes(period)
-  ) {
-    res
-      .status(400)
-      .json({ error: "Invalid Query Syntax", message: "Period not defined" });
+  if (!(typeof period === 'string') && Object.values(SubjectPeriod).includes(period)) {
+    res.status(400).json({error: 'Invalid Query Syntax', message: 'Period not defined'});
   } else {
     // scrape subject information (as it does not exist in cache)
     const subject = await scrapeSubject(year, period as SubjectPeriod, code);

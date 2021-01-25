@@ -1,8 +1,8 @@
-import * as cheerio from "cheerio";
-import { writeFile } from "fs";
-import * as path from "path";
-import { SubjectPeriod } from "../SubjectPeriods";
-import { getHTML } from "../WebUtils";
+import * as cheerio from 'cheerio';
+import {writeFile} from 'fs';
+import * as path from 'path';
+import {SubjectPeriod} from '../SubjectPeriods';
+import {getHTML} from '../WebUtils';
 
 /**
  * Stores basic information about a subject
@@ -19,15 +19,10 @@ export class SubjectInfo {
    * @param semester The subject period this subject is offered in
    * @param online Whether the subject is online only
    */
-  constructor(
-    code: string,
-    name: string,
-    offered: SubjectPeriod[],
-    online: boolean
-  ) {
+  constructor(code: string, name: string, offered: SubjectPeriod[], online: boolean) {
     this.code = code;
     this.name = name;
-    this.offered = offered.filter((subjectPeriod) => subjectPeriod !== null);
+    this.offered = offered.filter(subjectPeriod => subjectPeriod !== null);
     this.online = online;
   }
 }
@@ -40,26 +35,22 @@ type BaseURL = string;
  * @param studyPeriod The study period to search for
  * @param online Whether the subject is online only
  */
-const getBaseURL = (
-  year: number,
-  studyPeriod: SubjectPeriod,
-  online: boolean
-) => {
+const getBaseURL = (year: number, studyPeriod: SubjectPeriod, online: boolean) => {
   const queryParameters = [
-    "types[]=subject",
+    'types[]=subject',
     `year=${year}`,
     `study_periods[]=${studyPeriod.toLowerCase()}`,
-    "subject_level_type[]=all",
-    "area_of_study[]=all",
-    "org_unit[]=all",
-    "sort=external_code%7Casc",
-    `campus_and_attendance_mode[]=${online ? "Online" : "all"}`,
+    'subject_level_type[]=all',
+    'area_of_study[]=all',
+    'org_unit[]=all',
+    'sort=external_code%7Casc',
+    `campus_and_attendance_mode[]=${online ? 'Online' : 'all'}`,
   ];
 
   // now construct final URI by joining all the parameters
   return (
-    "https://handbook.unimelb.edu.au/search?" +
-    queryParameters.reduce((acc, param) => acc + "&" + param)
+    'https://handbook.unimelb.edu.au/search?' +
+    queryParameters.reduce((acc, param) => acc + '&' + param)
   );
 };
 
@@ -69,11 +60,11 @@ const getBaseURL = (
 const getPageCount = async (baseURL: BaseURL) => {
   const html: string = await getHTML(baseURL);
   const $ = cheerio.load(html);
-  const pageCountDirty = $(".search-results__paginate > span").text();
-  if (pageCountDirty === "") {
+  const pageCountDirty = $('.search-results__paginate > span').text();
+  if (pageCountDirty === '') {
     return 1;
   }
-  const pageCountClean = parseInt(pageCountDirty.replace(/^\D+/g, ""), 10);
+  const pageCountClean = parseInt(pageCountDirty.replace(/^\D+/g, ''), 10);
   return pageCountClean;
 };
 
@@ -95,21 +86,14 @@ const scrapeSearchResultsPage = async (
   const pageSubjects: SubjectInfo[] = [];
   const $ = cheerio.load(pageHTML);
   // The subject list parent element
-  const list = $(".search-results__list > li");
+  const list = $('.search-results__list > li');
   // Loop through the list and store subject information
   list.each((index, element) => {
-    const code = $(element).find(".search-result-item__code").text().trim();
-    const name = $(element)
-      .find(".search-result-item__name > h3")
-      .text()
-      .replace(code, "")
-      .trim();
-    const details = $(element)
-      .find(".search-result-item__meta-primary")
-      .text()
-      .trim();
+    const code = $(element).find('.search-result-item__code').text().trim();
+    const name = $(element).find('.search-result-item__name > h3').text().replace(code, '').trim();
+    const details = $(element).find('.search-result-item__meta-primary').text().trim();
 
-    const leftBound = "Offered";
+    const leftBound = 'Offered';
     const rightBound = year.toString();
     const offered = details.substring(
       details.lastIndexOf(leftBound) + leftBound.length,
@@ -117,55 +101,53 @@ const scrapeSearchResultsPage = async (
     );
     const subjectPeriods: SubjectPeriod[] = offered
       .trim()
-      .split(",")
-      .filter((s) => s.trim() !== "")
-      .map((item) => {
+      .split(',')
+      .filter(s => s.trim() !== '')
+      .map(item => {
         item = item.trim();
         switch (item) {
-          case "Semester 1":
-          case "Semester 1 (Early-Start)":
-          case "Semester 1 (Extended)":
+          case 'Semester 1':
+          case 'Semester 1 (Early-Start)':
+          case 'Semester 1 (Extended)':
             return SubjectPeriod.Semester_1;
-          case "Semester 2":
-          case "Semester 2 (Early-Start)":
-          case "Semester 2 (Extended)":
+          case 'Semester 2':
+          case 'Semester 2 (Early-Start)':
+          case 'Semester 2 (Extended)':
             return SubjectPeriod.Semester_2;
-          case "Winter Term":
+          case 'Winter Term':
             return SubjectPeriod.Winter_Term;
-          case "Summer Term":
+          case 'Summer Term':
             return SubjectPeriod.Summer_Term;
-          case "January":
+          case 'January':
             return SubjectPeriod.January;
-          case "February":
+          case 'February':
             return SubjectPeriod.February;
-          case "March":
+          case 'March':
             return SubjectPeriod.March;
-          case "April":
+          case 'April':
             return SubjectPeriod.April;
-          case "May":
+          case 'May':
             return SubjectPeriod.May;
-          case "June":
+          case 'June':
             return SubjectPeriod.June;
-          case "July":
+          case 'July':
             return SubjectPeriod.June;
-          case "August":
+          case 'August':
             return SubjectPeriod.August;
-          case "September":
+          case 'September':
             return SubjectPeriod.September;
-          case "October":
+          case 'October':
             return SubjectPeriod.October;
-          case "November":
+          case 'November':
             return SubjectPeriod.November;
-          case "December":
+          case 'December':
             return SubjectPeriod.December;
           default:
-            console.log(
-              `Subject: ${code} has an unknown offering period: ${item} `
-            );
+            console.log(`Subject: ${code} has an unknown offering period: ${item} `);
             return;
         }
       })
-      .filter((p) => p !== undefined);
+      .filter(p => p !== undefined);
     // Check if subject has already been scraped
     if (subjectMap[code] && online) {
       subjectMap[code].online = true;
@@ -193,20 +175,14 @@ const scrapeSubjects = async (
   // Get the number of pages to search
   const pageCount = await getPageCount(baseURL);
   console.log(
-    `There ${pageCount == 1 ? "is" : "are"} ${pageCount} page${
-      pageCount > 1 ? "s" : ""
+    `There ${pageCount == 1 ? 'is' : 'are'} ${pageCount} page${
+      pageCount > 1 ? 's' : ''
     } to scrape from ${decodeURI(baseURL)}`
   );
   // A list of scrape promises we must resolve to finish this subject scrape
   const scrapePromises: Array<Promise<SubjectInfo[]>> = [];
   for (let page = 0; page <= pageCount; page++) {
-    const promise = scrapeSearchResultsPage(
-      year,
-      baseURL,
-      page,
-      subjectMap,
-      online
-    );
+    const promise = scrapeSearchResultsPage(year, baseURL, page, subjectMap, online);
     scrapePromises.push(promise);
   }
   await Promise.all(scrapePromises);
@@ -223,21 +199,17 @@ const sortSubjectInfo = (subjectInfo: SubjectInfo[]) =>
   subjectInfo.sort((a, b) => a.code.localeCompare(b.code));
 
 const dumpSubjectInfo = (outputPath: string, subjectInfo: SubjectInfo[]) =>
-  writeFile(outputPath, JSON.stringify(subjectInfo, null, 1), (error) => {
+  writeFile(outputPath, JSON.stringify(subjectInfo, null, 1), error => {
     if (error) {
       console.error(`Could not save file, error encountered!\n${error}`);
     }
   });
 
-years.forEach((year) => {
-  studyPeriods.forEach(async (periodStr) => {
+years.forEach(year => {
+  studyPeriods.forEach(async periodStr => {
     const period: SubjectPeriod = periodStr as SubjectPeriod;
     const outputFileName = `subjects_${year}_${period.toLowerCase()}.json`;
-    const outputPath = path.resolve(
-      __dirname,
-      "../subject-lists",
-      outputFileName
-    );
+    const outputPath = path.resolve(__dirname, '../subject-lists', outputFileName);
 
     // first scrape all subjects that are only offline ("Dual-Deliver", "Off+Campus") subjects,
     // then scrape all subjects that are online ("Online"),
@@ -250,9 +222,7 @@ years.forEach((year) => {
     ]);
     await scrapeResults;
     const allSubjectInfos = Object.values(subjectMap);
-    console.log(
-      `A total of ${allSubjectInfos.length} subjects were scraped for ${outputFileName}`
-    );
+    console.log(`A total of ${allSubjectInfos.length} subjects were scraped for ${outputFileName}`);
     dumpSubjectInfo(outputPath, sortSubjectInfo(allSubjectInfos));
   });
 });

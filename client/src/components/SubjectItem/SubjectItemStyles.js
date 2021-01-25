@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from 'styled-components';
 
 export const SubjectsWrapper = styled.div`
   /* margin: 5px; */
@@ -6,8 +6,8 @@ export const SubjectsWrapper = styled.div`
 `;
 
 export const SubjectWrapper = styled.div`
-/* color: ${props => props.textColor}; */
-position: relative;
+  /* color: ${props => props.textColor}; */
+  position: relative;
 `;
 
 /* * * * * * * * * * * * * * * * LOADING CARD * * * * * * * * * * * * * * * */
@@ -15,10 +15,7 @@ export const loadingCard = css`
   height: 92px;
   position: relative;
   border-color: transparent;
-  background-image: linear-gradient(
-      ${props => props.theme.cardBg},
-      ${props => props.theme.cardBg}
-    ),
+  background-image: linear-gradient(${props => props.theme.cardBg}, ${props => props.theme.cardBg}),
     repeating-linear-gradient(
       60deg,
       ${props => props.theme.loadingGradient} 0%,
@@ -231,8 +228,8 @@ export const SubjectCard = styled.div`
       text-align: left;
     }
   }
-  ${({ $loading }) => $loading && loadingCard}
-  ${({ error }) => error && ErrorCard}
+  ${({$loading}) => $loading && loadingCard}
+  ${({error}) => error && ErrorCard}
 `;
 
 export const SubjectCode = styled.div`
@@ -243,7 +240,7 @@ export const SubjectCode = styled.div`
   font-size: 13px;
   text-transform: uppercase;
 
-  ${({ error }) => error && ErrorText}
+  ${({error}) => error && ErrorText}
 
   @media screen and (min-width: 1024px) {
     text-align: left;
@@ -269,7 +266,7 @@ export const SubjectCode = styled.div`
       opacity: 0.8;
       cursor: pointer;
 
-      ${({ error }) => {
+      ${({error}) => {
         return css`
           i {
             color: crimson;
@@ -298,7 +295,7 @@ export const SubjectName = styled.div`
     margin-top: 2px;
   }
 
-  ${({ error }) => ErrorText}
+  ${({error}) => ErrorText}
 `;
 
 export const SubjectToolbox = styled.div`
@@ -329,7 +326,7 @@ export const ToolboxButton = styled.button`
   background-color: transparent;
   border: none;
   opacity: 0.7;
-  ${({ loading }) => loading}
+  ${({loading}) => loading}
 
   @media screen and (min-width: 768px) {
     padding: 0 10px;

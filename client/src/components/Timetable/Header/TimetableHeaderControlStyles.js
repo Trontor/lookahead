@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const HeaderWrapper = styled.div`
   text-align: center;
   position: relative;
@@ -29,8 +29,8 @@ export const NavigationButton = styled.button`
   padding: 6px 5px;
   width: 100%;
   border: none;
-  left: ${({ left }) => (left ? 0 : "auto")};
-  right: ${({ right }) => (right ? 0 : "auto")};
+  left: ${({left}) => (left ? 0 : 'auto')};
+  right: ${({right}) => (right ? 0 : 'auto')};
 
   :disabled {
     display: none;

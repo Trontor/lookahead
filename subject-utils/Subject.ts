@@ -1,6 +1,6 @@
-import StreamContainer from "./StreamContainer";
-import SubjectClass from "./SubjectClass";
-import { SubjectPeriod } from "./SubjectPeriods";
+import StreamContainer from './StreamContainer';
+import SubjectClass from './SubjectClass';
+import {SubjectPeriod} from './SubjectPeriods';
 
 interface IWeirdStreamContainer {
   name: string;
@@ -41,10 +41,7 @@ export default class Subject {
    * Intialises a new Subject
    * @param code The subject code as provied by The University of Melbourne
    */
-  constructor(
-    public readonly code: string,
-    private readonly period: SubjectPeriod
-  ) {}
+  constructor(public readonly code: string, private readonly period: SubjectPeriod) {}
 
   public hasWeekendClasses(): void {
     this._weekendClasses = true;
@@ -65,20 +62,17 @@ export default class Subject {
     this.identifyWeirdStreams();
     // Now, regular classes are those that aren't mandatory and aren't in a stream
     this._regularClasses = this._classList.filter(
-      cls =>
-        !this._mandatoryClasses.includes(cls) &&
-        !this._irregularClasses.includes(cls)
+      cls => !this._mandatoryClasses.includes(cls) && !this._irregularClasses.includes(cls)
     );
-    const sortClasses = (a: SubjectClass, b: SubjectClass) =>
-      a.day - b.day || a.start - b.start;
+    const sortClasses = (a: SubjectClass, b: SubjectClass) => a.day - b.day || a.start - b.start;
     this._mandatoryClasses.sort(sortClasses);
     this._regularClasses.sort(sortClasses);
     // Assign class types
     this._mandatoryClasses.forEach(cls => {
-      cls.type = "Mandatory";
+      cls.type = 'Mandatory';
     });
     this._regularClasses.forEach(cls => {
-      cls.type = "Variable";
+      cls.type = 'Variable';
     });
   }
 
@@ -101,9 +95,7 @@ export default class Subject {
         const stream = streamContainer.streams[i];
         // Only dare merge streams with the same number of classes
         const candidateStreams = streamContainer.streams.filter(cand => {
-          return (
-            cand !== stream && cand.classes.length === stream.classes.length
-          );
+          return cand !== stream && cand.classes.length === stream.classes.length;
         });
         // Check each candidate stream and its viability to merge
         for (let j = candidateStreams.length - 1; j > 0; j--) {
@@ -145,9 +137,7 @@ export default class Subject {
           //   } in ${this.code}`
           // );
           // Merge stream numbers
-          stream.streamNumbers = stream.streamNumbers.concat(
-            candidate.streamNumbers
-          );
+          stream.streamNumbers = stream.streamNumbers.concat(candidate.streamNumbers);
           // Remove stream from StreamContainer
           const removeIndex = streamContainer.streams.indexOf(candidate);
           if (removeIndex > -1) {
@@ -188,7 +178,7 @@ export default class Subject {
           type: streamContainer.type,
           okNumbers: goodStreams.length,
           weirdNumbers: weirdStreams.length,
-          maxCount: maxClassLength
+          maxCount: maxClassLength,
         };
         this._weirdStreamContainers.push(weirdStreamContainer);
       }
@@ -222,8 +212,9 @@ export default class Subject {
           stream => stream.classes.length === maxClassLength
         );
         console.log(
-          `Removed ${streamContainer.streams.length -
-            newStreams.length} odd streams, leaving ${newStreams.length}.`
+          `Removed ${streamContainer.streams.length - newStreams.length} odd streams, leaving ${
+            newStreams.length
+          }.`
         );
         streamContainer.streams = newStreams;
       }
@@ -231,7 +222,7 @@ export default class Subject {
   };
 
   private getClassTypeCounts() {
-    const typeInfo: { [type: string]: number } = {};
+    const typeInfo: {[type: string]: number} = {};
     this._classList.forEach(cls => {
       const classCode = cls.classCode;
       if (!(classCode.type in typeInfo)) {
@@ -247,9 +238,7 @@ export default class Subject {
     // Loop through each StreamContainer, e.g. Practical, Lecture
     for (const streamContainer of this._streamContainers) {
       // Checks if there are Streams with > 1 class
-      const onlyOneClassInStreams = !streamContainer.streams.some(
-        con => con.classes.length !== 1
-      );
+      const onlyOneClassInStreams = !streamContainer.streams.some(con => con.classes.length !== 1);
       // If there is one stream in the container, it is probably mandatory,
       // like a lecture.
       if (streamContainer.streams.length === 1) {
@@ -258,19 +247,14 @@ export default class Subject {
           this._mandatoryClasses.push(mandatoryClass);
         });
         // Remove this entire StreamContainer from the list
-        this._streamContainers.splice(
-          this._streamContainers.indexOf(streamContainer),
-          1
-        );
+        this._streamContainers.splice(this._streamContainers.indexOf(streamContainer), 1);
       } else if (onlyOneClassInStreams) {
         // There is only one class in the streams
         for (const stream of streamContainer.streams) {
           // Move all classes to the original classList
           this._classList.push(stream.classes[0]);
         } // Remove this entire StreamContainer from the list
-        this._streamContainers.splice(
-          this._streamContainers.indexOf(streamContainer)
-        );
+        this._streamContainers.splice(this._streamContainers.indexOf(streamContainer));
       }
     }
   }
@@ -318,8 +302,7 @@ export default class Subject {
           return;
         }
         const sameType = classA.classCode.type === classB.classCode.type;
-        const differentTypeNumber =
-          classA.classCode.number !== classB.classCode.number;
+        const differentTypeNumber = classA.classCode.number !== classB.classCode.number;
         const sameStreamNumber = classA.streamNumber === classB.streamNumber;
         if (sameType && sameStreamNumber && differentTypeNumber) {
           if (!codes.includes(classA.classCode.type)) {
@@ -364,18 +347,14 @@ export default class Subject {
   /**
    * Checks if two classes can be merged together
    */
-  private canMergeClasses = (
-    classA: SubjectClass,
-    classB: SubjectClass
-  ): boolean => {
+  private canMergeClasses = (classA: SubjectClass, classB: SubjectClass): boolean => {
     // Don't try merge the current class with itself
     if (classA === classB) {
       return false;
     }
     // Merge classes of the same type, at the same time, different locations
     const sameDay = classA.day === classB.day;
-    const sameTime =
-      classA.start === classB.start && classA.finish === classB.finish;
+    const sameTime = classA.start === classB.start && classA.finish === classB.finish;
     const sameType = classA.classCode.type === classB.classCode.type;
     // Checks if the class number is the same, e.g. W01 === W01
     const sameNumber = classA.classCode.number === classB.classCode.number;
@@ -388,8 +367,7 @@ export default class Subject {
         // Check if same type of class (Tutorial, Workshop, Lecture)
         cls.classCode.type === classA.classCode.type &&
         // Check if the stream number matches either classA or classB
-        (cls.streamNumber === classA.streamNumber ||
-          cls.streamNumber === classB.streamNumber)
+        (cls.streamNumber === classA.streamNumber || cls.streamNumber === classB.streamNumber)
     );
     const inAStream = sameStreamClasses.length > 0;
     return !inAStream && sameDay && sameTime && sameType && sameNumber;

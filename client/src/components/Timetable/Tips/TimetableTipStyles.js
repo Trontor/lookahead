@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from 'styled-components';
 
 export const TipWrapper = styled.div`
   margin: 5px 5px 20px 5px;
@@ -34,7 +34,7 @@ export const Tip = styled.div`
     margin: 5px 0;
   }
 
-  ${({ mobile }) =>
+  ${({mobile}) =>
     mobile &&
     css`
       @media screen and (min-width: 1024px) {
@@ -42,7 +42,7 @@ export const Tip = styled.div`
       }
     `}
 
-  ${({ desktop }) =>
+  ${({desktop}) =>
     desktop &&
     css`
       display: none;

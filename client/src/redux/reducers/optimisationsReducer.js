@@ -7,53 +7,53 @@ import {
   SET_BREAK,
   SET_MINIMISE_CLASHES,
   SET_KEEP_CLASSES_STREAMED,
-  SET_IGNORE_WEIRD_STREAMS
-} from "../actionTypes";
+  SET_IGNORE_WEIRD_STREAMS,
+} from '../actionTypes';
 
 const initialState = {
-  range: { min: 8, max: 22 },
+  range: {min: 8, max: 22},
   avoidDays: [],
   skipLectures: false,
   cramClasses: true,
   breakHours: 24,
   minimiseClashes: true,
   keepClassesStreamed: true,
-  ignoreWeirdStreams: true
+  ignoreWeirdStreams: true,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case SET_TIME_RANGE:
-      const { min, max } = action.payload;
+      const {min, max} = action.payload;
       if (min < max && max > 0 && min > 0) {
-        return { ...state, range: { min, max } };
+        return {...state, range: {min, max}};
       }
-      return { ...state };
+      return {...state};
     case ADD_AVOID_DAY:
       const dayIndex = action.payload;
       const newAvoidDays = state.avoidDays;
       if (!state.avoidDays.includes(dayIndex)) {
         newAvoidDays.push(dayIndex);
       }
-      return { ...state, avoidDays: newAvoidDays };
+      return {...state, avoidDays: newAvoidDays};
     case REMOVE_AVOID_DAY:
       return {
         ...state,
-        avoidDays: state.avoidDays.filter(idx => idx !== action.payload)
+        avoidDays: state.avoidDays.filter(idx => idx !== action.payload),
       };
     case SET_SKIP_LECTURES:
-      return { ...state, skipLectures: action.payload };
+      return {...state, skipLectures: action.payload};
     case SET_KEEP_CLASSES_STREAMED:
-      return { ...state, keepClassesStreamed: action.payload };
+      return {...state, keepClassesStreamed: action.payload};
     case SET_CRAM_CLASSES:
-      return { ...state, cramClasses: action.payload };
+      return {...state, cramClasses: action.payload};
     case SET_BREAK:
-      return { ...state, breakHours: action.payload };
+      return {...state, breakHours: action.payload};
     case SET_IGNORE_WEIRD_STREAMS:
-      return { ...state, ignoreWeirdStreams: action.payload };
+      return {...state, ignoreWeirdStreams: action.payload};
     case SET_MINIMISE_CLASHES:
-      return { ...state, minimiseClashes: action.payload };
+      return {...state, minimiseClashes: action.payload};
     default:
-      return { ...state };
+      return {...state};
   }
 };

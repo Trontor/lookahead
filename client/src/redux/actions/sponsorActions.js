@@ -1,22 +1,18 @@
-import {
-  GET_SPONSORS_BEGIN,
-  GET_SPONSORS_SUCCESS,
-  GET_SPONSORS_FAILURE
-} from "../actionTypes";
-import axios from "axios";
+import {GET_SPONSORS_BEGIN, GET_SPONSORS_SUCCESS, GET_SPONSORS_FAILURE} from '../actionTypes';
+import axios from 'axios';
 
 const getClubsBegin = () => ({
-  type: GET_SPONSORS_BEGIN
+  type: GET_SPONSORS_BEGIN,
 });
 
 const getClubsSuccess = sponsors => ({
   type: GET_SPONSORS_SUCCESS,
-  payload: sponsors
+  payload: sponsors,
 });
 
 const getClubsFailure = error => ({
   type: GET_SPONSORS_FAILURE,
-  payload: error
+  payload: error,
 });
 
 export const fetchClubList = () => {
@@ -31,6 +27,6 @@ export const fetchClubList = () => {
 };
 
 export const logClick = (name, item) => {
-  const logURL = "/sponsorlist/log";
-  return axios.post(logURL, { name, item });
+  const logURL = '/sponsorlist/log';
+  return axios.post(logURL, {name, item});
 };

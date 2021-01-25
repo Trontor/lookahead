@@ -1,17 +1,17 @@
-import { Credit, FooterWrapper, SocialIcon, Spacer } from "./FooterStyles";
-import React, { useState } from "react";
+import {Credit, FooterWrapper, SocialIcon, Spacer} from './FooterStyles';
+import React, {useState} from 'react';
 const heartPool = [
-  "\u{1F9E1}",
-  "\u{1F493}",
-  "\u{1F496}",
-  "\u{1F497}",
-  "\u{1F498}",
-  "\u{1F499}",
-  "\u{1F49A}",
-  "\u{1F49B}",
-  "\u{1F49C}",
-  "\u{1F49D}",
-  "\u{1F5A4}"
+  '\u{1F9E1}',
+  '\u{1F493}',
+  '\u{1F496}',
+  '\u{1F497}',
+  '\u{1F498}',
+  '\u{1F499}',
+  '\u{1F49A}',
+  '\u{1F49B}',
+  '\u{1F49C}',
+  '\u{1F49D}',
+  '\u{1F5A4}',
 ];
 const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -46,21 +46,15 @@ export default function Footer() {
           <Spacer />
           <SocialIcon
             eventLabel="Rohyl LinkedIn"
-            to={"https://www.linkedin.com/in/rohyl/"}
+            to={'https://www.linkedin.com/in/rohyl/'}
             name="linkedin"
           />
-          <SocialIcon
-            eventLabel="Rohyl GitHub"
-            to={"https://github.com/Trontor"}
-            name="github"
-          />
+          <SocialIcon eventLabel="Rohyl GitHub" to={'https://github.com/Trontor'} name="github" />
           <SocialIcon
             name="envelope"
             eventLabel="Rohyl Email"
             solid
-            to={
-              "mailto:rohylj@student.unimelb.edu.au?subject=RE:%20Lookahead%20Semester%20Planner"
-            }
+            to={'mailto:rohylj@student.unimelb.edu.au?subject=RE:%20Lookahead%20Semester%20Planner'}
           />
         </Credit>
         <Credit>
@@ -70,17 +64,13 @@ export default function Footer() {
           <Spacer />
           <SocialIcon
             eventLabel="Gigi LinkedIn"
-            to={"https://www.linkedin.com/in/giselleleung/"}
+            to={'https://www.linkedin.com/in/giselleleung/'}
             name="linkedin"
           />
-          <SocialIcon
-            eventLabel="Gigi GitHub"
-            to={"https://github.com/giggleinu"}
-            name="github"
-          />
+          <SocialIcon eventLabel="Gigi GitHub" to={'https://github.com/giggleinu'} name="github" />
           <SocialIcon
             eventLabel="Gigi Codepen"
-            to={"https://codepen.io/giggleinu"}
+            to={'https://codepen.io/giggleinu'}
             name="codepen"
           />
           <SocialIcon
@@ -99,7 +89,7 @@ export default function Footer() {
 "
           >
             Buy us a protein shake
-          </a>{" "}
+          </a>{' '}
           or share with your friends
         </Credit>
       </div>

@@ -1,12 +1,12 @@
-import React from "react";
-import timeIntToString from "../../../utility/TimeIntToString";
+import React from 'react';
+import timeIntToString from '../../../utility/TimeIntToString';
 import {
   CloseButton,
   ModalHeader,
   StyledModal,
   SubjectAttribute,
-  SubjectInfo
-} from "./ClassModalStyles";
+  SubjectInfo,
+} from './ClassModalStyles';
 export default function ClassModal(props) {
   const {
     subjectName,
@@ -18,7 +18,7 @@ export default function ClassModal(props) {
     finishInt,
     weeks,
     locations,
-    isOpen
+    isOpen,
   } = props;
 
   const closeModal = () => {
@@ -29,7 +29,7 @@ export default function ClassModal(props) {
   return (
     <StyledModal
       style={{
-        overlay: { zIndex: 10, backgroundColor: "rgba(0, 0, 0, 0.75)" }
+        overlay: {zIndex: 10, backgroundColor: 'rgba(0, 0, 0, 0.75)'},
       }}
       onRequestClose={closeModal}
       isOpen={isOpen}

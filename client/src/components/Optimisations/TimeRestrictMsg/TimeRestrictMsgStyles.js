@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TimeRestrictMsgWrapper = styled.div`
   margin: 10px 18px 18px 18px;

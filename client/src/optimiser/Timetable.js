@@ -8,9 +8,7 @@ export default class Timetable {
     // Calculates the number of clashes in this timetable
     this.calculateClashes();
     // We've calculated clashes, we can remove the reserved events now!
-    this.classList = this.classList.filter(
-      cls => !(cls.id && cls.id === "reserved")
-    );
+    this.classList = this.classList.filter(cls => !(cls.id && cls.id === 'reserved'));
     this.calculateDaySpans();
     // Keep track of the overall longest period of consecutive classes in a row.
     this.calculateLongestRun();
@@ -22,7 +20,7 @@ export default class Timetable {
 
   // Groups an array of objects by a specified object key
   groupByArray(xs, key) {
-    return xs.reduce(function(rv, x) {
+    return xs.reduce(function (rv, x) {
       let v = key instanceof Function ? key(x) : x[key];
       let el = rv.find(r => r && r.key === v);
       if (el) {
@@ -30,7 +28,7 @@ export default class Timetable {
       } else {
         rv.push({
           key: v,
-          values: [x]
+          values: [x],
         });
       }
       return rv;
@@ -39,12 +37,12 @@ export default class Timetable {
 
   calculateDayHoursExcludingLectures() {
     const classListExclusive = this.classList.filter(
-      cls => !cls.description.toLowerCase().includes("lecture")
+      cls => !cls.description.toLowerCase().includes('lecture')
     );
     // Group all clases by their 'day'
-    const dayGroups = this.groupByArray(classListExclusive, "day");
+    const dayGroups = this.groupByArray(classListExclusive, 'day');
     const dayHoursExcludingLectures = {};
-    for (const { key, values } of dayGroups) {
+    for (const {key, values} of dayGroups) {
       // Loop through classes for this day
       dayHoursExcludingLectures[key] = values.reduce(
         (prev, curr) => (prev += curr.finish - curr.start),
@@ -58,22 +56,19 @@ export default class Timetable {
   // i.e. {0: 6} means Monday has 6 hours of classtime
   calculateDayHours() {
     // Group all clases by their 'day'
-    const dayGroups = this.groupByArray(this.classList, "day");
+    const dayGroups = this.groupByArray(this.classList, 'day');
     const dayHours = {};
-    for (const { key, values } of dayGroups) {
+    for (const {key, values} of dayGroups) {
       // Loop through classes for this day
-      dayHours[key] = values.reduce(
-        (prev, curr) => (prev += curr.finish - curr.start),
-        0
-      );
+      dayHours[key] = values.reduce((prev, curr) => (prev += curr.finish - curr.start), 0);
     }
     this.dayHours = dayHours;
   }
   calculateLongestRun() {
     let longestRun = 0;
     // Group all clases by their 'day'
-    const dayGroups = this.groupByArray(this.classList, "day");
-    for (const { /*key,*/ values } of dayGroups) {
+    const dayGroups = this.groupByArray(this.classList, 'day');
+    for (const {/*key,*/ values} of dayGroups) {
       const classes = values;
       const orderedClasses = classes.sort((a, b) => a.start - b.start);
       // Tracker variable for the last checked class, initial is start of da
@@ -115,7 +110,7 @@ export default class Timetable {
     const aEnd = classA.finish;
     const bStart = classB.start;
     const bEnd = classB.finish;
-    return classA.day === classB.day && (aStart < bEnd && bStart < aEnd);
+    return classA.day === classB.day && aStart < bEnd && bStart < aEnd;
   }
 
   calculateDaySpans() {
@@ -126,7 +121,7 @@ export default class Timetable {
       const finish = cls.finish;
       let span = daySpans[cls.day];
       if (!span) {
-        daySpans[cls.day] = { start, finish };
+        daySpans[cls.day] = {start, finish};
       } else {
         if (start < span.start) {
           span.start = start;

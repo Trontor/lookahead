@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
   max-height: 60px;
@@ -24,7 +24,7 @@ export const HeaderText = styled.div`
   letter-spacing: 0.02em;
   text-transform: lowercase;
   display: inline;
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   font-size: 24px;
   font-weight: 800;
   padding-bottom: 1px;
