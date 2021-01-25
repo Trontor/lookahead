@@ -36,19 +36,33 @@ type BaseURL = string;
  * @param online Whether the subject is online only
  */
 const getBaseURL = (year: number, studyPeriod: SubjectPeriod, online:boolean)  =>{
-  // tslint:disable-next-line:max-line-length
 
-  //for all online subjects set URL attribute campus_and_attendance_mode[]=Online
-  if(online){
-    return `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=Online&sort=external_code%7Casc`;
-  }
+  let queryParameters = [
+    'types[]=subject',
+    `year=${year}`,
+    `study_periods[]=${studyPeriod.toLowerCase()}`,
+    'subject_level_type[]=all',
+    'area_of_study[]=all',
+    'org_unit[]=all',
+  ];
+  // not necessary to include the =all parameters
 
-  //otherwise set URL attribute campus_and_attendance_mode[]=Dual-Delivery&campus_and_attendance_mode[]=Off+Campus
-  else {
-    return `https://handbook.unimelb.edu.au/search?types[]=subject&year=${year}&subject_level_type[]=all&study_periods[]=${studyPeriod.toLowerCase()}&area_of_study[]=all&org_unit[]=all&campus_and_attendance_mode[]=Dual-Delivery&campus_and_attendance_mode[]=Off+Campus&sort=external_code%7Casc`;
-  }
+  const campusAttendanceModes = online ? ['Online'] :
+      ['Dual-Delivery', 'Off+Campus'];
+
+  // now make it a valid query param
+  campusAttendanceModes.map(mode => 'campus_and_attendance_mode[]=' + mode);
+
+  // and append the attendance mode params to the initial array of parameters
+  queryParameters = queryParameters.concat(campusAttendanceModes);
+
+  // now construct final URI by joining all the parameters
+  return 'https://handbook.unimelb.edu.au/search?' +
+      queryParameters.reduce((acc, param) => acc + '&' + param);
+
 };
-  /**
+
+/**
  * Returns the number of pages given a base search URL
  */
 const getPageCount = async (baseURL: BaseURL) => {
