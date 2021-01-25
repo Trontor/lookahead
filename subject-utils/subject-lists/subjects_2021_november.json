@@ -1,7 +1,39 @@
 [
  {
-  "code": "LAWS70125",
-  "name": "International Financial Transactions",
+  "code": "ABPL30069",
+  "name": "Installations and Happenings",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90320",
+  "name": "Building Resilient Settlements",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90380",
+  "name": "Designing for Heat in the Public Domain",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90415",
+  "name": "Advanced Asset Strategy Applications",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BOTA30001",
+  "name": "Marine Botany",
   "offered": [
    "november"
   ],
@@ -11,50 +43,6 @@
   "code": "BUSA90072",
   "name": "Global Business Economics",
   "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70261",
-  "name": "Designs Law and Practice",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90508",
-  "name": "Executive Management 4",
-  "offered": [
-   "summer_term",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "DEVT90068",
-  "name": "Contemporary Leadership",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL30069",
-  "name": "Installations and Happenings",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "IBUS90004",
-  "name": "Cross Cultural Management and Teamwork",
-  "offered": [
-   "summer_term",
-   "june",
    "november"
   ],
   "online": false
@@ -78,8 +66,42 @@
   "online": false
  },
  {
-  "code": "LAWS70006",
-  "name": "International Tax: Principles, Structure",
+  "code": "BUSA90508",
+  "name": "Executive Management 4",
+  "offered": [
+   "summer_term",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90023",
+  "name": "Advanced Practice in Offender Management",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90068",
+  "name": "Contemporary Leadership",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90071",
+  "name": "Organisation Development and Change",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90076",
+  "name": "Social Policy and Development",
   "offered": [
    "semester_1",
    "november"
@@ -87,17 +109,52 @@
   "online": false
  },
  {
-  "code": "POPH90297",
-  "name": "Preventing Violence Against Women",
+  "code": "FRST90030",
+  "name": "Forests in the Asia Pacific Region",
   "offered": [
    "november"
   ],
   "online": false
  },
  {
-  "code": "LAWS90171",
-  "name": "Competition in Digital Markets",
+  "code": "GEOG30023",
+  "name": "Global Climate Change in Context",
   "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30030",
+  "name": "Spatial Modelling for Nature and People",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90044",
+  "name": "Plant Health",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "IBUS90004",
+  "name": "Cross Cultural Management and Teamwork",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50031",
+  "name": "Legal Theory",
+  "offered": [
+   "semester_2",
    "november"
   ],
   "online": false
@@ -112,475 +169,24 @@
   "online": false
  },
  {
-  "code": "LAWS90215",
-  "name": "Law and Global Health Security",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90137",
-  "name": "Primary Health Care, Jamkhed, India",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "SOCI90024",
-  "name": "Future of Work in Comparative Contexts",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "CRIM90023",
-  "name": "Advanced Practice in Offender Management",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70120",
-  "name": "International Law and Children's Rights",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "DEVT90071",
-  "name": "Organisation Development and Change",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "BOTA30001",
-  "name": "Marine Botany",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT30017",
-  "name": "Global Management Consulting",
-  "offered": [
-   "summer_term",
-   "june",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90058",
-  "name": "Comparative Human Rights Law",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70270",
-  "name": "Construction Contract Analysis, Drafting",
-  "offered": [
-   "february",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90415",
-  "name": "Advanced Asset Strategy Applications",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90211",
-  "name": "Indonesian Law",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90037",
-  "name": "Conflict and Negotiation",
-  "offered": [
-   "summer_term",
-   "winter_term",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "GEOG30023",
-  "name": "Global Climate Change in Context",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI90172",
-  "name": "Opera Performance Practicum 4",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "GEOG30030",
-  "name": "Spatial Modelling for Nature and People",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "HORT90044",
-  "name": "Plant Health",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90050",
-  "name": "Supervised Field Placement 2A",
-  "offered": [
-   "february",
-   "may",
-   "august",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90261",
-  "name": "HR Analytics",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MEDS90027",
-  "name": "Clinical Elective",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70259",
-  "name": "Medical Ethics",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI90169",
-  "name": "Opera Performance Practicum 2",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90380",
-  "name": "Designing for Heat in the Public Domain",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70037",
-  "name": "Royal Commissions and Public Inquiries",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90210",
-  "name": "Law and Psychology",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70141",
-  "name": "Energy Regulation and the Law",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70304",
-  "name": "Internat Investment Law and Arbitration",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90258",
-  "name": "Supply Chain Analytics",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90058",
-  "name": "Comparative Human Rights Law",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI90172",
-  "name": "Opera Performance Practicum 4",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "GEOG30023",
-  "name": "Global Climate Change in Context",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90037",
-  "name": "Conflict and Negotiation",
-  "offered": [
-   "summer_term",
-   "winter_term",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90415",
-  "name": "Advanced Asset Strategy Applications",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90211",
-  "name": "Indonesian Law",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70270",
-  "name": "Construction Contract Analysis, Drafting",
-  "offered": [
-   "february",
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "GEOG30030",
-  "name": "Spatial Modelling for Nature and People",
-  "offered": [
-   "november"
-  ],
-  "online": false
- },
- {
-  "code": "SOCI90024",
-  "name": "Future of Work in Comparative Contexts",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "CRIM90023",
-  "name": "Advanced Practice in Offender Management",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70120",
-  "name": "International Law and Children's Rights",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90215",
-  "name": "Law and Global Health Security",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90137",
-  "name": "Primary Health Care, Jamkhed, India",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90071",
-  "name": "Organisation Development and Change",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "BOTA30001",
-  "name": "Marine Botany",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT30017",
-  "name": "Global Management Consulting",
-  "offered": [
-   "summer_term",
-   "june",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90072",
-  "name": "Global Business Economics",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70125",
-  "name": "International Financial Transactions",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70261",
-  "name": "Designs Law and Practice",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90508",
-  "name": "Executive Management 4",
-  "offered": [
-   "summer_term",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90068",
-  "name": "Contemporary Leadership",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL30069",
-  "name": "Installations and Happenings",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "IBUS90004",
-  "name": "Cross Cultural Management and Teamwork",
-  "offered": [
-   "summer_term",
-   "june",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90485",
-  "name": "Global Business Practicum",
+  "code": "LAWS50059",
+  "name": "Legal Internship",
   "offered": [
    "january",
+   "semester_1",
+   "june",
+   "semester_2",
    "november"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS90171",
-  "name": "Competition in Digital Markets",
+  "code": "LAWS50122",
+  "name": "Animals and the Law",
   "offered": [
    "november"
   ],
-  "online": true
- },
- {
-  "code": "BUSA90218",
-  "name": "Innovation",
-  "offered": [
-   "may",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90297",
-  "name": "Preventing Violence Against Women",
-  "offered": [
-   "november"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "LAWS70006",
@@ -589,7 +195,137 @@
    "semester_1",
    "november"
   ],
-  "online": true
+  "online": false
+ },
+ {
+  "code": "LAWS70037",
+  "name": "Royal Commissions and Public Inquiries",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70120",
+  "name": "International Law and Children's Rights",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70125",
+  "name": "International Financial Transactions",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70141",
+  "name": "Energy Regulation and the Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70259",
+  "name": "Medical Ethics",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70261",
+  "name": "Designs Law and Practice",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70270",
+  "name": "Construction Contract Analysis, Drafting",
+  "offered": [
+   "february",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70304",
+  "name": "Internat Investment Law and Arbitration",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70389",
+  "name": "Global Commercial Contract Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90029",
+  "name": "Planning and Building Sustainable Cities",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90058",
+  "name": "Comparative Human Rights Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90171",
+  "name": "Competition in Digital Markets",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90210",
+  "name": "Law and Psychology",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90211",
+  "name": "Indonesian Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90215",
+  "name": "Law and Global Health Security",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90027",
+  "name": "Clinical Elective",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
  },
  {
   "code": "MGMT30017",
@@ -597,6 +333,24 @@
   "offered": [
    "summer_term",
    "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90037",
+  "name": "Conflict and Negotiation",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90258",
+  "name": "Supply Chain Analytics",
+  "offered": [
    "november"
   ],
   "online": true
@@ -607,34 +361,39 @@
   "offered": [
    "november"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "ABPL90380",
-  "name": "Designing for Heat in the Public Domain",
+  "code": "MUSI90169",
+  "name": "Opera Performance Practicum 2",
   "offered": [
    "november"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "SCWK90050",
-  "name": "Supervised Field Placement 2A",
-  "offered": [
-   "february",
-   "may",
-   "august",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70141",
-  "name": "Energy Regulation and the Law",
+  "code": "MUSI90172",
+  "name": "Opera Performance Practicum 4",
   "offered": [
    "november"
   ],
-  "online": true
+  "online": false
+ },
+ {
+  "code": "POPH90137",
+  "name": "Primary Health Care, Jamkhed, India",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90297",
+  "name": "Preventing Violence Against Women",
+  "offered": [
+   "november"
+  ],
+  "online": false
  },
  {
   "code": "SCWK90048",
@@ -645,208 +404,22 @@
    "september",
    "november"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "HORT90044",
-  "name": "Plant Health",
+  "code": "SCWK90050",
+  "name": "Supervised Field Placement 2A",
   "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70037",
-  "name": "Royal Commissions and Public Inquiries",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "MEDS90027",
-  "name": "Clinical Elective",
-  "offered": [
+   "february",
    "may",
+   "august",
    "november"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS90210",
-  "name": "Law and Psychology",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "MUSI90169",
-  "name": "Opera Performance Practicum 2",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90320",
-  "name": "Building Resilient Settlements",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70259",
-  "name": "Medical Ethics",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50059",
-  "name": "Legal Internship",
-  "offered": [
-   "january",
-   "semester_1",
-   "june",
-   "semester_2",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90076",
-  "name": "Social Policy and Development",
-  "offered": [
-   "semester_1",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "FRST90030",
-  "name": "Forests in the Asia Pacific Region",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90029",
-  "name": "Planning and Building Sustainable Cities",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70389",
-  "name": "Global Commercial Contract Law",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50031",
-  "name": "Legal Theory",
-  "offered": [
-   "semester_2",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50122",
-  "name": "Animals and the Law",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90320",
-  "name": "Building Resilient Settlements",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50059",
-  "name": "Legal Internship",
-  "offered": [
-   "january",
-   "semester_1",
-   "june",
-   "semester_2",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70389",
-  "name": "Global Commercial Contract Law",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50031",
-  "name": "Legal Theory",
-  "offered": [
-   "semester_2",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90076",
-  "name": "Social Policy and Development",
-  "offered": [
-   "semester_1",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS50122",
-  "name": "Animals and the Law",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90029",
-  "name": "Planning and Building Sustainable Cities",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70304",
-  "name": "Internat Investment Law and Arbitration",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "FRST90030",
-  "name": "Forests in the Asia Pacific Region",
-  "offered": [
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT90258",
-  "name": "Supply Chain Analytics",
+  "code": "SOCI90024",
+  "name": "Future of Work in Comparative Contexts",
   "offered": [
    "november"
   ],

@@ -11,7 +11,7 @@ export class SubjectInfo {
   public readonly code: string;
   public readonly name: string;
   public readonly offered: SubjectPeriod[];
-  public readonly online: boolean;
+  public online: boolean;
   /**
    * Initialises a new SubjectInfo
    * @param code The subject code, e.g. COMP10001
@@ -19,10 +19,15 @@ export class SubjectInfo {
    * @param semester The subject period this subject is offered in
    * @param online Whether the subject is online only
    */
-  constructor(code: string, name: string, offered: SubjectPeriod[], online:boolean) {
+  constructor(
+    code: string,
+    name: string,
+    offered: SubjectPeriod[],
+    online: boolean
+  ) {
     this.code = code;
     this.name = name;
-    this.offered = offered.filter((subjectPeriod) => subjectPeriod != null);
+    this.offered = offered.filter((subjectPeriod) => subjectPeriod !== null);
     this.online = online;
   }
 }
@@ -35,31 +40,27 @@ type BaseURL = string;
  * @param studyPeriod The study period to search for
  * @param online Whether the subject is online only
  */
-const getBaseURL = (year: number, studyPeriod: SubjectPeriod, online:boolean)  =>{
-
-  let queryParameters = [
-    'types[]=subject',
+const getBaseURL = (
+  year: number,
+  studyPeriod: SubjectPeriod,
+  online: boolean
+) => {
+  const queryParameters = [
+    "types[]=subject",
     `year=${year}`,
     `study_periods[]=${studyPeriod.toLowerCase()}`,
-    'subject_level_type[]=all',
-    'area_of_study[]=all',
-    'org_unit[]=all',
+    "subject_level_type[]=all",
+    "area_of_study[]=all",
+    "org_unit[]=all",
+    "sort=external_code%7Casc",
+    `campus_and_attendance_mode[]=${online ? "Online" : "all"}`,
   ];
-  // not necessary to include the =all parameters
-
-  const campusAttendanceModes = online ? ['Online'] :
-      ['Dual-Delivery', 'Off+Campus'];
-
-  // now make it a valid query param
-  campusAttendanceModes.map(mode => 'campus_and_attendance_mode[]=' + mode);
-
-  // and append the attendance mode params to the initial array of parameters
-  queryParameters = queryParameters.concat(campusAttendanceModes);
 
   // now construct final URI by joining all the parameters
-  return 'https://handbook.unimelb.edu.au/search?' +
-      queryParameters.reduce((acc, param) => acc + '&' + param);
-
+  return (
+    "https://handbook.unimelb.edu.au/search?" +
+    queryParameters.reduce((acc, param) => acc + "&" + param)
+  );
 };
 
 /**
@@ -69,6 +70,9 @@ const getPageCount = async (baseURL: BaseURL) => {
   const html: string = await getHTML(baseURL);
   const $ = cheerio.load(html);
   const pageCountDirty = $(".search-results__paginate > span").text();
+  if (pageCountDirty === "") {
+    return 1;
+  }
   const pageCountClean = parseInt(pageCountDirty.replace(/^\D+/g, ""), 10);
   return pageCountClean;
 };
@@ -77,11 +81,13 @@ const getPageCount = async (baseURL: BaseURL) => {
  * Parses subjects on a given page provided a base search URL
  * @param url The base url to search with
  * @param page The search result page to search
+ * @param subjectMap A mapping between a subject code and a SubjectInfo instance
  */
 const scrapeSearchResultsPage = async (
   year: number,
   url: BaseURL,
   page: number,
+  subjectMap: Record<string, SubjectInfo>,
   online: boolean
 ): Promise<SubjectInfo[]> => {
   const pageURL: string = `${url}&page=${page}`;
@@ -150,6 +156,8 @@ const scrapeSearchResultsPage = async (
             return SubjectPeriod.October;
           case "November":
             return SubjectPeriod.November;
+          case "December":
+            return SubjectPeriod.December;
           default:
             console.log(
               `Subject: ${code} has an unknown offering period: ${item} `
@@ -158,7 +166,12 @@ const scrapeSearchResultsPage = async (
         }
       })
       .filter((p) => p !== undefined);
-    pageSubjects.push(new SubjectInfo(code, name, subjectPeriods, online));
+    // Check if subject has already been scraped
+    if (subjectMap[code] && online) {
+      subjectMap[code].online = true;
+    } else {
+      subjectMap[code] = new SubjectInfo(code, name, subjectPeriods, online);
+    }
   });
   return pageSubjects;
 };
@@ -167,23 +180,36 @@ const scrapeSearchResultsPage = async (
  * Scrapes all the subjects offered on a specific year and subject period
  * @param year The year to scrape
  * @param period The subject period to scrape
+ * @param subjectMap A mapping between subject code and a SubjectInfo instance
  * @param online Whether to scrape online or offline subjects
  */
-const scrapeSubjects = async (year: number, period: SubjectPeriod, online: boolean) => {
+const scrapeSubjects = async (
+  year: number,
+  period: SubjectPeriod,
+  subjectMap: Record<string, SubjectInfo>,
+  online: boolean
+): Promise<void> => {
   const baseURL = getBaseURL(year, period, online);
   // Get the number of pages to search
   const pageCount = await getPageCount(baseURL);
   console.log(
-    `There are ${pageCount} pages to scrape from ${decodeURI(baseURL)}`
+    `There ${pageCount == 1 ? "is" : "are"} ${pageCount} page${
+      pageCount > 1 ? "s" : ""
+    } to scrape from ${decodeURI(baseURL)}`
   );
   // A list of scrape promises we must resolve to finish this subject scrape
   const scrapePromises: Array<Promise<SubjectInfo[]>> = [];
   for (let page = 0; page <= pageCount; page++) {
-    const promise = scrapeSearchResultsPage(year, baseURL, page, online);
+    const promise = scrapeSearchResultsPage(
+      year,
+      baseURL,
+      page,
+      subjectMap,
+      online
+    );
     scrapePromises.push(promise);
   }
-  const allSubjects = await Promise.all(scrapePromises);
-  return [].concat(...allSubjects);
+  await Promise.all(scrapePromises);
 };
 
 //
@@ -193,8 +219,18 @@ const scrapeSubjects = async (year: number, period: SubjectPeriod, online: boole
 const years = [2021];
 const studyPeriods = Object.keys(SubjectPeriod);
 
+const sortSubjectInfo = (subjectInfo: SubjectInfo[]) =>
+  subjectInfo.sort((a, b) => a.code.localeCompare(b.code));
+
+const dumpSubjectInfo = (outputPath: string, subjectInfo: SubjectInfo[]) =>
+  writeFile(outputPath, JSON.stringify(subjectInfo, null, 1), (error) => {
+    if (error) {
+      console.error(`Could not save file, error encountered!\n${error}`);
+    }
+  });
+
 years.forEach((year) => {
-  studyPeriods.forEach((periodStr) => {
+  studyPeriods.forEach(async (periodStr) => {
     const period: SubjectPeriod = periodStr as SubjectPeriod;
     const outputFileName = `subjects_${year}_${period.toLowerCase()}.json`;
     const outputPath = path.resolve(
@@ -207,14 +243,16 @@ years.forEach((year) => {
     // then scrape all subjects that are online ("Online"),
     // then concat subject lists into one array
     // alternative: if we want separate online/offline subject json files, make an outer for each loop through [true,false]
-    scrapeSubjects(year, period, false).then((offlineSubjects) => {
-      scrapeSubjects(year, period, true).then((onlineSubjects) => {
-        writeFile(outputPath, JSON.stringify([].concat(offlineSubjects,onlineSubjects), null, 1), (error) => {
-          if (error) {
-            console.error(`Could not save file, error encountered!\n${error}`);
-          }
-        });
-      });
-    });
+    const subjectMap: Record<string, SubjectInfo> = {};
+    const scrapeResults = Promise.all([
+      scrapeSubjects(year, period, subjectMap, false),
+      scrapeSubjects(year, period, subjectMap, true),
+    ]);
+    await scrapeResults;
+    const allSubjectInfos = Object.values(subjectMap);
+    console.log(
+      `A total of ${allSubjectInfos.length} subjects were scraped for ${outputFileName}`
+    );
+    dumpSubjectInfo(outputPath, sortSubjectInfo(allSubjectInfos));
   });
 });
