@@ -19,6 +19,7 @@ const studyPeriods = [
   { value: "semester_1", label: "Sem 1" },
   { value: "winter_term", label: "Winter" },
   { value: "semester_2", label: "Sem 2" },
+  { value: "year_long", label: "Year Long" },
   // { value: "january", label: "January" },
   // { value: "february", label: "February" },
   // { value: "march", label: "March" },

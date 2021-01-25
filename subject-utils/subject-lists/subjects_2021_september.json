@@ -1,372 +1,31 @@
 [
  {
-  "code": "NURS90142",
-  "name": "Alcohol, Other Drugs and Recovery",
+  "code": "ABPL90029",
+  "name": "Construction Studies",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "POPH90145",
-  "name": "Survival Analysis & Regression for Rates",
+  "code": "ABPL90075",
+  "name": "Urban and Landscape Heritage",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "BUSA90481",
-  "name": "Managerial Ethics & Business Environment",
-  "offered": [
-   "summer_term",
-   "april",
-   "march",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI90190",
-  "name": "Keyboard Repertoire and the Teacher",
+  "code": "ABPL90120",
+  "name": "Building Sustainability",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "LAWS90081",
-  "name": "Advanced Payment Devices and Fintech",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "DEVT90073",
-  "name": "Leading Development",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90578",
-  "name": "Linking School and Community",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90053",
-  "name": "Corporate Strategy",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "HORT90043",
-  "name": "Tree Identification and Selection",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90139",
-  "name": "Leading a Learning Community",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90026",
-  "name": "Business Strategy",
-  "offered": [
-   "april",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90122",
-  "name": "Foundations of Critical Care Nursing",
-  "offered": [
-   "march",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "AGRI20030",
-  "name": "Wine & Spirits:An Australian Perspective",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20033",
-  "name": "Introduction to Printmaking Processes",
-  "offered": [
-   "summer_term",
-   "march",
-   "april",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90458",
-  "name": "Managerial Judgement",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "POLS30034",
-  "name": "Political Psychology",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70149",
-  "name": "Construction Risk",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "VETS40022",
-  "name": "Professional Veterinary Practice Part 1",
-  "offered": [
-   "semester_1",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90141",
-  "name": "Psychotherapy Essentials",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90530",
-  "name": "Managing Sustainability for Strat. Adv.",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90093",
-  "name": "Finance",
-  "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90258",
-  "name": "Marketing Research",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90117",
-  "name": "Foundations in Neonatal Care",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70046",
-  "name": "Trade Marks and Unfair Competition",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90846",
-  "name": "Learning Intervention 2",
-  "offered": [
-   "april",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20045",
-  "name": "Introduction to Screenprinting",
-  "offered": [
-   "summer_term",
-   "march",
-   "april",
-   "winter_term",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90145",
-  "name": "Survival Analysis & Regression for Rates",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90481",
-  "name": "Managerial Ethics & Business Environment",
-  "offered": [
-   "summer_term",
-   "april",
-   "march",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "MUSI90190",
-  "name": "Keyboard Repertoire and the Teacher",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90081",
-  "name": "Advanced Payment Devices and Fintech",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "DEVT90073",
-  "name": "Leading Development",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90578",
-  "name": "Linking School and Community",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90053",
-  "name": "Corporate Strategy",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90142",
-  "name": "Alcohol, Other Drugs and Recovery",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "HORT90043",
-  "name": "Tree Identification and Selection",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90026",
-  "name": "Business Strategy",
-  "offered": [
-   "april",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90139",
-  "name": "Leading a Learning Community",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90122",
-  "name": "Foundations of Critical Care Nursing",
-  "offered": [
-   "march",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "AGRI20030",
-  "name": "Wine & Spirits:An Australian Perspective",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "FINA20033",
-  "name": "Introduction to Printmaking Processes",
-  "offered": [
-   "summer_term",
-   "march",
-   "april",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90063",
-  "name": "Social Work Practice: Indigenous Peoples",
-  "offered": [
-   "february",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "HORT90046",
-  "name": "Designing Green Roofs and Walls",
+  "code": "ABPL90371",
+  "name": "Design Activism",
   "offered": [
    "september"
   ],
@@ -381,161 +40,10 @@
   "online": false
  },
  {
-  "code": "LAWS70053",
-  "name": "Workplace Health and Safety",
+  "code": "AGRI20030",
+  "name": "Wine & Spirits:An Australian Perspective",
   "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70082",
-  "name": "Privacy Law",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70218",
-  "name": "International Employment Law",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90158",
-  "name": "Current Issues in International Tax",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90144",
-  "name": "Emergency Nursing 2",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "ENGM90019",
-  "name": "Management and Leadership for Engineers",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90070",
-  "name": "Implementing Evidence for Practice",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC91031",
-  "name": "Language in Diverse Contexts",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90612",
-  "name": "Teaching for Student Engagement",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "HIST90032",
-  "name": "Historical Themes in Australian Politics",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "SOCI90003",
-  "name": "Comparative Social Policy",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "GEOL90032",
-  "name": "Introduction to Mineralogy",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90403",
-  "name": "Business Tools: Money People & Processes",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70081",
-  "name": "Capital Gains Tax: Problems in Practice",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "VETS40023",
-  "name": "Professional Veterinary Practice Part 2",
-  "offered": [
-   "march",
-   "semester_2",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90227",
-  "name": "Operations",
-  "offered": [
-   "january",
-   "april",
    "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70217",
-  "name": "Fundamentals of the Common Law",
-  "offered": [
-   "march",
-   "may",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90510",
-  "name": "Executive Management 6",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70230",
-  "name": "Commercial Law in Asia",
-  "offered": [
    "september"
   ],
   "online": false
@@ -546,19 +54,11 @@
   "offered": [
    "september"
   ],
-  "online": false
+  "online": true
  },
  {
-  "code": "MUSI90243",
-  "name": "Opera Atelier",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90020",
-  "name": "Health Promotion",
+  "code": "BISY90017",
+  "name": "Quant. Decision Making & Optimisation",
   "offered": [
    "september"
   ],
@@ -576,74 +76,66 @@
   "online": false
  },
  {
-  "code": "PPMN90007",
-  "name": "Public Policy Analysis",
-  "offered": [
-   "march",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90480",
-  "name": "Leadership",
-  "offered": [
-   "summer_term",
-   "march",
-   "june",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90069",
-  "name": "Researching Social Work Practice 1",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90261",
-  "name": "Marketing Strategy",
+  "code": "BUSA90026",
+  "name": "Business Strategy",
   "offered": [
    "april",
+   "june",
    "september"
   ],
   "online": false
  },
  {
-  "code": "EDUC90137",
-  "name": "Personal and Interpersonal Leadership",
+  "code": "BUSA90027",
+  "name": "Business Strategy",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90053",
+  "name": "Corporate Strategy",
+  "offered": [
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
   "offered": [
    "january",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90221",
-  "name": "Consultation in Educational Settings",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "NURS90074",
-  "name": "Psychosocial Aspects of Palliative Care",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90490",
-  "name": "Integrative Business Capstone",
-  "offered": [
-   "summer_term",
+   "april",
    "june",
-   "winter_term",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90167",
+  "name": "Investments",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90172",
+  "name": "Leadership and Change",
+  "offered": [
    "september"
   ],
   "online": false
@@ -660,104 +152,16 @@
   "online": false
  },
  {
-  "code": "CRIM90017",
-  "name": "Violence, Trauma and Reconciliation",
+  "code": "BUSA90194",
+  "name": "Managerial Economics",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "LAWS70033",
-  "name": "International Criminal Law",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90120",
-  "name": "Building Sustainability",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "CVEN90068",
-  "name": "Port Access and Navigation",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90167",
-  "name": "Investments",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "ENEN90014",
-  "name": "Sustainable Buildings",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "PSYT90057",
-  "name": "Mental Illness in Young People II",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "PSYT90115",
-  "name": "Managing Youth Self-harm and Suicide 2",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "SCWK90070",
-  "name": "Working in Human Service Organisations",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "ABPL90371",
-  "name": "Design Activism",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "AGRI90077",
-  "name": "Value Chain Analysis",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70230",
-  "name": "Commercial Law in Asia",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90001",
-  "name": "Financial Accounting",
+  "code": "BUSA90224",
+  "name": "Managing People",
   "offered": [
    "january",
    "april",
@@ -767,65 +171,55 @@
   "online": false
  },
  {
-  "code": "PPMN90007",
-  "name": "Public Policy Analysis",
+  "code": "BUSA90227",
+  "name": "Operations",
   "offered": [
-   "march",
+   "january",
+   "april",
+   "june",
    "september"
   ],
   "online": false
  },
  {
-  "code": "LAWS90119",
-  "name": "Law and Public Administration",
+  "code": "BUSA90243",
+  "name": "Marketing",
   "offered": [
+   "january",
+   "april",
+   "june",
    "september"
   ],
   "online": false
  },
  {
-  "code": "CVEN90068",
-  "name": "Port Access and Navigation",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BISY90017",
-  "name": "Quant. Decision Making & Optimisation",
+  "code": "BUSA90258",
+  "name": "Marketing Research",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "LAWS70462",
-  "name": "Sports Integrity and Investigations",
+  "code": "BUSA90261",
+  "name": "Marketing Strategy",
+  "offered": [
+   "april",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90403",
+  "name": "Business Tools: Money People & Processes",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "ABPL90029",
-  "name": "Construction Studies",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "MGMT90128",
-  "name": "Project Management",
-  "offered": [
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90167",
-  "name": "Investments",
+  "code": "BUSA90458",
+  "name": "Managerial Judgement",
   "offered": [
    "september"
   ],
@@ -843,8 +237,39 @@
   "online": false
  },
  {
-  "code": "SCWK90069",
-  "name": "Researching Social Work Practice 1",
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "april",
+   "march",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90490",
+  "name": "Integrative Business Capstone",
+  "offered": [
+   "summer_term",
+   "june",
+   "winter_term",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90510",
+  "name": "Executive Management 6",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90530",
+  "name": "Managing Sustainability for Strat. Adv.",
   "offered": [
    "september"
   ],
@@ -859,8 +284,66 @@
   "online": false
  },
  {
-  "code": "LAWS70033",
-  "name": "International Criminal Law",
+  "code": "CUMC90030",
+  "name": "Conservation Assessment and Treatment 1",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CVEN90068",
+  "name": "Port Access and Navigation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90073",
+  "name": "Leading Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90074",
+  "name": "Contemporary Development",
+  "offered": [
+   "march",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90137",
+  "name": "Personal and Interpersonal Leadership",
+  "offered": [
+   "january",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90139",
+  "name": "Leading a Learning Community",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90221",
+  "name": "Consultation in Educational Settings",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90578",
+  "name": "Linking School and Community",
   "offered": [
    "september"
   ],
@@ -875,45 +358,33 @@
   "online": false
  },
  {
-  "code": "LAWS70081",
-  "name": "Capital Gains Tax: Problems in Practice",
+  "code": "EDUC90751",
+  "name": "Understanding Schools",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "BUSA90227",
-  "name": "Operations",
+  "code": "EDUC90846",
+  "name": "Learning Intervention 2",
   "offered": [
-   "january",
    "april",
-   "june",
    "september"
   ],
   "online": false
  },
  {
-  "code": "GEOL90032",
-  "name": "Introduction to Mineralogy",
+  "code": "EDUC91031",
+  "name": "Language in Diverse Contexts",
   "offered": [
    "september"
   ],
   "online": false
  },
  {
-  "code": "VETS40023",
-  "name": "Professional Veterinary Practice Part 2",
-  "offered": [
-   "march",
-   "semester_2",
-   "september"
-  ],
-  "online": false
- },
- {
-  "code": "SOCI90003",
-  "name": "Comparative Social Policy",
+  "code": "ENEN90014",
+  "name": "Sustainable Buildings",
   "offered": [
    "september"
   ],
@@ -928,125 +399,12 @@
   "online": false
  },
  {
-  "code": "CUMC90030",
-  "name": "Conservation Assessment and Treatment 1",
+  "code": "EVSC90023",
+  "name": "Building Behaviour in Bushfires",
   "offered": [
    "september"
   ],
   "online": false
- },
- {
-  "code": "NURS90142",
-  "name": "Alcohol, Other Drugs and Recovery",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90145",
-  "name": "Survival Analysis & Regression for Rates",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90481",
-  "name": "Managerial Ethics & Business Environment",
-  "offered": [
-   "summer_term",
-   "april",
-   "march",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "MUSI90190",
-  "name": "Keyboard Repertoire and the Teacher",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90081",
-  "name": "Advanced Payment Devices and Fintech",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90073",
-  "name": "Leading Development",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90578",
-  "name": "Linking School and Community",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90053",
-  "name": "Corporate Strategy",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "HORT90043",
-  "name": "Tree Identification and Selection",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90139",
-  "name": "Leading a Learning Community",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90026",
-  "name": "Business Strategy",
-  "offered": [
-   "april",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "NURS90122",
-  "name": "Foundations of Critical Care Nursing",
-  "offered": [
-   "march",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "AGRI20030",
-  "name": "Wine & Spirits:An Australian Perspective",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": true
  },
  {
   "code": "FINA20033",
@@ -1058,100 +416,7 @@
    "june",
    "september"
   ],
-  "online": true
- },
- {
-  "code": "BUSA90458",
-  "name": "Managerial Judgement",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "POLS30034",
-  "name": "Political Psychology",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70149",
-  "name": "Construction Risk",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "VETS40022",
-  "name": "Professional Veterinary Practice Part 1",
-  "offered": [
-   "semester_1",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "NURS90141",
-  "name": "Psychotherapy Essentials",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90530",
-  "name": "Managing Sustainability for Strat. Adv.",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90093",
-  "name": "Finance",
-  "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90258",
-  "name": "Marketing Research",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "NURS90117",
-  "name": "Foundations in Neonatal Care",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70046",
-  "name": "Trade Marks and Unfair Competition",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90846",
-  "name": "Learning Intervention 2",
-  "offered": [
-   "april",
-   "september"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "FINA20045",
@@ -1164,76 +429,31 @@
    "june",
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "NURS90142",
-  "name": "Alcohol, Other Drugs and Recovery",
+  "code": "FRST90017",
+  "name": "Bushfire Planning & Management",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "POPH90145",
-  "name": "Survival Analysis & Regression for Rates",
+  "code": "GEOL90032",
+  "name": "Introduction to Mineralogy",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "BUSA90481",
-  "name": "Managerial Ethics & Business Environment",
-  "offered": [
-   "summer_term",
-   "april",
-   "march",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "MUSI90190",
-  "name": "Keyboard Repertoire and the Teacher",
+  "code": "HIST90032",
+  "name": "Historical Themes in Australian Politics",
   "offered": [
    "september"
   ],
-  "online": true
- },
- {
-  "code": "LAWS90081",
-  "name": "Advanced Payment Devices and Fintech",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "DEVT90073",
-  "name": "Leading Development",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90578",
-  "name": "Linking School and Community",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90053",
-  "name": "Corporate Strategy",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "HORT90043",
@@ -1241,79 +461,23 @@
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "EDUC90139",
-  "name": "Leading a Learning Community",
+  "code": "HORT90046",
+  "name": "Designing Green Roofs and Walls",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "BUSA90026",
-  "name": "Business Strategy",
-  "offered": [
-   "april",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "NURS90122",
-  "name": "Foundations of Critical Care Nursing",
-  "offered": [
-   "march",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "AGRI20030",
-  "name": "Wine & Spirits:An Australian Perspective",
-  "offered": [
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "FINA20033",
-  "name": "Introduction to Printmaking Processes",
-  "offered": [
-   "summer_term",
-   "march",
-   "april",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90088",
-  "name": "Disability and Global Development",
+  "code": "LAWS70033",
+  "name": "International Criminal Law",
   "offered": [
    "september"
   ],
-  "online": true
- },
- {
-  "code": "SCWK90055",
-  "name": "Legal and Ethical Contexts of Practice",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90054",
-  "name": "Assessing Risk and Vulnerability",
-  "offered": [
-   "september"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "LAWS70042",
@@ -1321,265 +485,35 @@
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "ENEN90014",
-  "name": "Sustainable Buildings",
+  "code": "LAWS70046",
+  "name": "Trade Marks and Unfair Competition",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "FRST90017",
-  "name": "Bushfire Planning & Management",
+  "code": "LAWS70053",
+  "name": "Workplace Health and Safety",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "POPH90066",
-  "name": "Women and Global Health",
+  "code": "LAWS70081",
+  "name": "Capital Gains Tax: Problems in Practice",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "POLS90053",
-  "name": "India and the World",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90097",
-  "name": "Musculoskeletal Disorders in Women",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70112",
-  "name": "Remedies in the Construction Context",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90371",
-  "name": "Design Activism",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90027",
-  "name": "Business Strategy",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90751",
-  "name": "Understanding Schools",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EVSC90023",
-  "name": "Building Behaviour in Bushfires",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70366",
-  "name": "International Refugee Law",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90057",
-  "name": "Mental Illness in Young People II",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90115",
-  "name": "Managing Youth Self-harm and Suicide 2",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90070",
-  "name": "Working in Human Service Organisations",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90075",
-  "name": "Urban and Landscape Heritage",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT90234",
-  "name": "Leaders, Business & Culture in Florence",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "CUMC90030",
-  "name": "Conservation Assessment and Treatment 1",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90088",
-  "name": "Disability and Global Development",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90054",
-  "name": "Assessing Risk and Vulnerability",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90055",
-  "name": "Legal and Ethical Contexts of Practice",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90751",
-  "name": "Understanding Schools",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90027",
-  "name": "Business Strategy",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "POLS90053",
-  "name": "India and the World",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "EVSC90023",
-  "name": "Building Behaviour in Bushfires",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70042",
-  "name": "Company Takeovers",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90048",
-  "name": "Supervised Field Placement 1A",
-  "offered": [
-   "february",
-   "may",
-   "september",
-   "november"
-  ],
-  "online": true
- },
- {
-  "code": "FRST90017",
-  "name": "Bushfire Planning & Management",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90097",
-  "name": "Musculoskeletal Disorders in Women",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70366",
-  "name": "International Refugee Law",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90066",
-  "name": "Women and Global Health",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "MUSI90243",
-  "name": "Opera Atelier",
+  "code": "LAWS70082",
+  "name": "Privacy Law",
   "offered": [
    "september"
   ],
@@ -1591,79 +525,42 @@
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "ABPL90075",
-  "name": "Urban and Landscape Heritage",
+  "code": "LAWS70128",
+  "name": "Advanced Construction Law",
   "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70149",
+  "name": "Construction Risk",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70217",
+  "name": "Fundamentals of the Common Law",
+  "offered": [
+   "march",
+   "may",
+   "june",
    "september"
   ],
   "online": true
  },
  {
-  "code": "BUSA90510",
-  "name": "Executive Management 6",
+  "code": "LAWS70218",
+  "name": "International Employment Law",
   "offered": [
    "september"
   ],
-  "online": true
- },
- {
-  "code": "POPH90020",
-  "name": "Health Promotion",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ENEN90014",
-  "name": "Sustainable Buildings",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90057",
-  "name": "Mental Illness in Young People II",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "PSYT90115",
-  "name": "Managing Youth Self-harm and Suicide 2",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "SCWK90070",
-  "name": "Working in Human Service Organisations",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90371",
-  "name": "Design Activism",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "AGRI90077",
-  "name": "Value Chain Analysis",
-  "offered": [
-   "september"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "LAWS70230",
@@ -1674,21 +571,25 @@
   "online": true
  },
  {
-  "code": "BUSA90001",
-  "name": "Financial Accounting",
+  "code": "LAWS70366",
+  "name": "International Refugee Law",
   "offered": [
-   "january",
-   "april",
-   "june",
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "PPMN90007",
-  "name": "Public Policy Analysis",
+  "code": "LAWS70462",
+  "name": "Sports Integrity and Investigations",
   "offered": [
-   "march",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90081",
+  "name": "Advanced Payment Devices and Fintech",
+  "offered": [
    "september"
   ],
   "online": true
@@ -1699,35 +600,19 @@
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "CVEN90068",
-  "name": "Port Access and Navigation",
+  "code": "LAWS90158",
+  "name": "Current Issues in International Tax",
   "offered": [
    "september"
   ],
   "online": true
  },
  {
-  "code": "BISY90017",
-  "name": "Quant. Decision Making & Optimisation",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70462",
-  "name": "Sports Integrity and Investigations",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ABPL90029",
-  "name": "Construction Studies",
+  "code": "LAWS90227",
+  "name": "Human Rights and the Digital State",
   "offered": [
    "september"
   ],
@@ -1739,26 +624,262 @@
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "BUSA90167",
-  "name": "Investments",
+  "code": "MGMT90234",
+  "name": "Leaders, Business & Culture in Florence",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90190",
+  "name": "Keyboard Repertoire and the Teacher",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90243",
+  "name": "Opera Atelier",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90070",
+  "name": "Implementing Evidence for Practice",
   "offered": [
    "september"
   ],
   "online": true
  },
  {
-  "code": "BUSA90480",
-  "name": "Leadership",
+  "code": "NURS90074",
+  "name": "Psychosocial Aspects of Palliative Care",
   "offered": [
-   "summer_term",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90117",
+  "name": "Foundations in Neonatal Care",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90122",
+  "name": "Foundations of Critical Care Nursing",
+  "offered": [
    "march",
-   "june",
    "september"
   ],
   "online": true
+ },
+ {
+  "code": "NURS90127",
+  "name": "Intensive Care Nursing 2",
+  "offered": [
+   "march",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90141",
+  "name": "Psychotherapy Essentials",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90142",
+  "name": "Alcohol, Other Drugs and Recovery",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90144",
+  "name": "Emergency Nursing 2",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90097",
+  "name": "Musculoskeletal Disorders in Women",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS30034",
+  "name": "Political Psychology",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS90053",
+  "name": "India and the World",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90020",
+  "name": "Health Promotion",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90066",
+  "name": "Women and Global Health",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90088",
+  "name": "Disability and Global Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90145",
+  "name": "Survival Analysis & Regression for Rates",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90007",
+  "name": "Public Policy Analysis",
+  "offered": [
+   "march",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90032",
+  "name": "Innovative Design and Service Delivery",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90057",
+  "name": "Mental Illness in Young People II",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90099",
+  "name": "Mental Ill-health in Young People 1",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90103",
+  "name": "Biological Interventions with Youth",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90104",
+  "name": "Working with Marginalised Young People",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90115",
+  "name": "Managing Youth Self-harm and Suicide 2",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90038",
+  "name": "Social Work Practice: Mental Health",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90048",
+  "name": "Supervised Field Placement 1A",
+  "offered": [
+   "february",
+   "may",
+   "september",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90054",
+  "name": "Assessing Risk and Vulnerability",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90055",
+  "name": "Legal and Ethical Contexts of Practice",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90056",
+  "name": "Program Planning and Evaluation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90063",
+  "name": "Social Work Practice: Indigenous Peoples",
+  "offered": [
+   "february",
+   "september"
+  ],
+  "online": false
  },
  {
   "code": "SCWK90069",
@@ -1766,58 +887,32 @@
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "CRIM90017",
-  "name": "Violence, Trauma and Reconciliation",
+  "code": "SCWK90070",
+  "name": "Working in Human Service Organisations",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS70033",
-  "name": "International Criminal Law",
+  "code": "SOCI90003",
+  "name": "Comparative Social Policy",
   "offered": [
    "september"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "EDUC90612",
-  "name": "Teaching for Student Engagement",
+  "code": "VETS40022",
+  "name": "Professional Veterinary Practice Part 1",
   "offered": [
+   "semester_1",
    "september"
   ],
-  "online": true
- },
- {
-  "code": "LAWS70081",
-  "name": "Capital Gains Tax: Problems in Practice",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90227",
-  "name": "Operations",
-  "offered": [
-   "january",
-   "april",
-   "june",
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "GEOL90032",
-  "name": "Introduction to Mineralogy",
-  "offered": [
-   "september"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "VETS40023",
@@ -1827,30 +922,6 @@
    "semester_2",
    "september"
   ],
-  "online": true
- },
- {
-  "code": "SOCI90003",
-  "name": "Comparative Social Policy",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "ENGM90019",
-  "name": "Management and Leadership for Engineers",
-  "offered": [
-   "september"
-  ],
-  "online": true
- },
- {
-  "code": "CUMC90030",
-  "name": "Conservation Assessment and Treatment 1",
-  "offered": [
-   "september"
-  ],
-  "online": true
+  "online": false
  }
 ]

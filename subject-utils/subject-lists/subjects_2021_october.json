@@ -1,129 +1,7 @@
 [
  {
-  "code": "BUSA90503",
-  "name": "Business Analytics Applications",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "CUMC90031",
-  "name": "Analytical Science in Conservation",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "CRIM90020",
-  "name": "Crime, Culture & the Media",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70392",
-  "name": "International Business Transactions",
-  "offered": [
-   "may",
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90153",
-  "name": "Institutional Abuse and Legal Redress",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90910",
-  "name": "Clinical Teaching Practice (Sec) 3",
-  "offered": [
-   "semester_1",
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90512",
-  "name": "Industry Studies in Asia",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90013",
-  "name": "Constitutional Rights and Freedoms",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "CRIM90013",
-  "name": "Advanced Practice in Forensic Disability",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "VETS90089",
-  "name": "Eradicable Diseases",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90299",
-  "name": "Workspace Design Evaluation",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "PHTY90004",
-  "name": "Exercise for Women",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90130",
-  "name": "Tax Administration",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90483",
-  "name": "General Management 2",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70205",
-  "name": "Project Finance",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70197",
-  "name": "Labour Standards and their Enforcement",
+  "code": "BISY90016",
+  "name": "Predictive Analytics",
   "offered": [
    "october"
   ],
@@ -138,24 +16,8 @@
   "online": false
  },
  {
-  "code": "LAWS70239",
-  "name": "Payment Matters in Construction Projects",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "CLRS90013",
-  "name": "Responsibilities in Clinical Research",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "INDG90006",
-  "name": "Powerful Encounters",
+  "code": "BUSA90483",
+  "name": "General Management 2",
   "offered": [
    "october"
   ],
@@ -171,9 +33,58 @@
   "online": false
  },
  {
-  "code": "MGMT90278",
-  "name": "Supply Chain Strategy",
+  "code": "BUSA90503",
+  "name": "Business Analytics Applications",
   "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90512",
+  "name": "Industry Studies in Asia",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90013",
+  "name": "Responsibilities in Clinical Research",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90013",
+  "name": "Advanced Practice in Forensic Disability",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90020",
+  "name": "Crime, Culture & the Media",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90031",
+  "name": "Analytical Science in Conservation",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90910",
+  "name": "Clinical Teaching Practice (Sec) 3",
+  "offered": [
+   "semester_1",
    "october"
   ],
   "online": false
@@ -188,8 +99,49 @@
   "online": false
  },
  {
-  "code": "POPH90244",
-  "name": "Global Health and Human Rights",
+  "code": "INDG90006",
+  "name": "Powerful Encounters",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70002",
+  "name": "Tax of Business and Investment Income",
+  "offered": [
+   "semester_1",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70181",
+  "name": "Defamation Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70197",
+  "name": "Labour Standards and their Enforcement",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70205",
+  "name": "Project Finance",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70239",
+  "name": "Payment Matters in Construction Projects",
   "offered": [
    "october"
   ],
@@ -212,139 +164,29 @@
   "online": false
  },
  {
-  "code": "LAWS70181",
-  "name": "Defamation Law",
+  "code": "LAWS70392",
+  "name": "International Business Transactions",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70398",
+  "name": "Law of the Sea",
   "offered": [
    "october"
   ],
   "online": false
  },
  {
-  "code": "MGMT90276",
-  "name": "Logistics and Transportation Management",
-  "offered": [
-   "february",
-   "april",
-   "june",
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "PADM90008",
-  "name": "Using Evidence",
+  "code": "LAWS90006",
+  "name": "Law and Legal Practice in Asia",
   "offered": [
    "october"
   ],
   "online": false
- },
- {
-  "code": "MGMT90279",
-  "name": "Supply Chain Technologies",
-  "offered": [
-   "february",
-   "april",
-   "june",
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "POPH90299",
-  "name": "Workspace Design Evaluation",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "PHTY90004",
-  "name": "Exercise for Women",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70197",
-  "name": "Labour Standards and their Enforcement",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90130",
-  "name": "Tax Administration",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70205",
-  "name": "Project Finance",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90279",
-  "name": "Organisational Change",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "BUSA90483",
-  "name": "General Management 2",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "CLRS90013",
-  "name": "Responsibilities in Clinical Research",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70239",
-  "name": "Payment Matters in Construction Projects",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "INDG90006",
-  "name": "Powerful Encounters",
-  "offered": [
-   "october"
-  ],
-  "online": false
- },
- {
-  "code": "EDUC90910",
-  "name": "Clinical Teaching Practice (Sec) 3",
-  "offered": [
-   "semester_1",
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90512",
-  "name": "Industry Studies in Asia",
-  "offered": [
-   "october"
-  ],
-  "online": true
  },
  {
   "code": "LAWS90013",
@@ -352,80 +194,7 @@
   "offered": [
    "october"
   ],
-  "online": true
- },
- {
-  "code": "CRIM90013",
-  "name": "Advanced Practice in Forensic Disability",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "VETS90089",
-  "name": "Eradicable Diseases",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "CUMC90031",
-  "name": "Analytical Science in Conservation",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90503",
-  "name": "Business Analytics Applications",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "CRIM90020",
-  "name": "Crime, Culture & the Media",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70392",
-  "name": "International Business Transactions",
-  "offered": [
-   "may",
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS90153",
-  "name": "Institutional Abuse and Legal Redress",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90299",
-  "name": "Workspace Design Evaluation",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "PHTY90004",
-  "name": "Exercise for Women",
-  "offered": [
-   "october"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "LAWS90130",
@@ -433,121 +202,40 @@
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "BUSA90483",
-  "name": "General Management 2",
+  "code": "LAWS90153",
+  "name": "Institutional Abuse and Legal Redress",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS70205",
-  "name": "Project Finance",
+  "code": "LAWS90214",
+  "name": "Indigenous Law in Aotearoa and Australia",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS70197",
-  "name": "Labour Standards and their Enforcement",
+  "code": "LAWS90216",
+  "name": "Cryptoassets in Global Context",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "BUSA90279",
-  "name": "Organisational Change",
+  "code": "MGMT90255",
+  "name": "Designing Supply Chains",
   "offered": [
+   "april",
    "october"
   ],
-  "online": true
- },
- {
-  "code": "LAWS70239",
-  "name": "Payment Matters in Construction Projects",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "CLRS90013",
-  "name": "Responsibilities in Clinical Research",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "INDG90006",
-  "name": "Powerful Encounters",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90502",
-  "name": "Analytics Lab",
-  "offered": [
-   "august",
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "MGMT90278",
-  "name": "Supply Chain Strategy",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "EDUC90941",
-  "name": "Leading the Educational Organisation",
-  "offered": [
-   "may",
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "POPH90244",
-  "name": "Global Health and Human Rights",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70350",
-  "name": "Management for Professionals",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70362",
-  "name": "Information Technology Contracting Law",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70181",
-  "name": "Defamation Law",
-  "offered": [
-   "october"
-  ],
-  "online": true
+  "online": false
  },
  {
   "code": "MGMT90276",
@@ -558,15 +246,23 @@
    "june",
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "PADM90008",
-  "name": "Using Evidence",
+  "code": "MGMT90277",
+  "name": "Supply Chain Intelligence",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
+ },
+ {
+  "code": "MGMT90278",
+  "name": "Supply Chain Strategy",
+  "offered": [
+   "october"
+  ],
+  "online": false
  },
  {
   "code": "MGMT90279",
@@ -577,15 +273,15 @@
    "june",
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "POPH90299",
-  "name": "Workspace Design Evaluation",
+  "code": "PADM90008",
+  "name": "Using Evidence",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
   "code": "PHTY90004",
@@ -593,70 +289,52 @@
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS70197",
-  "name": "Labour Standards and their Enforcement",
+  "code": "POPH90244",
+  "name": "Global Health and Human Rights",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS90130",
-  "name": "Tax Administration",
+  "code": "POPH90299",
+  "name": "Workspace Design Evaluation",
   "offered": [
    "october"
   ],
-  "online": true
+  "online": false
  },
  {
-  "code": "LAWS70205",
-  "name": "Project Finance",
+  "code": "SCWK90049",
+  "name": "Supervised Field Placement 1B",
+  "offered": [
+   "summer_term",
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90051",
+  "name": "Supervised Field Placement 2B",
+  "offered": [
+   "summer_term",
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "VETS90089",
+  "name": "Eradicable Diseases",
   "offered": [
    "october"
   ],
-  "online": true
- },
- {
-  "code": "BUSA90279",
-  "name": "Organisational Change",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "BUSA90483",
-  "name": "General Management 2",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "CLRS90013",
-  "name": "Responsibilities in Clinical Research",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70239",
-  "name": "Payment Matters in Construction Projects",
-  "offered": [
-   "october"
-  ],
-  "online": true
- },
- {
-  "code": "INDG90006",
-  "name": "Powerful Encounters",
-  "offered": [
-   "october"
-  ],
-  "online": true
+  "online": false
  }
 ]
