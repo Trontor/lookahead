@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { GOLD } from "../../utility/SponsorTiers";
+import styled from 'styled-components';
+import {GOLD} from '../../utility/SponsorTiers';
 
 export const SponsorCard = styled.div`
-  display: ${props => (props.dismissed ? "none" : "flex")};
+  display: ${props => (props.dismissed ? 'none' : 'flex')};
   flex-direction: column;
   padding: 10px;
   background: ${props => props.theme.cardBg};
@@ -12,8 +12,7 @@ export const SponsorCard = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.05);
   letter-spacing: -0.02em;
   line-height: 1.18em;
-  border-top: ${props =>
-    props.tier === GOLD ? "8px solid gold" : "8px solid silver"};
+  border-top: ${props => (props.tier === GOLD ? '8px solid gold' : '8px solid silver')};
 
   @media screen and (min-width: 960px) {
     position: relative;
@@ -66,7 +65,7 @@ export const UMSUButton = styled.button`
   margin-right: 5px;
   border-radius: 3px;
   color: white;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 10px;
   text-transform: uppercase;
   background-color: ${props => props.theme.UMSUButtonBg};
@@ -86,9 +85,9 @@ export const UMSUButton = styled.button`
 `;
 
 export const FacebookButton = styled(UMSUButton).attrs(() => ({
-  className: "fab fa-facebook-f"
+  className: 'fab fa-facebook-f',
 }))`
-  font-family: "Font Awesome 5 Brands";
+  font-family: 'Font Awesome 5 Brands';
   font-size: 12px;
   background-color: #3b5998;
   width: 25px;
@@ -190,7 +189,7 @@ export const Logo = styled.img.attrs(props => ({}))`
   /* width: 100%; */
   margin-top: 0;
   background-color: ${props => props.theme.SponsorLogoBg};
-  /* margin-top: ${props => (props.bronze ? 0 : "-10px")}; */
+  /* margin-top: ${props => (props.bronze ? 0 : '-10px')}; */
   filter: ${props => props.theme.SponsorFilter};
 `;
 export const SponsorHeading = styled.h3`

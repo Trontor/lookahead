@@ -1,14 +1,14 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { InfoTable, StreamClassInfoRow } from "./ContainerStyles";
-import timeIntToString from "../../../utility/TimeIntToString";
-import daysOfWeek from "../../../utility/DaysOfWeek";
-import { moveStream } from "../../Timetable/Viewer/utility/TimetableViewerFunctions";
+import React from 'react';
+import {useSelector} from 'react-redux';
+import {InfoTable, StreamClassInfoRow} from './ContainerStyles';
+import timeIntToString from '../../../utility/TimeIntToString';
+import daysOfWeek from '../../../utility/DaysOfWeek';
+import {moveStream} from '../../Timetable/Viewer/utility/TimetableViewerFunctions';
 
 export default function StreamInfoContainer(props) {
-  const { streams, type, name, color, subjectCode } = props;
+  const {streams, type, name, color, subjectCode} = props;
   const optimiser = useSelector(state => state.optimiser);
-  const { currentIndex, timetables } = optimiser;
+  const {currentIndex, timetables} = optimiser;
   const currentCodes = [];
   // Popular currentCodes with all classcodes of the timetable, for highlighting
   if (timetables && currentIndex >= 0 && currentIndex < timetables.length) {
@@ -19,14 +19,10 @@ export default function StreamInfoContainer(props) {
   }
 
   const currentStream = streams.find(stream =>
-    stream.classes.some(cls =>
-      cls.codes.some(code => currentCodes.includes(code))
-    )
+    stream.classes.some(cls => cls.codes.some(code => currentCodes.includes(code)))
   );
 
-  const currentStreamNumbers = !currentStream
-    ? []
-    : currentStream.streamNumbers;
+  const currentStreamNumbers = !currentStream ? [] : currentStream.streamNumbers;
   return (
     <InfoTable>
       {/* Headers */}
@@ -45,9 +41,9 @@ export default function StreamInfoContainer(props) {
       {/* We map the streams */}
       {streams.map((stream, streamIndex) => {
         // Important information
-        const { classes, streamNumbers } = stream;
+        const {classes, streamNumbers} = stream;
         const rowSpan = classes.length;
-        const streamText = streamNumbers.join(" & ");
+        const streamText = streamNumbers.join(' & ');
         // Render row for this stream
         return (
           <>
@@ -57,12 +53,10 @@ export default function StreamInfoContainer(props) {
                 day,
                 start,
                 finish,
-                weeks
+                weeks,
                 // locations
               } = cls;
-              const isOnTimetable = cls.codes.some(code =>
-                currentCodes.includes(code)
-              );
+              const isOnTimetable = cls.codes.some(code => currentCodes.includes(code));
               return (
                 <StreamClassInfoRow
                   odd={streamIndex % 2 !== 0}
@@ -74,12 +68,7 @@ export default function StreamInfoContainer(props) {
                     if (!currentStreamNumbers.length) {
                       return;
                     }
-                    moveStream(
-                      subjectCode,
-                      type,
-                      currentStreamNumbers[0],
-                      streamNumbers[0]
-                    );
+                    moveStream(subjectCode, type, currentStreamNumbers[0], streamNumbers[0]);
                   }}
                 >
                   {idx === 0 && <td rowSpan={rowSpan}>{streamText}</td>}

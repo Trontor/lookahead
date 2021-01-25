@@ -1,1 +1,102 @@
-[{"code":"ABPL20054","name":"Hacking Cities - Upgrading Urban Life","offered":["winter_term"]},{"code":"ABPL30063","name":"AA Visiting School Undergraduate","offered":["winter_term"]},{"code":"ABPL90173","name":"Advanced Planting Design","offered":["winter_term"]},{"code":"ABPL90386","name":"AA Visiting School Graduate","offered":["winter_term"]},{"code":"ABPL90400","name":"Design for Diversity","offered":["winter_term"]},{"code":"AIND10003","name":"Ancient and Contemporary Indigenous Arts","offered":["winter_term"]},{"code":"ANCW20015","name":"Classical Mythology","offered":["winter_term","semester_2"]},{"code":"BUSA90473","name":"Melbourne Business Practicum","offered":["summer_term","winter_term"]},{"code":"BUSA90481","name":"Social Responsibility and Ethics","offered":["summer_term","winter_term"]},{"code":"CLAS10004","name":"Ancient Greek 1","offered":["semester_1","winter_term"]},{"code":"CLAS20035","name":"Intensive Ancient Greek 1","offered":["winter_term"]},{"code":"CLAS30045","name":"Intensive Ancient Greek 1","offered":["winter_term"]},{"code":"DNCE20031","name":"Dancing the Dance 2","offered":["winter_term"]},{"code":"DRAM30020","name":"Acting for Camera","offered":["winter_term"]},{"code":"EDUC90426","name":"Foundations of Mathematics Teaching","offered":["winter_term"]},{"code":"EDUC90428","name":"Promoting Student Wellbeing","offered":["winter_term"]},{"code":"EDUC90504","name":"Leadership in Educational Settings","offered":["summer_term","winter_term"]},{"code":"ESLA90001","name":"Professional Speaking Communication","offered":["winter_term"]},{"code":"ESLA90003","name":"Professional Literacies","offered":["winter_term"]},{"code":"EURO20008","name":"Experiencing Foodscapes: Italy & Spain","offered":["winter_term"]},{"code":"EURO30007","name":"Experiencing Foodscapes: Italy & Spain","offered":["winter_term"]},{"code":"FINA20026","name":"Painting Techniques","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"FINA20033","name":"Introduction to Printmaking Processes","offered":["winter_term","semester_2"]},{"code":"FINA20035","name":"Drawing with Anatomy","offered":["summer_term","winter_term"]},{"code":"FINA20036","name":"Under Camera Animation","offered":["summer_term","winter_term"]},{"code":"FINA20044","name":"Art and the Botanical","offered":["winter_term"]},{"code":"FINA20045","name":"Introduction to Screenprinting","offered":["winter_term"]},{"code":"FREN10004","name":"French 1","offered":["semester_1","winter_term"]},{"code":"FREN20020","name":"In the Heart of the Loire Valley","offered":["winter_term"]},{"code":"FREN30018","name":"In the Heart of the Loire Valley","offered":["winter_term"]},{"code":"GEOL90043","name":"Fundamentals of Geological CO2 Storage","offered":["winter_term"]},{"code":"GEOM90010","name":"Spatial Information Research Project A","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90013","name":"Spatial Information Research Project C","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90020","name":"Spatial Information Research Project","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90023","name":"Spatial Information Research Project B","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GERM10004","name":"German 1","offered":["semester_1","winter_term"]},{"code":"ISYS90070","name":"Information Security Consulting","offered":["winter_term"]},{"code":"ITAL10008","name":"Italian 1 (Mid-Year Intensive)","offered":["winter_term"]},{"code":"JAPN20005","name":"Contemporary Japan","offered":["semester_1","winter_term"]},{"code":"LAWS50037","name":"Evidence and Proof","offered":["semester_1","winter_term"]}]
+[
+  {
+    "code": "ABPL20054",
+    "name": "Hacking Cities - Upgrading Urban Life",
+    "offered": ["winter_term"]
+  },
+  {"code": "ABPL30063", "name": "AA Visiting School Undergraduate", "offered": ["winter_term"]},
+  {"code": "ABPL90173", "name": "Advanced Planting Design", "offered": ["winter_term"]},
+  {"code": "ABPL90386", "name": "AA Visiting School Graduate", "offered": ["winter_term"]},
+  {"code": "ABPL90400", "name": "Design for Diversity", "offered": ["winter_term"]},
+  {
+    "code": "AIND10003",
+    "name": "Ancient and Contemporary Indigenous Arts",
+    "offered": ["winter_term"]
+  },
+  {"code": "ANCW20015", "name": "Classical Mythology", "offered": ["winter_term", "semester_2"]},
+  {
+    "code": "BUSA90473",
+    "name": "Melbourne Business Practicum",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {
+    "code": "BUSA90481",
+    "name": "Social Responsibility and Ethics",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "CLAS10004", "name": "Ancient Greek 1", "offered": ["semester_1", "winter_term"]},
+  {"code": "CLAS20035", "name": "Intensive Ancient Greek 1", "offered": ["winter_term"]},
+  {"code": "CLAS30045", "name": "Intensive Ancient Greek 1", "offered": ["winter_term"]},
+  {"code": "DNCE20031", "name": "Dancing the Dance 2", "offered": ["winter_term"]},
+  {"code": "DRAM30020", "name": "Acting for Camera", "offered": ["winter_term"]},
+  {"code": "EDUC90426", "name": "Foundations of Mathematics Teaching", "offered": ["winter_term"]},
+  {"code": "EDUC90428", "name": "Promoting Student Wellbeing", "offered": ["winter_term"]},
+  {
+    "code": "EDUC90504",
+    "name": "Leadership in Educational Settings",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "ESLA90001", "name": "Professional Speaking Communication", "offered": ["winter_term"]},
+  {"code": "ESLA90003", "name": "Professional Literacies", "offered": ["winter_term"]},
+  {
+    "code": "EURO20008",
+    "name": "Experiencing Foodscapes: Italy & Spain",
+    "offered": ["winter_term"]
+  },
+  {
+    "code": "EURO30007",
+    "name": "Experiencing Foodscapes: Italy & Spain",
+    "offered": ["winter_term"]
+  },
+  {
+    "code": "FINA20026",
+    "name": "Painting Techniques",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "FINA20033",
+    "name": "Introduction to Printmaking Processes",
+    "offered": ["winter_term", "semester_2"]
+  },
+  {"code": "FINA20035", "name": "Drawing with Anatomy", "offered": ["summer_term", "winter_term"]},
+  {
+    "code": "FINA20036",
+    "name": "Under Camera Animation",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "FINA20044", "name": "Art and the Botanical", "offered": ["winter_term"]},
+  {"code": "FINA20045", "name": "Introduction to Screenprinting", "offered": ["winter_term"]},
+  {"code": "FREN10004", "name": "French 1", "offered": ["semester_1", "winter_term"]},
+  {"code": "FREN20020", "name": "In the Heart of the Loire Valley", "offered": ["winter_term"]},
+  {"code": "FREN30018", "name": "In the Heart of the Loire Valley", "offered": ["winter_term"]},
+  {
+    "code": "GEOL90043",
+    "name": "Fundamentals of Geological CO2 Storage",
+    "offered": ["winter_term"]
+  },
+  {
+    "code": "GEOM90010",
+    "name": "Spatial Information Research Project A",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90013",
+    "name": "Spatial Information Research Project C",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90020",
+    "name": "Spatial Information Research Project",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90023",
+    "name": "Spatial Information Research Project B",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "GERM10004", "name": "German 1", "offered": ["semester_1", "winter_term"]},
+  {"code": "ISYS90070", "name": "Information Security Consulting", "offered": ["winter_term"]},
+  {"code": "ITAL10008", "name": "Italian 1 (Mid-Year Intensive)", "offered": ["winter_term"]},
+  {"code": "JAPN20005", "name": "Contemporary Japan", "offered": ["semester_1", "winter_term"]},
+  {"code": "LAWS50037", "name": "Evidence and Proof", "offered": ["semester_1", "winter_term"]}
+]

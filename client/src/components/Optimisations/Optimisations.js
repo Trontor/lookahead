@@ -1,6 +1,6 @@
-import "./CustomCheckbox.scss";
-import "rc-time-picker/assets/index.css";
-import "./InputRange.css";
+import './CustomCheckbox.scss';
+import 'rc-time-picker/assets/index.css';
+import './InputRange.css';
 
 import {
   ButtonGroup,
@@ -11,9 +11,9 @@ import {
   OptimisationsContainer,
   OptimisationsWrapper,
   Subheader,
-  TimeOptimisation
-} from "./OptimisationsStyles";
-import React, { useState } from "react";
+  TimeOptimisation,
+} from './OptimisationsStyles';
+import React, {useState} from 'react';
 import {
   addAvoidDay,
   removeAvoidDay,
@@ -23,17 +23,17 @@ import {
   setMinimiseClashes,
   setSkipLectures,
   setTimeRange,
-  setIgnoreWeirdStreams
-} from "../../redux/actions/optimisationsActions";
-import { useDispatch, useSelector } from "react-redux";
+  setIgnoreWeirdStreams,
+} from '../../redux/actions/optimisationsActions';
+import {useDispatch, useSelector} from 'react-redux';
 
-import DayAvoidButton from "./DayAvoidButton/DayAvoidButton";
-import InputRange from "react-input-range";
+import DayAvoidButton from './DayAvoidButton/DayAvoidButton';
+import InputRange from 'react-input-range';
 
 const formatRangeLabel = value => {
   const remainder = value % 1;
-  const postColon = remainder === 0.5 ? "30" : "00";
-  const meridian = value >= 12 ? "pm" : "am";
+  const postColon = remainder === 0.5 ? '30' : '00';
+  const meridian = value >= 12 ? 'pm' : 'am';
   if (value >= 13) {
     value -= 12;
   }
@@ -48,7 +48,7 @@ function Optimisations() {
   console.log(Object.entries(subjects));
 
   const isWeird = Object.entries(subjects).some(
-    ([_, { data }]) => data && data._weirdStreamContainers.length > 0
+    ([_, {data}]) => data && data._weirdStreamContainers.length > 0
   );
   const [longestRunToggled, setLongestRunToggled] = useState(false);
   const {
@@ -59,25 +59,25 @@ function Optimisations() {
     breakHours,
     minimiseClashes,
     keepClassesStreamed,
-    ignoreWeirdStreams
+    ignoreWeirdStreams,
   } = optimisations;
 
-  const changeRange = ({ min, max }) => {
+  const changeRange = ({min, max}) => {
     if (max - min >= 2.5) dispatch(setTimeRange(min, max));
   };
 
   const setLongestRun = val => {
     dispatch(setBreak(val));
   };
-  const longestRunToggleChanged = ({ target: { checked } }) => {
+  const longestRunToggleChanged = ({target: {checked}}) => {
     setLongestRunToggled(checked);
     setLongestRun(checked ? 3 : 24);
   };
   const longestRunChanged = e => {
-    e.target.value = e.target.value.replace(/[^0-9]/gi, "");
+    e.target.value = e.target.value.replace(/[^0-9]/gi, '');
     let intVal = Number.parseInt(e.target.value);
     if (!intVal) {
-      setLongestRun("");
+      setLongestRun('');
       return;
     }
     if (intVal < 1) {
@@ -89,13 +89,13 @@ function Optimisations() {
     setLongestRun(intVal);
   };
 
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
   return (
     <OptimisationsWrapper>
       <Header>Optimisations</Header>
       {/* <Break /> */}
       <OptimisationsContainer>
-        <Optimisation center style={{ marginBottom: "50px" }}>
+        <Optimisation center style={{marginBottom: '50px'}}>
           <Subheader>Time Restriction</Subheader>
           <TimeOptimisation>
             <InputRange
@@ -116,9 +116,7 @@ function Optimisations() {
               <DayAvoidButton
                 key={day}
                 onToggled={val =>
-                  val
-                    ? dispatch(addAvoidDay(idx))
-                    : dispatch(removeAvoidDay(idx))
+                  val ? dispatch(addAvoidDay(idx)) : dispatch(removeAvoidDay(idx))
                 }
               >
                 {day}
@@ -133,9 +131,7 @@ function Optimisations() {
             id="minimise-clashes"
             type="checkbox"
             checked={minimiseClashes}
-            onChange={({ target: { checked } }) =>
-              dispatch(setMinimiseClashes(checked))
-            }
+            onChange={({target: {checked}}) => dispatch(setMinimiseClashes(checked))}
           />
           <label htmlFor="minimise-clashes">Minimise clashes</label>
         </Optimisation>
@@ -145,9 +141,7 @@ function Optimisations() {
             id="skip-lectures"
             type="checkbox"
             checked={skipLectures}
-            onChange={({ target: { checked } }) =>
-              dispatch(setSkipLectures(checked))
-            }
+            onChange={({target: {checked}}) => dispatch(setSkipLectures(checked))}
           />
           <label htmlFor="skip-lectures">I skip most of my lectures</label>
         </Optimisation>
@@ -157,9 +151,7 @@ function Optimisations() {
             id="cram-classes"
             type="checkbox"
             checked={cramClasses}
-            onChange={({ target: { checked } }) =>
-              dispatch(setCramClasses(checked))
-            }
+            onChange={({target: {checked}}) => dispatch(setCramClasses(checked))}
           />
           <label htmlFor="cram-classes">Cram classes together</label>
         </Optimisation>
@@ -171,20 +163,14 @@ function Optimisations() {
             checked={longestRunToggled}
             onChange={longestRunToggleChanged}
           />
-          <label htmlFor="longest-run-toggle">
-            Allocate a break after consecutive classes
-          </label>
+          <label htmlFor="longest-run-toggle">Allocate a break after consecutive classes</label>
         </Optimisation>
         {longestRunToggled && (
           <Optimisation child>
             Longest time without a break:
             <HourInputWrapper>
-              <Input
-                type="text"
-                onChange={longestRunChanged}
-                value={breakHours}
-              />
-              {breakHours ? `hour${breakHours !== 1 ? "s" : ""}` : ""}
+              <Input type="text" onChange={longestRunChanged} value={breakHours} />
+              {breakHours ? `hour${breakHours !== 1 ? 's' : ''}` : ''}
             </HourInputWrapper>
           </Optimisation>
         )}
@@ -194,13 +180,9 @@ function Optimisations() {
             id="keep-classes-streamed-toggle"
             type="checkbox"
             checked={keepClassesStreamed}
-            onChange={({ target: { checked } }) =>
-              dispatch(setKeepClassesStreamed(checked))
-            }
+            onChange={({target: {checked}}) => dispatch(setKeepClassesStreamed(checked))}
           />
-          <label htmlFor="keep-classes-streamed-toggle">
-            Keep classes streamed
-          </label>
+          <label htmlFor="keep-classes-streamed-toggle">Keep classes streamed</label>
         </Optimisation>
         {keepClassesStreamed && isWeird && (
           <Optimisation sub>
@@ -209,13 +191,9 @@ function Optimisations() {
               id="ignore-weird-streams-toggle"
               type="checkbox"
               checked={ignoreWeirdStreams}
-              onChange={({ target: { checked } }) =>
-                dispatch(setIgnoreWeirdStreams(checked))
-              }
+              onChange={({target: {checked}}) => dispatch(setIgnoreWeirdStreams(checked))}
             />
-            <label htmlFor="ignore-weird-streams-toggle">
-              Ignore weird streams
-            </label>
+            <label htmlFor="ignore-weird-streams-toggle">Ignore weird streams</label>
           </Optimisation>
         )}
       </OptimisationsContainer>

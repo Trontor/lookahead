@@ -1,1 +1,146 @@
-[{"code":"ABPL20054","name":"Hacking Cities - Upgrading Urban Life","offered":["winter_term"]},{"code":"ABPL90173","name":"Advanced Planting Design","offered":["winter_term"]},{"code":"ABPL90400","name":"Design for Diversity","offered":["winter_term"]},{"code":"ABPL90404","name":"Place Making for The Built Environment","offered":["winter_term"]},{"code":"AHIS40016","name":"Aboriginal Art in the Northern Territory","offered":["winter_term"]},{"code":"AIND10003","name":"Ancient and Contemporary Indigenous Arts","offered":["summer_term","winter_term"]},{"code":"ANCW20015","name":"Classical Mythology","offered":["semester_1","winter_term"]},{"code":"ARCH30004","name":"Environmental Design-Residential","offered":["winter_term"]},{"code":"BUSA90473","name":"Business Practicum","offered":["summer_term","winter_term"]},{"code":"BUSA90490","name":"Integrative Business Capstone","offered":["summer_term","winter_term"]},{"code":"CLAS10004","name":"Ancient Greek 1","offered":["semester_1","winter_term"]},{"code":"CLAS20035","name":"Intensive Ancient Greek 1","offered":["winter_term"]},{"code":"CLAS30045","name":"Intensive Ancient Greek 1","offered":["winter_term"]},{"code":"CRIM90022","name":"Introduction to Sex Offender Management","offered":["winter_term"]},{"code":"CWRI90004","name":"Creative Writing Advanced Workshop","offered":["winter_term"]},{"code":"DNCE20031","name":"Dancing the Dance 2","offered":["winter_term"]},{"code":"DRAM30020","name":"Acting for Camera","offered":["winter_term"]},{"code":"EDUC30072","name":"Positive Leadership and Careers","offered":["winter_term"]},{"code":"ESLA90002","name":"Advanced Self-Editing","offered":["winter_term"]},{"code":"FINA20026","name":"Painting Techniques","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"FINA20033","name":"Introduction to Printmaking Processes","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"FINA20035","name":"Drawing with Anatomy","offered":["summer_term","winter_term"]},{"code":"FINA20036","name":"Under Camera Animation","offered":["summer_term","winter_term"]},{"code":"FINA20044","name":"Art and the Botanical","offered":["summer_term","winter_term"]},{"code":"FINA20045","name":"Introduction to Screenprinting","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"FREN10004","name":"French 1","offered":["semester_1","winter_term"]},{"code":"FREN20020","name":"In the Heart of the Loire Valley","offered":["winter_term"]},{"code":"FREN20021","name":"New Caledonia in the 21st Century","offered":["winter_term"]},{"code":"FREN30018","name":"In the Heart of the Loire Valley","offered":["winter_term"]},{"code":"FREN30019","name":"New Caledonia in the 21st Century","offered":["winter_term"]},{"code":"GDES30004","name":"Design Visualisation: Analogue","offered":["winter_term"]},{"code":"GEOL30009","name":"Advanced Field Geology","offered":["winter_term"]},{"code":"GEOL90043","name":"Fundamentals of Geological CO2 Storage","offered":["winter_term"]},{"code":"GEOM90010","name":"Spatial Information Research Project A","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90013","name":"Spatial Information Research Project C","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90020","name":"Spatial Information Research Project","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90023","name":"Spatial Information Research Project B","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"INTS90007","name":"Rising China in the Globalised World","offered":["winter_term"]},{"code":"ISYS90070","name":"Information Security Consulting","offered":["winter_term"]},{"code":"ITAL10008","name":"Italian 1 (Mid-Year Intensive)","offered":["winter_term"]},{"code":"JAPN20005","name":"Contemporary Japan","offered":["semester_1","winter_term"]},{"code":"KORE30001","name":"Korean Politics and Society","offered":["winter_term"]},{"code":"LAWS50037","name":"Evidence and Proof","offered":["semester_1","winter_term"]},{"code":"LING90006","name":"Technology and Language Learning","offered":["winter_term"]},{"code":"MAST90007","name":"Statistics for Research Workers","offered":["winter_term"]},{"code":"MECM90031","name":"Audiovisual Communication","offered":["semester_1","winter_term","semester_2"]},{"code":"MGMT20011","name":"Business Negotiations","offered":["winter_term"]},{"code":"MGMT90037","name":"Conflict and Negotiation","offered":["summer_term","winter_term"]},{"code":"MULT20013","name":"Australia Now","offered":["semester_1","winter_term","semester_2"]},{"code":"MULT30015","name":"Independent Research","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"MULT90014","name":"Business Risk Management","offered":["winter_term"]},{"code":"MUST10009","name":"Music Theatre: From Chorus To Ensemble","offered":["winter_term"]},{"code":"PADM90005","name":"The Nature of Governing","offered":["winter_term"]},{"code":"PERF30001","name":"Public Event Design","offered":["winter_term"]},{"code":"POPH90246","name":"Law Enforcement and Public Health","offered":["winter_term"]},{"code":"PSYC90103","name":"Psychology of Advertising","offered":["winter_term"]},{"code":"THTR10007","name":"The Actors Process","offered":["winter_term"]},{"code":"THTR20022","name":"Improvisation: Text, Space and Action","offered":["winter_term"]},{"code":"THTR30039","name":"Understanding Masks","offered":["winter_term"]},{"code":"THTR30042","name":"Hashtag Cyberstar","offered":["summer_term","winter_term"]}]
+[
+  {
+    "code": "ABPL20054",
+    "name": "Hacking Cities - Upgrading Urban Life",
+    "offered": ["winter_term"]
+  },
+  {"code": "ABPL90173", "name": "Advanced Planting Design", "offered": ["winter_term"]},
+  {"code": "ABPL90400", "name": "Design for Diversity", "offered": ["winter_term"]},
+  {
+    "code": "ABPL90404",
+    "name": "Place Making for The Built Environment",
+    "offered": ["winter_term"]
+  },
+  {
+    "code": "AHIS40016",
+    "name": "Aboriginal Art in the Northern Territory",
+    "offered": ["winter_term"]
+  },
+  {
+    "code": "AIND10003",
+    "name": "Ancient and Contemporary Indigenous Arts",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "ANCW20015", "name": "Classical Mythology", "offered": ["semester_1", "winter_term"]},
+  {"code": "ARCH30004", "name": "Environmental Design-Residential", "offered": ["winter_term"]},
+  {"code": "BUSA90473", "name": "Business Practicum", "offered": ["summer_term", "winter_term"]},
+  {
+    "code": "BUSA90490",
+    "name": "Integrative Business Capstone",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "CLAS10004", "name": "Ancient Greek 1", "offered": ["semester_1", "winter_term"]},
+  {"code": "CLAS20035", "name": "Intensive Ancient Greek 1", "offered": ["winter_term"]},
+  {"code": "CLAS30045", "name": "Intensive Ancient Greek 1", "offered": ["winter_term"]},
+  {
+    "code": "CRIM90022",
+    "name": "Introduction to Sex Offender Management",
+    "offered": ["winter_term"]
+  },
+  {"code": "CWRI90004", "name": "Creative Writing Advanced Workshop", "offered": ["winter_term"]},
+  {"code": "DNCE20031", "name": "Dancing the Dance 2", "offered": ["winter_term"]},
+  {"code": "DRAM30020", "name": "Acting for Camera", "offered": ["winter_term"]},
+  {"code": "EDUC30072", "name": "Positive Leadership and Careers", "offered": ["winter_term"]},
+  {"code": "ESLA90002", "name": "Advanced Self-Editing", "offered": ["winter_term"]},
+  {
+    "code": "FINA20026",
+    "name": "Painting Techniques",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "FINA20033",
+    "name": "Introduction to Printmaking Processes",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "FINA20035", "name": "Drawing with Anatomy", "offered": ["summer_term", "winter_term"]},
+  {
+    "code": "FINA20036",
+    "name": "Under Camera Animation",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "FINA20044", "name": "Art and the Botanical", "offered": ["summer_term", "winter_term"]},
+  {
+    "code": "FINA20045",
+    "name": "Introduction to Screenprinting",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "FREN10004", "name": "French 1", "offered": ["semester_1", "winter_term"]},
+  {"code": "FREN20020", "name": "In the Heart of the Loire Valley", "offered": ["winter_term"]},
+  {"code": "FREN20021", "name": "New Caledonia in the 21st Century", "offered": ["winter_term"]},
+  {"code": "FREN30018", "name": "In the Heart of the Loire Valley", "offered": ["winter_term"]},
+  {"code": "FREN30019", "name": "New Caledonia in the 21st Century", "offered": ["winter_term"]},
+  {"code": "GDES30004", "name": "Design Visualisation: Analogue", "offered": ["winter_term"]},
+  {"code": "GEOL30009", "name": "Advanced Field Geology", "offered": ["winter_term"]},
+  {
+    "code": "GEOL90043",
+    "name": "Fundamentals of Geological CO2 Storage",
+    "offered": ["winter_term"]
+  },
+  {
+    "code": "GEOM90010",
+    "name": "Spatial Information Research Project A",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90013",
+    "name": "Spatial Information Research Project C",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90020",
+    "name": "Spatial Information Research Project",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90023",
+    "name": "Spatial Information Research Project B",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "INTS90007", "name": "Rising China in the Globalised World", "offered": ["winter_term"]},
+  {"code": "ISYS90070", "name": "Information Security Consulting", "offered": ["winter_term"]},
+  {"code": "ITAL10008", "name": "Italian 1 (Mid-Year Intensive)", "offered": ["winter_term"]},
+  {"code": "JAPN20005", "name": "Contemporary Japan", "offered": ["semester_1", "winter_term"]},
+  {"code": "KORE30001", "name": "Korean Politics and Society", "offered": ["winter_term"]},
+  {"code": "LAWS50037", "name": "Evidence and Proof", "offered": ["semester_1", "winter_term"]},
+  {"code": "LING90006", "name": "Technology and Language Learning", "offered": ["winter_term"]},
+  {"code": "MAST90007", "name": "Statistics for Research Workers", "offered": ["winter_term"]},
+  {
+    "code": "MECM90031",
+    "name": "Audiovisual Communication",
+    "offered": ["semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "MGMT20011", "name": "Business Negotiations", "offered": ["winter_term"]},
+  {
+    "code": "MGMT90037",
+    "name": "Conflict and Negotiation",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {
+    "code": "MULT20013",
+    "name": "Australia Now",
+    "offered": ["semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "MULT30015",
+    "name": "Independent Research",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "MULT90014", "name": "Business Risk Management", "offered": ["winter_term"]},
+  {
+    "code": "MUST10009",
+    "name": "Music Theatre: From Chorus To Ensemble",
+    "offered": ["winter_term"]
+  },
+  {"code": "PADM90005", "name": "The Nature of Governing", "offered": ["winter_term"]},
+  {"code": "PERF30001", "name": "Public Event Design", "offered": ["winter_term"]},
+  {"code": "POPH90246", "name": "Law Enforcement and Public Health", "offered": ["winter_term"]},
+  {"code": "PSYC90103", "name": "Psychology of Advertising", "offered": ["winter_term"]},
+  {"code": "THTR10007", "name": "The Actors Process", "offered": ["winter_term"]},
+  {
+    "code": "THTR20022",
+    "name": "Improvisation: Text, Space and Action",
+    "offered": ["winter_term"]
+  },
+  {"code": "THTR30039", "name": "Understanding Masks", "offered": ["winter_term"]},
+  {"code": "THTR30042", "name": "Hashtag Cyberstar", "offered": ["summer_term", "winter_term"]}
+]

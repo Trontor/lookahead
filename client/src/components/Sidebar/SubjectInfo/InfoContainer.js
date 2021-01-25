@@ -1,13 +1,13 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { ClassInfoRow, InfoTable } from "./ContainerStyles.js";
-import daysOfWeek from "../../../utility/DaysOfWeek";
-import timeIntToString from "../../../utility/TimeIntToString";
-import { moveRegularClassByNewClass } from "../../Timetable/Viewer/utility/TimetableViewerFunctions";
+import React from 'react';
+import {useSelector} from 'react-redux';
+import {ClassInfoRow, InfoTable} from './ContainerStyles.js';
+import daysOfWeek from '../../../utility/DaysOfWeek';
+import timeIntToString from '../../../utility/TimeIntToString';
+import {moveRegularClassByNewClass} from '../../Timetable/Viewer/utility/TimetableViewerFunctions';
 
 export default function InfoContainer(props) {
   const optimiser = useSelector(state => state.optimiser);
-  const { currentIndex, timetables } = optimiser;
+  const {currentIndex, timetables} = optimiser;
   const currentCodes = [];
   // Popular currentCodes with all classcodes of the timetable, for highlighting
   const hasValidTimetable =
@@ -24,7 +24,7 @@ export default function InfoContainer(props) {
   const {
     description,
     classes,
-    color
+    color,
     // subjectCode
   } = props;
   return (
@@ -47,12 +47,10 @@ export default function InfoContainer(props) {
             day,
             start,
             finish,
-            weeks
+            weeks,
             // locations
           } = cls;
-          const isOnTimetable = cls.codes.some(code =>
-            currentCodes.includes(code)
-          );
+          const isOnTimetable = cls.codes.some(code => currentCodes.includes(code));
           return (
             <ClassInfoRow
               key={cls.codes[0]}

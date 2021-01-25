@@ -1,13 +1,8 @@
-import React from "react";
-import { regularTheme, darkTheme } from "../../themes";
-import { setTheme } from "../../redux/actions/themeActions";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  Emoji,
-  HeaderSubtitle,
-  HeaderText,
-  HeaderWrapper
-} from "./HeaderStyles";
+import React from 'react';
+import {regularTheme, darkTheme} from '../../themes';
+import {setTheme} from '../../redux/actions/themeActions';
+import {useSelector, useDispatch} from 'react-redux';
+import {Emoji, HeaderSubtitle, HeaderText, HeaderWrapper} from './HeaderStyles';
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -16,11 +11,11 @@ export default function Header() {
   const getCurrentEmoji = () => {
     switch (currentTheme) {
       case regularTheme:
-        return "🌙";
+        return '🌙';
       case darkTheme:
-        return "🌞";
+        return '🌞';
       default:
-        return "👀";
+        return '👀';
     }
   };
 
@@ -35,16 +30,10 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <HeaderText>
-        <img
-          height="20"
-          alt="Lookahead Logo"
-          src={require("../../lookahead.png")}
-        />
+        <img height="20" alt="Lookahead Logo" src={require('../../lookahead.png')} />
         {/* Lookahead <EyeEmoji>👀</EyeEmoji> */}
       </HeaderText>
-      <HeaderSubtitle>
-        A University of Melbourne Semester Planner
-      </HeaderSubtitle>
+      <HeaderSubtitle>A University of Melbourne Semester Planner</HeaderSubtitle>
       <Emoji onClick={switchTheme}>
         <span aria-label={`${emoji} emoji`} role="img">
           {emoji}

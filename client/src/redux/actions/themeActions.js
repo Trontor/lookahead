@@ -1,6 +1,6 @@
-import { SET_THEME } from "../actionTypes";
+import {SET_THEME} from '../actionTypes';
 
 export const setTheme = theme => ({
   type: SET_THEME,
-  payload: theme
+  payload: theme,
 });

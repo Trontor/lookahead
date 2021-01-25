@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { getSponsorSheetData } from "../../google-sheets/sheets";
+import {Request, Response} from 'express';
+import {getSponsorSheetData} from '../../google-sheets/sheets';
 
 /**
  * Specifies how a sponsor object should look like, mimics the Google Sheets
@@ -29,22 +29,12 @@ const processRawSponsorData = (data: string[][]): ISponsor[] => {
   }
   for (const row of data) {
     // destructure entries
-    const [
-      name,
-      logoURL,
-      description,
-      umsu,
-      facebook,
-      signup,
-      tier,
-      include,
-      website,
-    ] = row;
+    const [name, logoURL, description, umsu, facebook, signup, tier, include, website] = row;
     // will store a list of subject code matching patterns
     let includeArray: string[] = [];
     if (include) {
       // currently stored as in a CSV format in Google Sheets
-      includeArray = include.split(",");
+      includeArray = include.split(',');
     }
     // construct sponsor object and push to tracking array
     const sponsor: ISponsor = {
@@ -76,10 +66,10 @@ export const getSponsors = async (req: Request, res: Response) => {
 };
 
 export const logSponsors = async (req: Request, res: Response) => {
-  const { name } = req.body;
-  const { uuid } = req.query;
+  const {name} = req.body;
+  const {uuid} = req.query;
   if (!uuid || !name) {
-    res.status(400).send("Unauthorized");
+    res.status(400).send('Unauthorized');
     return;
   }
   res.sendStatus(200);

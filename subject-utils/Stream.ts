@@ -1,4 +1,4 @@
-import SubjectClass from "./SubjectClass";
+import SubjectClass from './SubjectClass';
 
 /**
  * Represents a collection of classes that operate together as a stream

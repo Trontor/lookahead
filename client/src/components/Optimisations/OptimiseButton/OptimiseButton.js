@@ -1,16 +1,16 @@
-import { OptimiseButton, OptimiseButtonWrapper } from "./OptimiseButtonStyles";
+import {OptimiseButton, OptimiseButtonWrapper} from './OptimiseButtonStyles';
 import {
   PossibilitiesStat,
   PossibilitiesDisclaimer,
-  TimeRestrictMsgWrapper
-} from "../TimeRestrictMsg/TimeRestrictMsgStyles";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+  TimeRestrictMsgWrapper,
+} from '../TimeRestrictMsg/TimeRestrictMsgStyles';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 
-import OptimisationTypes from "../../../optimiser/optimisationTypes";
-import Optimiser, { PERMUTATION_THRESHOLD } from "../../../optimiser/Optimiser";
-import TimeRestrictMsg from "../TimeRestrictMsg/TimeRestrictMsg";
-import { optimise } from "../../../redux/actions/optimiserActions";
+import OptimisationTypes from '../../../optimiser/optimisationTypes';
+import Optimiser, {PERMUTATION_THRESHOLD} from '../../../optimiser/Optimiser';
+import TimeRestrictMsg from '../TimeRestrictMsg/TimeRestrictMsg';
+import {optimise} from '../../../redux/actions/optimiserActions';
 
 let hasAutoOptimised = true;
 export default () => {
@@ -32,15 +32,15 @@ export default () => {
   const updatePermutations = useCallback(() => {
     if (!allLoaded) return;
     const {
-      range: { min, max },
-      ignoreWeirdStreams
+      range: {min, max},
+      ignoreWeirdStreams,
     } = optimisations;
-    console.log("WEIRD: " + ignoreWeirdStreams);
+    console.log('WEIRD: ' + ignoreWeirdStreams);
 
     const optimiser = new Optimiser(subjects, ignoreWeirdStreams);
     const restrictions = {
       earliestStart: min,
-      latestFinish: max
+      latestFinish: max,
     };
     const validRestrictions = optimiser.applyTimeRestrictions(
       restrictions.earliestStart,
@@ -56,61 +56,61 @@ export default () => {
   const invokeOptimisation = () => {
     const optimisationTypes = [];
     const {
-      range: { min, max },
+      range: {min, max},
       avoidDays,
       skipLectures,
       cramClasses,
       ignoreWeirdStreams,
       breakHours,
-      minimiseClashes
+      minimiseClashes,
     } = optimisations;
-    const { reserved } = optimiser;
+    const {reserved} = optimiser;
 
     if (minimiseClashes) {
-      optimisationTypes.push({ type: OptimisationTypes.AVOID_CLASHES });
+      optimisationTypes.push({type: OptimisationTypes.AVOID_CLASHES});
     }
     if (ignoreWeirdStreams) {
-      optimisationTypes.push({ type: OptimisationTypes.IGNORE_WEIRD_STREAMS });
+      optimisationTypes.push({type: OptimisationTypes.IGNORE_WEIRD_STREAMS});
     }
     if (breakHours) {
       optimisationTypes.push({
         type: OptimisationTypes.LONGEST_RUN,
-        data: breakHours === "" ? 24 : breakHours
+        data: breakHours === '' ? 24 : breakHours,
       });
     }
     if (avoidDays.length !== 0) {
       for (const index of avoidDays) {
         optimisationTypes.push({
           type: OptimisationTypes.AVOID_DAYS,
-          data: index
+          data: index,
         });
       }
     }
     if (cramClasses) {
       if (skipLectures) {
         optimisationTypes.push({
-          type: OptimisationTypes.CRAM_CLASSES_SKIP_LECTURES
+          type: OptimisationTypes.CRAM_CLASSES_SKIP_LECTURES,
         });
       } else {
         optimisationTypes.push({
-          type: OptimisationTypes.CRAM_CLASSES
+          type: OptimisationTypes.CRAM_CLASSES,
         });
       }
     }
     const restrictions = {
       earliestStart: min,
-      latestFinish: max
+      latestFinish: max,
     };
     dispatch(optimise(subjects, optimisationTypes, restrictions, reserved));
   };
 
   if (
-    (!process.env.NODE_ENV || process.env.NODE_ENV === "development") &&
+    (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') &&
     allLoaded &&
     keys.length > 0 &&
     !hasAutoOptimised
   ) {
-    console.log("All loaded!");
+    console.log('All loaded!');
     console.log(subjects);
     invokeOptimisation();
     hasAutoOptimised = true;
@@ -136,19 +136,15 @@ export default () => {
               </PossibilitiesDisclaimer>
             ) : (
               <PossibilitiesDisclaimer>
-                We're confident we can generate the best timetable based on your
-                optimisations
+                We're confident we can generate the best timetable based on your optimisations
               </PossibilitiesDisclaimer>
             )}
           </PossibilitiesStat>
         ) : null}
       </TimeRestrictMsgWrapper>
       <OptimiseButtonWrapper>
-        <OptimiseButton
-          disabled={!allLoaded}
-          onClick={() => invokeOptimisation()}
-        >
-          {allLoaded ? "Optimise" : "Loading..."}
+        <OptimiseButton disabled={!allLoaded} onClick={() => invokeOptimisation()}>
+          {allLoaded ? 'Optimise' : 'Loading...'}
         </OptimiseButton>
       </OptimiseButtonWrapper>
     </>

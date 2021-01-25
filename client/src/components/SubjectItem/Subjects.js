@@ -1,12 +1,9 @@
-import React from "react";
-import {
-  removeSubject,
-  changeSubjectColor
-} from "../../redux/actions/subjectActions";
-import { useSelector, useDispatch } from "react-redux";
-import ColorPickButton from "./ColorPickButton";
-import { viewSubject } from "../../redux/actions/viewSubjectActions";
-import Warning from "./Warning";
+import React from 'react';
+import {removeSubject, changeSubjectColor} from '../../redux/actions/subjectActions';
+import {useSelector, useDispatch} from 'react-redux';
+import ColorPickButton from './ColorPickButton';
+import {viewSubject} from '../../redux/actions/viewSubjectActions';
+import Warning from './Warning';
 import {
   DeleteButton,
   ErrorMsg,
@@ -19,18 +16,18 @@ import {
   SubjectToolbox,
   SubjectWrapper,
   SubjectsWrapper,
-  ToolboxButton
-} from "./SubjectItemStyles";
+  ToolboxButton,
+} from './SubjectItemStyles';
 const studyPeriods = {
-  summer_term: "Summer",
-  semester_1: "Sem 1",
-  winter_term: "Winter",
-  semester_2: "Sem 2",
-  january: "January",
-  february: "February",
-  march: "March",
-  april: "April",
-  may: "May"
+  summer_term: 'Summer',
+  semester_1: 'Sem 1',
+  winter_term: 'Winter',
+  semester_2: 'Sem 2',
+  january: 'January',
+  february: 'February',
+  march: 'March',
+  april: 'April',
+  may: 'May',
 };
 const empty = array => !Array.isArray(array) || !array.length;
 
@@ -43,20 +40,18 @@ function Subjects() {
 
   const openHandbook = (year, code) => {
     const handbookURL = `https://handbook.unimelb.edu.au/${year}/subjects/${code.toLowerCase()}`;
-    window.open(handbookURL, "_blank");
+    window.open(handbookURL, '_blank');
   };
   const openSWS = (year, code) => {
     const swsURL = `https://sws.unimelb.edu.au/${year}/Reports/List.aspx?objects=${code}&weeks=1-52&days=1-7&periods=1-56&template=module_by_group_list`;
-    window.open(swsURL, "_blank");
+    window.open(swsURL, '_blank');
   };
   const deleteSubject = (year, code) => {
     dispatch(removeSubject(code));
   };
   const periods = Object.keys(subjects).reduce(
     (prev, key) =>
-      !subjects[key].loading && subjects[key].data
-        ? [...prev, subjects[key].data.period]
-        : prev,
+      !subjects[key].loading && subjects[key].data ? [...prev, subjects[key].data.period] : prev,
     []
   );
   const uniquePeriods = Array.from(new Set(periods));
@@ -67,26 +62,18 @@ function Subjects() {
 
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
+        const {year, studyPeriod, name, loading, data, color, error} = subject;
         const {
-          year,
-          studyPeriod,
-          name,
-          loading,
-          data,
-          color,
-          error
-        } = subject;
-        const {
-          period = "",
+          period = '',
           _weirdStreamContainers = [],
           _classList = [],
           _irregularClasses = [],
           _mandatoryClasses = [],
           _regularClasses = [],
-          _streamContainers = []
+          _streamContainers = [],
         } = data || {};
         let bgColor = color;
-        let textColor = "white";
+        let textColor = 'white';
         const isEmpty =
           empty(_classList) &&
           empty(_irregularClasses) &&
@@ -128,7 +115,7 @@ function Subjects() {
                       <span
                         onClick={() =>
                           alert(
-                            "This subject is weird because some streams have an unbalanced number of classes in them."
+                            'This subject is weird because some streams have an unbalanced number of classes in them.'
                           )
                         }
                       >
@@ -140,11 +127,7 @@ function Subjects() {
               ) : (
                 <SubjectCodeLoading />
               )}
-              {!loading ? (
-                <SubjectName>{name}</SubjectName>
-              ) : (
-                <SubjectNameLoading />
-              )}
+              {!loading ? <SubjectName>{name}</SubjectName> : <SubjectNameLoading />}
               {loading ? (
                 <LoadingDots>
                   <span />
@@ -154,11 +137,7 @@ function Subjects() {
                 </LoadingDots>
               ) : (
                 <>
-                  {error && (
-                    <ErrorMsg>
-                      Oops! We had trouble loading your subject.
-                    </ErrorMsg>
-                  )}
+                  {error && <ErrorMsg>Oops! We had trouble loading your subject.</ErrorMsg>}
                   <SubjectToolbox iconColor={textColor}>
                     {!error && (
                       <ToolboxButton
@@ -171,14 +150,7 @@ function Subjects() {
                     {!error && (
                       <ColorPickButton
                         onColorChange={color => {
-                          dispatch(
-                            changeSubjectColor(
-                              year,
-                              studyPeriod,
-                              code,
-                              color.hex
-                            )
-                          );
+                          dispatch(changeSubjectColor(year, studyPeriod, code, color.hex));
                         }}
                         buttonStyle={ToolboxButton}
                       />
@@ -199,9 +171,7 @@ function Subjects() {
                 </>
               )}
             </SubjectCard>
-            <DeleteButton onClick={() => deleteSubject(year, code)}>
-              ×
-            </DeleteButton>
+            <DeleteButton onClick={() => deleteSubject(year, code)}>×</DeleteButton>
           </SubjectWrapper>
         );
       })}

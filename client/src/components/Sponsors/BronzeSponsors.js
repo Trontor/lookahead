@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   SponsorHeading,
   BronzeCard,
@@ -6,10 +6,10 @@ import {
   BronzeCardButtonGroup,
   Logo,
   UMSUButton,
-  FacebookButton
-} from "./SponsorStyles";
-import { shallowEqual, useSelector } from "react-redux";
-import { getCategorisedSponsors } from "../../utility/SponsorFilter";
+  FacebookButton,
+} from './SponsorStyles';
+import {shallowEqual, useSelector} from 'react-redux';
+import {getCategorisedSponsors} from '../../utility/SponsorFilter';
 
 export default function BronzeSponsors() {
   const optimiser = useSelector(
@@ -17,10 +17,9 @@ export default function BronzeSponsors() {
     (left, right) => left.timetables.length === right.timetables.length
   );
   const sponsors = useSelector(state => state.sponsors, shallowEqual);
-  const { bronze } = getCategorisedSponsors(sponsors);
-  const { timetables } = optimiser;
-  const showSponsors =
-    timetables && timetables.length !== 0 && timetables[0].classList;
+  const {bronze} = getCategorisedSponsors(sponsors);
+  const {timetables} = optimiser;
+  const showSponsors = timetables && timetables.length !== 0 && timetables[0].classList;
   if (!showSponsors) {
     return null;
   }
@@ -28,8 +27,8 @@ export default function BronzeSponsors() {
     <>
       {bronze.length > 0 && (
         <SponsorHeading>
-          <i className="fas fa-dice" /> You may also be interested in the
-          following sponsors and societies...
+          <i className="fas fa-dice" /> You may also be interested in the following sponsors and
+          societies...
         </SponsorHeading>
       )}
       {bronze && bronze.length > 0 && (
@@ -40,7 +39,7 @@ export default function BronzeSponsors() {
               logoURL,
               // description,
               umsu,
-              facebook
+              facebook,
               // tier,
               // include
             } = entry;

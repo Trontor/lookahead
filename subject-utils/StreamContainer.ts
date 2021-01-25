@@ -1,5 +1,5 @@
-import Stream from "./Stream";
-import SubjectClass from "./SubjectClass";
+import Stream from './Stream';
+import SubjectClass from './SubjectClass';
 
 export default class StreamContainer {
   // Stream name, e.g. Workshop, Lecture, Tutorial
@@ -20,10 +20,10 @@ export default class StreamContainer {
    */
   public addStreamClass(cls: SubjectClass) {
     // Change the class type
-    cls.type = "Stream";
+    cls.type = 'Stream';
     // If the name has not yet been assigned, assign it based on the added class
     if (!this.name) {
-      this.name = cls.description.replace(/[^A-Za-z]+/g, "");
+      this.name = cls.description.replace(/[^A-Za-z]+/g, '');
     }
     // Checks if the stream number exists yet
     if (!this.isStreamExisting(cls.streamNumber)) {
@@ -34,12 +34,10 @@ export default class StreamContainer {
     } else {
       // Otherwise, we locate the appropriate stream container and plop the new
       // class into it.
-      this.streams
-        .find(x => x.streamNumbers.includes(cls.streamNumber))
-        .classes.splice(0, 0, cls);
+      this.streams.find(x => x.streamNumbers.includes(cls.streamNumber)).classes.splice(0, 0, cls);
     }
   }
 
   private isStreamExisting = (streamNumber: number): boolean =>
-    this.streams.some(x => x.streamNumbers.includes(streamNumber))
+    this.streams.some(x => x.streamNumbers.includes(streamNumber));
 }

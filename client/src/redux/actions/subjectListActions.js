@@ -1,22 +1,22 @@
 import {
   FETCH_SUBJECT_LIST_BEGIN,
   FETCH_SUBJECT_LIST_SUCCESS,
-  FETCH_SUBJECT_LIST_FAILURE
-} from "../actionTypes";
-import axios from "axios";
+  FETCH_SUBJECT_LIST_FAILURE,
+} from '../actionTypes';
+import axios from 'axios';
 
 export const fetchSubjectListBegin = () => ({
-  type: FETCH_SUBJECT_LIST_BEGIN
+  type: FETCH_SUBJECT_LIST_BEGIN,
 });
 
 export const fetchSubjectListSuccess = (studyPeriod, list) => ({
   type: FETCH_SUBJECT_LIST_SUCCESS,
-  payload: { studyPeriod, list }
+  payload: {studyPeriod, list},
 });
 
 export const fetchSubjectListFailure = error => ({
   type: FETCH_SUBJECT_LIST_FAILURE,
-  payload: { error }
+  payload: {error},
 });
 
 export const fetchSubjectList = (year, studyPeriod) => {

@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Openings from "../utility/RegistrationOpenings";
-import Countdown from "react-countdown-now";
+import React from 'react';
+import styled from 'styled-components';
+import Openings from '../utility/RegistrationOpenings';
+import Countdown from 'react-countdown-now';
 
 const CountdownWrapper = styled.div`
   border-radius: 2px;
@@ -31,13 +31,13 @@ const convertToDate = rawTime => {
   return parsed;
 };
 // Renderer callback with condition
-const renderer = ({ days, hours, minutes, seconds, completed }) => {
+const renderer = ({days, hours, minutes, seconds, completed}) => {
   if (completed) {
     // Render a completed state
     return <Opened>OPENED</Opened>;
   }
-  let outputString = "";
-  if (days) outputString += `${days} day${days === 1 ? "" : "s"}`;
+  let outputString = '';
+  if (days) outputString += `${days} day${days === 1 ? '' : 's'}`;
   if (days < 2) {
     if (hours) outputString += `${hours} h `;
     if (hours < 2) {

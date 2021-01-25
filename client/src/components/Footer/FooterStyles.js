@@ -1,5 +1,5 @@
-import { OutboundLink } from "react-ga";
-import styled from "styled-components";
+import {OutboundLink} from 'react-ga';
+import styled from 'styled-components';
 export const FooterWrapper = styled.div`
   height: 100%;
   background-color: ${props => props.theme.sidebarBg};
@@ -29,11 +29,11 @@ export const Credit = styled.div`
 export const Spacer = styled.span`
   margin: 0 7.5px;
   ::after {
-    content: "•";
+    content: '•';
   }
 `;
-export const SocialIcon = styled(OutboundLink).attrs(({ solid, name }) => ({
-  className: solid ? "fas fa-" + name : "fab fa-" + name
+export const SocialIcon = styled(OutboundLink).attrs(({solid, name}) => ({
+  className: solid ? 'fas fa-' + name : 'fab fa-' + name,
 }))`
   text-decoration: none;
   color: inherit;

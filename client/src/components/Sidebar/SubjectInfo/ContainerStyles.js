@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from 'styled-components';
 
 export const InfoTable = styled.table`
   width: 100%;
@@ -67,21 +67,21 @@ export const StreamClassInfoRow = styled.tr`
       background-color: ${props.color};
       color: #3f3844;
       ${props.firstRow &&
-        css`
-          td:last-child {
-            border-top-right-radius: 3px;
-          }
-          td:first-child {
-            border-top-left-radius: 3px;
-            border-bottom-left-radius: 3px;
-          }
-        `}
+      css`
+        td:last-child {
+          border-top-right-radius: 3px;
+        }
+        td:first-child {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+      `}
       ${props.lastRow &&
-        css`
-          td:last-child {
-            border-bottom-right-radius: 3px;
-          }
-        `}
+      css`
+        td:last-child {
+          border-bottom-right-radius: 3px;
+        }
+      `}
     `}
 
   ${props =>

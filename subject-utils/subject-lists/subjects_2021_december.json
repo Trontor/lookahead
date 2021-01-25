@@ -1,93 +1,68 @@
 [
- {
-  "code": "BUSA90511",
-  "name": "Executive Management 7",
-  "offered": [
-   "summer_term",
-   "december"
-  ],
-  "online": false
- },
- {
-  "code": "GEND90015",
-  "name": "Researching Violence Against Women",
-  "offered": [
-   "december"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS50131",
-  "name": "Negotiations",
-  "offered": [
-   "summer_term",
-   "december"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70018",
-  "name": "Alternative Dispute Resolution",
-  "offered": [
-   "december"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70139",
-  "name": "International Construction Law",
-  "offered": [
-   "december"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70200",
-  "name": "Employment Contract Law",
-  "offered": [
-   "december"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70242",
-  "name": "Internat.Issues in Intellectual Property",
-  "offered": [
-   "december"
-  ],
-  "online": true
- },
- {
-  "code": "LAWS70422",
-  "name": "Human Rights and Armed Conflict",
-  "offered": [
-   "december"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS70444",
-  "name": "Contract Termination",
-  "offered": [
-   "december"
-  ],
-  "online": false
- },
- {
-  "code": "LAWS90017",
-  "name": "International Tax: Anti-avoidance",
-  "offered": [
-   "december"
-  ],
-  "online": true
- },
- {
-  "code": "PPMN90006",
-  "name": "Executive Leadership and Management",
-  "offered": [
-   "march",
-   "december"
-  ],
-  "online": true
- }
+  {
+    "code": "BUSA90511",
+    "name": "Executive Management 7",
+    "offered": ["summer_term", "december"],
+    "online": false
+  },
+  {
+    "code": "GEND90015",
+    "name": "Researching Violence Against Women",
+    "offered": ["december"],
+    "online": false
+  },
+  {
+    "code": "LAWS50131",
+    "name": "Negotiations",
+    "offered": ["summer_term", "december"],
+    "online": true
+  },
+  {
+    "code": "LAWS70018",
+    "name": "Alternative Dispute Resolution",
+    "offered": ["december"],
+    "online": true
+  },
+  {
+    "code": "LAWS70139",
+    "name": "International Construction Law",
+    "offered": ["december"],
+    "online": true
+  },
+  {
+    "code": "LAWS70200",
+    "name": "Employment Contract Law",
+    "offered": ["december"],
+    "online": false
+  },
+  {
+    "code": "LAWS70242",
+    "name": "Internat.Issues in Intellectual Property",
+    "offered": ["december"],
+    "online": true
+  },
+  {
+    "code": "LAWS70422",
+    "name": "Human Rights and Armed Conflict",
+    "offered": ["december"],
+    "online": false
+  },
+  {
+    "code": "LAWS70444",
+    "name": "Contract Termination",
+    "offered": ["december"],
+    "online": false
+  },
+  {
+    "code": "LAWS90017",
+    "name": "International Tax: Anti-avoidance",
+    "offered": ["december"],
+    "online": true
+  },
+  {
+    "code": "PPMN90006",
+    "name": "Executive Leadership and Management",
+    "offered": ["march", "december"],
+    "online": true
+  }
 ]

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
   SponsorCard,
   DeleteButton,
@@ -7,9 +7,9 @@ import {
   ClubDescription,
   ButtonWrapper,
   UMSUButton,
-  FacebookButton
-} from "./SponsorStyles";
-import { logClick } from "../../redux/actions/sponsorActions";
+  FacebookButton,
+} from './SponsorStyles';
+import {logClick} from '../../redux/actions/sponsorActions';
 
 const logAndRedirect = (name, item, destination) => e => {
   const controlPressed = e.ctrlKey;
@@ -24,17 +24,7 @@ const logAndRedirect = (name, item, destination) => e => {
 };
 export default function GoldSilverSponsorCard(props) {
   const [dismissed, setDismissed] = useState(false);
-  const {
-    name,
-    logoURL,
-    description,
-    umsu,
-    facebook,
-    signup,
-    website,
-    tier,
-    include
-  } = props;
+  const {name, logoURL, description, umsu, facebook, signup, website, tier, include} = props;
   console.log(include);
 
   return (
@@ -53,25 +43,22 @@ export default function GoldSilverSponsorCard(props) {
       <ClubDescription>{description}</ClubDescription>
       <ButtonWrapper>
         {signup && (
-          <a href={signup} onClick={logAndRedirect(name, "signup", signup)}>
+          <a href={signup} onClick={logAndRedirect(name, 'signup', signup)}>
             <UMSUButton>Signup</UMSUButton>
           </a>
         )}
         {website && (
-          <a href={website} onClick={logAndRedirect(name, "website", website)}>
+          <a href={website} onClick={logAndRedirect(name, 'website', website)}>
             <UMSUButton>Website</UMSUButton>
           </a>
         )}
         {umsu && (
-          <a href={umsu} onClick={logAndRedirect(name, "umsu", umsu)}>
+          <a href={umsu} onClick={logAndRedirect(name, 'umsu', umsu)}>
             <UMSUButton>UMSU</UMSUButton>
           </a>
         )}
         {facebook && (
-          <a
-            href={facebook}
-            onClick={logAndRedirect(name, "facebook", facebook)}
-          >
+          <a href={facebook} onClick={logAndRedirect(name, 'facebook', facebook)}>
             <FacebookButton />
           </a>
         )}

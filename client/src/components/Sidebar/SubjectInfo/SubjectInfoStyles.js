@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 export const ViewSubjectWrapper = styled.div``;
 
 export const GoBackButton = styled.button`
   cursor: pointer;
   width: 130px;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
   margin-top: 10px;
   border-radius: 3px;
@@ -13,8 +13,8 @@ export const GoBackButton = styled.button`
   padding: 6px 5px;
   border: none;
   z-index: 100;
-  left: ${({ left }) => (left ? 0 : "auto")};
-  right: ${({ right }) => (right ? 0 : "auto")};
+  left: ${({left}) => (left ? 0 : 'auto')};
+  right: ${({right}) => (right ? 0 : 'auto')};
 
   i {
     margin-right: 10px;

@@ -4,8 +4,8 @@
 */
 export default value => {
   const remainder = value % 1;
-  const postColon = remainder ? 60 * remainder : "00";
-  const meridian = value > 12 ? "pm" : "am";
+  const postColon = remainder ? 60 * remainder : '00';
+  const meridian = value > 12 ? 'pm' : 'am';
   if (value >= 13) {
     value -= 12;
   }

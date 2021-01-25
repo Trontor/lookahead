@@ -1,19 +1,14 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { stopViewing } from "../../../redux/actions/viewSubjectActions";
-import groupByArray from "../../../utility/GroupByArray";
-import InfoContainer from "./InfoContainer";
-import StreamInfoContainer from "./StreamInfoContainer";
-import {
-  GoBackButton,
-  Info,
-  InfoWrapper,
-  ViewSubjectWrapper
-} from "./SubjectInfoStyles";
+import React from 'react';
+import {useDispatch} from 'react-redux';
+import {stopViewing} from '../../../redux/actions/viewSubjectActions';
+import groupByArray from '../../../utility/GroupByArray';
+import InfoContainer from './InfoContainer';
+import StreamInfoContainer from './StreamInfoContainer';
+import {GoBackButton, Info, InfoWrapper, ViewSubjectWrapper} from './SubjectInfoStyles';
 
 export default function SubjectInfo(props) {
   const dispatch = useDispatch();
-  const { subject } = props;
+  const {subject} = props;
   const {
     name,
     color,
@@ -23,12 +18,12 @@ export default function SubjectInfo(props) {
       // period,
       _mandatoryClasses,
       _regularClasses,
-      _streamContainers
-    }
+      _streamContainers,
+    },
   } = subject;
   const streamKeys = Object.keys(_streamContainers);
-  const mandatoryClassGroups = groupByArray(_mandatoryClasses, "description");
-  const regularClassGroups = groupByArray(_regularClasses, "description");
+  const mandatoryClassGroups = groupByArray(_mandatoryClasses, 'description');
+  const regularClassGroups = groupByArray(_regularClasses, 'description');
   return (
     <ViewSubjectWrapper>
       <GoBackButton onClick={() => dispatch(stopViewing())}>
@@ -40,21 +35,11 @@ export default function SubjectInfo(props) {
       </InfoWrapper>
       {_mandatoryClasses &&
         mandatoryClassGroups.map((kvp, idx) => (
-          <InfoContainer
-            color={color}
-            key={idx}
-            description={kvp.key}
-            classes={kvp.values}
-          />
+          <InfoContainer color={color} key={idx} description={kvp.key} classes={kvp.values} />
         ))}
       {_regularClasses &&
         regularClassGroups.map((kvp, idx) => (
-          <InfoContainer
-            color={color}
-            key={idx}
-            description={kvp.key}
-            classes={kvp.values}
-          />
+          <InfoContainer color={color} key={idx} description={kvp.key} classes={kvp.values} />
         ))}
       {streamKeys &&
         streamKeys.map((key, idx) => {

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -16,12 +16,12 @@ export const Wrapper = styled.div`
 export const Text = styled.span`
   vertical-align: middle;
   font-size: 24px;
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   position: relative;
   bottom: 10%;
   margin-top: 5px;
   &:nth-child(n + 2) {
     font-size: 13px;
-    font-family: "Karla", sans-serif;
+    font-family: 'Karla', sans-serif;
   }
 `;

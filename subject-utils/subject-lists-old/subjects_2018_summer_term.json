@@ -1,1 +1,522 @@
-[{"code":"ABPL90115","name":"Master of Architecture Studio E","offered":["summer_term","semester_1","semester_2"]},{"code":"ABPL90142","name":"Master of Architecture Studio C","offered":["summer_term","semester_1","semester_2"]},{"code":"ABPL90143","name":"Master of Architecture Studio D","offered":["summer_term","semester_1","semester_2"]},{"code":"ABPL90305","name":"Design Research","offered":["summer_term"]},{"code":"ABPL90306","name":"MUP Independent Study","offered":["summer_term","semester_1","semester_2"]},{"code":"ABPL90307","name":"MSD Vocational Placement","offered":["summer_term","semester_1","semester_2"]},{"code":"ABPL90378","name":"Tectonic Grounds","offered":["summer_term"]},{"code":"ABPL90384","name":"MUP Studio","offered":["summer_term","semester_1","semester_2"]},{"code":"ABPL90399","name":"Hacking Society Systems in Transition","offered":["summer_term"]},{"code":"ACCT10001","name":"Accounting Reports and Analysis","offered":["summer_term","semester_1","semester_2"]},{"code":"ACCT10002","name":"Introductory Financial Accounting","offered":["summer_term","semester_1","semester_2"]},{"code":"ACCT20002","name":"Intermediate Financial Accounting","offered":["summer_term","semester_1","semester_2"]},{"code":"ACCT90004","name":"Accounting for Decision Making","offered":["summer_term","semester_1","semester_2"]},{"code":"AGRI30022","name":"Special Studies","offered":["summer_term","semester_1"]},{"code":"AGRI30041","name":"Industry Internship","offered":["summer_term","semester_2"]},{"code":"AGRI90076","name":"Industry Internship","offered":["summer_term","semester_2"]},{"code":"ANCW10004","name":"Intensive Syriac Aramaic","offered":["summer_term"]},{"code":"ANCW20018","name":"Intensive Syriac Aramaic","offered":["summer_term"]},{"code":"ANCW30020","name":"Intensive Syriac Aramaic","offered":["summer_term"]},{"code":"ANCW30023","name":"Practical Archaeology","offered":["summer_term"]},{"code":"ARTS90006","name":"Introductory Academic Program","offered":["summer_term"]},{"code":"BIEN90001","name":"Biochemical Engineering Research Project","offered":["summer_term","semester_1"]},{"code":"BIEN90003","name":"Biochemical Engineering Minor Thesis","offered":["summer_term","semester_1","semester_2"]},{"code":"BIOM30003","name":"Biomedical Science Research Project","offered":["summer_term","semester_1","semester_2"]},{"code":"BOTA20004","name":"Flora of Victoria","offered":["summer_term"]},{"code":"BOTA30006","name":"Field Botany","offered":["summer_term"]},{"code":"BOTA90005","name":"Flora of Victoria","offered":["summer_term"]},{"code":"BUSA90013","name":"Brand Management","offered":["summer_term"]},{"code":"BUSA90124","name":"Implementation of Strategy","offered":["summer_term"]},{"code":"BUSA90133","name":"Industry Studies in Asia","offered":["summer_term"]},{"code":"BUSA90201","name":"Managerial Project","offered":["summer_term"]},{"code":"BUSA90473","name":"Melbourne Business Practicum","offered":["summer_term","winter_term"]},{"code":"BUSA90478","name":"Doing Business in Australia","offered":["summer_term"]},{"code":"BUSA90480","name":"Leadership","offered":["summer_term"]},{"code":"BUSA90481","name":"Social Responsibility and Ethics","offered":["summer_term","winter_term"]},{"code":"BUSA90485","name":"Global Business Practicum","offered":["summer_term"]},{"code":"BUSA90487","name":"General Management 3","offered":["summer_term"]},{"code":"BUSA90499","name":"Introduction to Business Problems","offered":["summer_term"]},{"code":"BUSA90509","name":"Executive Management 5","offered":["summer_term"]},{"code":"CHEM10004","name":"Chemistry 2","offered":["summer_term","semester_2"]},{"code":"CHEM30013","name":"Chemical Research Project","offered":["summer_term","semester_2"]},{"code":"CHEN90023","name":"Chemical Engineering Research Project","offered":["summer_term","semester_1"]},{"code":"CHEN90026","name":"Chemical Engineering Minor Research Proj","offered":["summer_term","semester_1","semester_2"]},{"code":"CHEN90028","name":"Industry Project","offered":["summer_term","semester_1"]},{"code":"CHEN90030","name":"Chemical Engineering Minor Thesis","offered":["summer_term","semester_1","semester_2"]},{"code":"CLAS10006","name":"Latin 1","offered":["summer_term","semester_1"]},{"code":"CLAS10007","name":"Latin 2","offered":["summer_term","semester_2"]},{"code":"CLAS20021","name":"Intensive Beginners Latin","offered":["summer_term"]},{"code":"CLAS30004","name":"Intensive Beginners Latin","offered":["summer_term"]},{"code":"COMP30013","name":"Advanced Studies in Computing 3A","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP30014","name":"Advanced Studies in Computing 3B","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP40020","name":"Advanced Studies in Computing 4A","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP40021","name":"Advanced Studies in Computing 4B","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP90005","name":"Advanced Studies in Computing 6B","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP90029","name":"Advanced Studies in Computing 6A","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP90055","name":"Computing Project","offered":["summer_term","semester_1","semester_2"]},{"code":"COMP90059","name":"Introduction to Python Programming","offered":["summer_term"]},{"code":"ECON10003","name":"Introductory Macroeconomics","offered":["summer_term","semester_1","semester_2"]},{"code":"ECON20002","name":"Intermediate Microeconomics","offered":["summer_term","semester_1"]},{"code":"ECON20003","name":"Quantitative Methods 2","offered":["summer_term","semester_1","semester_2"]},{"code":"EDUC10051","name":"Sports Coaching: Theory and Practice","offered":["summer_term","semester_1","semester_2"]},{"code":"EDUC10057","name":"Wellbeing, Motivation and Performance","offered":["summer_term","semester_1"]},{"code":"EDUC90067","name":"Translating Language and Culture","offered":["summer_term"]},{"code":"EDUC90369","name":"Professional Practice and Seminar Prim 2","offered":["summer_term","semester_1","semester_2"]},{"code":"EDUC90422","name":"Foundations of English Teaching","offered":["summer_term"]},{"code":"EDUC90504","name":"Leadership in Educational Settings","offered":["summer_term","winter_term"]},{"code":"EDUC90707","name":"Professional Practice and Seminar (EC) 2","offered":["summer_term","semester_1","semester_2"]},{"code":"EDUC90758","name":"Researching Education Practice (SEC)","offered":["summer_term"]},{"code":"EDUC90870","name":"How to Design a Research Project","offered":["summer_term"]},{"code":"EDUC90892","name":"Clinical Teaching Practice (EC) 1","offered":["summer_term"]},{"code":"EDUC90913","name":"Personalising Learning with Technology","offered":["summer_term"]},{"code":"EDUC90972","name":"Active Pedagogies","offered":["summer_term"]},{"code":"EDUC90974","name":"Teaching Critical and Creative Thinking","offered":["summer_term"]},{"code":"ELEN90083","name":"Electrical Engineering Research Project","offered":["summer_term","semester_1","semester_2"]},{"code":"ENGR10003","name":"Engineering Systems Design 2","offered":["summer_term","semester_2"]},{"code":"ENGR20004","name":"Engineering Mechanics","offered":["summer_term","semester_1","semester_2"]},{"code":"ENGR90022","name":"Engineering Practice","offered":["summer_term","semester_1","semester_2"]},{"code":"ENGR90033","name":"Internship","offered":["summer_term","semester_1","semester_2"]},{"code":"ERTH90032","name":"Interpretation of Satellite Images","offered":["summer_term"]},{"code":"EURO20007","name":"A Taste of Europe: Melbourne Intensive","offered":["summer_term"]},{"code":"EURO30006","name":"A Taste of Europe: Melbourne Intensive","offered":["summer_term"]},{"code":"FINA20026","name":"Painting Techniques","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"FINA20035","name":"Drawing with Anatomy","offered":["summer_term","winter_term"]},{"code":"FINA20036","name":"Under Camera Animation","offered":["summer_term","winter_term"]},{"code":"FLTV30022","name":"Making Movies 3 Practical Production","offered":["summer_term"]},{"code":"FNCE10002","name":"Principles of Finance","offered":["summer_term","semester_1","semester_2"]},{"code":"FNCE20001","name":"Business Finance","offered":["summer_term","semester_1"]},{"code":"FNCE30009","name":"Ethics in Finance","offered":["summer_term"]},{"code":"FREN20018","name":"Intensive French 3 and 4","offered":["summer_term"]},{"code":"GENE90023","name":"Intro to Human Genetics & Genomics","offered":["summer_term"]},{"code":"GEOG90022","name":"International Internship in Environment","offered":["summer_term","semester_1","semester_2"]},{"code":"GEOL90045","name":"Exploration Skills Mapping","offered":["summer_term"]},{"code":"GEOM90010","name":"Spatial Information Research Project A","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90013","name":"Spatial Information Research Project C","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90020","name":"Spatial Information Research Project","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90023","name":"Spatial Information Research Project B","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"GEOM90031","name":"Spatial Information Research Project D","offered":["summer_term","semester_1","semester_2"]},{"code":"GEOM90039","name":"Advanced Surveying and Mapping","offered":["summer_term"]},{"code":"GEOM90043","name":"Spatial IT Project","offered":["summer_term","semester_1","semester_2"]},{"code":"GEOM90044","name":"Geographic Information Systems","offered":["summer_term"]},{"code":"HIST30071","name":"Urban Legends: Melbourne Intensive","offered":["summer_term"]},{"code":"HPSC20002","name":"A History of Nature","offered":["summer_term"]},{"code":"HPSC20015","name":"Astronomy in World History","offered":["summer_term"]},{"code":"ISLM90007","name":"Contemporary Middle East & Central Asia","offered":["summer_term"]},{"code":"ISYS90055","name":"Managing IT Outsourcing","offered":["summer_term"]},{"code":"ISYS90079","name":"Health IT Project","offered":["summer_term","semester_1","semester_2"]},{"code":"ISYS90082","name":"Industry Based IT Experience Project","offered":["summer_term","semester_1","semester_2"]},{"code":"ISYS90086","name":"Data Warehousing","offered":["summer_term"]},{"code":"JOUR90011","name":"Data Journalism","offered":["summer_term"]},{"code":"JOUR90017","name":"Journalism Project Part 1","offered":["summer_term","semester_1","semester_2"]},{"code":"JOUR90018","name":"Journalism Project Part 2","offered":["summer_term","semester_1","semester_2"]},{"code":"JOUR90019","name":"Journalism Project Part 3","offered":["summer_term","semester_1","semester_2"]},{"code":"LARC90001","name":"Placemaking : Design for Landscape","offered":["summer_term"]},{"code":"LAWS50023","name":"Legal Method and Reasoning","offered":["summer_term"]},{"code":"LAWS50055","name":"Advocacy","offered":["summer_term"]},{"code":"LAWS50058","name":"Melbourne University Law Review","offered":["summer_term","semester_1","semester_2"]},{"code":"LAWS50060","name":"Melbourne Journal of International Law","offered":["summer_term","semester_1","semester_2"]},{"code":"LAWS50128","name":"Intellectual Property & Popular Culture","offered":["summer_term"]},{"code":"LAWS50131","name":"Negotiations","offered":["summer_term"]},{"code":"LAWS70067","name":"International Legal Internship","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"MAST10007","name":"Linear Algebra","offered":["summer_term","semester_1","semester_2"]},{"code":"MAST10012","name":"Introduction to Mathematics","offered":["summer_term","semester_1"]},{"code":"MAST20029","name":"Engineering Mathematics","offered":["summer_term","semester_1","semester_2"]},{"code":"MAST90079","name":"AMSI Summer School","offered":["summer_term"]},{"code":"MCEN30014","name":"Mechanical Design","offered":["summer_term","semester_2"]},{"code":"MCEN90044","name":"Electromagnetic Technologies","offered":["summer_term"]},{"code":"MGMT20001","name":"Organisational Behaviour","offered":["summer_term","semester_1","semester_2"]},{"code":"MGMT30011","name":"Supply Chain Management","offered":["summer_term","semester_2"]},{"code":"MGMT30017","name":"Global Management Consulting","offered":["summer_term"]},{"code":"MGMT30019","name":"The Future of Work","offered":["summer_term"]},{"code":"MGMT90037","name":"Conflict and Negotiation","offered":["summer_term"]},{"code":"MGMT90140","name":"Management Competencies","offered":["summer_term","semester_1","semester_2"]},{"code":"MGMT90141","name":"Business Analysis & Decision Making","offered":["summer_term","semester_1","semester_2"]},{"code":"MGMT90146","name":"Strategic Management","offered":["summer_term","semester_1","semester_2"]},{"code":"MGMT90176","name":"People and Capability","offered":["summer_term"]},{"code":"MGMT90222","name":"Foundations of Entrepreneurship Practice","offered":["summer_term"]},{"code":"MKTG10001","name":"Principles of Marketing","offered":["summer_term","semester_1","semester_2"]},{"code":"MKTG90004","name":"Marketing Management","offered":["summer_term","semester_1","semester_2"]},{"code":"MKTG90037","name":"Managing for Value Creation","offered":["summer_term","semester_1","semester_2"]},{"code":"MULT20010","name":"Arts Internship","offered":["summer_term","semester_1","semester_2"]},{"code":"MULT20014","name":"Community Volunteering - Global","offered":["summer_term"]},{"code":"MULT30015","name":"Independent Research","offered":["summer_term","semester_1","winter_term","semester_2"]},{"code":"MULT30019","name":"Arts Internship","offered":["summer_term","semester_1","semester_2"]},{"code":"MULT30021","name":"Community Volunteering - Global","offered":["summer_term"]},{"code":"MUSI10017","name":"Riffs: Guitar Cultures & Practice 1","offered":["summer_term","semester_1"]},{"code":"MUSI10021","name":"African Music and Dance Ensemble 1","offered":["summer_term","semester_1"]},{"code":"MUSI10022","name":"African Music and Dance Ensemble 2","offered":["summer_term","semester_2"]},{"code":"MUSI10023","name":"Music Language 1: the Diatonic World","offered":["summer_term","semester_2"]},{"code":"MUSI10148","name":"African Music and Dance","offered":["summer_term","semester_1","semester_2"]},{"code":"MUSI20061","name":"Music Language 2: Chromaticism & Beyond","offered":["summer_term","semester_2"]},{"code":"MUSI20135","name":"Chinese Music Ensemble","offered":["summer_term","semester_1","semester_2"]},{"code":"MUSI20143","name":"World Music Choir 1","offered":["summer_term","semester_1","semester_2"]},{"code":"MUSI20186","name":"Music Theatre: Singing Sondheim","offered":["summer_term"]},{"code":"MUSI30046","name":"Music Language 3: Modern Directions","offered":["summer_term","semester_2"]},{"code":"NURS50008","name":"Mental Health & Recovery","offered":["summer_term"]},{"code":"NURS90077","name":"Specialist Mental Health Nursing","offered":["summer_term"]},{"code":"ORAL30003","name":"Oral Health Therapy Research Int'l","offered":["summer_term"]},{"code":"PHIL20045","name":"Freedom and Equality Across Borders","offered":["summer_term"]},{"code":"POLS90009","name":"International Relations Internship","offered":["summer_term","semester_1","semester_2"]},{"code":"PSYC90011","name":"Introduction to Assessment and Diagnosis","offered":["summer_term"]}]
+[
+  {
+    "code": "ABPL90115",
+    "name": "Master of Architecture Studio E",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ABPL90142",
+    "name": "Master of Architecture Studio C",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ABPL90143",
+    "name": "Master of Architecture Studio D",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "ABPL90305", "name": "Design Research", "offered": ["summer_term"]},
+  {
+    "code": "ABPL90306",
+    "name": "MUP Independent Study",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ABPL90307",
+    "name": "MSD Vocational Placement",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "ABPL90378", "name": "Tectonic Grounds", "offered": ["summer_term"]},
+  {
+    "code": "ABPL90384",
+    "name": "MUP Studio",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ABPL90399",
+    "name": "Hacking Society Systems in Transition",
+    "offered": ["summer_term"]
+  },
+  {
+    "code": "ACCT10001",
+    "name": "Accounting Reports and Analysis",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ACCT10002",
+    "name": "Introductory Financial Accounting",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ACCT20002",
+    "name": "Intermediate Financial Accounting",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ACCT90004",
+    "name": "Accounting for Decision Making",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "AGRI30022", "name": "Special Studies", "offered": ["summer_term", "semester_1"]},
+  {"code": "AGRI30041", "name": "Industry Internship", "offered": ["summer_term", "semester_2"]},
+  {"code": "AGRI90076", "name": "Industry Internship", "offered": ["summer_term", "semester_2"]},
+  {"code": "ANCW10004", "name": "Intensive Syriac Aramaic", "offered": ["summer_term"]},
+  {"code": "ANCW20018", "name": "Intensive Syriac Aramaic", "offered": ["summer_term"]},
+  {"code": "ANCW30020", "name": "Intensive Syriac Aramaic", "offered": ["summer_term"]},
+  {"code": "ANCW30023", "name": "Practical Archaeology", "offered": ["summer_term"]},
+  {"code": "ARTS90006", "name": "Introductory Academic Program", "offered": ["summer_term"]},
+  {
+    "code": "BIEN90001",
+    "name": "Biochemical Engineering Research Project",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {
+    "code": "BIEN90003",
+    "name": "Biochemical Engineering Minor Thesis",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "BIOM30003",
+    "name": "Biomedical Science Research Project",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "BOTA20004", "name": "Flora of Victoria", "offered": ["summer_term"]},
+  {"code": "BOTA30006", "name": "Field Botany", "offered": ["summer_term"]},
+  {"code": "BOTA90005", "name": "Flora of Victoria", "offered": ["summer_term"]},
+  {"code": "BUSA90013", "name": "Brand Management", "offered": ["summer_term"]},
+  {"code": "BUSA90124", "name": "Implementation of Strategy", "offered": ["summer_term"]},
+  {"code": "BUSA90133", "name": "Industry Studies in Asia", "offered": ["summer_term"]},
+  {"code": "BUSA90201", "name": "Managerial Project", "offered": ["summer_term"]},
+  {
+    "code": "BUSA90473",
+    "name": "Melbourne Business Practicum",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "BUSA90478", "name": "Doing Business in Australia", "offered": ["summer_term"]},
+  {"code": "BUSA90480", "name": "Leadership", "offered": ["summer_term"]},
+  {
+    "code": "BUSA90481",
+    "name": "Social Responsibility and Ethics",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "BUSA90485", "name": "Global Business Practicum", "offered": ["summer_term"]},
+  {"code": "BUSA90487", "name": "General Management 3", "offered": ["summer_term"]},
+  {"code": "BUSA90499", "name": "Introduction to Business Problems", "offered": ["summer_term"]},
+  {"code": "BUSA90509", "name": "Executive Management 5", "offered": ["summer_term"]},
+  {"code": "CHEM10004", "name": "Chemistry 2", "offered": ["summer_term", "semester_2"]},
+  {
+    "code": "CHEM30013",
+    "name": "Chemical Research Project",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {
+    "code": "CHEN90023",
+    "name": "Chemical Engineering Research Project",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {
+    "code": "CHEN90026",
+    "name": "Chemical Engineering Minor Research Proj",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "CHEN90028", "name": "Industry Project", "offered": ["summer_term", "semester_1"]},
+  {
+    "code": "CHEN90030",
+    "name": "Chemical Engineering Minor Thesis",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "CLAS10006", "name": "Latin 1", "offered": ["summer_term", "semester_1"]},
+  {"code": "CLAS10007", "name": "Latin 2", "offered": ["summer_term", "semester_2"]},
+  {"code": "CLAS20021", "name": "Intensive Beginners Latin", "offered": ["summer_term"]},
+  {"code": "CLAS30004", "name": "Intensive Beginners Latin", "offered": ["summer_term"]},
+  {
+    "code": "COMP30013",
+    "name": "Advanced Studies in Computing 3A",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "COMP30014",
+    "name": "Advanced Studies in Computing 3B",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "COMP40020",
+    "name": "Advanced Studies in Computing 4A",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "COMP40021",
+    "name": "Advanced Studies in Computing 4B",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "COMP90005",
+    "name": "Advanced Studies in Computing 6B",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "COMP90029",
+    "name": "Advanced Studies in Computing 6A",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "COMP90055",
+    "name": "Computing Project",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "COMP90059", "name": "Introduction to Python Programming", "offered": ["summer_term"]},
+  {
+    "code": "ECON10003",
+    "name": "Introductory Macroeconomics",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ECON20002",
+    "name": "Intermediate Microeconomics",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {
+    "code": "ECON20003",
+    "name": "Quantitative Methods 2",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "EDUC10051",
+    "name": "Sports Coaching: Theory and Practice",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "EDUC10057",
+    "name": "Wellbeing, Motivation and Performance",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {"code": "EDUC90067", "name": "Translating Language and Culture", "offered": ["summer_term"]},
+  {
+    "code": "EDUC90369",
+    "name": "Professional Practice and Seminar Prim 2",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "EDUC90422", "name": "Foundations of English Teaching", "offered": ["summer_term"]},
+  {
+    "code": "EDUC90504",
+    "name": "Leadership in Educational Settings",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {
+    "code": "EDUC90707",
+    "name": "Professional Practice and Seminar (EC) 2",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "EDUC90758", "name": "Researching Education Practice (SEC)", "offered": ["summer_term"]},
+  {"code": "EDUC90870", "name": "How to Design a Research Project", "offered": ["summer_term"]},
+  {"code": "EDUC90892", "name": "Clinical Teaching Practice (EC) 1", "offered": ["summer_term"]},
+  {
+    "code": "EDUC90913",
+    "name": "Personalising Learning with Technology",
+    "offered": ["summer_term"]
+  },
+  {"code": "EDUC90972", "name": "Active Pedagogies", "offered": ["summer_term"]},
+  {
+    "code": "EDUC90974",
+    "name": "Teaching Critical and Creative Thinking",
+    "offered": ["summer_term"]
+  },
+  {
+    "code": "ELEN90083",
+    "name": "Electrical Engineering Research Project",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ENGR10003",
+    "name": "Engineering Systems Design 2",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {
+    "code": "ENGR20004",
+    "name": "Engineering Mechanics",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ENGR90022",
+    "name": "Engineering Practice",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ENGR90033",
+    "name": "Internship",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "ERTH90032", "name": "Interpretation of Satellite Images", "offered": ["summer_term"]},
+  {
+    "code": "EURO20007",
+    "name": "A Taste of Europe: Melbourne Intensive",
+    "offered": ["summer_term"]
+  },
+  {
+    "code": "EURO30006",
+    "name": "A Taste of Europe: Melbourne Intensive",
+    "offered": ["summer_term"]
+  },
+  {
+    "code": "FINA20026",
+    "name": "Painting Techniques",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {"code": "FINA20035", "name": "Drawing with Anatomy", "offered": ["summer_term", "winter_term"]},
+  {
+    "code": "FINA20036",
+    "name": "Under Camera Animation",
+    "offered": ["summer_term", "winter_term"]
+  },
+  {"code": "FLTV30022", "name": "Making Movies 3 Practical Production", "offered": ["summer_term"]},
+  {
+    "code": "FNCE10002",
+    "name": "Principles of Finance",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "FNCE20001", "name": "Business Finance", "offered": ["summer_term", "semester_1"]},
+  {"code": "FNCE30009", "name": "Ethics in Finance", "offered": ["summer_term"]},
+  {"code": "FREN20018", "name": "Intensive French 3 and 4", "offered": ["summer_term"]},
+  {"code": "GENE90023", "name": "Intro to Human Genetics & Genomics", "offered": ["summer_term"]},
+  {
+    "code": "GEOG90022",
+    "name": "International Internship in Environment",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "GEOL90045", "name": "Exploration Skills Mapping", "offered": ["summer_term"]},
+  {
+    "code": "GEOM90010",
+    "name": "Spatial Information Research Project A",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90013",
+    "name": "Spatial Information Research Project C",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90020",
+    "name": "Spatial Information Research Project",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90023",
+    "name": "Spatial Information Research Project B",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "GEOM90031",
+    "name": "Spatial Information Research Project D",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "GEOM90039", "name": "Advanced Surveying and Mapping", "offered": ["summer_term"]},
+  {
+    "code": "GEOM90043",
+    "name": "Spatial IT Project",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "GEOM90044", "name": "Geographic Information Systems", "offered": ["summer_term"]},
+  {"code": "HIST30071", "name": "Urban Legends: Melbourne Intensive", "offered": ["summer_term"]},
+  {"code": "HPSC20002", "name": "A History of Nature", "offered": ["summer_term"]},
+  {"code": "HPSC20015", "name": "Astronomy in World History", "offered": ["summer_term"]},
+  {
+    "code": "ISLM90007",
+    "name": "Contemporary Middle East & Central Asia",
+    "offered": ["summer_term"]
+  },
+  {"code": "ISYS90055", "name": "Managing IT Outsourcing", "offered": ["summer_term"]},
+  {
+    "code": "ISYS90079",
+    "name": "Health IT Project",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "ISYS90082",
+    "name": "Industry Based IT Experience Project",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "ISYS90086", "name": "Data Warehousing", "offered": ["summer_term"]},
+  {"code": "JOUR90011", "name": "Data Journalism", "offered": ["summer_term"]},
+  {
+    "code": "JOUR90017",
+    "name": "Journalism Project Part 1",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "JOUR90018",
+    "name": "Journalism Project Part 2",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "JOUR90019",
+    "name": "Journalism Project Part 3",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "LARC90001", "name": "Placemaking : Design for Landscape", "offered": ["summer_term"]},
+  {"code": "LAWS50023", "name": "Legal Method and Reasoning", "offered": ["summer_term"]},
+  {"code": "LAWS50055", "name": "Advocacy", "offered": ["summer_term"]},
+  {
+    "code": "LAWS50058",
+    "name": "Melbourne University Law Review",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "LAWS50060",
+    "name": "Melbourne Journal of International Law",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "LAWS50128",
+    "name": "Intellectual Property & Popular Culture",
+    "offered": ["summer_term"]
+  },
+  {"code": "LAWS50131", "name": "Negotiations", "offered": ["summer_term"]},
+  {
+    "code": "LAWS70067",
+    "name": "International Legal Internship",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "MAST10007",
+    "name": "Linear Algebra",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MAST10012",
+    "name": "Introduction to Mathematics",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {
+    "code": "MAST20029",
+    "name": "Engineering Mathematics",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "MAST90079", "name": "AMSI Summer School", "offered": ["summer_term"]},
+  {"code": "MCEN30014", "name": "Mechanical Design", "offered": ["summer_term", "semester_2"]},
+  {"code": "MCEN90044", "name": "Electromagnetic Technologies", "offered": ["summer_term"]},
+  {
+    "code": "MGMT20001",
+    "name": "Organisational Behaviour",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MGMT30011",
+    "name": "Supply Chain Management",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {"code": "MGMT30017", "name": "Global Management Consulting", "offered": ["summer_term"]},
+  {"code": "MGMT30019", "name": "The Future of Work", "offered": ["summer_term"]},
+  {"code": "MGMT90037", "name": "Conflict and Negotiation", "offered": ["summer_term"]},
+  {
+    "code": "MGMT90140",
+    "name": "Management Competencies",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MGMT90141",
+    "name": "Business Analysis & Decision Making",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MGMT90146",
+    "name": "Strategic Management",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "MGMT90176", "name": "People and Capability", "offered": ["summer_term"]},
+  {
+    "code": "MGMT90222",
+    "name": "Foundations of Entrepreneurship Practice",
+    "offered": ["summer_term"]
+  },
+  {
+    "code": "MKTG10001",
+    "name": "Principles of Marketing",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MKTG90004",
+    "name": "Marketing Management",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MKTG90037",
+    "name": "Managing for Value Creation",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MULT20010",
+    "name": "Arts Internship",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "MULT20014", "name": "Community Volunteering - Global", "offered": ["summer_term"]},
+  {
+    "code": "MULT30015",
+    "name": "Independent Research",
+    "offered": ["summer_term", "semester_1", "winter_term", "semester_2"]
+  },
+  {
+    "code": "MULT30019",
+    "name": "Arts Internship",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "MULT30021", "name": "Community Volunteering - Global", "offered": ["summer_term"]},
+  {
+    "code": "MUSI10017",
+    "name": "Riffs: Guitar Cultures & Practice 1",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {
+    "code": "MUSI10021",
+    "name": "African Music and Dance Ensemble 1",
+    "offered": ["summer_term", "semester_1"]
+  },
+  {
+    "code": "MUSI10022",
+    "name": "African Music and Dance Ensemble 2",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {
+    "code": "MUSI10023",
+    "name": "Music Language 1: the Diatonic World",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {
+    "code": "MUSI10148",
+    "name": "African Music and Dance",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MUSI20061",
+    "name": "Music Language 2: Chromaticism & Beyond",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {
+    "code": "MUSI20135",
+    "name": "Chinese Music Ensemble",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "MUSI20143",
+    "name": "World Music Choir 1",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {"code": "MUSI20186", "name": "Music Theatre: Singing Sondheim", "offered": ["summer_term"]},
+  {
+    "code": "MUSI30046",
+    "name": "Music Language 3: Modern Directions",
+    "offered": ["summer_term", "semester_2"]
+  },
+  {"code": "NURS50008", "name": "Mental Health & Recovery", "offered": ["summer_term"]},
+  {"code": "NURS90077", "name": "Specialist Mental Health Nursing", "offered": ["summer_term"]},
+  {"code": "ORAL30003", "name": "Oral Health Therapy Research Int'l", "offered": ["summer_term"]},
+  {"code": "PHIL20045", "name": "Freedom and Equality Across Borders", "offered": ["summer_term"]},
+  {
+    "code": "POLS90009",
+    "name": "International Relations Internship",
+    "offered": ["summer_term", "semester_1", "semester_2"]
+  },
+  {
+    "code": "PSYC90011",
+    "name": "Introduction to Assessment and Diagnosis",
+    "offered": ["summer_term"]
+  }
+]
