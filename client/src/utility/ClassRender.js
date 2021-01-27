@@ -33,12 +33,26 @@ export default function ({event, el}) {
     subjectNameText.appendTo(bottomWrapper);
   }
   // Render number of locations available - if allowed
+
   if (height >= CLASS_LOCATION_MINIMUM.height && width >= CLASS_LOCATION_MINIMUM.width) {
-    const locationsText = $(
-      `<div class="fc-loc">${locations.length} location${locations > 1 ? 's' : ''}</div>`
-    );
+    let locationsText;
+    if(locations[0] != ''){
+      locationsText = $(
+          `<div class="fc-loc">
+        ${locations.length} location${locations.length > 1 ? 's' : ''}
+      </div>`
+      );
+    }
+    else {
+      locationsText = $(
+          `<div class="fc-loc">
+          Online
+        </div>`
+      );
+    }
     locationsText.appendTo(content);
   }
+
   // Render type of class text (Stream, Mandatory, Variable) - if allowed
   if (height >= CLASS_TYPE_MINIMUM.height && width >= CLASS_TYPE_MINIMUM.width) {
     const classTypeElement = $(`<div class="fc-type">${type}</div>`);
