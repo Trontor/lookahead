@@ -53,7 +53,9 @@ export default class Subject {
    */
   public addClassList(classes: SubjectClass[]) {
     this._classList = classes;
-    this.mergeClasses();
+
+    //DISABLING MERGECLASSES for 2021, to seeperate online and in person classes that would usually be merged
+    // this.mergeClasses();
     // From now-on, don't modify the original classList
     this.identifyIrregularClasses();
     this.extractStreams();
