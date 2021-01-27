@@ -50,9 +50,9 @@ export const removeReservedEvent = event => dispatch => {
   dispatch({type: REMOVE_RESERVED, payload: event});
 };
 
-export const optimise = (subjects, optimisations, restrictions, reservations) => dispatch => {
+export const optimise = (subjects, optimisations, restrictions, reservations, deliveryPref) => dispatch => {
   const optimiser = new Optimiser(subjects, optimisations.ignoreWeirdStreams);
-  optimiser.applyTimeRestrictions(restrictions.earliestStart, restrictions.latestFinish);
+  optimiser.applyTimeAndDeliveryRestrictions(restrictions.earliestStart, restrictions.latestFinish, deliveryPref);
   dispatch({type: BEGIN_OPTIMISATION});
   let tries = 0;
   let success = false;

@@ -152,12 +152,12 @@ class Optimiser {
     // Stop performance tracking
     const t1 = performance.now();
     const time = t1 - t0;
-    console.log(timetables);
+    // console.log(timetables); //running this will be resource heavy
 
     return {timetables, time};
   }
 
-  applyTimeRestrictions(earliestStart, latestFinish) {
+  applyTimeAndDeliveryRestrictions(earliestStart, latestFinish, deliveryPref) {
     /**
      * General Methodology:
      * The idea is to apply the restrictions as requested, but if the
@@ -173,7 +173,31 @@ class Optimiser {
      * 8. If stream types counts after != stream type counts before, invalid
      * 9. Otherwise, valid!
      */
-    const classViolation = cls => cls.start < earliestStart || cls.finish > latestFinish;
+    console.log("Delivery Mode Pref", deliveryPref)
+    //move this function to upstream, make it add to subject information
+    const getClassDeliveryMethod = cls => {
+      let inPersonCount = 0;
+      for(let i in cls.locations) {
+        if(cls.locations[i] != '') inPersonCount++;
+      }
+      if(inPersonCount == cls.locations.length) return 'inPerson';
+      if(inPersonCount == 0) return 'online';
+      else return 'any';
+    }
+    const classViolation = cls => {
+      const timeViolation = cls.start < earliestStart || cls.finish > latestFinish
+      let classDeliveryMethod = getClassDeliveryMethod(cls);
+      switch(deliveryPref) {
+        case "inPerson":
+          console.log("Violation!",cls);
+          return timeViolation || classDeliveryMethod == 'online';
+        case "online":
+          return timeViolation || classDeliveryMethod == 'inPerson';
+        default: //no preference
+          return timeViolation;
+      }
+    }
+
     // Copy subjects, so modifications don't affect class-scope variable
     const subjects = JSON.parse(JSON.stringify(this.subjects));
     console.log(
@@ -188,7 +212,7 @@ class Optimiser {
       const beforeTypes = this.getClassTypes(subject);
       const beforeTypeCount = Object.keys(this.getClassTypes(subject)).length;
       console.log('\tRegular Classes');
-      console.log('\t\tBefore:', beforeTypes, beforeTypeCount, [...subject._regularClasses]);
+      console.log(`\t\tBefore (${subjectName}):`,  beforeTypes, beforeTypeCount, [...subject._regularClasses]);
       // (2) Now begin pruning
       const regClasses = subject._regularClasses;
       for (let i = regClasses.length - 1; i >= 0; i--) {
@@ -200,7 +224,7 @@ class Optimiser {
       // (3) Get class type counts after
       const afterTypes = this.getClassTypes(subject);
       const afterTypeCount = Object.keys(afterTypes).length;
-      console.log('\t\tAfter:', afterTypes, afterTypeCount, regClasses);
+      console.log(`\t\tAfter (${subjectName}):`, afterTypes, afterTypeCount, regClasses);
       // (4) Check for invalid restriction
       if (afterTypeCount !== beforeTypeCount) {
         console.error('😠 [Class Pruning] Invalid Restrictions');
@@ -214,7 +238,7 @@ class Optimiser {
         const {streams} = container;
         // (5) Get before stream counts
         const beforeStreamCount = streams.length;
-        console.log(`\t\tBefore: ${beforeStreamCount}`, [...streams]);
+        console.log(`\t\tBefore (${subjectName}): ${beforeStreamCount}`, [...streams]);
         // Go through each stream, looking to prune
         for (let i = streams.length - 1; i >= 0; i--) {
           const stream = streams[i];
@@ -226,7 +250,7 @@ class Optimiser {
         }
         // (6) Get before stream counts
         const afterStreamCount = streams.length;
-        console.log(`\t\tAfter: ${afterStreamCount}`, streams);
+        console.log(`\t\tAfter (${subjectName}): ${afterStreamCount}`, streams);
         if (afterStreamCount === 0) {
           console.error('😠 [Stream Pruning] Invalid Restrictions');
           console.log(
