@@ -34,7 +34,7 @@ export default () => {
     const {
       range: {min, max},
       ignoreWeirdStreams,
-      deliveryPref,
+      deliveryPreference,
     } = optimisations;
     console.log('WEIRD: ' + ignoreWeirdStreams);
 
@@ -43,10 +43,10 @@ export default () => {
       earliestStart: min,
       latestFinish: max,
     };
-    const validRestrictions = optimiser.applyTimeAndDeliveryRestrictions(
+    const validRestrictions = optimiser.applyRestrictions(
       restrictions.earliestStart,
       restrictions.latestFinish,
-      deliveryPref
+      deliveryPreference
     );
     setValidRestrictions(validRestrictions);
     if (validRestrictions) {
@@ -65,7 +65,7 @@ export default () => {
       ignoreWeirdStreams,
       breakHours,
       minimiseClashes,
-      deliveryPref,
+      deliveryPreference,
     } = optimisations;
     const {reserved} = optimiser;
 
@@ -104,7 +104,7 @@ export default () => {
       earliestStart: min,
       latestFinish: max,
     };
-    dispatch(optimise(subjects, optimisationTypes, restrictions, reserved, deliveryPref));
+    dispatch(optimise(subjects, optimisationTypes, restrictions, reserved, deliveryPreference));
   };
 
   if (

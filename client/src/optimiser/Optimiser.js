@@ -152,14 +152,13 @@ class Optimiser {
     // Stop performance tracking
     const t1 = performance.now();
     const time = t1 - t0;
-    // console.log(timetables); //running this will be resource heavy
-    // https://stackoverflow.com/questions/11426185/will-console-log-reduce-javascript-execution-performance
+    console.log(timetables);
 
     return {timetables, time};
   }
 
   //we just need to change this to do each subject individually
-  applyTimeAndDeliveryRestrictions(earliestStart, latestFinish, deliveryPref) {
+  applyRestrictions(earliestStart, latestFinish, deliveryPreference) {
     /**
      * General Methodology:
      * The idea is to apply the restrictions as requested, and if the
@@ -184,7 +183,7 @@ class Optimiser {
     const classViolation = cls => {
       const timeViolation = cls.start < earliestStart || cls.finish > latestFinish
       const isOnline = cls.online;
-      switch(deliveryPref) {
+      switch(deliveryPreference) {
         case "inPerson":
           console.log("Violation!",cls);
           return timeViolation || isOnline;

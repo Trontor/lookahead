@@ -95,13 +95,12 @@ function Optimisations() {
     <OptimisationsWrapper>
       <Header>Optimisations</Header>
       {/* <Break /> */}
-
       <OptimisationsContainer>
         <Optimisation center>
-                  <Subheader>If possible, preference classes that are:</Subheader>
-                  <ButtonGroup>
-                        <DeliveryButton></DeliveryButton>
-                </ButtonGroup>
+          <Subheader>If possible, prefer classes that are:</Subheader>
+          <ButtonGroup>
+            <DeliveryButton/>
+          </ButtonGroup>
         </Optimisation>
         <Optimisation center style={{marginBottom: '50px'}}>
           <Subheader>Time Restriction</Subheader>

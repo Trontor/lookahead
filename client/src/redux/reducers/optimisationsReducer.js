@@ -8,7 +8,7 @@ import {
   SET_MINIMISE_CLASHES,
   SET_KEEP_CLASSES_STREAMED,
   SET_IGNORE_WEIRD_STREAMS,
-  SET_DELIVERY_PREF,
+  SET_DELIVERY_PREFERENCE,
 } from '../actionTypes';
 
 const initialState = {
@@ -20,7 +20,7 @@ const initialState = {
   minimiseClashes: true,
   keepClassesStreamed: true,
   ignoreWeirdStreams: true,
-  deliveryPref: 'any',
+  deliveryPreference: 'any',
 };
 
 export default (state = initialState, action) => {
@@ -55,8 +55,8 @@ export default (state = initialState, action) => {
       return {...state, ignoreWeirdStreams: action.payload};
     case SET_MINIMISE_CLASHES:
       return {...state, minimiseClashes: action.payload};
-    case SET_DELIVERY_PREF:
-      return {...state, deliveryPref: action.payload};
+    case SET_DELIVERY_PREFERENCE:
+      return {...state, deliveryPreference: action.payload};
     default:
       return {...state};
   }

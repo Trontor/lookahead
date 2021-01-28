@@ -381,7 +381,6 @@ export default class Subject {
    * Merges classes together if they are at the same time and are the same type
    */
   private mergeClasses = () => {
-    console.log("Merge called!");
     // Copy so deletion doesn't effect real array
     const classListCopy = this._classList.slice().reverse();
     let totalMerged = 0;

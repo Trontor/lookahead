@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import {DeliveryButton} from './DeliveryModeButtonStyles';
 
-import {
-  setDeliveryPref
-} from '../../../redux/actions/optimisationsActions';
+import {setdeliveryPreference} from '../../../redux/actions/optimisationsActions';
 import {useDispatch, useSelector} from 'react-redux';
 
 export default function DeliveryModeButton(props) {
@@ -11,48 +9,50 @@ export default function DeliveryModeButton(props) {
   const [activatedA, setActivatedA] = useState(true);
   const [activatedB, setActivatedB] = useState(false);
   const [activatedC, setActivatedC] = useState(false);
+  const stateVars = {
+    any: {activated: activatedA, setActivated: setActivatedA},
+    inPerson: {activated: activatedB, setActivated: setActivatedB},
+    online: {activated: activatedC, setActivated: setActivatedC},
+  };
 
-  const {onToggled} = props;
   const handleClick = e => {
-    console.log("!")
+    const oldActive = stateVars[e].activated;
 
-    switch (e) {
-      case "any": {
-        const newActive = !activatedA;
-        setActivatedA(newActive);
-        setActivatedB(false);
-        setActivatedC(false);
-        dispatch(setDeliveryPref(e))
-        break;
-      }
-      case 'inPerson': {
-        setActivatedA(false);
-        const newActive = !activatedB;
-        setActivatedB(newActive);
-        setActivatedC(false);
-        break;
-      }
-      case 'online': {
-        setActivatedA(false);
-        setActivatedB(false);
-        const newActive = !activatedC;
-        setActivatedC(newActive);
-        break;
+    //disable the buttons that was not the one that was pressed
+    for (const [key, value] of Object.entries(stateVars)) {
+      console.log('key', key);
+      if (key === e) {
+        stateVars[key].setActivated(!oldActive);
+      } else {
+        stateVars[key].setActivated(false);
       }
     }
-    dispatch(setDeliveryPref(e))
+    if (!oldActive) {
+      dispatch(setdeliveryPreference(e));
+    } else {
+      //defaulting to any, if a button is depressed
+      stateVars['any'].setActivated(true);
+      dispatch(setdeliveryPreference('any'));
+    }
   };
+
+  const deliveryModes = [
+    {key: 'any', value: 'Any'},
+    {key: 'inPerson', value: 'In-Person'},
+    {key: 'online', value: 'Online'},
+  ];
+
   return (
-      <div>
-        <DeliveryButton key='A' activated={activatedA} onClick={() => handleClick('any')}>
-          Any
+    <div>
+      {deliveryModes.map(mode => (
+        <DeliveryButton
+          key={mode.key}
+          activated={stateVars[mode.key].activated}
+          onClick={() => handleClick(mode.key)}
+        >
+          {mode.value}
         </DeliveryButton>
-        <DeliveryButton key='B' activated={activatedB} onClick={() => handleClick('inPerson')}>
-          In Person
-        </DeliveryButton>
-        <DeliveryButton key='C' activated={activatedC} onClick={() => handleClick('online')}>
-          Online
-        </DeliveryButton>
-      </div>
+      ))}
+    </div>
   );
 }

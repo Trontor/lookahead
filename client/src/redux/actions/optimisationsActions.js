@@ -9,7 +9,7 @@ import {
   SET_KEEP_CLASSES_STREAMED,
   UPDATE_POSSIBILITIES,
   SET_IGNORE_WEIRD_STREAMS,
-  SET_DELIVERY_PREF,
+  SET_DELIVERY_PREFERENCE,
 } from '../actionTypes';
 
 export const setTimeRange = (min, max) => dispatch => {
@@ -52,6 +52,6 @@ export const setBreak = hours => dispatch => {
   dispatch({type: SET_BREAK, payload: hours});
 };
 
-export const setDeliveryPref = deliveryPref => dispatch => {
-  dispatch({type: SET_DELIVERY_PREF, payload: deliveryPref});
+export const setdeliveryPreference = deliveryPreference => dispatch => {
+  dispatch({type: SET_DELIVERY_PREFERENCE, payload: deliveryPreference});
 };

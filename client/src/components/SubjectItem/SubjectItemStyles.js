@@ -254,9 +254,7 @@ export const SubjectCode = styled.div`
     letter-spacing: 0.02em;
 
     &:nth-child(4) {
-      // color: crimson;
       font-weight: bolder;
-      // text-decoration: underline;
     }
     &:nth-child(2),
     &:nth-child(4) {
