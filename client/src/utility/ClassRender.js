@@ -23,8 +23,7 @@ export default function ({event, el}) {
   const height = content.height();
   const width = content.width();
   // Class-specific information is stored in extended props
-  const {subjectName, code, type, locations, streamNumber} = event.extendedProps;
-
+  const {subjectName, code, type, online, locations, streamNumber} = event.extendedProps;
   // HTML Element for the bottom elements (Subject Name + Code)
   const bottomWrapper = $('<div class="bottom-wrapper"/>');
   // Render subject name, e.g. "Software Modelling and Design" - if allowed
@@ -36,7 +35,7 @@ export default function ({event, el}) {
 
   if (height >= CLASS_LOCATION_MINIMUM.height && width >= CLASS_LOCATION_MINIMUM.width) {
     let locationsText;
-    if(locations[0] != ''){
+    if(!online){
       locationsText = $(
           `<div class="fc-loc">
         ${locations.length} location${locations.length > 1 ? 's' : ''}

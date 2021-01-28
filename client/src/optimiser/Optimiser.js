@@ -178,7 +178,6 @@ class Optimiser {
 
     const classViolation = cls => {
       const timeViolation = cls.start < earliestStart || cls.finish > latestFinish
-      console.log("TEST", cls.online)
       const isOnline = cls.online;
       switch(deliveryPref) {
         case "inPerson":
