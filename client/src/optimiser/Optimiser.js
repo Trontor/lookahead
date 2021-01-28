@@ -175,24 +175,17 @@ class Optimiser {
      */
     console.log("Delivery Mode Pref", deliveryPref)
     //move this function to upstream, make it add to subject information
-    const getClassDeliveryMethod = cls => {
-      let inPersonCount = 0;
-      for(let i in cls.locations) {
-        if(cls.locations[i] != '') inPersonCount++;
-      }
-      if(inPersonCount == cls.locations.length) return 'inPerson';
-      if(inPersonCount == 0) return 'online';
-      else return 'any';
-    }
+
     const classViolation = cls => {
       const timeViolation = cls.start < earliestStart || cls.finish > latestFinish
-      let classDeliveryMethod = getClassDeliveryMethod(cls);
+      console.log("TEST", cls.online)
+      const isOnline = cls.online;
       switch(deliveryPref) {
         case "inPerson":
           console.log("Violation!",cls);
-          return timeViolation || classDeliveryMethod == 'online';
+          return timeViolation || isOnline;
         case "online":
-          return timeViolation || classDeliveryMethod == 'inPerson';
+          return timeViolation || !isOnline;
         default: //no preference
           return timeViolation;
       }

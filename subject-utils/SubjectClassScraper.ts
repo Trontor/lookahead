@@ -71,7 +71,7 @@ export const parseSubject = (html: string, code: string, period: SubjectPeriod):
     const start = getChild(3);
     const finish = getChild(4);
     const rawWeeks = getChild(6);
-    const location = getChild(7);
+    const rawLocation = getChild(7);
     let day: number;
     // Convert day to int representation based on weekdays array in SubjectClass
     if (!SubjectClass.daysOfWeek.includes(dayRaw)) {
@@ -83,6 +83,16 @@ export const parseSubject = (html: string, code: string, period: SubjectPeriod):
         subject.hasWeekendClasses();
       }
     }
+    // Try parse location
+    let location: string;
+    try {
+      location = parseLocation(rawLocation);
+      console.log(location)
+    } catch (err) {
+      location = 'Unknown';
+      console.log(`Error parsing location data for ${classCode}\nError:${err}`);
+    }
+    const online = (location == 'online') ? true : false;
     // Try parse week format
     let weeks: number[];
     try {
@@ -106,7 +116,8 @@ export const parseSubject = (html: string, code: string, period: SubjectPeriod):
       startMoment.diff(mmtMidnight, 'minutes') / 60,
       finishMoment.diff(mmtMidnight, 'minutes') / 60,
       weeks,
-      location
+      location,
+      online,
     );
     classList.push(parsedClass);
   });
@@ -152,6 +163,15 @@ const parseWeeks = (rawWeeks: string): number[] => {
   return parsedWeeks;
 };
 
+/**
+ * Parses the location given on the SWS system, in order to seperate online and in person classes,
+ * and format classes that have multiple locations!
+ * @param location: The raw location format from SWS
+ */
+const parseLocation = (location: string) =>{
+  const isOnline = location.toLowerCase().includes('online') || location == '' || !location.trim();
+  return isOnline ? 'online' :  location;
+}
 /**
  * Converts a SubjectPeriod to a short code format used by the SWS system
  * @param period The SubjectPeriod to convert
