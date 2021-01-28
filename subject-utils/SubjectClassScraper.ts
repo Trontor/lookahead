@@ -91,6 +91,7 @@ export const parseSubject = (html: string, code: string, period: SubjectPeriod):
       location = 'Unknown';
       console.log(`Error parsing location data for ${classCode}\nError:${err}`);
     }
+    // For an online subject tag it as online : true, and have the location as 'online' for visuals
     const online = (location == 'online') ? true : false;
     // Try parse week format
     let weeks: number[];
@@ -164,10 +165,12 @@ const parseWeeks = (rawWeeks: string): number[] => {
 
 /**
  * Parses the location given on the SWS system, in order to seperate online and in person classes,
- * and format classes that have multiple locations!
+ * and TODO: format classes that have multiple locations!
  * @param location: The raw location format from SWS
  */
 const parseLocation = (location: string) =>{
+  // Because an empty string, whitespace, or a string that contains the word online indicates that
+  // the subject is online
   const isOnline = location.toLowerCase().includes('online') || location == '' || !location.trim();
   return isOnline ? 'online' :  location;
 }

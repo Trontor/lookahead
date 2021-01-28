@@ -153,6 +153,7 @@ class Optimiser {
     const t1 = performance.now();
     const time = t1 - t0;
     // console.log(timetables); //running this will be resource heavy
+    // https://stackoverflow.com/questions/11426185/will-console-log-reduce-javascript-execution-performance
 
     return {timetables, time};
   }
@@ -178,6 +179,8 @@ class Optimiser {
      * 9. Otherwise, valid without adding violating class!
      */
 
+    // This is the function that governs whether a class is violating in terms of
+    // both time restrictions and delivery mode restrictions
     const classViolation = cls => {
       const timeViolation = cls.start < earliestStart || cls.finish > latestFinish
       const isOnline = cls.online;
@@ -190,7 +193,7 @@ class Optimiser {
         default: //no preference
           return timeViolation;
       }
-    }
+    };
 
     // Copy subjects, so modifications don't affect class-scope variable
     const subjects = JSON.parse(JSON.stringify(this.subjects));
@@ -224,6 +227,7 @@ class Optimiser {
       // (4) Check for invalid restriction
       if (afterTypeCount !== beforeTypeCount) {
         console.error('😠 [Class Pruning] Invalid Restrictions');
+        //Here we add back some violating subject to ensure that a timetable can still be made
         regClasses.push(lastDeletedClass)
       }
       const containers = subject._streamContainers;

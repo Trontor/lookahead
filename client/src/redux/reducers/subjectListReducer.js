@@ -24,9 +24,9 @@ export default (state = initialState, action) => {
       });
       //This is where we enter the raw data from the subject json file into app memory
       list.forEach(subject => {
+        //note that label is what will be seen when you search for a subject
         const onlineTag = subject.online ? ' (ONLINE)' : '';
         const label = subject.code + ' - ' + subject.name + onlineTag;
-
         selectOptions.push({
           label: label,
           value: subject.name,

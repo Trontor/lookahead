@@ -53,8 +53,6 @@ export default class Subject {
    */
   public addClassList(classes: SubjectClass[]) {
     this._classList = classes;
-
-    //TODO: test this, DISABLING MERGECLASSES for 2021, to seeperate online and in person classes that would usually be merged
     this.mergeClasses();
     // From now-on, don't modify the original classList
     this.identifyIrregularClasses();
@@ -119,7 +117,8 @@ export default class Subject {
               classA.day !== classB.day ||
               classA.start !== classB.start ||
               classA.finish !== classB.finish ||
-              classA.online != classB.online
+              // dont merge classes where one is online and one is inperson
+              classA.online !== classB.online
             ) {
               doMerge = false;
             }
@@ -361,8 +360,8 @@ export default class Subject {
     const sameType = classA.classCode.type === classB.classCode.type;
     // Checks if the class number is the same, e.g. W01 === W01
     const sameNumber = classA.classCode.number === classB.classCode.number;
-    //dont merge classes where one is online and one is inperson
-    const sameDeliveryMethod = classA.online == classB.online
+    // dont merge classes where one is online and one is inperson
+    const sameDeliveryMethod = classA.online === classB.online;
     // Gets all classes in the same stream as classA or classB
     const sameStreamClasses = this._classList.filter(
       cls =>
