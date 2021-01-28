@@ -32,7 +32,7 @@ export default (state = initialState, action) => {
     case CHANGE_SUBJECT_COLOR:
       return changeSubjectColor(state, action.payload);
     case GET_SUBJECT_BEGIN:
-      const {code, name, year, studyPeriod} = action.payload;
+      const {code, name, online, year, studyPeriod} = action.payload;
       // code: "SWEN30006"
       // label: "SWEN30006 - Software Modelling and Design"
       // value: "Software Modelling and Design"
@@ -48,6 +48,7 @@ export default (state = initialState, action) => {
         ...state,
         [code]: {
           name,
+          online,
           year,
           studyPeriod,
           color: findColor(state),
@@ -69,6 +70,7 @@ export default (state = initialState, action) => {
         year: action.payload.year,
         code: action.payload.code,
         name: action.payload.name,
+        online: action.payload.online,
         studyPeriod: action.payload.studyPeriod,
       };
       if (!subjects) {

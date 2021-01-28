@@ -87,7 +87,6 @@ export const parseSubject = (html: string, code: string, period: SubjectPeriod):
     let location: string;
     try {
       location = parseLocation(rawLocation);
-      console.log(location)
     } catch (err) {
       location = 'Unknown';
       console.log(`Error parsing location data for ${classCode}\nError:${err}`);
