@@ -98,11 +98,9 @@ function Subjects() {
                   {online ? (
                       <>
                         <span>•</span>
-                        <span>Online Only</span>
+                        <span className={"online-only-tag"}>Online Only</span>
                       </>
-                  ) : (
-                      <span>Dual-Delivery</span>
-                  )
+                  ) : ''
                   }
                   {isEmpty && (
                     <>
