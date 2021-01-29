@@ -41,11 +41,17 @@ export const HeaderSubtitle = styled.span`
 
 export const TimeFormatText = styled.span`
   right: 70px;
-  font-size: 24px;
+  font-size: 20px;
   position: absolute;
   transform: translateY(2px);
   text-align: right;
   cursor: pointer;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 
   @media screen and (max-width: 359px) {
     display: none;
