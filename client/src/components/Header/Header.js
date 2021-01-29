@@ -1,9 +1,9 @@
 import React from 'react';
 import {regularTheme, darkTheme} from '../../themes';
 import {setTheme} from '../../redux/actions/themeActions';
-import {useSelector, useDispatch} from 'react-redux';
-import {Emoji, HeaderSubtitle, HeaderText, HeaderWrapper} from './HeaderStyles';
 import {setTimeFormat} from '../../redux/actions/timeFormatActions';
+import {useSelector, useDispatch} from 'react-redux';
+import {Emoji, HeaderSubtitle, HeaderText, HeaderWrapper, TimeFormatText} from './HeaderStyles';
 
 export default function Header() {
   const dispatch = useDispatch();
