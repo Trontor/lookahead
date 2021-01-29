@@ -132,6 +132,7 @@ export default function TimetableViewer() {
                 }
               : undefined
           }
+
           events={events}
           eventClick={eInfo => handleEventClick(eInfo, showEvent)}
           select={handleSelect}

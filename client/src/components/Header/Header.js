@@ -5,6 +5,7 @@ import {setTimeFormat} from '../../redux/actions/timeFormatActions';
 import {useSelector, useDispatch} from 'react-redux';
 import {Emoji, HeaderSubtitle, HeaderText, HeaderWrapper, TimeFormatText} from './HeaderStyles';
 
+
 export default function Header() {
   const dispatch = useDispatch();
   const currentTheme = useSelector(state => state.theme);
