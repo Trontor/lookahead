@@ -15567,24 +15567,7 @@ describe("Optimiser", () => {
     );
     const restrictedSubjects = optimiser.subjects;
 
-    for (const subj in restrictedSubjects) {
-      const regClasses = restrictedSubjects[subj].data._regularClasses;
-      //ensure all classes are in person
-      for (const regularClass in regClasses){
-        // console.log(regClasses[regularClass].online)
-        expect(regClasses[regularClass].online).toBeTruthy();
-      }
-
-      //ensure all streams are in person
-      const streamsContainer = restrictedSubjects[subj].data._streamContainers;
-      for (const streams in streamsContainer){
-        for (const stream in streamsContainer[streams].streams) {
-          for (const streamClass in streamsContainer[streams].streams[stream].classes){
-            expect(streamsContainer[streams].streams[stream].classes[streamClass].online).toBeTruthy();
-          }
-        }
-      }
-    }
+    ensureClassesAreAll(true,restrictedSubjects);
 
     expect(existsValidOnlineTimetable).toBeTruthy();
   });
@@ -15599,25 +15582,34 @@ describe("Optimiser", () => {
     );
 
     const restrictedSubjects = optimiser.subjects;
-    console.log(restrictedSubjects);
+
+    ensureClassesAreAll(false, restrictedSubjects);
+
+    expect(existsValidInPersonTimetable).toBeTruthy();
+  });
+
+  //tests for whether every class is now a certain delivery mode type
+// true -> online, false -> inPerson
+  let ensureClassesAreAll = (online, restrictedSubjects) => {
     for (const subj in restrictedSubjects) {
       const regClasses = restrictedSubjects[subj].data._regularClasses;
-      //ensure all classes are in person
+      //ensure all classes are = deliverymode
       for (const regularClass in regClasses){
-          expect(regClasses[regularClass].online).toBeFalsy();
+        expect(regClasses[regularClass].online).toBe(online);
       }
 
-      //ensure all streams are in person
+      //ensure all streams are in = deliverymode
       const streamsContainer = restrictedSubjects[subj].data._streamContainers;
       for (const streams in streamsContainer){
         for (const stream in streamsContainer[streams].streams) {
-          for (const streamClass in streamsContainer[streams].streams[stream]){
-            expect(streamsContainer[streams].streams[stream][streamClass].online).toBeFalsy();
+          for (const streamClass in streamsContainer[streams].streams[stream].classes){
+            expect(streamsContainer[streams].streams[stream].classes[streamClass].online).toBe(online);
           }
         }
       }
     }
-
-    expect(existsValidInPersonTimetable).toBeTruthy();
-  });
+  }
 });
+
+
+
