@@ -19,6 +19,7 @@ describe("Subject Class", () => {
     const start = 17.25;
     const finish = 18.25;
     const weeks = [31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42, 43];
+    const online = true;
     classA = new SubjectClass(
       subject,
       codeA,
@@ -27,7 +28,8 @@ describe("Subject Class", () => {
       start,
       finish,
       weeks,
-      locationA
+      locationA,
+      online
     );
     classB = new SubjectClass(
       subject,
@@ -37,7 +39,8 @@ describe("Subject Class", () => {
       start,
       finish,
       weeks,
-      locationB
+      locationB,
+      online
     );
   });
 
