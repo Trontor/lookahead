@@ -185,7 +185,6 @@ class Optimiser {
       const isOnline = cls.online;
       switch(deliveryPreference) {
         case "inPerson":
-          console.log("Violation!",cls);
           return timeViolation || isOnline;
         case "online":
           return timeViolation || !isOnline;
