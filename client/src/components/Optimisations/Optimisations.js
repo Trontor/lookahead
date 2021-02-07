@@ -24,12 +24,13 @@ import {
   setSkipLectures,
   setTimeRange,
   setIgnoreWeirdStreams,
+  setDeliveryPreference,
 } from '../../redux/actions/optimisationsActions';
 import {useDispatch, useSelector} from 'react-redux';
 
 import DayAvoidButton from './DayAvoidButton/DayAvoidButton';
-import DeliveryButton from './DeliveryModeButton/DeliveryModeButton';
 import InputRange from 'react-input-range';
+import DeliveryModeButton from './DeliveryModeButton/DeliveryModeButton';
 
 const formatRangeLabel = value => {
   const remainder = value % 1;
@@ -45,9 +46,7 @@ function Optimisations() {
   const dispatch = useDispatch();
   const optimisations = useSelector(state => state.optimisations);
   const subjects = useSelector(state => state.subjects);
-
   console.log(Object.entries(subjects));
-
   const isWeird = Object.entries(subjects).some(
     ([_, {data}]) => data && data._weirdStreamContainers.length > 0
   );
@@ -61,6 +60,7 @@ function Optimisations() {
     minimiseClashes,
     keepClassesStreamed,
     ignoreWeirdStreams,
+    deliveryPreference,
   } = optimisations;
 
   const changeRange = ({min, max}) => {
@@ -89,6 +89,11 @@ function Optimisations() {
     e.target.value = intVal;
     setLongestRun(intVal);
   };
+  const deliveryModes = [
+    {key: 'any', displayText: 'Any'},
+    {key: 'inPerson', displayText: 'In-Person'},
+    {key: 'online', displayText: 'Online'},
+  ];
 
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
   return (
@@ -99,7 +104,15 @@ function Optimisations() {
         <Optimisation center>
           <Subheader>If possible, prefer classes that are:</Subheader>
           <ButtonGroup>
-            <DeliveryButton/>
+            {deliveryModes.map(({key, displayText}, idx) => (
+              <DeliveryModeButton
+                key={key}
+                activated={key == deliveryPreference}
+                onClick={() => dispatch(setDeliveryPreference(key))}
+              >
+                {displayText}
+              </DeliveryModeButton>
+            ))}
           </ButtonGroup>
         </Optimisation>
         <Optimisation center style={{marginBottom: '50px'}}>

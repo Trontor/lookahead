@@ -52,6 +52,6 @@ export const setBreak = hours => dispatch => {
   dispatch({type: SET_BREAK, payload: hours});
 };
 
-export const setdeliveryPreference = deliveryPreference => dispatch => {
+export const setDeliveryPreference = deliveryPreference => dispatch => {
   dispatch({type: SET_DELIVERY_PREFERENCE, payload: deliveryPreference});
 };
