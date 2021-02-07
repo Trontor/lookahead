@@ -47,10 +47,13 @@ function Optimisations() {
   const optimisations = useSelector(state => state.optimisations);
   const subjects = useSelector(state => state.subjects);
   console.log(Object.entries(subjects));
+
   const isWeird = Object.entries(subjects).some(
     ([_, {data}]) => data && data._weirdStreamContainers.length > 0
   );
+
   const [longestRunToggled, setLongestRunToggled] = useState(false);
+
   const {
     range,
     /*avoidDays,*/
@@ -70,10 +73,12 @@ function Optimisations() {
   const setLongestRun = val => {
     dispatch(setBreak(val));
   };
+
   const longestRunToggleChanged = ({target: {checked}}) => {
     setLongestRunToggled(checked);
     setLongestRun(checked ? 3 : 24);
   };
+
   const longestRunChanged = e => {
     e.target.value = e.target.value.replace(/[^0-9]/gi, '');
     let intVal = Number.parseInt(e.target.value);
@@ -89,6 +94,7 @@ function Optimisations() {
     e.target.value = intVal;
     setLongestRun(intVal);
   };
+
   const deliveryModes = [
     {key: 'any', displayText: 'Any'},
     {key: 'inPerson', displayText: 'In-Person'},
