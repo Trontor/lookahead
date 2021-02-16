@@ -193,6 +193,9 @@ class Optimiser {
       }
     };
 
+    //remove weird streams so that this works for weird subjects
+    this.removeWeirdStreams();
+
     // Copy subjects, so modifications don't affect class-scope variable
     const subjects = JSON.parse(JSON.stringify(this.subjects));
     console.log(
