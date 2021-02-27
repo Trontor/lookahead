@@ -48,8 +48,8 @@ const SubjectSelect = props => {
     let localStorageSubjects = JSON.parse(localStorage.getItem('subjects'));
     if (!localStorageSubjects) return;
     for (const subject of localStorageSubjects) {
-      const {year, code, name, studyPeriod} = subject;
-      dispatch(getSubject(year, studyPeriod, code, name));
+      const {year, code, name, studyPeriod, online} = subject;
+      dispatch(getSubject(year, studyPeriod, code, name, online));
     }
     if (!(!process.env.NODE_ENV || process.env.NODE_ENV === 'development')) return;
     localStorage.removeItem('notifications');
@@ -148,7 +148,7 @@ const SubjectSelect = props => {
     },
   };
 
-  const handleSubjectSelect = ({code, value}) => {
+  const handleSubjectSelect = ({code, value, online}) => {
     if (!LogRocketInitialised) {
       if (process.env.NODE_ENV && process.env.NODE_ENV !== 'development') {
         LogRocket.init('ae9dbf/lookahead');
@@ -156,7 +156,7 @@ const SubjectSelect = props => {
         LogRocketInitialised = true;
       }
     }
-    dispatch(getSubject(CURRENT_SUBJECT_LIST_YEAR, selectedStudyPeriod.value, code, value));
+    dispatch(getSubject(CURRENT_SUBJECT_LIST_YEAR, selectedStudyPeriod.value, code, value, online));
   };
   return (
     <SelectContainer>

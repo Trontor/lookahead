@@ -62,7 +62,7 @@ function Subjects() {
 
       {Object.keys(subjects).map(code => {
         const subject = subjects[code];
-        const {year, studyPeriod, name, loading, data, color, error} = subject;
+        const {year, studyPeriod, name, online, loading, data, color, error} = subject;
         const {
           period = '',
           _weirdStreamContainers = [],
@@ -95,6 +95,13 @@ function Subjects() {
                   ) : (
                     <span>{studyPeriods[period]}</span>
                   )}
+                  {online ? (
+                      <>
+                        <span>•</span>
+                        <span className={"online-only-tag"}>Online Only</span>
+                      </>
+                  ) : ''
+                  }
                   {isEmpty && (
                     <>
                       <span>•</span>

@@ -65,6 +65,7 @@ export const classToEvent = cls => {
   let {
     day,
     classCode,
+    online,
     start,
     finish,
     description,
@@ -85,6 +86,7 @@ export const classToEvent = cls => {
     locations: locations,
     type,
     classCode,
+    online,
     codes,
     streamNumber,
     code: subjectCode,

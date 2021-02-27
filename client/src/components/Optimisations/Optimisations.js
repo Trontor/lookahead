@@ -28,6 +28,7 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 
 import DayAvoidButton from './DayAvoidButton/DayAvoidButton';
+import DeliveryButton from './DeliveryModeButton/DeliveryModeButton';
 import InputRange from 'react-input-range';
 
 const formatRangeLabel = value => {
@@ -95,6 +96,12 @@ function Optimisations() {
       <Header>Optimisations</Header>
       {/* <Break /> */}
       <OptimisationsContainer>
+        <Optimisation center>
+          <Subheader>If possible, prefer classes that are:</Subheader>
+          <ButtonGroup>
+            <DeliveryButton/>
+          </ButtonGroup>
+        </Optimisation>
         <Optimisation center style={{marginBottom: '50px'}}>
           <Subheader>Time Restriction</Subheader>
           <TimeOptimisation>

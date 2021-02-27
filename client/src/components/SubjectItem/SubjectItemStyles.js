@@ -254,9 +254,7 @@ export const SubjectCode = styled.div`
     letter-spacing: 0.02em;
 
     &:nth-child(4) {
-      color: crimson;
       font-weight: bolder;
-      text-decoration: underline;
     }
     &:nth-child(2),
     &:nth-child(4) {
@@ -292,7 +290,7 @@ export const SubjectName = styled.div`
   @media screen and (min-width: 1024px) {
     max-width: 53%;
     font-size: 14px;
-    margin-top: 2px;
+    margin-top: 6px;
   }
 
   ${({error}) => ErrorText}
@@ -313,6 +311,7 @@ export const SubjectToolbox = styled.div`
   @media screen and (min-width: 1024px) {
     font-weight: bold;
     vertical-align: middle;
+    margin-top:10px;
     top: 36%;
     right: 28px;
   }

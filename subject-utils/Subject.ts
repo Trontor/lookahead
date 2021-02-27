@@ -116,7 +116,9 @@ export default class Subject {
             if (
               classA.day !== classB.day ||
               classA.start !== classB.start ||
-              classA.finish !== classB.finish
+              classA.finish !== classB.finish ||
+              // dont merge classes where one is online and one is inperson
+              classA.online !== classB.online
             ) {
               doMerge = false;
             }
@@ -358,6 +360,8 @@ export default class Subject {
     const sameType = classA.classCode.type === classB.classCode.type;
     // Checks if the class number is the same, e.g. W01 === W01
     const sameNumber = classA.classCode.number === classB.classCode.number;
+    // dont merge classes where one is online and one is inperson
+    const sameDeliveryMethod = classA.online === classB.online;
     // Gets all classes in the same stream as classA or classB
     const sameStreamClasses = this._classList.filter(
       cls =>
@@ -370,7 +374,7 @@ export default class Subject {
         (cls.streamNumber === classA.streamNumber || cls.streamNumber === classB.streamNumber)
     );
     const inAStream = sameStreamClasses.length > 0;
-    return !inAStream && sameDay && sameTime && sameType && sameNumber;
+    return !inAStream && sameDay && sameTime && sameType && sameNumber && sameDeliveryMethod;
   };
 
   /**

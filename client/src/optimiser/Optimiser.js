@@ -157,23 +157,45 @@ class Optimiser {
     return {timetables, time};
   }
 
-  applyTimeRestrictions(earliestStart, latestFinish) {
+  //we just need to change this to do each subject individually
+  applyRestrictions(earliestStart, latestFinish, deliveryPreference) {
     /**
      * General Methodology:
-     * The idea is to apply the restrictions as requested, but if the
+     * The idea is to apply the restrictions as requested, and if the
      * restrictions end up with a subject completely missing a classtype,
-     * such as a Tutorial 1 - the restrictions are too tight.
+     * such as a Tutorial 1 - add a violating class in order to
+     * have a functioning timetable.
      * 1. Get class types before
      * 2. Go through each _regularClasses and prune classes
      * 3. Get class types after
-     * 4. If types after != types before, we cut off an entire class type, invalid
+     * 4. If types after != types before, we cut off an entire class type,
+     *    invalid timetable, add last deleted class
      * 5. Go through each _streamContainers, get stream type counts before
      * 6. Prune streams from container
      * 7. Get stream type counts after
-     * 8. If stream types counts after != stream type counts before, invalid
-     * 9. Otherwise, valid!
+     * 8. If stream types counts after != stream type counts before,
+     *    invalid timetable, add last deleted stream
+     * 9. Otherwise, valid without adding violating class!
      */
-    const classViolation = cls => cls.start < earliestStart || cls.finish > latestFinish;
+
+    // This is the function that governs whether a class is violating in terms of
+    // both time restrictions and delivery mode restrictions
+    const classViolation = cls => {
+      const timeViolation = cls.start < earliestStart || cls.finish > latestFinish
+      const isOnline = cls.online;
+      switch(deliveryPreference) {
+        case "inPerson":
+          return timeViolation || isOnline;
+        case "online":
+          return timeViolation || !isOnline;
+        default: //no preference
+          return timeViolation;
+      }
+    };
+
+    //remove weird streams so that this works for weird subjects
+    this.removeWeirdStreams();
+
     // Copy subjects, so modifications don't affect class-scope variable
     const subjects = JSON.parse(JSON.stringify(this.subjects));
     console.log(
@@ -188,23 +210,26 @@ class Optimiser {
       const beforeTypes = this.getClassTypes(subject);
       const beforeTypeCount = Object.keys(this.getClassTypes(subject)).length;
       console.log('\tRegular Classes');
-      console.log('\t\tBefore:', beforeTypes, beforeTypeCount, [...subject._regularClasses]);
+      console.log(`\t\tBefore (${subjectName}):`,  beforeTypes, beforeTypeCount, [...subject._regularClasses]);
       // (2) Now begin pruning
       const regClasses = subject._regularClasses;
+      let lastDeletedClass;
       for (let i = regClasses.length - 1; i >= 0; i--) {
         const cls = regClasses[i];
         if (classViolation(cls)) {
+          lastDeletedClass = cls;
           regClasses.splice(regClasses.indexOf(cls), 1);
         }
       }
       // (3) Get class type counts after
       const afterTypes = this.getClassTypes(subject);
       const afterTypeCount = Object.keys(afterTypes).length;
-      console.log('\t\tAfter:', afterTypes, afterTypeCount, regClasses);
+      console.log(`\t\tAfter (${subjectName}):`, afterTypes, afterTypeCount, regClasses);
       // (4) Check for invalid restriction
       if (afterTypeCount !== beforeTypeCount) {
         console.error('😠 [Class Pruning] Invalid Restrictions');
-        return false;
+        //Here we add back some violating subject to ensure that a timetable can still be made
+        regClasses.push(lastDeletedClass)
       }
       const containers = subject._streamContainers;
       console.log('\tStream Containers');
@@ -214,25 +239,29 @@ class Optimiser {
         const {streams} = container;
         // (5) Get before stream counts
         const beforeStreamCount = streams.length;
-        console.log(`\t\tBefore: ${beforeStreamCount}`, [...streams]);
+        console.log(`\t\tBefore (${subjectName}): ${beforeStreamCount}`, [...streams]);
         // Go through each stream, looking to prune
+        let lastDeletedStream;
         for (let i = streams.length - 1; i >= 0; i--) {
           const stream = streams[i];
           const violatesRestriction = stream.classes.some(classViolation);
           if (violatesRestriction) {
             // (6) Prune stream
+            lastDeletedStream = stream;
             streams.splice(i, 1);
           }
         }
         // (6) Get before stream counts
         const afterStreamCount = streams.length;
-        console.log(`\t\tAfter: ${afterStreamCount}`, streams);
+        console.log(`\t\tAfter (${subjectName}): ${afterStreamCount}`, streams);
         if (afterStreamCount === 0) {
           console.error('😠 [Stream Pruning] Invalid Restrictions');
           console.log(
             `Time restrictions have cut off all stream possibilities for ${subject.code}.`
           );
-          return false;
+          //Here we add back some stream to ensure that a timetable can still be made
+          //TODO: could set this up so the stream added is most similar to time restrictions
+          streams.push(lastDeletedStream);
         }
       }
     }

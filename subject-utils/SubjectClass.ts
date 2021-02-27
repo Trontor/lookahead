@@ -36,6 +36,8 @@ export default class SubjectClass {
   public readonly streamNumber: number;
   // The type of class 'Mandatory', 'Variable', 'Stream' or unknown ''
   public type: string = '';
+  // online true if there is no in person location
+  public online: boolean = false
   // The time length of the class
   private readonly duration: number;
   /**
@@ -48,6 +50,7 @@ export default class SubjectClass {
    * @param finish The time the class finishes
    * @param weeks The weeks this class runs during the semester
    * @param location The location where the class is held
+   * @param online true if there is no in person location
    */
   constructor(
     subject: Subject,
@@ -57,11 +60,13 @@ export default class SubjectClass {
     public readonly start: number,
     public readonly finish: number,
     public readonly weeks: number[],
-    location: string
+    location: string,
+    online: boolean,
   ) {
     this.subjectCode = subject.code;
     this.codes = [code];
     this.locations = [location];
+    this.online = online;
     // this.duration = moment.duration(finish.diff(start)).asHours();
     // Parse parts of class code
     const classCodeRaw = code.split('/')[4].trim();

@@ -23,8 +23,7 @@ export default function ({event, el}) {
   const height = content.height();
   const width = content.width();
   // Class-specific information is stored in extended props
-  const {subjectName, code, type, locations, streamNumber} = event.extendedProps;
-
+  const {subjectName, code, type, online, locations, streamNumber} = event.extendedProps;
   // HTML Element for the bottom elements (Subject Name + Code)
   const bottomWrapper = $('<div class="bottom-wrapper"/>');
   // Render subject name, e.g. "Software Modelling and Design" - if allowed
@@ -33,12 +32,26 @@ export default function ({event, el}) {
     subjectNameText.appendTo(bottomWrapper);
   }
   // Render number of locations available - if allowed
+
   if (height >= CLASS_LOCATION_MINIMUM.height && width >= CLASS_LOCATION_MINIMUM.width) {
-    const locationsText = $(
-      `<div class="fc-loc">${locations.length} location${locations > 1 ? 's' : ''}</div>`
-    );
+    let locationsText;
+    if(!online){
+      locationsText = $(
+          `<div class="fc-loc">
+        ${locations.length} location${locations.length > 1 ? 's' : ''}
+      </div>`
+      );
+    }
+    else {
+      locationsText = $(
+          `<div class="fc-loc">
+          Online
+        </div>`
+      );
+    }
     locationsText.appendTo(content);
   }
+
   // Render type of class text (Stream, Mandatory, Variable) - if allowed
   if (height >= CLASS_TYPE_MINIMUM.height && width >= CLASS_TYPE_MINIMUM.width) {
     const classTypeElement = $(`<div class="fc-type">${type}</div>`);
