@@ -27,7 +27,7 @@ jobs:
 
       - run:
           name: update-npm
-          command: npm install
+          command: npm install && npm install --prefix client
 
       - save_cache:
           paths:
