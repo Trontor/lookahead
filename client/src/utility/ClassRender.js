@@ -39,10 +39,11 @@ export default function ({event, el}) {
       locationsText = $(
           `<div class="fc-loc">
           
-         On Campus
+         ${locations.length > 1 ? locations.length + ' locations' : 'On Campus'}
       </div>`
       );
     }
+
     else {
       locationsText = $(
           `<div class="fc-loc">
