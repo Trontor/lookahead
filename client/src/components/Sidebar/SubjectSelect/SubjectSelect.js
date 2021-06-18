@@ -12,7 +12,7 @@ import setupLogRocketReact from 'logrocket-react';
 
 let LogRocketInitialised = false;
 
-const CURRENT_STUDY_PERIOD_INDEX = new Date().getMonth() <= 5 ? 1 : 3; // Switch to Semester 2 from July onwards
+const CURRENT_STUDY_PERIOD_INDEX = new Date().getMonth() <= 4 ? 1 : 3; // Switch to Semester 2 from June onwards
 const CURRENT_SUBJECT_LIST_YEAR = 2021;
 const studyPeriods = [
   {value: 'summer_term', label: 'Summer'},

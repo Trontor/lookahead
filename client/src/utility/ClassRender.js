@@ -38,7 +38,8 @@ export default function ({event, el}) {
     if(!online){
       locationsText = $(
           `<div class="fc-loc">
-        ${locations.length} location${locations.length > 1 ? 's' : ''}
+          
+         ${locations.length} location${locations.length > 1 ? 's' : ''}
       </div>`
       );
     }
