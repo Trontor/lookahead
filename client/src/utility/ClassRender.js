@@ -35,15 +35,21 @@ export default function ({event, el}) {
 
   if (height >= CLASS_LOCATION_MINIMUM.height && width >= CLASS_LOCATION_MINIMUM.width) {
     let locationsText;
-    if(!online){
+    if(!online && locations.length> 1){
       locationsText = $(
           `<div class="fc-loc">
           
-         ${locations.length > 1 ? locations.length.toString() + ' locations' : 'On Campus'}
+         ${locations.length} locations
       </div>`
       );
     }
-
+    else if(!online) {
+      locationsText = $(
+        `<div class="fc-loc">
+            On Campus
+      </div>`
+      );
+    }
     else {
       locationsText = $(
           `<div class="fc-loc">
