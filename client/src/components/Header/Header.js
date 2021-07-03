@@ -1,15 +1,18 @@
 import React from 'react';
 import {regularTheme, darkTheme} from '../../themes';
 import {setTheme} from '../../redux/actions/themeActions';
+import {setTimeFormat} from '../../redux/actions/timeFormatActions';
 import {useSelector, useDispatch} from 'react-redux';
-import {Emoji, HeaderSubtitle, HeaderText, HeaderWrapper} from './HeaderStyles';
+import {Emoji, HeaderSubtitle, HeaderText, HeaderWrapper, TimeFormatText} from './HeaderStyles';
+
 
 export default function Header() {
   const dispatch = useDispatch();
   const currentTheme = useSelector(state => state.theme);
+  const currentTimeFormat = useSelector(state => state.timeFormat);
 
-  const getCurrentEmoji = () => {
-    switch (currentTheme) {
+  const emoji = useSelector(state => {
+    switch (state.theme) {
       case regularTheme:
         return '🌙';
       case darkTheme:
@@ -17,7 +20,7 @@ export default function Header() {
       default:
         return '👀';
     }
-  };
+  });
 
   const switchTheme = () => {
     if (currentTheme === regularTheme) {
@@ -26,7 +29,15 @@ export default function Header() {
       dispatch(setTheme(regularTheme));
     }
   };
-  const emoji = getCurrentEmoji();
+
+  const switchTimeFormat = () => {
+    if (currentTimeFormat === '12hr') {
+      dispatch(setTimeFormat('24hr'));
+    } else {
+      dispatch(setTimeFormat('12hr'));
+    }
+  };
+
   return (
     <HeaderWrapper>
       <HeaderText>
@@ -34,6 +45,9 @@ export default function Header() {
         {/* Lookahead <EyeEmoji>👀</EyeEmoji> */}
       </HeaderText>
       <HeaderSubtitle>A University of Melbourne Semester Planner</HeaderSubtitle>
+      <TimeFormatText onClick={switchTimeFormat}>
+        <span>{currentTimeFormat} time</span>
+      </TimeFormatText>
       <Emoji onClick={switchTheme}>
         <span aria-label={`${emoji} emoji`} role="img">
           {emoji}
