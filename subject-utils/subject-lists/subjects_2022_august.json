@@ -1,0 +1,701 @@
+[
+ {
+  "code": "ABPL90355",
+  "name": "Issues and Techniques in Global Heritage",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "AMGT90001",
+  "name": "Principles of Arts Management",
+  "offered": [
+   "april",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANSC90006",
+  "name": "Genetics and Animal Breeding",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANTH30019",
+  "name": "Innovation, Design, and Society",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90036",
+  "name": "Theories of Art",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90490",
+  "name": "Integrative Business Capstone",
+  "offered": [
+   "summer_term",
+   "june",
+   "august",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90501",
+  "name": "Advanced Business Analytics",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90504",
+  "name": "Individual Research Project",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90507",
+  "name": "Executive Management 3",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90524",
+  "name": "Fintech: Blockchain in the New Economy",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90531",
+  "name": "Analytics for Strategic Management",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90040",
+  "name": "Biological and Medicinal Chemistry",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90010",
+  "name": "Data Analysis in Clinical Research",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90010",
+  "name": "Crime Prevention: Critical Approaches",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90003",
+  "name": "Conservation Intensive",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90023",
+  "name": "Content in the Field",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90032",
+  "name": "Technical Examination and Documentation",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90062",
+  "name": "Development and Inequality",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ECON20010",
+  "name": "TDM International Negotiation",
+  "offered": [
+   "january",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90278",
+  "name": "Learners and Learning Difficulties",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90290",
+  "name": "Promoting Positive Behaviour",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90482",
+  "name": "Linguistics and Sociolinguistics of CLIL",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90587",
+  "name": "Grammar for Language Teachers",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90642",
+  "name": "Critical Thinking and Curriculum",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90728",
+  "name": "Innovative Spaces and Pedagogy",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90741",
+  "name": "Effective Clinical Teaching",
+  "offered": [
+   "january",
+   "february",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90742",
+  "name": "Effective Clinical Supervision",
+  "offered": [
+   "january",
+   "february",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90752",
+  "name": "Researching Leadership Practice",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90801",
+  "name": "Clinical Education Modules",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90802",
+  "name": "Research in Clinical Education",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90805",
+  "name": "Clinical Simulation",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90892",
+  "name": "Clinical Teaching Practice (EC) 1",
+  "offered": [
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90893",
+  "name": "Clinical Teaching Practice (EC) 2",
+  "offered": [
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90936",
+  "name": "Communities of Arts Practices",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90953",
+  "name": "Interdisciplinary Science Education",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ERTH90060",
+  "name": "Spatial Data Analytics and Geoprocessing",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "FLTV20021",
+  "name": "Melbourne Film Festival Studio",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "FRST90034",
+  "name": "Ecological Restoration",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL90046",
+  "name": "Environmental Geology Field Techniques",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL90048",
+  "name": "Sedimentary Basins and Resource Analysis",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90005",
+  "name": "Indigenous Leadership",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50042",
+  "name": "Jessup Moot",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70008",
+  "name": "Corporate Tax B",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70011",
+  "name": "Commercial Applications of Equity",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70025",
+  "name": "Equality and Discrimination at Work",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70028",
+  "name": "International Trade Law",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70046",
+  "name": "Trade Marks and Unfair Competition",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70061",
+  "name": "Interpretation and Validity of Patents",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70081",
+  "name": "Capital Gains Tax: Problems in Practice",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70128",
+  "name": "Advanced Construction Law",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70190",
+  "name": "Corporate Governance & Directors' Duties",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70219",
+  "name": "International Environmental Law",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70314",
+  "name": "Principles of Construction Law",
+  "offered": [
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70336",
+  "name": "Advanced Commercial Law: Current Issues",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70371",
+  "name": "Principles of Employment Law",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70402",
+  "name": "Remedies in Commercial Law",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70420",
+  "name": "Hedge Funds and Private Equity Funds",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70450",
+  "name": "Global Perspectives on Construction Law",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70460",
+  "name": "Regulatory Policy and Practice",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90110",
+  "name": "Regulation of FinTech",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90124",
+  "name": "Gender and Human Rights",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90125",
+  "name": "Fundamentals of Intellectual Property",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90174",
+  "name": "Human Rights in Australia",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90215",
+  "name": "Law and Global Health Security",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90226",
+  "name": "Legal Leadership Essentials",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90239",
+  "name": "Superannuation Law and Regulation",
+  "offered": [
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90126",
+  "name": "Budgets and Financial Management",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90244",
+  "name": "Leading in Data Driven Organisations",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90257",
+  "name": "Supply Chain Challenges & Opportunities",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90272",
+  "name": "Procurement and Supply Management",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90273",
+  "name": "Service Supply Chain Management",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": true
+ },
+ {
+  "code": "MUSI90003",
+  "name": "Orchestral Conducting",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90014",
+  "name": "Leading Healthcare Change for Impact",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90020",
+  "name": "Media and Messaging",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90209",
+  "name": "Comparative Health Systems",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90242",
+  "name": "Epidemiology 2",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90010",
+  "name": "Professional Practice in Policy Research",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90037",
+  "name": "Governance",
+  "offered": [
+   "march",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90046",
+  "name": "Persuasion for Policymakers",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90048",
+  "name": "Crisis Management",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90024",
+  "name": "Consultation Liaison Psychiatry",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90093",
+  "name": "Psychiatric Research Project",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90094",
+  "name": "Special Topics in Psychiatry",
+  "offered": [
+   "august"
+  ],
+  "online": false
+ }
+]

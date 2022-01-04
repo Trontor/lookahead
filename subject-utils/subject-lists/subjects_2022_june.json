@@ -1,0 +1,697 @@
+[
+ {
+  "code": "ABPL90319",
+  "name": "GIS In Planning, Design & Development",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90322",
+  "name": "Human Environments Relations",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI20003",
+  "name": "Sustainable Food Systems",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI30016",
+  "name": "Irrigation and Water Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARCH30003",
+  "name": "Environmental Design- Commercial",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90006",
+  "name": "Introductory Academic Program",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90013",
+  "name": "Brand Management",
+  "offered": [
+   "summer_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90014",
+  "name": "Brand Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90133",
+  "name": "Industry Studies in Asia",
+  "offered": [
+   "june",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90480",
+  "name": "Leadership",
+  "offered": [
+   "march",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90506",
+  "name": "Executive Management 2",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90011",
+  "name": "Research and Criminal Justice Governance",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90022",
+  "name": "Introduction to Offender Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90022",
+  "name": "Digital Protocols",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "DPSS30011",
+  "name": "Design and Production Melbourne x Berlin",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "DRAM10026",
+  "name": "Inside look at MTC",
+  "offered": [
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC20076",
+  "name": "AUSLAN and Visual Communication",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90563",
+  "name": "Engaging Children in the Arts",
+  "offered": [
+   "semester_1",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90743",
+  "name": "Clinical Education in Practice",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90744",
+  "name": "Assessing Clinical Learners",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90747",
+  "name": "Evaluation Capstone",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90919",
+  "name": "Place Based Elective (Indigenous)",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90935",
+  "name": "Evaluation Capstone Part 2",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90976",
+  "name": "Positive Learning Environments",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91004",
+  "name": "Professional Learning Capstone (EC&P)",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91015",
+  "name": "Professional Learning Capstone (Sec)",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91017",
+  "name": "Education Randomised Controlled Trials",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ENEN90037",
+  "name": "International River Basin Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EVSC20008",
+  "name": "Earth's Surface Processes",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FNCE90051",
+  "name": "Fundamentals of Portfolio Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FNCE90057",
+  "name": "Ethics In Finance",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FOOD90031",
+  "name": "Food Packaging Materials and Processes",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90042",
+  "name": "Managing Urban Trees",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "IBUS90004",
+  "name": "Cross Cultural Management and Teamwork",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90004",
+  "name": "Collaborative Fieldwork",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ISYS90070",
+  "name": "Information Security Consulting",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "JOUR90006",
+  "name": "Dilemmas in Journalism: Law and Ethics",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70060",
+  "name": "Patent Practice",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70135",
+  "name": "Bargaining at Work",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70293",
+  "name": "Climate Change Law",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70335",
+  "name": "Contract Interpretation",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70350",
+  "name": "Management for Professionals",
+  "offered": [
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70366",
+  "name": "International Refugee Law",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90025",
+  "name": "Liability Insurance Law",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90126",
+  "name": "Digital Trade",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90149",
+  "name": "Corruption: A Global Approach",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90167",
+  "name": "Administrative Law in Tax Matters",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90206",
+  "name": "Social Procurement Law and Policy",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90229",
+  "name": "Rethinking Construction Contracting Risk",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90231",
+  "name": "Chinese Tax Law and Policy",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MECM90015",
+  "name": "Perspectives on Digital Platforms",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90003",
+  "name": "Student Conference 1",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90005",
+  "name": "Student Conference 2",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90022",
+  "name": "Student Conference 3",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90024",
+  "name": "Student Conference 4",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT20014",
+  "name": "Community Volunteering - Global",
+  "offered": [
+   "summer_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT30021",
+  "name": "Community Volunteering - Global",
+  "offered": [
+   "summer_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT90024",
+  "name": "Indigenous Research and Leadership",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20163",
+  "name": "Samba Band",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20164",
+  "name": "Free Play New Music Improvisation Ensem",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90076",
+  "name": "Applied Pathophysiology",
+  "offered": [
+   "summer_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90093",
+  "name": "Advanced Therapeutic Skills",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90119",
+  "name": "Mental Health Nursing Practice 2",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90120",
+  "name": "Evidence in Practice",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90136",
+  "name": "Cancer Nursing Practice 2",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90137",
+  "name": "Medical Oncology Nursing 1",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90139",
+  "name": "Haematology Nursing 1",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90149",
+  "name": "Emergency Nursing",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90151",
+  "name": "Intensive Care Nursing",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90152",
+  "name": "Critical Care Nursing",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90001",
+  "name": "Oral Health Practice 4",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90002",
+  "name": "Oral Pathology and Adult Oral Function",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90003",
+  "name": "Oral Health Sciences 4",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90009",
+  "name": "Working Ethically",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90030",
+  "name": "Clinical Paediatric Physiotherapy",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS30028",
+  "name": "On Country Learning: Indigenous Studies",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90299",
+  "name": "Workspace Design Evaluation",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90054",
+  "name": "Global Issues in Indigenous Governance",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "PUBL90004",
+  "name": "Business and Professional Communications",
+  "offered": [
+   "semester_1",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "THTR20043",
+  "name": "Design and the Moving Image",
+  "offered": [
+   "june",
+   "winter_term"
+  ],
+  "online": true
+ }
+]

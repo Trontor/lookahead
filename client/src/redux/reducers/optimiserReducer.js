@@ -14,7 +14,8 @@ import {
 } from '../actionTypes';
 
 import ReactGA from 'react-ga';
-import uuid from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
+
 
 const initialState = {
   optimising: false,

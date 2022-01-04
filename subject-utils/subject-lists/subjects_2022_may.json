@@ -1,0 +1,550 @@
+[
+ {
+  "code": "ANSC90005",
+  "name": "Behaviour of Farm & Companion Animals",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90002",
+  "name": "Social Research and Reflexive Writing",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90042",
+  "name": "Digital Methods",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90002",
+  "name": "Financial Accounting",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90054",
+  "name": "Corporate Strategy",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90124",
+  "name": "Implementation of Strategy",
+  "offered": [
+   "march",
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90218",
+  "name": "Innovation",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90226",
+  "name": "Managing People",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90500",
+  "name": "Business Analytics Foundations",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90514",
+  "name": "Industry Studies in Europe",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90535",
+  "name": "Innovation Management",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90052",
+  "name": "Catalysis",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90029",
+  "name": "Research Development and Translation",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90029",
+  "name": "Preventive Conservation",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90068",
+  "name": "Contemporary Leadership",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "DEVT90071",
+  "name": "Organisation Development and Change",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90753",
+  "name": "Leading Learning and Teaching",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90786",
+  "name": "Leading Educational Research",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90943",
+  "name": "Marketing and Innovation in Education",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91024",
+  "name": "Professional Pedagogical Practices (P3)",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "GEOL90034",
+  "name": "Practical Igneous Petrology",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL90044",
+  "name": "Ore Deposit Models",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70013",
+  "name": "Global Financial Order",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70031",
+  "name": "Goods and Services Tax",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70073",
+  "name": "Expert Evidence",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70113",
+  "name": "Public Private Partnerships Law",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70182",
+  "name": "New Media and Communications",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70206",
+  "name": "Banking and Secured Finance",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70210",
+  "name": "Resources Joint Ventures",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70217",
+  "name": "Fundamentals of the Common Law",
+  "offered": [
+   "february",
+   "may",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70225",
+  "name": "Medical Litigation",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70245",
+  "name": "Avoid and Manage Construction Disputes",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70319",
+  "name": "Tax Policy",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70382",
+  "name": "Business and Human Rights",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70392",
+  "name": "International Business Transactions",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90022",
+  "name": "International Dispute Settlement",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90088",
+  "name": "Disaster Law and Climate Adaptation",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90095",
+  "name": "International Trade and Competition Law",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90127",
+  "name": "Comparative Indigenous Rights",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90152",
+  "name": "Health Data Governance",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90165",
+  "name": "AI and Consumer Protection Law",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90172",
+  "name": "Core Principles of Contract",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90233",
+  "name": "Tax in Practice",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "MEDI90108",
+  "name": "Terror Medicine Principles & Responses",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90027",
+  "name": "Clinical Elective",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT30017",
+  "name": "Global Management Consulting",
+  "offered": [
+   "summer_term",
+   "may",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90132",
+  "name": "Professional Communication",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90258",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90276",
+  "name": "Logistics and Transportation Management",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90279",
+  "name": "Supply Chain Technologies",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MUSI90027",
+  "name": "Piano Pedagogy",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90017",
+  "name": "Political Advising",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90018",
+  "name": "Crisis Management",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90002",
+  "name": "The Pelvic Floor:Function&Dysfunction",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90003",
+  "name": "Advanced Practice in Pelvic Floor Physio",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90016",
+  "name": "Forensic Psychiatry",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "PSYT90022",
+  "name": "Cognitive Behaviour Therapy",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "PSYT90059",
+  "name": "Substance Use Disorders",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "PSYT90068",
+  "name": "Perinatal Psychiatry",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90088",
+  "name": "History & Philosophy of Psychiatry",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "SCWK90048",
+  "name": "Supervised Field Placement 1A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90050",
+  "name": "Supervised Field Placement 2A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90025",
+  "name": "Social Justice: Policy and Practice",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ }
+]

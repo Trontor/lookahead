@@ -1,0 +1,472 @@
+[
+ {
+  "code": "ABPL30069",
+  "name": "Installations and Happenings",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90152",
+  "name": "Bower Studio - Community Development",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90320",
+  "name": "Building Resilient Settlements",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90332",
+  "name": "Labour in Construction",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90380",
+  "name": "Designing for Heat in the Public Domain",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90218",
+  "name": "Innovation",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90485",
+  "name": "Global Business Practicum",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90023",
+  "name": "Advanced Practice in Offender Management",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90070",
+  "name": "Leadership Skills in Action",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90071",
+  "name": "Organisation Development and Change",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90076",
+  "name": "Social Policy and Development",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN20021",
+  "name": "New Caledonia in the 21st Century",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN30019",
+  "name": "New Caledonia in the 21st Century",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "FRST90030",
+  "name": "Forests in the Asia Pacific Region",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30023",
+  "name": "Global Climate Change in Context",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30030",
+  "name": "Spatial Modelling for Nature and People",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG90026",
+  "name": "Global Climate Change In Context",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "HIST30051",
+  "name": "Venice and Cultures of Consumption",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90044",
+  "name": "Plant Health",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "IBUS90004",
+  "name": "Cross Cultural Management and Teamwork",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50031",
+  "name": "Legal Theory",
+  "offered": [
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50036",
+  "name": "Remedies",
+  "offered": [
+   "semester_1",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50096",
+  "name": "Media Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70018",
+  "name": "Alternative Dispute Resolution",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70024",
+  "name": "Corporate Tax A",
+  "offered": [
+   "semester_1",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70091",
+  "name": "Human Rights and Terrorism",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70125",
+  "name": "International Financial Transactions",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70141",
+  "name": "Energy Regulation and the Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70146",
+  "name": "Tax Treaties",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70185",
+  "name": "Water Law & Natural Resources Management",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70200",
+  "name": "Employment Contract Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70234",
+  "name": "International Humanitarian Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70259",
+  "name": "Medical Ethics",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70261",
+  "name": "Designs Law and Practice",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70270",
+  "name": "Construction Contract Analysis, Drafting",
+  "offered": [
+   "february",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70304",
+  "name": "Internat Investment Law and Arbitration",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70329",
+  "name": "Residential Construction Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70462",
+  "name": "Sports Integrity and Investigations",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90017",
+  "name": "International Tax: Anti-avoidance",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90058",
+  "name": "Comparative Human Rights Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90113",
+  "name": "Mediation: Principles and Practice",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90115",
+  "name": "Space, High Seas, Seabed & Antarctic Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90145",
+  "name": "Artificial Intelligence and the Law",
+  "offered": [
+   "march",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90238",
+  "name": "Press Freedom and National Security",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90027",
+  "name": "Clinical Elective",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90037",
+  "name": "Conflict and Negotiation",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90258",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90261",
+  "name": "HR Analytics",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90276",
+  "name": "Logistics and Transportation Management",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90279",
+  "name": "Supply Chain Technologies",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90169",
+  "name": "Opera Performance Practicum 2",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90172",
+  "name": "Opera Performance Practicum 4",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90297",
+  "name": "Preventing Violence Against Women",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90006",
+  "name": "Executive Leadership and Management",
+  "offered": [
+   "march",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90024",
+  "name": "Future of Work in Comparative Contexts",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ }
+]

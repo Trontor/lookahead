@@ -192,7 +192,7 @@ const scrapeSubjects = async (
 // Driver code below
 //
 
-const years = [2021];
+const years = [2022];
 const studyPeriods = Object.keys(SubjectPeriod);
 
 const sortSubjectInfo = (subjectInfo: SubjectInfo[]) =>

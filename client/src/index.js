@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
 import store from './redux/store';
 import axios from 'axios';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import ReactGA from 'react-ga';
 
 if (process.env.NODE_ENV && process.env.NODE_ENV !== 'development') {
