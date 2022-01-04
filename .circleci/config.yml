@@ -27,7 +27,7 @@ jobs:
 
       - run:
           name: update-npm
-          command: npm install && npm install --prefix client
+          command: yarn install && yarn --cwd client install
 
       - save_cache:
           paths:
@@ -35,7 +35,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
+      - run: yarn test
   deploy:
     docker:
       - image: buildpack-deps:trusty

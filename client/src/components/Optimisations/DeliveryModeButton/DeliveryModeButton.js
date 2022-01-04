@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {DeliveryButton} from './DeliveryModeButtonStyles';
 
 import {setdeliveryPreference} from '../../../redux/actions/optimisationsActions';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 export default function DeliveryModeButton(props) {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ export default function DeliveryModeButton(props) {
     const oldActive = stateVars[e].activated;
 
     //disable the buttons that was not the one that was pressed
-    for (const [key, value] of Object.entries(stateVars)) {
+    for (const [key] of Object.entries(stateVars)) {
       console.log('key', key);
       if (key === e) {
         stateVars[key].setActivated(!oldActive);
