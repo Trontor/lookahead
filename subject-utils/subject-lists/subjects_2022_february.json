@@ -1,0 +1,982 @@
+[
+ {
+  "code": "ABPL90394",
+  "name": "ZEMCH Sustainable Design Workshop",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90404",
+  "name": "Place Making for The Built Environment",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90419",
+  "name": "Contemporary Architectural Archives",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI10039",
+  "name": "Australia in the Wine World",
+  "offered": [
+   "february",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI20027",
+  "name": "Vine to Wine",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI30043",
+  "name": "Resource Management Economics",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI90013",
+  "name": "Financial Management for Agribusiness",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI90097",
+  "name": "Australian Agriculture",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "AMGT90029",
+  "name": "Applied Research Methods",
+  "offered": [
+   "february",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANTH40012",
+  "name": "Explanation and Understanding",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90006",
+  "name": "Introductory Academic Program",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ATOC90015",
+  "name": "Data Assimilation and Model Improvement",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "BCMB40002",
+  "name": "Biochemistry & Pharmacology Coursework",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90027",
+  "name": "Principles of Clinical Research",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90026",
+  "name": "Conservation Professional Practices",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90001",
+  "name": "Development Project Management & Design",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC20069",
+  "name": "Deafness and Communication",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC20078",
+  "name": "Pop-up Theatre: Performance in Community",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC20082",
+  "name": "Indigenous Education in Community",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC30065",
+  "name": "Ethics, gender and the family",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90258",
+  "name": "Student Wellbeing: Current Approaches",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90376",
+  "name": "Science, Technology (Digital and Design)",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90378",
+  "name": "Health and Physical Education",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90419",
+  "name": "Education Research Methodology",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90579",
+  "name": "Interpersonal and Group Processes",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90628",
+  "name": "Relationship Skills for Educators 1",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90629",
+  "name": "Leading Change for Student Wellbeing",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90638",
+  "name": "Education, Knowledge and Power",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90684",
+  "name": "21st Century Literacies: Policy & Praxis",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90741",
+  "name": "Effective Clinical Teaching",
+  "offered": [
+   "january",
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90742",
+  "name": "Effective Clinical Supervision",
+  "offered": [
+   "january",
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90743",
+  "name": "Clinical Education in Practice",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90744",
+  "name": "Assessing Clinical Learners",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90750",
+  "name": "Leading Schools Through Leading Self",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90755",
+  "name": "Evidence for Learning and Teaching",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90759",
+  "name": "Education Research Project",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90837",
+  "name": "Clinical Education Research Proposal",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90845",
+  "name": "Learning Intervention 1",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90860",
+  "name": "Science and Technology in Practice",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90872",
+  "name": "Foundations of the Science of Learning",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90880",
+  "name": "Becoming a Clinical Practitioner (Prim)",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90892",
+  "name": "Clinical Teaching Practice (EC) 1",
+  "offered": [
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90893",
+  "name": "Clinical Teaching Practice (EC) 2",
+  "offered": [
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90896",
+  "name": "Educational Leadership (EC & Prim)",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90898",
+  "name": "Introduction to Clinical Practice (EC)",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90903",
+  "name": "Contemporary Education Debates",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90905",
+  "name": "Becoming a Clinical Practitioner (Sec)",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90907",
+  "name": "Inclusive Language, Literacy & Numeracy",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90938",
+  "name": "Quality Assessment Design",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90942",
+  "name": "Managing the Educational Organisation",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90950",
+  "name": "Globalisation and Education Policy",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90952",
+  "name": "Informal Science Communication",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90977",
+  "name": "Diverse and Inclusive Classrooms (EC&P)",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EURO20007",
+  "name": "A Taste of Europe: Melbourne Intensive",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EURO30006",
+  "name": "A Taste of Europe: Melbourne Intensive",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "EVSC90025",
+  "name": "Water Sensitive Urban Design",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FLTV30031",
+  "name": "Screen Futures: Power and Lens",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "FRST30001",
+  "name": "Forest Systems",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "FRST90025",
+  "name": "Patterns and Processes of Landscape Fire",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEND40005",
+  "name": "Gender Studies Research Methods",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30028",
+  "name": "Mobile Worlds",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG90029",
+  "name": "Research Methods in Geography",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL20001",
+  "name": "Geology of Southeast Australia",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL90005",
+  "name": "Hydrogeology/Environmental Geochemistry",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90039",
+  "name": "Green Infrastructure for Liveable Cities",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90041",
+  "name": "Tree Growth and Function",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "ISLM20003",
+  "name": "The Qur'an: An Introduction",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50055",
+  "name": "Advocacy",
+  "offered": [
+   "february",
+   "semester_1",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50064",
+  "name": "Employment Law",
+  "offered": [
+   "february",
+   "semester_1"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70217",
+  "name": "Fundamentals of the Common Law",
+  "offered": [
+   "february",
+   "may",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70270",
+  "name": "Construction Contract Analysis, Drafting",
+  "offered": [
+   "february",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70314",
+  "name": "Principles of Construction Law",
+  "offered": [
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70385",
+  "name": "White Collar Crime",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70387",
+  "name": "Fundamentals of Patent Drafting",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90014",
+  "name": "Construction Law and Projects in Asia",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90157",
+  "name": "Esports and the Law",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90186",
+  "name": "Advanced Trusts Law",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90035",
+  "name": "MD Research Skills 1",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90036",
+  "name": "MD Research Skills 2",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90231",
+  "name": "BioDesign Innovation",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT90005",
+  "name": "Partnerships for Sustainable Futures",
+  "offered": [
+   "february",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90001",
+  "name": "Administrative Challenges in Practice",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90016",
+  "name": "Public Sector Governance",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90013",
+  "name": "Paediatric Physiotherapy Theory",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS40013",
+  "name": "Social Science Research Seminar",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS90007",
+  "name": "US Foreign Policy",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90095",
+  "name": "Economic Evaluation 2",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90189",
+  "name": "Health Program Design & Implementation",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90200",
+  "name": "Advanced Qualitative Health Research",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90217",
+  "name": "Foundations of Public Health",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90243",
+  "name": "Epidemiology in Practice",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90006",
+  "name": "Child and Adolescent Psychiatry",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90096",
+  "name": "Foundations of Youth Mental Health",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90100",
+  "name": "Mental Ill-health in Young People 2",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90105",
+  "name": "Practice-based Research Methods",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "RADI90010",
+  "name": "Radiology for Physiotherapists",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90048",
+  "name": "Supervised Field Placement 1A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90050",
+  "name": "Supervised Field Placement 2A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90053",
+  "name": "Counselling and Interviewing Skills",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90057",
+  "name": "Working with Groups and Communities",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90058",
+  "name": "Researching Social Work Practice 2",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90059",
+  "name": "Engaging with Families",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90060",
+  "name": "Advanced Narrative Skills Development",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90064",
+  "name": "Lifespan Risk and Resilience",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90065",
+  "name": "Social Policy for Social Work Practice",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90066",
+  "name": "Social Work Theory and Practice",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90072",
+  "name": "Professional Identity 1",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI30009",
+  "name": "Living in a Risk Society",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI30012",
+  "name": "Digital Technology and Social Change",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90011",
+  "name": "Foundations of Social Policy",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ },
+ {
+  "code": "THTR30042",
+  "name": "Hashtag Cyberstar",
+  "offered": [
+   "summer_term",
+   "february",
+   "winter_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "VETS40023",
+  "name": "Professional Veterinary Practice Part 2",
+  "offered": [
+   "february",
+   "semester_2",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "ZOOL30008",
+  "name": "Experimental Marine Biology",
+  "offered": [
+   "february"
+  ],
+  "online": false
+ }
+]

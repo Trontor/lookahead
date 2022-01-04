@@ -1,0 +1,59 @@
+[
+ {
+  "code": "BUSA90508",
+  "name": "Executive Management 4",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEND90015",
+  "name": "Researching Violence Against Women",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50131",
+  "name": "Negotiations",
+  "offered": [
+   "summer_term",
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70139",
+  "name": "International Construction Law",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70242",
+  "name": "Internat.Issues in Intellectual Property",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70353",
+  "name": "Comparative International Tax",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70452",
+  "name": "Human Rights and Climate Change",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ }
+]

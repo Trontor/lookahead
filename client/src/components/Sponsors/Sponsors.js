@@ -12,7 +12,7 @@ export default function Sponsors() {
   const [goldSilver, setGoldSilver] = useState([]);
   const optimiser = useSelector(
     state => state.optimiser,
-    (left, right) => left.timetables.length === right.timetables.length
+    (left, right) => left?.timetables?.length === right?.timetables?.length
   );
   const [dismissedCount, setDismissedCount] = useState(0);
   useEffect(() => {

@@ -13,18 +13,18 @@ import setupLogRocketReact from 'logrocket-react';
 let LogRocketInitialised = false;
 
 const CURRENT_STUDY_PERIOD_INDEX = new Date().getMonth() <= 4 ? 1 : 3; // Switch to Semester 2 from June onwards
-const CURRENT_SUBJECT_LIST_YEAR = 2021;
+const CURRENT_SUBJECT_LIST_YEAR = 2022;
 const studyPeriods = [
   {value: 'summer_term', label: 'Summer'},
   {value: 'semester_1', label: 'Sem 1'},
   {value: 'winter_term', label: 'Winter'},
   {value: 'semester_2', label: 'Sem 2'},
   {value: 'year_long', label: 'Year Long'},
-  // { value: "january", label: "January" },
-  // { value: "february", label: "February" },
-  // { value: "march", label: "March" },
-  // { value: "april", label: "April" },
-  // { value: "may", label: "May" },
+  {value: 'january', label: 'January'},
+  {value: 'february', label: 'February'},
+  {value: 'march', label: 'March'},
+  {value: 'april', label: 'April'},
+  {value: 'may', label: 'May'},
 ]
   .concat(moment.months().map(month => ({value: month.toLowerCase(), label: month})))
   .map(period => ({
@@ -35,7 +35,7 @@ const studyPeriods = [
 
 const SubjectSelect = props => {
   // Redux hooks
-  const subjectLists = useSelector(state => state.subjectLists, true);
+  const subjectLists = useSelector(state => state.subjectLists);
   const dispatch = useDispatch();
   // React hooks
   const [selectedStudyPeriod, setSelectedStudyPeriod] = useState(

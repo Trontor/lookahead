@@ -1,0 +1,371 @@
+[
+ {
+  "code": "BISY90016",
+  "name": "Predictive Analytics",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90072",
+  "name": "Global Business Economics",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90279",
+  "name": "Organisational Change",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90502",
+  "name": "Analytics Lab",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90512",
+  "name": "Industry Studies in Asia",
+  "offered": [
+   "march",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90013",
+  "name": "Responsibilities in Clinical Research",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90013",
+  "name": "Advanced Practice in Forensic Disability",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90031",
+  "name": "Analytical Science in Conservation",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90909",
+  "name": "Clinical Teaching Practice (Sec) 2",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90910",
+  "name": "Clinical Teaching Practice (Sec) 3",
+  "offered": [
+   "semester_1",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90941",
+  "name": "Leading the Educational Organisation",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91012",
+  "name": "Clinical Teaching Practice (Sec) 3 Ext",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90006",
+  "name": "Powerful Encounters",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70002",
+  "name": "Tax of Business and Investment Income",
+  "offered": [
+   "semester_1",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70033",
+  "name": "International Criminal Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70120",
+  "name": "International Law and Children's Rights",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70197",
+  "name": "Labour Standards and their Enforcement",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70205",
+  "name": "Project Finance",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70225",
+  "name": "Medical Litigation",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70239",
+  "name": "Payment Matters in Construction Projects",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70350",
+  "name": "Management for Professionals",
+  "offered": [
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70362",
+  "name": "Information Technology Contracting Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70392",
+  "name": "International Business Transactions",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90006",
+  "name": "Law and Legal Practice in Asia",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90035",
+  "name": "Trade Mark Practice",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90051",
+  "name": "Commercial Arbitration in Practice",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90119",
+  "name": "Law and Public Administration",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90208",
+  "name": "Law of Construction Delay and Disruption",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90214",
+  "name": "Indigenous Law in Aotearoa and Australia",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90216",
+  "name": "Cryptoassets in Global Context",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90232",
+  "name": "Global Digital Tax",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90246",
+  "name": "International Employment & Equality Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90109",
+  "name": "Managing Complex Disasters",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT30017",
+  "name": "Global Management Consulting",
+  "offered": [
+   "summer_term",
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90254",
+  "name": "Indigenous Business Leadership",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90255",
+  "name": "Designing Supply Chains",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90277",
+  "name": "Supply Chain Intelligence",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90278",
+  "name": "Supply Chain Strategy",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90008",
+  "name": "Using Evidence",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90004",
+  "name": "Exercise for Women",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90244",
+  "name": "Global Health and Human Rights",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90049",
+  "name": "Supervised Field Placement 1B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90051",
+  "name": "Supervised Field Placement 2B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "VETS90089",
+  "name": "Eradicable Diseases",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ }
+]

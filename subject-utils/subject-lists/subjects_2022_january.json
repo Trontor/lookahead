@@ -1,0 +1,575 @@
+[
+ {
+  "code": "ABPL90360",
+  "name": "MUCH Heritage Industry Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90434",
+  "name": "Construction Management Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90046",
+  "name": "Corporate Finance",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90074",
+  "name": "Global Business Economics",
+  "offered": [
+   "january",
+   "april",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90090",
+  "name": "Financial Institutions",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90227",
+  "name": "Operations",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90360",
+  "name": "Business Law",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90479",
+  "name": "MBA Internship",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90483",
+  "name": "General Management 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90525",
+  "name": "Business and Economics Internship",
+  "offered": [
+   "january",
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90530",
+  "name": "Managing Sustainability for Strat. Adv.",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90532",
+  "name": "Business Essentials",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "DENT90125",
+  "name": "Clinical Practice 4",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "DENT90126",
+  "name": "Intro to Dental Medicine and Surgery",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "ECON20010",
+  "name": "TDM International Negotiation",
+  "offered": [
+   "january",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90126",
+  "name": "School Effectiveness and Improvement",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90137",
+  "name": "Personal and Interpersonal Leadership",
+  "offered": [
+   "january",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90580",
+  "name": "Evidence Based Learning and Teaching 1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90582",
+  "name": "Evidence Based Learning and Teaching 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90583",
+  "name": "Learning and Teaching Contexts 1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90584",
+  "name": "Learning and Teaching Contexts 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90596",
+  "name": "Learning Area A1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90597",
+  "name": "Learning Area B1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90630",
+  "name": "Relationship Skills for Educators 2",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90741",
+  "name": "Effective Clinical Teaching",
+  "offered": [
+   "january",
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90742",
+  "name": "Effective Clinical Supervision",
+  "offered": [
+   "january",
+   "february",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90747",
+  "name": "Evaluation Capstone",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90822",
+  "name": "Connecting and Engaging Students",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90823",
+  "name": "Language, Literacy and Numeracy",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90859",
+  "name": "Autism Intervention",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90875",
+  "name": "Literacy for the Primary Years",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90935",
+  "name": "Evaluation Capstone Part 2",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91001",
+  "name": "Science, Tech (Digital & Design) (EC&P)",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91002",
+  "name": "Health and Physical Education (EC&P)",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91015",
+  "name": "Professional Learning Capstone (Sec)",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91032",
+  "name": "Primary Humanities Education (EC&P)",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20026",
+  "name": "Painting Techniques",
+  "offered": [
+   "january",
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20035",
+  "name": "Drawing with Anatomy",
+  "offered": [
+   "january",
+   "summer_term",
+   "winter_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20036",
+  "name": "Under Camera Animation",
+  "offered": [
+   "january",
+   "summer_term",
+   "winter_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20044",
+  "name": "Art and the Botanical",
+  "offered": [
+   "january",
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30025",
+  "name": "Biogeography and Ecology of Fire",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG90027",
+  "name": "Biogeography and Ecology of Fire",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90002",
+  "name": "Enacting Influence",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "JOUR90006",
+  "name": "Dilemmas in Journalism: Law and Ethics",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90062",
+  "name": "Business Negotiations and Deal-Making",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90107",
+  "name": "Disaster Medicine Principles & Responses",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "MKTG90039",
+  "name": "Marketing Analytics",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI10023",
+  "name": "Music Language 1: the Diatonic World",
+  "offered": [
+   "january",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20061",
+  "name": "Music Language 2: Chromaticism & Beyond",
+  "offered": [
+   "january",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20163",
+  "name": "Samba Band",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20164",
+  "name": "Free Play New Music Improvisation Ensem",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI30046",
+  "name": "Music Language 3: Modern Directions",
+  "offered": [
+   "january",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYC90114",
+  "name": "Professional Psychology Skills 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90004",
+  "name": "Psychiatry of Old Age",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ },
+ {
+  "code": "VETS90086",
+  "name": "Epidemiology of Epidemics",
+  "offered": [
+   "january"
+  ],
+  "online": true
+ }
+]

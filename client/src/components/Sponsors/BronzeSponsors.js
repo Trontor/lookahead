@@ -14,7 +14,7 @@ import {getCategorisedSponsors} from '../../utility/SponsorFilter';
 export default function BronzeSponsors() {
   const optimiser = useSelector(
     state => state.optimiser,
-    (left, right) => left.timetables.length === right.timetables.length
+    (left, right) => left?.timetables?.length === right?.timetables?.length
   );
   const sponsors = useSelector(state => state.sponsors, shallowEqual);
   const {bronze} = getCategorisedSponsors(sponsors);

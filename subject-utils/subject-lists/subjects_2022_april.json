@@ -1,0 +1,649 @@
+[
+ {
+  "code": "AMGT90001",
+  "name": "Principles of Arts Management",
+  "offered": [
+   "april",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90044",
+  "name": "The Art & Practice of the Personal Essay",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90047",
+  "name": "Advanced Qualitative Methods",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90026",
+  "name": "Business Strategy",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90074",
+  "name": "Global Business Economics",
+  "offered": [
+   "january",
+   "april",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90224",
+  "name": "Managing People",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90227",
+  "name": "Operations",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90258",
+  "name": "Marketing Research",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90261",
+  "name": "Marketing Strategy",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90270",
+  "name": "Mergers and Acquisitions",
+  "offered": [
+   "april",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90273",
+  "name": "Negotiations",
+  "offered": [
+   "summer_term",
+   "april",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90341",
+  "name": "Supply Chain Management",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90479",
+  "name": "MBA Internship",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90480",
+  "name": "Leadership",
+  "offered": [
+   "march",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "march",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90491",
+  "name": "Game Theory for Business Strategy",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90492",
+  "name": "Financial Analysis and Valuation",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90505",
+  "name": "Executive Management 1",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90523",
+  "name": "Managing Diversity in the Workplace",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90532",
+  "name": "Business Essentials",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90064",
+  "name": "Advanced Environmental Analysis",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90065",
+  "name": "Advanced NMR Spectroscopy",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90028",
+  "name": "Advanced Clinical Trial Design",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90037",
+  "name": "Disability, Crime and Justice",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90005",
+  "name": "Conservation Assessment and Treatment 2",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90027",
+  "name": "RESPECT",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90140",
+  "name": "Curriculum Leadership and Management",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90505",
+  "name": "Listening and the Learning Environment",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90619",
+  "name": "Leading Educational Ideas",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90683",
+  "name": "Reading Texts: Selection to Response",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90846",
+  "name": "Learning Intervention 2",
+  "offered": [
+   "april",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90909",
+  "name": "Clinical Teaching Practice (Sec) 2",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90939",
+  "name": "Using Data to Improve Learning",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90941",
+  "name": "Leading the Educational Organisation",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90987",
+  "name": "Clinical Teaching Practice (EC&P) 4",
+  "offered": [
+   "semester_1",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "ENST90034",
+  "name": "Adapting to Climate Change",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EVSC90022",
+  "name": "Bushfire Urban Planning",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FNCE90044",
+  "name": "Special Topics in Finance B",
+  "offered": [
+   "april"
+  ],
+  "online": true
+ },
+ {
+  "code": "FRST90022",
+  "name": "Ecosystem Processes of Water and Soil",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOM90044",
+  "name": "Geographic Information Systems",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "HLTH90004",
+  "name": "Health & Human Services Research Project",
+  "offered": [
+   "april"
+  ],
+  "online": true
+ },
+ {
+  "code": "INDG90003",
+  "name": "Disruption and Change",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70006",
+  "name": "International Tax: Principles, Structure",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70037",
+  "name": "Royal Commissions and Public Inquiries",
+  "offered": [
+   "april"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70093",
+  "name": "International Law and Development",
+  "offered": [
+   "april"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70436",
+  "name": "Specialised Construction Procurement Law",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90199",
+  "name": "Pandemic Law and Practice",
+  "offered": [
+   "april"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90205",
+  "name": "Digital Technologies and Labour Law",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90227",
+  "name": "Human Rights and the Digital State",
+  "offered": [
+   "april"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90255",
+  "name": "Designing Supply Chains",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90277",
+  "name": "Supply Chain Intelligence",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90278",
+  "name": "Supply Chain Strategy",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90014",
+  "name": "Choral Direction",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90019",
+  "name": "Democracy, Power and the Public Service",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHIL90022",
+  "name": "Thinking and Acting Ethically",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90112",
+  "name": "Infectious Disease Epidemiology",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90031",
+  "name": "Public Policy Lobbying Strategies",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90097",
+  "name": "Engaging and Assessing Young People",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90101",
+  "name": "Early Intervention in Mental Health",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90049",
+  "name": "Supervised Field Placement 1B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90051",
+  "name": "Supervised Field Placement 2B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90071",
+  "name": "Social Work Research Project",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90004",
+  "name": "Contemporary Social Problems",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "VETS90087",
+  "name": "Transboundary Animal Diseases",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ }
+]
