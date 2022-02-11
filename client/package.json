@@ -16,7 +16,7 @@
     "logrocket": "^1.0.9",
     "logrocket-react": "^4.0.1",
     "markdown-to-jsx": "^6.11.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "rc-time-picker": "^3.7.3",
     "react": "^16.13.1",
     "react-color": "^2.18.1",
