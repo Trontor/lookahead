@@ -16,7 +16,7 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "googleapis": "^92.0.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.34",
     "morgan": "^1.10.0",
     "request": "^2.88.2",
