@@ -1,0 +1,493 @@
+[
+ {
+  "code": "ABPL30063",
+  "name": "AA Visiting School Undergraduate",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL30070",
+  "name": "Venice Studio",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90307",
+  "name": "MSD Vocational Placement",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90386",
+  "name": "AA Visiting School Graduate",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90429",
+  "name": "Venice Studio",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90431",
+  "name": "Making the Invisible Visible",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ACCT40007",
+  "name": "Behavioural Accounting Research",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "AMGT90029",
+  "name": "Applied Research Methods",
+  "offered": [
+   "february",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANCW20015",
+  "name": "Classical Mythology",
+  "offered": [
+   "semester_1",
+   "winter_term"
+  ],
+  "online": true
+ },
+ {
+  "code": "ANCW30021",
+  "name": "Imperial Rome: Mediterranean Superpower",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90036",
+  "name": "Chemistry Research Project Pt 4",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "COMP90050",
+  "name": "Advanced Database Systems",
+  "offered": [
+   "semester_1",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "DNCE20033",
+  "name": "Dancing the Dance 3: Dance for Video",
+  "offered": [
+   "winter_term"
+  ],
+  "online": true
+ },
+ {
+  "code": "ECON30011",
+  "name": "Environmental Economics",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC20062",
+  "name": "Youth Culture and the Arts",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "EURO40002",
+  "name": "Seminars in Languages and Linguistics A",
+  "offered": [
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "EVSC90014",
+  "name": "Environmental Risk Assessment",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20026",
+  "name": "Painting Techniques",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "june",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20035",
+  "name": "Drawing with Anatomy",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20036",
+  "name": "Under Camera Animation",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20044",
+  "name": "Art and the Botanical",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "june",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN10004",
+  "name": "French 1",
+  "offered": [
+   "semester_1",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN20020",
+  "name": "In the Heart of the Loire Valley",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN30018",
+  "name": "In the Heart of the Loire Valley",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "GDES30004",
+  "name": "Design Visualisation: Analogue",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "GERM10004",
+  "name": "German 1",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "HIST20072",
+  "name": "Pirates and their Enemies",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "HPSC20002",
+  "name": "A History of Nature",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "ITAL10008",
+  "name": "Italian 1 (Intensive)",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "JAPN20005",
+  "name": "Contemporary Japan",
+  "offered": [
+   "semester_1",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "KORE30001",
+  "name": "Korean Politics and Society",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90108",
+  "name": "Start-Up Law",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MAST90007",
+  "name": "Statistics for Research Workers",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MCEN90049",
+  "name": "Helicopter Design",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MECM90031",
+  "name": "Audiovisual Communication",
+  "offered": [
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT20011",
+  "name": "Business Negotiations",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90037",
+  "name": "Conflict and Negotiation",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MKTG90047",
+  "name": "Thought Leadership in Digital Marketing",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT30015",
+  "name": "Independent Research Project",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT90014",
+  "name": "Business Risk Management",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20226",
+  "name": "Jazz and Improvisation Global Atelier",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90012",
+  "name": "Teaching Aural Musicianship",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "PERF30001",
+  "name": "Public Event Design",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHIL20046",
+  "name": "Feminism",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCIE90013",
+  "name": "Communication for Research Scientists",
+  "offered": [
+   "semester_1",
+   "winter_term",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "SOCI40009",
+  "name": "Writing Sociology",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "SPAN10001",
+  "name": "Spanish 1",
+  "offered": [
+   "semester_1",
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "SPAN20025",
+  "name": "Realities and Fictions of Argentina",
+  "offered": [
+   "winter_term"
+  ],
+  "online": true
+ },
+ {
+  "code": "SPAN30020",
+  "name": "Realities and Fictions of Argentina",
+  "offered": [
+   "winter_term"
+  ],
+  "online": true
+ },
+ {
+  "code": "THTR10007",
+  "name": "The Actors Process",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "THTR20022",
+  "name": "Improvisation: Text, Space and Action",
+  "offered": [
+   "winter_term"
+  ],
+  "online": false
+ },
+ {
+  "code": "THTR20043",
+  "name": "Design and the Moving Image",
+  "offered": [
+   "june",
+   "winter_term"
+  ],
+  "online": true
+ },
+ {
+  "code": "THTR30042",
+  "name": "Hashtag Cyberstar",
+  "offered": [
+   "summer_term",
+   "february",
+   "winter_term",
+   "june"
+  ],
+  "online": true
+ }
+]

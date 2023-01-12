@@ -1,0 +1,74 @@
+[
+ {
+  "code": "BUSA90508",
+  "name": "Executive Management 4",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEND90015",
+  "name": "Researching Violence Against Women",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70139",
+  "name": "International Construction Law",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70184",
+  "name": "Criminalising Speech in the Internet Age",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70242",
+  "name": "Internat.Issues in Intellectual Property",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70452",
+  "name": "Human Rights and Climate Change",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90130",
+  "name": "Tax Administration",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90241",
+  "name": "Projects and the Environment Practicum",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHYC30025",
+  "name": "Safeguarding Dark Skies",
+  "offered": [
+   "december"
+  ],
+  "online": false
+ }
+]

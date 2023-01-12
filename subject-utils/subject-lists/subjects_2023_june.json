@@ -1,0 +1,583 @@
+[
+ {
+  "code": "ABPL90319",
+  "name": "GIS In Planning, Design & Development",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90322",
+  "name": "Human Environments Relations",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90337",
+  "name": "Managing Urban Landscapes",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI20003",
+  "name": "Sustainable Food Systems",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI30016",
+  "name": "Irrigation and Water Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI90095",
+  "name": "Graduate Research Internship",
+  "offered": [
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "AHIS40016",
+  "name": "Aboriginal Art in the Northern Territory",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "AIND10003",
+  "name": "Ancient & Contemporary Indigenous Arts",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARCH30003",
+  "name": "Environmental Design- Commercial",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90006",
+  "name": "Introductory Academic Program",
+  "offered": [
+   "summer_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90013",
+  "name": "Brand Management",
+  "offered": [
+   "summer_term",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90014",
+  "name": "Brand Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90054",
+  "name": "Corporate Strategy",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90473",
+  "name": "Business Practicum",
+  "offered": [
+   "summer_term",
+   "semester_1",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90480",
+  "name": "Leadership",
+  "offered": [
+   "summer_term",
+   "march",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "BUSA90485",
+  "name": "Global Business Practicum",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90506",
+  "name": "Executive Management 2",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90533",
+  "name": "MBA Capstone",
+  "offered": [
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90535",
+  "name": "Innovation Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90023",
+  "name": "Content in the Field",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "DRAM10026",
+  "name": "Inside look at MTC",
+  "offered": [
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC20076",
+  "name": "Auslan and Visual Communication",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90743",
+  "name": "Clinical Education in Practice",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90744",
+  "name": "Assessing Clinical Learners",
+  "offered": [
+   "february",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "EDUC90747",
+  "name": "Evaluation Capstone",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "ENEN90037",
+  "name": "International River Basin Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA30026",
+  "name": "Global Travelling Studio",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FNCE90051",
+  "name": "Fundamentals of Portfolio Management",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "FNCE90057",
+  "name": "Ethics In Finance",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "HORT90042",
+  "name": "Managing Urban Trees",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "IBUS90004",
+  "name": "Cross Cultural Management and Teamwork",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90004",
+  "name": "Collaborative Fieldwork",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "JOUR90006",
+  "name": "Dilemmas in Journalism: Law and Ethics",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70093",
+  "name": "International Law and Development",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70135",
+  "name": "Bargaining at Work",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70316",
+  "name": "Public M&A: Schemes of Arrangement",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70319",
+  "name": "Tax Policy",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70350",
+  "name": "Management for Professionals",
+  "offered": [
+   "june",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70366",
+  "name": "International Refugee Law",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90025",
+  "name": "Liability Insurance Law",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90099",
+  "name": "Major Project Delivery: Legal Interfaces",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90199",
+  "name": "Pandemic Law and Practice",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90216",
+  "name": "Cryptoassets in Global Context",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90236",
+  "name": "Tax of Innovation",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90249",
+  "name": "UN Law and Practice",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90003",
+  "name": "Student Conference 1",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90005",
+  "name": "Student Conference 2",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90022",
+  "name": "Student Conference 3",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90024",
+  "name": "Student Conference 4",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90160",
+  "name": "The Secret Life of Organisations",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MULT90024",
+  "name": "Indigenous Research and Leadership",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20163",
+  "name": "Samba Band",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "MUSI20164",
+  "name": "Free Play New Music Improvisation Ensem",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90119",
+  "name": "Mental Health Nursing Practice 2",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90136",
+  "name": "Cancer Nursing Practice 2",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90137",
+  "name": "Medical Oncology Nursing",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90152",
+  "name": "Critical Care Nursing",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90001",
+  "name": "Oral Health Practice 4",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90002",
+  "name": "Oral Pathology and Adult Oral Function",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "ORAL90003",
+  "name": "Oral Health Sciences 4",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS30028",
+  "name": "On Country Learning: Indigenous Studies",
+  "offered": [
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90054",
+  "name": "Global Issues in Indigenous Governance",
+  "offered": [
+   "june"
+  ],
+  "online": true
+ },
+ {
+  "code": "PUBL90004",
+  "name": "Business and Professional Communications",
+  "offered": [
+   "semester_1",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "THTR20043",
+  "name": "Design and the Moving Image",
+  "offered": [
+   "june",
+   "winter_term"
+  ],
+  "online": true
+ }
+]

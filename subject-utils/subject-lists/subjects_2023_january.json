@@ -1,0 +1,537 @@
+[
+ {
+  "code": "ABPL90434",
+  "name": "Construction Management Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90167",
+  "name": "Investments",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90224",
+  "name": "Managing People",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90248",
+  "name": "Marketing Communications",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90273",
+  "name": "Negotiations",
+  "offered": [
+   "january",
+   "may",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90360",
+  "name": "Business Law",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90479",
+  "name": "MBA Internship",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90483",
+  "name": "General Management 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90503",
+  "name": "Business Analytics Applications",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90530",
+  "name": "Managing Sustainability for Strat. Adv.",
+  "offered": [
+   "january",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90531",
+  "name": "Analytics for Strategic Management",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90532",
+  "name": "Business Essentials",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90550",
+  "name": "Prof Development & Application I",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "DENT90125",
+  "name": "Clinical Practice 4",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "DENT90126",
+  "name": "Intro to Dental Medicine and Surgery",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90126",
+  "name": "School Effectiveness and Improvement",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90137",
+  "name": "Personal and Interpersonal Leadership",
+  "offered": [
+   "january",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90580",
+  "name": "Evidence Based Learning and Teaching 1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90582",
+  "name": "Evidence Based Learning and Teaching 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90583",
+  "name": "Learning and Teaching Contexts 1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90584",
+  "name": "Learning and Teaching Contexts 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90596",
+  "name": "Learning Area A1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90597",
+  "name": "Learning Area B1",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90741",
+  "name": "Effective Clinical Teaching",
+  "offered": [
+   "january",
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90742",
+  "name": "Effective Clinical Supervision",
+  "offered": [
+   "january",
+   "february",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90747",
+  "name": "Evaluation Capstone",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90822",
+  "name": "Connecting and Engaging Students",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90823",
+  "name": "Language, Literacy and Numeracy",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90859",
+  "name": "Autism Intervention",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90976",
+  "name": "Positive Learning Environments",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91004",
+  "name": "Professional Learning Capstone (EC&P)",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91005",
+  "name": "Professional Learning Capstone (EC)",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91152",
+  "name": "Professional Learning Capstone (Sec)",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30025",
+  "name": "Biogeography and Ecology of Fire",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG90027",
+  "name": "Biogeography and Ecology of Fire",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90002",
+  "name": "Enacting Influence",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "JOUR90006",
+  "name": "Dilemmas in Journalism: Law and Ethics",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50078",
+  "name": "Environmental Law",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90062",
+  "name": "Business Negotiations and Deal-Making",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90065",
+  "name": "Foundations: Competition Law & Economics",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90066",
+  "name": "Unilateral Conduct",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90107",
+  "name": "Disaster Medicine Principles & Responses",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90129",
+  "name": "Group Project",
+  "offered": [
+   "january",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MKTG90039",
+  "name": "Marketing Analytics",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20163",
+  "name": "Samba Band",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI20164",
+  "name": "Free Play New Music Improvisation Ensem",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90018",
+  "name": "Consumer Perspective: Theory & Practice",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90066",
+  "name": "Foundations of Nursing",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90076",
+  "name": "Applied Pathophysiology",
+  "offered": [
+   "january",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90078",
+  "name": "Assessment in Mental Health Nursing",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYC90114",
+  "name": "Professional Psychology Skills 2",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90004",
+  "name": "Psychiatry of Old Age",
+  "offered": [
+   "january"
+  ],
+  "online": false
+ }
+]
