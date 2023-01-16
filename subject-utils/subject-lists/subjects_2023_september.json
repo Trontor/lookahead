@@ -1,0 +1,958 @@
+[
+ {
+  "code": "ABPL90029",
+  "name": "Construction Studies",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90075",
+  "name": "Urban and Landscape Heritage",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "AGRI20045",
+  "name": "Wine & Spirits:An Australian Perspective",
+  "offered": [
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "AMGT90004",
+  "name": "Cultural Policy",
+  "offered": [
+   "semester_1",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANSC90009",
+  "name": "Dairy Systems",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BISY90016",
+  "name": "Predictive Analytics",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BISY90017",
+  "name": "Quant. Decision Making & Optimisation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90026",
+  "name": "Business Strategy",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90053",
+  "name": "Corporate Strategy",
+  "offered": [
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90074",
+  "name": "Global Business Economics",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90090",
+  "name": "Financial Institutions",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90172",
+  "name": "Leadership and Change",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90224",
+  "name": "Managing People",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90227",
+  "name": "Operations",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90244",
+  "name": "Marketing",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90403",
+  "name": "Business Tools: Money People & Processes",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90458",
+  "name": "Managerial Judgement",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90480",
+  "name": "Leadership",
+  "offered": [
+   "summer_term",
+   "march",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90482",
+  "name": "General Management 1",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90490",
+  "name": "Integrative Business Capstone",
+  "offered": [
+   "summer_term",
+   "june",
+   "august",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90511",
+  "name": "Executive Management 7",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90512",
+  "name": "Industry Studies in Asia",
+  "offered": [
+   "march",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90533",
+  "name": "MBA Capstone",
+  "offered": [
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90539",
+  "name": "Business Data Platforms",
+  "offered": [
+   "march",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90541",
+  "name": "Predictive Business Analytics",
+  "offered": [
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90543",
+  "name": "Text Analytics for Business",
+  "offered": [
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90545",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90552",
+  "name": "Business Essentials",
+  "offered": [
+   "june",
+   "august",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90045",
+  "name": "Advanced Physical Organic Chemistry",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90049",
+  "name": "Advanced Materials & Characterisation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90053",
+  "name": "Interfacial Chemistry and Sonochemistry",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90035",
+  "name": "Victims: Recognition and Redress",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90031",
+  "name": "Analytical Science in Conservation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90044",
+  "name": "Practising Community-led Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90074",
+  "name": "Contemporary Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90075",
+  "name": "International Management and Leadership",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90137",
+  "name": "Personal and Interpersonal Leadership",
+  "offered": [
+   "january",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90139",
+  "name": "Leading a Learning Community",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90221",
+  "name": "Consultation in Educational Settings",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90612",
+  "name": "Teaching for Student Engagement",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90686",
+  "name": "Literacy Leadership for Transformation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90751",
+  "name": "Understanding Schools",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90846",
+  "name": "Learning Intervention 2",
+  "offered": [
+   "april",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91031",
+  "name": "Language in Diverse Contexts",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "ENEN90014",
+  "name": "Sustainable Buildings",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EVSC90023",
+  "name": "Building Behaviour in Bushfires",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FRST90017",
+  "name": "Bushfire Planning & Management",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEND40009",
+  "name": "Feminist & Queer Perspectives on Science",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL90032",
+  "name": "Introduction to Mineralogy",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90011",
+  "name": "Therapeutic Landscapes",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90043",
+  "name": "Tree Identification and Selection",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70009",
+  "name": "Comparative Corporate Tax",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70042",
+  "name": "Company Takeovers",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70082",
+  "name": "Privacy Law",
+  "offered": [
+   "march",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS70149",
+  "name": "Construction Risk",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70190",
+  "name": "Corporate Governance & Directors' Duties",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70207",
+  "name": "Copyright Law",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70217",
+  "name": "Fundamentals of the Common Law",
+  "offered": [
+   "march",
+   "april",
+   "august",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70230",
+  "name": "Commercial Law in Asia",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70335",
+  "name": "Contract Interpretation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70379",
+  "name": "Judicial Reasoning",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70451",
+  "name": "Health Law and Human Rights",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90088",
+  "name": "Disaster Law and Climate Adaptation",
+  "offered": [
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90175",
+  "name": "Human Rights: Global Policy and Practice",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90252",
+  "name": "Sustainable Resource Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90254",
+  "name": "Impact Investing: Driving Change",
+  "offered": [
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "MAST90099",
+  "name": "Advanced Regression",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90128",
+  "name": "Project Management",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90070",
+  "name": "Implementing Evidence for Practice",
+  "offered": [
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90122",
+  "name": "Foundations of Critical Care Nursing",
+  "offered": [
+   "april",
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90138",
+  "name": "Radiation Oncology Nursing",
+  "offered": [
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90141",
+  "name": "Psychotherapy Essentials",
+  "offered": [
+   "september"
+  ],
+  "online": true
+ },
+ {
+  "code": "NURS90142",
+  "name": "Alcohol, Other Drugs and Recovery",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90146",
+  "name": "Surgical Oncology Nursing",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90147",
+  "name": "Haematology Nursing 2",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90159",
+  "name": "Emergency Nursing Practice 1",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90124",
+  "name": "Health Care in Context",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90125",
+  "name": "Strength and Conditioning for Life",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POLS30034",
+  "name": "Political Psychology",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90020",
+  "name": "Health Promotion",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90066",
+  "name": "Women and Global Health",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90088",
+  "name": "Disability and Global Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90145",
+  "name": "Survival Analysis & Regression for Rates",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90301",
+  "name": "Pandemic Preparedness and Response",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90010",
+  "name": "Professional Practice in Policy Research",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYC10007",
+  "name": "Mind, Brain and Behaviour B",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90057",
+  "name": "Mental Illness in Young People II",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90099",
+  "name": "Mental Ill-health in Young People 1",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90103",
+  "name": "Biological Interventions with Youth",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90104",
+  "name": "Inclusive Youth Mental Health Practice",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90115",
+  "name": "Managing Youth Self-harm and Suicide 2",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90038",
+  "name": "Social Work Practice: Mental Health",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90048",
+  "name": "Supervised Field Placement 1A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90050",
+  "name": "Supervised Field Placement 2A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90054",
+  "name": "Assessing Risk and Vulnerability",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90055",
+  "name": "Legal and Ethical Contexts of Practice",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90056",
+  "name": "Program Planning and Evaluation",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90063",
+  "name": "Social Work Practice: Indigenous Peoples",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90069",
+  "name": "Researching Social Work Practice 1",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90070",
+  "name": "Working in Human Service Organisations",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90073",
+  "name": "Professional Identity 2",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90003",
+  "name": "Comparative Social Policy",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90012",
+  "name": "Inclusive Policy Development",
+  "offered": [
+   "september"
+  ],
+  "online": false
+ }
+]

@@ -1,0 +1,486 @@
+[
+ {
+  "code": "ABPL30069",
+  "name": "Installations and Happenings",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90152",
+  "name": "Bower Studio - Community Development",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90281",
+  "name": "Housing Markets, Policy and Planning",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90320",
+  "name": "Building Resilient Settlements",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ABPL90380",
+  "name": "Designing for Heat in the Public Domain",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "AHIS40020",
+  "name": "Museology in Florence",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90218",
+  "name": "Innovation",
+  "offered": [
+   "summer_term",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90485",
+  "name": "Global Business Practicum",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90529",
+  "name": "Building Entrepreneurial Ventures",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90068",
+  "name": "Contemporary Leadership",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90070",
+  "name": "Leadership Skills in Action",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90076",
+  "name": "Social Policy and Development",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN20021",
+  "name": "The French Pacific in a Global Context",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "FREN30019",
+  "name": "The French Pacific in a Global Context",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30023",
+  "name": "Global Climate Change in Context",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30030",
+  "name": "Spatial Modelling for Nature and People",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG90026",
+  "name": "Global Climate Change In Context",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "HIST20052",
+  "name": "Venice and Cultures of Consumption",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "HIST30051",
+  "name": "Venice and Cultures of Consumption",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "HORT90044",
+  "name": "Plant Health",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "IBUS90004",
+  "name": "Cross Cultural Management and Teamwork",
+  "offered": [
+   "summer_term",
+   "june",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ITAL20006",
+  "name": "Languages of Venice: Study Abroad",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "ITAL30012",
+  "name": "Languages of Venice: Study Abroad",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50031",
+  "name": "Legal Theory",
+  "offered": [
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50036",
+  "name": "Remedies",
+  "offered": [
+   "semester_1",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS50059",
+  "name": "Legal Internship",
+  "offered": [
+   "january",
+   "semester_1",
+   "june",
+   "semester_2",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70018",
+  "name": "Alternative Dispute Resolution",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70024",
+  "name": "Corporate Tax A",
+  "offered": [
+   "semester_1",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70146",
+  "name": "Tax Treaties",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70181",
+  "name": "Defamation Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70200",
+  "name": "Employment Contract Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70209",
+  "name": "Licensing Law and Technology Transfer",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70210",
+  "name": "Resources Joint Ventures",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70259",
+  "name": "Medical Ethics",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70261",
+  "name": "Designs Law and Practice",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70270",
+  "name": "Construction Contract Analysis, Drafting",
+  "offered": [
+   "february",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70371",
+  "name": "Principles of Employment Law",
+  "offered": [
+   "march",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70402",
+  "name": "Remedies in Commercial Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90017",
+  "name": "International Tax: Anti-avoidance",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90029",
+  "name": "Planning and Building Sustainable Cities",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90058",
+  "name": "Comparative Human Rights Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90127",
+  "name": "Comparative Indigenous Rights",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90237",
+  "name": "FinTech and Payments Law",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90253",
+  "name": "Transitional Justice",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90260",
+  "name": "Personal Injury Litigation",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90027",
+  "name": "Clinical Elective",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90037",
+  "name": "Conflict and Negotiation",
+  "offered": [
+   "summer_term",
+   "winter_term",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90258",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90261",
+  "name": "HR Analytics",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90276",
+  "name": "Logistics and Transportation Management",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90279",
+  "name": "Supply Chain Technologies",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90169",
+  "name": "Opera Performance Practicum 2",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MUSI90172",
+  "name": "Opera Performance Practicum 4",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90137",
+  "name": "Primary Health Care, Jamkhed, India",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90297",
+  "name": "Preventing Violence Against Women",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90024",
+  "name": "Future of Work in Comparative Contexts",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "SPAN20026",
+  "name": "Tales of Muslim Spain",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "SPAN30022",
+  "name": "Tales of Muslim Spain",
+  "offered": [
+   "november"
+  ],
+  "online": false
+ }
+]

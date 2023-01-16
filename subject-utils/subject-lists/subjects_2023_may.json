@@ -1,0 +1,589 @@
+[
+ {
+  "code": "ABPL90040",
+  "name": "International Property Development B",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "ANSC90007",
+  "name": "Animal Welfare",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90042",
+  "name": "Digital Methods",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90044",
+  "name": "The Art & Practice of the Personal Essay",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90042",
+  "name": "Consumer Behaviour",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90194",
+  "name": "Managerial Economics",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90226",
+  "name": "Managing People",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90273",
+  "name": "Negotiations",
+  "offered": [
+   "january",
+   "may",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90500",
+  "name": "Business Analytics Foundations",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90510",
+  "name": "Executive Management 6",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90540",
+  "name": "Causal Analytics for Business",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90541",
+  "name": "Predictive Business Analytics",
+  "offered": [
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90542",
+  "name": "Machine Learning & AI for Business",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90543",
+  "name": "Text Analytics for Business",
+  "offered": [
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90041",
+  "name": "Exciton Science",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90028",
+  "name": "Introduction to Conservation Actions",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "DEVT90071",
+  "name": "Organisation Development and Change",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "DNCE20038",
+  "name": "Global Atelier: Travelling Studio",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "DPSS30007",
+  "name": "Design and Production Global Atelier",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90753",
+  "name": "Leading Learning and Teaching",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90943",
+  "name": "Marketing and Innovation in Education",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90987",
+  "name": "Clinical Teaching Practice (EC&P) 4",
+  "offered": [
+   "february",
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91024",
+  "name": "Professional Pedagogical Practices (P3)",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG30026",
+  "name": "East Timor Field Class",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOG90025",
+  "name": "East Timor Field Class",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "GEOL90028",
+  "name": "Geochronology and Thermochronology",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "HLTH90004",
+  "name": "Health & Human Services Research Project",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70013",
+  "name": "Global Financial Architecture",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70031",
+  "name": "Goods and Services Tax",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70060",
+  "name": "Patent Practice",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70080",
+  "name": "Online Streaming, Film and TV Law",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70113",
+  "name": "Public Private Partnerships Law",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70206",
+  "name": "Banking and Secured Finance",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70208",
+  "name": "Competition Law, IP & Personality Rights",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70225",
+  "name": "Medical Litigation",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70382",
+  "name": "Business and Human Rights",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70392",
+  "name": "International Business Transactions",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70441",
+  "name": "Managing Legal Risk in Construction",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90022",
+  "name": "International Dispute Settlement",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90072",
+  "name": "Mergers",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90073",
+  "name": "Research Project (GCCL)",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90086",
+  "name": "Conducting Workplace Investigations",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90094",
+  "name": "International IP Dispute Settlement",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90095",
+  "name": "International Trade and Competition Law",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "LAWS90149",
+  "name": "Corruption: A Global Approach",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90206",
+  "name": "Social Procurement Law and Policy",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90233",
+  "name": "Tax in Practice",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90108",
+  "name": "Terror Medicine Principles & Responses",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90110",
+  "name": "Human Factors in Critical Care",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDS90027",
+  "name": "Clinical Elective",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT30017",
+  "name": "Global Management Consulting",
+  "offered": [
+   "summer_term",
+   "may",
+   "october"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90258",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90276",
+  "name": "Logistics and Transportation Management",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90279",
+  "name": "Supply Chain Technologies",
+  "offered": [
+   "may",
+   "november"
+  ],
+  "online": true
+ },
+ {
+  "code": "MGMT90287",
+  "name": "Indigenous Business Ecosystems",
+  "offered": [
+   "may"
+  ],
+  "online": true
+ },
+ {
+  "code": "ORAL30003",
+  "name": "Oral Health Therapy Research Int'l",
+  "offered": [
+   "summer_term",
+   "february",
+   "march",
+   "may",
+   "june",
+   "june",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PADM90017",
+  "name": "Political Advising",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90002",
+  "name": "The Pelvic Floor:Function&Dysfunction",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90003",
+  "name": "Advanced Practice in Pelvic Floor Physio",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90304",
+  "name": "Sustainability and Healthcare",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90016",
+  "name": "Forensic Psychiatry",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90022",
+  "name": "Cognitive Behaviour Therapy",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90059",
+  "name": "Substance Use Disorders",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90068",
+  "name": "Perinatal Psychiatry",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90088",
+  "name": "History & Philosophy of Psychiatry",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90048",
+  "name": "Supervised Field Placement 1A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90050",
+  "name": "Supervised Field Placement 2A",
+  "offered": [
+   "february",
+   "may",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90071",
+  "name": "Social Work Research Project",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90025",
+  "name": "Social Justice: Policy and Practice",
+  "offered": [
+   "may"
+  ],
+  "online": false
+ }
+]

@@ -1,0 +1,474 @@
+[
+ {
+  "code": "BUSA90072",
+  "name": "Global Business Economics",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90273",
+  "name": "Negotiations",
+  "offered": [
+   "january",
+   "may",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90279",
+  "name": "Organisational Change",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90480",
+  "name": "Leadership",
+  "offered": [
+   "summer_term",
+   "march",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90502",
+  "name": "Analytics Lab",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90512",
+  "name": "Industry Studies in Asia",
+  "offered": [
+   "march",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90530",
+  "name": "Managing Sustainability for Strat. Adv.",
+  "offered": [
+   "january",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90544",
+  "name": "Marketing Analytics",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90545",
+  "name": "Supply Chain Analytics",
+  "offered": [
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90546",
+  "name": "Risk Analytics",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90552",
+  "name": "Business Essentials",
+  "offered": [
+   "june",
+   "august",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90013",
+  "name": "Responsibilities in Clinical Research",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90013",
+  "name": "Advanced Practice in Forensic Disability",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90030",
+  "name": "Conservation Actions 1",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90910",
+  "name": "Clinical Teaching Practice (Sec) 3",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90941",
+  "name": "Leading the Educational Organisation",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91012",
+  "name": "Clinical Teaching Practice (Sec) 3 Ext",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "ERTH90060",
+  "name": "Spatial Data Analytics and Geoprocessing",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "INDG90006",
+  "name": "Powerful Encounters",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70033",
+  "name": "International Criminal Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70120",
+  "name": "International Law and Children's Rights",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70125",
+  "name": "International Financial Transactions",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70130",
+  "name": "State Taxes and Duties",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70239",
+  "name": "Payment Matters in Construction Projects",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70304",
+  "name": "Internat Investment Law and Arbitration",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70350",
+  "name": "Management for Professionals",
+  "offered": [
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70380",
+  "name": "Australian Consumer Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70392",
+  "name": "International Business Transactions",
+  "offered": [
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70398",
+  "name": "Law of the Sea",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90006",
+  "name": "Law and Legal Practice in Asia",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90035",
+  "name": "Trade Mark Practice",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90064",
+  "name": "Cartels",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90070",
+  "name": "Consumer Protection",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90116",
+  "name": "Environmental Law and Policy",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90147",
+  "name": "Biodiversity Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90153",
+  "name": "Institutional Abuse and Legal Redress",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90208",
+  "name": "Law of Construction Delay and Disruption",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90214",
+  "name": "Indigenous Law in Aotearoa and Australia",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90246",
+  "name": "International Employment & Equality Law",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90248",
+  "name": "Automated Decision-Making and Justice",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90250",
+  "name": "Civil Appeals",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90264",
+  "name": "Tax of Superannuation B",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90265",
+  "name": "Tax of Collective Investment Funds",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90109",
+  "name": "Managing Complex Disasters",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT30017",
+  "name": "Global Management Consulting",
+  "offered": [
+   "summer_term",
+   "may",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90234",
+  "name": "Leaders, Business & Culture in Florence",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90254",
+  "name": "Indigenous Business Leadership",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90255",
+  "name": "Designing Supply Chains",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90277",
+  "name": "Supply Chain Intelligence",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90278",
+  "name": "Supply Chain Strategy",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHTY90004",
+  "name": "Exercise for Women",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90244",
+  "name": "Global Health and Human Rights",
+  "offered": [
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90049",
+  "name": "Supervised Field Placement 1B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90051",
+  "name": "Supervised Field Placement 2B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ }
+]

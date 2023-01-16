@@ -1,0 +1,676 @@
+[
+ {
+  "code": "ANSC90003",
+  "name": "Animal Stress Physiology",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "ARTS90034",
+  "name": "Indigenous Treaties & Future Relations",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90001",
+  "name": "Financial Accounting",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90026",
+  "name": "Business Strategy",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90060",
+  "name": "Data Analysis",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90093",
+  "name": "Finance",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90193",
+  "name": "Managerial Economics",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90201",
+  "name": "Managerial Project",
+  "offered": [
+   "summer_term",
+   "january",
+   "april",
+   "may",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90224",
+  "name": "Managing People",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90227",
+  "name": "Operations",
+  "offered": [
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90243",
+  "name": "Marketing",
+  "offered": [
+   "january",
+   "april",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90261",
+  "name": "Marketing Strategy",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90270",
+  "name": "Mergers and Acquisitions",
+  "offered": [
+   "april",
+   "june"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90271",
+  "name": "Mergers and Acquisitions",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90341",
+  "name": "Supply Chain Management",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90479",
+  "name": "MBA Internship",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90481",
+  "name": "Managerial Ethics & Business Environment",
+  "offered": [
+   "summer_term",
+   "march",
+   "april",
+   "june",
+   "september",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90491",
+  "name": "Game Theory for Business Strategy",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90492",
+  "name": "Financial Analysis and Valuation",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90505",
+  "name": "Executive Management 1",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90522",
+  "name": "Applied Analytics Lab",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90523",
+  "name": "Managing Diversity in the Workplace",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90526",
+  "name": "Strategic Consulting for Social Impact",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "BUSA90532",
+  "name": "Business Essentials",
+  "offered": [
+   "january",
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CHEM90065",
+  "name": "Advanced NMR Spectroscopy",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90028",
+  "name": "Advanced Clinical Trial Design",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CLRS90029",
+  "name": "Research Development and Translation",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90020",
+  "name": "Crime, Culture & the Media",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CRIM90037",
+  "name": "Disability, Crime and Justice",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "CUMC90027",
+  "name": "RESPECT",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90683",
+  "name": "Reading Texts: Selection to Response",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90786",
+  "name": "Leading Educational Research",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90846",
+  "name": "Learning Intervention 2",
+  "offered": [
+   "april",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90878",
+  "name": "Clinical Teaching Practice (Prim) 2",
+  "offered": [
+   "april",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90879",
+  "name": "Clinical Teaching Practice (Prim) 3",
+  "offered": [
+   "april",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90910",
+  "name": "Clinical Teaching Practice (Sec) 3",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90941",
+  "name": "Leading the Educational Organisation",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC90988",
+  "name": "Clinical Teaching Practice (EC&P) 5",
+  "offered": [
+   "april",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91007",
+  "name": "Clinical Teaching Practice (Prim) 2 PT",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EDUC91008",
+  "name": "Clinical Teaching Practice (Prim) 3 PT",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "ENST90034",
+  "name": "Adapting to Climate Change",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "EVSC90022",
+  "name": "Bushfire Urban Planning",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20033",
+  "name": "Introduction to Printmaking Processes",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FINA20045",
+  "name": "Introduction to Screenprinting",
+  "offered": [
+   "summer_term",
+   "february",
+   "april",
+   "winter_term",
+   "june",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "FNCE90044",
+  "name": "Special Topics in Finance B",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "FRST90022",
+  "name": "Ecosystem Processes of Water and Soil",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70081",
+  "name": "Capital Gains Tax: Problems in Practice",
+  "offered": [
+   "april",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70217",
+  "name": "Fundamentals of the Common Law",
+  "offered": [
+   "march",
+   "april",
+   "august",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70391",
+  "name": "Human Rights at Work",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70421",
+  "name": "Law and Emerging Health Technologies",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS70436",
+  "name": "Specialised Construction Procurement Law",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90080",
+  "name": "Negotiation and Dispute Resolution",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90235",
+  "name": "Tax of Superannuation A",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90251",
+  "name": "The Law and Economics of Globalisation",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "LAWS90257",
+  "name": "Access to Justice on Country",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "MEDI90019",
+  "name": "Clinical Research Proposal",
+  "offered": [
+   "semester_1",
+   "april",
+   "semester_2"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90255",
+  "name": "Designing Supply Chains",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90277",
+  "name": "Supply Chain Intelligence",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "MGMT90278",
+  "name": "Supply Chain Strategy",
+  "offered": [
+   "april",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90012",
+  "name": "Psychopharmacology",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90077",
+  "name": "Foundations of Mental Health Nursing",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90079",
+  "name": "Foundations in Neonatal Care",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90099",
+  "name": "Critical Care Nursing Practice",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90122",
+  "name": "Foundations of Critical Care Nursing",
+  "offered": [
+   "april",
+   "september"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90135",
+  "name": "Cancer Nursing Practice 1",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "NURS90150",
+  "name": "Intensive Care Nursing Practice",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PHIL90022",
+  "name": "Thinking and Acting Ethically",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90112",
+  "name": "Infectious Disease Epidemiology",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "POPH90303",
+  "name": "Climate Change and Health",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90007",
+  "name": "Public Policy Analysis",
+  "offered": [
+   "april",
+   "august"
+  ],
+  "online": false
+ },
+ {
+  "code": "PPMN90032",
+  "name": "Innovative Design and Service Delivery",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90097",
+  "name": "Engaging and Assessing Young People",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "PSYT90101",
+  "name": "Early Intervention in Mental Health",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90049",
+  "name": "Supervised Field Placement 1B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SCWK90051",
+  "name": "Supervised Field Placement 2B",
+  "offered": [
+   "april",
+   "june",
+   "october"
+  ],
+  "online": false
+ },
+ {
+  "code": "SOCI90004",
+  "name": "Contemporary Social Problems",
+  "offered": [
+   "april"
+  ],
+  "online": false
+ }
+]
